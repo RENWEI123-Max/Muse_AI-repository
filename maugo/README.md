@@ -1,0 +1,41 @@
+# MauGo 后端
+
+技术栈：Node.js 22+、TypeScript、PostgreSQL 16，HTTP 框架选择 **Fastify**，通过 pg 连接池访问数据库。
+
+## 本地运行
+
+1. 执行 `npm ci` 安装锁定版本依赖。
+2. 复制 `.env.example` 为 `.env`，配置数据库连接。
+3. 执行 `docker compose up -d postgres`，等待数据库健康检查通过。
+4. 执行 `npm run db:migrate` 应用迁移。
+5. 执行 `npm run dev`，默认监听 3000 端口。
+
+Compose 凭据仅用于本地开发。生产环境应注入独立凭据，不提交 .env。
+
+## 构建与验证
+
+- `npm run build`：严格 TypeScript 编译，输出 dist。
+- `npm test`：验证健康检查、数据库就绪/失败响应和配置校验。
+- `npm start`：启动编译后的服务。
+- `GET /health`：存活检查，不依赖数据库。
+- `GET /ready`：执行 SELECT 1，数据库可用返回 200，否则返回 503。
+
+健康检查单元测试使用数据库替身；业务冒烟测试使用真实 PostgreSQL。
+
+## 结构与配置
+
+src/app.ts 创建应用；src/server.ts 管理监听、连接池及优雅退出；src/config.ts 校验配置；src/migrate.ts 执行 server/migrations 下的 SQL。迁移使用事务、advisory lock 和 schema_migrations 记录，按文件名顺序执行，支持重复运行。不要修改已应用迁移，新增递增编号文件。编译后的迁移同样需要server/migrations。
+
+HOST 默认 0.0.0.0，PORT 默认 3000，DATABASE_URL 必填。收到 SIGINT/SIGTERM 时关闭 HTTP 服务和数据库连接池。
+
+## Issue #1：业务接口
+
+迁移现放在 `server/migrations/`，运行 `npm run migrate`（原 `db:migrate` 仍可用）。新增 users、conversations、messages、reply_collections、wallet_ledger 五张表。
+
+- `POST /auth/signup`：JSON `{ "email": "a@example.com", "password": "至少8字符" }`，返回 201 和 `{id, token}`；邮箱重复返回 409。密码使用随机盐 scrypt，数据库仅存令牌摘要。没有验证码或短信功能。
+- 业务请求携带 `Authorization: Bearer <token>`。`POST /conversations/:peerId/opening`，JSON `{ "content": "你好" }`，纯文本 1–200 个 Unicode 字符，返回 201；同一对用户只能建立一次会话，重复返回 409。不解析 HTML 或 Markdown，客户端展示时应作为纯文本。
+- `POST /conversations/:id/replies/:replyId/collect`：携带非空 `Idempotency-Key`，返回 `{id, cost, content}`。仅会话成员可收取对方的 reply；每个用户累计前十条不同回复免费，此后每条 10 钻，余额不足返回 402。按用户锁行串行化计数、余额、收取记录及账本，全部同一事务提交。相同键和回复重试返回原结果，键用于其他回复返回 409；不同键重复收取同一回复同样不会重复扣费。免费收取不写扣费账本。
+
+本任务仅提供上述三个业务接口；B 回复通过数据库测试夹具写入，不提供回复发送、充值、支付或客户端功能。注册余额为零，令牌为当前最小实现，暂无登录和令牌轮换接口。
+
+`npm test` 需要配置真实 PostgreSQL `DATABASE_URL`，除原四项检查，还自动创建唯一 `smoke_*` schema 测试 A/B 注册、重复开场白、十次免费、第十一次扣费、余额不足、越权及并发幂等；测试数据保留在独立 schema，不触碰现有业务表。测试账号需有 CREATE SCHEMA 权限。运行 `npm run build` 校验 TypeScript，`npm run dev` 后 `/health` 返回 200。
