@@ -10,6 +10,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   assert.ok(process.env.DATABASE_URL, 'DATABASE_URL required for real PostgreSQL smoke tests');
   const admin = new pg.Pool({ connectionString: process.env.DATABASE_URL });
   const schema = 'smoke_' + randomUUID().replaceAll('-', '');
+  assert.match(schema, /^[a-z0-9_]+$/, 'Schema must contain only lowercase letters, digits and underscores');
   await admin.query(`CREATE SCHEMA ${schema}`);
   const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, options: `-c search_path=${schema}` });
   const app = buildApp(pool);
@@ -27,7 +28,8 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   assert.equal((await open('hello',{} as typeof headers)).statusCode,401);
   assert.equal((await open('字'.repeat(201))).statusCode,400);
   assert.equal((await open('   ')).statusCode,400);
-  const opened = await open('你好'); assert.equal(opened.statusCode,201,opened.body);
+  assert.equal((await open('😀'.repeat(201))).statusCode,400);
+  const opened = await open('😀'.repeat(200)); assert.equal(opened.statusCode,201,opened.body);
   const conversation = opened.json().id;
   assert.equal((await open('重复')).statusCode,409);
   const collect = (id: string, key: string, auth = headers) => app.inject({ method:'POST', url:`/conversations/${conversation}/replies/${id}/collect`, headers:{...auth,'idempotency-key':key} });
@@ -59,6 +61,18 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   assert.deepEqual(concurrent.map(r=>r.statusCode).sort(),[200,402]);
   user = (await pool.query('SELECT diamonds,collected_count FROM users WHERE id=$1',[a.id])).rows[0];
   assert.deepEqual(user,{diamonds:0,collected_count:12});
+  assert.equal(Number((await pool.query('SELECT count(*) FROM wallet_ledger')).rows[0].count),2);
+  // Move all prior collections to the preceding Shanghai day; lifetime count stays 12.
+  await pool.query(`UPDATE reply_collections SET created_at =
+    ((date_trunc('day', clock_timestamp() AT TIME ZONE 'Asia/Shanghai') - interval '1 second')
+      AT TIME ZONE 'Asia/Shanghai') WHERE user_id=$1`, [a.id]);
+  const remaining = concurrent[0].statusCode === 402 ? replies[11] : replies[12];
+  const reset = await collect(remaining, 'new-day');
+  assert.equal(reset.statusCode,200,reset.body);
+  assert.equal(reset.json().cost,0);
+  assert.equal((await collect(replies[10], 'paid')).json().cost,10);
+  user = (await pool.query('SELECT diamonds,collected_count FROM users WHERE id=$1',[a.id])).rows[0];
+  assert.deepEqual(user,{diamonds:0,collected_count:13});
   assert.equal(Number((await pool.query('SELECT count(*) FROM wallet_ledger')).rows[0].count),2);
   assert.equal((await app.inject('/health')).statusCode,200);
   assert.equal((await app.inject('/ready')).statusCode,200);
