@@ -1,0 +1,34 @@
+{
+  "name": "maugo-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run verify:assets && vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "test:e2e": "playwright test",
+    "cap:sync": "npm run build && cap sync",
+    "cap:ios": "cap open ios",
+    "cap:android": "cap open android"
+  },
+  "dependencies": {
+    "vue": "^3.5.45",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/ios": "^8.6.2",
+    "@capacitor/android": "^8.6.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.8",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "typescript": "~5.9.3",
+    "vue-tsc": "^3.1.0",
+    "@capacitor/cli": "^8.6.2",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.0.0"
+  }
+}

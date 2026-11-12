@@ -1,0 +1,50 @@
+$ cat /etc/resolv.conf
+nameserver 108.61.10.10
+nameserver 108.61.115.10
+nameserver 2001:19f0:300:1704::6
+nameserver 2001:19f0:6000:9f22::6
+Exit code: 0
+
+$ nslookup drive.google.com
+Server:		108.61.10.10
+Address:	108.61.10.10#53
+
+Non-authoritative answer:
+Name:	drive.google.com
+Address: 172.253.118.101
+Name:	drive.google.com
+Address: 172.253.118.102
+Name:	drive.google.com
+Address: 172.253.118.113
+Name:	drive.google.com
+Address: 172.253.118.138
+Name:	drive.google.com
+Address: 172.253.118.139
+Name:	drive.google.com
+Address: 172.253.118.100
+Name:	drive.google.com
+Address: 2404:6800:4007:838::200e
+
+Exit code: 0
+
+$ nslookup github.com
+Server:		108.61.10.10
+Address:	108.61.10.10#53
+
+Non-authoritative answer:
+Name:	github.com
+Address: 57.155.223.240
+
+Exit code: 0
+
+$ ping -c 3 -W 2 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=0.629 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=0.680 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.708 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2077ms
+rtt min/avg/max/mdev = 0.629/0.672/0.708/0.032 ms
+Exit code: 0
+

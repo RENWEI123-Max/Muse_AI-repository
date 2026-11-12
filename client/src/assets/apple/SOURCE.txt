@@ -1,0 +1,12 @@
+Apple official iOS 27 UI Kit, downloaded 2026-10-13.
+Official index: https://developer.apple.com/design/resources/
+Official Sketch library: https://www.sketch.com/s/04c24d8b-38fb-4afb-8836-36617e022f02
+Publisher: Apple. Library version: v24, 2026-09-22.
+
+status-bar-dark.svg exported from Status Bars / iPhone 17 Pro / Dark Background (402 x 62).
+Component URL: https://www.sketch.com/s/04c24d8b-38fb-4afb-8836-36617e022f02/f/BE184739-8C0B-463A-B9D5-86AD2F4219A2
+
+home-indicator-dark.svg exported from Home Indicators / Portrait - Dark - iPhone (144 x 20; indicator path 144 x 5).
+Component URL: https://www.sketch.com/s/04c24d8b-38fb-4afb-8836-36617e022f02/f/60580ED3-2C86-4800-8363-C758E6CC9DC0
+
+Official path geometry is unchanged. Added viewBox attributes for responsive display and omitted the library-only translucent presentation background. Used for this iPhone app design preview; real iOS builds should use the system-owned status bar and Home indicator rather than drawing duplicate chrome.
