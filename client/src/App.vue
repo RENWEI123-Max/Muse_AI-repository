@@ -7,12 +7,12 @@ import AccountSecurity from './components/AccountSecurity.vue'
 import HomeFlow from './components/HomeFlow.vue'
 import PageTransition from './components/PageTransition.vue'
 const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
-const sessionToken = ref('')
+const sessionToken = ref(''), sessionUser = ref('')
 const securityOpen = ref(false)
 const appLocked = ref(false)
 // F07: device storage holds drafts/preferences of the last signed-in account; another account starts clean.
-function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);localStorage.setItem('maugo-account',account);document.documentElement.classList.remove('system-font')}sessionToken.value=token;page.value='home'}
-function signedOut(){sessionToken.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
+function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);localStorage.setItem('maugo-account',account);document.documentElement.classList.remove('system-font')}sessionToken.value=token;sessionUser.value=account;page.value='home'}
+function signedOut(){sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
 const audit = new URLSearchParams(location.search).has('assets')
 document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
@@ -26,7 +26,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
     </section>
   </main>
   <main v-else class="device" :lang="locale" :aria-label="tr('MauGo')">
-    <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" @signin="page='email'" @security="securityOpen=true" /></div>
+    <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" :user-id="sessionUser" @signin="page='email'" @security="securityOpen=true" /></div>
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
     <div v-if="page !== 'home' && page !== 'preview'" class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">

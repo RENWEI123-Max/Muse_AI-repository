@@ -8,6 +8,7 @@ for(const flow of ['reply','pass'])test(`F01 simulated wallet: ${flow} cancellat
   else if(path==='/auth/me')body={id:'u',email:'test@example.com',emailVerified:true}
   else if(path==='/wallet')body={diamonds,freeRemaining:0,paidCost:10}
   else if(path==='/filter-pass')body={active:false,expiresAt:null,remainingDays:0,plans:[{days:7,diamonds:100}]}
+  else if(path==='/payments/apple/products')body={products:[{id:'maugo.diamonds.100',diamonds:100,label:'A little boost'}]}
   else if(path==='/discovery/filters')body={cities:['Seoul']}
   else if(path==='/letters')body={items:[],responses:[]}
   else if(path==='/conversations')body={items:[{id:'c',displayName:'Test bird',status:'active',unreadCount:0}],hasMore:false}
