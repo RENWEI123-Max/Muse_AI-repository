@@ -14,7 +14,7 @@ test('B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL'
   const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
   const app=buildApp(pool);
   t.after(async()=>{await app.close();await pool.end();await admin.end();});
-  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','005_discovery.sql'])
+  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','005_discovery.sql','017_profile_visibility.sql'])
     await pool.query(await readFile(new URL('../server/migrations/'+name,import.meta.url),'utf8'));
   async function user() {
     const id=randomUUID(),token=randomUUID();

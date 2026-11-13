@@ -1,3 +1,4 @@
+import { profileVisible } from './posts.js';
 import type { FastifyInstance } from 'fastify';
 import type { PoolClient } from 'pg';
 const uuid={type:'string',format:'uuid'};
@@ -22,7 +23,7 @@ export function registerInbox(app:FastifyInstance,transaction:(work:(c:PoolClien
  COALESCE((SELECT max(m.created_at) FROM messages m WHERE m.conversation_id=v.id AND ${visible}),v.created_at) AS "updatedAt"
  FROM conversations v JOIN users u ON u.id=CASE WHEN v.opener_id=$1 THEN v.peer_id ELSE v.opener_id END
  LEFT JOIN conversation_preferences p ON p.conversation_id=v.id AND p.user_id=$1
- WHERE v.opener_id=$1 OR v.peer_id=$1 ORDER BY COALESCE(p.pinned,false) DESC,"updatedAt" DESC,v.id`,[user])).rows;}
+ WHERE (v.opener_id=$1 OR v.peer_id=$1) AND ${profileVisible('u')} ORDER BY COALESCE(p.pinned,false) DESC,"updatedAt" DESC,v.id`,[user])).rows;}
  app.get<{Querystring:{tab:string;hidden:boolean;offset:number;limit:number}}>('/conversations',{schema:{querystring:{type:'object',additionalProperties:false,properties:{...pagination,tab:{type:'string',enum:['messages','friends'],default:'messages'},hidden:{type:'boolean',default:false}}}}},async req=>transaction(async c=>{
   const u=await authenticate(c,req.headers.authorization),q=req.query;
   const all=(await rows(c,u.id)).filter(v=>v.hidden===q.hidden&&(q.tab!=='friends'||v.following));

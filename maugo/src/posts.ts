@@ -10,12 +10,18 @@ const params={type:'object',required:['id'],properties:{id:uuid}};
 const fail=(statusCode:number,message:string):never=>{throw Object.assign(new Error(message),{statusCode});};
 // $1 is the viewer. Friends use the existing collected-reply unlock ledger.
 // Everyone permits strangers, but an existing pending conversation remains locked.
+export function friendsVisible(owner:string) {
+ return `EXISTS (SELECT 1 FROM conversations v WHERE ((v.opener_id=$1 AND v.peer_id=${owner}) OR (v.peer_id=$1 AND v.opener_id=${owner})) AND v.unlocked_at IS NOT NULL)`;
+}
+export function profileVisible(alias:string) {
+ return `(${alias}.id=$1 OR ${alias}.visibility='everyone' OR (${alias}.visibility='friends' AND ${friendsVisible(alias+'.id')}))`;
+}
 export function contentVisible(alias:string) {
  return `(${alias}.user_id=$1 OR (${alias}.visibility<>'only_me'
- AND EXISTS (SELECT 1 FROM users owner WHERE owner.id=${alias}.user_id AND owner.deleted_at IS NULL AND NOT owner.is_suspended)
+ AND EXISTS (SELECT 1 FROM users owner WHERE owner.id=${alias}.user_id AND owner.deleted_at IS NULL AND NOT owner.is_suspended AND ${profileVisible('owner')})
  AND NOT EXISTS (SELECT 1 FROM user_blocks b WHERE (b.blocker_id=$1 AND b.blocked_id=${alias}.user_id) OR (b.blocked_id=$1 AND b.blocker_id=${alias}.user_id))
  AND NOT EXISTS (SELECT 1 FROM conversations v WHERE ((v.opener_id=$1 AND v.peer_id=${alias}.user_id) OR (v.peer_id=$1 AND v.opener_id=${alias}.user_id)) AND v.unlocked_at IS NULL)
- AND (${alias}.visibility='everyone' OR EXISTS (SELECT 1 FROM conversations v WHERE ((v.opener_id=$1 AND v.peer_id=${alias}.user_id) OR (v.peer_id=$1 AND v.opener_id=${alias}.user_id)) AND v.unlocked_at IS NOT NULL))))`;
+ AND (${alias}.visibility='everyone' OR ${friendsVisible(alias+'.user_id')})))`;
 }
 export function registerPosts(app:FastifyInstance,
  transaction:(work:(c:PoolClient)=>Promise<unknown>)=>Promise<unknown>,
