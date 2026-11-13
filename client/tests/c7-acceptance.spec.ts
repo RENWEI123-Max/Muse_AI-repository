@@ -8,7 +8,7 @@ test('C7 offline deliverables open, local images decode',async({page})=>{
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   await page.goto(pathToFileURL(root+'/03-成品UI/离线预览/'+file).href,{waitUntil:'domcontentloaded'})
   await expect(page.locator('body')).not.toBeEmpty()
-  const images=await page.locator('img').evaluateAll(async imgs=>{imgs.forEach(i=>i.loading="eager");await Promise.all(imgs.map(i=>Promise.race([i.decode().catch(()=>{}),new Promise(r=>setTimeout(r,5000))])));return imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>({id:i.id,alt:i.alt,source:i.getAttribute('src')?.slice(0,70)}))})
+  const images=await page.locator('img').evaluateAll(async elements=>{const imgs=elements as HTMLImageElement[];return (async()=>{imgs.forEach(i=>i.loading="eager");await Promise.all(imgs.map(i=>Promise.race([i.decode().catch(()=>{}),new Promise(r=>setTimeout(r,5000))])));return imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>({id:i.id,alt:i.alt,source:i.getAttribute('src')?.slice(0,70)}))})()})
   await page.screenshot({path:'test-results/c7-'+(file.includes('平铺')?'boards':'shell')+'.png'})
   expect.soft(images,file).toEqual([]);expect.soft(errors,file).toEqual([])
  }
