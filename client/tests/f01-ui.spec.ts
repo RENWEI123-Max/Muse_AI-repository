@@ -20,12 +20,12 @@ for(const flow of ['reply','pass'])test(`F01 simulated wallet: ${flow} cancellat
  if(flow==='reply'){await page.locator('#open-inbox').click();await page.locator('#collect-replies').click()}
  else{await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click();await page.locator('.pass-plan').click()}
  const confirm=page.locator(flow==='reply'?'#confirm-reply-payment':'#confirm-pass-payment'),topup=page.locator(flow==='reply'?'#reply-topup':'#pass-topup')
- await expect(confirm).toBeDisabled();await expect(topup).toBeVisible();await page.screenshot({path:`test-results/f01-${flow}-shortage.png`})
+ await expect(confirm).toBeDisabled();await expect(topup).toBeVisible();await page.screenshot({path:`docs/c7-evidence/f01-${flow}-shortage.png`})
  await topup.click();await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');expect(charges).toBe(0)
  await page.keyboard.press('Escape');await expect(confirm).toBeDisabled();await expect(page.getByText(/selection saved/)).toBeVisible();expect(diamonds).toBe(0);expect(charges).toBe(0)
  await topup.click();diamonds=200
  await expect(page.getByRole('dialog',{name:'Diamonds',exact:true})).toHaveCount(0);await expect(confirm).toBeEnabled();expect(charges).toBe(0)
- await page.screenshot({path:`test-results/f01-${flow}-funded.png`})
+ await page.screenshot({path:`docs/c7-evidence/f01-${flow}-funded.png`})
  await confirm.dblclick();await expect(confirm).toHaveCount(0);expect(charges).toBe(1);expect(diamonds).toBe(flow==='reply'?190:100)
  if(flow==='pass')await expect(page.getByRole('button',{name:'Filter Woman',exact:true})).toHaveAttribute('aria-pressed','true')
 })
