@@ -23,9 +23,16 @@ test('B3 durable opening ledger and concurrent devices on real PostgreSQL', asyn
     return {id,tokens};
   };
   const a=await makeUser(), b=await makeUser(), outsider=await makeUser();
+  // Let the reverse request acquire its authenticated user lock before the
+  // opening insert checks both user foreign keys, exposing lock-order cycles.
+  await pool.query(`CREATE FUNCTION pause_opening_insert() RETURNS trigger LANGUAGE plpgsql AS $$
+    BEGIN PERFORM pg_sleep(0.2); RETURN NEW; END $$;
+    CREATE TRIGGER pause_opening_insert BEFORE INSERT ON conversations
+    FOR EACH ROW EXECUTE FUNCTION pause_opening_insert()`);
   const post=(url:string,token:string|undefined,content='hello')=>app.inject({method:'POST',url,headers:token?{authorization:`Bearer ${token}`}:{},payload:{content}});
   const open=(peer:string,token:string|undefined)=>post(`/conversations/${peer}/opening`,token);
   const results=await Promise.all(Array.from({length:20},(_,i)=>i%2?open(a.id,b.tokens[i%2]):open(b.id,a.tokens[(i/2)%2])));
+  await pool.query('DROP TRIGGER pause_opening_insert ON conversations; DROP FUNCTION pause_opening_insert()');
   assert.equal(results.filter(r=>r.statusCode===201).length,1);
   assert.ok(results.every(r=>[409,201].includes(r.statusCode)),results.map(r=>r.body).join('\n'));
   assert.equal(new Set(results.filter(r=>r.statusCode===201).map(r=>r.json().id)).size,1);
