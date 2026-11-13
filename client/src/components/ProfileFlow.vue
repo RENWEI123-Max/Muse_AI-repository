@@ -2,6 +2,8 @@
 import {computed,nextTick,onMounted,ref,watch} from 'vue'
 import {asset} from '../lib/assets'
 import {api} from '../lib/api'
+import SettingsFlow from './SettingsFlow.vue'
+import {t} from '../lib/i18n'
 import ChatFlow from './ChatFlow.vue'
 const props=defineProps<{token:string;person?:{id:string;displayName:string;avatar?:string;status:string;following?:boolean;city?:string;age?:number;zodiac?:string;bio?:string;cards?:string[];moments?:{id:string;text:string;src:string}[]}}>()
 const emit=defineEmits<{close:[];chat:[];safety:[action:'report'|'block']}>()
@@ -10,6 +12,7 @@ const key=`maugo-profile-${props.token}`
 const initial={name:'Little wanderer',age:24,city:'Somewhere',zodiac:'',bio:'',slots:[1,2,3,4].map((n,i)=>({id:`portrait-${n}`,src:asset(`05-avatars/portrait-${n}`),position:i})).concat(Array(4).fill(null)) as (Photo|null)[],selected:'portrait-1',archive:[] as Photo[],cards:[] as string[]}
 const profile=ref<typeof initial>(JSON.parse(localStorage.getItem(key)||'null')||initial)
 watch(profile,v=>localStorage.setItem(key,JSON.stringify(v)),{deep:true})
+const settingsOpen=ref(false)
 const draft=ref({...profile.value}),view=ref(props.person?'public':'profile'),sheet=ref(''),error=ref(''),notice=ref(''),kind=ref('Following'),outgoing=ref(false),remove=ref(-1),position=ref(0),zoom=ref(1),canvas=ref<HTMLCanvasElement>(),file=ref<HTMLInputElement>(),image=ref<HTMLImageElement>(),followed=ref(!!props.person?.following),busy=ref(false),largePhoto=ref('')
 const own=computed(()=>profile.value.slots.find(p=>p?.id===profile.value.selected)?.src||asset('05-avatars/avatar-placeholder'))
 const photo=computed(()=>props.person?.avatar||asset('05-avatars/avatar-placeholder'))
@@ -33,10 +36,11 @@ function saveAvatar(){const p={id:crypto.randomUUID(),src:canvas.value!.toDataUR
 async function follow(){if(!props.person||props.person.status!=='open'||busy.value)return;busy.value=true;error.value='';try{await api(`/conversations/${props.person.id}`,{method:'PATCH',headers:{Authorization:`Bearer ${props.token}`,'Content-Type':'application/json'},body:JSON.stringify({following:!followed.value})});followed.value=!followed.value}catch(e){error.value=(e as Error).message}finally{busy.value=false}}
 </script>
 <template>
+<SettingsFlow v-if="settingsOpen" @close="settingsOpen=false" />
 <ProfileFlow v-if="selectedPerson" :token="token" :person="selectedPerson" @close="selectedPerson=undefined;load()" @chat="selectedChat=selectedPerson;selectedPerson=undefined" @safety="selectedChat=selectedPerson;selectedPerson=undefined" />
 <ChatFlow v-if="selectedChat" :token="token" :conversation="selectedChat" @close="selectedChat=undefined;load()" @collect="selectedChat=undefined;notice='Collect your reply from Messages to continue.'" />
 <section v-show="!selectedPerson&&!selectedChat" class="d4-profile" @keydown.esc="back">
-<header><button id="page-back" aria-label="Back" @click="back">‹</button><h1>{{title}}</h1><button v-if="person" id="public-more" aria-label="Profile options" @click="sheet='safety'">•••</button><span v-else>✦</span></header>
+<header><button id="page-back" aria-label="Back" @click="back">‹</button><h1>{{title}}</h1><button v-if="person" id="public-more" aria-label="Profile options" @click="sheet='safety'">•••</button><button v-else id="open-settings" :aria-label="t('settings')" @click="settingsOpen=true"><img :src="asset('08-interface-icons/icon-settings-light-24')" width="24" height="24" alt=""></button></header>
 <p v-if="error" role="alert" class="d4-error">{{error}}</p><p v-if="notice" role="status" class="d4-note">{{notice}}</p>
 <div class="d4-body" :key="view">
 <template v-if="view==='profile'"><div class="profile-hero"><button id="edit-avatar" aria-label="Change avatar" @click="sheet='gallery'"><img :src="own" alt="Your avatar"><span>▣</span></button><button id="edit-profile" @click="edit"><strong>{{profile.name}}</strong></button><p>{{profile.age}} · {{profile.zodiac?profile.zodiac+' · ':''}}{{profile.city}}</p><p>{{profile.bio}}</p></div><div class="profile-counters"><button id="following" @click="kind='Following';view='connections'">{{following.length}}<small>Following</small></button><button id="followers" @click="kind='Followers';view='connections'">0<small>Followers</small></button><button id="likes" @click="sheet='likes'">0<small>Likes</small></button><button id="profile-visitors" @click="view='visitors'">◷<small>Visitors ›</small></button></div><h2>Image cards</h2><div class="d4-cards"><button v-for="src in profile.cards" :key="src" @click="largePhoto=src;sheet='photo'"><img :src="src" alt="Image card"></button><p v-if="!profile.cards.length">No photos uploaded yet.</p></div><p class="d4-note">Profile and avatar changes are saved on this device. Profile sync is not available yet.</p><button id="profile-letters" class="d4-row" @click="view='letters'">My letters <span>›</span></button></template>
