@@ -1,4 +1,4 @@
-import { profileVisible } from './posts.js';
+import { contentVisible, profileVisible } from './posts.js';
 import type { FastifyInstance } from 'fastify';
 import type { PoolClient } from 'pg';
 import { lockPair } from './moderation.js';
@@ -19,6 +19,16 @@ export async function profileAccess(c: PoolClient, viewer: string, id: string) {
 export function registerProfiles(app: FastifyInstance,
  transaction: (work: (c: PoolClient) => Promise<unknown>) => Promise<unknown>,
  authenticate: (c: PoolClient, authorization?: string) => Promise<any>) {
+ async function stats(c: PoolClient, id: string) {
+  const counts = (await c.query(`SELECT
+   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
+    WHERE p.user_id=$1 AND p.following AND p.user_id IN (v.opener_id,v.peer_id)) AS "followingCount",
+   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
+    WHERE p.following AND p.user_id<>$1 AND ((v.opener_id=$1 AND v.peer_id=p.user_id) OR (v.peer_id=$1 AND v.opener_id=p.user_id))) AS "followersCount",
+   (SELECT count(*)::integer FROM post_likes l JOIN user_posts p ON p.id=l.post_id WHERE p.user_id=$1) AS "postLikesCount",
+   (SELECT count(*)::integer FROM image_card_likes l JOIN image_cards i ON i.id=l.image_card_id WHERE i.user_id=$1) AS "imageCardLikesCount"`,[id])).rows[0];
+  return {...counts,likesCount:counts.postLikesCount+counts.imageCardLikesCount};
+ }
  async function view(c: PoolClient, viewer: string, id: string) {
   const u = await profileAccess(c, viewer, id);
   const avatars = (await c.query(`SELECT media_id AS "mediaId",'/media/uploads/'||media_id AS url,position FROM profile_avatars WHERE user_id=$1 AND removed_at IS NULL ORDER BY position`, [id])).rows;
@@ -34,19 +44,35 @@ export function registerProfiles(app: FastifyInstance,
  }
  app.get('/profiles/me/stats', async req => transaction(async c => {
   const u = await authenticate(c,req.headers.authorization);
-  const counts = (await c.query(`SELECT
-   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
-    WHERE p.user_id=$1 AND p.following AND p.user_id IN (v.opener_id,v.peer_id)) AS "followingCount",
-   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
-    WHERE p.following AND p.user_id<>$1 AND ((v.opener_id=$1 AND v.peer_id=p.user_id) OR (v.peer_id=$1 AND v.opener_id=p.user_id))) AS "followersCount",
-   ((SELECT count(*) FROM post_likes l JOIN user_posts p ON p.id=l.post_id WHERE p.user_id=$1) +
-    (SELECT count(*) FROM image_card_likes l JOIN image_cards i ON i.id=l.image_card_id WHERE i.user_id=$1))::integer AS "likesCount"`,[u.id])).rows[0];
+  const counts = await stats(c,u.id);
   const visits = (await c.query(`SELECT visitor_id AS "visitorId",profile_id AS "profileId",visited_at AS "visitedAt"
    FROM profile_visits WHERE visitor_id=$1 OR profile_id=$1 ORDER BY visited_at DESC,visitor_id,profile_id`,[u.id])).rows;
   const letters = (await c.query(`SELECT m.id,m.conversation_id AS "conversationId",m.content,m.created_at AS "createdAt"
    FROM messages m JOIN conversations v ON v.id=m.conversation_id
    WHERE m.sender_id=$1 AND m.kind='opening' AND v.opener_id=$1 ORDER BY m.created_at DESC,m.id DESC`,[u.id])).rows;
   return {...counts,visits,letters};
+ }));
+ app.get<{Params:{id:string}}>('/profiles/:id/summary', {schema:{params:{type:'object',required:['id'],properties:{id:uuid}}}}, async req => transaction(async c => {
+  const viewer = await authenticate(c,req.headers.authorization);
+  const u = await profileAccess(c,viewer.id,req.params.id);
+  return {id:u.id,displayName:u.display_name,age:u.age,city:u.city,bio:u.bio,avatar:u.avatar,...await stats(c,u.id)};
+ }));
+ app.get<{Params:{id:string}}>('/profiles/:id/image-cards', {schema:{params:{type:'object',required:['id'],properties:{id:uuid}}}}, async req => transaction(async c => {
+  const u = await authenticate(c,req.headers.authorization);
+  await profileAccess(c,u.id,req.params.id);
+  return {items:(await c.query(`SELECT i.id,i.user_id AS "userId",i.media_id AS "mediaId",'/media/uploads/'||i.media_id AS url,
+   i.type,i.is_primary AS "isPrimary",i.position,i.visibility,i.created_at AS "createdAt"
+   FROM image_cards i WHERE i.user_id=$2 AND i.visibility='everyone' AND ${contentVisible('i')} ORDER BY i.position`,[u.id,req.params.id])).rows};
+ }));
+ app.get<{Querystring:{limit:number;offset:number}}>('/profiles/me/followers', {schema:{querystring:{type:'object',additionalProperties:false,properties:{limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}}}}}, async req => transaction(async c => {
+  const u = await authenticate(c,req.headers.authorization), q = req.query;
+  const items = (await c.query(`SELECT f.id,f.display_name AS "displayName",f.avatar FROM conversation_preferences p
+   JOIN conversations v ON v.id=p.conversation_id JOIN users f ON f.id=p.user_id
+   WHERE p.following AND p.user_id<>$1 AND ((v.opener_id=$1 AND v.peer_id=p.user_id) OR (v.peer_id=$1 AND v.opener_id=p.user_id))
+   AND f.deleted_at IS NULL AND NOT f.is_suspended AND ${profileVisible('f')}
+   AND NOT EXISTS (SELECT 1 FROM user_blocks b WHERE (b.blocker_id=$1 AND b.blocked_id=f.id) OR (b.blocked_id=$1 AND b.blocker_id=f.id))
+   ORDER BY f.id LIMIT $2 OFFSET $3`,[u.id,q.limit,q.offset])).rows;
+  return {items,limit:q.limit,offset:q.offset};
  }));
  app.get<{Params:{id:string}}>('/profiles/:id', {schema:{params:{type:'object',required:['id'],properties:{id:{type:'string',pattern:'^(me|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$'}}}}}, async req => transaction(async c => {
   const u = await authenticate(c,req.headers.authorization);

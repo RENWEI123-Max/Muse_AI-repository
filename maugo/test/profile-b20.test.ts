@@ -1,0 +1,86 @@
+import 'dotenv/config';
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { randomUUID } from 'node:crypto';
+import { readdir, readFile } from 'node:fs/promises';
+import pg from 'pg';
+import { buildApp } from '../src/app.js';
+import { digest } from '../src/auth.js';
+
+test('B20 live HTTP: public cards, categorized likes, followers and summary without visits', async t => {
+ const schema='b20_'+randomUUID().replaceAll('-','');
+ const admin=new pg.Pool({connectionString:process.env.DATABASE_URL});
+ await admin.query(`CREATE SCHEMA ${schema}`);
+ const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
+ const app=buildApp(pool);
+ t.after(async()=>{await app.close();await pool.end();await admin.end();});
+ const dir=new URL('../server/migrations/',import.meta.url);
+ for(const name of (await readdir(dir)).filter(x=>x.endsWith('.sql')).sort()) await pool.query(await readFile(new URL(name,dir),'utf8'));
+ const user=async()=>{
+  const id=randomUUID(),token=randomUUID();
+  await pool.query('INSERT INTO users(id,email,password_hash,token_hash,display_name,age,city,bio,avatar) VALUES($1,$2,$3,$4,$5,25,\'Seoul\',\'Hello\',NULL)',[id,id+'@test.local','unused',digest(token),id]);
+  return {id,token};
+ };
+ const a=await user(),b=await user(),c=await user(),empty=await user();
+ const address=await app.listen({port:0,host:'127.0.0.1'});
+ const get=async(path:string,u?:{token:string},status=200)=>{
+  const r=await fetch(address+path,{headers:u?{authorization:'Bearer '+u.token}:{}});
+  assert.equal(r.status,status,path);return r.json() as Promise<any>;
+ };
+ const paths=[`/profiles/${a.id}/image-cards`,`/profiles/${a.id}/summary`,'/profiles/me/followers','/profiles/me/stats'];
+ for(const path of paths) await get(path,undefined,401);
+ assert.deepEqual((await get(`/profiles/${a.id}/image-cards`,b)).items,[]);
+ assert.deepEqual((await get('/profiles/me/followers',a)).items,[]);
+ const zero=await get('/profiles/me/stats',a);
+ assert.equal(zero.postLikesCount,0);assert.equal(zero.imageCardLikesCount,0);
+ const cardIds:string[]=[];
+ for(const [position,visibility] of ['everyone','friends','only_me'].entries()) {
+  const media=randomUUID(),card=randomUUID();cardIds.push(card);
+  await pool.query("INSERT INTO media_uploads(id,uploader_id,purpose,kind,mime_type,size_bytes,original_name) VALUES($1,$2,'post','image','image/png',1,'test')",[media,a.id]);
+  await pool.query("INSERT INTO image_cards(id,user_id,media_id,type,position,visibility) VALUES($1,$2,$3,'portrait',$4,$5)",[card,a.id,media,position,visibility]);
+ }
+ assert.deepEqual((await get(paths[0],b)).items.map((x:any)=>x.id),[cardIds[0]]);
+ const conversation=async(peer:string)=>{
+  const id=randomUUID();await pool.query('INSERT INTO conversations(id,opener_id,peer_id,unlocked_at,opening_message_id) VALUES($1,$2,$3,NOW(),gen_random_uuid())',[id,a.id,peer]);
+  await pool.query('INSERT INTO conversation_preferences(user_id,conversation_id,following) VALUES($1,$2,true)',[peer,id]);return id;
+ };
+ const ab=await conversation(b.id);await conversation(c.id);
+ const post=randomUUID();
+ await pool.query("INSERT INTO user_posts(id,user_id,content) VALUES($1,$2,'Post')",[post,a.id]);
+ await pool.query('INSERT INTO post_likes(user_id,post_id) VALUES($1,$2),($3,$2)',[b.id,post,c.id]);
+ await pool.query('INSERT INTO image_card_likes(user_id,image_card_id) VALUES($1,$2)',[b.id,cardIds[0]]);
+ const counts=await get('/profiles/me/stats',a);
+ assert.equal(counts.postLikesCount,2);assert.equal(counts.imageCardLikesCount,1);assert.equal(counts.likesCount,counts.postLikesCount+counts.imageCardLikesCount);
+ const followers=await get('/profiles/me/followers?limit=1',a),next=await get('/profiles/me/followers?limit=1&offset=1',a);
+ assert.equal(followers.items.length,1);assert.equal(next.items.length,1);
+ assert.notEqual(followers.items[0].id,next.items[0].id);
+ assert.deepEqual(Object.keys(followers.items[0]).sort(),['avatar','displayName','id']);
+ assert.deepEqual((await get('/profiles/me/followers?offset=2',a)).items,[]);
+ assert.deepEqual((await get('/profiles/me/followers',empty)).items,[]);
+ await get('/profiles/me/followers?limit=0',a,400);
+ await get('/profiles/me/followers?userId='+a.id,empty,400);
+ const summary=await get(paths[1],b);
+ assert.deepEqual(summary,{id:a.id,displayName:a.id,age:25,city:'Seoul',bio:'Hello',avatar:null,followingCount:0,followersCount:2,likesCount:3,postLikesCount:2,imageCardLikesCount:1});
+ assert.deepEqual((await get('/profiles/me/stats',a)).visits,[]);
+ assert.deepEqual((await get('/profiles/me/stats',b)).visits,[]);
+ await get('/profiles/'+a.id,b);
+ const before=(await get('/profiles/me/stats',a)).visits;
+ await get(paths[1],b);
+ assert.deepEqual((await get('/profiles/me/stats',a)).visits,before);
+ await pool.query("UPDATE users SET visibility='friends' WHERE id=$1",[a.id]);
+ await get(paths[0],empty,403);await get(paths[1],empty,403);
+ assert.equal((await get(paths[0],b)).items.length,1);
+ await pool.query('UPDATE conversations SET unlocked_at=NULL WHERE id=$1',[ab]);
+ await get(paths[1],b,403);
+ await pool.query("UPDATE users SET visibility='only_me' WHERE id=$1",[a.id]);
+ for(const path of paths.slice(0,2)) await get(path,b,403);
+ await pool.query("UPDATE users SET visibility='everyone' WHERE id=$1",[a.id]);
+ await pool.query('INSERT INTO user_blocks(blocker_id,blocked_id) VALUES($1,$2)',[a.id,c.id]);
+ for(const path of paths.slice(0,2)) await get(path,c,403);
+ assert.equal((await get('/profiles/me/followers',a)).items.some((x:any)=>x.id===c.id),false);
+ await pool.query("UPDATE users SET visibility='only_me' WHERE id=$1",[b.id]);
+ assert.deepEqual((await get('/profiles/me/followers',a)).items,[]);
+ for(const suffix of ['summary','image-cards']) await get(`/profiles/${randomUUID()}/${suffix}`,b,404);
+ await pool.query('DELETE FROM post_likes WHERE post_id=$1',[post]);
+ const updated=await get('/profiles/me/stats',a);assert.equal(updated.postLikesCount,0);assert.equal(updated.likesCount,1);
+});
