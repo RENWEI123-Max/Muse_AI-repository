@@ -1,0 +1,2093 @@
+[
+  {
+    "id": "entry",
+    "title": "01 · 登录与欢迎",
+    "description": "欢迎、协议、表单校验、验证码及找回密码。",
+    "pages": [
+      {
+        "id": "welcome",
+        "title": "欢迎 / 未登录",
+        "task": "auth:welcome",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "terms-unchecked",
+        "title": "协议 / 未勾选",
+        "task": "auth:consent",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "terms-checked",
+        "title": "协议 / 已勾选",
+        "task": "auth:consent",
+        "seed": "standard",
+        "actions": [
+          [
+            "check",
+            "#accept-terms",
+            true
+          ]
+        ]
+      },
+      {
+        "id": "signin-empty",
+        "title": "邮箱登录 / 空表单",
+        "task": "auth:signin",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "signin-filled",
+        "title": "邮箱登录 / 已填写",
+        "task": "auth:signin",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-email",
+            "reader@example.com"
+          ],
+          [
+            "fill",
+            "#auth-password",
+            "SamplePass2026"
+          ]
+        ]
+      },
+      {
+        "id": "signin-invalid",
+        "title": "邮箱登录 / 邮箱错误",
+        "task": "auth:signin",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-email",
+            "invalid"
+          ],
+          [
+            "fill",
+            "#auth-password",
+            "SamplePass2026"
+          ],
+          [
+            "submit",
+            "#auth-form"
+          ]
+        ]
+      },
+      {
+        "id": "signup-empty",
+        "title": "注册 / 空表单",
+        "task": "auth:signup",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "signup-filled",
+        "title": "注册 / 已填写",
+        "task": "auth:signup",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-name",
+            "A little wanderer"
+          ],
+          [
+            "fill",
+            "#auth-email",
+            "reader@example.com"
+          ],
+          [
+            "fill",
+            "#auth-password",
+            "SamplePass2026"
+          ],
+          [
+            "fill",
+            "#auth-confirm",
+            "SamplePass2026"
+          ]
+        ]
+      },
+      {
+        "id": "signup-mismatch",
+        "title": "注册 / 密码不一致",
+        "task": "auth:signup",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-name",
+            "A little wanderer"
+          ],
+          [
+            "fill",
+            "#auth-email",
+            "reader@example.com"
+          ],
+          [
+            "fill",
+            "#auth-password",
+            "SamplePass2026"
+          ],
+          [
+            "fill",
+            "#auth-confirm",
+            "Different2026"
+          ],
+          [
+            "submit",
+            "#auth-form"
+          ]
+        ]
+      },
+      {
+        "id": "verify-empty",
+        "title": "验证码 / 待输入",
+        "task": "auth:verify",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "verify-error",
+        "title": "验证码 / 输入错误",
+        "task": "auth:verify",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-code",
+            "000000"
+          ],
+          [
+            "submit",
+            "#code-form"
+          ]
+        ]
+      },
+      {
+        "id": "verify-resend",
+        "title": "验证码 / 重发倒计时",
+        "task": "auth:verify",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#resend-email"
+          ]
+        ]
+      },
+      {
+        "id": "forgot-empty",
+        "title": "找回密码 / 邮箱",
+        "task": "auth:forgot",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "recovery-code",
+        "title": "找回密码 / 验证码",
+        "task": "auth:recovery",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "new-password",
+        "title": "重设密码 / 待填写",
+        "task": "auth:password",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "new-password-error",
+        "title": "重设密码 / 密码不一致",
+        "task": "auth:password",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#auth-password",
+            "SamplePass2026"
+          ],
+          [
+            "fill",
+            "#auth-confirm",
+            "Different2026"
+          ],
+          [
+            "submit",
+            "#auth-form"
+          ]
+        ]
+      },
+      {
+        "id": "apple-private",
+        "title": "Apple / 隐藏邮箱",
+        "task": "auth:apple",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "apple-share",
+        "title": "Apple / 共享邮箱",
+        "task": "auth:apple",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#apple-share"
+          ]
+        ]
+      },
+      {
+        "id": "auth-privacy",
+        "title": "登录前 / 隐私说明",
+        "task": "auth:policy",
+        "seed": "standard",
+        "actions": []
+      }
+    ]
+  },
+  {
+    "id": "home",
+    "title": "02 · 首页与筛选",
+    "description": "初始首页、信件发现、筛选与信使外观。",
+    "pages": [
+      {
+        "id": "home-ready",
+        "title": "首页 / 三封来信",
+        "task": "home",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "home-empty",
+        "title": "首页 / 无符合条件的信件",
+        "task": "home",
+        "seed": "no-letters",
+        "actions": []
+      },
+      {
+        "id": "home-response",
+        "title": "首页 / 回应到达",
+        "task": "home-response",
+        "seed": "standard",
+        "actions": [],
+        "note": "点击回应直接进入对应详情；重新进入首页后消失。"
+      },
+      {
+        "id": "filters-free",
+        "title": "筛选 / 未开通 Pass",
+        "task": "filters",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "filters-active",
+        "title": "筛选 / Pass 生效",
+        "task": "filters",
+        "seed": "pass-active",
+        "actions": []
+      },
+      {
+        "id": "filters-selected",
+        "title": "筛选 / 已选择条件",
+        "task": "filters",
+        "seed": "filter-selected",
+        "actions": []
+      },
+      {
+        "id": "bird-female",
+        "title": "信使外观 / 女鸟",
+        "task": "appearance",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "bird-male",
+        "title": "信使外观 / 男鸟",
+        "task": "appearance",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#appearance-genders button:first-child"
+          ]
+        ]
+      },
+      {
+        "id": "bird-motion-off",
+        "title": "信使外观 / 关闭动画",
+        "task": "appearance",
+        "seed": "motion-off",
+        "actions": []
+      }
+    ]
+  },
+  {
+    "id": "letters",
+    "title": "03 · 阅读与写信",
+    "description": "展开信件、第一句话、等待回复与发送结果。",
+    "pages": [
+      {
+        "id": "letter-open",
+        "title": "来信详情 / 未回应",
+        "task": "letter",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "letter-typed",
+        "title": "来信详情 / 编辑回应",
+        "task": "letter",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#reply",
+            "That small moment made me smile."
+          ]
+        ]
+      },
+      {
+        "id": "letter-waiting",
+        "title": "来信详情 / 已回应，等待回信",
+        "task": "letter",
+        "seed": "letter-waiting",
+        "actions": []
+      },
+      {
+        "id": "letter-replied",
+        "title": "来信详情 / 已收到回复",
+        "task": "letter",
+        "seed": "letter-replied",
+        "actions": []
+      },
+      {
+        "id": "letter-safety",
+        "title": "来信详情 / 举报或屏蔽",
+        "task": "letter",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#report-note"
+          ]
+        ]
+      },
+      {
+        "id": "letter-report",
+        "title": "来信详情 / 举报原因",
+        "task": "letter",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#report-note"
+          ],
+          [
+            "click",
+            "#safety-report"
+          ]
+        ]
+      },
+      {
+        "id": "compose-empty",
+        "title": "写信 / 空白",
+        "task": "compose",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "compose-draft",
+        "title": "写信 / 已填写",
+        "task": "compose",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#letter-text",
+            "Today I found a quiet little bookshop. What small discovery stayed with you?"
+          ]
+        ]
+      },
+      {
+        "id": "compose-invalid",
+        "title": "写信 / 多行校验",
+        "task": "compose",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#letter-text",
+            "A first line.\nA second line."
+          ]
+        ]
+      },
+      {
+        "id": "compose-sent",
+        "title": "写信 / 发送后等待",
+        "task": "sent-letter",
+        "seed": "standard",
+        "actions": [],
+        "note": "可查看已发出的信，不能重复发送开场白。"
+      }
+    ]
+  },
+  {
+    "id": "inbox",
+    "title": "04 · 消息与回信",
+    "description": "未收到、待收取、收取一条及全部收完分别展开。",
+    "pages": [
+      {
+        "id": "inbox-empty",
+        "title": "消息 / 从未收到消息",
+        "task": "inbox",
+        "seed": "empty",
+        "actions": []
+      },
+      {
+        "id": "inbox-waiting",
+        "title": "消息 / 已寄出，尚无回信",
+        "task": "inbox",
+        "seed": "waiting-only",
+        "actions": []
+      },
+      {
+        "id": "inbox-pending",
+        "title": "消息 / 收到 3 封待收回信",
+        "task": "inbox",
+        "seed": "pending",
+        "actions": []
+      },
+      {
+        "id": "inbox-collected-one",
+        "title": "消息 / 收取 1 封，剩余 2 封",
+        "task": "inbox",
+        "seed": "pending",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ]
+        ]
+      },
+      {
+        "id": "inbox-collected-all",
+        "title": "消息 / 全部收完，横条消失",
+        "task": "inbox",
+        "seed": "pending",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ],
+          [
+            "click",
+            "#collect-replies"
+          ],
+          [
+            "click",
+            "#collect-replies"
+          ]
+        ]
+      },
+      {
+        "id": "inbox-unread",
+        "title": "消息 / 已有未读会话",
+        "task": "inbox",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "inbox-read",
+        "title": "消息 / 所有消息已读",
+        "task": "inbox",
+        "seed": "read",
+        "actions": []
+      },
+      {
+        "id": "inbox-friends-empty",
+        "title": "好友 / 空状态",
+        "task": "inbox",
+        "seed": "empty",
+        "actions": [],
+        "params": {
+          "tab": "friends"
+        }
+      },
+      {
+        "id": "inbox-friends",
+        "title": "好友 / 已关注会话",
+        "task": "inbox",
+        "seed": "following",
+        "actions": [],
+        "params": {
+          "tab": "friends"
+        }
+      },
+      {
+        "id": "inbox-drawer",
+        "title": "消息 / 右侧菜单",
+        "task": "inbox",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#inbox-menu"
+          ]
+        ]
+      },
+      {
+        "id": "inbox-search",
+        "title": "消息 / 搜索匹配",
+        "task": "inbox-search",
+        "seed": "standard",
+        "actions": [],
+        "query": "tea"
+      },
+      {
+        "id": "inbox-search-empty",
+        "title": "消息 / 搜索无结果",
+        "task": "inbox-search",
+        "seed": "standard",
+        "actions": [],
+        "query": "unmatched-query"
+      },
+      {
+        "id": "inbox-options",
+        "title": "会话 / 更多操作",
+        "task": "inbox",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "[data-options=\"tea\"]"
+          ]
+        ]
+      },
+      {
+        "id": "inbox-pinned",
+        "title": "会话 / 已置顶并静音",
+        "task": "inbox",
+        "seed": "pinned",
+        "actions": []
+      },
+      {
+        "id": "inbox-hidden",
+        "title": "隐藏会话 / 有记录",
+        "task": "hidden-chats",
+        "seed": "hidden",
+        "actions": []
+      },
+      {
+        "id": "inbox-hidden-empty",
+        "title": "隐藏会话 / 空状态",
+        "task": "hidden-chats",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "inbox-notifications-off",
+        "title": "消息 / 通知提醒条",
+        "task": "inbox",
+        "seed": "notifications-off",
+        "actions": []
+      }
+    ]
+  },
+  {
+    "id": "reply-cost",
+    "title": "05 · 收取额度与付费",
+    "description": "每天 10 次免费；超出后按次确认，取消不消耗回信。",
+    "pages": [
+      {
+        "id": "reply-last-free",
+        "title": "回信 / 剩余 1 次免费",
+        "task": "inbox",
+        "seed": "last-free",
+        "actions": []
+      },
+      {
+        "id": "reply-payment",
+        "title": "回信 / 10 次用完，付费确认",
+        "task": "inbox",
+        "seed": "paid-replies",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ]
+        ]
+      },
+      {
+        "id": "reply-shortage",
+        "title": "回信 / 钻石不足",
+        "task": "inbox",
+        "seed": "reply-shortage",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ]
+        ]
+      },
+      {
+        "id": "reply-cancelled",
+        "title": "回信 / 取消付费，仍待收取",
+        "task": "inbox",
+        "seed": "paid-replies",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ],
+          [
+            "click",
+            "#reply-payment-cancel"
+          ]
+        ]
+      },
+      {
+        "id": "reply-paid",
+        "title": "回信 / 付费收取完成",
+        "task": "inbox",
+        "seed": "paid-replies",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ],
+          [
+            "click",
+            "#confirm-reply-payment"
+          ]
+        ]
+      },
+      {
+        "id": "reply-topup",
+        "title": "回信 / 进入钻石补充",
+        "task": "inbox",
+        "seed": "reply-shortage",
+        "actions": [
+          [
+            "click",
+            "#collect-replies"
+          ],
+          [
+            "click",
+            "#reply-topup"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chat",
+    "title": "06 · 对话与聊天工具",
+    "description": "回复前锁定、回复后文字与附件、搜索和聊天设置。",
+    "pages": [
+      {
+        "id": "chat-waiting",
+        "title": "对话 / 等待对方回复",
+        "task": "chat",
+        "seed": "waiting-only",
+        "actions": [],
+        "params": {
+          "id": "waiting"
+        }
+      },
+      {
+        "id": "chat-receipt-waiting",
+        "title": "对话 / 回信已到，尚未收取",
+        "task": "chat",
+        "seed": "pending",
+        "actions": [],
+        "params": {
+          "id": "incoming-1"
+        }
+      },
+      {
+        "id": "chat-open",
+        "title": "对话 / 已回复，可继续交流",
+        "task": "chat",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "chat-draft",
+        "title": "对话 / 正在编辑",
+        "task": "chat",
+        "seed": "chat-draft",
+        "actions": []
+      },
+      {
+        "id": "chat-sent",
+        "title": "对话 / 消息已发送",
+        "task": "chat",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#chat-input",
+            "I would love to hear more about that book."
+          ],
+          [
+            "submit",
+            "#chat-form"
+          ]
+        ]
+      },
+      {
+        "id": "chat-photo",
+        "title": "对话 / 图片消息",
+        "task": "chat",
+        "seed": "chat-photo",
+        "actions": []
+      },
+      {
+        "id": "chat-attachment",
+        "title": "对话 / 待发送图片",
+        "task": "chat",
+        "seed": "chat-attachment",
+        "actions": []
+      },
+      {
+        "id": "chat-stickers",
+        "title": "对话 / 表情选择",
+        "task": "chat",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#chat-stickers"
+          ]
+        ]
+      },
+      {
+        "id": "chat-sticker-selected",
+        "title": "对话 / 表情待发送",
+        "task": "chat",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#chat-stickers"
+          ],
+          [
+            "click",
+            ".sticker-option:first-child"
+          ]
+        ]
+      },
+      {
+        "id": "chat-recording",
+        "title": "对话 / 录音中（演示）",
+        "task": "recording",
+        "seed": "standard",
+        "actions": [],
+        "note": "展示录音手势状态；不会自动申请麦克风权限。"
+      },
+      {
+        "id": "chat-record-cancel",
+        "title": "对话 / 上滑取消录音",
+        "task": "recording-cancel",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "chat-mic-denied",
+        "title": "对话 / 麦克风不可用",
+        "task": "chat",
+        "seed": "standard",
+        "actions": [
+          [
+            "toast",
+            "Microphone access is off. You can still use text."
+          ]
+        ]
+      },
+      {
+        "id": "chat-details",
+        "title": "对话设置 / 已解锁",
+        "task": "details",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "chat-details-waiting",
+        "title": "对话设置 / 未回复锁定",
+        "task": "details",
+        "seed": "waiting-only",
+        "actions": [],
+        "params": {
+          "id": "waiting"
+        }
+      },
+      {
+        "id": "chat-remark",
+        "title": "对话设置 / 备注名",
+        "task": "details",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#remark-name"
+          ]
+        ]
+      },
+      {
+        "id": "chat-search-empty",
+        "title": "聊天搜索 / 待输入",
+        "task": "chat-search",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "chat-search-result",
+        "title": "聊天搜索 / 有结果",
+        "task": "chat-search",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#message-search",
+            "listening"
+          ]
+        ]
+      },
+      {
+        "id": "chat-search-none",
+        "title": "聊天搜索 / 无结果",
+        "task": "chat-search",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#message-search",
+            "unmatched-query"
+          ]
+        ]
+      },
+      {
+        "id": "chat-clear-confirm",
+        "title": "聊天记录 / 清空确认",
+        "task": "details",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#clear-chat"
+          ]
+        ]
+      },
+      {
+        "id": "chat-cleared",
+        "title": "聊天记录 / 清空后",
+        "task": "chat",
+        "seed": "chat-cleared",
+        "actions": []
+      }
+    ]
+  },
+  {
+    "id": "appearance",
+    "title": "07 · 聊天背景与气泡",
+    "description": "壁纸列表、预览、应用效果和颜色设置。",
+    "pages": [
+      {
+        "id": "wallpapers",
+        "title": "背景 / 壁纸列表",
+        "task": "background",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "wallpaper-preview",
+        "title": "背景 / 大图预览",
+        "task": "wallpaper-preview",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "id": "tea",
+          "wallpaperId": "moon-road"
+        }
+      },
+      {
+        "id": "wallpaper-applied",
+        "title": "对话 / 应用壁纸",
+        "task": "chat",
+        "seed": "wallpaper",
+        "actions": []
+      },
+      {
+        "id": "wallpaper-colors",
+        "title": "背景 / 纯色选择",
+        "task": "background",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "id": "tea",
+          "tab": "colors"
+        }
+      },
+      {
+        "id": "chat-bubbles",
+        "title": "气泡 / 默认设置",
+        "task": "bubbles",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "chat-bubbles-custom",
+        "title": "气泡 / 自定义颜色",
+        "task": "bubbles",
+        "seed": "bubbles",
+        "actions": []
+      }
+    ]
+  },
+  {
+    "id": "safety",
+    "title": "08 · 举报、屏蔽与恢复",
+    "description": "入口、表单、确认、完成与解除屏蔽。",
+    "pages": [
+      {
+        "id": "safety-choice",
+        "title": "安全操作 / 举报或屏蔽",
+        "task": "details",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#report-person"
+          ]
+        ]
+      },
+      {
+        "id": "report-empty",
+        "title": "举报 / 原因表单",
+        "task": "report",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "report-filled",
+        "title": "举报 / 已填写内容",
+        "task": "report",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#report-details",
+            "Repeated unwanted messages after I asked to stop."
+          ]
+        ]
+      },
+      {
+        "id": "report-saved",
+        "title": "举报 / 保存结果",
+        "task": "report",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#report-details",
+            "Sample report for this prototype."
+          ],
+          [
+            "click",
+            "#save-report"
+          ]
+        ]
+      },
+      {
+        "id": "block-confirm",
+        "title": "屏蔽 / 二次确认",
+        "task": "details",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#block-chat"
+          ]
+        ]
+      },
+      {
+        "id": "chat-blocked",
+        "title": "对话 / 已屏蔽",
+        "task": "chat",
+        "seed": "blocked",
+        "actions": []
+      },
+      {
+        "id": "blocked-list",
+        "title": "屏蔽名单 / 有记录",
+        "task": "blocked",
+        "seed": "blocked",
+        "actions": []
+      },
+      {
+        "id": "blocked-empty",
+        "title": "屏蔽名单 / 空状态",
+        "task": "blocked",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "unblock-confirm",
+        "title": "解除屏蔽 / 确认",
+        "task": "details",
+        "seed": "blocked",
+        "actions": [
+          [
+            "click",
+            "#block-chat"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "public-profile",
+    "title": "09 · 用户资料",
+    "description": "未回应与已回应的资料、关注和照片查看。",
+    "pages": [
+      {
+        "id": "person-profile",
+        "title": "用户资料 / 内容完整",
+        "task": "public-profile",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "person-waiting",
+        "title": "用户资料 / 尚未回复",
+        "task": "public-profile",
+        "seed": "waiting-only",
+        "actions": [],
+        "params": {
+          "id": "waiting"
+        }
+      },
+      {
+        "id": "person-followed",
+        "title": "用户资料 / 已关注",
+        "task": "public-profile",
+        "seed": "following",
+        "actions": []
+      },
+      {
+        "id": "person-no-content",
+        "title": "用户资料 / 无动态",
+        "task": "public-profile",
+        "seed": "person-empty",
+        "actions": [],
+        "params": {
+          "id": "reader"
+        }
+      },
+      {
+        "id": "person-photo",
+        "title": "用户资料 / 头像大图",
+        "task": "public-profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#public-avatar"
+          ]
+        ]
+      },
+      {
+        "id": "person-safety",
+        "title": "用户资料 / 举报或屏蔽",
+        "task": "public-profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#public-more"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "profile",
+    "title": "10 · 我的资料与头像",
+    "description": "资料填写、头像槽位、移除与恢复。",
+    "pages": [
+      {
+        "id": "profile-empty",
+        "title": "个人页 / 尚未上传照片",
+        "task": "profile",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "profile-content",
+        "title": "个人页 / 已有形象照",
+        "task": "profile",
+        "seed": "content",
+        "actions": []
+      },
+      {
+        "id": "profile-edit",
+        "title": "编辑资料 / 当前信息",
+        "task": "edit-profile",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "profile-invalid",
+        "title": "编辑资料 / 年龄校验",
+        "task": "edit-profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#edit-age",
+            "17"
+          ],
+          [
+            "click",
+            "#save-profile"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-gallery",
+        "title": "头像 / 已上传与空槽位",
+        "task": "profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#edit-avatar"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-remove",
+        "title": "头像 / 移除确认",
+        "task": "profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#edit-avatar"
+          ],
+          [
+            "click",
+            "[data-remove-avatar=\"0\"]"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-removed",
+        "title": "头像 / 移除后的槽位",
+        "task": "profile",
+        "seed": "avatar-removed",
+        "actions": [
+          [
+            "click",
+            "#edit-avatar"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-restore",
+        "title": "头像 / 最近移除",
+        "task": "profile",
+        "seed": "avatar-removed",
+        "actions": [
+          [
+            "click",
+            "#edit-avatar"
+          ],
+          [
+            "click",
+            "#removed-avatars"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-full",
+        "title": "头像 / 槽位已满",
+        "task": "profile",
+        "seed": "avatar-full",
+        "actions": [
+          [
+            "click",
+            "#edit-avatar"
+          ]
+        ]
+      },
+      {
+        "id": "avatar-crop",
+        "title": "头像 / 上传裁切",
+        "task": "avatar-crop",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "profile-likes",
+        "title": "个人页 / 获赞汇总",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "#likes"
+          ]
+        ]
+      },
+      {
+        "id": "following-empty",
+        "title": "关注列表 / 空状态",
+        "task": "connections",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "following-list",
+        "title": "关注列表 / 有记录",
+        "task": "connections",
+        "seed": "following",
+        "actions": []
+      },
+      {
+        "id": "followers-empty",
+        "title": "粉丝列表 / 空状态",
+        "task": "connections",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Followers"
+        }
+      },
+      {
+        "id": "visitors-empty",
+        "title": "访客 / 尚无访问",
+        "task": "visitors",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "visitors-outgoing",
+        "title": "访客 / 我访问过的人",
+        "task": "visitors",
+        "seed": "visited",
+        "actions": [],
+        "params": {
+          "outgoing": true
+        }
+      },
+      {
+        "id": "my-letters-empty",
+        "title": "我的信件 / 空状态",
+        "task": "activity",
+        "seed": "empty",
+        "actions": [],
+        "params": {
+          "kind": "My letters"
+        }
+      },
+      {
+        "id": "my-letters",
+        "title": "我的信件 / 已寄出",
+        "task": "activity",
+        "seed": "content",
+        "actions": [],
+        "params": {
+          "kind": "My letters"
+        }
+      }
+    ]
+  },
+  {
+    "id": "image-cards",
+    "title": "11 · 形象照",
+    "description": "直接上传照片，再按照片类型与可见范围管理。",
+    "pages": [
+      {
+        "id": "card-type",
+        "title": "上传形象照 / 选择照片类型",
+        "task": "profile",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#upload-image-card"
+          ]
+        ]
+      },
+      {
+        "id": "card-options",
+        "title": "已上传照片 / 操作菜单",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-profile-moment=\"card-1\"]"
+          ]
+        ]
+      },
+      {
+        "id": "card-preview",
+        "title": "已上传照片 / 大图查看",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-profile-moment=\"card-1\"]"
+          ],
+          [
+            "click",
+            "#card-view"
+          ]
+        ]
+      },
+      {
+        "id": "card-change-type",
+        "title": "已上传照片 / 更换类型",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-profile-moment=\"card-1\"]"
+          ],
+          [
+            "click",
+            "#card-type"
+          ]
+        ]
+      },
+      {
+        "id": "card-visibility",
+        "title": "已上传照片 / 可见范围",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-profile-moment=\"card-1\"]"
+          ],
+          [
+            "click",
+            "#card-visibility"
+          ]
+        ]
+      },
+      {
+        "id": "card-remove",
+        "title": "已上传照片 / 移除确认",
+        "task": "profile",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-profile-moment=\"card-1\"]"
+          ],
+          [
+            "click",
+            "#card-remove"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "moments",
+    "title": "12 · 动态",
+    "description": "空状态、列表、发布、草稿、附件与管理。",
+    "pages": [
+      {
+        "id": "moments-empty",
+        "title": "动态 / 空状态",
+        "task": "moments",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "moments-list",
+        "title": "动态 / 已发布",
+        "task": "moments",
+        "seed": "content",
+        "actions": []
+      },
+      {
+        "id": "moments-category-empty",
+        "title": "动态 / 分类无内容",
+        "task": "moments",
+        "seed": "content",
+        "actions": [],
+        "params": {
+          "category": "Outfit"
+        }
+      },
+      {
+        "id": "moment-empty",
+        "title": "发布动态 / 空白",
+        "task": "moment-compose",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "moment-draft",
+        "title": "发布动态 / 文字草稿",
+        "task": "moment-compose",
+        "seed": "moment-draft",
+        "actions": []
+      },
+      {
+        "id": "moment-photo",
+        "title": "发布动态 / 图片附件",
+        "task": "moment-compose",
+        "seed": "moment-photo",
+        "actions": []
+      },
+      {
+        "id": "moment-stickers",
+        "title": "发布动态 / 表情选择",
+        "task": "moment-compose",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#moment-sticker"
+          ]
+        ]
+      },
+      {
+        "id": "moment-visibility",
+        "title": "发布动态 / 可见范围",
+        "task": "moment-compose",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#moment-audience"
+          ]
+        ]
+      },
+      {
+        "id": "moment-leave",
+        "title": "发布动态 / 离开前保留草稿",
+        "task": "moment-compose",
+        "seed": "moment-draft",
+        "actions": [
+          [
+            "click",
+            "#page-back"
+          ]
+        ]
+      },
+      {
+        "id": "moment-options",
+        "title": "动态 / 操作菜单",
+        "task": "moments",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-more]"
+          ]
+        ]
+      },
+      {
+        "id": "moment-delete",
+        "title": "动态 / 删除确认",
+        "task": "moments",
+        "seed": "content",
+        "actions": [
+          [
+            "click",
+            "[data-more]"
+          ],
+          [
+            "click",
+            "#delete-moment"
+          ]
+        ]
+      },
+      {
+        "id": "moment-saved",
+        "title": "动态 / 保存完成",
+        "task": "moment-compose",
+        "seed": "moment-draft",
+        "actions": [
+          [
+            "click",
+            "#save-moment"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "settings",
+    "title": "13 · 设置与偏好",
+    "description": "主设置、语言、通知、隐私与通用偏好。",
+    "pages": [
+      {
+        "id": "settings-home",
+        "title": "设置 / 主页面",
+        "task": "settings",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "language-en",
+        "title": "语言 / English",
+        "task": "language",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "language-ko",
+        "title": "语言 / 한국어",
+        "task": "language",
+        "seed": "korean",
+        "actions": []
+      },
+      {
+        "id": "privacy",
+        "title": "隐私 / 默认设置",
+        "task": "privacy",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "privacy-visibility",
+        "title": "隐私 / 可见范围选择",
+        "task": "privacy",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#profile-visibility"
+          ]
+        ]
+      },
+      {
+        "id": "privacy-only-me",
+        "title": "隐私 / 仅自己可见",
+        "task": "privacy",
+        "seed": "private",
+        "actions": []
+      },
+      {
+        "id": "notifications-on",
+        "title": "通知 / 已开启",
+        "task": "notifications",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "notifications-off",
+        "title": "通知 / 总开关关闭",
+        "task": "notifications",
+        "seed": "notifications-off",
+        "actions": []
+      },
+      {
+        "id": "general",
+        "title": "通用 / 默认设置",
+        "task": "general",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "general-font",
+        "title": "通用 / 系统字体",
+        "task": "general",
+        "seed": "system-font",
+        "actions": []
+      },
+      {
+        "id": "cache-confirm",
+        "title": "缓存 / 清理确认",
+        "task": "general",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#clear-cache"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "account",
+    "title": "14 · 账号、安全与退出",
+    "description": "账号信息、PIN、退出，以及注销各确认阶段。",
+    "pages": [
+      {
+        "id": "security",
+        "title": "账号与安全 / 主页面",
+        "task": "security",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "account-info",
+        "title": "账号 / 当前邮箱",
+        "task": "account",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "verification",
+        "title": "身份验证 / 服务未接入",
+        "task": "verification",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "pin-create",
+        "title": "应用锁 / 创建 PIN",
+        "task": "security",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#app-lock"
+          ]
+        ]
+      },
+      {
+        "id": "pin-invalid",
+        "title": "应用锁 / PIN 格式错误",
+        "task": "security",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#app-lock"
+          ],
+          [
+            "fill",
+            "#lock-pin",
+            "12"
+          ],
+          [
+            "click",
+            "#save-lock"
+          ]
+        ]
+      },
+      {
+        "id": "pin-locked",
+        "title": "应用锁 / 输入 PIN",
+        "task": "pin-lock",
+        "seed": "standard",
+        "actions": [],
+        "note": "演示 PIN：1234。"
+      },
+      {
+        "id": "pin-wrong",
+        "title": "应用锁 / PIN 错误",
+        "task": "pin-lock",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#unlock-pin",
+            "0000"
+          ],
+          [
+            "click",
+            "#unlock-session"
+          ]
+        ],
+        "note": "演示 PIN：1234。"
+      },
+      {
+        "id": "signout-confirm",
+        "title": "退出登录 / 确认",
+        "task": "settings",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#logout"
+          ]
+        ]
+      },
+      {
+        "id": "signed-out",
+        "title": "退出登录 / 返回欢迎",
+        "task": "auth:welcome",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "delete-disabled",
+        "title": "注销 / 初始保护状态",
+        "task": "delete-account",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "delete-typed",
+        "title": "注销 / 已输入 DELETE",
+        "task": "delete-account",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#delete-account-input",
+            "DELETE"
+          ]
+        ]
+      },
+      {
+        "id": "delete-ready",
+        "title": "注销 / 已确认数据范围",
+        "task": "delete-account",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#delete-account-input",
+            "DELETE"
+          ],
+          [
+            "check",
+            "#delete-account-check",
+            true
+          ]
+        ]
+      },
+      {
+        "id": "delete-final",
+        "title": "注销 / 最终确认",
+        "task": "delete-account",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#delete-account-input",
+            "DELETE"
+          ],
+          [
+            "check",
+            "#delete-account-check",
+            true
+          ],
+          [
+            "click",
+            "#request-account-deletion"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "support",
+    "title": "15 · 帮助、反馈与说明",
+    "description": "反馈校验、历史记录、帮助内容与公开说明。",
+    "pages": [
+      {
+        "id": "help",
+        "title": "帮助与支持 / 主页面",
+        "task": "help",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "faq",
+        "title": "帮助中心 / 问题列表",
+        "task": "help",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "tab": "faq"
+        }
+      },
+      {
+        "id": "faq-expanded",
+        "title": "帮助中心 / 展开答案",
+        "task": "help",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "details:first-of-type summary"
+          ]
+        ],
+        "params": {
+          "tab": "faq"
+        }
+      },
+      {
+        "id": "feedback-empty",
+        "title": "反馈 / 空表单",
+        "task": "feedback",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "feedback-filled",
+        "title": "反馈 / 已填写",
+        "task": "feedback",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#feedback-text",
+            "I would like to save letters into collections."
+          ]
+        ]
+      },
+      {
+        "id": "feedback-invalid",
+        "title": "反馈 / 联系邮箱错误",
+        "task": "feedback",
+        "seed": "standard",
+        "actions": [
+          [
+            "fill",
+            "#feedback-text",
+            "A sample suggestion."
+          ],
+          [
+            "fill",
+            "#feedback-email",
+            "invalid"
+          ],
+          [
+            "click",
+            "#save-feedback"
+          ]
+        ]
+      },
+      {
+        "id": "feedback-history",
+        "title": "反馈 / 已保存记录",
+        "task": "feedback",
+        "seed": "feedback-history",
+        "actions": []
+      },
+      {
+        "id": "about",
+        "title": "关于 MauGo",
+        "task": "about",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "guidelines",
+        "title": "社区规范",
+        "task": "policy",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Community guidelines"
+        }
+      },
+      {
+        "id": "safety-guide",
+        "title": "安全指南",
+        "task": "policy",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Safety guide"
+        }
+      },
+      {
+        "id": "privacy-policy",
+        "title": "隐私说明",
+        "task": "policy",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Privacy information"
+        }
+      },
+      {
+        "id": "terms-full",
+        "title": "服务条款与 EULA",
+        "task": "policy",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Terms of Use & EULA"
+        }
+      },
+      {
+        "id": "system-empty",
+        "title": "系统消息 / 空状态",
+        "task": "activity",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "System messages"
+        }
+      },
+      {
+        "id": "interactions-empty",
+        "title": "互动 / 空状态",
+        "task": "activity",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "kind": "Interactions"
+        }
+      }
+    ]
+  },
+  {
+    "id": "diamonds",
+    "title": "16 · 钻石与 Filter Pass",
+    "description": "原有钻石价格、按时长购买、余额不足和购买结果。",
+    "pages": [
+      {
+        "id": "wallet-empty",
+        "title": "钻石 / 零余额",
+        "task": "store",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "wallet-balance",
+        "title": "钻石 / 有余额",
+        "task": "store",
+        "seed": "wallet",
+        "actions": []
+      },
+      {
+        "id": "topup-confirm",
+        "title": "钻石 / 套餐确认",
+        "task": "store",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            ".diamond-pack:first-child"
+          ]
+        ]
+      },
+      {
+        "id": "topup-success",
+        "title": "钻石 / 模拟充值完成",
+        "task": "store",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            ".diamond-pack:first-child"
+          ],
+          [
+            "click",
+            "#confirm-pack"
+          ]
+        ]
+      },
+      {
+        "id": "pass-default",
+        "title": "Filter Pass / 未开通",
+        "task": "filter-pass",
+        "seed": "standard",
+        "actions": []
+      },
+      {
+        "id": "pass-one-day",
+        "title": "Filter Pass / 1 天方案",
+        "task": "filter-pass",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "days": 1
+        }
+      },
+      {
+        "id": "pass-month",
+        "title": "Filter Pass / 30 天方案",
+        "task": "filter-pass",
+        "seed": "standard",
+        "actions": [],
+        "params": {
+          "days": 30
+        }
+      },
+      {
+        "id": "pass-shortage",
+        "title": "Filter Pass / 余额不足",
+        "task": "filter-pass",
+        "seed": "standard",
+        "actions": [
+          [
+            "click",
+            "#pass-page-buy"
+          ]
+        ]
+      },
+      {
+        "id": "pass-confirm",
+        "title": "Filter Pass / 支付确认",
+        "task": "filter-pass",
+        "seed": "wallet",
+        "actions": [
+          [
+            "click",
+            "#pass-page-buy"
+          ]
+        ]
+      },
+      {
+        "id": "pass-active",
+        "title": "Filter Pass / 已开通",
+        "task": "filter-pass",
+        "seed": "pass-active",
+        "actions": []
+      },
+      {
+        "id": "pass-extend",
+        "title": "Filter Pass / 延长期限确认",
+        "task": "filter-pass",
+        "seed": "pass-active",
+        "actions": [
+          [
+            "click",
+            "#pass-page-buy"
+          ]
+        ]
+      },
+      {
+        "id": "pass-success",
+        "title": "Filter Pass / 购买完成",
+        "task": "filter-pass",
+        "seed": "wallet",
+        "actions": [
+          [
+            "click",
+            "#pass-page-buy"
+          ],
+          [
+            "click",
+            "#confirm-pass"
+          ]
+        ]
+      },
+      {
+        "id": "pass-sheet",
+        "title": "筛选入口 / Pass 弹层",
+        "task": "pass-sheet",
+        "seed": "standard",
+        "actions": []
+      }
+    ]
+  }
+]
