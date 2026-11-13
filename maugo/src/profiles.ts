@@ -8,7 +8,7 @@ const fail = (statusCode: number, message: string): never => { throw Object.assi
 // Used for profile JSON and avatar bytes so a media URL cannot bypass a block.
 export async function profileAccess(c: PoolClient, viewer: string, id: string) {
  if (viewer !== id) await lockPair(c, viewer, id);
- const u = (await c.query('SELECT id,display_name,age,city,bio,avatar,visibility,deleted_at,is_suspended FROM users WHERE id=$1', [id])).rows[0];
+ const u = (await c.query('SELECT id,display_name,age,city,bio,zodiac,avatar,visibility,deleted_at,is_suspended FROM users WHERE id=$1', [id])).rows[0];
  if (!u) fail(404, 'Profile not found');
  if (u.deleted_at) fail(410, 'Account deleted');
  if (u.is_suspended) fail(403, 'Account suspended');
@@ -37,7 +37,7 @@ export function registerProfiles(app: FastifyInstance,
    WHERE (v.opener_id=$1 AND v.peer_id=$2) OR (v.opener_id=$2 AND v.peer_id=$1)`, [viewer,id])).rows[0];
   const own = viewer === id;
   if (!own) await c.query(`INSERT INTO profile_visits(visitor_id,profile_id) VALUES($1,$2) ON CONFLICT(visitor_id,profile_id) DO UPDATE SET visited_at=clock_timestamp()`,[viewer,id]);
-  return { id:u.id, displayName:u.display_name, age:u.age, city:u.city, bio:u.bio, visibility:u.visibility, avatar:u.avatar, avatars,
+  return { id:u.id, displayName:u.display_name, age:u.age, city:u.city, bio:u.bio, zodiac:u.zodiac, visibility:u.visibility, avatar:u.avatar, avatars,
    following:!own && !!v?.following,
    permissions:{canOpen:!own && !v,canChat:!own && v?.unlocked_at != null,canFollow:!own && v?.unlocked_at != null,conversationId:v?.id ?? null},
    ...(own ? {recentlyRemoved:(await c.query(`SELECT media_id AS "mediaId",'/media/uploads/'||media_id AS url,position,removed_at AS "removedAt" FROM profile_avatars WHERE user_id=$1 AND removed_at IS NOT NULL ORDER BY removed_at DESC,media_id`, [id])).rows} : {}) };
@@ -78,10 +78,10 @@ export function registerProfiles(app: FastifyInstance,
   const u = await authenticate(c,req.headers.authorization);
   return view(c,u.id,req.params.id === 'me' ? u.id : req.params.id);
  }));
- app.patch<{Body:{displayName?:string;age?:number;city?:string;bio?:string;visibility?:string}}>('/profiles/me', {schema:{body:{type:'object',additionalProperties:false,minProperties:1,properties:{displayName:{type:'string',maxLength:24},age:{type:'integer'},city:{type:'string',maxLength:40},bio:{type:'string',maxLength:200},visibility:{type:'string',enum:['everyone','friends','only_me']}}}}}, async req => transaction(async c => {
+ app.patch<{Body:{displayName?:string;age?:number;city?:string;bio?:string;zodiac?:string|null;visibility?:string}}>('/profiles/me', {schema:{body:{type:'object',additionalProperties:false,minProperties:1,properties:{displayName:{type:'string',maxLength:24},age:{type:'integer'},city:{type:'string',maxLength:40},bio:{type:'string',maxLength:200},zodiac:{type:['string','null'],enum:['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces',null]},visibility:{type:'string',enum:['everyone','friends','only_me']}}}}}, async req => transaction(async c => {
   const u = await authenticate(c,req.headers.authorization), b = req.body;
   if ((b.displayName !== undefined && !b.displayName.trim()) || (b.age !== undefined && (b.age < 18 || b.age > 100))) fail(400,'Enter a name and an age between 18 and 100.');
-  await c.query(`UPDATE users SET display_name=COALESCE($2,display_name),age=COALESCE($3,age),city=COALESCE($4,city),bio=COALESCE($5,bio),visibility=COALESCE($6,visibility) WHERE id=$1`, [u.id,b.displayName?.trim(),b.age,b.city?.trim(),b.bio,b.visibility]);
+  await c.query(`UPDATE users SET display_name=COALESCE($2,display_name),age=COALESCE($3,age),city=COALESCE($4,city),bio=COALESCE($5,bio),visibility=COALESCE($6,visibility),zodiac=COALESCE($7,zodiac) WHERE id=$1`, [u.id,b.displayName?.trim(),b.age,b.city?.trim(),b.bio,b.visibility,b.zodiac]);
   return view(c,u.id,u.id);
  }));
  app.post<{Body:{action:string;mediaId:string;confirm?:boolean}}>('/profiles/me/avatars', {schema:{body:{type:'object',additionalProperties:false,required:['action','mediaId'],properties:{action:{type:'string',enum:['add','select','remove','restore']},mediaId:uuid,confirm:{type:'boolean'}}}}}, async req => transaction(async c => {

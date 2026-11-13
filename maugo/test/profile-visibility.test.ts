@@ -28,6 +28,7 @@ test('B18 migration, global profile visibility and B16 friendship', async t => {
  const a=await user();
  for(let i=0;i<2;i++) await pool.query(await readFile(new URL('017_profile_visibility.sql',dir),'utf8'));
  await pool.query(await readFile(new URL('019_profile_stats.sql',dir),'utf8'));
+ await pool.query(await readFile(new URL('021_profile_zodiac.sql',dir),'utf8'));
  assert.equal((await pool.query('SELECT visibility FROM users WHERE id=$1',[a.id])).rows[0].visibility,'everyone');
  const b=await user();
  const call=(method:any,url:string,u:any,payload?:any)=>app.inject({method,url,headers:u?{authorization:'Bearer '+u.token}:{},payload});
