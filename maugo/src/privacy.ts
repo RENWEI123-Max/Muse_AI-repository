@@ -102,7 +102,7 @@ export function registerPrivacy(app:FastifyInstance,
    await c.query('DELETE FROM reply_collections WHERE user_id=$1',[u.id]);
    await c.query('DELETE FROM filter_pass_purchases WHERE user_id=$1',[u.id]);
    await c.query(`UPDATE users SET email=$2,password_hash='',token_hash=$3,display_name='已注销',avatar=NULL,
-    city=NULL,age=NULL,gender=NULL,diamonds=0,collected_count=0,privacy_version=NULL,terms_version=NULL,
+    city=NULL,age=NULL,gender=NULL,bio='',diamonds=0,collected_count=0,privacy_version=NULL,terms_version=NULL,
     consented_at=NULL,filter_pass_expires_at=NULL,is_moderator=false,is_suspended=false,deleted_at=NOW() WHERE id=$1`,
     [u.id,'deleted-'+u.id+'@deleted.invalid',digest(randomBytes(32).toString('hex'))]);
    return {status:200,body:{deleted:true}};

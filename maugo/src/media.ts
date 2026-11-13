@@ -1,3 +1,4 @@
+import { profileAccess } from './profiles.js';
 import type { FastifyInstance } from 'fastify';
 import type { PoolClient } from 'pg';
 import { randomUUID } from 'node:crypto';
@@ -37,6 +38,7 @@ export function registerMedia(app: FastifyInstance,
    if(account?.is_suspended) fail(403,'Account suspended');
    if(!v.unlocked_at) fail(403,'Wait for recipient reply');
   } else if(conversationId) fail(400,'conversationId only allowed for chat');
+  if(purpose==='avatar' && (await c.query('SELECT count(*)::int AS count FROM profile_avatars WHERE user_id=$1 AND removed_at IS NULL',[u.id])).rows[0].count>=8) fail(409,'All 8 avatar slots are occupied');
   return u;
  }
  // Encapsulated parser accepts raw bytes, never multipart or client supplied base64 sizes.
@@ -85,7 +87,10 @@ export function registerMedia(app: FastifyInstance,
    const row=(await c.query('SELECT * FROM media_uploads WHERE id=$1',[request.params.id])).rows[0];
    if(!row) fail(404,'Media not found');
    if(row.purpose==='chat') await authorize(c,request.headers.authorization,'chat',row.conversation_id);
-   else if(row.uploader_id!==u.id) {
+   else if(row.purpose==='avatar' && row.uploader_id!==u.id) {
+    await profileAccess(c,u.id,row.uploader_id);
+    if(!(await c.query('SELECT 1 FROM profile_avatars WHERE user_id=$1 AND media_id=$2 AND removed_at IS NULL',[row.uploader_id,row.id])).rowCount) fail(403,'Avatar is not public');
+   } else if(row.uploader_id!==u.id) {
     if(row.purpose!=='report' || !u.is_moderator || !(await c.query('SELECT 1 FROM reports WHERE attachment_media_id=$1',[row.id])).rowCount) fail(403,'Media belongs to another user');
    }
    return row;

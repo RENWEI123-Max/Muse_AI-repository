@@ -1,3 +1,4 @@
+import { registerProfiles } from './profiles.js';
 import { registerApplePayments, type AppleOptions } from './payments.js';
 import { registerInbox } from './inbox.js';
 import { registerPrivacy } from './privacy.js';
@@ -38,6 +39,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
   registerInbox(app, transaction, authenticate);
   registerPrivacy(app, transaction, authenticate);
   registerMedia(app, transaction, authenticate);
+  registerProfiles(app, transaction, authenticate);
   registerDiscovery(app, transaction, authenticate);
   registerModeration(app, transaction, authenticate);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {

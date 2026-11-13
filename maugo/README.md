@@ -274,3 +274,13 @@ JPEG/PNG/WebP 白名单及严格小于 10 MiB 的图片限制；非图片、超�
 审核处理和账号注销后证据保留、举报删除不级联及新迁移重复执行。
 验收结果：隔离 PostgreSQL schema 中完整测试 25 项全部通过，TypeScript 构建通过，
 迁移入口重复运行与新迁移 SQL 重复执行通过；client/ 无变更。
+
+## B14 资料与头像槽位（任务 #64 验收）
+
+- `GET /profiles/:id`（含 `me`）须 Bearer 鉴权，返回 `id/displayName/age/city/bio/avatar/avatars/following/permissions`。不存在 404，双向屏蔽或封禁 403，注销 410。`permissions` 区分新建开场白、已解锁聊天与关注权限，读取资料不会解锁会话。关注状态读取 B11 的本人会话偏好。
+- `PATCH /profiles/me` 支持部分更新 `displayName/age/city/bio`；昵称去空白后非空且最长 24 字、年龄 18–100 整数、城市最多 40 字、简介最多 200 字。17 岁及空昵称返回 400，文案为 `Enter a name and an age between 18 and 100.`；校验失败不写库。
+- 先通过 B8 `POST /media/uploads?purpose=avatar&filename=photo.png` 上传原始图片，再向 `POST /profiles/me/avatars` 提交 `{action,mediaId}`；`action` 为 `add/select/remove/restore`，移除必须另带 `confirm:true`。仅关联本人上传且用途为 avatar 的图片，冒用返回 403。最多 8 个活动槽位，满槽上传和新增/恢复均返回 409；重复新增活动头像、重复移除及重复恢复不会重复占槽。新增与恢复选择首个空槽，移除主头像后按槽位顺序选剩余首张，没有剩余时主头像为空。
+- 本人资料额外返回 `recentlyRemoved`，按最近移除排序；他人看不到归档列表、邮箱、余额及认证字段。公开头像字节仅允许读取活动槽位图片，并复用双向屏蔽和账号状态检查；归档文件只保留本人恢复用途。圆形遮罩由客户端处理。
+- 资料写入、槽位归档/恢复和主头像引用更新均使用数据库事务，本人行锁串行分配槽位，数据库唯一索引防止活动槽位冲突；注销清除简介，媒体删除级联清除槽位记录。
+
+验收结论：隔离 PostgreSQL 验收数据库完整测试 26 项全部通过，TypeScript 构建通过；完整迁移运行器连续执行两次通过，014 迁移 SQL 重复执行通过。新增用例覆盖 404、17 岁/空昵称/超长简介等校验、未鉴权、媒体归属、8 槽上限、并发抢槽、移除确认与恢复、主头像切换、双向屏蔽、归档图片访问和会话解锁权限。`client/` 未修改，未使用生产数据，未添加依赖或密钥。
