@@ -67,7 +67,9 @@ export function registerWallet(app: FastifyInstance,
         WHERE m.id=$1 AND v.id=$2 AND (v.opener_id=$3 OR v.peer_id=$3) AND m.sender_id<>$3
         AND m.kind='reply'`, [request.params.replyId,request.params.id,u.id])).rows[0];
       if (!message) fail(404, 'Reply not found');
-      if((await c.query('SELECT * FROM users WHERE id=$1',[message.sender_id])).rows[0]?.deleted_at) fail(410,'Account deleted');
+      const sender=(await c.query('SELECT * FROM users WHERE id=$1',[message.sender_id])).rows[0];
+      if(sender?.is_suspended) fail(403,'Account suspended');
+      if(sender?.deleted_at) fail(410,'Account deleted');
       await lockPair(c,u.id,message.sender_id);
       if ((await c.query(`SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2)
         OR (blocker_id=$2 AND blocked_id=$1)`, [u.id,message.sender_id])).rowCount) fail(403, 'Conversation blocked');

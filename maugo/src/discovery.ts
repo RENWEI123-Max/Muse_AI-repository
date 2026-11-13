@@ -18,7 +18,7 @@ const fail = (statusCode: number, message: string): never => { throw Object.assi
 const active = (u: any) => u.filter_pass_expires_at != null && new Date(u.filter_pass_expires_at).getTime() > Date.now();
 const advanced = (f: Filters) => f.city !== undefined || f.minAge !== undefined || f.maxAge !== undefined;
 const selection = (f: Filters) => ({ gender: f.gender ?? null, city: f.city ?? null, minAge: f.minAge ?? null, maxAge: f.maxAge ?? null });
-const visible = `${profileVisible('u')} AND NOT EXISTS(SELECT 1 FROM user_blocks b WHERE
+const visible = `NOT u.is_suspended AND ${profileVisible('u')} AND NOT EXISTS(SELECT 1 FROM user_blocks b WHERE
  (b.blocker_id=$1 AND b.blocked_id=u.id) OR (b.blocker_id=u.id AND b.blocked_id=$1))`;
 const columns = `v.id AS conversation_id,v.opening_message_id,v.unlocked_at,m.content,m.created_at,
  to_jsonb(u)->>'deleted_at' AS deleted_at,u.id AS sender_id,u.display_name,u.avatar,u.city,u.age,u.gender,

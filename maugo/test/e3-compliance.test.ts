@@ -1,0 +1,80 @@
+import 'dotenv/config';
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { randomUUID, createHash } from 'node:crypto';
+import { readdir, readFile } from 'node:fs/promises';
+import pg from 'pg';
+import { buildApp } from '../src/app.js';
+import { digest } from '../src/auth.js';
+
+test('E3 real PostgreSQL filtering, audit, report queue, suspension and 18+ declaration',async t=>{
+ const schema='e3_'+randomUUID().replaceAll('-','');
+ const admin=new pg.Pool({connectionString:process.env.DATABASE_URL});
+ await admin.query(`CREATE SCHEMA ${schema}`);
+ const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
+ process.env.UGC_FILTER_EXTRA_PATTERNS=JSON.stringify({advertising:['custom campaign']});
+ const app=buildApp(pool);
+ delete process.env.UGC_FILTER_EXTRA_PATTERNS;
+ t.after(async()=>{await app.close();await pool.end();await admin.end();});
+ const dir=new URL('../server/migrations/',import.meta.url);
+ for(const name of (await readdir(dir)).filter(x=>x.endsWith('.sql')).sort()) await pool.query(await readFile(new URL(name,dir),'utf8'));
+ const user=async(moderator=false)=>{
+  const id=randomUUID(),token=randomUUID();
+  await pool.query('INSERT INTO users(id,email,password_hash,token_hash,is_moderator) VALUES($1,$2,$3,$4,$5)',[id,id+'@test.local','unused',digest(token),moderator]);
+  return {id,token};
+ };
+ const a=await user(),b=await user(),mod=await user(true),other=await user();
+ const address=await app.listen({host:'127.0.0.1',port:0});
+ const call=async(method:any,url:string,u:any,payload?:any,headers={})=>{
+  const response=await fetch(address+url,{method,headers:{authorization:'Bearer '+u.token,...(payload===undefined?{}:{'content-type':'application/json'}),...headers},body:payload===undefined?undefined:JSON.stringify(payload)});
+  const body=await response.json();
+  const res={statusCode:response.status,json:()=>body as any};
+  // Evidence excludes authorization headers and all credentials.
+  console.log(JSON.stringify({method,url,payload,status:res.statusCode,response:res.json()}));
+  return res;
+ };
+ const opening=await call('POST',`/conversations/${b.id}/opening`,a,{content:'Hello, 안녕하세요. Nice to meet you!'});
+ assert.equal(opening.statusCode,201);
+ const v=opening.json();
+ const routes=['/posts',`/conversations/${randomUUID()}/opening`,`/conversations/${v.id}/messages`];
+ const cases:[string,string][]=[['You are an idiot','abuse'],['씨발','abuse'],['병신','abuse'],['call +82 10-1234-5678','contact'],['WeChat: friend_123','contact'],['微信号 friend_123','contact'],['위챗 friend_123','contact'],['Telegram @friend','contact'],['텔레그램 친구','contact'],['https://example.com','contact'],['example.kr','contact'],['example.xyz','contact'],['mail me a@example.com','contact'],['buy now with promo code','advertising'],['할인 코드 구매 문의','advertising'],['custom campaign','advertising'],['ｆｕｃｋ','abuse'],['f\u200buck','abuse']];
+ for(const url of routes) for(const [content,type] of cases){
+  const res=await call('POST',url,b,{content});
+  assert.equal(res.statusCode,422);assert.ok(res.json().types.includes(type));
+ }
+ assert.equal((await pool.query('SELECT * FROM messages')).rowCount,1);
+ assert.equal((await pool.query('SELECT * FROM user_posts')).rowCount,0);
+ const hits=(await pool.query('SELECT * FROM content_filter_hits')).rows;
+ assert.equal(hits.length,routes.length*cases.length);
+ assert.equal(hits[0].content_digest,createHash('sha256').update(cases[0][0]).digest('hex'));
+ assert.deepEqual(Object.keys(hits[0]).sort(),['content_digest','created_at','id','types']);
+ for(const content of ['A beautiful afternoon in Seoul','오늘 산책이 즐거웠어요','The class is interesting','Meet at 18:30']) assert.equal((await call('POST','/posts',a,{content})).statusCode,201);
+ const reply=await call('POST',`/conversations/${v.id}/messages`,b,{content:'반가워요, have a lovely day'});
+ assert.equal(reply.statusCode,201);
+ assert.equal((await call('GET',`/letters/${v.messageId}`,b)).statusCode,200);
+ assert.equal((await call('GET',`/conversations/${v.id}/messages`,b)).json().items.length,2);
+ for(const age of [17,18]) assert.equal((await call('PATCH','/profiles/me',a,{age})).statusCode,age===17?400:200);
+ const second=(await call('POST',`/conversations/${a.id}/opening`,other,{content:'Good evening'})).json();
+ const suspendedReply=(await call('POST',`/conversations/${second.id}/messages`,a,{content:'Good evening to you too'})).json();
+ assert.equal((await call('GET',`/conversations/${second.id}/replies/pending`,other)).json().items.length,1);
+ const report=await call('POST','/reports',b,{reportedUserId:a.id,messageId:v.messageId,category:'harassment',reason:'Manual review of opening'});
+ assert.equal(report.statusCode,201);assert.equal(report.json().status,'pending');
+ assert.equal((await call('GET','/admin/reports?status=pending',a)).statusCode,403);
+ assert.equal((await call('GET','/admin/reports?status=pending',mod)).json().items[0].id,report.json().id);
+ const resolved=await call('POST',`/admin/reports/${report.json().id}/resolve`,mod,{decision:'approve',action:'suspend',result:'Confirmed violation; account suspended'});
+ assert.equal(resolved.statusCode,200);assert.equal(resolved.json().status,'processed');
+ assert.equal((await call('GET','/admin/reports?status=pending',mod)).json().items.length,0);
+ assert.equal((await call('GET','/admin/reports?status=processed',mod)).json().items.length,1);
+ assert.equal((await call('GET',`/reports/${report.json().id}`,b)).json().status,'processed');
+ assert.equal((await call('GET',`/letters/${v.messageId}`,b)).statusCode,404);
+ assert.equal((await call('GET','/letters',b)).json().items.length,0);
+ assert.ok((await call('GET',`/conversations/${v.id}/messages`,b)).json().items.every((m:any)=>m.senderId!==a.id));
+ assert.equal((await call('GET','/conversations',b)).json().items[0].lastMessage,'반가워요, have a lovely day');
+ assert.equal((await call('GET','/posts',b)).json().items.length,0);
+ assert.equal((await call('GET',`/conversations/${second.id}/replies/pending`,other)).json().items.length,0);
+ assert.equal((await call('POST',`/conversations/${second.id}/replies/${suspendedReply.id}/collect`,other,{}, {'idempotency-key':'e3-suspended-reply'})).statusCode,403);
+ assert.equal((await call('POST','/posts',a,{content:'Another normal day'})).statusCode,403);
+ assert.equal((await call('POST',`/conversations/${v.id}/messages`,a,{content:'Hello again'})).statusCode,403);
+ assert.equal((await pool.query('SELECT is_suspended FROM users WHERE id=$1',[a.id])).rows[0].is_suspended,true);
+ console.log(JSON.stringify({database:(await pool.query('SELECT current_database() AS name')).rows[0].name,schema,auditCount:hits.length,reportStatus:'processed',accountSuspended:true}));
+});

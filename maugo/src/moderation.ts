@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify';
 import type { PoolClient } from 'pg';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, createHash } from 'node:crypto';
 const uuid = { type:'string',format:'uuid' };
 const fail = (statusCode:number,message:string):never => { throw Object.assign(new Error(message),{statusCode}); };
 export async function lockPair(c:PoolClient,a:string,b:string) {
@@ -9,6 +9,27 @@ export async function lockPair(c:PoolClient,a:string,b:string) {
 export function registerModeration(app:FastifyInstance,
   tx:(work:(c:PoolClient)=>Promise<unknown>)=>Promise<unknown>,
   auth:(c:PoolClient,authorization?:string)=>Promise<any>) {
+  // Optional JSON adds deployment-specific patterns to the central baseline rules.
+  const rules: Record<string,string[]> = {
+    abuse: [String.raw`\b(?:fuck(?:ing|er)?|shit|bitch|asshole|bastard|idiot)\b`, '씨[\\s.]*발|시발|병신|개새끼|꺼져|멍청이'],
+    contact: [String.raw`(?:\+?\d[\s().-]*){7,15}`, String.raw`\b(?:wechat|weixin|wx|telegram|tg)\b|微信|위챗|텔레그램`, String.raw`(?:https?://|www\.|t\.me/|[\p{L}\d-]+\.[a-z]{2,63}\b)`, String.raw`[\w.+-]+@[\w.-]+\.[a-z]{2,}`],
+    advertising: [String.raw`\b(?:buy now|promo code|earn money|join my channel|free money|discount code)\b`, '광고|홍보|할인\\s*코드|무료\\s*체험|돈\\s*벌|채널\\s*가입|구매\\s*문의']
+  };
+  const extra: Record<string,string[]> = JSON.parse(process.env.UGC_FILTER_EXTRA_PATTERNS ?? '{}');
+  const patterns = Object.entries(rules).map(([type,values])=>({type,patterns:[...values,...(extra[type]??[])].map(p=>new RegExp(p,'iu'))}));
+  app.addHook('preHandler',async(req,reply)=>{
+    if(req.method!=='POST' || !['/posts','/conversations/:peerId/opening','/conversations/:id/messages'].includes(req.routeOptions.url??'')) return;
+    const content=(req.body as {content:string}).content;
+    const normalized=content.normalize('NFKC').replace(/[\u200b-\u200d\ufeff]/g,'');
+    const types=patterns.filter(rule=>rule.patterns.some(p=>p.test(normalized))).map(rule=>rule.type);
+    if(!types.length) return;
+    // Commit the audit separately from the rejected publishing transaction.
+    await tx(async c=>{
+      await auth(c,req.headers.authorization);
+      await c.query('INSERT INTO content_filter_hits(types,content_digest) VALUES($1,$2)',[types,createHash('sha256').update(content).digest('hex')]);
+    });
+    return reply.code(422).send({message:'Content rejected by server moderation',types});
+  });
   const params = {type:'object',required:['id'],properties:{id:uuid}};
   const page = {limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}};
   const resultText = {type:'string',minLength:1,maxLength:2000,pattern:'\\S'};
