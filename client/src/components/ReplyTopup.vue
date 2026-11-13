@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {tr} from '../lib/i18n'
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { api } from '../lib/api'
 import { asset } from '../lib/assets'
@@ -21,12 +22,12 @@ onMounted(async()=>{document.addEventListener('keydown',keyboard,true);await nex
 onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('keydown',keyboard,true);restore?.focus()})
 </script>
 <template>
-<Transition name="d1-topup" appear><div class="d1-topup" ref="panel" role="dialog" aria-modal="true" aria-label="Diamonds">
-<header><button @click="emit('back')">‹ Back to {{context||'replies'}}</button><h2>Diamonds</h2></header>
-<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>Your little boost</h3><p>Your balance · <strong>{{balance}} diamonds</strong></p>
-<div class="d1-packs"><button v-for="(pack,i) in packs" :key="pack.diamonds" class="diamond-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><img :src="asset('01-brand-scenes/diamond')" alt=""><strong>{{pack.diamonds}}</strong><small>{{pack.label}}</small><b>${{pack.price}}</b></button></div>
-<button id="confirm-pack" class="primary" @click="notice='Payments are not available yet. No charge has been made.'">Get {{packs[selected]!.diamonds}} diamonds · ${{packs[selected]!.price}}</button>
-<p v-if="notice" role="status">{{notice}}</p><p class="d1-topup-note">Real payments are not available yet. Test credits are detected automatically; confirm your original operation after returning.</p><button class="text-button" @click="emit('back')">Back to {{context||'replies'}}</button>
+<Transition name="d1-topup" appear><div class="d1-topup" ref="panel" role="dialog" aria-modal="true" :aria-label="tr('Diamonds')">
+<header><button @click="emit('back')">{{tr("‹ Back to")}} {{tr(context||'replies')}}</button><h2>{{tr("Diamonds")}}</h2></header>
+<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>{{tr("Your little boost")}}</h3><p>{{tr("Your balance ·")}} <strong>{{balance}} {{tr("diamonds")}}</strong></p>
+<div class="d1-packs"><button v-for="(pack,i) in packs" :key="pack.diamonds" class="diamond-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><img :src="asset('01-brand-scenes/diamond')" alt=""><strong>{{pack.diamonds}}</strong><small>{{tr(pack.label)}}</small><b>${{pack.price}}</b></button></div>
+<button id="confirm-pack" class="primary" @click="notice='Payments are not available yet. No charge has been made.'">{{tr("Get")}} {{tr(packs[selected]!.diamonds)}} {{tr("diamonds · $")}}{{tr(packs[selected]!.price)}}</button>
+<p v-if="notice" role="status">{{tr(notice)}}</p><p class="d1-topup-note">{{tr("Real payments are not available yet. Test credits are detected automatically; confirm your original operation after returning.")}}</p><button class="text-button" @click="emit('back')">{{tr("Back to")}} {{tr(context||'replies')}}</button>
 </div></Transition>
 </template>
 <style>
