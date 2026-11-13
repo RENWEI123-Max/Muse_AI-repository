@@ -21,7 +21,7 @@ const visible = `NOT EXISTS(SELECT 1 FROM user_blocks b WHERE
  (b.blocker_id=$1 AND b.blocked_id=u.id) OR (b.blocker_id=u.id AND b.blocked_id=$1))`;
 const columns = `v.id AS conversation_id,v.opening_message_id,v.unlocked_at,m.content,m.created_at,
  to_jsonb(u)->>'deleted_at' AS deleted_at,u.id AS sender_id,u.display_name,u.avatar,u.city,u.age,u.gender,
- (v.unlocked_at IS NOT NULL) AS replied,
+ (v.unlocked_at IS NOT NULL OR EXISTS(SELECT 1 FROM messages r WHERE r.conversation_id=v.id AND r.kind='reply' AND r.sender_id=v.peer_id)) AS replied,
  EXISTS(SELECT 1 FROM messages r WHERE r.conversation_id=v.id AND r.kind='reply' AND r.sender_id=v.opener_id) AS received_reply`;
 function letter(r: any) {
   return { openingMessageId: r.opening_message_id, conversationId: r.conversation_id, content: r.content,

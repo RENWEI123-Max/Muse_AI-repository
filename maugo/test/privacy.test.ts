@@ -35,6 +35,7 @@ test('B9 export allowlists, two-stage deletion, tombstones, media retries and ne
  const opened=await call('POST',`/conversations/${b.id}/opening`,a,{content:'personal opening'});
  const cid=opened.json().id,openingId=opened.json().openingMessageId;
  const reply=await call('POST',`/conversations/${cid}/messages`,b,{content:'peer reply'});assert.equal(reply.statusCode,201);
+ const collected=await app.inject({method:'POST',url:`/conversations/${cid}/replies/${reply.json().id}/collect`,headers:{authorization:`Bearer ${a.token}`,'idempotency-key':'privacy'},payload:{}});assert.equal(collected.statusCode,200,collected.body);
  const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
  const uploads=[];
  for(const purpose of ['avatar','chat','post']) {
@@ -45,11 +46,9 @@ test('B9 export allowlists, two-stage deletion, tombstones, media retries and ne
  await db.query('INSERT INTO user_posts(id,user_id,content) VALUES($1,$2,$3)',[randomUUID(),a.id,'private post']);
  await creditWallet(db,a.id,100,'verified-payment');
  // Use domain records directly to verify cleanup of all FK-linked private data.
- const purchaseId=randomUUID(),collectionId=randomUUID(),batchId=randomUUID();
+ const purchaseId=randomUUID(),collectionId=collected.json().id,batchId=randomUUID();
  await db.query("INSERT INTO filter_pass_purchases(id,user_id,idempotency_key,days,cost,starts_at,expires_at) VALUES($1,$2,'privacy',1,30,NOW(),NOW()+interval '1 day')",[purchaseId,a.id]);
  await db.query("INSERT INTO wallet_ledger(id,user_id,amount,filter_pass_purchase_id,balance_after) VALUES($1,$2,-30,$3,70)",[randomUUID(),a.id,purchaseId]);
- await db.query("INSERT INTO reply_collections(id,user_id,reply_id,idempotency_key,cost) VALUES($1,$2,$3,'privacy',0)",[collectionId,a.id,reply.json().id]);
- await db.query("INSERT INTO reply_collection_requests(user_id,idempotency_key,collection_id) VALUES($1,'privacy',$2)",[a.id,collectionId]);
  await db.query("INSERT INTO discovery_batches(id,user_id,filters) VALUES($1,$2,'{}')",[batchId,a.id]);
  await db.query('INSERT INTO discovery_seen(user_id,opening_message_id,batch_id,position) VALUES($1,$2,$3,0)',[a.id,openingId,batchId]);
  await db.query("INSERT INTO reports(id,reporter_id,reported_user_id,category,reason) VALUES($1,$2,$3,'other','private reason')",[randomUUID(),a.id,b.id]);

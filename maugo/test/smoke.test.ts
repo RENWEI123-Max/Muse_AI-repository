@@ -36,7 +36,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   assert.equal((await open('😀'.repeat(201))).statusCode,400);
   const opened = await open('😀'.repeat(200)); assert.equal(opened.statusCode,201,opened.body);
   const conversation = opened.json().id;
-  assert.equal((await open('重复')).statusCode,200);
+  assert.equal((await open('重复')).statusCode,409);
   const collect = (id: string, key: string, auth = headers, payload: {confirmPaid?:boolean;cancel?:boolean} = {confirmPaid:true}) => app.inject({ method:'POST', url:`/conversations/${conversation}/replies/${id}/collect`, headers:{...auth,'idempotency-key':key},payload });
   const replies: string[] = [];
   // No reply-writing API is in this task: seed B's replies directly in the isolated schema.
@@ -44,7 +44,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
     const id = randomUUID(); replies.push(id);
     await pool.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES($1,$2,$3,'reply',$4)",[id,conversation,b.id,`回复${n}`]);
   }
-  assert.equal((await collect(replies[0],'not-replied')).statusCode,404);
+  assert.equal((await collect(randomUUID(),'not-replied')).statusCode,404);
   await pool.query('UPDATE conversations SET unlocked_at=NOW() WHERE id=$1',[conversation]);
   await pool.query('INSERT INTO user_blocks(blocker_id,blocked_id) VALUES($1,$2)',[a.id,b.id]);
   assert.equal((await collect(replies[0],'blocked')).statusCode,403);

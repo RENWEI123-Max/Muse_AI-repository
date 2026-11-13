@@ -14,7 +14,7 @@ test('B3 durable opening ledger and concurrent devices on real PostgreSQL', asyn
   const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`,max:20});
   const app=buildApp(pool);
   t.after(async()=>{await app.close();await pool.end();await admin.end();});
-  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','004_conversation_ledger.sql'])
+  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','004_conversation_ledger.sql','006_reply_wallet.sql'])
     await pool.query(await readFile(new URL('../server/migrations/'+name,import.meta.url),'utf8'));
   const makeUser=async()=>{
     const id=randomUUID(), tokens=[randomUUID(),randomUUID()];
@@ -27,24 +27,24 @@ test('B3 durable opening ledger and concurrent devices on real PostgreSQL', asyn
   const open=(peer:string,token:string|undefined)=>post(`/conversations/${peer}/opening`,token);
   const results=await Promise.all(Array.from({length:20},(_,i)=>i%2?open(a.id,b.tokens[i%2]):open(b.id,a.tokens[(i/2)%2])));
   assert.equal(results.filter(r=>r.statusCode===201).length,1);
-  assert.ok(results.every(r=>[200,201].includes(r.statusCode)),results.map(r=>r.body).join('\n'));
-  assert.equal(new Set(results.map(r=>r.json().id)).size,1);
-  assert.equal(new Set(results.map(r=>r.json().openingMessageId)).size,1);
+  assert.ok(results.every(r=>[409,201].includes(r.statusCode)),results.map(r=>r.body).join('\n'));
+  assert.equal(new Set(results.filter(r=>r.statusCode===201).map(r=>r.json().id)).size,1);
+  assert.equal(new Set(results.filter(r=>r.statusCode===201).map(r=>r.json().openingMessageId)).size,1);
   assert.equal((await pool.query('SELECT * FROM conversations')).rowCount,1);
   assert.equal((await pool.query('SELECT * FROM messages')).rowCount,1);
   const devicePeer=await makeUser();
   const devices=await Promise.all(Array.from({length:12},(_,i)=>open(devicePeer.id,a.tokens[i%2])));
   assert.equal(devices.filter(r=>r.statusCode===201).length,1);
-  assert.ok(devices.every(r=>[200,201].includes(r.statusCode)));
-  assert.equal(new Set(devices.map(r=>r.json().id)).size,1);
-  assert.equal((await pool.query('SELECT * FROM messages WHERE conversation_id=$1',[devices[0].json().id])).rowCount,1);
-  const v=results[0].json(), sender=v.openerId===a.id?a:b, recipient=sender===a?b:a;
+  assert.ok(devices.every(r=>[409,201].includes(r.statusCode)));
+  assert.equal(new Set(devices.filter(r=>r.statusCode===201).map(r=>r.json().id)).size,1);
+  assert.equal((await pool.query('SELECT * FROM messages WHERE conversation_id=$1',[devices.find(r=>r.statusCode===201)!.json().id])).rowCount,1);
+  const v=results.find(r=>r.statusCode===201)!.json(), sender=v.openerId===a.id?a:b, recipient=sender===a?b:a;
   const message=(token:string,content='reply')=>post(`/conversations/${v.id}/messages`,token,content);
   assert.equal((await message(sender.tokens[1])).statusCode,403);
   assert.equal((await message(outsider.tokens[0])).statusCode,404);
   await pool.query('DELETE FROM messages WHERE conversation_id=$1',[v.id]);
   const retry=await open(recipient.id,sender.tokens[1]);
-  assert.equal(retry.statusCode,200);assert.equal(retry.json().openingMessageId,v.openingMessageId);
+  assert.equal(retry.statusCode,409);
   assert.equal((await pool.query('SELECT * FROM messages WHERE conversation_id=$1',[v.id])).rowCount,0);
   assert.equal((await message(sender.tokens[0])).statusCode,403);
   assert.equal((await message(recipient.tokens[0],'   ')).statusCode,400);
@@ -58,12 +58,14 @@ test('B3 durable opening ledger and concurrent devices on real PostgreSQL', asyn
   assert.equal((await open(blocked.id,a.tokens[0])).statusCode,403);
   assert.equal((await pool.query('SELECT * FROM conversations')).rowCount,2);
   await pool.query('DELETE FROM user_blocks WHERE blocker_id=$1 AND blocked_id=$2',[sender.id,recipient.id]);
-  assert.equal((await message(recipient.tokens[0])).statusCode,201);
+  const reply=await message(recipient.tokens[0]);assert.equal(reply.statusCode,201);
+  assert.equal((await pool.query('SELECT unlocked_at FROM conversations WHERE id=$1',[v.id])).rows[0].unlocked_at,null);
+  assert.equal((await app.inject({method:'POST',url:`/conversations/${v.id}/replies/${reply.json().id}/collect`,headers:{authorization:`Bearer ${sender.tokens[0]}`,'idempotency-key':'unlock'},payload:{}})).statusCode,200);
   assert.ok((await pool.query('SELECT unlocked_at FROM conversations WHERE id=$1',[v.id])).rows[0].unlocked_at);
   assert.equal((await message(sender.tokens[0])).statusCode,201);
   assert.equal((await message(recipient.tokens[1])).statusCode,201);
-  await pool.query('DELETE FROM messages WHERE conversation_id=$1',[v.id]);
-  assert.equal((await open(recipient.id,sender.tokens[0])).json().unlocked,true);
+  await pool.query("DELETE FROM messages WHERE conversation_id=$1 AND id NOT IN (SELECT reply_id FROM reply_collections)",[v.id]);
+  assert.equal((await open(recipient.id,sender.tokens[0])).statusCode,409);
   assert.equal((await message(sender.tokens[0])).statusCode,201);
   assert.equal((await open(a.id,a.tokens[0])).statusCode,400);
   for(const token of [undefined,'invalid']) assert.equal((await open(b.id,token)).statusCode,401);

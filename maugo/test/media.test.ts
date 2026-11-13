@@ -38,7 +38,8 @@ test('B8 persistent media, permissions, signatures, limits and sending',async t=
  assert.equal((await call('POST',`/conversations/${cid}/media`,b,{mediaId:randomUUID()})).statusCode,403);
  assert.equal((await upload(other)).statusCode,404);
  assert.equal((await upload(a,'chat',png,'image/png','x.png','')).statusCode,400);
- assert.equal((await call('POST',`/conversations/${cid}/messages`,b,{content:'valid reply'})).statusCode,201);
+ const reply=await call('POST',`/conversations/${cid}/messages`,b,{content:'valid reply'});assert.equal(reply.statusCode,201);
+ assert.equal((await app.inject({method:'POST',url:`/conversations/${cid}/replies/${reply.json().id}/collect`,headers:{authorization:`Bearer ${a.token}`,'idempotency-key':'media-unlock'},payload:{}})).statusCode,200);
  for(const filename of ['../photo.png','photo.exe','a/b.png','..\\x.png','x.png.html']) assert.equal((await upload(a,'chat',png,'image/png',filename)).statusCode>=400,true,filename);
  assert.equal((await upload(a,'chat',Buffer.from('<script>evil</script>'),'image/png')).statusCode,415);
  assert.equal((await upload(a,'chat',png,'image/jpeg','photo.jpg')).statusCode,415);

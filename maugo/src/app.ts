@@ -50,7 +50,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
       await checkBlocked(c, user.id, request.params.peerId);
       const existing = await c.query(`SELECT * FROM conversations WHERE
         LEAST(opener_id,peer_id)=LEAST($1::uuid,$2::uuid) AND GREATEST(opener_id,peer_id)=GREATEST($1::uuid,$2::uuid) FOR UPDATE`, [user.id,request.params.peerId]);
-      if (existing.rowCount) return { ...conversationResult(existing.rows[0]), created: false };
+      if (existing.rowCount) fail(409, 'Opening already exists');
       const id = randomUUID(), messageId = randomUUID();
       await c.query('INSERT INTO conversations(id,opener_id,peer_id,opening_message_id) VALUES($1,$2,$3,$4)', [id,user.id,request.params.peerId,messageId]);
       await c.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES($1,$2,$3,'opening',$4)", [messageId,id,user.id,request.body.content]);
@@ -85,8 +85,8 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
       if (!v.unlocked_at && user.id === v.opener_id) fail(403, 'Wait for recipient reply');
       const id = randomUUID();
       await c.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES($1,$2,$3,'reply',$4)", [id,v.id,user.id,request.body.content]);
-      if (!v.unlocked_at) await c.query('UPDATE conversations SET unlocked_at=NOW() WHERE id=$1', [v.id]);
-      return { id, conversationId:v.id, unlocked:true };
+      // Reply remains locked until its sender's peer collects it atomically.
+      return { id, conversationId:v.id, unlocked:v.unlocked_at != null };
     });
     return reply.code(201).send(result);
   });

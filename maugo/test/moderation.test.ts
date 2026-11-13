@@ -41,7 +41,9 @@ test('B7 durable blocks, report ownership, moderation and B3 permissions',async 
  await call('DELETE',`/blocks/${b.id}`,other);assert.equal((await send(b)).statusCode,403);
  await call('DELETE',`/blocks/${b.id}`,a);
  assert.equal((await send(a)).statusCode,403); // original B3 wait rule survives unblock
- assert.equal((await send(b)).statusCode,201);assert.equal((await send(a)).statusCode,201);
+ const reply=await send(b);assert.equal(reply.statusCode,201);
+ assert.equal((await app.inject({method:'POST',url:`/conversations/${id}/replies/${reply.json().id}/collect`,headers:{authorization:`Bearer ${a.token}`,'idempotency-key':'moderation-unlock'},payload:{}})).statusCode,200);
+ assert.equal((await send(a)).statusCode,201);
  await call('PUT',`/blocks/${a.id}`,b);
  for(const u of [a,b]) assert.equal((await send(u)).statusCode,403);
  await call('DELETE',`/blocks/${a.id}`,b);assert.equal((await send(a)).statusCode,201);

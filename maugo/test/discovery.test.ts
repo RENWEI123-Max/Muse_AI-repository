@@ -60,7 +60,7 @@ test('B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL'
   assert.equal((await get(`/letters?batchId=${b}`)).json().state,'home-response');
   assert.equal((await get(`/letters?batchId=${b}`)).json().state,'home-ready');
   const marked=(await get(`/letters?batchId=${b}`)).json().items.find((x:any)=>x.openingMessageId===details.openingMessageId);
-  assert.equal(marked.replied,true);assert.equal(marked.unlocked,true);
+  assert.equal(marked.replied,true);assert.equal(marked.unlocked,false);
   await pool.query('INSERT INTO user_blocks(blocker_id,blocked_id) VALUES($1,$2)',[reader.id,senderId]);
   assert.equal((await get(`/letters/${details.openingMessageId}`)).statusCode,404);
   assert.ok(!(await get(`/letters?batchId=${b}`)).json().items.some((x:any)=>x.sender.id===senderId));

@@ -66,7 +66,7 @@ Apple 入口接收 `{identityToken}`，取消可传 `{cancelled:true}` 并返回
 
 `004_conversation_ledger.sql` 扩展 conversations：保留 opener_id（首发者）、peer_id（收件人），新增非空且唯一的 opening_message_id 和可空的 unlocked_at；后者非空即已解锁。原有 conversations_pair 使用 `UNIQUE (LEAST(opener_id,peer_id), GREATEST(opener_id,peer_id))` 表达式索引确保无序用户对唯一，消息表仍有 one_opening 部分唯一索引。opening_message_id 是历史消息的持久逻辑引用，刻意不加外键，允许删除消息历史而保留原 ID、首发者与权限；清空历史时不得删除 conversations。旧会话从已有首条及收件人回复回填，历史已不存在时分配账本占位 ID，不补造历史消息。
 
-opening 接口在事务中获取排序用户对的 advisory lock 后查重，首次返回 201，重试及反向 opening 返回 200 和同一会话、openingMessageId（兼容 messageId）、首发者与解锁状态，不重新发送或解锁。`POST /conversations/:id/messages` 接收 content；事务锁定会话，未解锁时仅收件人有效回复可写入并设置 unlocked_at，首发者返回 403。空白、超过 200 字、非成员或被屏蔽的回复不会解锁。普通消息沿用 reply 类型以兼容 B1 收藏。
+opening 接口在事务中获取排序用户对的 advisory lock 后查重，首次返回 201，重复及反向 opening 返回 409，不重新发送或解锁。`POST /conversations/:id/messages` 接收 content；事务锁定会话，未解锁时仅收件人有效回复可写入；回信不解锁，首次成功收取在扣费事务内设置 unlocked_at，首发者返回 403。空白、超过 200 字、非成员或被屏蔽的回复不会解锁。普通消息沿用 reply 类型以兼容 B1 收藏。
 
 仓库此前没有屏蔽逻辑或用户状态字段，因此新增 user_blocks(blocker_id,blocked_id) 联合主键作为定向屏蔽来源，发送前检查收件人是否屏蔽发件人；本任务不新增屏蔽管理接口。认证复用 B2 会话过期判断及现存旧 token 兼容行为。
 
@@ -110,13 +110,13 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 | 02 filters-free / filters-active / filters-selected | 筛选元数据和列表 filterState；未开通高级筛选返回锁定提示 |
 | 02 bird-female / bird-male / bird-motion-off | 信使外观与动画是客户端本地展示状态，不改变发现接口 |
 | 03 letter-open | 尚未回应，canReply=true |
-| 03 letter-waiting | 已回应且 B3 解锁账本已生效，等待发信人下一条回信 |
+| 03 letter-waiting | 已回应，等待发信人收取；聊天权限由收取事务解锁 |
 | 03 letter-replied | 发信人已有后续回信，canChat=true；不在发现接口泄漏付费回信内容 |
 | 03 letter-typed / letter-safety / letter-report | 编辑草稿、菜单和举报原因是客户端状态，基于详情展示；举报提交不属于本任务接口 |
 | 03 compose-empty / compose-draft / compose-invalid | 客户端编辑状态；发送复用 B3 opening 接口的校验 |
 | 03 compose-sent | B3 opening 返回持久化 conversationId / openingMessageId；重复发送沿用同一账本 |
 
-`replied` 依据持久化 unlocked_at，因此清理历史回复后仍保持已回应/解锁状态；
+`replied` 依据收件人回复或持久化 unlocked_at，收取后清理历史回复仍保持已回应/解锁状态；
 `letter-replied` 依据尚存的发信人后续回复，发现接口不会创建新会话或重建已删除开场白。
 迁移 `005_discovery.sql` 可重复执行；发现批次与已看记录持久化，不依赖进程内缓存。
 测试在隔离 PostgreSQL schema 中覆盖筛选锁定和到期、边界分页、并发刷新不重复、
@@ -125,7 +125,7 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 
 ## B5 回信收取与钱包
 
-迁移 `006_reply_wallet.sql` 可重复执行，保留旧收取及扣费记录。`reply_collections` 中一条记录代表一次成功解锁，`collection_count=1`、`unlocked_at` 标记解锁；重试不增加次数。Conversation 的 `unlocked_at` 仍是 B3 的已回复/聊天权限账本，与逐封回信的付费解锁分开，`openingMessageId` 始终沿用原账本。
+迁移 `006_reply_wallet.sql` 可重复执行，保留旧收取及扣费记录。`reply_collections` 中一条记录代表一次成功解锁，`collection_count=1`、`unlocked_at` 标记解锁；重试不增加次数。Conversation 的 `unlocked_at` 是聊天权限账本，首次收取回信时与收取记录、扣费在同一事务内写入，后续收取不重复修改解锁时间，`openingMessageId` 始终沿用原账本。
 
 所有接口要求 Bearer 登录。收取接口要求 `Idempotency-Key`（1–128 字符），正文可省略或为 `{}`：
 
@@ -174,7 +174,7 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 使用 Bearer 登录令牌，Content-Type 为媒体的真实 MIME，请求体为文件原始二进制（不是 JSON/base64 或 multipart）。
 返回 201：`id, url, uploaderId, purpose, kind, mimeType, size, createdAt`。上传前验证用户及用途权限，收到文件后再次验证，防止上传期间被屏蔽或封禁。
 
-- chat 必须指定本人参与且已有效回复解锁的会话，双方在解锁前均不能上传媒体；屏蔽、封禁后拒绝。
+- chat 必须指定本人参与且已成功收取回信解锁的会话，双方在解锁前均不能上传媒体；屏蔽、封禁后拒绝。
 - avatar 仅接受图片；post 接受图片、语音、视频。非 chat 不允许携带 conversationId。
 - 图片白名单 JPEG/PNG/WebP；语音 MP3/OGG Opus/WAV；视频 MP4/WebM。服务端识别文件内容，要求 MIME、后缀与识别结果一致；拒绝 SVG、HTML、路径分隔符、多重后缀等。
 - 图片和语音必须小于 10 MiB，视频必须小于 30 MiB（31,457,280 字节，等于上限也拒绝）。框架请求体限制同时拒绝超大请求，包括无 Content-Length 的请求。
@@ -193,3 +193,8 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 - 上传媒体元数据随注销事务清除；物理文件删除使用持久化队列，提交后立即处理，启动和每分钟重试。文件删除失败不会恢复已注销账号；队列清空后表示磁盘清理完成。匿名占位及对方仍持有的消息/收取引用保留引用完整性。
 - 新迁移 `010_account_privacy.sql` 可重复执行。B8 尚无动态发布模块，B9 增加 `user_posts` 作为动态内容存储并覆盖其导出和清理，未改动客户端或增加动态发布接口。
 - `test/privacy.test.ts` 覆盖导出隔离及敏感字段、两阶段确认、身份复核与限流、媒体删除失败重试、旧会话与历史 token 失效、对方注销状态及同邮箱新注册。
+
+
+## B10 核心链路端到端测试
+
+`test/core-e2e.test.ts` 随 `npm test` 执行，在独立 `b10_*` PostgreSQL schema 内通过真实 API 注册用户，不使用假用户文件。邮件发送适配器捕获真实随机验证码，其他业务均连接真实数据库。分步子测试覆盖认证异常、并发开场白唯一约束与 409、发现列表/详情/筛选/Refresh、锁定消息和媒体、回信后仍锁定、收取后双方聊天、十次免费与第十一次扣费、并发及幂等键、上海自然日边界、Filter Pass 购买及到期。注入账本写入失败证明收取记录、余额、累计次数和会话解锁整体回滚，随后并发重试仅扣费及解锁一次。迁移入口在同一隔离 schema 连续运行两次，并断言迁移记录及应用时间不变。测试保留隔离数据，不删除业务数据。
