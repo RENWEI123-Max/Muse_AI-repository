@@ -2,9 +2,10 @@
 import { ref, watchEffect } from 'vue'
 import { asset, assets, assetCategories } from './lib/assets'
 import { locale, t } from './lib/i18n'
+import AuthFlow from './components/AuthFlow.vue'
 import Avatar from './components/Avatar.vue'
 import PageTransition from './components/PageTransition.vue'
-const page = ref('welcome')
+const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
 const audit = new URLSearchParams(location.search).has('assets')
 watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
@@ -35,6 +36,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
             <button class="auth-preview" @click="page = 'preview'">{{ t('explore') }}</button>
           </div>
         </section>
+        <AuthFlow v-else-if="page !== 'preview'" :key="page" :initial="page" @back="page = 'welcome'" />
         <section v-else :key="page" class="preview-content">
           <button class="text-button" @click="page = 'welcome'">← {{ t('back') }}</button>
           <template v-if="page === 'preview'">
