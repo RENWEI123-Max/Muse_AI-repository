@@ -85,11 +85,12 @@ export function registerPrivacy(app:FastifyInstance,
    await c.query('DELETE FROM account_deletion_challenges WHERE user_id=$1',[u.id]);
    await c.query('DELETE FROM auth_limits WHERE key=ANY($1::text[])',[[
     'delete:'+u.id,...['login','code-send','code-verify'].map(action=>action+':email:'+u.email)]]);
-   await c.query('INSERT INTO media_deletion_queue(media_id) SELECT id FROM media_uploads WHERE uploader_id=$1 ON CONFLICT DO NOTHING',[u.id]);
+   // Evidence referenced by reports survives account deletion for moderation.
+   await c.query('INSERT INTO media_deletion_queue(media_id) SELECT id FROM media_uploads WHERE uploader_id=$1 AND NOT EXISTS (SELECT 1 FROM reports WHERE attachment_media_id=media_uploads.id) ON CONFLICT DO NOTHING',[u.id]);
    // Preserve references held by the peer and the financial ledger, erase authored content.
    await c.query("UPDATE messages SET content='[已注销]',media_id=NULL WHERE sender_id=$1 OR media_id IN (SELECT id FROM media_uploads WHERE uploader_id=$1)",[u.id]);
    await c.query("UPDATE users SET avatar=NULL WHERE avatar IN (SELECT '/media/uploads/'||id FROM media_uploads WHERE uploader_id=$1)",[u.id]);
-   await c.query('DELETE FROM media_uploads WHERE uploader_id=$1',[u.id]);
+   await c.query('DELETE FROM media_uploads WHERE uploader_id=$1 AND NOT EXISTS (SELECT 1 FROM reports WHERE attachment_media_id=media_uploads.id)',[u.id]);
    await c.query('DELETE FROM user_posts WHERE user_id=$1',[u.id]);
    await c.query('DELETE FROM discovery_seen WHERE user_id=$1 OR batch_id IN (SELECT id FROM discovery_batches WHERE user_id=$1)',[u.id]);
    await c.query('DELETE FROM discovery_response_seen WHERE user_id=$1',[u.id]);
