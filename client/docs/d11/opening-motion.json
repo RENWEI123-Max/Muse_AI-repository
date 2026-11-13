@@ -1,0 +1,39 @@
+[
+  {
+    "timing": {
+      "delay": 0,
+      "direction": "normal",
+      "duration": 440,
+      "easing": "linear",
+      "endDelay": 0,
+      "fill": "both",
+      "iterationStart": 0,
+      "iterations": 1
+    },
+    "frames": [
+      {
+        "offset": 0,
+        "easing": "cubic-bezier(0.333333, 1, 0.666667, 1)",
+        "composite": "auto",
+        "transform": "translate(90.25px, 87.9743px) rotate(-12deg) scale(0.9)",
+        "opacity": "1",
+        "computedOffset": 0
+      },
+      {
+        "offset": 0.55,
+        "easing": "cubic-bezier(0.333333, 1, 0.666667, 1)",
+        "composite": "auto",
+        "opacity": "1",
+        "computedOffset": 0.55
+      },
+      {
+        "offset": 1,
+        "easing": "cubic-bezier(0.333333, 1, 0.666667, 1)",
+        "composite": "auto",
+        "transform": "translate(0px) rotate(0deg) scale(1.7)",
+        "opacity": "0",
+        "computedOffset": 1
+      }
+    ]
+  }
+]

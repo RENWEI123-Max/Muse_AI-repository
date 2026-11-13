@@ -1,0 +1,492 @@
+[
+  {
+    "type": "transitionrun",
+    "classes": "letters-veil letter-overlay-enter-active letter-overlay-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background-color",
+    "duration": "0.36s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0.14s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0.14s"
+  },
+  {
+    "type": "animationstart",
+    "classes": "d11-flying-letter",
+    "animation": "d11-letter-flight",
+    "animationDuration": "0.44s",
+    "transition": "all",
+    "duration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-error reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-error reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "border-color, box-shadow",
+    "duration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-error reply-leave-active reply-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-error reply-leave-active reply-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "animationstart",
+    "classes": "waiting-dots",
+    "animation": "waiting-glow",
+    "animationDuration": "1.8s",
+    "transition": "all",
+    "duration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-form reply-leave-active reply-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-form reply-leave-active reply-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "my-reply reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "my-reply reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "reply-enter-active reply-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-veil letter-overlay-leave-active letter-overlay-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background-color",
+    "duration": "0.36s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-veil is-composing letter-overlay-enter-active letter-overlay-enter-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background-color",
+    "duration": "0.36s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel composer-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel composer-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background",
+    "duration": "0.2s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background",
+    "duration": "0.2s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-count count-leave-active count-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "transform, opacity",
+    "duration": "0.12s, 0.12s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letter-count count-leave-active count-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "transform, opacity",
+    "duration": "0.12s, 0.12s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background",
+    "duration": "0.2s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel composer-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-panel composer-panel",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "opacity, transform",
+    "duration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "type": "transitionrun",
+    "classes": "letters-veil is-composing letter-overlay-leave-active letter-overlay-leave-to",
+    "animation": "none",
+    "animationDuration": "0s",
+    "transition": "background-color",
+    "duration": "0.36s",
+    "easing": "ease",
+    "delay": "0s"
+  }
+]

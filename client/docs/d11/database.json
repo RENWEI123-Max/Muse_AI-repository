@@ -1,0 +1,22 @@
+{
+  "database": "maugo_d11_task80_1794554565216",
+  "migrations": [
+    "001_initial.sql",
+    "002_domain.sql",
+    "003_auth.sql",
+    "004_conversation_ledger.sql",
+    "005_discovery.sql",
+    "006_reply_wallet.sql",
+    "007_filter_pass.sql",
+    "008_moderation.sql",
+    "009_media.sql",
+    "010_account_privacy.sql",
+    "011_inbox.sql",
+    "012_apple_payments.sql",
+    "013_report_attachments.sql",
+    "014_profiles.sql",
+    "015_posts_image_cards.sql",
+    "016_posts_category.sql",
+    "017_profile_visibility.sql"
+  ]
+}

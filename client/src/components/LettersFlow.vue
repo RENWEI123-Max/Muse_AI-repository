@@ -41,7 +41,7 @@ onMounted(()=>{restore();try{reply.value=sessionStorage.getItem(replyKey.value)|
 onUnmounted(()=>{clearInterval(timer);document.removeEventListener('keydown',key)})
 </script>
 <template>
-<div class="letters-veil" @click.self="close">
+<div class="letters-veil" :class="{'is-composing':compose}" @click.self="close">
 <section class="letters-panel" :class="{'composer-panel':view==='compose','is-sending':busy}" role="dialog" aria-modal="true" :aria-label="tr(view==='compose'?'Share a little story':'A letter for you')" :data-state="state" :aria-busy="busy">
 <header><span aria-hidden="true">✉</span><h2>{{tr(view==='compose'?'Share a little story':view==='sent'?'Your sent letter':'A letter for you')}}</h2><button :aria-label="tr('Close')" @click="close">×</button></header>
 <template v-if="view==='compose'">
@@ -59,9 +59,9 @@ onUnmounted(()=>{clearInterval(timer);document.removeEventListener('keydown',key
 <div class="note-meta"><span>{{detail.sender.displayName}} · {{detail.sender.age}} · {{detail.sender.city}}</span><button id="report-note" :aria-label="tr('Report this letter')" @click="safety='choice'">⚑</button></div>
 <div class="letter-conversation"><div class="message-row"><img class="letter-avatar" :src="asset('02-bird-static/female-1')" :alt="tr('Letter author')"><div class="message-bubble"><p>{{tr("Dear little wanderer,")}}</p><p class="letter-content">{{detail.content}}</p><p class="note-signature">— {{detail.sender.displayName}}</p></div></div><Transition name="reply"><p v-if="sent" class="my-reply">{{sent}}</p></Transition></div>
 <p v-if="notice" role="status">{{tr(notice)}}</p>
-<template v-if="detail.state==='letter-waiting'||detail.state==='letter-replied'"><p class="waiting-status" role="status"><span class="waiting-dots">✧</span> {{tr(detail.state==='letter-replied'?'They replied to your little hello.':'Your reply is on its way. Waiting for their reply.')}}</p><button id="continue-chat" class="primary" @click="refresh">{{tr(detail.state==='letter-replied'?'Reply received · Check for updates':'Waiting for their reply')}}</button></template>
-<form v-else-if="detail.canReply" id="reply-form" class="reply-form" @submit.prevent="send(false)"><div class="reply-bar"><textarea id="reply" v-model="reply" :disabled="busy" rows="1" :placeholder="tr('Say something kind…')" :aria-label="tr('Write a reply')" :aria-invalid="!!reply&&!!invalid(reply)"></textarea><button id="reply-send" :aria-label="tr('Send reply')" :disabled="busy||!!invalid(reply)">{{tr(busy?'◌':'➤')}}</button></div><small :class="{invalid:!!reply&&!!invalid(reply)}">{{tr(reply&&invalid(reply)?invalid(reply):`${[...reply].length} / 200`)}}</small><button type="button" class="write-opening" @click="view='compose'">{{tr("Share a little story")}}</button></form>
-<p v-else class="waiting-status">{{tr("This letter is no longer available.")}}</p>
+<div class="letter-reply-area"><Transition name="reply"><div v-if="detail.state==='letter-waiting'||detail.state==='letter-replied'" key="waiting"><p class="waiting-status" role="status"><span class="waiting-dots">✧</span> {{tr(detail.state==='letter-replied'?'They replied to your little hello.':'Your reply is on its way. Waiting for their reply.')}}</p><button id="continue-chat" class="primary" @click="refresh">{{tr(detail.state==='letter-replied'?'Reply received · Check for updates':'Waiting for their reply')}}</button></div>
+<form v-else-if="detail.canReply" key="reply" id="reply-form" class="reply-form" @submit.prevent="send(false)"><div class="reply-bar"><textarea id="reply" v-model="reply" :disabled="busy" rows="1" :placeholder="tr('Say something kind…')" :aria-label="tr('Write a reply')" :aria-invalid="!!reply&&!!invalid(reply)"></textarea><button id="reply-send" :aria-label="tr('Send reply')" :disabled="busy||!!invalid(reply)">{{tr(busy?'◌':'➤')}}</button></div><small :class="{invalid:!!reply&&!!invalid(reply)}">{{tr(reply&&invalid(reply)?invalid(reply):`${[...reply].length} / 200`)}}</small><button type="button" class="write-opening" @click="view='compose'">{{tr("Share a little story")}}</button></form>
+<p v-else key="unavailable" class="waiting-status">{{tr("This letter is no longer available.")}}</p></Transition></div>
 </template>
 <Transition name="reply"><p v-if="error" class="letter-error" role="alert">{{tr(error)}}</p></Transition>
 </section>
