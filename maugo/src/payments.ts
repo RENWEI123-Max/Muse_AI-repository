@@ -74,9 +74,9 @@ export function registerApplePayments(app: FastifyInstance,
     const product = validate(tx);
     if (tx.transactionId !== submitted.transactionId || tx.environment !== submitted.environment || tx.productId !== submitted.productId || tx.revocationDate) fail(400, 'Apple transaction mismatch or revoked');
     return transaction(async c => {
+      await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))', ['apple:'+tx.transactionId]);
       const user = await authenticate(c, request.headers.authorization);
       if (tx.appAccountToken?.toLowerCase() !== user.id.toLowerCase()) fail(403, 'Apple transaction owner mismatch');
-      await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))', ['apple:'+tx.transactionId]);
       const previous = (await c.query('SELECT * FROM apple_transactions WHERE transaction_id=$1', [tx.transactionId])).rows[0];
       if (previous?.refunded) fail(409, 'Apple transaction refunded');
       if (previous && previous.user_id !== user.id) fail(409, 'Apple transaction already claimed');
@@ -97,9 +97,6 @@ export function registerApplePayments(app: FastifyInstance,
     const tx = await verify(notification.data.signedTransactionInfo);
     validate(tx);
     return transaction(async c => {
-      // Lock the same wallet row before the transaction lock, as in verify.
-      const owner = (await c.query('SELECT user_id FROM apple_transactions WHERE transaction_id=$1',[tx.transactionId])).rows[0];
-      const user = owner?.user_id ? (await c.query('SELECT * FROM users WHERE id=$1 FOR UPDATE',[owner.user_id])).rows[0] : null;
       await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))', ['apple:'+tx.transactionId]);
       const original = (await c.query('SELECT * FROM apple_transactions WHERE transaction_id=$1',[tx.transactionId])).rows[0];
       if (original?.refunded) return { received:true };
@@ -108,8 +105,7 @@ export function registerApplePayments(app: FastifyInstance,
         await c.query('INSERT INTO apple_transactions(transaction_id,refunded) VALUES($1,true)',[tx.transactionId]);
         return { received:true };
       }
-      // If verification raced with the first owner lookup, retry rather than change an unlocked wallet.
-      if (!user) fail(503, 'Retry Apple refund notification');
+      const user = (await c.query('SELECT * FROM users WHERE id=$1 FOR UPDATE',[original.user_id])).rows[0];
       const balance = user.diamonds >= original.diamonds ? user.diamonds - original.diamonds : user.diamonds;
       await c.query('UPDATE users SET diamonds=$2 WHERE id=$1',[user.id,balance]);
       await c.query('INSERT INTO wallet_ledger(id,user_id,amount,balance_after,apple_refund_transaction_id) VALUES($1,$2,$3,$4,$5)',[randomUUID(),user.id,-original.diamonds,balance,tx.transactionId]);
