@@ -31,7 +31,9 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
   function fail(statusCode: number, message: string): never { throw Object.assign(new Error(message), { statusCode }); }
   async function authenticate(client: PoolClient, authorization?: string) {
     if (!authorization?.startsWith('Bearer ')) fail(401, 'Bearer token required');
-    const result = await client.query('SELECT * FROM users WHERE token_hash=$1 OR id IN (SELECT user_id FROM auth_sessions WHERE token_hash=$1 AND expires_at>NOW()) FOR UPDATE', [hash(authorization.slice(7))]);
+    // Serialize this user's transactions while allowing peer foreign-key checks
+    // (KEY SHARE) during concurrent openings in the opposite direction.
+    const result = await client.query('SELECT * FROM users WHERE token_hash=$1 OR id IN (SELECT user_id FROM auth_sessions WHERE token_hash=$1 AND expires_at>NOW()) FOR NO KEY UPDATE', [hash(authorization.slice(7))]);
     if (!result.rowCount || result.rows[0].deleted_at) fail(401, 'Invalid token');
     if (result.rows[0].is_suspended) fail(403, 'Account suspended');
     return result.rows[0];

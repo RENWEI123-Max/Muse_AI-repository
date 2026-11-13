@@ -64,6 +64,8 @@ Apple 入口接收 `{identityToken}`，取消可传 `{cancelled:true}` 并返回
 
 ### B3 首条消息原子账本
 
+任务 #87 回归修复（2026-11-13）：认证用户行锁使用 `FOR NO KEY UPDATE`，保留同用户事务串行化并允许会话外键的 KEY SHARE 检查，修复双向并发开场白时与用户对 advisory lock 形成死锁、返回 500 的问题。B3 测试增加插入延迟以复现原并发窗口，原断言全部保留。独立测试数据库中全量后端测试 44/44 通过（无失败、无跳过），B3 另连续通过五次，构建与类型检查通过。详见 [B3 回归修复结果](docs/b3-regression-fix-result.md)；本次未合入或修改 B19，不代替 B19 后续合入验收。
+
 `004_conversation_ledger.sql` 扩展 conversations：保留 opener_id（首发者）、peer_id（收件人），新增非空且唯一的 opening_message_id 和可空的 unlocked_at；后者非空即已解锁。原有 conversations_pair 使用 `UNIQUE (LEAST(opener_id,peer_id), GREATEST(opener_id,peer_id))` 表达式索引确保无序用户对唯一，消息表仍有 one_opening 部分唯一索引。opening_message_id 是历史消息的持久逻辑引用，刻意不加外键，允许删除消息历史而保留原 ID、首发者与权限；清空历史时不得删除 conversations。旧会话从已有首条及收件人回复回填，历史已不存在时分配账本占位 ID，不补造历史消息。
 
 opening 接口在事务中获取排序用户对的 advisory lock 后查重，首次返回 201，重复及反向 opening 返回 409，不重新发送或解锁。`POST /conversations/:id/messages` 接收 content；事务锁定会话，未解锁时仅收件人有效回复可写入；回信不解锁，首次成功收取在扣费事务内设置 unlocked_at，首发者返回 403。空白、超过 200 字、非成员或被屏蔽的回复不会解锁。普通消息沿用 reply 类型以兼容 B1 收藏。
