@@ -26,11 +26,28 @@ export function registerProfiles(app: FastifyInstance,
    LEFT JOIN conversation_preferences p ON p.conversation_id=v.id AND p.user_id=$1
    WHERE (v.opener_id=$1 AND v.peer_id=$2) OR (v.opener_id=$2 AND v.peer_id=$1)`, [viewer,id])).rows[0];
   const own = viewer === id;
+  if (!own) await c.query(`INSERT INTO profile_visits(visitor_id,profile_id) VALUES($1,$2) ON CONFLICT(visitor_id,profile_id) DO UPDATE SET visited_at=clock_timestamp()`,[viewer,id]);
   return { id:u.id, displayName:u.display_name, age:u.age, city:u.city, bio:u.bio, visibility:u.visibility, avatar:u.avatar, avatars,
    following:!own && !!v?.following,
    permissions:{canOpen:!own && !v,canChat:!own && v?.unlocked_at != null,canFollow:!own && v?.unlocked_at != null,conversationId:v?.id ?? null},
    ...(own ? {recentlyRemoved:(await c.query(`SELECT media_id AS "mediaId",'/media/uploads/'||media_id AS url,position,removed_at AS "removedAt" FROM profile_avatars WHERE user_id=$1 AND removed_at IS NOT NULL ORDER BY removed_at DESC,media_id`, [id])).rows} : {}) };
  }
+ app.get('/profiles/me/stats', async req => transaction(async c => {
+  const u = await authenticate(c,req.headers.authorization);
+  const counts = (await c.query(`SELECT
+   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
+    WHERE p.user_id=$1 AND p.following AND p.user_id IN (v.opener_id,v.peer_id)) AS "followingCount",
+   (SELECT count(*)::integer FROM conversation_preferences p JOIN conversations v ON v.id=p.conversation_id
+    WHERE p.following AND p.user_id<>$1 AND ((v.opener_id=$1 AND v.peer_id=p.user_id) OR (v.peer_id=$1 AND v.opener_id=p.user_id))) AS "followersCount",
+   ((SELECT count(*) FROM post_likes l JOIN user_posts p ON p.id=l.post_id WHERE p.user_id=$1) +
+    (SELECT count(*) FROM image_card_likes l JOIN image_cards i ON i.id=l.image_card_id WHERE i.user_id=$1))::integer AS "likesCount"`,[u.id])).rows[0];
+  const visits = (await c.query(`SELECT visitor_id AS "visitorId",profile_id AS "profileId",visited_at AS "visitedAt"
+   FROM profile_visits WHERE visitor_id=$1 OR profile_id=$1 ORDER BY visited_at DESC,visitor_id,profile_id`,[u.id])).rows;
+  const letters = (await c.query(`SELECT m.id,m.conversation_id AS "conversationId",m.content,m.created_at AS "createdAt"
+   FROM messages m JOIN conversations v ON v.id=m.conversation_id
+   WHERE m.sender_id=$1 AND m.kind='opening' AND v.opener_id=$1 ORDER BY m.created_at DESC,m.id DESC`,[u.id])).rows;
+  return {...counts,visits,letters};
+ }));
  app.get<{Params:{id:string}}>('/profiles/:id', {schema:{params:{type:'object',required:['id'],properties:{id:{type:'string',pattern:'^(me|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$'}}}}}, async req => transaction(async c => {
   const u = await authenticate(c,req.headers.authorization);
   return view(c,u.id,req.params.id === 'me' ? u.id : req.params.id);
