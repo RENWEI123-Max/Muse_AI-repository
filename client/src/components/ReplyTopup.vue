@@ -7,24 +7,27 @@ const props=defineProps<{balance:number;token:string;required?:number;context?:s
 const emit=defineEmits<{back:[];funded:[]}>()
 const selected=ref(0),notice=ref(''),panel=ref<HTMLElement>()
 const packs=[{diamonds:100,price:'0.99',label:'A little boost'},{diamonds:550,price:'4.99',label:'Most popular'},{diamonds:1200,price:'9.99',label:'More possibilities'},{diamonds:2600,price:'19.99',label:'Best value'}]
+const currentBalance=ref(props.balance)
+async function loadWallet(){try{currentBalance.value=(await api<{diamonds:number}>('/wallet',{headers:{Authorization:`Bearer ${props.token}`}})).diamonds}catch(e){notice.value=(e as Error).message}}
 const restore=document.activeElement as HTMLElement
 let checking=false,closed=false
 async function checkBalance(){
  if(checking)return
  checking=true
  try{const w=await api<{diamonds:number}>('/wallet',{headers:{Authorization:`Bearer ${props.token}`}})
+ currentBalance.value=w.diamonds
  if(!closed&&w.diamonds>props.balance&&w.diamonds>=(props.required??0)){closed=true;emit('funded')}
  }catch{if(!closed)notice.value='Could not check balance. Return and try again.'}finally{checking=false}
 }
 const timer=setInterval(checkBalance,1500)
 function keyboard(e:KeyboardEvent){if(e.key==='Escape'){e.stopImmediatePropagation();emit('back')}if(e.key==='Tab'){const a=Array.from(panel.value?.querySelectorAll<HTMLButtonElement>('button')||[]);if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1)?.focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0]?.focus()}}}
-onMounted(async()=>{document.addEventListener('keydown',keyboard,true);await nextTick();panel.value?.querySelector('button')?.focus()})
+onMounted(async()=>{void loadWallet();document.addEventListener('keydown',keyboard,true);await nextTick();panel.value?.querySelector('button')?.focus()})
 onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('keydown',keyboard,true);restore?.focus()})
 </script>
 <template>
 <Transition name="d1-topup" appear><div class="d1-topup" ref="panel" role="dialog" aria-modal="true" :aria-label="tr('Diamonds')">
 <header><button @click="emit('back')">{{tr("‹ Back to")}} {{tr(context||'replies')}}</button><h2>{{tr("Diamonds")}}</h2></header>
-<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>{{tr("Your little boost")}}</h3><p>{{tr("Your balance ·")}} <strong>{{balance}} {{tr("diamonds")}}</strong></p>
+<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>{{tr("Your little boost")}}</h3><p>{{tr("Your balance ·")}} <strong>{{currentBalance}} {{tr("diamonds")}}</strong></p>
 <div class="d1-packs"><button v-for="(pack,i) in packs" :key="pack.diamonds" class="diamond-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><img :src="asset('01-brand-scenes/diamond')" alt=""><strong>{{pack.diamonds}}</strong><small>{{tr(pack.label)}}</small><b>${{pack.price}}</b></button></div>
 <button id="confirm-pack" class="primary" @click="notice='Payments are not available yet. No charge has been made.'">{{tr("Get")}} {{tr(packs[selected]!.diamonds)}} {{tr("diamonds · $")}}{{tr(packs[selected]!.price)}}</button>
 <p v-if="notice" role="status">{{tr(notice)}}</p><p class="d1-topup-note">{{tr("Real payments are not available yet. Test credits are detected automatically; confirm your original operation after returning.")}}</p><button class="text-button" @click="emit('back')">{{tr("Back to")}} {{tr(context||'replies')}}</button>
