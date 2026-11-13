@@ -1,10 +1,11 @@
+import { registerAuth, type AuthOptions } from './auth.js';
 import Fastify from 'fastify';
-import { randomUUID, randomBytes, createHash, scryptSync } from 'node:crypto';
+import { randomUUID, createHash } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 const uuid = { type: 'string', format: 'uuid' };
 const text = { type: 'string', minLength: 1, pattern: '\\S' };
-export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: Pool['connect'] }, logger = false) {
+export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: Pool['connect'] }, logger = false, authOptions: AuthOptions = {}) {
   const app = Fastify({ logger });
   app.get('/health', async () => ({ status: 'ok', service: 'maugo-backend' }));
   app.get('/ready', async (_request, reply) => {
@@ -20,25 +21,11 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
   function fail(statusCode: number, message: string): never { throw Object.assign(new Error(message), { statusCode }); }
   async function authenticate(client: PoolClient, authorization?: string) {
     if (!authorization?.startsWith('Bearer ')) fail(401, 'Bearer token required');
-    const result = await client.query('SELECT * FROM users WHERE token_hash=$1 FOR UPDATE', [hash(authorization.slice(7))]);
+    const result = await client.query('SELECT * FROM users WHERE token_hash=$1 OR id IN (SELECT user_id FROM auth_sessions WHERE token_hash=$1 AND expires_at>NOW()) FOR UPDATE', [hash(authorization.slice(7))]);
     if (!result.rowCount) fail(401, 'Invalid token');
     return result.rows[0];
   }
-  app.post<{ Body: { email: string; password: string } }>('/auth/signup', {
-    schema: { body: { type: 'object', additionalProperties: false, required: ['email','password'], properties: {
-      email: { type: 'string', maxLength: 254, pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' },
-      password: { type: 'string', minLength: 8, maxLength: 128 }
-    } } }
-  }, async (request, reply) => {
-    const id = randomUUID(), token = randomBytes(32).toString('hex'), salt = randomBytes(16).toString('hex');
-    const passwordHash = salt + ':' + scryptSync(request.body.password, salt, 64).toString('hex');
-    await transaction(async c => {
-      const result = await c.query('INSERT INTO users(id,email,password_hash,token_hash) VALUES($1,$2,$3,$4) ON CONFLICT(email) DO NOTHING RETURNING id',
-        [id, request.body.email.toLowerCase(), passwordHash, hash(token)]);
-      if (!result.rowCount) fail(409, 'Email already registered');
-    });
-    return reply.code(201).send({ id, token });
-  });
+  registerAuth(app, db as Pool, authOptions);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {
     schema: { params: { type: 'object', required: ['peerId'], properties: { peerId: uuid } },
       body: { type: 'object', additionalProperties: false, required: ['content'], properties: { content: text } } }

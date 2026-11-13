@@ -32,10 +32,26 @@ HOST 默认 0.0.0.0，PORT 默认 3000，DATABASE_URL 必填。收到 SIGINT/SIG
 
 迁移现放在 `server/migrations/`，运行 `npm run migrate`（原 `db:migrate` 仍可用）。新增 users、conversations、messages、reply_collections、wallet_ledger 五张表。
 
-- `POST /auth/signup`：JSON `{ "email": "a@example.com", "password": "至少8字符" }`，返回 201 和 `{id, token}`；邮箱重复返回 409。密码使用随机盐 scrypt，数据库仅存令牌摘要。没有验证码或短信功能。
+- `POST /auth/signup`：JSON `{ "email": "a@example.com", "password": "Password1!", "privacyVersion": "1", "termsVersion": "1" }`，返回 201 和 `{id, token}`；邮箱重复返回 409。密码使用随机盐 scrypt，数据库仅存令牌摘要。B2 认证扩展见下文。
 - 业务请求携带 `Authorization: Bearer <token>`。`POST /conversations/:peerId/opening`，JSON `{ "content": "你好" }`，纯文本 1–200 个 Unicode 字符，返回 201；同一对用户只能建立一次会话，重复返回 409。不解析 HTML 或 Markdown，客户端展示时应作为纯文本。
 - `POST /conversations/:id/replies/:replyId/collect`：携带非空 `Idempotency-Key`，返回 `{id, cost, content}`。仅会话成员可收取对方的 reply；每个用户按 Asia/Shanghai 自然日（00:00 至次日 00:00）每天前十条不同回复免费，此后每条 10 钻，余额不足返回 402。按用户锁行串行化计数、余额、收取记录及账本，全部同一事务提交。相同键和回复重试返回原结果，键用于其他回复返回 409；不同键重复收取同一回复同样不会重复扣费。免费收取不写扣费账本。
 
-本任务仅提供上述三个业务接口；B 回复通过数据库测试夹具写入，不提供回复发送、充值、支付或客户端功能。注册余额为零，令牌为当前最小实现，暂无登录和令牌轮换接口。
+B1 提供上述三个业务接口；B 回复通过数据库测试夹具写入，不提供回复发送、充值、支付或客户端功能。注册余额为零，B2 已增加登录和会话管理。
 
 `npm test` 需要配置真实 PostgreSQL `DATABASE_URL`，除原四项检查，还自动创建唯一 `smoke_*` schema 测试 A/B 注册、重复开场白、每天十次免费、跨天额度重置、第十一次扣费、余额不足、越权及并发幂等；测试数据保留在独立 schema，不触碰现有业务表。测试账号需有 CREATE SCHEMA 权限。运行 `npm run build` 校验 TypeScript，`npm run dev` 后 `/health` 返回 200。
+
+## B2：认证接口
+
+注册和密码登录均需传入 `email`、`password`、`privacyVersion`、`termsVersion`。邮箱统一转小写，密码长度 8–128 且须包含字母以及数字或符号；注册可传 `confirmPassword`，传入时必须一致。协议版本不可为空，成功注册/登录时写入 users 的版本与同意时间。注册返回 201，重复邮箱 409；密码错误返回 401。登录返回 `{id, token}`。
+
+新会话存于 auth_sessions，仅保存 SHA-256 摘要，有效期 30 天；注册、登录均签发独立会话。业务接口兼容 B1 旧令牌。`POST /auth/logout` 携带 Bearer token 撤销当前会话，重复撤销成功；缺少 Bearer 返回 401。
+
+`POST /auth/code/send` 接收 `{email}`，随机六位验证码（不使用 123456），仅保存摘要，10 分钟有效；成功返回 `{sent:true,retryAfter:60,expiresIn:600}`。重发等待返回 429、Retry-After 和 retryAfter 秒数。登录按 IP 与邮箱分别限制每小时 10 次，发码分别限制每小时 5 次请求（包含倒计时内重试和发送失败），验证每小时 30 次；数据库保存计数，跨进程共享。发码、验证码消费均通过数据库锁串行处理。
+
+`POST /auth/code/verify` 接收 `{email,code}`；成功 `{verified:true}`，错误或已使用 401，过期 410，同一验证码错误尝试达到 5 次后 429。验证成功只表示邮箱校验通过，不签发会话或自动修改账号；验证码不能重复消费。
+
+SMTP 使用 `.env.example` 中五项环境变量。465 端口使用 TLS，其余使用 nodemailer 的 STARTTLS 协商。配置缺失、无效或发送失败均返回明确 503，验证码仅在服务端日志中供开发测试，响应不含验证码；失败仍保留验证码及重发等待。本服务器尚无 SMTP 账号，需要 Smith 配置 SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/SMTP_FROM 后才能实际收信。
+
+Apple 入口接收 `{identityToken}`，取消可传 `{cancelled:true}` 并返回 `{cancelled:true}`。使用 jose 与 Apple 公开 JWKS 校验 RS256 签名、issuer、APPLE_CLIENT_ID audience、过期时间、sub/iat。参考 [Apple 官方校验说明](https://developer.apple.com/documentation/signinwithapple/verifying-a-user)。当前 APPLE_CLIENT_ID 未配置时返回 503；无效 token 返回 401。即使签名校验成功，当前仍返回 503，明确不签发会话：账号绑定、服务端 nonce 关联与授权码交换尚未实现。需要 Smith 提供实际 Bundle ID/Services ID、确定账号绑定规则；若接通授权码交换，还需 Apple Team ID、Key ID 和 Sign in with Apple 私钥，私钥不应提交仓库。identityToken 签名校验本身使用 Apple 公钥，不需要伪造私钥。
+
+新增 `003_auth.sql`，迁移不删除原数据、不改数据库凭据，可重复运行。`test/auth.test.ts` 使用独立 PostgreSQL schema 验证全部新接口、输入错误、会话撤销/过期、验证码错误/过期/一次性消费、SMTP 失败、倒计时、IP/邮箱配额、Apple 取消及未配置返回；保留测试数据。B1 冒烟测试随协议字段和新迁移同步调整。

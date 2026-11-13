@@ -16,14 +16,15 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   const app = buildApp(pool);
   t.after(async () => { await app.close(); await pool.end(); await admin.end(); });
   await pool.query(await readFile(new URL('../server/migrations/002_domain.sql', import.meta.url), 'utf8'));
+  await pool.query(await readFile(new URL('../server/migrations/003_auth.sql', import.meta.url), 'utf8'));
   const signup = async (email: string) => {
-    const response = await app.inject({ method: 'POST', url: '/auth/signup', payload: { email, password: randomUUID() } });
+    const response = await app.inject({ method: 'POST', url: '/auth/signup', payload: { email, password: 'Password1!'+randomUUID(), privacyVersion:'1',termsVersion:'1' } });
     assert.equal(response.statusCode, 201, response.body);
     return response.json();
   };
   const a = await signup('a@example.test'), b = await signup('b@example.test'), outsider = await signup('c@example.test');
   const headers = { authorization: `Bearer ${a.token}` };
-  assert.equal((await app.inject({ method:'POST', url:'/auth/signup', payload: { email:'a@example.test',password:'different-password' } })).statusCode,409);
+  assert.equal((await app.inject({ method:'POST', url:'/auth/signup', payload: { email:'a@example.test',password:'different-password1',privacyVersion:'1',termsVersion:'1' } })).statusCode,409);
   const open = (content: string, auth = headers) => app.inject({ method:'POST', url:`/conversations/${b.id}/opening`,headers:auth,payload:{content} });
   assert.equal((await open('hello',{} as typeof headers)).statusCode,401);
   assert.equal((await open('字'.repeat(201))).statusCode,400);
