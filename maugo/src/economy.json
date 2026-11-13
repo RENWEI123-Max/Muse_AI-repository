@@ -1,4 +1,46 @@
 {
-  "filterPass": [{"days":1,"diamonds":30},{"days":7,"diamonds":150},{"days":30,"diamonds":480}],
-  "filterPassFeatures": ["age","city"]
+  "filterPass": [
+    {
+      "days": 1,
+      "diamonds": 30
+    },
+    {
+      "days": 7,
+      "diamonds": 150
+    },
+    {
+      "days": 30,
+      "diamonds": 480
+    }
+  ],
+  "filterPassFeatures": [
+    "age",
+    "city"
+  ],
+  "bundles": [
+    {
+      "id": "maugo.diamonds.100",
+      "diamonds": 100,
+      "usd": 0.99,
+      "label": "A little boost"
+    },
+    {
+      "id": "maugo.diamonds.550",
+      "diamonds": 550,
+      "usd": 4.99,
+      "label": "Most popular"
+    },
+    {
+      "id": "maugo.diamonds.1200",
+      "diamonds": 1200,
+      "usd": 9.99,
+      "label": "More possibilities"
+    },
+    {
+      "id": "maugo.diamonds.2600",
+      "diamonds": 2600,
+      "usd": 19.99,
+      "label": "Best value"
+    }
+  ]
 }

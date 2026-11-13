@@ -202,3 +202,52 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 ## B11 会话列表与历史
 
 新增会话列表、待收回信与额度、历史/搜索/已读、个人会话偏好 PATCH，详见 [B11 接口说明](B11-inbox.md)。需应用新增的 `011_inbox.sql` 迁移。清空历史仅改变当前用户可见范围，不重置首条消息权限或解锁状态。C5 测试环境已移除临时会话路由，改用真实后端与独立测试数据库；测试见 `test/inbox.test.ts` 和客户端 `tests/inbox.spec.ts`。
+
+## B12 苹果内购服务端
+
+`src/economy.json` 的 `bundles` 是服务端商品目录，与交接包一致；不另设商品映射。
+`GET /payments/apple/products` 返回 `{ products: [{ id, diamonds, usd, label }] }`，四档为
+maugo.diamonds.100（100 钻/$0.99）、maugo.diamonds.550（550 钻/$4.99）、
+maugo.diamonds.1200（1200 钻/$9.99）、maugo.diamonds.2600（2600 钻/$19.99）。
+价格是目录展示价；实际 StoreKit 本地化价格由后续客户端接入读取。Filter Pass 仍用钻石购买。
+
+`POST /payments/apple/verify` 要求现有 Bearer 登录，正文 `{ "signedTransaction": "StoreKit 2 JWS" }`。
+服务端验证 Apple G3 根证书指纹、证书链、有效期、签名用途和 ES256 签名，再以签名内的
+Sandbox/Production 环境调用 App Store Server API 的 Get Transaction Info，并验证返回的交易 JWS。
+只接受配置的 bundleId、目录内 productId、有效 transactionId 和未撤销交易。
+客户端购买时必须把当前 MauGo 用户 UUID 作为 StoreKit `appAccountToken`，服务端核对归属，
+防止另一登录用户认领交易；不能省略或用设备 ID 代替。
+成功返回 `{ balance, credited, transactionId }`，credited 为本次商品的钻石数量。
+交易记录、`creditWallet` 余额更新、WalletLedger 在同一数据库事务内提交。
+transactionId 为全局唯一键，同一用户并发或重复提交返回首次的 balance/credited，
+即使之后消费导致当前余额变化也保持原结果；其他用户不能认领。
+验证错误返回 4xx；缺配置/密钥不可读或 Apple API 不可用返回 503，不会无验证入账。
+
+`POST /payments/apple/notifications` 接受 App Store Server Notifications V2 的 `{ "signedPayload": "JWS" }`，
+无需用户 Bearer，但必须验签并匹配 bundleId；REFUND 内嵌的 signedTransactionInfo 也需验签。
+REFUND 按 transactionId 找原入账，原额反向记流水，余额充足才扣款；例如余额 20 时退款 550，
+只记流水 -550、balanceAfter=20，保留现有余额，不产生负余额。
+重复退款不会再次扣款；先到的退款会保存交易标记，阻止之后充值。其余类型写服务端结构化日志，返回 received。
+需启用服务端日志才能查看这些信息。迁移 `012_apple_payments.sql` 可重复执行，
+apple_transactions 保留已处理交易身份以防重放（包括用户注销清空钱包后）。
+
+配置由服务器环境注入，`.env.example` 中所有 Apple 支付值默认留空：
+
+- `APPLE_BUNDLE_ID`：App Store Connect 中该 iOS 应用的 Bundle ID，必须与交易完全一致；不是上述商品 ID。
+- `APPLE_API_KEY_ID`：可访问 App Store Server API 的 In-App Purchase Key 的 Key ID。
+- `APPLE_API_ISSUER_ID`：该密钥所属 App Store Connect 团队的 Issuer ID。
+- `APPLE_API_KEY_PATH`：服务器上私有 `.p8` 文件的绝对路径，必须放在仓库外，仅服务进程可读。
+- `APPLE_SHARED_SECRET`：可选的 legacy verifyReceipt 共享密钥；本任务 StoreKit 2 流程不使用它，也不降级为免验证。
+
+Smith 需在 App Store Connect 为正确 Bundle ID 提供 Key ID、Issuer ID 和 `.p8` 文件，
+并建立以上四个完全一致的消耗型商品 ID，配置价格、销售地区及可测试状态；配置生产与沙盒的
+Notifications V2 HTTPS 地址为服务器 `/payments/apple/notifications`。私钥及共享密钥不得提交仓库。
+证书校验依据 [Apple PKI](https://www.apple.com/certificateauthority/)，交易查询依据
+[Get Transaction Info](https://developer.apple.com/documentation/appstoreserverapi/get-transaction-info)。
+
+沙盒联调前提：Smith 提供沙盒测试员和有效密钥，应用签名/Bundle ID 与 App Store Connect 一致、
+四个商品在沙盒可获取，服务器能访问 Apple API，通知地址可从公网访问，客户端完成下一任务的
+StoreKit/Capacitor 接入并带上 appAccountToken。本任务没有客户端变更，没有在 App Store Connect
+创建商品，也未进行需要这些凭证和测试员的真实沙盒端到端测试。
+`test/payments.test.ts` 使用签名校验及 API mock 与真实 PostgreSQL，覆盖入账、并发幂等、
+归属、bundle/product 错误、篡改 JWS、凭证缺失、退款验签/重放/不足额及事务失败回滚。

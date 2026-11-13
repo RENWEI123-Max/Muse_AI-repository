@@ -1,3 +1,4 @@
+import { registerApplePayments, type AppleOptions } from './payments.js';
 import { registerInbox } from './inbox.js';
 import { registerPrivacy } from './privacy.js';
 import { registerMedia } from './media.js';
@@ -12,7 +13,7 @@ import type { Pool, PoolClient } from 'pg';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 const uuid = { type: 'string', format: 'uuid' };
 const text = { type: 'string', minLength: 1, pattern: '\\S' };
-export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: Pool['connect'] }, logger = false, authOptions: AuthOptions = {}) {
+export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: Pool['connect'] }, logger = false, authOptions: AuthOptions = {}, appleOptions: AppleOptions = {}) {
   const app = Fastify({ logger, ajv: { customOptions: { removeAdditional: false } } });
   app.get('/health', async () => ({ status: 'ok', service: 'maugo-backend' }));
   app.get('/ready', async (_request, reply) => {
@@ -92,6 +93,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     });
     return reply.code(201).send(result);
   });
+  registerApplePayments(app, transaction, authenticate, appleOptions);
   registerWallet(app, transaction, authenticate);
   registerFilterPass(app, transaction, authenticate);
   return app;
