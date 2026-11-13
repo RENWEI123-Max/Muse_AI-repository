@@ -17,6 +17,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   t.after(async () => { await app.close(); await pool.end(); await admin.end(); });
   await pool.query(await readFile(new URL('../server/migrations/002_domain.sql', import.meta.url), 'utf8'));
   await pool.query(await readFile(new URL('../server/migrations/003_auth.sql', import.meta.url), 'utf8'));
+  await pool.query(await readFile(new URL('../server/migrations/004_conversation_ledger.sql',import.meta.url),'utf8'));
   const signup = async (email: string) => {
     const response = await app.inject({ method: 'POST', url: '/auth/signup', payload: { email, password: 'Password1!'+randomUUID(), privacyVersion:'1',termsVersion:'1' } });
     assert.equal(response.statusCode, 201, response.body);
@@ -32,7 +33,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   assert.equal((await open('😀'.repeat(201))).statusCode,400);
   const opened = await open('😀'.repeat(200)); assert.equal(opened.statusCode,201,opened.body);
   const conversation = opened.json().id;
-  assert.equal((await open('重复')).statusCode,409);
+  assert.equal((await open('重复')).statusCode,200);
   const collect = (id: string, key: string, auth = headers) => app.inject({ method:'POST', url:`/conversations/${conversation}/replies/${id}/collect`, headers:{...auth,'idempotency-key':key} });
   const replies: string[] = [];
   // No reply-writing API is in this task: seed B's replies directly in the isolated schema.

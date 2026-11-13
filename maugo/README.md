@@ -61,3 +61,13 @@ Apple 入口接收 `{identityToken}`，取消可传 `{cancelled:true}` 并返回
 无需登录，先调用现有 `POST /auth/code/send`（`email`），再调用 `POST /auth/password/reset`，传入 `email`、六位 `code`、`newPassword`。请直接提交验证码到重置接口；`/auth/code/verify` 会消费验证码。新密码沿用注册规则：8–128 位，包含字母及数字或符号。成功返回 `200 {"reset":true}`，验证码只可使用一次，全部现有会话及旧版 token 立即失效。
 
 空表单或弱密码返回 400，错误或已使用验证码返回 401，过期验证码返回 410，验码次数超限返回 429。验证码有效期为 10 分钟，发码沿用原有邮箱/IP 限速；SMTP 未配置或发送失败返回 503，不返回或记录明文验证码。无需新增迁移。
+
+### B3 首条消息原子账本
+
+`004_conversation_ledger.sql` 扩展 conversations：保留 opener_id（首发者）、peer_id（收件人），新增非空且唯一的 opening_message_id 和可空的 unlocked_at；后者非空即已解锁。原有 conversations_pair 使用 `UNIQUE (LEAST(opener_id,peer_id), GREATEST(opener_id,peer_id))` 表达式索引确保无序用户对唯一，消息表仍有 one_opening 部分唯一索引。opening_message_id 是历史消息的持久逻辑引用，刻意不加外键，允许删除消息历史而保留原 ID、首发者与权限；清空历史时不得删除 conversations。旧会话从已有首条及收件人回复回填，历史已不存在时分配账本占位 ID，不补造历史消息。
+
+opening 接口在事务中获取排序用户对的 advisory lock 后查重，首次返回 201，重试及反向 opening 返回 200 和同一会话、openingMessageId（兼容 messageId）、首发者与解锁状态，不重新发送或解锁。`POST /conversations/:id/messages` 接收 content；事务锁定会话，未解锁时仅收件人有效回复可写入并设置 unlocked_at，首发者返回 403。空白、超过 200 字、非成员或被屏蔽的回复不会解锁。普通消息沿用 reply 类型以兼容 B1 收藏。
+
+仓库此前没有屏蔽逻辑或用户状态字段，因此新增 user_blocks(blocker_id,blocked_id) 联合主键作为定向屏蔽来源，发送前检查收件人是否屏蔽发件人；本任务不新增屏蔽管理接口。认证复用 B2 会话过期判断及现存旧 token 兼容行为。
+
+验证：全量 npm test 七项通过、TypeScript 构建通过、db:migrate 连续两次通过；新测试也直接重复执行该迁移。conversations.test.ts 使用隔离 PostgreSQL schema 和 Promise.all，覆盖 20 次双向并发、12 次同用户两设备并发，并核对会话与消息数量及唯一 ID；覆盖清空历史前后权限和首条 ID 保留、无效回复不解锁、有效收件人回复后双方发送、非成员、已有及新会话被屏蔽、缺失/无效/过期 token、自发 400。未测：真实移动设备网络重试、屏蔽管理前端、线上负载压测；没有跳过自动测试。client/ 未修改。

@@ -16,6 +16,7 @@ test('B2 authentication routes with real PostgreSQL', async t => {
   const app=buildApp(pool,false,{sendMail:async (_email,value)=>{code=value;if(mailFailure) throw Error('offline');}});
   t.after(async()=>{await app.close();await pool.end();await admin.end();});
   for(const name of ['002_domain.sql','003_auth.sql','003_auth.sql']) await pool.query(await readFile(new URL('../server/migrations/'+name,import.meta.url),'utf8'));
+  await pool.query(await readFile(new URL('../server/migrations/004_conversation_ledger.sql',import.meta.url),'utf8'));
   const post=(url:string,payload:object={},token?:string,remoteAddress='127.0.0.1')=>app.inject({method:'POST',url,payload,remoteAddress,headers:token?{authorization:`Bearer ${token}`}:{}});
   const credentials={email:'User@example.test',password:'StrongPassword1!',privacyVersion:'2026-11',termsVersion:'2026-10'};
   assert.equal((await post('/auth/signup')).statusCode,400);
