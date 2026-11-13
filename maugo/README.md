@@ -55,3 +55,9 @@ SMTP 使用 `.env.example` 中五项环境变量。465 端口使用 TLS，其余
 Apple 入口接收 `{identityToken}`，取消可传 `{cancelled:true}` 并返回 `{cancelled:true}`。使用 jose 与 Apple 公开 JWKS 校验 RS256 签名、issuer、APPLE_CLIENT_ID audience、过期时间、sub/iat。参考 [Apple 官方校验说明](https://developer.apple.com/documentation/signinwithapple/verifying-a-user)。当前 APPLE_CLIENT_ID 未配置时返回 503；无效 token 返回 401。即使签名校验成功，当前仍返回 503，明确不签发会话：账号绑定、服务端 nonce 关联与授权码交换尚未实现。需要 Smith 提供实际 Bundle ID/Services ID、确定账号绑定规则；若接通授权码交换，还需 Apple Team ID、Key ID 和 Sign in with Apple 私钥，私钥不应提交仓库。identityToken 签名校验本身使用 Apple 公钥，不需要伪造私钥。
 
 新增 `003_auth.sql`，迁移不删除原数据、不改数据库凭据，可重复运行。`test/auth.test.ts` 使用独立 PostgreSQL schema 验证全部新接口、输入错误、会话撤销/过期、验证码错误/过期/一次性消费、SMTP 失败、倒计时、IP/邮箱配额、Apple 取消及未配置返回；保留测试数据。B1 冒烟测试随协议字段和新迁移同步调整。
+
+### 重置密码
+
+无需登录，先调用现有 `POST /auth/code/send`（`email`），再调用 `POST /auth/password/reset`，传入 `email`、六位 `code`、`newPassword`。请直接提交验证码到重置接口；`/auth/code/verify` 会消费验证码。新密码沿用注册规则：8–128 位，包含字母及数字或符号。成功返回 `200 {"reset":true}`，验证码只可使用一次，全部现有会话及旧版 token 立即失效。
+
+空表单或弱密码返回 400，错误或已使用验证码返回 401，过期验证码返回 410，验码次数超限返回 429。验证码有效期为 10 分钟，发码沿用原有邮箱/IP 限速；SMTP 未配置或发送失败返回 503，不返回或记录明文验证码。无需新增迁移。

@@ -75,19 +75,50 @@ export function registerAuth(app: FastifyInstance, db: Pool, options: AuthOption
         const transport=nodemailer.createTransport({host:env.SMTP_HOST,port:Number(env.SMTP_PORT),secure:Number(env.SMTP_PORT)===465,auth:{user:env.SMTP_USER!,pass:env.SMTP_PASS!},connectionTimeout:5000,socketTimeout:10000});
         try { await transport.sendMail({from:env.SMTP_FROM,to:address,subject:'MauGo verification code',text:`Your verification code is ${code}. It expires in 10 minutes.`}); } finally { transport.close(); }
       }
-    } catch { app.log.warn({email:address,code},'Development verification code: SMTP unavailable'); fail(503,'SMTP configuration unavailable or delivery failed'); }
+    } catch { app.log.warn({email:address},'SMTP unavailable'); fail(503,'SMTP configuration unavailable or delivery failed'); }
     return reply.send({sent:true,retryAfter:60,expiresIn:600});
   });
-  app.post<{Body:{email:string;code:string}}>('/auth/code/verify',{schema:body({email,code:{type:'string',pattern:'^[0-9]{6}$'}},['email','code'])},async req=>{
-    await limit(req.ip,req.body.email.toLowerCase(),'code-verify',30);
+  const codeSchema = {type:'string',pattern:'^[0-9]{6}$'};
+  // Return failures so the transaction commits failed-attempt counters as well.
+  async function verifyCode(c: PoolClient, address: string, code: string) {
+    const r=await c.query('SELECT *,expires_at<=NOW() AS expired FROM auth_codes WHERE email=$1 FOR UPDATE',[address]);
+    const row=r.rows[0];
+    if(!row || row.used_at) return 401;
+    if(row.expired) return 410;
+    if(row.attempts>=5) return 429;
+    await c.query('UPDATE auth_codes SET attempts=attempts+1 WHERE email=$1',[address]);
+    if(!timingSafeEqual(Buffer.from(row.code_hash,'hex'),Buffer.from(digest(code),'hex'))) return 401;
+    return 200;
+  }
+  function checkCodeStatus(status: number) {
+    if(status!==200) fail(status,status===410?'Code expired':status===429?'Too many code attempts':'Invalid code');
+  }
+  app.post<{Body:{email:string;code:string}}>('/auth/code/verify',{schema:body({email,code:codeSchema},['email','code'])},async req=>{
+    const address=req.body.email.toLowerCase();
+    await limit(req.ip,address,'code-verify',30);
     const status=await tx(async c=>{
-      const r=await c.query('SELECT *,expires_at<=NOW() AS expired FROM auth_codes WHERE email=$1 FOR UPDATE',[req.body.email.toLowerCase()]); const row=r.rows[0];
-      if(!row || row.used_at) return 401; if(row.expired) return 410;
-      if(row.attempts>=5) return 429;
-      await c.query('UPDATE auth_codes SET attempts=attempts+1 WHERE email=$1',[row.email]);
-      if(!timingSafeEqual(Buffer.from(row.code_hash,'hex'),Buffer.from(digest(req.body.code),'hex'))) return 401;
-      await c.query('UPDATE auth_codes SET used_at=NOW() WHERE email=$1',[row.email]); return 200;
-    }); if(status!==200) fail(status,status===410?'Code expired':status===429?'Too many code attempts':'Invalid code'); return {verified:true};
+      const status=await verifyCode(c,address,req.body.code);
+      if(status===200) await c.query('UPDATE auth_codes SET used_at=NOW() WHERE email=$1',[address]);
+      return status;
+    });
+    checkCodeStatus(status); return {verified:true};
+  });
+  app.post<{Body:{email:string;code:string;newPassword:string}}>('/auth/password/reset',{schema:body({email,code:codeSchema,newPassword:password},['email','code','newPassword'])},async req=>{
+    const b=req.body,address=b.email.toLowerCase();
+    strong(b.newPassword);
+    await limit(req.ip,address,'code-verify',30);
+    const status=await tx(async c=>{
+      const status=await verifyCode(c,address,b.code);
+      if(status!==200) return status;
+      const user=await c.query('SELECT id FROM users WHERE email=$1 FOR UPDATE',[address]);
+      if(!user.rowCount) return 401;
+      const salt=randomBytes(16).toString('hex');
+      await c.query('UPDATE users SET password_hash=$2,token_hash=$3 WHERE id=$1',[user.rows[0].id,salt+':'+scryptSync(b.newPassword,salt,64).toString('hex'),digest(randomBytes(32).toString('hex'))]);
+      await c.query('DELETE FROM auth_sessions WHERE user_id=$1',[user.rows[0].id]);
+      await c.query('UPDATE auth_codes SET used_at=NOW() WHERE email=$1',[address]);
+      return 200;
+    });
+    checkCodeStatus(status); return {reset:true};
   });
   app.post('/auth/logout',async req=>{
     if(!req.headers.authorization?.startsWith('Bearer ')) fail(401,'Bearer token required');

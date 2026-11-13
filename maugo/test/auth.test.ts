@@ -51,6 +51,43 @@ test('B2 authentication routes with real PostgreSQL', async t => {
   assert.equal((await post('/auth/code/verify',{email:address,code})).statusCode,401);
   await pool.query("UPDATE auth_codes SET used_at=NULL,expires_at=NOW()-interval '1 second' WHERE email=$1",[address]);
   assert.equal((await post('/auth/code/verify',{email:address,code})).statusCode,410);
+  // Password recovery uses the existing mail sender, code store and limits.
+  const reset=(payload:object)=>post('/auth/password/reset',payload,undefined,'192.0.10.1');
+  const resetEmail=credentials.email.toLowerCase();
+  const newPassword='ReplacementPassword2!';
+  const recovery=await post('/auth/code/send',{email:credentials.email},undefined,'192.0.10.1');
+  assert.equal(recovery.statusCode,200,recovery.body);
+  const resetCode=code;
+  assert.equal(recovery.json().code,undefined);
+  const resetBody={email:credentials.email,code:resetCode,newPassword};
+  for(const payload of [{},{email:resetEmail},{...resetBody,code:''},{...resetBody,email:'bad'},{...resetBody,newPassword:''},{...resetBody,newPassword:'Short1'},{...resetBody,newPassword:'onlyletters'},{...resetBody,newPassword:'x'.repeat(129)}]) {
+    const r=await reset(payload);assert.equal(r.statusCode,400,r.body);assert.ok(r.json().message);
+  }
+  const wrong=await reset({...resetBody,code:resetCode==='000000'?'999999':'000000'});
+  assert.equal(wrong.statusCode,401);assert.equal(wrong.json().message,'Invalid code');
+  assert.equal((await pool.query('SELECT attempts FROM auth_codes WHERE email=$1',[resetEmail])).rows[0].attempts,1);
+  await pool.query("UPDATE auth_codes SET expires_at=NOW()-interval '1 second' WHERE email=$1",[resetEmail]);
+  const expiredReset=await reset(resetBody);assert.equal(expiredReset.statusCode,410);assert.equal(expiredReset.json().message,'Code expired');
+  await pool.query("UPDATE auth_codes SET expires_at=NOW()+interval '10 minutes',attempts=5 WHERE email=$1",[resetEmail]);
+  assert.equal((await reset(resetBody)).statusCode,429);
+  await pool.query('UPDATE auth_codes SET attempts=0 WHERE email=$1',[resetEmail]);
+  // Include both current sessions and the legacy bearer token in revocation checks.
+  const legacyToken=randomUUID();
+  await pool.query('UPDATE users SET token_hash=$2 WHERE id=$1',[id,digest(legacyToken)]);
+  const active=(await post('/auth/login',credentials,undefined,'192.0.10.2')).json().token;
+  assert.equal((await post(`/conversations/${randomUUID()}/opening`,{content:'hi'},active)).statusCode,404);
+  const completed=await reset(resetBody);assert.equal(completed.statusCode,200,completed.body);assert.deepEqual(completed.json(),{reset:true});
+  assert.equal((await pool.query('SELECT * FROM auth_sessions WHERE user_id=$1',[id])).rowCount,0);
+  for(const oldToken of [active,signup.json().token,legacyToken]) {
+    assert.equal((await post(`/conversations/${randomUUID()}/opening`,{content:'hi'},oldToken)).statusCode,401);
+  }
+  assert.equal((await reset(resetBody)).statusCode,401);
+  assert.equal((await post('/auth/login',credentials,undefined,'192.0.10.2')).statusCode,401);
+  const recoveredLogin=await post('/auth/login',{...credentials,password:newPassword},undefined,'192.0.10.2');
+  assert.equal(recoveredLogin.statusCode,200,recoveredLogin.body);
+  assert.equal((await post(`/conversations/${randomUUID()}/opening`,{content:'hi'},recoveredLogin.json().token)).statusCode,404);
+  const resend=await post('/auth/code/send',{email:resetEmail},undefined,'192.0.10.3');
+  assert.equal(resend.statusCode,429);assert.ok(resend.headers['retry-after']);
   mailFailure=true;
   const failed=await post('/auth/code/send',{email:'failure@example.test'});assert.equal(failed.statusCode,503);assert.equal(failed.json().code,undefined);mailFailure=false;
   // Independent IP and email limits survive app recreation and cannot be bypassed by rotating the other dimension.
