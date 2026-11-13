@@ -1,4 +1,5 @@
 // Uses a dedicated test database only; never loads production application tables.
+import { registerInboxContract } from './inbox-contract.mjs'
 import pg from '../../maugo/node_modules/pg/lib/index.js'
 import dotenv from '../../maugo/node_modules/dotenv/lib/main.js'
 import { readFile } from 'node:fs/promises'
@@ -41,6 +42,7 @@ app.post('/__c4/seed', async () => {
 app.post('/__c4/reply',async req=>{await db.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES(gen_random_uuid(),$1,$2,'reply','Thank you for listening.')",[req.body.conversationId,req.body.senderId]);return {ok:true}})
 app.get('/__c4/count/:id',async req=>({count:Number((await db.query("SELECT count(*) FROM messages WHERE conversation_id=$1 AND kind='opening'",[req.params.id])).rows[0].count)}))
 
+await registerInboxContract(app,db)
 await app.listen({host:'127.0.0.1',port:3001})
 console.log('C2 isolated test backend ready: '+database)
 async function stop(){await app.close();await db.end();await admin.end();process.exit(0)}
