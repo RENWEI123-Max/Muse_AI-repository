@@ -12,14 +12,20 @@ export function registerModeration(app:FastifyInstance,
   const params = {type:'object',required:['id'],properties:{id:uuid}};
   const page = {limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}};
   const resultText = {type:'string',minLength:1,maxLength:2000,pattern:'\\S'};
-  const view = `id,reporter_id AS "reporterId",reported_user_id AS "reportedUserId",message_id AS "messageId",category,reason,status,created_at AS "createdAt",action,result,handled_by AS "handledBy",handled_at AS "handledAt"`;
-  app.post<{Body:{reportedUserId:string;messageId?:string;category:string;reason:string}}>('/reports',{schema:{body:{type:'object',additionalProperties:false,required:['reportedUserId','category','reason'],properties:{reportedUserId:uuid,messageId:uuid,category:{type:'string',enum:['spam','harassment','sexual','violence','hate','other']},reason:resultText}}}},async(req,reply)=>{
+  const view = `id,reporter_id AS "reporterId",reported_user_id AS "reportedUserId",message_id AS "messageId",attachment_media_id AS "attachmentMediaId",CASE WHEN attachment_media_id IS NULL THEN NULL ELSE json_build_object('id',attachment_media_id,'url','/media/uploads/'||attachment_media_id) END AS attachment,category,reason,status,created_at AS "createdAt",action,result,handled_by AS "handledBy",handled_at AS "handledAt"`;
+  app.post<{Body:{reportedUserId:string;messageId?:string;attachmentMediaId?:string;category:string;reason:string}}>('/reports',{schema:{body:{type:'object',additionalProperties:false,required:['reportedUserId','category','reason'],properties:{reportedUserId:uuid,messageId:uuid,attachmentMediaId:uuid,category:{type:'string',enum:['spam','harassment','sexual','violence','hate','other']},reason:resultText}}}},async(req,reply)=>{
     const report=await tx(async c=>{
       const u=await auth(c,req.headers.authorization),b=req.body;
       if(u.id===b.reportedUserId) fail(400,'Cannot report yourself');
       if(!(await c.query('SELECT id FROM users WHERE id=$1',[b.reportedUserId])).rowCount) fail(404,'User not found');
       if(b.messageId && !(await c.query(`SELECT m.id FROM messages m JOIN conversations v ON v.id=m.conversation_id WHERE m.id=$1 AND m.sender_id=$2 AND (v.opener_id=$3 OR v.peer_id=$3)`,[b.messageId,b.reportedUserId,u.id])).rowCount) fail(404,'Message not found');
-      return (await c.query(`INSERT INTO reports(id,reporter_id,reported_user_id,message_id,category,reason) VALUES($1,$2,$3,$4,$5,$6) RETURNING ${view}`,[randomUUID(),u.id,b.reportedUserId,b.messageId??null,b.category,b.reason])).rows[0];
+      if(b.attachmentMediaId) {
+        const media=(await c.query('SELECT * FROM media_uploads WHERE id=$1 FOR SHARE',[b.attachmentMediaId])).rows[0];
+        if(!media) fail(404,'Attachment not found');
+        if(media.uploader_id!==u.id) fail(403,'Attachment belongs to another user');
+        if(media.purpose!=='report' || media.kind!=='image') fail(400,'Attachment must be a report image');
+      }
+      return (await c.query(`INSERT INTO reports(id,reporter_id,reported_user_id,message_id,category,reason,attachment_media_id) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING ${view}`,[randomUUID(),u.id,b.reportedUserId,b.messageId??null,b.category,b.reason,b.attachmentMediaId??null])).rows[0];
     }); return reply.code(201).send(report);
   });
   app.get<{Params:{id:string}}>('/reports/:id',{schema:{params}},async req=>tx(async c=>{

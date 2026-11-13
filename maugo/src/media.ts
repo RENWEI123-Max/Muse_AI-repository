@@ -44,11 +44,11 @@ export function registerMedia(app: FastifyInstance,
   media.addContentTypeParser('*',{parseAs:'buffer',bodyLimit:30*MB},(_r,b,done)=>done(null,b));
   media.post<{Querystring:{purpose:string;filename:string;conversationId?:string}}>('/media/uploads',{
    bodyLimit:30*MB,
-   schema:{querystring:{type:'object',additionalProperties:false,required:['purpose','filename'],properties:{purpose:{type:'string',enum:['chat','avatar','post']},filename:{type:'string',minLength:1,maxLength:128,pattern:'^[A-Za-z0-9][A-Za-z0-9_-]*\\.[A-Za-z0-9]+$'},conversationId:uuid}}},
+   schema:{querystring:{type:'object',additionalProperties:false,required:['purpose','filename'],properties:{purpose:{type:'string',enum:['chat','avatar','post','report']},filename:{type:'string',minLength:1,maxLength:128,pattern:'^[A-Za-z0-9][A-Za-z0-9_-]*\\.[A-Za-z0-9]+$'},conversationId:uuid}}},
    preParsing:async request=>{
     // Query validation normally runs after parsing: validate permission context before reading bytes.
     const q=request.query;
-    if(!['chat','avatar','post'].includes(q.purpose)) fail(400,'Invalid purpose');
+    if(!['chat','avatar','post','report'].includes(q.purpose)) fail(400,'Invalid purpose');
     if(q.conversationId && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(q.conversationId)) fail(400,'Invalid conversationId');
     await transaction(c=>authorize(c,request.headers.authorization,q.purpose,q.conversationId));
    }
@@ -60,7 +60,7 @@ export function registerMedia(app: FastifyInstance,
    const format=formats[declared];
    if(!format) fail(415,'Unsupported media type');
    if(bytes.length>=format.limit) fail(413,'Media size limit exceeded');
-   if(q.purpose==='avatar' && format.kind!=='image') fail(415,'Avatar requires an image');
+   if(['avatar','report'].includes(q.purpose) && format.kind!=='image') fail(415,'Purpose requires an image');
    let detected;
    try { detected=await fileTypeFromBuffer(bytes); } catch { fail(415,'Invalid media content'); }
    if(!detected || detected.mime!==declared || !format.extensions.includes(q.filename.split('.').pop()!.toLowerCase())) fail(415,'Media content, type and extension must match');
@@ -85,7 +85,9 @@ export function registerMedia(app: FastifyInstance,
    const row=(await c.query('SELECT * FROM media_uploads WHERE id=$1',[request.params.id])).rows[0];
    if(!row) fail(404,'Media not found');
    if(row.purpose==='chat') await authorize(c,request.headers.authorization,'chat',row.conversation_id);
-   else if(row.uploader_id!==u.id) fail(403,'Media belongs to another user');
+   else if(row.uploader_id!==u.id) {
+    if(row.purpose!=='report' || !u.is_moderator || !(await c.query('SELECT 1 FROM reports WHERE attachment_media_id=$1',[row.id])).rowCount) fail(403,'Media belongs to another user');
+   }
    return row;
   });
   let bytes; try {bytes=await readFile(join(directory,request.params.id));} catch(error:any) {if(error.code==='ENOENT') fail(404,'Media file missing');throw error;}

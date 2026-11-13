@@ -251,3 +251,26 @@ StoreKit/Capacitor 接入并带上 appAccountToken。本任务没有客户端变
 创建商品，也未进行需要这些凭证和测试员的真实沙盒端到端测试。
 `test/payments.test.ts` 使用签名校验及 API mock 与真实 PostgreSQL，覆盖入账、并发幂等、
 归属、bundle/product 错误、篡改 JWS、凭证缺失、退款验签/重放/不足额及事务失败回滚。
+
+## B13 举报证据图（任务 #61 验收）
+
+应用 `013_report_attachments.sql`（支持重复执行）。B8 上传用途新增 `report`：
+`POST /media/uploads?purpose=report&filename=proof.png`，沿用 Bearer 鉴权、真实文件识别、
+JPEG/PNG/WebP 白名单及严格小于 10 MiB 的图片限制；非图片、超大文件和未认证请求拒绝。
+`POST /reports` 新增可选 `attachmentMediaId`，仅接受举报人本人上传的 report 用途图片，
+不存在返回 404、他人媒体返回 403、用途错误或非图片返回 400，失败不创建举报。每条举报最多一张图，
+不传附件的旧请求保持兼容。创建、详情、审核队列和处理响应增加 `attachmentMediaId` 及
+`attachment: {id, url}`（无附件均为 null），url 是需 Bearer 鉴权的 `/media/uploads/:id`。
+举报人可下载自己的媒体；审核员仅可下载已被举报引用的 report 媒体；其他用户拒绝访问。
+
+证据媒体通过 reports.attachment_media_id 外键保留，无附件删除接口，处理或驳回举报不清除证据。
+账号注销时仍被举报引用的证据元数据和文件保留供审核，其他媒体沿用 B9 清理。
+当前无举报删除 API；受控管理操作删除举报记录时不级联删除媒体或文件，
+未被引用的媒体在上传者后续账号注销时沿用 B9 清理；若上传者已经注销，则保留，
+本任务不增加自动清理任务。最后一条引用删除后审核员失去该媒体下载权限。
+
+`test/report-attachments.test.ts` 覆盖上传用途与类型/大小/认证拒绝、有效附件创建和查询、
+审核队列与真实文件读取权限、冒用/不存在/错误用途/非图片拒绝且无举报入库、无附件兼容、
+审核处理和账号注销后证据保留、举报删除不级联及新迁移重复执行。
+验收结果：隔离 PostgreSQL schema 中完整测试 25 项全部通过，TypeScript 构建通过，
+迁移入口重复运行与新迁移 SQL 重复执行通过；client/ 无变更。
