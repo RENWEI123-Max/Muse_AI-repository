@@ -1,0 +1,163 @@
+[
+  {
+    "selector": "#screen",
+    "box": {
+      "x": 413,
+      "y": 144,
+      "width": 375,
+      "height": 812,
+      "top": 144,
+      "right": 788,
+      "bottom": 956,
+      "left": 413
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgb(9, 14, 14)",
+      "padding": "0px",
+      "borderRadius": "36px",
+      "display": "block",
+      "opacity": "1"
+    }
+  },
+  {
+    "selector": ".home-header",
+    "box": {
+      "x": 437,
+      "y": 204,
+      "width": 327,
+      "height": 44,
+      "top": 204,
+      "right": 764,
+      "bottom": 248,
+      "left": 437
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "display": "flex",
+      "opacity": "1"
+    }
+  },
+  {
+    "selector": ".scene",
+    "box": {
+      "x": 413,
+      "y": 144,
+      "width": 375,
+      "height": 812,
+      "top": 144,
+      "right": 788,
+      "bottom": 956,
+      "left": 413
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "opacity": "1"
+    }
+  },
+  {
+    "selector": ".hat",
+    "box": {
+      "x": 512,
+      "y": 579,
+      "width": 178,
+      "height": 143,
+      "top": 579,
+      "right": 690,
+      "bottom": 722,
+      "left": 512
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "opacity": "1"
+    }
+  },
+  {
+    "selector": ".bottom-nav",
+    "box": {
+      "x": 413,
+      "y": 860,
+      "width": 375,
+      "height": 96,
+      "top": 860,
+      "right": 788,
+      "bottom": 956,
+      "left": 413
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "16px 4px 20px",
+      "borderRadius": "24px 24px 0px 0px",
+      "display": "flex",
+      "opacity": "1"
+    }
+  },
+  {
+    "selector": ".actions",
+    "box": {
+      "x": 437,
+      "y": 796,
+      "width": 327,
+      "height": 48,
+      "top": 796,
+      "right": 764,
+      "bottom": 844,
+      "left": 437
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "16px",
+      "color": "rgb(243, 244, 244)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "display": "flex",
+      "opacity": "0"
+    }
+  },
+  {
+    "selector": ".scene-hint",
+    "box": {
+      "x": 433,
+      "y": 752,
+      "width": 335,
+      "height": 16,
+      "top": 752,
+      "right": 768,
+      "bottom": 768,
+      "left": 433
+    },
+    "css": {
+      "fontFamily": "\"MauGo Rounded\", \"MauGo Korean\", ui-rounded, system-ui, sans-serif",
+      "fontSize": "11px",
+      "color": "rgb(132, 146, 132)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "opacity": "0"
+    }
+  }
+]

@@ -1,0 +1,232 @@
+/* Measurements from the rendered offline prototype; canvas 375 × 812.
+   Keep these shared overrides together so the older flow styles cannot diverge. */
+:root{--white:#f3f4f4;--control-height:48px;--page-gutter:24px}
+.device{overflow:hidden;isolation:isolate}
+.device>.client-statusbar{position:absolute;left:0;top:0;width:100%;height:60px;object-fit:fill;z-index:96;pointer-events:none}
+.device::after{content:'';position:absolute;bottom:8px;left:50%;width:144px;height:5px;transform:translateX(-50%);border-radius:4px;background:#f3f4f4;z-index:96;pointer-events:none}
+.device .home-indicator,.device .inbox-home-indicator{visibility:hidden}
+.device .primary{background:#b5fa70 linear-gradient(110deg,#bdff81,#b0fb61);font-weight:500;box-shadow:none}
+/* Authentication shares the same 48px status area and centered brand. */
+.device>.screen{padding-top:48px}
+.device>.screen:has(.auth-flow)::before{content:'';position:absolute;inset:48px 0 0;background:#0c1612eb;backdrop-filter:blur(4px);z-index:-1}
+.device .auth-top{position:relative;min-height:64px;height:64px;padding:0 24px;justify-content:center;margin:0;border-bottom:1px solid #ffffff05}
+.device .auth-top .wordmark{width:94px;max-height:40px;object-fit:contain}
+.device .auth-top .language{position:absolute;right:20px;top:12px;font-size:11px;width:44px}
+.welcome-back{position:absolute;left:36px;top:12px;color:#b8ccb0;font-size:28px}
+.device .welcome-screen>.auth-content{padding:24px 24px 40px}
+.device .welcome-screen h1{font-size:26px;line-height:32px;margin-bottom:16px}
+.device .welcome-screen .auth-tagline{margin:0 0 8px}
+.device .welcome-screen .auth-copy{margin-bottom:0}
+.device .auth-actions{padding-top:24px;margin-top:auto}
+.device .auth-actions .auth-switch{margin:12px 0 0}
+.device .auth-actions .auth-legal{margin:8px 0 0}
+.device .auth-actions .auth-preview{min-height:28px;margin:4px 0 0}
+.device .apple-button{gap:12px;margin-top:12px;font-size:14px}
+.device .apple-button svg{width:20px;height:20px}
+.device .auth-flow{padding:0 24px 32px;overflow:auto;scrollbar-width:none}
+.device .auth-flow>.back{position:absolute;top:60px;left:20px;margin:0;width:40px;height:40px;z-index:3;font-size:0;padding:0}
+.device .auth-flow>.back::before{content:'‹';font-size:28px}
+.device .flow-content{padding:24px 0 0}
+.device .flow-content h1{font-size:24px;line-height:32px;margin:0 0 16px;text-align:center}
+.device .flow-content .auth-copy{margin:0 0 24px;text-align:center}
+.device .flow-content .field-label{display:flex;flex-direction:column;gap:12px;margin:0 0 20px;font-size:12px;line-height:20px;color:#bacdb2}
+.device .flow-content .field-label input{min-height:48px;height:48px;background:#202f24;border:1px solid #ffffff0b;border-radius:12px;padding:12px 16px;margin:0;font-size:14px}
+.device .auth-main{height:48px;min-height:48px;margin-top:16px}
+/* The hat and birds use the full canvas, independently of list/action height. */
+.device .home-flow{background:#090e0e}
+.device .home-header{position:absolute;top:60px;left:24px;right:24px;height:44px;padding:0;z-index:4}
+.device .home-header>img{width:144px;max-height:44px;object-fit:contain}
+.device .home-header button{width:44px;height:44px;margin-left:12px;border:0;background:#ffffff0d;box-shadow:none;padding:10px}
+.device .home-header button img{width:25px;height:25px}
+.device .magic-scene{position:absolute;inset:0;min-height:0;pointer-events:none}
+.device .magic-hat{left:99px;top:435px;bottom:auto;width:178px;height:143px;padding:0;pointer-events:auto;animation:hat 4s ease-in-out infinite}
+.device .magic-hat img{height:100%;object-fit:contain;filter:drop-shadow(0 8px 7px #0006)}
+.device .aura{inset:auto;left:64px;top:369px;width:248px;height:242px;background:radial-gradient(ellipse,#80da351c,transparent 66%)}
+.device .scene-mist{left:75px;top:390px;bottom:auto;width:225px;height:210px;object-fit:contain;opacity:.22}
+.device .letter-bird{width:100px;height:100px;top:183px;left:145px;padding:0;pointer-events:auto}
+.device .letter-bird:first-child{left:40px;top:294px;width:92px;height:92px}
+.device .letter-bird:last-child{left:222px;top:294px;width:92px;height:92px}
+.device .letter-bird .flight-sprite,.device .letter-bird>img:not(.bird-envelope){width:100%;height:100%;object-fit:contain}
+.device .letter-bird small{display:none}
+.magic-trails{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#b5fa70;stroke-width:.7;opacity:.65}
+.magic-trails .trail-blur{filter:url('#home-trail-glow');stroke-width:3}
+.device .magic-sparks{left:94px;top:373px;bottom:auto;font-size:19px;letter-spacing:13px;color:#d5ffad;text-shadow:0 0 14px #b5fa70}
+.device .scene-hint{position:absolute;top:608px;left:20px;right:20px;min-height:16px;padding:0;margin:0;font-size:11px;line-height:16px;color:#849284}
+.device .home-actions{position:absolute;top:644px;left:24px;right:24px;margin:0;gap:12px;height:48px}
+.device .home-actions>button{height:48px;min-height:48px;border:0;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;flex:1;border-radius:24px}
+.device .home-actions #refresh{width:auto;background:#ffffff12;color:#f3f4f4;flex:.95}
+.device .home-actions #compose{flex:1.05;color:#0a1406;background:linear-gradient(110deg,#bdff81,#b0fb61)}
+.device .home-actions img{width:24px;height:24px}
+/* Retain the existing wallet/Pass shortcuts while keeping them secondary. */
+.device .economy-actions{position:absolute;top:695px;left:24px;right:24px;padding:0;margin:0;height:20px;z-index:3}
+.device .economy-actions button{font-size:9px;padding:0;color:#91a786}
+.device .economy-actions img{width:12px;height:12px}
+.device .home-nav,.device .inbox-nav{position:absolute;left:0;right:0;bottom:0;height:96px;padding:16px 4px 20px;border-radius:24px 24px 0 0;border-top:1px solid #ffffff07;background:linear-gradient(#13181869,#0c111133);align-items:flex-start;z-index:3}
+.device .home-nav>*,.device .inbox-nav button{font-size:0;min-width:64px;min-height:44px;padding:0;gap:0;align-content:start}
+.device .home-nav img,.device .inbox-nav img{width:42px;height:42px;object-fit:contain}
+/* Floating panels have a 12px canvas inset and a visible drag handle. */
+.device .home-veil{background:#0009;backdrop-filter:none;padding:0 12px 24px}
+.device .home-sheet:not(.pass-payment-dialog):not(.pass-page){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
+.device .home-sheet:not(.pass-payment-dialog):not(.pass-page)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
+.device .home-sheet header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
+.device .home-sheet header h2{font-size:18px;font-weight:550;line-height:24px}
+.device .home-sheet header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
+.device .home-sheet header button img{width:18px;height:18px}
+.device .home-sheet p{font-size:12px;line-height:20px;margin:0 0 12px}
+.device .home-sheet .gender-options{gap:12px;margin-bottom:24px}
+.device .home-sheet .gender-options button{background:none;border:0;padding:0;gap:8px;color:#b8c6af}
+.device .home-sheet .gender-options i{display:grid;place-items:center;background:#66726a;width:44px;height:44px;border-radius:50%;color:#19291e;font-size:26px}
+.device .home-sheet .gender-options [aria-pressed=true] i{background:#b5fa70}
+.device .premium-zone{padding:0;background:none;margin:0 0 24px;gap:20px}
+.device .premium-zone label{font-size:10px;line-height:18px}
+.device .premium-zone input{display:block;margin:12px 0 0;height:16px}
+.device .premium-cover{opacity:0;border:0;animation:none}
+.device .home-sheet select{height:48px;padding:12px 16px;background:#202c23;border:1px solid #ffffff06;font-size:12px;color:#a6b69b}
+.device .home-sheet .pass-badge{height:24px;border-radius:6px;background:#26262e;border:1px solid #ffffff15;color:#d8bcf0;line-height:20px;padding:0 8px;margin-left:8px;font-size:10px}
+.device .city-source{font-size:8px;margin:5px 0;color:#74846c}
+.device .home-sheet .pass-status{margin-top:12px;font-size:10px!important;line-height:18px;color:#a0b192!important}
+.device .unlock-pass{font-size:10px;padding:4px;min-height:24px}
+.device .flight-preview{height:64px;margin-top:16px;padding:0 12px}
+.device .flight-preview .flight-sprite,.device .flight-preview>img{width:64px;height:64px}
+.device .switch-row{height:44px;padding:0;font-size:12px}
+/* Reading retains D11's flight and delayed unfold, with prototype geometry. */
+.device .letters-veil{background:#030a0a70;backdrop-filter:none}
+.device .letters-panel{left:12px;right:12px;top:144px;height:560px;min-height:0;max-height:calc(100% - 172px);padding:0 20px 16px;border-radius:24px;background:linear-gradient(135deg,#11191ae6,#0c1313f2);color:#f3f4f4}
+.device .letters-panel header{height:56px}
+.device .letters-panel h2{font-size:16px;font-weight:550}
+.device .letters-panel header button{right:14px;font-size:20px}
+.device .note-meta{margin:16px 0;font-size:10px}
+.device .message-row{gap:12px}
+.device .letter-avatar{width:40px;height:40px;padding:0;object-fit:cover;border-radius:12px}
+.device .message-bubble{padding:12px;border-radius:12px;background:linear-gradient(125deg,#1c2425,#192021);font-size:14px;line-height:1.55}
+.device .message-bubble .note-signature{font-size:10px}
+.device .reply-bar{min-height:48px;margin:12px 0 0;padding:8px 12px;gap:8px}
+.device .reply-bar textarea{font-size:12px}
+.device .letters-panel.composer-panel{top:144px;height:496px;min-height:0}
+.device .composer-panel .opening-form textarea{min-height:100px;font-size:13px}
+.device .sender-preview{height:56px}
+.device .opening-rule,.device .letter-validation{font-size:10px;line-height:16px}
+/* Inbox typography and navigation match the reference without decoration. */
+.device .inbox-top{padding:0 24px;border-bottom:1px solid #ffffff07}
+.device .inbox-heading-tabs{gap:20px}
+.device .inbox-heading-tabs button{font-size:19px;line-height:28px;font-weight:500;color:#7c9285}
+.device .inbox-heading-tabs button[aria-pressed=true]{font-size:23px;font-weight:550;color:#edf6e7}
+.device .inbox-heading-tabs button::after{display:none}
+.device .inbox-body{padding:12px 24px 112px;scrollbar-width:none}
+.device .inbox-menu-button{gap:5px;width:36px;height:40px}
+.device .inbox-menu-button i,.device .inbox-menu-button i:nth-child(2),.device .inbox-menu-button i:last-child{width:21px;height:2px;margin:0}
+.device .inbox-nav{background:#0d1713;border-radius:0}
+/* Keep small viewports usable without scaling text or distorting artwork. */
+@media(max-height:740px){.device{min-height:100svh}.device .magic-scene{transform:translateY(-30px) scale(.85);transform-origin:50% 40%}.device .scene-hint{top:auto;bottom:176px}.device .home-actions{top:auto;bottom:120px}.device .economy-actions{top:auto;bottom:98px}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
+@media(prefers-reduced-motion:reduce){.device .magic-hat{animation:none}.magic-trails{opacity:.45}}
+/* Profile keeps the actual account data, with the prototype's spacing. */
+.device .d4-profile>header{height:64px;padding:0 24px;border-bottom:1px solid #ffffff07}
+.device .d4-profile>header h1{font-size:17px;line-height:24px;margin:0;font-weight:550}
+.device .d4-profile>header button{width:32px;height:40px}
+.device .d4-body{padding:24px 24px 40px;scrollbar-width:none}
+.device .profile-hero{padding:16px 0 24px}
+.device .profile-hero img{width:88px;height:88px}
+.device .profile-hero span{width:28px;height:28px}
+.device .profile-hero span img{width:14px;height:14px}
+.device .profile-hero strong{margin-top:14px;font-size:18px;line-height:24px;font-weight:550}
+.device .profile-hero p{font-size:11px;line-height:18px;margin:8px 0 0}
+.device .profile-hero p:last-child{font-size:10px;line-height:16px;margin-top:16px}
+.device .profile-counters{padding:24px 0 28px;border:0;align-items:center;gap:16px}
+.device .profile-counters button{font-size:18px;color:#f1f4ed;padding:0}
+.device .profile-counters small{font-size:9px;line-height:14px;margin-top:6px}
+.device #profile-visitors{font-size:12px;border-radius:14px;background:#263228;padding:6px 8px;color:#a8b89a;display:flex;gap:5px;align-items:center}
+.device #profile-visitors small{margin:0;font-size:9px}
+.device #profile-global-visibility{font-size:10px;min-height:28px;padding:4px 0;margin:0 0 12px;border:0;color:#859d80}
+.device .d5>.section-heading h2{font-size:14px;line-height:20px;margin:0}
+.device .d5>.section-heading{margin:0 0 12px;align-items:center}
+.device .d5>.section-heading button{font-size:9px;color:#859d80}
+.device .d5 .card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.device .d5 .image-card,.device .d5 .upload-card{height:144px;border-radius:12px}
+.device .d5 .upload-card{background:#15231a;border:1px dashed #637e5c66;gap:20px}
+.device .d5 .upload-card b{font-size:32px;font-weight:400;color:#638257}
+.device .d5 .upload-card small{font-size:8px;color:#74916a}
+.device .d5>.hint{font-size:10px;line-height:16px;color:#74916a}
+.device .d5>.compose-link{font-size:12px;padding:12px 0}
+/* Settings: 56px rows and 20px between groups; fine 1× assets. */
+.device .settings-flow header{padding:0 24px}
+.device .settings-flow h1{font-size:17px;line-height:24px;font-weight:550}
+.device .settings-body{padding:0 24px 40px;scrollbar-width:none}
+.device .settings-main{border:0;margin-bottom:20px;border-radius:16px;padding:0 16px;background:#1c2c22}
+.device .settings-main .settings-row{height:56px;min-height:56px;padding:12px 0;gap:12px;font-size:13px;color:#f3f4f4}
+.device .settings-row>img{width:20px;height:20px}
+.device .settings-main .settings-row small{font-size:10px}
+.device .settings-row>b{font-size:22px;color:#7c927c}
+/* Chat canvas, header, timestamps and two-row composer. Custom themes retain
+   their existing background and bubble variables. */
+.device .c6-chat{inset:48px 0 0}
+.device .c6-chat:not(.theme-wallpaper):not(.d2-appearance):not(.d2-custom-bubbles):not([class*='theme-']){background:#102017}
+.device .c6-chat>header{height:64px;min-height:64px;padding:0 24px;background:#0d1713;border-bottom:1px solid #ffffff07}
+.device .c6-chat>header h1{font-size:17px;line-height:24px;font-weight:550}
+.device .chat-notice{height:36px;min-height:36px;margin:0;display:grid;place-items:center;font-size:10px;line-height:16px;background:#19291c;color:#829878}
+.device .c6-thread{padding:24px 16px;scrollbar-width:none}
+.device .chat-message{gap:8px;margin-bottom:24px}
+.device .chat-message>img{width:32px;height:32px}
+.device .chat-bubble{font-size:13px;line-height:20px;padding:12px 16px;max-width:80%;border-radius:18px 18px 18px 5px;background:var(--their-bubble,#24382b);color:var(--their-text,#e5ecde)}
+.device .mine .chat-bubble{border-radius:18px 18px 5px 18px;background:var(--my-bubble,#b5fa70);color:var(--my-text,#18310e)}
+.device .chat-message small{font-size:9px;line-height:14px}
+.device .c6-composer{padding:12px 16px 42px;background:#19291f;border-top:1px solid #ffffff0b}
+.device .c6-input{gap:8px;height:44px}
+.device .c6-input input{padding:12px 16px;font-size:12px;border-radius:24px;background:#223528;border:1px solid #ffffff06}
+.device .c6-input button{width:44px;flex:none;border-radius:50%}
+.device .chat-tools{padding-top:6px;gap:24px;height:42px}
+.device .chat-tools #chat-hold{flex:1;justify-content:center;margin-left:0;padding:8px 12px;border:0;background:#243b2c;height:36px;font-size:11px}
+.device .chat-tools img{width:20px;height:20px}
+.device .inbox-statusbar{visibility:hidden}
+.device .home-actions #refresh{display:flex;flex:0 0 46%;min-width:0}
+.device .home-actions #compose{min-width:0}
+.device .home-flow:has(.letters-veil) .magic-scene,.device .home-flow:has(.letters-veil)>.scene-hint,.device .home-flow:has(.letters-veil)>.economy-actions,.device .home-flow:has(.letters-veil)>.home-actions{visibility:hidden}
+.device .home-flow:has(.letters-veil:not(.is-composing))>.home-nav{opacity:.15}
+.device .letter-content{font-size:14px!important;line-height:1.55!important;white-space:pre-wrap}
+.device .note-meta>span{flex:1;text-align:center}
+.device .letter-reply-area{min-height:104px}
+/* Wallet stays a real balance/selection flow; no simulated purchase success. */
+.device .d1-topup{inset:104px 12px 24px;max-height:684px;border-radius:24px;padding:28px 20px 16px;background:#18211e;border:1px solid #ffffff0b;box-shadow:0 0 0 999px #0009;text-align:center;scrollbar-width:none}
+.device .d1-topup::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
+.device .d1-topup header{height:32px;position:relative;margin-bottom:12px}
+.device .d1-topup header h2{font-size:18px;line-height:24px;font-weight:550;text-align:center;margin:0}
+.device .d1-topup header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;font-size:0;padding:0;color:#8a9290}
+.device .d1-topup header button::before{content:'×';font-size:22px}
+.device .d1-diamond{width:80px;height:70px;object-fit:contain;margin:8px auto 12px}
+.device .d1-topup h3{font-size:12px;font-weight:400;line-height:20px;color:#99a795;margin:0 0 20px}
+.device .d1-topup>p:not(.d1-topup-note){display:flex;justify-content:center;gap:6px;background:#253025;padding:12px 16px;border-radius:12px;min-height:48px;line-height:24px;font-size:12px;margin:0 0 20px;color:#cddcbe}
+.device .d1-packs{gap:12px;margin:0 0 16px}
+.device .d1-topup .diamond-pack{min-height:136px;padding:16px 12px;border-radius:16px;background:radial-gradient(ellipse at 50% 0,#82619925,transparent 75%),#222d25;border:1px solid #ad82ca22;gap:8px}
+.device .d1-topup .diamond-pack[aria-pressed=true]{border-color:#c493ef77;box-shadow:none;transform:none}
+.device .d1-topup .pack-amount{display:flex;align-items:center;justify-content:center;gap:8px}
+.device .d1-topup .pack-amount img{width:26px;height:24px;object-fit:contain}
+.device .d1-topup .pack-amount strong{font-size:22px;line-height:28px;font-weight:550;color:#e0d2f0}
+.device .d1-topup .diamond-pack small{font-size:10px;line-height:16px;color:#a1b294}
+.device .d1-topup .diamond-pack b{font-size:14px;line-height:20px;width:100%;border-radius:20px;background:#b5fa701a;color:#c3f390;padding:8px}
+.device .d1-topup>.primary{font-size:12px;min-height:40px;padding:8px 12px}
+.device .d1-topup-note{font-size:9px;line-height:15px;color:#8a9381;margin:12px 0 0}
+.device .d1-topup>.text-button{font-size:10px;min-height:28px}
+.device .d4-profile:has(.profile-nav) .d4-body{padding-bottom:120px}
+.device .d5{position:relative}
+.device .d5 #profile-global-visibility{font-size:9px;width:auto;padding:0;margin:0 0 0 auto;min-height:20px;border:0}
+.device .d5 #profile-moments{position:absolute;top:202px;left:0;right:0;margin:auto;font-size:9px;min-height:28px}
+.device .d5>.compose-link{position:absolute;right:0;top:200px;border-radius:50%;width:44px;height:44px;padding:0;font-size:0;background:#b5fa70;color:#19362b}
+.device .d5>.compose-link::before{content:'+';font-size:32px;line-height:44px}
+.device .d5:has(>.compose-link){margin-bottom:80px}
+.device .profile-nav{position:absolute;left:0;right:0;bottom:0;height:96px;display:flex;justify-content:space-evenly;align-items:flex-start;padding:16px 4px 20px;border-top:1px solid #ffffff07;background:#0d1713;z-index:3}
+.device .profile-nav button{background:none;min-width:64px;height:44px;display:grid;place-items:start center;padding:0}
+.device .profile-nav img{width:42px;height:42px;object-fit:contain}
+.device .d5>.compose-link{top:176px;display:grid;place-items:center;line-height:44px}
+.device .d5>.compose-link::before{content:none}
+.device .d5>.compose-link>span:first-child{font-size:30px;line-height:44px}
+.device .d5>.compose-link>.compose-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.device .d5 #profile-moments{top:176px;right:54px}
+.device .letters-panel.composer-panel{overflow:visible}
+.device .composer-panel header>img{display:none}
+.device .opening-form{min-height:0}
+.device .opening-form footer{position:absolute;left:8px;right:8px;bottom:-66px;height:48px;margin:0}
+.device .opening-form footer .secondary{flex:0 0 96px;background:#ffffff12;border:0;color:#f3f4f4}
+.device .opening-form textarea:placeholder-shown~.letter-validation{visibility:hidden;height:0;min-height:0;margin:0}
+@media(max-height:740px){.device .letters-panel.composer-panel{max-height:calc(100% - 230px)}}
+.device .d5>#new-profile-moment{color:#19362b;background:#b5fa70;font-size:0}
+.device .d5 #profile-moments{top:190px}
+.device .d5>#new-profile-moment{margin:0;top:186px}

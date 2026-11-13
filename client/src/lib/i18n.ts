@@ -68,6 +68,9 @@ export function t(key: keyof typeof en): string { return locale.value === 'ko' ?
 
 // Business copy reuses the Korean wording supplied in the offline handover.
 const businessKo: Record<string,string> = {
+  'A little bird. A little story.':'작은 새 한 마리. 작은 이야기 하나.',
+  'Send a letter':'편지 보내기',
+  'Diamonds for filters and extra replies.':'필터와 추가 답장을 위한 다이아몬드.',
   "Delete account": "계정 삭제",
   "Self service": "셀프 서비스",
   "Help & support": "도움말 및 지원",

@@ -1,0 +1,21 @@
+[WebServer] (node:22552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:22576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 docs/fidelity-refactor/capture-client.spec.ts:44:1 › main-flow screenshots (13.0s)
+  ✓   2 docs/fidelity-refactor/capture-client.spec.ts:76:1 › profile and settings screenshots (3.4s)
+  ✓   3 docs/fidelity-refactor/capture-client.spec.ts:92:1 › authentication state catalogue (11.3s)
+  ✓   4 docs/fidelity-refactor/capture-client.spec.ts:99:1 › home loading, empty and error (7.8s)
+  ✓   5 docs/fidelity-refactor/capture-client.spec.ts:106:1 › letter editing, safety and appearance (11.3s)
+  ✓   6 docs/fidelity-refactor/capture-client.spec.ts:111:1 › inbox empty, search and locked conversation (6.3s)
+  ✓   7 docs/fidelity-refactor/capture-client.spec.ts:114:1 › empty inbox (3.0s)
+  ✓   8 docs/fidelity-refactor/capture-client.spec.ts:117:1 › profile and settings detail states (11.9s)
+  ✓   9 docs/fidelity-refactor/capture-client.spec.ts:120:1 › wallet selection and unavailable payment (3.1s)
+  ✓  10 docs/fidelity-refactor/capture-client.spec.ts:123:1 › D11 opening, sending, collection and unlock motion (8.6s)
+  ✓  11 docs/fidelity-refactor/capture-client.spec.ts:134:1 › Filter Pass and shortage states (3.6s)
+  ✓  12 docs/fidelity-refactor/capture-client.spec.ts:137:1 › unlocked chat tools and wallpaper (7.5s)
+
+  12 passed (1.5m)
