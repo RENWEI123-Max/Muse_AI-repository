@@ -71,3 +71,53 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 仓库此前没有屏蔽逻辑或用户状态字段，因此新增 user_blocks(blocker_id,blocked_id) 联合主键作为定向屏蔽来源，发送前检查收件人是否屏蔽发件人；本任务不新增屏蔽管理接口。认证复用 B2 会话过期判断及现存旧 token 兼容行为。
 
 验证：全量 npm test 七项通过、TypeScript 构建通过、db:migrate 连续两次通过；新测试也直接重复执行该迁移。conversations.test.ts 使用隔离 PostgreSQL schema 和 Promise.all，覆盖 20 次双向并发、12 次同用户两设备并发，并核对会话与消息数量及唯一 ID；覆盖清空历史前后权限和首条 ID 保留、无效回复不解锁、有效收件人回复后双方发送、非成员、已有及新会话被屏蔽、缺失/无效/过期 token、自发 400。未测：真实移动设备网络重试、屏蔽管理前端、线上负载压测；没有跳过自动测试。client/ 未修改。
+
+## B4：发现与来信（模块 02 / 03）
+
+以下接口均使用 B2 Bearer token（兼容已有 token），只返回当前收件人的开场白，
+不公开其他收件人的信件或账户邮箱。来信标识始终是 B3 `openingMessageId`。
+
+- `GET /discovery/filters`：返回 `filters-free` / `filters-active`、Pass 到期时间、
+  `lockedFields`、性别枚举、18–120 岁边界和城市选项。性别免费；城市、最低和最高年龄需要 Pass。
+- `GET /letters`：可选 `gender`、`city`、`minAge`、`maxAge`、`limit`（默认 3，最大 50）。
+  年龄上下界均包含。首次请求预留至多 `limit` 封未展示过的来信，返回 `batchId`。
+- `GET /letters?batchId=…&offset=…&limit=…`：读取该批次；`offset` 默认为 0，
+  使用返回的 `nextOffset` 翻页；`hasMore=false` 时 `nextOffset=null`。
+  批次绑定用户与筛选，不能中途换筛选。不带批次时只允许 offset=0。
+  批次大小由首次 limit 决定，可用较小 limit 分页；重复读取同一批次不会换信。
+- `POST /letters/refresh`：JSON 对象接受同样的筛选与 limit（通常传 `{}`），
+  不接受 batchId；创建另一批。多次刷新和多设备并发都不会再次分配已展示信件。
+  无批次的 GET 同样创建新批次，客户端重绘时应携带原 batchId。
+- `GET /letters/:openingMessageId`：内容、发信人公开资料、conversationId、
+  replied / unlocked / unlockedAt、canReply / canChat 和详情状态。
+  回应仍使用 B3 `POST /conversations/:conversationId/messages`。
+
+城市选项为 **mock-fixed-list 占位数据**，不是实时城市目录；代码中保留 TODO。
+新用户的城市、年龄、性别默认空，不伪造资料；筛选时未知资料不匹配对应条件。
+Pass 仅依据数据库 `filter_pass_expires_at`，这些接口不授予或出售 Pass。
+
+未开通或已到期时，任何年龄/城市筛选（包括读取历史高级筛选批次）均返回 HTTP 200、
+`locked=true`、`code=FILTER_PASS_REQUIRED`、锁定提示及空 items，绝不退回未筛选结果。
+无匹配或发现池耗尽返回 HTTP 200、`home-empty`，不重置已看记录。批次中后来被屏蔽或
+删除内容的信件不再返回；双方任意一方屏蔽均生效，详情返回 404。无权限的批次也是 404。
+
+### page-states.json 状态对应
+
+| 模块 / 状态 | 接口约定 |
+| --- | --- |
+| 02 home-ready / home-empty | 有来信 / 无匹配或耗尽（默认每批三封） |
+| 02 home-response | 对方在已回应会话中再次回信；responses 给出 openingMessageId 供跳转。首页读取后记为已展示，下次进入不再提示 |
+| 02 filters-free / filters-active / filters-selected | 筛选元数据和列表 filterState；未开通高级筛选返回锁定提示 |
+| 02 bird-female / bird-male / bird-motion-off | 信使外观与动画是客户端本地展示状态，不改变发现接口 |
+| 03 letter-open | 尚未回应，canReply=true |
+| 03 letter-waiting | 已回应且 B3 解锁账本已生效，等待发信人下一条回信 |
+| 03 letter-replied | 发信人已有后续回信，canChat=true；不在发现接口泄漏付费回信内容 |
+| 03 letter-typed / letter-safety / letter-report | 编辑草稿、菜单和举报原因是客户端状态，基于详情展示；举报提交不属于本任务接口 |
+| 03 compose-empty / compose-draft / compose-invalid | 客户端编辑状态；发送复用 B3 opening 接口的校验 |
+| 03 compose-sent | B3 opening 返回持久化 conversationId / openingMessageId；重复发送沿用同一账本 |
+
+`replied` 依据持久化 unlocked_at，因此清理历史回复后仍保持已回应/解锁状态；
+`letter-replied` 依据尚存的发信人后续回复，发现接口不会创建新会话或重建已删除开场白。
+迁移 `005_discovery.sql` 可重复执行；发现批次与已看记录持久化，不依赖进程内缓存。
+测试在隔离 PostgreSQL schema 中覆盖筛选锁定和到期、边界分页、并发刷新不重复、
+双向屏蔽、资料隔离、回应提示与 B3 状态，且重复执行新迁移。

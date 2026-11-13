@@ -1,3 +1,4 @@
+import { registerDiscovery } from './discovery.js';
 import { registerAuth, type AuthOptions } from './auth.js';
 import Fastify from 'fastify';
 import { randomUUID, createHash } from 'node:crypto';
@@ -26,6 +27,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     return result.rows[0];
   }
   registerAuth(app, db as Pool, authOptions);
+  registerDiscovery(app, transaction, authenticate);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {
     schema: { params: { type: 'object', required: ['peerId'], properties: { peerId: uuid } },
       body: { type: 'object', additionalProperties: false, required: ['content'], properties: { content: text } } }
