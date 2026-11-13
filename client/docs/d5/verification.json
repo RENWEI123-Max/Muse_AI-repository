@@ -1,11 +1,14 @@
 {
-  "database": "maugo_d5_task69_1794549883062",
+  "database": "maugo_d5_task75_1794551613753",
   "stateScreenshots": 18,
-  "prototypePassed": 16,
-  "prototypeGaps": [
-    "moments-category-empty: B16 has no category field",
-    "moment-options: B16 has no post visibility update route"
-  ],
+  "prototypePassed": 18,
+  "prototypeGaps": [],
+  "postUpdate": {
+    "category": "Portrait",
+    "visibility": "only_me",
+    "nonAuthorOptions": 0,
+    "nonAuthorPatch": 403
+  },
   "checks": {
     "list": {
       "status": 200,
@@ -42,7 +45,7 @@
     },
     {
       "method": "POST",
-      "path": "/api/media/uploads",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
       "status": 201
     },
     {
@@ -57,12 +60,12 @@
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "path": "/api/media/uploads/ef3b8a55-fa1e-4714-893a-97a53d44e9bb",
       "status": 200
     },
     {
       "method": "PATCH",
-      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "path": "/api/users/me/image-cards/2932230e-3c2a-489b-893e-64b0782f3cf0",
       "status": 200
     },
     {
@@ -72,12 +75,12 @@
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "path": "/api/media/uploads/ef3b8a55-fa1e-4714-893a-97a53d44e9bb",
       "status": 200
     },
     {
       "method": "PATCH",
-      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "path": "/api/users/me/image-cards/2932230e-3c2a-489b-893e-64b0782f3cf0",
       "status": 200
     },
     {
@@ -87,12 +90,12 @@
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "path": "/api/media/uploads/ef3b8a55-fa1e-4714-893a-97a53d44e9bb",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/posts",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
@@ -102,32 +105,32 @@
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "path": "/api/media/uploads/ef3b8a55-fa1e-4714-893a-97a53d44e9bb",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/posts",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
       "method": "POST",
-      "path": "/api/media/uploads",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
       "status": 201
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=sticker.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
       "status": 200
     },
     {
@@ -137,42 +140,262 @@
     },
     {
       "method": "GET",
-      "path": "/api/posts",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/posts/a407ab3f-62db-4460-b9e6-b48701a65641",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=Outfit&limit=20&offset=0",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=Life&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=Style&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=Outfit&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=Portrait&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/2c5636e4-32f2-4ebd-b7de-7b23427a69a6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e70882dd-3deb-4503-b54f-32190c891c1d",
       "status": 200
     },
     {
       "method": "DELETE",
-      "path": "/api/posts/a407ab3f-62db-4460-b9e6-b48701a65641",
+      "path": "/api/posts/e3d5ed3f-2e45-4705-a3b4-ae2eb2fad9db",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/posts",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
@@ -182,12 +405,12 @@
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "path": "/api/media/uploads/ef3b8a55-fa1e-4714-893a-97a53d44e9bb",
       "status": 200
     },
     {
       "method": "DELETE",
-      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "path": "/api/users/me/image-cards/2932230e-3c2a-489b-893e-64b0782f3cf0",
       "status": 200
     },
     {
@@ -197,107 +420,107 @@
     },
     {
       "method": "GET",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b37218c3-5199-4c30-95eb-07ce9377f177",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/d9a874ab-989d-4480-bb65-551fe4c3c0e7",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/d43c2f9f-f830-4b64-9940-183dc16e3715",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/447ef923-2bea-4fdb-9c16-bc30e622c27d",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/f41d686e-56e3-4899-a8bc-6607142f01ad",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/d7797eb0-e1b5-47e6-bd70-bb888aad0343",
+      "status": 200
+    },
+    {
+      "method": "POST",
       "path": "/api/posts",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
       "status": 201
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/e51da99a-35b9-459b-8f14-2850311fc9f1",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/a2f4c596-82a1-4316-a087-a14f8204fc23",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/9da1c8d9-7fb1-497e-9fa1-4c9c45359655",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/36a396c9-db04-421a-b01d-4f4a5dbe6412",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/8ed2254b-d0cf-4c4f-8cf7-8207b7f19ad1",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/media/uploads",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/media/uploads/7a368f07-ccd9-4a51-975a-87adfa75e1a7",
-      "status": 200
-    },
-    {
-      "method": "POST",
-      "path": "/api/posts",
-      "status": 201
-    },
-    {
-      "method": "GET",
-      "path": "/api/posts",
+      "path": "/api/posts?userId=5ce8f25a-14f6-4dec-bfcd-d4d7cd745e50&category=All&limit=20&offset=0",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/a2f4c596-82a1-4316-a087-a14f8204fc23",
+      "path": "/api/media/uploads/b37218c3-5199-4c30-95eb-07ce9377f177",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/e51da99a-35b9-459b-8f14-2850311fc9f1",
+      "path": "/api/media/uploads/d9a874ab-989d-4480-bb65-551fe4c3c0e7",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/9da1c8d9-7fb1-497e-9fa1-4c9c45359655",
+      "path": "/api/media/uploads/d43c2f9f-f830-4b64-9940-183dc16e3715",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/36a396c9-db04-421a-b01d-4f4a5dbe6412",
+      "path": "/api/media/uploads/f41d686e-56e3-4899-a8bc-6607142f01ad",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/7a368f07-ccd9-4a51-975a-87adfa75e1a7",
+      "path": "/api/media/uploads/d7797eb0-e1b5-47e6-bd70-bb888aad0343",
       "status": 200
     },
     {
       "method": "GET",
-      "path": "/api/media/uploads/8ed2254b-d0cf-4c4f-8cf7-8207b7f19ad1",
+      "path": "/api/media/uploads/447ef923-2bea-4fdb-9c16-bc30e622c27d",
       "status": 200
     }
   ],
@@ -305,6 +528,550 @@
     {
       "target": "sheet",
       "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
     },
     {
       "target": "sheet",

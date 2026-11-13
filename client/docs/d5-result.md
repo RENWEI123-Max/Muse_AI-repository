@@ -1,24 +1,26 @@
-# 任务 #69：D5 对接 B16 复验结果
+# 任务 #75：D5 接 B17 补缺复验
 
-结论：**16/18 状态通过，2 项未完全通过，D5 不能标为全部完成。** 真实发布、列表、详情、删除、形象照管理、发布时可见范围与第二账号服务端权限均通过；原型业务分类和已发布动态可见范围修改仍缺后端契约。Issue 评论未发布：当前身份访问任务 Issue 返回 HTTP 404。
+结论：**18/18 状态通过，原有 16 项回归通过，两项缺口已补齐。** 分类由服务端筛选，作者已发布动态的分类与可见范围可修改并立即回读；非作者不显示选项。失败清单：无。
 
-## 实现与验证范围
+## 实现范围
 
-- 业务改动仅在 `client/src/components/MomentsFlow.vue` 和 `ProfileFlow.vue` 的 D5 入口；没有修改 `maugo/`、其他模块业务、依赖或锁文件。
-- 形象照直接上传原始图片至 `/media/uploads?purpose=post`，再使用 `/users/me/image-cards` 发布、列表、更新类型、主照片、可见范围及删除。上传图片、贴纸、视频、音频使用真实媒体接口；已发布媒体通过带鉴权的请求加载。
-- 动态使用 `/posts` 发布、按真实用户 ID 分页查询，`/posts/:id` 查询详情及删除。无本机模拟发布、模拟列表或模拟权限；本机只保存用户主动保留的未发布草稿，按服务端用户 ID 隔离。无评论气泡或模拟点赞按钮。
-- 对照交接包 `04-开发资料/page-states.json` 模块 11、12，以及 `03-成品UI/离线预览/MauGo-手机壳交互版-离线.html` 的布局、颜色、间距和交互：三列照片卡、类型选择、暗色底部弹层、媒体预览、编辑页及删除确认。弹层、页面和列表存在实际过渡；浏览器 `transitionrun` 记录见证据 JSON。业务分类与动态菜单差异单列失败，不算还原通过。
-- `npm run build` 通过：343 资源检查、Vue/TypeScript 检查及 Vite 构建。`npm run dev` 由 Playwright 启动并实际提供页面，浏览器完整测试通过（1 个串行端到端用例，32.7 秒；总计 40.6 秒）。测试脚本成功不等于原型 18/18 验收通过。
+仅修改 `client/src/components/MomentsFlow.vue`、现有 D5 测试、本文与 `client/docs/d5/` 截图和证据；未修改 maugo/、依赖、锁文件或其他业务模块。
 
-## 隔离与复现
+- 分类使用 B17 的 Life / Portrait / Style / Outfit，发布携带 category，草稿保留分类；列表和详情显示服务端 category。筛选直接发送 GET /posts?category=，All 使用 B17 的不过滤语义，分页沿用当前分类。
+- 作者菜单可改可见范围或分类；每次 PATCH /posts/:id 后立即 GET /posts/:id，再重新 GET 当前分类列表，显示服务器返回值。非作者不显示菜单，服务端拒绝越权修改。
+- 对照交接包模块 11 / 12 和手机壳离线原型：分类空态使用原型 female-4 鸟素材、主提示和副文案；分类按钮颜色、列表与空态淡入位移、菜单打开关闭及子菜单切换均有实际过渡。浏览器 transitionrun 证据跨重新登录保留。未声称完成在线 Figma 核验。
 
-最终测试数据库：`maugo_d5_task69_1794549883062`。测试每次创建新库并运行全部迁移（含 015），媒体目录也在独立 `/tmp/maugo_d5_task69_…-media` 下；只连接原数据库执行创建测试库，没有读写生产业务表、删除已有数据库、修改既有密码或密钥。测试数据保留，删除流程只针对本次创建的测试内容。
+## 验证环境
 
-测试入口：`tests/d5.config.ts`、`tests/d5-server.mjs`、`tests/d5.spec.ts`。正常在客户端运行 `npm run test:e2e -- --config tests/d5.config.ts`；后端须已安装现有依赖，并提供测试 PostgreSQL 连接（`TEST_DATABASE_URL` 优先，其次 `DATABASE_URL`）。测试进程只从该连接创建新库，随即切换到新库执行迁移及业务请求。验收环境后端依赖只读，因此使用 `/tmp/task69-backend` 内与当前 worktree 完全相同的后端源码副本；通过 `D5_BACKEND_ROOT` 指定副本，`D5_ENV_FILE` 指定已有连接配置位置，不输出凭证。`diff` 确认源码副本无差异。未安装新依赖。
+构建通过（343 资源校验、Vue/TypeScript 和 Vite）；开发服务由 Playwright 实际启动。现有 `tests/d5.config.ts`、`tests/d5-server.mjs`、`tests/d5.spec.ts` 在真实 B17 后端上执行完整串行 Chromium 验收，用真实注册的作者与另一账号，不模拟业务接口或权限。
+
+后端源码从本次仓库复制到 `/tmp/task75-backend`，仅复用现有依赖，未改后端；D5_BACKEND_ROOT 指向该目录，D5_ENV_FILE 指向已有后端连接配置。每次测试创建全新隔离库，执行全部迁移（含 016 分类与当前后续迁移），媒体目录单独放在 /tmp；未读写生产业务表，未删除已有数据库，未修改密码或密钥。最终库名与耗时见下方最终记录及 [verification.json](d5/verification.json)。
+
+复现入口：客户端 `npm run test:e2e -- --config tests/d5.config.ts`；需要已有 PostgreSQL 连接及后端现有依赖。测试仅从连接创建新库后切换到隔离库。
 
 ## 18 状态逐项验收
 
-所有截图均为本次 Chromium 实测生成，存放在本目录的 `d5/` 中；失败项截图只证明现状，不作为通过证据。
+以下截图均由本次真实浏览器验收生成，存放在 client/docs/d5/，随代码交付。
 
 | 模块 | 状态 ID | 结果 | 实际验证及截图 |
 | --- | --- | --- | --- |
@@ -30,37 +32,29 @@
 | 11 | card-remove | 通过 | 确认弹层可取消，确认后真实 DELETE，重新查询不再显示。[截图](d5/card-remove.png) |
 | 12 | moments-empty | 通过 | 新测试账号真实列表为空，显示空态。[截图](d5/moments-empty.png) |
 | 12 | moments-list | 通过 | 真实 POST 后重新 GET 列表，显示内容、两附件和服务端可见范围。[截图](d5/moments-list.png) |
-| 12 | moments-category-empty | **未通过** | 原型要求 Outfit 等业务分类。B16 无 category 字段；当前仅按真实附件类型筛选，可展示 Video 无内容，但不能当作原型 Outfit 分类通过。[现状截图](d5/moments-category-empty.png) |
+| 12 | moments-category-empty | 通过 | 四类筛选调用真实 GET /posts?category=；Portrait 返回改类后的动态，Life / Style / Outfit 返回空列表，显示原型鸟形素材及双行提示。[空态](d5/moments-category-empty.png)、[分类列表](d5/category-portrait.png) |
 | 12 | moment-empty | 通过 | 空白编辑器、空内容禁发。[截图](d5/moment-empty.png) |
 | 12 | moment-draft | 通过 | 输入文本、实时计数；1000 字启用发布，1001 字禁发；保留后重新登录可恢复。[截图](d5/moment-draft.png) |
 | 12 | moment-photo | 通过 | 图片真实上传、预览、关联动态并下载显示；附件可移除。[截图](d5/moment-photo.png) |
 | 12 | moment-stickers | 通过 | 使用交接包贴纸素材，选择后作为 PNG 真上传并随动态发布。[截图](d5/moment-stickers.png) |
 | 12 | moment-visibility | 通过 | 发布前可选择 Everyone / Friends / Only me，真实请求带 visibility；访问控制由服务端执行。[截图](d5/moment-visibility.png) |
 | 12 | moment-leave | 通过 | 保留／丢弃／继续编辑弹层；实测保留后跨重新登录恢复文本草稿。[截图](d5/moment-leave.png) |
-| 12 | moment-options | **未完全通过** | 真实动态菜单、删除入口与范围显示已实现；原型的已发布动态范围修改缺少 B16 更新接口，客户端明确禁用该项。[现状截图](d5/moment-options.png) |
+| 12 | moment-options | 通过 | 作者可分别修改分类与可见范围；PATCH 后立即 GET 详情及列表确认，详情与列表显示 Portrait / Only me；非作者无菜单且 PATCH 403。[菜单](d5/moment-options.png)、[分类](d5/post-category.png)、[范围](d5/post-visibility.png)、[回读详情](d5/moment-updated.png)、[非作者](d5/non-author-detail.png) |
 | 12 | moment-delete | 通过 | 详情真实 GET 后可取消／确认删除，成功后列表刷新、详情返回 404；重新登录列表无旧内容。[截图](d5/moment-delete.png) |
 | 12 | moment-saved | 通过 | 成功提示在真实 POST 201 后展示，并回到重新读取的列表。[截图](d5/moment-saved.png) |
 
-## 额外通过证据
+## 附加证据与验证边界
 
-- [真实请求与断言记录](d5/verification.json)：包含最终隔离库名、接口状态码、第二账号实际响应、过渡事件及验收差异，不含账号令牌或数据库凭证。
-- [动态详情截图](d5/moment-detail.png)：由真实 `/posts/:id` 返回内容及附件。
-- [第二账号动态拒绝截图](d5/visibility-post-denied.png)、[第二账号照片拒绝截图](d5/visibility-card-denied.png)：在第二浏览器登录，再携带其真实令牌直接访问接口，返回 403。第二账号列表不包含私密动态；私密动态附件也返回 403；尝试删除他人动态返回 403。
-- Everyone 陌生账号可访问；创建真实未解锁会话后访问变为 403；真实回复并领取后 Friends 动态及形象照媒体可访问，Only me 动态仍 403。这些变化由服务端返回，客户端没有关系判断代码。
-- [六附件真实发布截图](d5/limits-six-attachments.png)：第六项后禁用继续添加，POST 后真实列表返回 6 个附件；直接请求 7 附件和 1001 字均被后端 400 拒绝。
+- [真实请求及断言](d5/verification.json) 记录分类查询参数、PATCH → GET 请求顺序、最终隔离库、18/18 结果、服务端权限响应及过渡事件，不含令牌和数据库凭证。
+- 作者在详情修改 Life → Portrait、Only me → Everyone → Friends → Only me；另一账号分别获得 200 / 403 / 403，越权 PATCH 返回 403，原私密附件仍受服务端保护。分类修改后，列表切换到 Portrait 有该动态，其他三类为空。
+- 非作者 UI 检查：在第二浏览器使用第二账号真实令牌，将现有 My moments 的 userId 查询改为作者 ID，继续请求真实后端（没有伪造响应），公开列表与详情均不显示选项。[详情截图](d5/non-author-detail.png)。当前 D5 页面入口仍是 My moments。
+- 回归包含草稿跨登录恢复、1000/1001 字边界、六附件发布与第七项禁止、直接提交七附件 400、非法媒体 400 与超大图片 413、真实删除及详情 404、主形象照与类型修改、图片解码、两账号动态及照片媒体权限、真实回复领取解锁 Friends；无评论气泡。
+- [六附件](d5/limits-six-attachments.png)、[动态权限拒绝](d5/visibility-post-denied.png)、[照片权限拒绝](d5/visibility-card-denied.png)。原有 16 状态截图已重新生成。
 
-## 失败清单与 Smith 决策项
+## 失败清单
 
-1. `moments-category-empty`：请 Smith 决定安排后端补充业务分类字段及读写契约，还是明确批准以附件类型筛选调整原型验收。本任务禁止改后端，未写本机分类伪装持久化。
-2. `moment-options` 的已发布可见范围修改：请 Smith 决定补充动态更新接口，还是明确将范围选择限定为发布前。未采用删除重发冒充原地修改。
-3. Issue #69 评论投递：GitHub 返回 404，需 Smith 为执行身份提供该私有仓库 Issue 的访问及评论权限；未声称已经发布评论。待发布内容见下文。
+无。两项 D5 缺口及原有 16 项本次均通过；没有将在线 Figma 核验纳入此次结论。
 
-## 待发布 Issue #69 评论
+## 最终记录
 
-D5 已完成真实 B16 客户端主流程接入，严格原型验收 **16/18**，不能关闭为全部完成。
-
-通过：card-type、card-options、card-preview、card-change-type、card-visibility、card-remove、moments-empty、moments-list、moment-empty、moment-draft、moment-photo、moment-stickers、moment-visibility、moment-leave、moment-delete、moment-saved。逐项证据及截图见 `client/docs/d5-result.md`、`client/docs/d5/`。
-
-失败：moments-category-empty 缺业务分类契约；moment-options 缺已发布动态范围更新接口。需 Smith 决定补后端或调整验收范围。
-
-生产构建、开发服务、隔离 PostgreSQL 上的 Chromium 发布→列表→详情→删除→双账号可见范围验证通过；文字及附件上限、草稿跨登录恢复、真实媒体访问与动画过渡均有测试证据。未改后端、未动生产业务数据、未推送或合并。
+最终隔离库：`maugo_d5_task75_1794551613753`；完整 Chromium 串行测试 1/1 通过，覆盖 18/18 状态，执行 52.6 秒、含开发服务启动总计约 1 分钟。构建通过。通过清单与失败清单已发布至 [Issue #60 评论](https://github.com/RENWEI123-Max/Muse_AI-repository/issues/60#issuecomment-6846058246)。未自行提交或推送。

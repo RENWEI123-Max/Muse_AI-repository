@@ -1,4 +1,4 @@
-// Real B16 routes; all fixtures and media live in a fresh, retained test database.
+// Real B17 routes; all fixtures and media live in a fresh, retained test database.
 import {fileURLToPath,pathToFileURL} from 'node:url'
 const backend=process.env.D5_BACKEND_ROOT||fileURLToPath(new URL('../../maugo/',import.meta.url))
 const {default:pg}=await import(pathToFileURL(backend+'/node_modules/pg/lib/index.js').href)
@@ -8,7 +8,7 @@ const {buildApp}=await import(pathToFileURL(backend+'/src/app.ts').href)
 dotenv.config({path:process.env.D5_ENV_FILE||backend+'/.env',quiet:true})
 const source=process.env.TEST_DATABASE_URL||process.env.DATABASE_URL
 if(!source)throw Error('Database connection unavailable')
-const name='maugo_d5_task69_'+Date.now(),admin=new pg.Pool({connectionString:source})
+const name='maugo_d5_task75_'+Date.now(),admin=new pg.Pool({connectionString:source})
 await admin.query(`CREATE DATABASE ${name}`);await admin.end()
 const url=new URL(source);url.pathname='/'+name
 const db=new pg.Pool({connectionString:url.toString()})
