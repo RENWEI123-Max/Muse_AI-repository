@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 
 test('Korean help and FAQ translate and switch back to English',async({page,request})=>{
- const seed=await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'read'}})
+ const seed=await request.post((process.env.D6_API_ROOT||'http://127.0.0.1:3001')+'/__c5/seed',{data:{mode:'read'}})
  expect(seed.ok()).toBeTruthy()
  const user=await seed.json()
  await page.goto('/?auth=consent')
