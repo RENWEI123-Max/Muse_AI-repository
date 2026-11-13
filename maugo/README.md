@@ -284,3 +284,21 @@ JPEG/PNG/WebP 白名单及严格小于 10 MiB 的图片限制；非图片、超�
 - 资料写入、槽位归档/恢复和主头像引用更新均使用数据库事务，本人行锁串行分配槽位，数据库唯一索引防止活动槽位冲突；注销清除简介，媒体删除级联清除槽位记录。
 
 验收结论：隔离 PostgreSQL 验收数据库完整测试 26 项全部通过，TypeScript 构建通过；完整迁移运行器连续执行两次通过，014 迁移 SQL 重复执行通过。新增用例覆盖 404、17 岁/空昵称/超长简介等校验、未鉴权、媒体归属、8 槽上限、并发抢槽、移除确认与恢复、主头像切换、双向屏蔽、归档图片访问和会话解锁权限。`client/` 未修改，未使用生产数据，未添加依赖或密钥。
+
+## B16 动态与形象照（任务 #65）
+
+应用可重复执行的 `015_posts_image_cards.sql`。全部接口要求 Bearer 登录；修改与鉴权使用现有事务及用户行锁。
+
+- `POST /posts`：`{content, mediaIds?: UUID[], visibility?: "everyone"|"friends"|"only_me"}`，返回 201。文字最多 1000 个 Unicode 字符，附件最多 6 个且不重复；允许纯文字或纯附件，不允许两者都空。默认 everyone。附件必须是本人通过 B8 上传的 post 媒体，再次核验图片 JPEG/PNG/WebP、音频 OGG/WAV/MP3、视频 MP4/WebM 类型及严格小于 10/10/30 MiB 的大小。返回 `id,userId,content,visibility,createdAt,attachments`，附件含 `id,url,kind,mimeType,size`，保持提交顺序。
+- `GET /posts?limit=20&offset=0&userId=UUID`：userId 可省略，limit 1–100；先在数据库过滤权限，再按 createdAt、id 倒序分页，返回 `{items,limit,offset}`。`GET /posts/:id` 返回相同动态结构，无权限 403、不存在 404。`DELETE /posts/:id` 仅作者可操作，他人 403，成功返回 `{deleted:true}`。
+- `GET /users/me/image-cards`：返回 `{items}`，按 position 升序。每项含 `id,userId,mediaId,url,type,isPrimary,position,visibility,createdAt`。
+- `POST /users/me/image-cards`：`{mediaId,type,visibility?}`，关联本人 post 用途图片；type 为 portrait/physique/outfit/life（交接包 Portrait/Physique/Outfit/Life），visibility 默认 everyone，返回 201 和形象照记录。采用 8 槽，position 为 0–7，自动填入最小空槽；重复图片或满槽返回 409。首张自动成为主形象照。
+- `PATCH /users/me/image-cards/:id`：可修改 type、visibility 或提交 `isPrimary:true`，一次事务取消旧主图并设新主图；不接受直接取消主图。`DELETE /users/me/image-cards/:id` 删除本人记录，主图删除后以剩余最小槽位自动补主图；全部删除后列表为空。操作他人记录返回 404。用户行锁与唯一索引保证并发关联不超槽、主图最多一张。
+
+可见性由服务端同时用于动态列表、详情和 `/media/uploads/:id` 下载。everyone 允许已登录陌生人，但双方已有未解锁会话时仍拒绝；friends 使用现有 conversations.unlocked_at 收取回信解锁账本，未解锁或无此关系不可读；only_me 仅作者可读。任一方向屏蔽、作者注销或封禁均阻断他人访问。本人形象照管理列表不受自己的 visibility 影响；他人下载照片必须存在其可见的形象照或动态引用，未发布的 post 上传不能被他人下载。不存在独立好友表，本任务没有新增好友关系接口。
+
+迁移为既有动态补 visibility=only_me，避免将原本仅用于导出的存储内容自动公开；新发布按请求或默认 everyone。附件关联存储于 post_attachments，动态删除级联清理关联；形象照删除只清理其记录。两者都保留 B8 上传元数据与文件，便于本人复用；删除最后一条可见引用后，他人立即失去下载权限，其他独立可见引用继续有效。物理媒体沿用 B9 本人注销清理及 B13 举报证据保留策略；媒体删除同时级联清理动态附件关联和形象照。
+
+验收：专用本机 PostgreSQL 容器、独立数据库及随机 schema 中完整 npm test 共 30 项通过，npm run build 通过；新增测试覆盖千字/六附件边界、非法类型/超大/他人媒体、仅作者删除、分页、自己可见/好友/未解锁/双向屏蔽/封禁、真实媒体读取、八槽并发满槽、设主/删除/补槽/清空与附件引用清理。新迁移 SQL 重复执行及全量迁移入口连续执行两次通过。client/ 无变更；未访问生产数据库，未修改密钥，未推送、合并或切分支。
+
+任务 #68 合并验收：基于与远端 main 一致的 `b2e74dc` 解决 B14/B16 路由注册、媒体权限及本 README 的冲突，同时保留 B14 资料与头像槽位。B16 迁移顺延为 `015_posts_image_cards.sql`，避免与 main 的 `014_profiles.sql` 编号重复，测试及文档引用同步更新。专用 PostgreSQL 16 容器的独立数据库中，完整迁移连续两次通过，完整 npm test 共 40 项全部通过（无失败、无跳过），npm run build 通过；动态/形象照路由、迁移及测试文件均已核对存在。仅修改 maugo/，未接触生产数据、client/ 或密钥。当前结果位于 codex/task-68，按任务指示由 runner 提交、合入 main 并推送；合入后 main 自查仍需 runner 执行。验收结论仅发布到 Issue #53。

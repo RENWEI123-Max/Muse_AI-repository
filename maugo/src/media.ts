@@ -1,4 +1,5 @@
 import { profileAccess } from './profiles.js';
+import { contentVisible } from './posts.js';
 import type { FastifyInstance } from 'fastify';
 import type { PoolClient } from 'pg';
 import { randomUUID } from 'node:crypto';
@@ -91,7 +92,10 @@ export function registerMedia(app: FastifyInstance,
     await profileAccess(c,u.id,row.uploader_id);
     if(!(await c.query('SELECT 1 FROM profile_avatars WHERE user_id=$1 AND media_id=$2 AND removed_at IS NULL',[row.uploader_id,row.id])).rowCount) fail(403,'Avatar is not public');
    } else if(row.uploader_id!==u.id) {
-    if(row.purpose!=='report' || !u.is_moderator || !(await c.query('SELECT 1 FROM reports WHERE attachment_media_id=$1',[row.id])).rowCount) fail(403,'Media belongs to another user');
+    const evidence=row.purpose==='report' && u.is_moderator && (await c.query('SELECT 1 FROM reports WHERE attachment_media_id=$1',[row.id])).rowCount;
+    const published=row.purpose==='post' && (await c.query(`SELECT 1 FROM user_posts p JOIN post_attachments a ON a.post_id=p.id WHERE a.media_id=$2 AND ${contentVisible('p')}
+     UNION ALL SELECT 1 FROM image_cards p WHERE p.media_id=$2 AND ${contentVisible('p')} LIMIT 1`,[u.id,row.id])).rowCount;
+    if(!evidence && !published) fail(403,'Media belongs to another user');
    }
    return row;
   });
