@@ -1,0 +1,346 @@
+{
+  "database": "maugo_d5_task69_1794549883062",
+  "stateScreenshots": 18,
+  "prototypePassed": 16,
+  "prototypeGaps": [
+    "moments-category-empty: B16 has no category field",
+    "moment-options: B16 has no post visibility update route"
+  ],
+  "checks": {
+    "list": {
+      "status": 200,
+      "body": {
+        "items": [],
+        "limit": 20,
+        "offset": 0
+      }
+    },
+    "detail": {
+      "status": 403,
+      "body": {
+        "message": "Post is not visible"
+      }
+    },
+    "cardMedia": {
+      "status": 403,
+      "body": {
+        "message": "Media belongs to another user"
+      }
+    },
+    "postMedia": {
+      "status": 403,
+      "body": {
+        "message": "Media belongs to another user"
+      }
+    }
+  },
+  "receipts": [
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/me/image-cards",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/posts",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/a407ab3f-62db-4460-b9e6-b48701a65641",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/9546bb72-b332-40aa-b4fc-5180c882a405",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b84a675b-0e61-4960-9748-a8123d8281a5",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/posts/a407ab3f-62db-4460-b9e6-b48701a65641",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cc300858-3566-4f03-9444-8d47f1b9e58a",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/users/me/image-cards/d702f760-2bac-4b76-83e6-7ff52364ce89",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e51da99a-35b9-459b-8f14-2850311fc9f1",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/a2f4c596-82a1-4316-a087-a14f8204fc23",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/9da1c8d9-7fb1-497e-9fa1-4c9c45359655",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/36a396c9-db04-421a-b01d-4f4a5dbe6412",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/8ed2254b-d0cf-4c4f-8cf7-8207b7f19ad1",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/7a368f07-ccd9-4a51-975a-87adfa75e1a7",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/posts",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/a2f4c596-82a1-4316-a087-a14f8204fc23",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/e51da99a-35b9-459b-8f14-2850311fc9f1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/9da1c8d9-7fb1-497e-9fa1-4c9c45359655",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/36a396c9-db04-421a-b01d-4f4a5dbe6412",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/7a368f07-ccd9-4a51-975a-87adfa75e1a7",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/8ed2254b-d0cf-4c4f-8cf7-8207b7f19ad1",
+      "status": 200
+    }
+  ],
+  "motion": [
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    }
+  ],
+  "friendUnlock": {
+    "friendsPost": 200,
+    "friendsCardMedia": 200,
+    "privatePost": 403
+  },
+  "pendingEveryoneStatus": 403,
+  "deletedPostStatus": 404,
+  "sixAttachments": 6
+}
