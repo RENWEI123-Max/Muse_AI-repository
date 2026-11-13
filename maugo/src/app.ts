@@ -1,3 +1,4 @@
+import { registerInbox } from './inbox.js';
 import { registerPrivacy } from './privacy.js';
 import { registerMedia } from './media.js';
 import { registerModeration, lockPair } from './moderation.js';
@@ -12,7 +13,7 @@ const hash = (value: string) => createHash('sha256').update(value).digest('hex')
 const uuid = { type: 'string', format: 'uuid' };
 const text = { type: 'string', minLength: 1, pattern: '\\S' };
 export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: Pool['connect'] }, logger = false, authOptions: AuthOptions = {}) {
-  const app = Fastify({ logger });
+  const app = Fastify({ logger, ajv: { customOptions: { removeAdditional: false } } });
   app.get('/health', async () => ({ status: 'ok', service: 'maugo-backend' }));
   app.get('/ready', async (_request, reply) => {
     try { await db.query('SELECT 1'); return { status: 'ready' }; }
@@ -33,6 +34,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     return result.rows[0];
   }
   registerAuth(app, db as Pool, authOptions);
+  registerInbox(app, transaction, authenticate);
   registerPrivacy(app, transaction, authenticate);
   registerMedia(app, transaction, authenticate);
   registerDiscovery(app, transaction, authenticate);

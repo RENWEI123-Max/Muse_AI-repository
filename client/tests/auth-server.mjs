@@ -13,7 +13,7 @@ const admin=new pg.Pool({connectionString:source})
 await admin.query(`CREATE DATABASE ${database}`)
 url.pathname='/'+database
 const db=new pg.Pool({connectionString:url.toString()})
-for(const file of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','006_reply_wallet.sql','007_filter_pass.sql','008_moderation.sql','009_media.sql','010_account_privacy.sql'])await db.query(await readFile(new URL('../../maugo/server/migrations/'+file,import.meta.url),'utf8'))
+for(const file of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','006_reply_wallet.sql','007_filter_pass.sql','008_moderation.sql','009_media.sql','010_account_privacy.sql','011_inbox.sql'])await db.query(await readFile(new URL('../../maugo/server/migrations/'+file,import.meta.url),'utf8'))
 // No mail adapter: exercise actual SMTP-unavailable response.
 for(const key of ['SMTP_HOST','SMTP_PORT','SMTP_USER','SMTP_PASS','SMTP_FROM'])delete process.env[key]
 process.env.MEDIA_DIRECTORY='/tmp/'+database+'-media'

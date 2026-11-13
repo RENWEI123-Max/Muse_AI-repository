@@ -86,14 +86,15 @@ export function registerWallet(app: FastifyInstance,
         if (u.diamonds < cost) return { status:402,state:'insufficient-balance',code:'INSUFFICIENT_DIAMONDS',message:'余额不足，请充值后继续收取',cost,diamonds:u.diamonds,unlocked:false,context };
         entry = (await c.query(`INSERT INTO reply_collections(id,user_id,reply_id,idempotency_key,cost,created_at)
           VALUES($1,$2,$3,$4,$5,$6::timestamptz) RETURNING *`, [randomUUID(),u.id,message.id,key,cost,day.collected_at])).rows[0];
-        await c.query('UPDATE conversations SET unlocked_at=COALESCE(unlocked_at,$2::timestamptz) WHERE id=$1', [message.conversation_id,day.collected_at]);
+        await c.query('UPDATE conversations SET unlocked_at=COALESCE(unlocked_at,$2::timestamptz) WHERE id=$1 AND peer_id=$3', [message.conversation_id,day.collected_at,message.sender_id]);
         await c.query('UPDATE users SET diamonds=diamonds-$2,collected_count=collected_count+1 WHERE id=$1', [u.id,cost]);
         if (cost) await c.query(`INSERT INTO wallet_ledger(id,user_id,collection_id,amount,balance_after)
           VALUES($1,$2,$3,$4,$5)`, [randomUUID(),u.id,entry.id,-cost,u.diamonds-cost]);
       }
       await c.query(`INSERT INTO reply_collection_requests(user_id,idempotency_key,collection_id)
         VALUES($1,$2,$3) ON CONFLICT DO NOTHING`, [u.id,key,entry.id]);
-      return { id:entry.id,state:'collected',cost:entry.cost,unlocked:true,unlockedAt:entry.unlocked_at,
+      const conversation = (await c.query('SELECT unlocked_at FROM conversations WHERE id=$1',[message.conversation_id])).rows[0];
+      return { id:entry.id,state:'collected',cost:entry.cost,unlocked:conversation.unlocked_at!=null,unlockedAt:entry.unlocked_at,
         collectionCount:entry.collection_count,openingMessageId:message.opening_message_id,content:message.content,context };
     });
     const { status=200,...body } = result;

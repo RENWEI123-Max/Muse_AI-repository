@@ -4,13 +4,13 @@
 
 ## 验证范围
 
-使用 C5 测试框架创建全新 PostgreSQL 数据库，沿用真实后端认证、发送消息、钱包、回信收取和 B8 媒体上传/媒体消息实现。仅缺失的列表、历史、待收、PATCH 路由使用客户端 tests/ 中的数据库契约适配器。测试媒体单独存放于 /tmp 下的新数据库同名目录；不删除已有数据库或业务数据。
+使用 C5 测试框架创建全新 PostgreSQL 数据库，沿用真实后端认证、发送消息、钱包、回信收取和 B8 媒体上传/媒体消息实现。B11 后续已补齐列表、历史、待收、PATCH；这些路由全部使用真实后端，tests/inbox-contract.mjs 只保留测试夹具。测试媒体单独存放于 /tmp 下的新数据库同名目录；不删除已有数据库或业务数据。
 
 浏览器完成等待 → 对方回信 → 收取 → 文字发送；未解锁时没有输入区和媒体入口，真实 B8 上传返回 403；清空后保持解锁，并能再次发送。备注持久化、搜索不标记已读、取消录音、麦克风不可用提示、图片预览、真实上传发送、带鉴权的图片历史读取、表情上传发送均有测试。录音仅演示手势，不请求麦克风权限。
 
 ## 20 状态逐项结果
 
-下列“通过”指客户端浏览器与隔离数据库契约验证，不代表缺失的 B11 生产接口已交付。
+B11 交付后已用隔离测试数据库的真实后端回归等待→收取→聊天、清空历史保留权限、真实图片与表情上传。
 
 |序号|状态|结果|
 |---|---|---|
@@ -41,15 +41,15 @@
 - `src/chat.css`：原型暗绿配色、气泡、头像、等待卡片、工具栏、附件、设置与确认层；等待呼吸、消息进出、工具展开、录音波形、清空过渡，并支持减少动画偏好。
 - `src/components/InboxFlow.vue`：从 C5 进入聊天及新到回信队列刷新；加载中禁用列表入口。
 - `tests/module06.json`：交接清单原文；`tests/chat.spec.ts`：20 状态截图及主流程；`tests/chat-media.spec.ts`：B8 真实媒体链路。
-- `tests/inbox-contract.mjs`：测试库内按用户隔离的 cleared_at；历史返回 mine/senderId/mediaId；清空只改变历史可见范围，不修改 conversations.unlocked_at。
+- `tests/inbox-contract.mjs`：仅测试数据夹具。真实 B11 conversation_preferences 按用户隔离 cleared_at；历史返回 mine/senderId/mediaId；清空不修改 conversations.unlocked_at。
 - 截图输出 `test-results/c6-chat-*.png`；`docs/c6-chat-open.png` 保留一张动画完成后的聊天图。
 
-## 接口兼容与尚缺的正式验收
+## B11 真实后端接口
 
 环境地址沿用 `VITE_API_BASE_URL` 与 `MAUGO_API_TARGET`，默认 http://127.0.0.1:3000。所有业务请求带 Bearer token。
 
 历史、未读、搜索使用 `GET /conversations/:id/messages`，分页与 markRead/search 参数沿用 C5。备注通过 `PATCH /conversations/:id` 的 remark，清空发送 clearHistory:true；不会在客户端重置权限。文字发送走 `POST /conversations/:id/messages`，遵循现有后端 200 字限制。
 
-上传先尝试任务要求的 `POST /media/upload`，仅遇到 404 时兼容已交付 B8 的 `/media/uploads`，使用原始文件字节及 purpose=chat/conversationId/filename 查询参数。媒体优先通过 messages 的 mediaIds 提交；现有文字接口返回 400 时，改用 B8 `/conversations/:id/media`。文字与附件同时存在时，旧 B8 兼容路径分两条消息发送。表情使用原型 PNG 作为图片上传；历史图片使用带鉴权请求转为本地 blob URL。
+上传直接使用已交付 B8 的 `POST /media/uploads`，提交原始文件字节及 purpose=chat/conversationId/filename 查询参数；媒体发送直接使用 `/conversations/:id/media`。文字与附件同时存在时分两条消息发送。表情使用原型 PNG 作为图片上传；历史图片使用带鉴权请求转为本地 blob URL。移除旧上传地址探测及 messages.mediaIds 试探回退，避免代理在拒绝旧路由时出现连接错误。
 
-最终检查时 B11 的 GET /conversations、GET /conversations/:id/messages、PATCH /conversations/:id 与待收队列仍未注册，故正式后端全链路联调尚缺，不能宣称已通过。需要 Smith 协调 B11 交付上述接口并确认 clearHistory 与 markRead/search 契约，交付后重跑同一客户端流程。当前图片与表情已使用真实 B8 接口验证，列表/历史/PATCH 仍明确属于隔离测试契约。
+B11 已实现真实列表、队列、历史与 PATCH，C6 同一组浏览器用例已对真实后端回归通过；测试使用独立数据库和媒体目录，不表示已部署生产环境。接口说明见 `../../maugo/B11-inbox.md`。
