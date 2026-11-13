@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
+import ReplyTopup from './ReplyTopup.vue'
 import InboxFlow from './InboxFlow.vue'
 import LettersFlow, { type Letter } from './LettersFlow.vue'
-import { api } from '../lib/api'
+import { api, ApiError } from '../lib/api'
 import { asset } from '../lib/assets'
 const props=defineProps<{token:string}>()
 const emit=defineEmits<{signin:[]}>()
 type Pass={active:boolean;expiresAt:string|null;remainingDays:number;plans:{days:number;diamonds:number}[]}
+const passBalance=ref(0),passSelection=ref<{days:number;diamonds:number}>(),passKey=ref(''),passConfirm=ref(false),passTopup=ref(false),passNotice=ref('')
 const sheet=ref(''),error=ref(''),busy=ref(false),items=ref<Letter[]>([]),responses=ref<{openingMessageId:string}[]>([]),detail=ref<Letter>(),loaded=ref(false)
 const pass=ref<Pass>({active:false,expiresAt:null,remainingDays:0,plans:[]}), now=ref(Date.now()),cities=ref<string[]>([])
 const active=computed(()=>pass.value.active&&!!pass.value.expiresAt&&new Date(pass.value.expiresAt).getTime()>now.value)
@@ -25,10 +27,26 @@ async function status(){const [p,f]=await Promise.all([request<Pass>('/filter-pa
 async function load(refresh=false){if(busy.value)return;if(!props.token){error.value='Sign in to meet your letters.';return}busy.value=true;error.value='';try{await status();const data=await request<{items:Letter[];responses:{openingMessageId:string}[];locked?:boolean}>(refresh?'/letters/refresh':`/letters?${new URLSearchParams(Object.entries(filters.value).map(([k,v])=>[k,String(v)]))}`,refresh?filters.value:undefined);if(data.locked){pass.value.active=false;city.value='';ageSet.value=false;throw new Error('Your Filter Pass has expired. Please try again.')}items.value=data.items;responses.value=data.responses||[];loaded.value=true}catch(e){error.value=(e as Error).message}finally{busy.value=false}}
 async function openLetter(id:string){error.value='';try{detail.value=await request<Letter>(`/letters/${id}`);responses.value=responses.value.filter(r=>r.openingMessageId!==id);sheet.value='letter'}catch(e){error.value=(e as Error).message}}
 async function openFilters(){sheet.value='filters';if(props.token)try{await status()}catch(e){error.value=(e as Error).message}}
-async function purchase(days:number){if(busy.value)return;busy.value=true;error.value='';try{pass.value=await request<Pass>('/filter-pass/purchase',{days},{'Idempotency-Key':crypto.randomUUID()});sheet.value='filters'}catch(e){error.value=(e as Error).message}finally{busy.value=false}}
+async function choosePass(plan:{days:number;diamonds:number}){
+ if(busy.value)return
+ if(passSelection.value?.days!==plan.days){passSelection.value=plan;passKey.value=crypto.randomUUID()}
+ passNotice.value='';error.value='';busy.value=true
+ try{passBalance.value=(await request<{diamonds:number}>('/wallet')).diamonds;passConfirm.value=true}catch(e){error.value=(e as Error).message}finally{busy.value=false}
+}
+async function returnToPass(funded=false){
+ passTopup.value=false;passConfirm.value=true
+ passNotice.value=funded?'Diamonds added. Confirm your selected Pass to continue.':'Top-up closed. No Pass purchased; selection saved.'
+ try{passBalance.value=(await request<{diamonds:number}>('/wallet')).diamonds}catch(e){error.value=(e as Error).message}
+}
+async function purchase(days:number){
+ if(busy.value)return;busy.value=true;error.value=''
+ try{const result=await request<Pass>('/filter-pass/purchase',{days},{'Idempotency-Key':passKey.value});pass.value={...pass.value,...result};passConfirm.value=false;passSelection.value=undefined;sheet.value='filters'}
+ catch(e){if(e instanceof ApiError&&e.status===402){passBalance.value=(await request<{diamonds:number}>('/wallet')).diamonds;passConfirm.value=true;passNotice.value='Not enough diamonds. Add diamonds to continue.'}else error.value=(e as Error).message}
+ finally{busy.value=false}
+}
 watch(active,(value,old)=>{if(old&&!value){city.value='';ageSet.value=false;min.value=18;max.value=50;if(!busy.value)void load()}})
 const tick=setInterval(()=>{now.value=Date.now()},500)
-function escape(e:KeyboardEvent){if(e.key==='Escape'&&!['letter','compose','inbox'].includes(sheet.value))sheet.value=''}
+function escape(e:KeyboardEvent){if(e.key==='Escape'&&!passTopup.value&&!['letter','compose','inbox'].includes(sheet.value))sheet.value=''}
 onMounted(()=>{void load();document.addEventListener('keydown',escape)})
 onUnmounted(()=>{clearInterval(tick);document.removeEventListener('keydown',escape)})
 </script>
@@ -45,11 +63,12 @@ onUnmounted(()=>{clearInterval(tick);document.removeEventListener('keydown',esca
 <p class="scene-hint">{{busy?'Your little birds are on their way…':loaded&&!items.length?'No letters match just yet. Try another little wish.':'Tap a bird. Open a little story.'}}</p>
 <div class="home-actions"><button id="compose" aria-label="Write a letter" @click="sheet='compose'">✎ Write a letter</button><button id="refresh" aria-label="Refresh" :disabled="busy" @click="load(true)">⟳ Refresh</button><button class="primary" @click="openFilters">Find your letters</button></div><nav class="home-nav"><span aria-current="page">✧ Home</span><button id="open-inbox" @click="sheet='inbox'">Messages</button><button @click="sheet='appearance'">Choose your bird</button></nav>
 <LettersFlow v-if="sheet==='letter'||sheet==='compose'" :token="token" :letter="sheet==='letter'?detail:undefined" :compose="sheet==='compose'" @close="sheet=''" @blocked="items=items.filter(i=>i.openingMessageId!==$event);responses=responses.filter(i=>i.openingMessageId!==$event)" />
-<Transition name="sheet"><div v-if="sheet&&!['letter','compose','inbox'].includes(sheet)" class="home-veil" @click.self="sheet=''">
+<ReplyTopup v-if="passTopup" :balance="passBalance" :token="token" :required="passSelection?.diamonds" context="Pass" @back="returnToPass()" @funded="returnToPass(true)" />
+<Transition name="sheet"><div v-if="!passTopup&&sheet&&!['letter','compose','inbox'].includes(sheet)" class="home-veil" @click.self="sheet=''">
 <section class="home-sheet" role="dialog" aria-modal="true" :data-state="sheet==='filters'?(Object.keys(filters).length?'filters-selected':active?'filters-active':'filters-free'):sheet==='appearance'?(!motion?'bird-motion-off':`bird-${birdGender}`):sheet" :aria-label="sheet==='appearance'?'Choose your bird':sheet==='filters'?'Find your letters':sheet==='pass'?'Filter Pass':'A letter for you'"><header><h2>{{sheet==='appearance'?'Choose your bird':sheet==='filters'?'Find your letters':sheet==='pass'?'Filter Pass':'A letter for you'}}</h2><button aria-label="Close" @click="sheet=''">×</button></header>
 <template v-if="sheet==='filters'"><p>Gender</p><div class="gender-options"><button v-for="g in [['male','♂','Man'],['female','♀','Woman'],['','∞','Everyone']]" :key="g[0]" :aria-label="`Filter ${g[2]}`" :aria-pressed="gender===g[0]" @click="gender=g[0]!"><i>{{g[1]}}</i>{{g[2]}}</button></div><p>Age range <button class="pass-badge" @click="sheet='pass'">◆ Pass</button><small>{{min}}–{{max===50?'50+':max}}</small></p><div class="premium-zone"><label>Minimum age<input v-model.number="min" aria-label="Minimum age" type="range" min="18" max="50" :disabled="!active" @input="ageSet=true;max=Math.max(max,min)"></label><label>Maximum age<input v-model.number="max" aria-label="Maximum age" type="range" min="18" max="50" :disabled="!active" @input="ageSet=true;min=Math.min(min,max)"></label><button v-if="!active" class="premium-cover" @click="sheet='pass'">♢ Unlock age and city filters</button></div><p>City <button class="pass-badge" @click="sheet='pass'">◆ Pass</button></p><select v-model="city" aria-label="City" :disabled="!active"><option value="">Any city</option><option v-for="c in cities" :key="c">{{c}}</option></select><small class="city-source">City options · temporary data source</small><p class="pass-status">{{active?`Filter Pass · ${days} days remaining`:'Choose a day pass to unlock age and city filters.'}}</p><button v-if="!active" class="unlock-pass" @click="sheet='pass'">Unlock Filter Pass</button><button class="primary" :disabled="busy" @click="sheet='';load()">Done</button></template>
 <template v-else-if="sheet==='appearance'"><div id="appearance-genders" class="gender-options"><button v-for="g in ['male','female']" :key="g" :aria-pressed="birdGender===g" @click="birdGender=g"><img :src="asset(`02-bird-static/${g}-${variant}`)" alt="">{{g==='male'?'Male bird':'Female bird'}}</button></div><div class="appearance-grid"><button v-for="(name,i) in variants" :key="name" :aria-pressed="variant===i+1" :aria-label="`Choose ${name}`" @click="variant=i+1"><img :src="asset(`02-bird-static/${birdGender}-${i+1}`)" alt=""><span>{{name}}</span></button></div><div class="flight-preview"><span v-if="motion" class="flight-sprite" :style="{backgroundImage:`url(${flight})`}"></span><img v-else :src="bird" alt=""><span>Flight preview</span></div><label class="switch-row">Flight & hover<input v-model="motion" type="checkbox"></label><label class="switch-row">Magic trails<input v-model="trails" type="checkbox"></label><button class="primary" @click="sheet=''">Done</button></template>
-<template v-else-if="sheet==='pass'"><p>Unlock age and city filters.</p><p v-if="active">{{days}} days remaining</p><button v-for="p in pass.plans" :key="p.days" class="pass-plan" :disabled="busy" @click="purchase(p.days)">{{p.days}} day{{p.days>1?'s':''}} <b>◆ {{p.diamonds}}</b></button><p v-if="!pass.plans.length">Sign in to view available passes.</p><button class="text-button" @click="sheet='filters'">Back to filters</button></template>
+<template v-else-if="sheet==='pass'"><template v-if="passConfirm&&passSelection"><h3>{{passBalance<passSelection.diamonds?'Not enough diamonds':'Confirm Filter Pass'}}</h3><p>{{passSelection.days}} day Pass · {{passSelection.diamonds}} diamonds</p><p>Your balance · {{passBalance}} diamonds</p><p v-if="passNotice" role="status">{{passNotice}}</p><button v-if="passBalance<passSelection.diamonds" id="pass-topup" class="primary" @click="passTopup=true">Get diamonds</button><button id="confirm-pass-payment" class="primary" :disabled="busy||passBalance<passSelection.diamonds" @click="purchase(passSelection.days)">{{busy?'Purchasing…':'Confirm Pass'}}</button><button class="text-button" :disabled="busy" @click="passConfirm=false">Back to plans</button></template><template v-else><p>Unlock age and city filters.</p><p v-if="active">{{days}} days remaining</p><button v-for="p in pass.plans" :key="p.days" class="pass-plan" :disabled="busy" @click="choosePass(p)">{{p.days}} day{{p.days>1?'s':''}} <b>◆ {{p.diamonds}}</b></button><p v-if="!pass.plans.length">Sign in to view available passes.</p><button class="text-button" @click="sheet='filters'">Back to filters</button></template></template>
 <template v-else-if="detail"><p class="letter-meta">{{detail.sender.displayName}} · {{detail.sender.city}}</p><p class="letter-content">{{detail.content}}</p></template>
 <p v-if="error" role="alert" class="home-error">{{error}}</p>
 </section></div></Transition>
