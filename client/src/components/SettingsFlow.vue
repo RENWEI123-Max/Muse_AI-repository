@@ -3,7 +3,7 @@ import {computed, onMounted, ref, watch} from 'vue'
 import {supportEmail,legalText,faqs,guides} from '../lib/support-content'
 import {locale,t,tr} from '../lib/i18n'
 import {asset} from '../lib/assets'
-import {api} from '../lib/api'
+import {api,post,ApiError} from '../lib/api'
 const props=defineProps<{token:string;privacy?:boolean}>()
 const emit=defineEmits<{close:[];security:[]}>()
 const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>('settings')
@@ -29,11 +29,18 @@ const pages=[['security','08-interface-icons/icon-lock-lime-22'],['privacySettin
 const supportTitles={help:'Help & support',feedback:'Feedback',about:'About MauGo',faq:'Help centre',guidelines:'Community guidelines',safety:'Safety guide',privacy:'Privacy information',terms:'Terms of Use & EULA',system:'System messages',interactions:'Interactions'}
 const supportParent=ref<typeof view.value>('settings')
 function supportPage(page:typeof view.value){supportParent.value=view.value;openPage(page)}
-const feedbackText=ref(''),feedbackEmail=ref(''),feedbackType=ref('Suggestion'),feedbackPhoto=ref('')
-const feedbackKey=`maugo-feedback-${props.token}`
-const feedbackHistory=ref<{text:string;email:string;type:string;photo:string;time:number}[]>(JSON.parse(localStorage.getItem(feedbackKey)||'[]'))
-function saveFeedback(){error.value='';if(feedbackEmail.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(feedbackEmail.value.trim())){error.value='Enter a valid email address.';return}const items=[{text:feedbackText.value.trim(),email:feedbackEmail.value.trim(),type:feedbackType.value,photo:feedbackPhoto.value,time:Date.now()},...feedbackHistory.value];try{localStorage.setItem(feedbackKey,JSON.stringify(items))}catch{error.value='Unable to save feedback on this device.';return}feedbackHistory.value=items;feedbackText.value='';feedbackEmail.value='';feedbackPhoto.value='';notice.value='Feedback saved on this device. Not sent to support.'}
-function attachFeedback(event:Event){const file=(event.target as HTMLInputElement).files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>feedbackPhoto.value=reader.result as string;reader.readAsDataURL(file)}
+const feedbackText=ref(''),feedbackEmail=ref(''),feedbackType=ref('Suggestion')
+async function saveFeedback(){
+ if(busy.value||!feedbackText.value.trim())return
+ error.value='';notice.value=''
+ if(feedbackEmail.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(feedbackEmail.value.trim())){error.value=tr('Enter a valid email address.');return}
+ busy.value=true
+ try{
+  const result=await post<{id:string;status:string}>('/feedback',{content:feedbackText.value.trim(),type:feedbackType.value,contact:feedbackEmail.value.trim()},props.token)
+  feedbackText.value='';feedbackEmail.value=''
+  notice.value=`${tr('Feedback sent. Reference:')} ${result.id} · ${result.status}`
+ }catch(e){error.value=tr(e instanceof ApiError&&e.status===429?'Feedback limit reached. Try again in an hour.':'Feedback could not be sent. Please try again.')}finally{busy.value=false}
+}
 const title=computed(()=>view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
 function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';notice.value='';error.value=''}}
 async function cleared(){busy.value=true;error.value='';try{const keys='caches' in window?await caches.keys():[];const temporary=keys.filter(k=>k.startsWith('maugo-temp-'));await Promise.all(temporary.map(k=>caches.delete(k)));confirm.value=false;notice.value=t(temporary.length?'cacheDeleted':'cacheCleared')}catch{error.value=t('cacheFailed')}finally{busy.value=false}}
@@ -49,14 +56,13 @@ async function cleared(){busy.value=true;error.value='';try{const keys='caches' 
 <template v-else-if="view==='help'">
 <p>{{t('helpNote')}}</p>
 <section class="support-services"><h2>{{tr('Self service')}}</h2><div class="support-grid"><button id="help-centre" @click="supportPage('faq')"><img :src="asset('08-interface-icons/icon-help-lime-22')" alt=""><span>{{tr('Help centre')}}</span></button><button id="community-guidelines" @click="supportPage('guidelines')"><img :src="asset('08-interface-icons/icon-shield-lime-22')" alt=""><span>{{tr('Guidelines')}}</span></button><button id="safety-guide" @click="supportPage('safety')"><img :src="asset('08-interface-icons/icon-lock-lime-22')" alt=""><span>{{tr('Safety guide')}}</span></button><button id="help-delete" @click="emit('security')"><img :src="asset('08-interface-icons/icon-info-lime-22')" alt=""><span>{{tr('Delete account')}}</span></button></div></section>
-<div class="support-message"><img :src="asset('02-bird-static/female-4')" alt=""><div><strong>{{tr('Hello, from MauGo.')}}</strong><p>{{tr('Find quick answers in Help centre, or leave your suggestions in Feedback.')}}</p><p>{{tr('Feedback is saved only on this device. No support service is connected.')}}</p><button v-for="[question] in faqs.slice(0,4)" :key="question" @click="supportPage('faq')">{{tr(question)}}</button></div></div>
+<div class="support-message"><img :src="asset('02-bird-static/female-4')" alt=""><div><strong>{{tr('Hello, from MauGo.')}}</strong><p>{{tr('Find quick answers in Help centre, or leave your suggestions in Feedback.')}}</p><p>{{tr('Send feedback directly to the MauGo team.')}}</p><button v-for="[question] in faqs.slice(0,4)" :key="question" @click="supportPage('faq')">{{tr(question)}}</button></div></div>
 <div class="support-bottom"><button id="support-feedback" @click="supportPage('feedback')">{{t('feedback')}}</button><button id="help-privacy" @click="supportPage('privacy')">{{tr('Privacy information')}}</button></div><p>{{tr('Support email')}}: {{supportEmail}} · {{tr('Pending Smith')}}</p>
 </template>
 <template v-else-if="view==='faq'"><div class="faq-list"><details v-for="[question,answer] in faqs" :key="question"><summary>{{tr(question)}}</summary><p>{{tr(answer)}}</p></details></div></template>
 <template v-else-if="view==='feedback'">
 <div class="feedback-types"><button v-for="kind in ['Suggestion','Bug','Experience','Other']" :key="kind" :aria-pressed="feedbackType===kind" @click="feedbackType=kind">{{tr(kind)}}</button></div><p>{{tr('Help make this little space better.')}}</p>
-<form novalidate @submit.prevent="saveFeedback"><label class="support-field">{{tr('Your feedback')}}<textarea id="feedback-text" v-model="feedbackText" maxlength="1000" :placeholder="tr('What would you like us to improve?')"></textarea></label><label class="support-field">{{tr('Contact email (optional)')}}<input id="feedback-email" v-model="feedbackEmail" type="email" :aria-invalid="!!error"></label><img v-if="feedbackPhoto" class="feedback-photo" :src="feedbackPhoto" alt="Feedback attachment"><button v-if="feedbackPhoto" type="button" class="text-button" @click="feedbackPhoto=''">{{tr('Remove attachment')}}</button><label class="feedback-upload">{{tr('Add a photo')}}<input id="feedback-photo" type="file" accept="image/*" @change="attachFeedback"></label><p>Saved only on this device. A support service is not connected. Not sent to support.</p><button id="save-feedback" class="primary" :disabled="!feedbackText.trim()">{{tr('Save feedback')}}</button></form><p v-if="notice" role="status">{{notice}}</p>
-<div id="feedback-history"><article v-for="item in feedbackHistory" :key="item.time" class="feedback-record"><small>{{new Date(item.time).toLocaleDateString()}} · {{tr(item.type)}} · Saved on this device / Not sent</small><p data-user-content>{{item.text}}</p><img v-if="item.photo" class="feedback-photo" :src="item.photo" alt="Saved feedback attachment"></article></div>
+<form novalidate :aria-busy="busy" @submit.prevent="saveFeedback"><label class="support-field">{{tr('Your feedback')}}<textarea id="feedback-text" v-model="feedbackText" maxlength="2000" :disabled="busy" :placeholder="tr('What would you like us to improve?')"></textarea></label><label class="support-field">{{tr('Contact email (optional)')}}<input id="feedback-email" v-model="feedbackEmail" type="email" maxlength="200" :disabled="busy" :aria-invalid="!!error"></label><p>{{tr('Send feedback directly to the MauGo team.')}}</p><button id="save-feedback" class="primary" :disabled="busy||!feedbackText.trim()">{{tr(busy?'Sending feedback…':'Send feedback')}}</button></form><p v-if="notice" role="status">{{notice}}</p>
 </template>
 <template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>Support email: {{supportEmail}} · Pending Smith</p></template>
 <template v-else-if="view==='guidelines'||view==='safety'"><article class="support-policy"><section v-for="[heading,copy] in guides[view]" :key="heading"><h2>{{tr(heading)}}</h2><p>{{tr(copy)}}</p></section></article></template>

@@ -17,6 +17,22 @@ for(const file of (await readdir(migrations)).filter(n=>n.endsWith('.sql')).sort
 process.env.MEDIA_DIRECTORY='/tmp/'+name+'-media'
 const app=buildApp(db)
 const {registerInboxContract}=await import('./inbox-contract.mjs');await registerInboxContract(app,db)
-await app.listen({host:'127.0.0.1',port:3179})
+// Test setup only: real feedback moderation and incoming-letter fixtures.
+app.post('/__d6/setup',async req=>{
+ const {id}=req.body
+ await db.query('UPDATE users SET is_moderator=true WHERE id=$1',[id])
+ const peers=[]
+ for(const [gender,city] of [['female','Seoul'],['male','Tokyo'],['female','Seoul'],['male','Tokyo']]){
+  const email=`d6-${crypto.randomUUID()}@test.local`
+  const r=await app.inject({method:'POST',url:'/auth/signup',payload:{email,password:'SamplePass2026',termsVersion:'1.0',privacyVersion:'1.0'}})
+  const peer=r.json();if(r.statusCode!==201)throw Error(r.body)
+  await db.query('UPDATE users SET display_name=$2,gender=$3,city=$4,age=25 WHERE id=$1',[peer.id,gender+' '+city,gender,city])
+  const letter=await app.inject({method:'POST',url:`/conversations/${id}/opening`,headers:{authorization:`Bearer ${peer.token}`},payload:{content:'D6 real incoming '+gender+' '+city}})
+  if(letter.statusCode!==201)throw Error(letter.body)
+  peers.push(peer.id)
+ }
+ return {peers}
+})
+await app.listen({host:'127.0.0.1',port:Number(process.env.D6_PORT||3179)})
 console.log('D6 followup isolated database: '+name)
 for(const signal of ['SIGTERM','SIGINT'])process.on(signal,async()=>{await app.close();await db.end();process.exit(0)})
