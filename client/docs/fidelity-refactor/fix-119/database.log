@@ -1,0 +1,14 @@
+[WebServer] (node:26048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:26049) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] /Users/anna/worktrees/codex-refactor-fidelity/client/tests/d5-server.mjs:10
+[WebServer] if(!source)throw Error('Database connection unavailable')
+[WebServer]                  ^
+[WebServer]
+[WebServer] Error: Database connection unavailable
+[WebServer]     at <anonymous> (/Users/anna/worktrees/codex-refactor-fidelity/client/tests/d5-server.mjs:10:18)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[WebServer]
+[WebServer] Node.js v26.13.1
+Error: Process from config.webServer was not able to start. Exit code: 1

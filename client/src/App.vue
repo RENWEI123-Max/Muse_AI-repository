@@ -32,7 +32,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
     <div v-if="page !== 'home' && page !== 'preview'" class="screen" :class="{'welcome-screen': page === 'welcome'}" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">
-        <span class="welcome-back" v-if="page === 'welcome'" aria-hidden="true">‹</span><img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="tr('MauGo')" class="wordmark">
+        <img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="tr('MauGo')" class="wordmark">
         <button class="language" :aria-label="tr('Switch language')" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ tr(locale === 'en' ? '한국어' : 'EN') }}</button>
       </header>
       <PageTransition>

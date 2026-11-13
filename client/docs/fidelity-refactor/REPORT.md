@@ -45,7 +45,7 @@
 | 12 首页额外入口 | 钱包/Pass 仍在首页，原型放在资料页；暂保留原入口并降为小号次要入口，避免删除现有功能路径 | 未完全修复 | [图](reference/home-ready.png) | [图](before/04-home.png) | [图](after/04-home.png) |
 | 13 筛选弹层 | 原来贴底贴边、标题靠左；改为左右 12px、底部 24px、24px 圆角、居中标题与拖拽提示条 | 已修 | [图](reference/filters-free.png) | [图](before/05-filters.png) | [图](after/05-filters.png) |
 | 14 筛选控件 | 原来卡片式性别和大面积锁定遮罩；改为 44px 圆形选择、细滑条、48px 城市选择与小 Pass 标签 | 部分修复：保留真实数据来源说明及额外解锁入口 | [图](reference/filters-free.png) | [图](before/05-filters.png) | [图](after/05-filters.png) |
-| 15 外观预览 | 飞行预览和开关占据过多高度；预览 64px、开关行 44px，复用现有鸟和六帧资源 | 已修 | [图](reference/bird-female.png) | [图](before/bird-female.png) | [图](after/bird-female.png) |
+| 15 外观预览 | #116 核实原标记不成立；#119 补齐卡片、✓、开关、Replay 和完整 Done，见 [修复记录](REVIEW-fix-119.md) | #119 已修 | [图](reference/bird-female.png) | [图](before/bird-female.png) | [图](after/bird-female.png) |
 | 16 信件面板 | 位置和高度偏离；改为 x12/y144、560px 高、24px 圆角；阅读时隐藏后方帽子和按钮 | 已修 | [图](reference/letter-open.png) | [图](before/06-letter-open.png) | [图](after/06-letter-open.png) |
 | 17 信件内容 | 原字号/行距偏大；正文 14px/1.55、气泡 12px 内边距，统一元信息排版 | 部分修复：作者头像仍用现有占位鸟；不把样例人物假装成真实作者 | [图](reference/letter-open.png) | [图](before/06-letter-open.png) | [图](after/06-letter-open.png) |
 | 18 写信布局 | 面板和操作按钮混在一起；改为 496px 面板、下方独立 Cancel/Let it fly，隐藏空草稿的重复视觉错误提示 | 部分修复：保留 Recipient ID 与真实校验提示，不能删除现有收件人选择机制 | [图](reference/compose-empty.png) | [图](before/07-compose.png) | [图](after/07-compose.png) |
