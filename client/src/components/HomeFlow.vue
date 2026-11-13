@@ -7,7 +7,7 @@ import LettersFlow, { type Letter } from './LettersFlow.vue'
 import { api, ApiError } from '../lib/api'
 import { asset } from '../lib/assets'
 const props=defineProps<{token:string}>()
-const emit=defineEmits<{signin:[]}>()
+const emit=defineEmits<{signin:[];security:[]}>()
 type Pass={active:boolean;expiresAt:string|null;remainingDays:number;plans:{days:number;diamonds:number}[]}
 const sheet=ref(''),error=ref(''),busy=ref(false),items=ref<Letter[]>([]),responses=ref<{openingMessageId:string}[]>([]),detail=ref<Letter>(),loaded=ref(false)
 const pass=ref<Pass>({active:false,expiresAt:null,remainingDays:0,plans:[]}), now=ref(Date.now()),cities=ref<string[]>([])
@@ -42,7 +42,7 @@ onUnmounted(()=>{clearInterval(tick);document.removeEventListener('keydown',esca
 </script>
 <template>
 <InboxFlow v-if="sheet==='inbox'" :token="token" @close="sheet=''" @signin="emit('signin')" />
-<ProfileFlow v-else-if="sheet==='profile'" :token="token" @close="sheet=''" />
+<ProfileFlow v-else-if="sheet==='profile'" :token="token" @close="sheet=''" @security="emit('security')" />
 <section v-else class="home-flow" :class="{'motion-off':!motion,'refreshing':busy}" :data-state="responses.length?'home-response':items.length?'home-ready':'home-empty'">
 <header class="home-header"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><div><button id="magic" aria-label="Bird appearance" @click="sheet='appearance'">✦</button><button id="settings" aria-label="Filters" @click="openFilters">☷</button></div></header>
 <div v-if="error&&sheet!=='pass-confirm'" class="home-error" role="alert">{{error}} <button v-if="!token" @click="emit('signin')">Sign in</button><button v-else :disabled="busy" @click="load()">Retry</button></div>

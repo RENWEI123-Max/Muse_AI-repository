@@ -7,7 +7,7 @@ import MomentsFlow from './MomentsFlow.vue'
 import {t} from '../lib/i18n'
 import ChatFlow from './ChatFlow.vue'
 const props=defineProps<{token:string;person?:{id:string;displayName:string;avatar?:string;status:string;following?:boolean;city?:string;age?:number;zodiac?:string;bio?:string;cards?:string[];moments?:{id:string;text:string;src:string}[]}}>()
-const emit=defineEmits<{close:[];chat:[];safety:[action:'report'|'block']}>()
+const emit=defineEmits<{close:[];security:[];chat:[];safety:[action:'report'|'block']}>()
 type Photo={id:string;src:string;position:number}
 const key=`maugo-profile-${props.token}`
 const initial={name:'Little wanderer',age:24,city:'Somewhere',zodiac:'',bio:'',slots:[1,2,3,4].map((n,i)=>({id:`portrait-${n}`,src:asset(`05-avatars/portrait-${n}`),position:i})).concat(Array(4).fill(null)) as (Photo|null)[],selected:'portrait-1',archive:[] as Photo[],cards:[] as string[]}
@@ -37,7 +37,7 @@ function saveAvatar(){const p={id:crypto.randomUUID(),src:canvas.value!.toDataUR
 async function follow(){if(!props.person||props.person.status!=='open'||busy.value)return;busy.value=true;error.value='';try{await api(`/conversations/${props.person.id}`,{method:'PATCH',headers:{Authorization:`Bearer ${props.token}`,'Content-Type':'application/json'},body:JSON.stringify({following:!followed.value})});followed.value=!followed.value}catch(e){error.value=(e as Error).message}finally{busy.value=false}}
 </script>
 <template>
-<SettingsFlow v-if="settingsOpen" @close="settingsOpen=false" />
+<SettingsFlow v-if="settingsOpen" @security="emit('security')" @close="settingsOpen=false" />
 <ProfileFlow v-if="selectedPerson" :token="token" :person="selectedPerson" @close="selectedPerson=undefined;load()" @chat="selectedChat=selectedPerson;selectedPerson=undefined" @safety="selectedChat=selectedPerson;selectedPerson=undefined" />
 <ChatFlow v-if="selectedChat" :token="token" :conversation="selectedChat" @close="selectedChat=undefined;load()" @collect="selectedChat=undefined;notice='Collect your reply from Messages to continue.'" />
 <section v-show="!selectedPerson&&!selectedChat" class="d4-profile" @keydown.esc="back">
