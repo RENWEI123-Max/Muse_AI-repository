@@ -4,8 +4,8 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { api, ApiError } from '../lib/api'
 import { asset } from '../lib/assets'
 export type Letter = {openingMessageId:string;conversationId:string;content:string;sender:{id:string;displayName:string;city:string;age:number};state:string;canReply:boolean;canChat:boolean}
-const props=defineProps<{token:string;letter?:Letter;compose?:boolean}>()
-const emit=defineEmits<{close:[];blocked:[id:string]}>()
+const props=defineProps<{token:string;letter?:Letter;compose?:boolean;messenger?:string;suspended?:boolean}>()
+const emit=defineEmits<{close:[];changeBird:[];blocked:[id:string]}>()
 const detail=ref(props.letter),view=ref(props.compose?'compose':'letter'),draft=ref(''),recipient=ref(new URLSearchParams(location.search).get('recipient')||''),reply=ref(''),sent=ref(''),error=ref(''),notice=ref(''),busy=ref(false),safety=ref(''),confirmation=ref(false)
 const sentKey=computed(()=>`maugo-opening-sent:${props.token.slice(-16)}:${recipient.value}`)
 const draftKey=computed(()=>`maugo-opening-draft:${props.token.slice(-16)}:${recipient.value}`)
@@ -35,7 +35,7 @@ async function send(opening:boolean){
 async function report(category:string,reason:string){if(busy.value)return;busy.value=true;error.value='';try{await api('/reports',{method:'POST',headers:headers(),body:JSON.stringify({reportedUserId:detail.value!.sender.id,messageId:detail.value!.openingMessageId,category,reason})});notice.value='Report received. Thank you for helping keep MauGo safe.';safety.value=''}catch{error.value='Could not submit your report. Please try again.'}finally{busy.value=false}}
 async function block(){if(busy.value)return;busy.value=true;error.value='';try{await api(`/blocks/${detail.value!.sender.id}`,{method:'PUT',headers:{Authorization:`Bearer ${props.token}`}});emit('blocked',detail.value!.openingMessageId);emit('close')}catch{error.value='Could not block this person. Please try again.'}finally{busy.value=false}}
 function close(){if(safety.value){safety.value='';confirmation.value=false}else emit('close')}
-function key(e:KeyboardEvent){if(e.key==='Escape')close()}
+function key(e:KeyboardEvent){if(e.key==='Escape'&&!props.suspended)close()}
 let timer:ReturnType<typeof setInterval>
 onMounted(()=>{restore();try{reply.value=sessionStorage.getItem(replyKey.value)||''}catch{};timer=setInterval(refresh,4000);document.addEventListener('keydown',key);setTimeout(()=>document.querySelector<HTMLTextAreaElement>('#letter-text')?.focus(),300)})
 onUnmounted(()=>{clearInterval(timer);document.removeEventListener('keydown',key)})
@@ -45,12 +45,12 @@ onUnmounted(()=>{clearInterval(timer);document.removeEventListener('keydown',key
 <section class="letters-panel" :class="{'composer-panel':view==='compose','is-sending':busy}" role="dialog" aria-modal="true" :aria-label="tr(view==='compose'?'Share a little story':'A letter for you')" :data-state="state" :aria-busy="busy">
 <header><img :src="asset('08-interface-icons/icon-mail-lime-22')" alt="" aria-hidden="true"><h2>{{tr(view==='compose'?'Share a little story':view==='sent'?'Your sent letter':'A letter for you')}}</h2><button :aria-label="tr('Close')" @click="close"><img :src="asset('11-symbol-icons/icon-close-22-8a9290')" alt=""></button></header>
 <template v-if="view==='compose'">
-<div class="sender-preview"><img :src="asset('02-bird-static/female-1')" :alt="tr('Your messenger bird')"><span>{{tr("Your little messenger")}}</span></div>
+<div class="sender-preview"><img :src="messenger||asset('02-bird-static/female-1')" :alt="tr('Your messenger bird')"><span>{{tr("Your little messenger")}}</span><button type="button" class="change-bird" @click="emit('changeBird')">{{tr("Change bird")}}</button></div>
 <label class="recipient-label">{{tr("Recipient ID")}}<input v-model.trim="recipient" :aria-label="tr('Recipient ID')" :disabled="busy" :placeholder="tr('Paste your recipient’s ID')" autocomplete="off"></label>
 <form class="opening-form" @submit.prevent="send(true)"><textarea id="letter-text" v-model="draft" :disabled="busy" :placeholder="tr('One little hello. One opening message.')" :aria-label="tr('Write your letter')" :aria-invalid="!!draft&&!!validation" aria-describedby="opening-rule letter-validation"></textarea>
 <Transition name="count" mode="out-in"><div :key="count" class="letter-count" :class="{invalid:count>200}" aria-live="polite">{{count}} / 200</div></Transition>
 <p id="opening-rule" class="opening-rule">{{tr("One opening message. Chat starts when they reply.")}}</p><p id="letter-validation" class="letter-validation" role="status">{{tr(validation||'Plain text · up to 200 characters · a single line')}}</p>
-<footer><button type="button" class="secondary" @click="close">{{tr("Cancel")}}</button><button id="publish" class="primary" :disabled="busy||!!validation" type="submit">{{tr(busy?'Flying…':'➤ Let it fly')}}</button></footer></form>
+<footer><button type="button" class="secondary" @click="close">{{tr("Cancel")}}</button><button id="publish" class="primary" :disabled="busy||!!validation" type="submit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 3 18 9-18 9 4-9-4-9Z M7 12h14"/></svg>{{tr(busy?'Flying…':'Let it fly')}}</button></footer></form>
 </template>
 <template v-else-if="view==='sent'">
 <div class="sent-scene"><img :src="asset('02-bird-static/female-1')" :alt="tr('Your letter is on its way')"><span>✧ · ✦ · ✧</span></div><h3>{{tr("Your little hello is on its way.")}}</h3><p class="waiting-status" role="status">{{tr(notice||'Waiting for their reply. Chat starts when they reply.')}}</p><blockquote v-if="sent" class="my-reply">{{sent}}</blockquote><p v-if="!sent" class="opening-rule">{{tr("Your draft is saved. Another opening cannot be sent to this person.")}}</p><button class="primary" @click="emit('close')">{{tr("Back to home")}}</button>

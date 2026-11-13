@@ -1,0 +1,758 @@
+[
+  {
+    "id": "welcome",
+    "status": "captured"
+  },
+  {
+    "id": "terms-unchecked",
+    "status": "captured"
+  },
+  {
+    "id": "terms-checked",
+    "status": "captured"
+  },
+  {
+    "id": "signin-empty",
+    "status": "captured"
+  },
+  {
+    "id": "signin-filled",
+    "status": "captured"
+  },
+  {
+    "id": "signin-invalid",
+    "status": "captured"
+  },
+  {
+    "id": "signup-empty",
+    "status": "captured"
+  },
+  {
+    "id": "signup-filled",
+    "status": "captured"
+  },
+  {
+    "id": "signup-mismatch",
+    "status": "captured"
+  },
+  {
+    "id": "verify-empty",
+    "status": "captured"
+  },
+  {
+    "id": "verify-error",
+    "status": "captured"
+  },
+  {
+    "id": "verify-resend",
+    "status": "captured"
+  },
+  {
+    "id": "forgot-empty",
+    "status": "captured"
+  },
+  {
+    "id": "recovery-code",
+    "status": "captured"
+  },
+  {
+    "id": "new-password",
+    "status": "captured"
+  },
+  {
+    "id": "new-password-error",
+    "status": "captured"
+  },
+  {
+    "id": "apple-private",
+    "status": "captured"
+  },
+  {
+    "id": "apple-share",
+    "status": "captured"
+  },
+  {
+    "id": "auth-privacy",
+    "status": "captured"
+  },
+  {
+    "id": "home-ready",
+    "status": "captured"
+  },
+  {
+    "id": "home-empty",
+    "status": "captured"
+  },
+  {
+    "id": "home-response",
+    "status": "captured"
+  },
+  {
+    "id": "filters-free",
+    "status": "captured"
+  },
+  {
+    "id": "filters-active",
+    "status": "captured"
+  },
+  {
+    "id": "filters-selected",
+    "status": "captured"
+  },
+  {
+    "id": "bird-female",
+    "status": "captured"
+  },
+  {
+    "id": "bird-male",
+    "status": "captured"
+  },
+  {
+    "id": "bird-motion-off",
+    "status": "captured"
+  },
+  {
+    "id": "letter-open",
+    "status": "captured"
+  },
+  {
+    "id": "letter-typed",
+    "status": "captured"
+  },
+  {
+    "id": "letter-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "letter-replied",
+    "status": "captured"
+  },
+  {
+    "id": "letter-safety",
+    "status": "captured"
+  },
+  {
+    "id": "letter-report",
+    "status": "captured"
+  },
+  {
+    "id": "compose-empty",
+    "status": "captured"
+  },
+  {
+    "id": "compose-draft",
+    "status": "captured"
+  },
+  {
+    "id": "compose-invalid",
+    "status": "captured"
+  },
+  {
+    "id": "compose-sent",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-empty",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-pending",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-collected-one",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-collected-all",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-unread",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-read",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-friends-empty",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-friends",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-drawer",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-search",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-search-empty",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-options",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-pinned",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-hidden",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-hidden-empty",
+    "status": "captured"
+  },
+  {
+    "id": "inbox-notifications-off",
+    "status": "captured"
+  },
+  {
+    "id": "reply-last-free",
+    "status": "captured"
+  },
+  {
+    "id": "reply-payment",
+    "status": "captured"
+  },
+  {
+    "id": "reply-shortage",
+    "status": "captured"
+  },
+  {
+    "id": "reply-cancelled",
+    "status": "captured"
+  },
+  {
+    "id": "reply-paid",
+    "status": "captured"
+  },
+  {
+    "id": "reply-topup",
+    "status": "captured"
+  },
+  {
+    "id": "chat-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "chat-receipt-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "chat-open",
+    "status": "captured"
+  },
+  {
+    "id": "chat-draft",
+    "status": "captured"
+  },
+  {
+    "id": "chat-sent",
+    "status": "captured"
+  },
+  {
+    "id": "chat-photo",
+    "status": "captured"
+  },
+  {
+    "id": "chat-attachment",
+    "status": "captured"
+  },
+  {
+    "id": "chat-stickers",
+    "status": "captured"
+  },
+  {
+    "id": "chat-sticker-selected",
+    "status": "captured"
+  },
+  {
+    "id": "chat-recording",
+    "status": "captured"
+  },
+  {
+    "id": "chat-record-cancel",
+    "status": "captured"
+  },
+  {
+    "id": "chat-mic-denied",
+    "status": "captured"
+  },
+  {
+    "id": "chat-details",
+    "status": "captured"
+  },
+  {
+    "id": "chat-details-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "chat-remark",
+    "status": "captured"
+  },
+  {
+    "id": "chat-search-empty",
+    "status": "captured"
+  },
+  {
+    "id": "chat-search-result",
+    "status": "captured"
+  },
+  {
+    "id": "chat-search-none",
+    "status": "captured"
+  },
+  {
+    "id": "chat-clear-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "chat-cleared",
+    "status": "captured"
+  },
+  {
+    "id": "wallpapers",
+    "status": "captured"
+  },
+  {
+    "id": "wallpaper-preview",
+    "status": "captured"
+  },
+  {
+    "id": "wallpaper-applied",
+    "status": "captured"
+  },
+  {
+    "id": "wallpaper-colors",
+    "status": "captured"
+  },
+  {
+    "id": "chat-bubbles",
+    "status": "captured"
+  },
+  {
+    "id": "chat-bubbles-custom",
+    "status": "captured"
+  },
+  {
+    "id": "safety-choice",
+    "status": "captured"
+  },
+  {
+    "id": "report-empty",
+    "status": "captured"
+  },
+  {
+    "id": "report-filled",
+    "status": "captured"
+  },
+  {
+    "id": "report-saved",
+    "status": "captured"
+  },
+  {
+    "id": "block-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "chat-blocked",
+    "status": "captured"
+  },
+  {
+    "id": "blocked-list",
+    "status": "captured"
+  },
+  {
+    "id": "blocked-empty",
+    "status": "captured"
+  },
+  {
+    "id": "unblock-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "person-profile",
+    "status": "captured"
+  },
+  {
+    "id": "person-waiting",
+    "status": "captured"
+  },
+  {
+    "id": "person-followed",
+    "status": "captured"
+  },
+  {
+    "id": "person-no-content",
+    "status": "captured"
+  },
+  {
+    "id": "person-photo",
+    "status": "captured"
+  },
+  {
+    "id": "person-safety",
+    "status": "captured"
+  },
+  {
+    "id": "profile-empty",
+    "status": "captured"
+  },
+  {
+    "id": "profile-content",
+    "status": "captured"
+  },
+  {
+    "id": "profile-edit",
+    "status": "captured"
+  },
+  {
+    "id": "profile-invalid",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-gallery",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-remove",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-removed",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-restore",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-full",
+    "status": "captured"
+  },
+  {
+    "id": "avatar-crop",
+    "status": "captured"
+  },
+  {
+    "id": "profile-likes",
+    "status": "captured"
+  },
+  {
+    "id": "following-empty",
+    "status": "captured"
+  },
+  {
+    "id": "following-list",
+    "status": "captured"
+  },
+  {
+    "id": "followers-empty",
+    "status": "captured"
+  },
+  {
+    "id": "visitors-empty",
+    "status": "captured"
+  },
+  {
+    "id": "visitors-outgoing",
+    "status": "captured"
+  },
+  {
+    "id": "my-letters-empty",
+    "status": "captured"
+  },
+  {
+    "id": "my-letters",
+    "status": "captured"
+  },
+  {
+    "id": "card-type",
+    "status": "captured"
+  },
+  {
+    "id": "card-options",
+    "status": "captured"
+  },
+  {
+    "id": "card-preview",
+    "status": "captured"
+  },
+  {
+    "id": "card-change-type",
+    "status": "captured"
+  },
+  {
+    "id": "card-visibility",
+    "status": "captured"
+  },
+  {
+    "id": "card-remove",
+    "status": "captured"
+  },
+  {
+    "id": "moments-empty",
+    "status": "captured"
+  },
+  {
+    "id": "moments-list",
+    "status": "captured"
+  },
+  {
+    "id": "moments-category-empty",
+    "status": "captured"
+  },
+  {
+    "id": "moment-empty",
+    "status": "captured"
+  },
+  {
+    "id": "moment-draft",
+    "status": "captured"
+  },
+  {
+    "id": "moment-photo",
+    "status": "captured"
+  },
+  {
+    "id": "moment-stickers",
+    "status": "captured"
+  },
+  {
+    "id": "moment-visibility",
+    "status": "captured"
+  },
+  {
+    "id": "moment-leave",
+    "status": "captured"
+  },
+  {
+    "id": "moment-options",
+    "status": "captured"
+  },
+  {
+    "id": "moment-delete",
+    "status": "captured"
+  },
+  {
+    "id": "moment-saved",
+    "status": "captured"
+  },
+  {
+    "id": "settings-home",
+    "status": "captured"
+  },
+  {
+    "id": "language-en",
+    "status": "captured"
+  },
+  {
+    "id": "language-ko",
+    "status": "captured"
+  },
+  {
+    "id": "privacy",
+    "status": "captured"
+  },
+  {
+    "id": "privacy-visibility",
+    "status": "captured"
+  },
+  {
+    "id": "privacy-only-me",
+    "status": "captured"
+  },
+  {
+    "id": "notifications-on",
+    "status": "captured"
+  },
+  {
+    "id": "notifications-off",
+    "status": "captured"
+  },
+  {
+    "id": "general",
+    "status": "captured"
+  },
+  {
+    "id": "general-font",
+    "status": "captured"
+  },
+  {
+    "id": "cache-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "security",
+    "status": "captured"
+  },
+  {
+    "id": "account-info",
+    "status": "captured"
+  },
+  {
+    "id": "verification",
+    "status": "captured"
+  },
+  {
+    "id": "pin-create",
+    "status": "captured"
+  },
+  {
+    "id": "pin-invalid",
+    "status": "captured"
+  },
+  {
+    "id": "pin-locked",
+    "status": "captured"
+  },
+  {
+    "id": "pin-wrong",
+    "status": "captured"
+  },
+  {
+    "id": "signout-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "signed-out",
+    "status": "captured"
+  },
+  {
+    "id": "delete-disabled",
+    "status": "captured"
+  },
+  {
+    "id": "delete-typed",
+    "status": "captured"
+  },
+  {
+    "id": "delete-ready",
+    "status": "captured"
+  },
+  {
+    "id": "delete-final",
+    "status": "captured"
+  },
+  {
+    "id": "help",
+    "status": "captured"
+  },
+  {
+    "id": "faq",
+    "status": "captured"
+  },
+  {
+    "id": "faq-expanded",
+    "status": "captured"
+  },
+  {
+    "id": "feedback-empty",
+    "status": "captured"
+  },
+  {
+    "id": "feedback-filled",
+    "status": "captured"
+  },
+  {
+    "id": "feedback-invalid",
+    "status": "captured"
+  },
+  {
+    "id": "feedback-history",
+    "status": "captured"
+  },
+  {
+    "id": "about",
+    "status": "captured"
+  },
+  {
+    "id": "guidelines",
+    "status": "captured"
+  },
+  {
+    "id": "safety-guide",
+    "status": "captured"
+  },
+  {
+    "id": "privacy-policy",
+    "status": "captured"
+  },
+  {
+    "id": "terms-full",
+    "status": "captured"
+  },
+  {
+    "id": "system-empty",
+    "status": "captured"
+  },
+  {
+    "id": "interactions-empty",
+    "status": "captured"
+  },
+  {
+    "id": "wallet-empty",
+    "status": "captured"
+  },
+  {
+    "id": "wallet-balance",
+    "status": "captured"
+  },
+  {
+    "id": "topup-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "topup-success",
+    "status": "captured"
+  },
+  {
+    "id": "pass-default",
+    "status": "captured"
+  },
+  {
+    "id": "pass-one-day",
+    "status": "captured"
+  },
+  {
+    "id": "pass-month",
+    "status": "captured"
+  },
+  {
+    "id": "pass-shortage",
+    "status": "captured"
+  },
+  {
+    "id": "pass-confirm",
+    "status": "captured"
+  },
+  {
+    "id": "pass-active",
+    "status": "captured"
+  },
+  {
+    "id": "pass-extend",
+    "status": "captured"
+  },
+  {
+    "id": "pass-success",
+    "status": "captured"
+  },
+  {
+    "id": "pass-sheet",
+    "status": "captured"
+  }
+]

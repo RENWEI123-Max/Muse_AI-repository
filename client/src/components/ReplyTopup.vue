@@ -69,8 +69,8 @@ onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('
 <template>
 <Transition name="d1-topup" appear><div class="d1-topup" ref="panel" role="dialog" aria-modal="true" :aria-label="tr('Diamonds')">
 <header><button @click="leave">{{tr("‹ Back to")}} {{tr(context||'replies')}}</button><h2>{{tr("Diamonds")}}</h2></header>
-<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>{{tr("Your little boost")}}</h3><p>{{tr("Your balance ·")}} <strong>{{currentBalance}} {{tr("diamonds")}}</strong></p>
-<div class="d1-packs"><button v-for="(pack,i) in packs" :key="pack.id" class="diamond-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><img :src="asset('01-brand-scenes/diamond')" alt=""><strong>{{pack.diamonds}}</strong><small>{{tr(pack.label)}}</small><b>{{pack.price??tr('Unavailable')}}</b></button></div>
+<img class="d1-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3>{{tr("Diamonds for filters and extra replies.")}}</h3><p>{{tr("Your balance ·")}} <strong>{{currentBalance}} {{tr("diamonds")}}</strong></p>
+<div class="d1-packs"><button v-for="(pack,i) in packs" :key="pack.id" class="diamond-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><span class="pack-amount"><img :src="asset('01-brand-scenes/diamond')" alt=""><strong>{{pack.diamonds.toLocaleString('en-US')}}</strong></span><small>{{tr(pack.label)}}</small><b>{{pack.price??tr('Unavailable')}}</b></button></div>
 <button v-if="packs[selected]" id="confirm-pack" class="primary" :disabled="buying" @click="buy">{{tr(buying?'Processing…':'Get')}} {{tr(packs[selected]!.diamonds)}} {{tr("diamonds")}}{{packs[selected]!.price?' · '+packs[selected]!.price:''}}</button>
 <p v-if="notice" role="status">{{tr(notice)}}</p><p class="d1-topup-note">{{tr("Purchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.")}}</p><button class="text-button" @click="leave">{{tr("Back to")}} {{tr(context||'replies')}}</button>
 </div></Transition>

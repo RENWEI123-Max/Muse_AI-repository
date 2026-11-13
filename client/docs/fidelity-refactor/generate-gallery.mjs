@@ -1,0 +1,20 @@
+import {readFile,writeFile,readdir} from 'node:fs/promises'
+const root=new URL('./',import.meta.url)
+const groups=JSON.parse(await readFile(new URL('../design-reference/page-states.json',root),'utf8'))
+const files=await readdir(new URL('after/',root))
+const aliases={welcome:'01-welcome','terms-unchecked':'02-terms','signin-empty':'03-signin','home-ready':'04-home','filters-free':'05-filters','letter-open':'06-letter-open','compose-empty':'07-compose','wallet-balance':'08-wallet','inbox-unread':'09-inbox','chat-open':'10-chat','profile-empty':'11-profile','settings-home':'12-settings'}
+const extras=[{id:'home-loading',title:'首页 / 加载（客户端补充状态）',reference:'home-ready'},{id:'home-error',title:'首页 / 加载失败（客户端补充状态）',reference:'home-empty'},{id:'wallet-payment-unavailable',title:'钱包 / 支付未接入（真实能力提示）',reference:'topup-success'},{id:'conversation-unlocked',title:'聊天 / 收取后解锁',reference:'chat-open'}]
+const entries=groups.flatMap(g=>g.pages.map(p=>({...p,module:g.title}))).concat(extras)
+const coverage=[]
+const cards=[]
+for(const p of entries){
+ const stem=files.includes(p.id+'.png')?p.id:aliases[p.id]
+ const available=!!stem&&files.includes(stem+'.png')
+ const ref=p.reference||p.id
+ const entry={id:p.id,title:p.title,module:p.module||'补充状态',reference:`reference/${ref}.png`,before:available?`before/${stem}.png`:null,after:available?`after/${stem}.png`:null,status:available?'captured-for-review':'not-verified',note:p.reference?'非同一语义状态，只对照最近的原型画面；不能据此声称像素一致。':available?'固定接口数据；截图不代表真实后端通过。':'原型已存档；本轮未逐屏验证客户端。'}
+ coverage.push(entry)
+ cards.push(`<article data-covered="${available}" id="${p.id}"><h2>${p.module||'补充状态'} · ${p.title}</h2><p>${p.id} · ${entry.status} · ${entry.note}</p><div class="comparison">${[['原型',entry.reference],['重构前',entry.before],['重构后',entry.after]].map(([label,path])=>`<figure><figcaption>${label}</figcaption>${path?`<a href="${path}"><img src="${path}" width="375" height="812" loading="lazy" alt="${p.title} ${label}"></a>`:'<div class="missing">尚未逐屏验证</div>'}</figure>`).join('')}</div></article>`)
+}
+await writeFile(new URL('coverage.json',root),JSON.stringify(coverage,null,2))
+await writeFile(new URL('gallery.html',root),`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MauGo 还原度审查</title><style>body{margin:0;background:#101a15;color:#e4efd9;font:14px/1.6 system-ui,sans-serif}header{position:sticky;top:0;z-index:1;background:#18251ef5;padding:16px 24px;border-bottom:1px solid #46563e}h1{font-size:22px;margin:0}a{color:#b5fa70}button,input{font:inherit;padding:8px 12px;border-radius:8px;border:1px solid #697d5e;background:#223528;color:#e4efd9;margin:4px}article{padding:24px;border-bottom:1px solid #46563e}h2{font-size:18px;margin:0}p{color:#a9bb9f}.comparison{display:grid;grid-template-columns:repeat(3,minmax(0,375px));gap:20px}figure{margin:0}figcaption{padding:8px 0}img{width:100%;height:auto;display:block;border:1px solid #46563e}.missing{aspect-ratio:375/812;display:grid;place-items:center;background:#18251e;color:#8a9d80}[hidden]{display:none!important}@media(max-width:800px){.comparison{grid-template-columns:repeat(3,minmax(180px,1fr));overflow:auto}}</style><header><h1>MauGo · 原型 / 重构前 / 重构后</h1><div>375 × 812 · 原型 189 状态归档 · 客户端 ${coverage.filter(x=>x.after).length} 项截图对照 · <a href="REPORT.md">报告与限制</a></div><input id="search" placeholder="搜索页面或状态"><button id="covered">仅显示有前后截图</button><button id="all">显示全部状态</button></header><main>${cards.join('\n')}</main><script>let only=true;const search=document.querySelector('#search');function filter(){for(const a of document.querySelectorAll('article'))a.hidden=(only&&a.dataset.covered!=='true')||!a.textContent.toLowerCase().includes(search.value.toLowerCase())}search.oninput=filter;document.querySelector('#covered').onclick=()=>{only=true;filter()};document.querySelector('#all').onclick=()=>{only=false;filter()};filter()</script></html>`)
+console.log({reference:189,comparisons:coverage.filter(x=>x.after).length,unverified:coverage.filter(x=>!x.after).length})

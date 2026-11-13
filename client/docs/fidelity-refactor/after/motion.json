@@ -1,0 +1,852 @@
+[
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "d11-flying-letter",
+    "animation": "d11-letter-flight",
+    "duration": "0.44s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0.14s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0.14s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-bar",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "border-color, box-shadow",
+    "transitionDuration": "0.2s, 0.2s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "waiting-dots",
+    "animation": "waiting-glow",
+    "duration": "1.8s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-form reply-leave-active reply-leave-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-form reply-leave-active reply-leave-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "my-reply reply-enter-active reply-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "my-reply reply-enter-active reply-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-enter-active reply-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "reply-enter-active reply-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.25s, 0.3s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.36s, 0.44s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "background",
+    "transitionDuration": "0.2s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letter-count count-leave-active count-leave-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "transform, opacity",
+    "transitionDuration": "0.12s, 0.12s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letter-count count-leave-active count-leave-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "transform, opacity",
+    "transitionDuration": "0.12s, 0.12s",
+    "easing": "ease, ease",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel composer-panel is-sending",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel composer-panel is-sending",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "waiting-glow",
+    "duration": "0.8s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "background",
+    "transitionDuration": "0.2s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "waiting-glow",
+    "duration": "0.8s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "",
+    "animation": "messenger-hover",
+    "duration": "2.5s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "",
+    "animation": "waiting-glow",
+    "duration": "1.8s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "letters-panel",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-flow inbox-page tab-page-enter-active tab-page-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.24s, 0.3s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-flow inbox-page tab-page-enter-active tab-page-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.24s, 0.3s",
+    "easing": "ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "collect-replies collect-strip-enter-from collect-strip-enter-active",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform, max-height, margin",
+    "transitionDuration": "0.3s, 0.3s, 0.3s, 0.3s",
+    "easing": "ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "collect-replies collect-strip-enter-active collect-strip-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform, max-height, margin",
+    "transitionDuration": "0.3s, 0.3s, 0.3s, 0.3s",
+    "easing": "ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "collect-replies collect-strip-enter-active collect-strip-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform, max-height, margin",
+    "transitionDuration": "0.3s, 0.3s, 0.3s, 0.3s",
+    "easing": "ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "collect-replies collect-strip-enter-active collect-strip-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform, max-height, margin",
+    "transitionDuration": "0.3s, 0.3s, 0.3s, 0.3s",
+    "easing": "ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "chat-row-wrap is-pinned conversation-enter-active conversation-enter-to",
+    "animation": "rise-in",
+    "duration": "0.4s",
+    "transition": "background",
+    "transitionDuration": "0.3s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "",
+    "animation": "count-in",
+    "duration": "0.25s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "chat-row-wrap conversation-enter-active conversation-enter-to",
+    "animation": "rise-in",
+    "duration": "0.4s",
+    "transition": "background",
+    "transitionDuration": "0.3s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "chat-row-wrap conversation-enter-active conversation-enter-to",
+    "animation": "rise-in",
+    "duration": "0.4s",
+    "transition": "background",
+    "transitionDuration": "0.3s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "collect-replies",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-row",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "waiting-card",
+    "animation": "c6-breathe",
+    "duration": "2.4s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "c6-chat d11-chat-enter-active d11-chat-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "c6-chat d11-chat-enter-active d11-chat-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.3s, 0.3s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "animationstart",
+    "classes": "",
+    "animation": "d1-float",
+    "duration": "3s",
+    "transition": "all",
+    "transitionDuration": "0s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-sheet",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "transform",
+    "transitionDuration": "0.22s",
+    "easing": "ease-out",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-veil d1-payment-overlay inbox-sheet-enter-active inbox-sheet-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity",
+    "transitionDuration": "0.22s",
+    "easing": "ease-out",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "primary",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "text-button",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "scale, background-color, border-color, color, opacity",
+    "transitionDuration": "0.16s, 0.2s, 0.2s, 0.2s, 0.2s",
+    "easing": "cubic-bezier(0.2, 0.8, 0.2, 1), ease, ease, ease, ease",
+    "delay": "0s, 0s, 0s, 0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-sheet",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "transform",
+    "transitionDuration": "0.22s",
+    "easing": "ease-out",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "inbox-veil d1-payment-overlay inbox-sheet-leave-active inbox-sheet-leave-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity",
+    "transitionDuration": "0.22s",
+    "easing": "ease-out",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "d1-receipt reply-receipt-enter-active reply-receipt-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "d1-receipt reply-receipt-enter-active reply-receipt-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-message c6-message-enter-active c6-message-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "all",
+    "transitionDuration": "0.25s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "chat-message c6-message-enter-active c6-message-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "all",
+    "transitionDuration": "0.25s",
+    "easing": "ease",
+    "delay": "0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "waiting-card d11-unlock-leave-active d11-unlock-leave-to",
+    "animation": "c6-breathe",
+    "duration": "2.4s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "waiting-card d11-unlock-leave-active d11-unlock-leave-to",
+    "animation": "c6-breathe",
+    "duration": "2.4s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "c6-composer d11-unlock-enter-active d11-unlock-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  },
+  {
+    "event": "transitionrun",
+    "classes": "c6-composer d11-unlock-enter-active d11-unlock-enter-to",
+    "animation": "none",
+    "duration": "0s",
+    "transition": "opacity, transform",
+    "transitionDuration": "0.45s, 0.45s",
+    "easing": "ease-out, ease-out",
+    "delay": "0s, 0s"
+  }
+]

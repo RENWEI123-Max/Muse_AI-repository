@@ -1,0 +1,1932 @@
+[
+  {
+    "id": "welcome",
+    "title": "欢迎 / 未登录",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/welcome.png",
+    "before": "before/01-welcome.png",
+    "after": "after/01-welcome.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "terms-unchecked",
+    "title": "协议 / 未勾选",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/terms-unchecked.png",
+    "before": "before/terms-unchecked.png",
+    "after": "after/terms-unchecked.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "terms-checked",
+    "title": "协议 / 已勾选",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/terms-checked.png",
+    "before": "before/terms-checked.png",
+    "after": "after/terms-checked.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "signin-empty",
+    "title": "邮箱登录 / 空表单",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signin-empty.png",
+    "before": "before/signin-empty.png",
+    "after": "after/signin-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "signin-filled",
+    "title": "邮箱登录 / 已填写",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signin-filled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "signin-invalid",
+    "title": "邮箱登录 / 邮箱错误",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signin-invalid.png",
+    "before": "before/signin-invalid.png",
+    "after": "after/signin-invalid.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "signup-empty",
+    "title": "注册 / 空表单",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signup-empty.png",
+    "before": "before/signup-empty.png",
+    "after": "after/signup-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "signup-filled",
+    "title": "注册 / 已填写",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signup-filled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "signup-mismatch",
+    "title": "注册 / 密码不一致",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/signup-mismatch.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "verify-empty",
+    "title": "验证码 / 待输入",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/verify-empty.png",
+    "before": "before/verify-empty.png",
+    "after": "after/verify-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "verify-error",
+    "title": "验证码 / 输入错误",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/verify-error.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "verify-resend",
+    "title": "验证码 / 重发倒计时",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/verify-resend.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "forgot-empty",
+    "title": "找回密码 / 邮箱",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/forgot-empty.png",
+    "before": "before/forgot-empty.png",
+    "after": "after/forgot-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "recovery-code",
+    "title": "找回密码 / 验证码",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/recovery-code.png",
+    "before": "before/recovery-code.png",
+    "after": "after/recovery-code.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "new-password",
+    "title": "重设密码 / 待填写",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/new-password.png",
+    "before": "before/new-password.png",
+    "after": "after/new-password.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "new-password-error",
+    "title": "重设密码 / 密码不一致",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/new-password-error.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "apple-private",
+    "title": "Apple / 隐藏邮箱",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/apple-private.png",
+    "before": "before/apple-private.png",
+    "after": "after/apple-private.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "apple-share",
+    "title": "Apple / 共享邮箱",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/apple-share.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "auth-privacy",
+    "title": "登录前 / 隐私说明",
+    "module": "01 · 登录与欢迎",
+    "reference": "reference/auth-privacy.png",
+    "before": "before/auth-privacy.png",
+    "after": "after/auth-privacy.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "home-ready",
+    "title": "首页 / 三封来信",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/home-ready.png",
+    "before": "before/04-home.png",
+    "after": "after/04-home.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "home-empty",
+    "title": "首页 / 无符合条件的信件",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/home-empty.png",
+    "before": "before/home-empty.png",
+    "after": "after/home-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "home-response",
+    "title": "首页 / 回应到达",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/home-response.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "filters-free",
+    "title": "筛选 / 未开通 Pass",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/filters-free.png",
+    "before": "before/05-filters.png",
+    "after": "after/05-filters.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "filters-active",
+    "title": "筛选 / Pass 生效",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/filters-active.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "filters-selected",
+    "title": "筛选 / 已选择条件",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/filters-selected.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "bird-female",
+    "title": "信使外观 / 女鸟",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/bird-female.png",
+    "before": "before/bird-female.png",
+    "after": "after/bird-female.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "bird-male",
+    "title": "信使外观 / 男鸟",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/bird-male.png",
+    "before": "before/bird-male.png",
+    "after": "after/bird-male.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "bird-motion-off",
+    "title": "信使外观 / 关闭动画",
+    "module": "02 · 首页与筛选",
+    "reference": "reference/bird-motion-off.png",
+    "before": "before/bird-motion-off.png",
+    "after": "after/bird-motion-off.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "letter-open",
+    "title": "来信详情 / 未回应",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-open.png",
+    "before": "before/06-letter-open.png",
+    "after": "after/06-letter-open.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "letter-typed",
+    "title": "来信详情 / 编辑回应",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-typed.png",
+    "before": "before/letter-typed.png",
+    "after": "after/letter-typed.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "letter-waiting",
+    "title": "来信详情 / 已回应，等待回信",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-waiting.png",
+    "before": "before/letter-waiting.png",
+    "after": "after/letter-waiting.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "letter-replied",
+    "title": "来信详情 / 已收到回复",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-replied.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "letter-safety",
+    "title": "来信详情 / 举报或屏蔽",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-safety.png",
+    "before": "before/letter-safety.png",
+    "after": "after/letter-safety.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "letter-report",
+    "title": "来信详情 / 举报原因",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/letter-report.png",
+    "before": "before/letter-report.png",
+    "after": "after/letter-report.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "compose-empty",
+    "title": "写信 / 空白",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/compose-empty.png",
+    "before": "before/07-compose.png",
+    "after": "after/07-compose.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "compose-draft",
+    "title": "写信 / 已填写",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/compose-draft.png",
+    "before": "before/compose-draft.png",
+    "after": "after/compose-draft.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "compose-invalid",
+    "title": "写信 / 多行校验",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/compose-invalid.png",
+    "before": "before/compose-invalid.png",
+    "after": "after/compose-invalid.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "compose-sent",
+    "title": "写信 / 发送后等待",
+    "module": "03 · 阅读与写信",
+    "reference": "reference/compose-sent.png",
+    "before": "before/compose-sent.png",
+    "after": "after/compose-sent.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-empty",
+    "title": "消息 / 从未收到消息",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-empty.png",
+    "before": "before/inbox-empty.png",
+    "after": "after/inbox-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-waiting",
+    "title": "消息 / 已寄出，尚无回信",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-waiting.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-pending",
+    "title": "消息 / 收到 3 封待收回信",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-pending.png",
+    "before": "before/inbox-pending.png",
+    "after": "after/inbox-pending.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-collected-one",
+    "title": "消息 / 收取 1 封，剩余 2 封",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-collected-one.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-collected-all",
+    "title": "消息 / 全部收完，横条消失",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-collected-all.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-unread",
+    "title": "消息 / 已有未读会话",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-unread.png",
+    "before": "before/09-inbox.png",
+    "after": "after/09-inbox.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-read",
+    "title": "消息 / 所有消息已读",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-read.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-friends-empty",
+    "title": "好友 / 空状态",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-friends-empty.png",
+    "before": "before/inbox-friends-empty.png",
+    "after": "after/inbox-friends-empty.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-friends",
+    "title": "好友 / 已关注会话",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-friends.png",
+    "before": "before/inbox-friends.png",
+    "after": "after/inbox-friends.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-drawer",
+    "title": "消息 / 右侧菜单",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-drawer.png",
+    "before": "before/inbox-drawer.png",
+    "after": "after/inbox-drawer.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "inbox-search",
+    "title": "消息 / 搜索匹配",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-search.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-search-empty",
+    "title": "消息 / 搜索无结果",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-search-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-options",
+    "title": "会话 / 更多操作",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-options.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-pinned",
+    "title": "会话 / 已置顶并静音",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-pinned.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-hidden",
+    "title": "隐藏会话 / 有记录",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-hidden.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-hidden-empty",
+    "title": "隐藏会话 / 空状态",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-hidden-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "inbox-notifications-off",
+    "title": "消息 / 通知提醒条",
+    "module": "04 · 消息与回信",
+    "reference": "reference/inbox-notifications-off.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "reply-last-free",
+    "title": "回信 / 剩余 1 次免费",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-last-free.png",
+    "before": "before/reply-last-free.png",
+    "after": "after/reply-last-free.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "reply-payment",
+    "title": "回信 / 10 次用完，付费确认",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-payment.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "reply-shortage",
+    "title": "回信 / 钻石不足",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-shortage.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "reply-cancelled",
+    "title": "回信 / 取消付费，仍待收取",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-cancelled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "reply-paid",
+    "title": "回信 / 付费收取完成",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-paid.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "reply-topup",
+    "title": "回信 / 进入钻石补充",
+    "module": "05 · 收取额度与付费",
+    "reference": "reference/reply-topup.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-waiting",
+    "title": "对话 / 等待对方回复",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-waiting.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-receipt-waiting",
+    "title": "对话 / 回信已到，尚未收取",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-receipt-waiting.png",
+    "before": "before/chat-receipt-waiting.png",
+    "after": "after/chat-receipt-waiting.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-open",
+    "title": "对话 / 已回复，可继续交流",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-open.png",
+    "before": "before/10-chat.png",
+    "after": "after/10-chat.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-draft",
+    "title": "对话 / 正在编辑",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-draft.png",
+    "before": "before/chat-draft.png",
+    "after": "after/chat-draft.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-sent",
+    "title": "对话 / 消息已发送",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-sent.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-photo",
+    "title": "对话 / 图片消息",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-photo.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-attachment",
+    "title": "对话 / 待发送图片",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-attachment.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-stickers",
+    "title": "对话 / 表情选择",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-stickers.png",
+    "before": "before/chat-stickers.png",
+    "after": "after/chat-stickers.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-sticker-selected",
+    "title": "对话 / 表情待发送",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-sticker-selected.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-recording",
+    "title": "对话 / 录音中（演示）",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-recording.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-record-cancel",
+    "title": "对话 / 上滑取消录音",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-record-cancel.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-mic-denied",
+    "title": "对话 / 麦克风不可用",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-mic-denied.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-details",
+    "title": "对话设置 / 已解锁",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-details.png",
+    "before": "before/chat-details.png",
+    "after": "after/chat-details.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-details-waiting",
+    "title": "对话设置 / 未回复锁定",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-details-waiting.png",
+    "before": "before/chat-details-waiting.png",
+    "after": "after/chat-details-waiting.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "chat-remark",
+    "title": "对话设置 / 备注名",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-remark.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-search-empty",
+    "title": "聊天搜索 / 待输入",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-search-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-search-result",
+    "title": "聊天搜索 / 有结果",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-search-result.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-search-none",
+    "title": "聊天搜索 / 无结果",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-search-none.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-clear-confirm",
+    "title": "聊天记录 / 清空确认",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-clear-confirm.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-cleared",
+    "title": "聊天记录 / 清空后",
+    "module": "06 · 对话与聊天工具",
+    "reference": "reference/chat-cleared.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "wallpapers",
+    "title": "背景 / 壁纸列表",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/wallpapers.png",
+    "before": "before/wallpapers.png",
+    "after": "after/wallpapers.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "wallpaper-preview",
+    "title": "背景 / 大图预览",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/wallpaper-preview.png",
+    "before": "before/wallpaper-preview.png",
+    "after": "after/wallpaper-preview.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "wallpaper-applied",
+    "title": "对话 / 应用壁纸",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/wallpaper-applied.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "wallpaper-colors",
+    "title": "背景 / 纯色选择",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/wallpaper-colors.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-bubbles",
+    "title": "气泡 / 默认设置",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/chat-bubbles.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-bubbles-custom",
+    "title": "气泡 / 自定义颜色",
+    "module": "07 · 聊天背景与气泡",
+    "reference": "reference/chat-bubbles-custom.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "safety-choice",
+    "title": "安全操作 / 举报或屏蔽",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/safety-choice.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "report-empty",
+    "title": "举报 / 原因表单",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/report-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "report-filled",
+    "title": "举报 / 已填写内容",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/report-filled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "report-saved",
+    "title": "举报 / 保存结果",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/report-saved.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "block-confirm",
+    "title": "屏蔽 / 二次确认",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/block-confirm.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "chat-blocked",
+    "title": "对话 / 已屏蔽",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/chat-blocked.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "blocked-list",
+    "title": "屏蔽名单 / 有记录",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/blocked-list.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "blocked-empty",
+    "title": "屏蔽名单 / 空状态",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/blocked-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "unblock-confirm",
+    "title": "解除屏蔽 / 确认",
+    "module": "08 · 举报、屏蔽与恢复",
+    "reference": "reference/unblock-confirm.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-profile",
+    "title": "用户资料 / 内容完整",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-profile.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-waiting",
+    "title": "用户资料 / 尚未回复",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-waiting.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-followed",
+    "title": "用户资料 / 已关注",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-followed.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-no-content",
+    "title": "用户资料 / 无动态",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-no-content.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-photo",
+    "title": "用户资料 / 头像大图",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-photo.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "person-safety",
+    "title": "用户资料 / 举报或屏蔽",
+    "module": "09 · 用户资料",
+    "reference": "reference/person-safety.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "profile-empty",
+    "title": "个人页 / 尚未上传照片",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/profile-empty.png",
+    "before": "before/11-profile.png",
+    "after": "after/11-profile.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "profile-content",
+    "title": "个人页 / 已有形象照",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/profile-content.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "profile-edit",
+    "title": "编辑资料 / 当前信息",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/profile-edit.png",
+    "before": "before/profile-edit.png",
+    "after": "after/profile-edit.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "profile-invalid",
+    "title": "编辑资料 / 年龄校验",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/profile-invalid.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "avatar-gallery",
+    "title": "头像 / 已上传与空槽位",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-gallery.png",
+    "before": "before/avatar-gallery.png",
+    "after": "after/avatar-gallery.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "avatar-remove",
+    "title": "头像 / 移除确认",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-remove.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "avatar-removed",
+    "title": "头像 / 移除后的槽位",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-removed.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "avatar-restore",
+    "title": "头像 / 最近移除",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-restore.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "avatar-full",
+    "title": "头像 / 槽位已满",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-full.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "avatar-crop",
+    "title": "头像 / 上传裁切",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/avatar-crop.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "profile-likes",
+    "title": "个人页 / 获赞汇总",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/profile-likes.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "following-empty",
+    "title": "关注列表 / 空状态",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/following-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "following-list",
+    "title": "关注列表 / 有记录",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/following-list.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "followers-empty",
+    "title": "粉丝列表 / 空状态",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/followers-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "visitors-empty",
+    "title": "访客 / 尚无访问",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/visitors-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "visitors-outgoing",
+    "title": "访客 / 我访问过的人",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/visitors-outgoing.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "my-letters-empty",
+    "title": "我的信件 / 空状态",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/my-letters-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "my-letters",
+    "title": "我的信件 / 已寄出",
+    "module": "10 · 我的资料与头像",
+    "reference": "reference/my-letters.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-type",
+    "title": "上传形象照 / 选择照片类型",
+    "module": "11 · 形象照",
+    "reference": "reference/card-type.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-options",
+    "title": "已上传照片 / 操作菜单",
+    "module": "11 · 形象照",
+    "reference": "reference/card-options.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-preview",
+    "title": "已上传照片 / 大图查看",
+    "module": "11 · 形象照",
+    "reference": "reference/card-preview.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-change-type",
+    "title": "已上传照片 / 更换类型",
+    "module": "11 · 形象照",
+    "reference": "reference/card-change-type.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-visibility",
+    "title": "已上传照片 / 可见范围",
+    "module": "11 · 形象照",
+    "reference": "reference/card-visibility.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "card-remove",
+    "title": "已上传照片 / 移除确认",
+    "module": "11 · 形象照",
+    "reference": "reference/card-remove.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moments-empty",
+    "title": "动态 / 空状态",
+    "module": "12 · 动态",
+    "reference": "reference/moments-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moments-list",
+    "title": "动态 / 已发布",
+    "module": "12 · 动态",
+    "reference": "reference/moments-list.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moments-category-empty",
+    "title": "动态 / 分类无内容",
+    "module": "12 · 动态",
+    "reference": "reference/moments-category-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-empty",
+    "title": "发布动态 / 空白",
+    "module": "12 · 动态",
+    "reference": "reference/moment-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-draft",
+    "title": "发布动态 / 文字草稿",
+    "module": "12 · 动态",
+    "reference": "reference/moment-draft.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-photo",
+    "title": "发布动态 / 图片附件",
+    "module": "12 · 动态",
+    "reference": "reference/moment-photo.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-stickers",
+    "title": "发布动态 / 表情选择",
+    "module": "12 · 动态",
+    "reference": "reference/moment-stickers.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-visibility",
+    "title": "发布动态 / 可见范围",
+    "module": "12 · 动态",
+    "reference": "reference/moment-visibility.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-leave",
+    "title": "发布动态 / 离开前保留草稿",
+    "module": "12 · 动态",
+    "reference": "reference/moment-leave.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-options",
+    "title": "动态 / 操作菜单",
+    "module": "12 · 动态",
+    "reference": "reference/moment-options.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-delete",
+    "title": "动态 / 删除确认",
+    "module": "12 · 动态",
+    "reference": "reference/moment-delete.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "moment-saved",
+    "title": "动态 / 保存完成",
+    "module": "12 · 动态",
+    "reference": "reference/moment-saved.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "settings-home",
+    "title": "设置 / 主页面",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/settings-home.png",
+    "before": "before/12-settings.png",
+    "after": "after/12-settings.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "language-en",
+    "title": "语言 / English",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/language-en.png",
+    "before": "before/language-en.png",
+    "after": "after/language-en.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "language-ko",
+    "title": "语言 / 한국어",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/language-ko.png",
+    "before": "before/language-ko.png",
+    "after": "after/language-ko.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "privacy",
+    "title": "隐私 / 默认设置",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/privacy.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "privacy-visibility",
+    "title": "隐私 / 可见范围选择",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/privacy-visibility.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "privacy-only-me",
+    "title": "隐私 / 仅自己可见",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/privacy-only-me.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "notifications-on",
+    "title": "通知 / 已开启",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/notifications-on.png",
+    "before": "before/notifications-on.png",
+    "after": "after/notifications-on.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "notifications-off",
+    "title": "通知 / 总开关关闭",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/notifications-off.png",
+    "before": "before/notifications-off.png",
+    "after": "after/notifications-off.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "general",
+    "title": "通用 / 默认设置",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/general.png",
+    "before": "before/general.png",
+    "after": "after/general.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "general-font",
+    "title": "通用 / 系统字体",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/general-font.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "cache-confirm",
+    "title": "缓存 / 清理确认",
+    "module": "13 · 设置与偏好",
+    "reference": "reference/cache-confirm.png",
+    "before": "before/cache-confirm.png",
+    "after": "after/cache-confirm.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "security",
+    "title": "账号与安全 / 主页面",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/security.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "account-info",
+    "title": "账号 / 当前邮箱",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/account-info.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "verification",
+    "title": "身份验证 / 服务未接入",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/verification.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pin-create",
+    "title": "应用锁 / 创建 PIN",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/pin-create.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pin-invalid",
+    "title": "应用锁 / PIN 格式错误",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/pin-invalid.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pin-locked",
+    "title": "应用锁 / 输入 PIN",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/pin-locked.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pin-wrong",
+    "title": "应用锁 / PIN 错误",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/pin-wrong.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "signout-confirm",
+    "title": "退出登录 / 确认",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/signout-confirm.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "signed-out",
+    "title": "退出登录 / 返回欢迎",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/signed-out.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "delete-disabled",
+    "title": "注销 / 初始保护状态",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/delete-disabled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "delete-typed",
+    "title": "注销 / 已输入 DELETE",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/delete-typed.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "delete-ready",
+    "title": "注销 / 已确认数据范围",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/delete-ready.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "delete-final",
+    "title": "注销 / 最终确认",
+    "module": "14 · 账号、安全与退出",
+    "reference": "reference/delete-final.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "help",
+    "title": "帮助与支持 / 主页面",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/help.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "faq",
+    "title": "帮助中心 / 问题列表",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/faq.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "faq-expanded",
+    "title": "帮助中心 / 展开答案",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/faq-expanded.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "feedback-empty",
+    "title": "反馈 / 空表单",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/feedback-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "feedback-filled",
+    "title": "反馈 / 已填写",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/feedback-filled.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "feedback-invalid",
+    "title": "反馈 / 联系邮箱错误",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/feedback-invalid.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "feedback-history",
+    "title": "反馈 / 已保存记录",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/feedback-history.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "about",
+    "title": "关于 MauGo",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/about.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "guidelines",
+    "title": "社区规范",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/guidelines.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "safety-guide",
+    "title": "安全指南",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/safety-guide.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "privacy-policy",
+    "title": "隐私说明",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/privacy-policy.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "terms-full",
+    "title": "服务条款与 EULA",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/terms-full.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "system-empty",
+    "title": "系统消息 / 空状态",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/system-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "interactions-empty",
+    "title": "互动 / 空状态",
+    "module": "15 · 帮助、反馈与说明",
+    "reference": "reference/interactions-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "wallet-empty",
+    "title": "钻石 / 零余额",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/wallet-empty.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "wallet-balance",
+    "title": "钻石 / 有余额",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/wallet-balance.png",
+    "before": "before/08-wallet.png",
+    "after": "after/08-wallet.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "topup-confirm",
+    "title": "钻石 / 套餐确认",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/topup-confirm.png",
+    "before": "before/topup-confirm.png",
+    "after": "after/topup-confirm.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "topup-success",
+    "title": "钻石 / 模拟充值完成",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/topup-success.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-default",
+    "title": "Filter Pass / 未开通",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-default.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-one-day",
+    "title": "Filter Pass / 1 天方案",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-one-day.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-month",
+    "title": "Filter Pass / 30 天方案",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-month.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-shortage",
+    "title": "Filter Pass / 余额不足",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-shortage.png",
+    "before": "before/pass-shortage.png",
+    "after": "after/pass-shortage.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "pass-confirm",
+    "title": "Filter Pass / 支付确认",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-confirm.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-active",
+    "title": "Filter Pass / 已开通",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-active.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-extend",
+    "title": "Filter Pass / 延长期限确认",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-extend.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-success",
+    "title": "Filter Pass / 购买完成",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-success.png",
+    "before": null,
+    "after": null,
+    "status": "not-verified",
+    "note": "原型已存档；本轮未逐屏验证客户端。"
+  },
+  {
+    "id": "pass-sheet",
+    "title": "筛选入口 / Pass 弹层",
+    "module": "16 · 钻石与 Filter Pass",
+    "reference": "reference/pass-sheet.png",
+    "before": "before/pass-sheet.png",
+    "after": "after/pass-sheet.png",
+    "status": "captured-for-review",
+    "note": "固定接口数据；截图不代表真实后端通过。"
+  },
+  {
+    "id": "home-loading",
+    "title": "首页 / 加载（客户端补充状态）",
+    "module": "补充状态",
+    "reference": "reference/home-ready.png",
+    "before": "before/home-loading.png",
+    "after": "after/home-loading.png",
+    "status": "captured-for-review",
+    "note": "非同一语义状态，只对照最近的原型画面；不能据此声称像素一致。"
+  },
+  {
+    "id": "home-error",
+    "title": "首页 / 加载失败（客户端补充状态）",
+    "module": "补充状态",
+    "reference": "reference/home-empty.png",
+    "before": "before/home-error.png",
+    "after": "after/home-error.png",
+    "status": "captured-for-review",
+    "note": "非同一语义状态，只对照最近的原型画面；不能据此声称像素一致。"
+  },
+  {
+    "id": "wallet-payment-unavailable",
+    "title": "钱包 / 支付未接入（真实能力提示）",
+    "module": "补充状态",
+    "reference": "reference/topup-success.png",
+    "before": "before/wallet-payment-unavailable.png",
+    "after": "after/wallet-payment-unavailable.png",
+    "status": "captured-for-review",
+    "note": "非同一语义状态，只对照最近的原型画面；不能据此声称像素一致。"
+  },
+  {
+    "id": "conversation-unlocked",
+    "title": "聊天 / 收取后解锁",
+    "module": "补充状态",
+    "reference": "reference/chat-open.png",
+    "before": "before/conversation-unlocked.png",
+    "after": "after/conversation-unlocked.png",
+    "status": "captured-for-review",
+    "note": "非同一语义状态，只对照最近的原型画面；不能据此声称像素一致。"
+  }
+]

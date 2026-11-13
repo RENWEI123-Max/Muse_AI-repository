@@ -1,0 +1,1956 @@
+{
+  "baselineCommit": "049e0105831a3f750b1257186e83d46aee9c3198",
+  "branch": "codex/refactor-fidelity",
+  "images": [
+    {
+      "path": "reference/about.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7dafb872634a22e112cefcee65aa1a851d3fd8df4be38203a18231fc6afc16fe"
+    },
+    {
+      "path": "reference/account-info.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "47759f1c92b295b992aaf5f094e9e5bf721b39afd4aa7b5cc516a0879ee02d97"
+    },
+    {
+      "path": "reference/apple-private.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "648da73c3c70e403e381c35594f667dbf0599ec641a018a8f4b987018a01664a"
+    },
+    {
+      "path": "reference/apple-share.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cb2dddd204d22fe5882b9982b77f96468aa71c6a79b6550636bec244107ba11b"
+    },
+    {
+      "path": "reference/auth-privacy.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c12e27ff0e93f9becde5a32ba96e005e78f889aa9211c9cb3b18fd2930d96c6e"
+    },
+    {
+      "path": "reference/avatar-crop.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c4978567925739f0aa924ab83be32bc5368c48bba8af06fee7364d863ba1005f"
+    },
+    {
+      "path": "reference/avatar-full.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c0923274e2967e4784e33a7d37e2969a48574a5508549aed00a21920c58254e9"
+    },
+    {
+      "path": "reference/avatar-gallery.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "46cfa77ad96219173f3415039a89c45ade43050c1fc207b68a8c590764eee3ff"
+    },
+    {
+      "path": "reference/avatar-remove.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "45fd9355912da23b39e4142129dde4ca7c4d6e10ab996f5757a1d5b8c5da86be"
+    },
+    {
+      "path": "reference/avatar-removed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c6c6bc9113d5ef55a56cc30a6e2520ad284d1cf9b0af4a0a87a6ce3d679967c9"
+    },
+    {
+      "path": "reference/avatar-restore.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "233ec8ade99e74a112b7b3d479f7e47c2f796249915438a4ffade1e95d057435"
+    },
+    {
+      "path": "reference/bird-female.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "26b2efe563a4336a5c7832040bf5ee1f1f27d85989bd59dc188ec9129e7bcaeb"
+    },
+    {
+      "path": "reference/bird-male.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bfc90f20754e80df6fbbf606ec740443aa04a5c08a3380abe615c3d98c4e5fe2"
+    },
+    {
+      "path": "reference/bird-motion-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "68073f89a22702750c721b052add3f270bd2bb2ecccb76c6e76e5f4bb8caa37b"
+    },
+    {
+      "path": "reference/block-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1fe177010550b87441851bf41e94ae22e52500e7bb17f7c7c8379d435e365de9"
+    },
+    {
+      "path": "reference/blocked-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "fd4dfc5b88bc6cf15113dfbee3bd76c843a45a8a34f9cd1c95ad11b6b9c497f5"
+    },
+    {
+      "path": "reference/blocked-list.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "fc9ac90492dc9d77e4411330f554fae0d0e3df099d3a2af000c1895d3edeef6e"
+    },
+    {
+      "path": "reference/cache-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "fc1a6e18c4bc91d57abc5f14d31080917fa681461901636e01ca1d1ffa5983dd"
+    },
+    {
+      "path": "reference/card-change-type.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6b1a787662412590a31ab0a90390b5a034e4bb89d783d19b82fa5e36adc439fa"
+    },
+    {
+      "path": "reference/card-options.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "60f89f0145ebbda02533b6087ca0513691cc3501e79009c04f61bd1964bb4e05"
+    },
+    {
+      "path": "reference/card-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bcf17b1a2400cdbc9d3630e6083e297c8a72b8d144c56a9d61702202c8988c3d"
+    },
+    {
+      "path": "reference/card-remove.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a89032ae75cc2aeded5f82796a257f84d480d5746660be7c690d3e4da24c8044"
+    },
+    {
+      "path": "reference/card-type.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4b5e397f1950e8743905b2f8ef2f8878bd09b8ac7022cbf3f4a56619b3443bcf"
+    },
+    {
+      "path": "reference/card-visibility.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2a226db8b7dde8effbd81533a1553a89f9bc18f09221bcc0d8757177f9c9e7d2"
+    },
+    {
+      "path": "reference/chat-attachment.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c3eb291a5ba9f7d6c6fe0d9c485552058ed436895152822ee6e30b1baf9b998e"
+    },
+    {
+      "path": "reference/chat-blocked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f17d18709198f33e5255d113a1f37f20b0ec676c45a4a6088e3e516404f0a191"
+    },
+    {
+      "path": "reference/chat-bubbles-custom.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5869f9bfccf3162e3b5596734886cbb96658b73e26a2a176aed0491232062436"
+    },
+    {
+      "path": "reference/chat-bubbles.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9d7d5f4127facc349d42b08f32155011ed835b707592688bf3c9d242d494bb6c"
+    },
+    {
+      "path": "reference/chat-clear-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e7c61f265b84fe702172b3b0518fc67103cbc9e07b46b624c291aa191b65df97"
+    },
+    {
+      "path": "reference/chat-cleared.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f339171ee29d17235a579df2c5804cda159c2430d4e2576295b0376f548a80af"
+    },
+    {
+      "path": "reference/chat-details-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a661190ae9869d2de8d04f19b762d9486d9870e496fcb94a74e70144a6033570"
+    },
+    {
+      "path": "reference/chat-details.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a95ae2e8261fd4f8e34861a534d7ae61a56406d26393d03b790f8b8cf257c7a4"
+    },
+    {
+      "path": "reference/chat-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ebe49b808f716a35f54715454c0838da1125b9da54e922639c4c88a77d37bce2"
+    },
+    {
+      "path": "reference/chat-mic-denied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "aa993eada3b4add0f48718e6898d718aa343dd1ae60d10da1cc75ff0bbb530e9"
+    },
+    {
+      "path": "reference/chat-open.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a77a0e61572a1850f2e45c58d1682fd3782dda9855a6ade5fc7a7545d5a16ff7"
+    },
+    {
+      "path": "reference/chat-photo.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b73ddb77f07016e880efbb55eaed8170aeb1f8c0f92dd95436e6c41b4f2289ae"
+    },
+    {
+      "path": "reference/chat-receipt-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7a3c9c5231f60304c487418e8af26e1d630fce75d32a67d7fa7ba26dd63b55e5"
+    },
+    {
+      "path": "reference/chat-record-cancel.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ea8c3c788c37519621e165795d61c8563dd324c4021e6851438d09cf457f4efb"
+    },
+    {
+      "path": "reference/chat-recording.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f19ade9dd9a8c66985a7231c6cafad449c48b117c919a1b6163fdfc4c8476b92"
+    },
+    {
+      "path": "reference/chat-remark.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "851a2ba2d83b7065b344044d101fc5bcbcfc077bf983c490b19bfacdba3b90b1"
+    },
+    {
+      "path": "reference/chat-search-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "93b037f85d41263adc77232888bd2764b642e3ff30c38e6a41576aabfb16f026"
+    },
+    {
+      "path": "reference/chat-search-none.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6fa26f6e7f1f8419775621de4f8b9b9a8b0ac963d23dfad6cb03f26ec33b2240"
+    },
+    {
+      "path": "reference/chat-search-result.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "45ab02d13fe58b770b5e9b1139203a82a167c00bd8824f798ffbae8eebc4887e"
+    },
+    {
+      "path": "reference/chat-sent.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7ca30f23feef0756cb4f9794f83a0547f17c712abd4717d2b38fb81e84b17951"
+    },
+    {
+      "path": "reference/chat-sticker-selected.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a97afaf4720d40b04857d858531dbf934b1d611c444186f3a4228833ad88db00"
+    },
+    {
+      "path": "reference/chat-stickers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b889d9ab0ccd8ad6d6078621f18ace5354b851976fcde9f75a08f278a5de6114"
+    },
+    {
+      "path": "reference/chat-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "98d15620fc7fac7800e75bcff801820bff54a502e0e9e25a1bf86c9b68d092bc"
+    },
+    {
+      "path": "reference/compose-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "05366a00eede4f0ca49b3278ec19855ec5a221e8ba45cd1c5a13ba0e3687e191"
+    },
+    {
+      "path": "reference/compose-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b188e252c0e63a5100f8b18705b1de0d184da82b07256bc590cf13d21ac5da76"
+    },
+    {
+      "path": "reference/compose-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "125beb041b5ddeb76adf83695669ed75eb286348fe7c62261b7d6a9fab9b18b8"
+    },
+    {
+      "path": "reference/compose-sent.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6002ec8c8e2768c8e8990ae9c9b9caf7f81be3a700c287113849d9fd6ad43b13"
+    },
+    {
+      "path": "reference/delete-disabled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "8a651f9c0d375da4a33cf83cb7cf0c94fdccfce4c93d8fffe6d2c977a71c11e1"
+    },
+    {
+      "path": "reference/delete-final.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1ead3dd3f056c80e688ea251603e6c6c57debd1c60d1ed644d7fd28bcbe285c9"
+    },
+    {
+      "path": "reference/delete-ready.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "680d1744e22dfcab099c153776adcdcc3ccbf37c809759a73ea820646c16c4b3"
+    },
+    {
+      "path": "reference/delete-typed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "893311b766cb53d65c25f78dda154ee66275449d806d5103aad9dc02438e93bc"
+    },
+    {
+      "path": "reference/faq-expanded.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5017180d7a268f339bd5fde310217da9518a112239c031f64af931cba95db587"
+    },
+    {
+      "path": "reference/faq.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "de6c653ef7d5035e467a1559d606f05ef704f2b4603062a1c8765001d4b9e5d6"
+    },
+    {
+      "path": "reference/feedback-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e62dd18e67fdc6ef32090c86e7f955b8e41e8da79063ea2c1f5d99fad6042af6"
+    },
+    {
+      "path": "reference/feedback-filled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cc0e0b455a43699e70934fbc469bb2aa05ec46f2e2f5b47fd205f011d47c9559"
+    },
+    {
+      "path": "reference/feedback-history.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b00472507903246964022366f93d16ae27051aaf30e3d6e22d7dc9528a915b5e"
+    },
+    {
+      "path": "reference/feedback-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7231f88ea5155f36446be56a0b3119401f36954650505e233d73362afe37fc8f"
+    },
+    {
+      "path": "reference/filters-active.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a096e3f2401f0efd2b48fdef434a4d16ee9a5369047fa6fedf151bd9f3a35846"
+    },
+    {
+      "path": "reference/filters-free.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6922730b87f014a683fa3133c9dae1dda42e1d4cbb13355e505d5cc43f246c30"
+    },
+    {
+      "path": "reference/filters-selected.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "946cc6c227442e81289fead1ee488e449a40018465490702423626e702a50f3c"
+    },
+    {
+      "path": "reference/followers-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4455c96b57f9e3a46f25ce9ad11d856409b24026a5318face505bfedaf8ce1a0"
+    },
+    {
+      "path": "reference/following-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cfdb66a9d635c6fa855696b275ff236ce7fb65cedba78f5e4e114c355dbddcd1"
+    },
+    {
+      "path": "reference/following-list.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c2c432d4e202a4c831e5e62892f959f7360b514409066b78bdfbb9a7b39a6e9f"
+    },
+    {
+      "path": "reference/forgot-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "53c86554eff057937fae085448fe9efd89ef9bffbc1f1b9c2fca267b4f808534"
+    },
+    {
+      "path": "reference/general-font.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9e951076b9a02a79824f17b7dd65333de6349a6028ac5a72c3767bbddf51067f"
+    },
+    {
+      "path": "reference/general.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9c8b2765016c5015f15f747689d987848ebc642de36b44b03c99c8ac287fe9e7"
+    },
+    {
+      "path": "reference/guidelines.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7a0145c5321b9687bc0196c7caad61c8d8ee098ed5472c125bf858df67a4c830"
+    },
+    {
+      "path": "reference/help.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "72e225dc0750a5ada39fa24cccc36497ba1605cec7ca112d1a0553b700f6225e"
+    },
+    {
+      "path": "reference/home-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9a5b661015c37c34083f10e1e64409988fed0259773d364e5cee4734d5098633"
+    },
+    {
+      "path": "reference/home-ready.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "0ce86c3f79d9a35b4e8557a59d2df024e397af44664c733fbdf31fca03cd5844"
+    },
+    {
+      "path": "reference/home-response.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "63805dd56dcd4eb8b1e3282786e4d25dc7496ebc4b94ba275c8962cce39a5938"
+    },
+    {
+      "path": "reference/inbox-collected-all.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dc829651741715b77b8c13990feaa828f410c57982432536b5e26e93b87179f3"
+    },
+    {
+      "path": "reference/inbox-collected-one.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "813a56c8ffce3d8e5dd3cbaa9a7bf6063e22ed03094945ddb6b789909c5a16ef"
+    },
+    {
+      "path": "reference/inbox-drawer.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "65a0cd03910ebcb381bf07a58678fc93316e3f1313949f403ce200279ad9a3f3"
+    },
+    {
+      "path": "reference/inbox-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "07e4bd4235c407d4a30b1f31018af42e9cf9991d9c2b729d8c98fce75614611c"
+    },
+    {
+      "path": "reference/inbox-friends-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6b8f1a3c835eb320275eee327c2e101806990ab4cc63c69ca9a15d7d46fc3112"
+    },
+    {
+      "path": "reference/inbox-friends.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "062c04e5c61fb6d4b3548e876e820c54bd48ba68c96e48790e369e1c9d932b09"
+    },
+    {
+      "path": "reference/inbox-hidden-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "71cb08589c7a82979bb14e1a64579a0c62c8f95df9601fb2ec024ce2f8ab4c06"
+    },
+    {
+      "path": "reference/inbox-hidden.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "805e3c3e43a436e69f31f53787246fd09667bcf998a93dc03099e7296297d3b1"
+    },
+    {
+      "path": "reference/inbox-notifications-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c5bcb29b2a60d9f9bd41a99a9d9753d9141819af3df7892f9ce1a784a7373291"
+    },
+    {
+      "path": "reference/inbox-options.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e789efd740c2f71709e3cef34bde425292b35e873477890c1cafb39f5bb2600a"
+    },
+    {
+      "path": "reference/inbox-pending.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "12e337145c37cdea55e9ba857dcc5137cefd956ccdc85cff26f14205949cf04f"
+    },
+    {
+      "path": "reference/inbox-pinned.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "16ac1f901fd017699730e4780ce971c40216dc5c0444bacb6db0ec4ad634ccfd"
+    },
+    {
+      "path": "reference/inbox-read.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "687411d1ed6144ab1e802ed29f4263a2390aeee310afa1d22dd6e83d8cc3e65c"
+    },
+    {
+      "path": "reference/inbox-search-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "999474c7bc09aa3b7ac2985119182b2abc230c53cbedce9c2833647d5de85f1b"
+    },
+    {
+      "path": "reference/inbox-search.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c46f730ec0759c7704d860306c2d6624998b7c100bf92560810f10a2ecf0d7cb"
+    },
+    {
+      "path": "reference/inbox-unread.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "66b98e95116e0a44b9a5a8eebf278e215277d8c6e055f20d3968aa0c50793b0b"
+    },
+    {
+      "path": "reference/inbox-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "defd72367f1ffe446890bbf5b4eeeaa671b300472a2f40571d5d53076afc6e3f"
+    },
+    {
+      "path": "reference/interactions-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e71410131edbf2d8e420a6a1c0991ef25cb7d1068516ef60b91fb99dace49542"
+    },
+    {
+      "path": "reference/language-en.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a9d0658913a5aca8fd00b009288ac45d4f411025801bb14ac0cf452130d357ea"
+    },
+    {
+      "path": "reference/language-ko.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "68bafc9384e029b3203761e6f3749382544608ee042a6a4f0e3c1790cd926a23"
+    },
+    {
+      "path": "reference/letter-open.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1409099adb6e4fdb68f1cb1edac16073d93947518b538c31e86fe555ef46087f"
+    },
+    {
+      "path": "reference/letter-replied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d212407cf0954635e5682af997d1dc3b64ac256a8623458875022ca339e40c54"
+    },
+    {
+      "path": "reference/letter-report.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6d15126656ca97c810ba1594929b37b3d970b91536a73e8a0796c4b7ef2e4d9b"
+    },
+    {
+      "path": "reference/letter-safety.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3683dffde7d9e5b1d00e2f898ade1f9de175056654704c4573ce9b2664fe4874"
+    },
+    {
+      "path": "reference/letter-typed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "53ac7dfed89e8cce55c6dcfb5fc7fedccb111b7db64c2e4d436edf036c962f0d"
+    },
+    {
+      "path": "reference/letter-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "0ae43848795b841f218323c3123cafb6fc8b472e5fbdee562b32317c8e6e777c"
+    },
+    {
+      "path": "reference/moment-delete.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f098364e608fd8ca8a50ecdd5691a387fc8c0f7044768af2d0bc51f3267267dc"
+    },
+    {
+      "path": "reference/moment-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b48106690e158f36192d9b7567f1ee989abf84d17ee3996b6405e4dbfc03f6e3"
+    },
+    {
+      "path": "reference/moment-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2ba490acb75c0f0739f93a2f0e693e98422c7c5f50920de6127906ca319210d2"
+    },
+    {
+      "path": "reference/moment-leave.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1c64f78a0b03fed885151ec1cd5401c8392e7a728e71f00d49cdfa4deed21adb"
+    },
+    {
+      "path": "reference/moment-options.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "503fde14f069e099e00bcde1649782ea8e837523af4325880974c1e0a253ab8c"
+    },
+    {
+      "path": "reference/moment-photo.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a8e151b107d9db89f1c9c0c623ba871374bcfa96c4891d1e242f1fce73fe342b"
+    },
+    {
+      "path": "reference/moment-saved.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "65943b04bdbb55e8331ac3459a2337460dd6f2a652d453c559268dc9c82411b0"
+    },
+    {
+      "path": "reference/moment-stickers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "67261b98e19d772e6cd9a2b4efd48a4be2bdf8001a57f3df62bc40098d635efd"
+    },
+    {
+      "path": "reference/moment-visibility.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a63d6b8b9e121fe3e440b2a3598dde0bff929d24d998b6ac537a70ef4207ebfa"
+    },
+    {
+      "path": "reference/moments-category-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a551a6b26092dd48da76b2bdac5047c6f30a962c2440d95bf5f43c6e8bafd5a8"
+    },
+    {
+      "path": "reference/moments-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "be34a9c7d43b216a6fd654aa1a755b80b02340fb13908e000f8183ca836dd736"
+    },
+    {
+      "path": "reference/moments-list.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a9cfe2c82112703180276a66deb4ef1f51eed224cd5655d8e60371e03b14180a"
+    },
+    {
+      "path": "reference/my-letters-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "42a4353b4385a57164faac4f843268e83fe7e375a3ba7c44d8174251b74eada9"
+    },
+    {
+      "path": "reference/my-letters.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "77238e1dbfb4a73cb74e987063f7eb07c334ff23da847ec753c4950d85a2c8b4"
+    },
+    {
+      "path": "reference/new-password-error.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d9b544fbfa22e806beb69cef4ed974e93ddaa35853ee8645aef6c385f34f6d35"
+    },
+    {
+      "path": "reference/new-password.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1783395902c7084ab65c4a813232490505068aa7cab473c89fea45d280ae04a3"
+    },
+    {
+      "path": "reference/notifications-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "58df2dd9f0ab3e630f25cc03bb8d95517dbe5a033bf1be227eecea6d40d8c6b9"
+    },
+    {
+      "path": "reference/notifications-on.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9cf9b02d7cbe1db8fd81f68d13e74ea38dc398bb30527059dcf3901fccbb2862"
+    },
+    {
+      "path": "reference/pass-active.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e67ce9d237f14e712f4c24d1032dc9f737dccbdec97e595b8e2aa44952f0aebe"
+    },
+    {
+      "path": "reference/pass-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "06b18a9d769781c59ae7acea88ab96cfdb4193eb53931fb08ca1ab324d9274c5"
+    },
+    {
+      "path": "reference/pass-default.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2d25e6ed8bba9fd75ad1aac977c336ddffbede00499aee46f6387e1a90f4d36b"
+    },
+    {
+      "path": "reference/pass-extend.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "19393922fed2332b41b2c294887a806ee4d8be7fba9794317b41037b2f609509"
+    },
+    {
+      "path": "reference/pass-month.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "25fad8679196b0f2fc243064a36d843cfe4fc93e447a84992ca7bbed8389d7e3"
+    },
+    {
+      "path": "reference/pass-one-day.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3b072a7570748bf826d796343734a7033dded14d635a8e94e7fab92d636c2bc9"
+    },
+    {
+      "path": "reference/pass-sheet.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "be4106252e057aa5da653877b107bfad5a3cb1d2f236c17373bfaf9b47f6815e"
+    },
+    {
+      "path": "reference/pass-shortage.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ed502ecaaecccf7e1437a1da41ce366a081559f123a6c7cd692fe8f528e7c9cb"
+    },
+    {
+      "path": "reference/pass-success.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "15010f95806ed124d088a738c1ec2b848ebb47920777fbeafd12358a0717099c"
+    },
+    {
+      "path": "reference/person-followed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b577eff70ed06ac5496b675a8c83ae0de7452e27afc7e305e9beff48abc61fd5"
+    },
+    {
+      "path": "reference/person-no-content.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f433224cf26bf1578ea5d5a633f6ae0c36bef4492f0984fb6823828e53a6b577"
+    },
+    {
+      "path": "reference/person-photo.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "147010047468a83d88742f081a19c279997a39fbdbe40807b35b758cbf13f0c7"
+    },
+    {
+      "path": "reference/person-profile.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b45cc4dd66c123f5c2508b8b4da15bb7e2bd1c00e9b4755624b9ace6401e44bf"
+    },
+    {
+      "path": "reference/person-safety.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bb1f9c9b47e0347292cdf55529ec812b9cb197b4ea878c5422ba2ba2348af677"
+    },
+    {
+      "path": "reference/person-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "56cfac5d10fa25087f277e7da37ea2722d0bc6997607a8ab10ef60926194f2be"
+    },
+    {
+      "path": "reference/pin-create.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "64818e478d74b27a1063520924eb8bb16dc04ef1f6a5e7bb5033c11d09f32c05"
+    },
+    {
+      "path": "reference/pin-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f6630b65ed9a018a86ea114f08b1c1d59552ef1d084cee16102b0f6db68437ce"
+    },
+    {
+      "path": "reference/pin-locked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4dbac079ae6811b488cc6c4594bcacb25dec0d736ddabe2ada098c2b41a9df17"
+    },
+    {
+      "path": "reference/pin-wrong.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4304a3142ac20f0b07cf00fe7eb30a80b8a97f5a6e17099c5aa20af11f8e1df7"
+    },
+    {
+      "path": "reference/privacy-only-me.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2ef0de40402a5ca962d2d3e53084c0c69c2fd9972abbc4c717a74a711e379e1e"
+    },
+    {
+      "path": "reference/privacy-policy.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2b1a4f654512068f47630bd76a268d982b007a9768b57b7614a00ad0dbd3d3c6"
+    },
+    {
+      "path": "reference/privacy-visibility.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "627f85b55096c786c590af27badc4a0645ab517dd66e2cef9eafcf99ce5934c3"
+    },
+    {
+      "path": "reference/privacy.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d62576e960a44c58bcef1d3a3e88a991fd47020913e4f0b84229c4ac4080a4ad"
+    },
+    {
+      "path": "reference/profile-content.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1160472e70f44450edafc013664bb379a658e754fc4c36172dda40ba71984292"
+    },
+    {
+      "path": "reference/profile-edit.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "547793dd13f07ca5d45c5afa5ce9ae30774a04e161eaa6e628993f19432bd0df"
+    },
+    {
+      "path": "reference/profile-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1a8c69b57c4cdbf25c0efcc323e19ad77586cd2d7133d15c43fc4263a7ea197d"
+    },
+    {
+      "path": "reference/profile-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "52cb94d0a8c0f3c393d3248948e8ddf7a73f6e479a03b5b4a60a50bc93c23800"
+    },
+    {
+      "path": "reference/profile-likes.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e34635ba8543e2c1b62be57a2617939cebd5026d800398dfd06e411808278b47"
+    },
+    {
+      "path": "reference/recovery-code.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "35d9500aa2ed3a90a1bc1f630af4f010fafcb20d6b354d16845b6817d18561dc"
+    },
+    {
+      "path": "reference/reply-cancelled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cda290766450b0c6fc2a799ef8e15a8945d04e65dd9ed0dbd657111c0499eb36"
+    },
+    {
+      "path": "reference/reply-last-free.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "976020bc104deca53397b317555d956461bca012b08b480c14c4dc973cf89216"
+    },
+    {
+      "path": "reference/reply-paid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4e216945b4f9b5841ff344c099e9a23f428658c0d123b55485db18d4638cd45b"
+    },
+    {
+      "path": "reference/reply-payment.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f0c8af2a423a22d44b605149b5d9c1d2ff9ef32cd33edad3316592e00ec9e097"
+    },
+    {
+      "path": "reference/reply-shortage.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "75295c93b1621c3c1a7daab3ac5908b721bd364613468e0a1860eb8bbe95ca63"
+    },
+    {
+      "path": "reference/reply-topup.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cc8a94cbcadca01de80040f99dd4150bf0408913eafedfbfac65f5ba1189510c"
+    },
+    {
+      "path": "reference/report-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "613a99ddc76b1108dc6aab0212f6afa85556c3c2016197ada93fdcafcf2fba4d"
+    },
+    {
+      "path": "reference/report-filled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "de4be650b97d6752c3833b2bcaf67f2c1ae5bd7848851979457769b83389b402"
+    },
+    {
+      "path": "reference/report-saved.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "af2f31d7a9a4b38c6e1cb0a341515480106f369f91faff96c61e87cba51ee6d6"
+    },
+    {
+      "path": "reference/safety-choice.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b4e4b98e3e98efcbdb87f6f0cd4c4c20a22cb15e9403ac76d05c71455fb3daa6"
+    },
+    {
+      "path": "reference/safety-guide.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6873315ff61d9db94db0a16bb79edcbc91e3e44fe27c6896e013d74804e1b992"
+    },
+    {
+      "path": "reference/security.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "03fd9080ae4e80b23b8ad5e790f8a50bec06eea47c1607128a01cb11ab68419b"
+    },
+    {
+      "path": "reference/settings-home.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "77035905e3d62bb2c73512d4e30a9e768508d9f99cb1d879a555eee89fb23085"
+    },
+    {
+      "path": "reference/shell-home.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "00c86c5da7b38e1f15d9876926ae9362dd4341b2586e8c5912c122af834f4f73"
+    },
+    {
+      "path": "reference/signed-out.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "806787d7dd47e78f6cb9a0d9cb315d20232b7e06ad15652950edae48f941a745"
+    },
+    {
+      "path": "reference/signin-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b1754103f7e01e37e7638a3a4ddf4228e7c59dae17c505e4349acccf7eb02eea"
+    },
+    {
+      "path": "reference/signin-filled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6a945d9863ec33bdfaf4ac8ab44ffd127145f87e6f40d76bd4f67ab10a199b70"
+    },
+    {
+      "path": "reference/signin-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "88ba6a8c21b4c719d8ceb38969276973783f093e0642ebd4ac7155293eda4e5b"
+    },
+    {
+      "path": "reference/signout-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bbe8e7df99eda5b175decf1d431ef2c571b40d2741cadabf53021b27e1e7ef2c"
+    },
+    {
+      "path": "reference/signup-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7f59533759510ccff9b73a076a1cb951cd74619197a066476907f9866845a6d8"
+    },
+    {
+      "path": "reference/signup-filled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c2d7897679328db637728a45d23e11e992539534e919395f68d7c10f231a6b1b"
+    },
+    {
+      "path": "reference/signup-mismatch.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3a7b34e5f699582dadfcc588282e2c2572a1cbebd7f2ea2f1bbb894c2c64f224"
+    },
+    {
+      "path": "reference/system-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a148397ac308f9a3b2054a4ce258ce9d12cc61436e39b164cd1b9e034876c80c"
+    },
+    {
+      "path": "reference/terms-checked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "571918815b8cfb2eb7f15279f65ebc7d22c71a6ed3a19ef8470afebaf1beb172"
+    },
+    {
+      "path": "reference/terms-full.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b1409ce46ea845b88a890e1ada7a280c110846d834cec59473b379d8397f37da"
+    },
+    {
+      "path": "reference/terms-unchecked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "da96e75cb8fb9c5056cad92178d104cc7f10d9bb0651b0c6e58d5bec33fbd611"
+    },
+    {
+      "path": "reference/topup-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "321a8939b675aa5b856a0c91b14716f43a7639d668e80cbb578bc9484dfb6cb2"
+    },
+    {
+      "path": "reference/topup-success.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2671fb91fef88a13541f698974b92f9aa552353ebfd55c44c37e3eb70c20e2ea"
+    },
+    {
+      "path": "reference/unblock-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a3dad1e2aa0624fc6f01d330f23a6e161a427de4d560010bf424155b195ea990"
+    },
+    {
+      "path": "reference/verification.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9542425cea00f0fdd991f05c2ea912032c0cff004652ab36b140946a174ed3ef"
+    },
+    {
+      "path": "reference/verify-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f4bb816d107cc1254344d71d20e0acc8e599ce68c61880374f44d0f6e671e2ea"
+    },
+    {
+      "path": "reference/verify-error.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d0f6332418af3f2fb040ce8df182e442e6bcbd199dfca3e6f9a306c634b157ac"
+    },
+    {
+      "path": "reference/verify-resend.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d4bb75ac74e4cc7598f491ef04d1cecf15648b94e09e076bd799d6948d3fe582"
+    },
+    {
+      "path": "reference/visitors-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9f4deffa85258e907b2460749849bea8f0316c9f19cacea75689cee44305a40b"
+    },
+    {
+      "path": "reference/visitors-outgoing.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6d79bc1a2003e1db1047bf8d9416de1b5363ccf2bddccb09402c2ef43ae8fbb9"
+    },
+    {
+      "path": "reference/wallet-balance.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "efc9461df275116b2d65cf8579a802998ae7a9e6fdc53094adfbd53d43de6060"
+    },
+    {
+      "path": "reference/wallet-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d8d059c8b5f4fcee34248e04e710e2dab06934abbfb570e25f32a15609c91319"
+    },
+    {
+      "path": "reference/wallpaper-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e0f1866fb119ad6023ebd4937278da5f2834e6dc0552992627708503616da13d"
+    },
+    {
+      "path": "reference/wallpaper-colors.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "da64a91f4df3d13e2e0b3c1eb737df3c9eec2b75b469a3b87552a07d12f1b9ba"
+    },
+    {
+      "path": "reference/wallpaper-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "79591cb0752151c59857792f2f17fce0d2585ef4b30a3f185b1cac7fa1ae3a83"
+    },
+    {
+      "path": "reference/wallpapers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f7bf2bef1230eba96bde61aecc9fe918e84e4f8c1dede33f06f2cf0acdffc13d"
+    },
+    {
+      "path": "reference/welcome.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "14cc456bcfd74a57400f01f018d47710622092d170436809b40568ffb6e4c1a7"
+    },
+    {
+      "path": "shell-reference/appearance.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "75ae72f70729db05e297e2b52b790571ec797a82082f1f0067cb5c9c15a168fd"
+    },
+    {
+      "path": "shell-reference/chat.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e3fbfdfe4226d823fb712207b4b457c5eb4ed70fa3958a6713cd9d2dc515bfce"
+    },
+    {
+      "path": "shell-reference/compose.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d78f210823414444b47232dadc58c3f500f3890efa226e38eeaad749debec744"
+    },
+    {
+      "path": "shell-reference/filters.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3f27a3d588c30643a5a2fee94d64c78e2563ebb973b4186b5bed215c405d3a39"
+    },
+    {
+      "path": "shell-reference/home.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "38ec32ff22aae1fbcded8354515ab631737aedbfd4b2dfc1b3a7ff45e5217db2"
+    },
+    {
+      "path": "shell-reference/inbox.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "70027e53de429bf0332d986a941bc156842f6c27362f0d5ec120c15fca1f906b"
+    },
+    {
+      "path": "shell-reference/letter.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1e1c2936f839243e121bac72dc8818af1cb1dca348006424281de3acee508d45"
+    },
+    {
+      "path": "shell-reference/profile.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a75ff88060cee1555f92e58afbfa9e3aae149d2915247f3389f37ad23cdeff8b"
+    },
+    {
+      "path": "shell-reference/settings.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c4d37ef7f33a665eeeb5cf472ab8a841c0df70dfc8f8b75d838c9b4a070c810a"
+    },
+    {
+      "path": "shell-reference/signin.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2d9ca6e2b90c8438db44ce52c82c61101c7300de7930470f4c023a4c5308e8db"
+    },
+    {
+      "path": "shell-reference/welcome.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2c5f405a875f08661efe9593a932812f737f1aee37988ee9ce5a1c38356968e3"
+    },
+    {
+      "path": "before/01-welcome.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9c1097c9ad269870ec167b590ea4efff9ce03afd554029bc4d97b57d0e204848"
+    },
+    {
+      "path": "before/02-terms.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7e531ead836c56f4b52c691f4b6590a27bd6aa657615861b7fb80c340f503c23"
+    },
+    {
+      "path": "before/03-signin.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e3779bfd6def92ee2cd8733edc6e5ebed1275ae09a7112c51ac2140c7f7b8f5d"
+    },
+    {
+      "path": "before/04-home.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ad742e5d2851c430b0ce3f0aed61adbf97cfe78bbc4c22b86c8491c8ef63c3b6"
+    },
+    {
+      "path": "before/05-filters.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "0f8caebf4137a3ca8a44791698fb8c2d6b5ed220e3377adceb2cfe831fd0ac2a"
+    },
+    {
+      "path": "before/06-letter-open.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e593cb52a2b63277d824dd3aea21d41aef7edee63a110832d5dea78f3f94d4c7"
+    },
+    {
+      "path": "before/07-compose.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "8e52631bff1ef554afccac87ed7519baa654fcf117224c6e15676fcff68fa4e7"
+    },
+    {
+      "path": "before/08-wallet.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cb7314f43f6f87b937cbf7347b0ad44c0fcb8ab65f06c2b618d4047d8866356e"
+    },
+    {
+      "path": "before/09-inbox.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dedb417df443647cbd766a92af40f4126019dd2b52b34f8f4a731a1ab084f29e"
+    },
+    {
+      "path": "before/10-chat.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2f2661edb045f46a463a9033dfcd3950c2ac04029b49ac371406cc70c065f37c"
+    },
+    {
+      "path": "before/11-profile.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "608ec3633fc6b12427df8dac2e19fd03fc59405b2c86a221e4138356f648338b"
+    },
+    {
+      "path": "before/12-settings.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "50321913802eac98ad1414e3ad4d26f88aebfe9fb0b33fd7efa8c88e82f56963"
+    },
+    {
+      "path": "before/apple-private.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d7bdbaee3d7376dec4293fd3e160e12a608857ba30c7f98eed0f0461cab0ff35"
+    },
+    {
+      "path": "before/auth-privacy.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7d3cede4ed0ccdc53f85782f28ef801a26f76feedb23db7ac90ec8ecd9feb443"
+    },
+    {
+      "path": "before/avatar-gallery.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "457f0d1a4fcc2dffb22aed7f5ab97ec18da6a6d3b8cde762ae7b8afa3eb00d52"
+    },
+    {
+      "path": "before/bird-female.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "8ba75f2a4d64d1a6ec2b1d4f28ba69b2b1fac96d09f79144209fca7a7f694401"
+    },
+    {
+      "path": "before/bird-male.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bdd85bb2b521ab846dff96868254c3559b5f570beaf8ed3333aee2dc722445bc"
+    },
+    {
+      "path": "before/bird-motion-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "28d37bee4ffef11a7a5329b5b20388b2b1aad5e0fba810428a5f0d0d072bc86e"
+    },
+    {
+      "path": "before/cache-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a05573bf0d728ef1a46a5cda81e2fdce46fd4acc9efda8d9c14c0fa01b06a65c"
+    },
+    {
+      "path": "before/chat-details-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c3d5f07ea553b5af411b923c7d3865f45192a5b0183d86cd8451ad47c9d96625"
+    },
+    {
+      "path": "before/chat-details.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4227509bdbf1528cc60a6fec7b986eaa772f34ba531b360c3e590207594d691a"
+    },
+    {
+      "path": "before/chat-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "84ac95439124384576b8d24f34e3dd355f4a699f47ebd7a99da2c830bd29392a"
+    },
+    {
+      "path": "before/chat-receipt-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "fb1625431a16df0f431b693708a826b7672cceff194cbcf026473ccca49790ca"
+    },
+    {
+      "path": "before/chat-stickers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f3c649bdcb79fe5b3aa76f10acc2960dd0735487ae8de10276f88fe7f1e55614"
+    },
+    {
+      "path": "before/compose-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b37351315f70ec6686ea6443024210984ada80af62a4b1156f7889e68f45da6d"
+    },
+    {
+      "path": "before/compose-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c9ba7ea77da91e36c091f3022d83635d980b33fc4b6ef445a25f328f77c15a61"
+    },
+    {
+      "path": "before/compose-sent.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "110fce456b258caad9e5d8b3ac1d54af70fa45bd4f5edfb0330c26de41044260"
+    },
+    {
+      "path": "before/conversation-unlocked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "8b1081b10aad1f3a3f53e5baf143ba88ebd145ef54746253cdc06bd297290ac9"
+    },
+    {
+      "path": "before/forgot-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "467d3c3d1a8d4b2ebec20e615477e5b05a797c5bc47549ad6a1a5056c5399ff4"
+    },
+    {
+      "path": "before/general.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2e3988d5140ffe843ec305015ef06dd19bd1c0139df0c6f234075839f70d6f99"
+    },
+    {
+      "path": "before/home-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "569db4e0cc848a55083766d7ea7cd5632132072d646c339521aa83ce8f507528"
+    },
+    {
+      "path": "before/home-error.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "efc52e717a92c97dbc9ee16d311c234c7b24bafa7fc879054d6b4e7eef1b0098"
+    },
+    {
+      "path": "before/home-loading.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ffc5b6082e8c36a54979fb6394afde6659d017ac8475e236f7a9dc0cb7665c5e"
+    },
+    {
+      "path": "before/inbox-drawer.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f2328370fc0b082b271760c38a58338d178656ad65e3e0545909bfdd4a0510e1"
+    },
+    {
+      "path": "before/inbox-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1195100bcf4ad5b4e44a096d09bbe1644538c3d678fd36896f67b39f1479d557"
+    },
+    {
+      "path": "before/inbox-friends-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "54755f841011d461cb506ed8853243d22fb2b63bb3378b9becb5632ad26e03bc"
+    },
+    {
+      "path": "before/inbox-friends.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bb9ca8f911b6eca0e2bf80fc429b7080dc3b74c79ffe41d5ad6cb72ebd71fa20"
+    },
+    {
+      "path": "before/inbox-pending.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dedb417df443647cbd766a92af40f4126019dd2b52b34f8f4a731a1ab084f29e"
+    },
+    {
+      "path": "before/language-en.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6dd1ad7a663f64ddf8de6e7b0348419e0ebf7bd07310e70d9e8dc08e54ece1bf"
+    },
+    {
+      "path": "before/language-ko.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9c9194f155dd4bf5d3a56d176824961efec5324a149f25413642662c6512f825"
+    },
+    {
+      "path": "before/letter-report.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7c091815ce0d4a3db28fef0d0d44932714b849e57773b3efcc9460038f0868b7"
+    },
+    {
+      "path": "before/letter-safety.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e0a10bba8b02a0205597e6c6ee42ad6a7be3437344702f5c342544cde1902e87"
+    },
+    {
+      "path": "before/letter-typed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ef2c39ad4947e04dc221603e8cc8a128db7b210c946166528c063095ee5b7faf"
+    },
+    {
+      "path": "before/letter-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9eca281e998f1ddedb4fd741368fc8f3e943a9ea1637c282fa20961a9ec13cdc"
+    },
+    {
+      "path": "before/new-password.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cc65e7264ee7c95b9a7bf6b6a58f4511a8dc88bbfd9937af1aafb0457a0d14b9"
+    },
+    {
+      "path": "before/notifications-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "77df3d104ebe51907ff84bd108479e083fc8c131178619a03453f83d0b7602b8"
+    },
+    {
+      "path": "before/notifications-on.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b2cee15315f3ec978855a522d7e67b7ec0b31a5b897f1eccb412aacb63a0baa4"
+    },
+    {
+      "path": "before/pass-sheet.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "427b4dc471c6f3d21191d04504061aa534191b2129734bc5f704736480ac9a74"
+    },
+    {
+      "path": "before/pass-shortage.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b3da3538466e03feb7b3a27ed2aee4a8d5ccc2f81599bbfb662d008c9d6d63ac"
+    },
+    {
+      "path": "before/profile-edit.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c1e734ca852f3d5805aa3287f5a7b3190629e2b754202e56ce7d0bc55a6952f5"
+    },
+    {
+      "path": "before/recovery-code.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ca09dc79283b79e63dfc9512febd87b13f19341032706ac0748386eb42071951"
+    },
+    {
+      "path": "before/reply-last-free.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "700930d67072576e91a512fd5aea5cddf0f276e8d0672c497d8a73c4683d5e59"
+    },
+    {
+      "path": "before/signin-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e3779bfd6def92ee2cd8733edc6e5ebed1275ae09a7112c51ac2140c7f7b8f5d"
+    },
+    {
+      "path": "before/signin-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a4a5f925c6b3ad04e0da5f6a2cf31a4cd05356ffcc9deded20dd1e3d4f7f3126"
+    },
+    {
+      "path": "before/signup-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "699e36d0298cd11213f669891e61c551afe92625e037bc5f7cee26e19694941b"
+    },
+    {
+      "path": "before/terms-checked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7168c0bf354f7e08e4567fe8177e8d5e2e5933a78291b1213b5485242b8aeb00"
+    },
+    {
+      "path": "before/terms-unchecked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7e531ead836c56f4b52c691f4b6590a27bd6aa657615861b7fb80c340f503c23"
+    },
+    {
+      "path": "before/topup-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "eda42c58188e2cc17a72ae6dd33473ad1143fb1bb33bf254cdbba2634fb954ee"
+    },
+    {
+      "path": "before/verify-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1347efdd5464730b89c809d923293e0b876ce7635522241490664813098aa763"
+    },
+    {
+      "path": "before/wallet-payment-unavailable.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5f747fdefc3dfc125d5bab50e3471fbb8c2c4e36f25ef4433912ae8bb30342a2"
+    },
+    {
+      "path": "before/wallpaper-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "64be227191c1a7138a31b4ea46be25930bdc80ae7399e9343f6fb1b943bdaaf4"
+    },
+    {
+      "path": "before/wallpapers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "03e811890b4e57df7a8c744fe0f77a8062122792f736ade0fa22ac1cd5cd16c7"
+    },
+    {
+      "path": "after/01-welcome.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b9759ba36dadb64c392c65b8dd6665ea28ce97af785d2c60a3e6f84ff0370a38"
+    },
+    {
+      "path": "after/02-terms.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "05729be779698865451dcbb0915109b67eee4e46a89587a2505a4d0b3a4bc70c"
+    },
+    {
+      "path": "after/03-signin.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "923ccca68ff713760a8b64808dfbf4cb3bd4b98aba17444484b3c11366a678d7"
+    },
+    {
+      "path": "after/04-home.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9221f0d6203becdb97aee3d89d4ed87b135a2e049d2ca8cdafff47c8d6c0cdcb"
+    },
+    {
+      "path": "after/05-filters.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "985b902446f3c4089324b9127b84a47827dd1b0f4e6e9cd899b32d35987d33f2"
+    },
+    {
+      "path": "after/06-letter-open.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7bb9d6d1eb07ae7f1bb5124d7885ef704911bfad58319852add1bfefa4015f98"
+    },
+    {
+      "path": "after/07-compose.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "21a9b89fae56b9ecb057b9df94033b91020e2c9eceb4c4859ed89174c204dbaf"
+    },
+    {
+      "path": "after/08-wallet.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "df69590d7a4d8085ac04d8ec27cf35a359830b42dde6770be519be3228dd8aea"
+    },
+    {
+      "path": "after/09-inbox.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "16d96b393c522dadad32932061bd873d482aed3158cb9826353ce1a986ef819c"
+    },
+    {
+      "path": "after/10-chat.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "29a33c1c99d49f6f57c6561fd5b93c43bf35fe2ec8ab9637c270532a8aacea41"
+    },
+    {
+      "path": "after/11-profile.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5b872cfa8e29c2d395ea676be9d2087cbc6a7956e408a05e5dc78817f676e35e"
+    },
+    {
+      "path": "after/12-settings.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "54445e7bb3eb6d8081263b94851d7d9a9141e946a0438f226b5a13a3ab306976"
+    },
+    {
+      "path": "after/apple-private.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "643a175fb8dce9467503942b7e311826447713abf4d01e00149b832b91101652"
+    },
+    {
+      "path": "after/auth-privacy.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dc8446be8e1368821a29a56f5200975d5d8bac62846f0ee0efeece579c001166"
+    },
+    {
+      "path": "after/avatar-gallery.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "10ddb8f1f2174cc9f6bcf056aa77b2f090deb17da094044e9be4041f0669e9b8"
+    },
+    {
+      "path": "after/bird-female.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9bb27ac0416b0af963e51b21ab6cb6d1f8affc4138defd9ba1f21c14bab906f0"
+    },
+    {
+      "path": "after/bird-male.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dd34134a46b4a05fd938e36addcff0086654fa32e4f22ac0ddb6cad7572dd7de"
+    },
+    {
+      "path": "after/bird-motion-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "75f499ef09f6587c435c1ff25f02545e76ef7764b3d015087ed1c66b8d4bceb9"
+    },
+    {
+      "path": "after/cache-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "552dd186615eff0e0f24a0576fe78ee9c9395954bf8a0cd11349cd5bc7903989"
+    },
+    {
+      "path": "after/chat-details-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "41483d0bc69cc24cc93bfeb08a78bda7a5e53676da81562a04b8c2000b0d7941"
+    },
+    {
+      "path": "after/chat-details.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b7f094e151683f9868ab333cf1fde4715d35e4d3cf41eb9ad6e94b36672da4fd"
+    },
+    {
+      "path": "after/chat-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1f748005a931c265879afb7dca040cff6e3252eab12f09a166e38bbe390f611a"
+    },
+    {
+      "path": "after/chat-receipt-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1b6a11f22e1358c612ac2619310a234b36dc4827944c68fcaa0f2340b03b8744"
+    },
+    {
+      "path": "after/chat-stickers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f38525a1e7d3c0e1c0509b48da595a22713ed4d9cac385efd3dd6457c6c3f220"
+    },
+    {
+      "path": "after/compose-draft.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2d50357d3b2c644c7a01ada627d1aa564441743f9c7d24d50aa0675af7c75d8a"
+    },
+    {
+      "path": "after/compose-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ba49ead1fd884786a0b0b3480c6b2620fb2a189174599c104c98ef312afae94e"
+    },
+    {
+      "path": "after/compose-sent.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "2a70b5cfd589b26a312e611acda05deb39f863c9ff44e6cdb06d9deb25fda351"
+    },
+    {
+      "path": "after/conversation-unlocked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "af82f04e15ae6c9cfcbf8dbe65880fd23943c663538b71efc504ff7fc18ef4c6"
+    },
+    {
+      "path": "after/forgot-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "100ef6a9d14fd2945b5409dad7bdc02ab854a691c5918f593d5547f4fbc92805"
+    },
+    {
+      "path": "after/general.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "6033b25648acf7b24c26deb2858b42dbba336ada972e3fa3107b13c0f972cc38"
+    },
+    {
+      "path": "after/home-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5868526d7a27983bff3c2e3f6ccca20ebfa0ea5d5c92ce59f408225aa3bb3af8"
+    },
+    {
+      "path": "after/home-error.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c12253150049efb22e24163a06d614224242822ccbf8616e8b6f3b5ef6f71aa6"
+    },
+    {
+      "path": "after/home-loading.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "efbb20ebb7e0e15950c99d5d6e7d2c9587494b46d8510879307b5a2c27bddd3f"
+    },
+    {
+      "path": "after/inbox-drawer.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "960dc966c826fa5d313ba23d235a48b14be949a3739e5bf6a8f6c48c3cd0725f"
+    },
+    {
+      "path": "after/inbox-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d41184a70867c1e1d29ff4ed11438b9bf87f04ac9164e4079e38ebe093d67ab9"
+    },
+    {
+      "path": "after/inbox-friends-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "0774f9fa2d9fb46c4a71a5c46b8337bfe46ea5a73e9865d875b2718617e67c22"
+    },
+    {
+      "path": "after/inbox-friends.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "f48917ef71ff269e921f1c97e6b668f86cbc1e64ef4b9398a353b1ad04047eaa"
+    },
+    {
+      "path": "after/inbox-pending.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "16d96b393c522dadad32932061bd873d482aed3158cb9826353ce1a986ef819c"
+    },
+    {
+      "path": "after/language-en.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "df6ee5bc3902546ae7050bd68b1a46644946408be89d0ea1ff7f660cd4901cd1"
+    },
+    {
+      "path": "after/language-ko.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "9b0249ced1e532882fe682cd94a3732c16f0a5cbaa5723bbf864afb96962cc51"
+    },
+    {
+      "path": "after/letter-report.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "12a17b4ddd380c55ff4a829666fabde9168563570475ac153eed6517e9ed4f98"
+    },
+    {
+      "path": "after/letter-safety.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "65f0090da0fb4b25555a2bd5c9644890b94d47809ed52b1ec57f3f283ccbb401"
+    },
+    {
+      "path": "after/letter-typed.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "232e343894c0201e2d69e388d4f844d65a5c868cf0db661fa4e3aacf1f55099d"
+    },
+    {
+      "path": "after/letter-waiting.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c074e4e198f210be643b6788061b2a43a5112099a145f27b331689bdb6d6e87d"
+    },
+    {
+      "path": "after/new-password.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "82ecf197d4c06a83fcae3daa58b88f82694914db4965999bf984df7c1c2fc615"
+    },
+    {
+      "path": "after/notifications-off.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3a6d5e623c4cc73fa1977ad4c886e4a89cc8d26cd28b2b89f1a61123d7084607"
+    },
+    {
+      "path": "after/notifications-on.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ed674b267e5141457f8d99d08d951a4e739065da38e8c32ed8315f62703b36ee"
+    },
+    {
+      "path": "after/pass-sheet.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "dedad0a098db3652517f28a27c0c0e09d4f5b8ea1b70ab068a7e99b74bd465be"
+    },
+    {
+      "path": "after/pass-shortage.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "423945f72134a52ca3b79fba528299b7114c829e83b05e8a6cdb7776ebb6b977"
+    },
+    {
+      "path": "after/profile-edit.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "58ef041fdbb49eabc32a4fac559efc3d8bcc56ba1cb70d83ba2f08e17eb3fb60"
+    },
+    {
+      "path": "after/recovery-code.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "478f2bed895d9ce5d0106ee2e8f7618fbe6ee2ec64c80085f7549ddba36aca1e"
+    },
+    {
+      "path": "after/reply-last-free.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3806f3ef50c316f7168ff75c01db59f4e6f3797ad29104cbbf35579ec80734af"
+    },
+    {
+      "path": "after/signin-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "88cca7968dc549260c638d8a736ac62039c0942e6756a9bb9b8c2bd7b3c53e2f"
+    },
+    {
+      "path": "after/signin-invalid.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1465a2d9e68d143fa31aa862d557046e3b1d5a77344b9c7fe2700d2fdc99e58a"
+    },
+    {
+      "path": "after/signup-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c1e3b3739b97ddba9643c77d431d1b410a76f8547a54994d0bbb674484c756d4"
+    },
+    {
+      "path": "after/terms-checked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "cbe1f2d96791e5b05c847f136f7e9d717806ac0a84da642b1972100c17c3cc9c"
+    },
+    {
+      "path": "after/terms-unchecked.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "05729be779698865451dcbb0915109b67eee4e46a89587a2505a4d0b3a4bc70c"
+    },
+    {
+      "path": "after/topup-confirm.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "8a52e84f9831d13dc1492486b2a91a831d98569e84e58c56f860bf3af18d5f73"
+    },
+    {
+      "path": "after/verify-empty.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1220fcc93916b1e620adabad39e8c154b8e9ecc24c8ea57e3075407d246eef8b"
+    },
+    {
+      "path": "after/wallet-payment-unavailable.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "62daa4d23efdfeae2674ff77f7a411fd228ae2eac07f49d1803ab1be050b41e0"
+    },
+    {
+      "path": "after/wallpaper-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3450ebc682d18a65cd2452b96f0da67bb45a380dc37b12cdec906960562f2516"
+    },
+    {
+      "path": "after/wallpapers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b84758f03638d49471cff8d88bfa45ea174df5c1a3204369f976f1eecc9ff5ce"
+    }
+  ]
+}

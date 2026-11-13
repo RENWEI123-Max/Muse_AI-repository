@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test'
+export default defineConfig({testDir:'../../tests',testMatch:/(ui-polish|f01-ui)\.spec\.ts$/,workers:1,timeout:90000,outputDir:'/tmp/maugo-fidelity-existing-results',use:{baseURL:'http://127.0.0.1:5174',viewport:{width:375,height:812}},webServer:{command:'npm run dev -- --port 5174 --strictPort',cwd:new URL('../..',import.meta.url).pathname,url:'http://127.0.0.1:5174'}})

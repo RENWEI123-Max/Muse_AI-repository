@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test'
+export default defineConfig({testDir:'.',testMatch:'capture-client.spec.ts',workers:1,timeout:45000,outputDir:'/tmp/maugo-fidelity-results',use:{baseURL:'http://127.0.0.1:5173',viewport:{width:375,height:812},deviceScaleFactor:1},webServer:{command:'npm run preview -- --port 5173 --strictPort',cwd:new URL('../..',import.meta.url).pathname,url:'http://127.0.0.1:5173'}})
