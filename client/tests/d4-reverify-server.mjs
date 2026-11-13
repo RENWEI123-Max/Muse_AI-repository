@@ -14,7 +14,7 @@ for(const file of (await readdir(backend+'/server/migrations')).filter(f=>f.ends
 process.env.MEDIA_DIRECTORY='/tmp/'+name+'-media'
 const app=buildApp(db)
 const {registerInboxContract}=await import('./inbox-contract.mjs');await registerInboxContract(app,db)
-app.post('/__d4/likes',async req=>{const {owner,peer}=req.body;const p=await db.query("INSERT INTO user_posts(id,user_id,content,visibility,category) VALUES(gen_random_uuid(),$1,'Real liked post','everyone','Life') RETURNING id",[owner]);await db.query('INSERT INTO post_likes(user_id,post_id) VALUES($1,$2)',[peer,p.rows[0].id]);return {ok:true}})
+app.post('/__d4/likes',async req=>{const {owner,peer}=req.body;const p=await db.query("INSERT INTO user_posts(id,user_id,content,visibility,category) VALUES(gen_random_uuid(),$1,'Real liked post','everyone','Life') RETURNING id",[owner]);await db.query('INSERT INTO post_likes(user_id,post_id) VALUES($1,$2)',[peer,p.rows[0].id]);await db.query('INSERT INTO image_card_likes(user_id,image_card_id) SELECT $1,id FROM image_cards WHERE user_id=$2',[peer,owner]);return {ok:true}})
 console.log('D4 isolated database: '+name)
 await app.listen({host:'127.0.0.1',port:3195})
 for(const signal of ['SIGTERM','SIGINT'])process.on(signal,async()=>{await app.close();await db.end();process.exit(0)})
