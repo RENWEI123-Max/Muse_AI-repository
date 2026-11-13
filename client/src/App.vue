@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import { asset, assets, assetCategories } from './lib/assets'
-import { locale, t } from './lib/i18n'
+import {tr,  locale, t } from './lib/i18n'
 import AuthFlow from './components/AuthFlow.vue'
 import AccountSecurity from './components/AccountSecurity.vue'
 import HomeFlow from './components/HomeFlow.vue'
@@ -17,19 +17,19 @@ watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
 <template>
   <main v-if="audit" class="asset-audit">
-    <h1>343 MauGo assets</h1>
+    <h1>{{tr("343 MauGo assets")}}</h1>
     <section v-for="category in assetCategories" :key="category">
       <h2>{{ category }}</h2>
-      <img v-for="entry in assets.filter(a => a.category === category)" :key="entry.id" :src="entry.url" :alt="entry.name" width="64" height="64">
+      <img v-for="entry in assets.filter(a => a.category === category)" :key="entry.id" :src="entry.url" :alt="tr(entry.name)" width="64" height="64">
     </section>
   </main>
-  <main v-else class="device" :lang="locale" aria-label="MauGo">
+  <main v-else class="device" :lang="locale" :aria-label="tr('MauGo')">
     <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" @signin="page='email'" @security="securityOpen=true" /></div>
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
     <div v-if="page !== 'home' && page !== 'preview'" class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">
-        <img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo" class="wordmark">
-        <button class="language" aria-label="Switch language" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ locale === 'en' ? '한국어' : 'EN' }}</button>
+        <img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="tr('MauGo')" class="wordmark">
+        <button class="language" :aria-label="tr('Switch language')" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ tr(locale === 'en' ? '한국어' : 'EN') }}</button>
       </header>
       <PageTransition>
         <section v-if="page === 'welcome'" key="welcome" class="auth-content">

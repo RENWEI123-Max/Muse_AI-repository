@@ -1,15 +1,17 @@
 import {test,expect,type Page} from '@playwright/test'
+import {readFileSync} from 'node:fs'
 
 async function signIn(page:Page,user:{email:string;password:string}){
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:/Meet your letters|편지 만나기/}).click()
  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
  await expect(page.locator('.settings-flow')).toBeVisible()
 }
 async function shot(page:Page,state:string){await expect(page.locator('.settings-body')).toHaveCSS('opacity','1');await page.screenshot({path:`docs/d6-${state}.png`})}
 
-test('D6 local settings persistence, states and cache confirmation preserve real account and ledgers',async({page,request})=>{
+test('D6 local settings persistence, states and cache confirmation preserve real account and ledgers',async({page,request,browser})=>{
+ test.setTimeout(120000)
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
  const seed=await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'read'}});expect(seed.ok()).toBeTruthy();const user=await seed.json()
  const headers={Authorization:`Bearer ${user.token}`}
@@ -17,31 +19,67 @@ test('D6 local settings persistence, states and cache confirmation preserve real
  const purchase=await request.post('http://127.0.0.1:3001/filter-pass/purchase',{headers:{...headers,'Idempotency-Key':crypto.randomUUID()},data:{days:plans.plans[0].days}});expect(purchase.ok()).toBeTruthy()
  const exported=await request.get('http://127.0.0.1:3001/users/me/export',{headers});expect(exported.ok()).toBeTruthy();const before=await exported.json()
  expect(before.wallet.length).toBeGreaterThan(0);expect(before.collections.length).toBeGreaterThan(0);expect(before.conversations[0].unlocked_at).toBeTruthy()
+ const other=(await (await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'empty'}})).json())
+ const otherHeaders={Authorization:`Bearer ${other.token}`}
+ const upload=await request.post('http://127.0.0.1:3001/media/uploads?purpose=post&filename=d6-card.png',{headers:{...headers,'Content-Type':'image/png'},data:readFileSync('src/assets/05-avatars/portrait-1.png')});expect(upload.status()).toBe(201)
+ const media=await upload.json()
+ const created=await request.post('http://127.0.0.1:3001/users/me/image-cards',{headers,data:{mediaId:media.id,type:'portrait',visibility:'everyone'}});expect(created.status()).toBe(201)
+ const card=await created.json()
+ expect((await request.get('http://127.0.0.1:3001'+card.url,{headers:otherHeaders})).status()).toBe(200)
  await signIn(page,user);await shot(page,'settings-home')
  await page.locator('#language-settings').click();await shot(page,'language-en');await page.locator('[data-language="ko"]').click()
  await expect(page.locator('.settings-flow h1')).toHaveText('언어');await expect(page.locator('html')).toHaveAttribute('lang','ko');await shot(page,'language-ko')
+ await page.locator('#settings-back').click();await page.locator('#settings-back').click();await expect(page.locator('.d4-profile h1')).toHaveText('나의 작은 공간');await page.screenshot({path:'docs/d6-business-profile-ko.png'});await page.locator('#page-back').click();await expect(page.locator('#compose')).toContainText('편지');await page.screenshot({path:'docs/d6-business-home-ko.png'});await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toContainText('대화');await page.screenshot({path:'docs/d6-business-inbox-ko.png'});
  await signIn(page,user);await expect(page.locator('.settings-flow h1')).toHaveText('설정');await page.locator('#language-settings').click();await expect(page.locator('[data-language="ko"]')).toHaveAttribute('aria-pressed','true')
  await page.locator('[data-language="en"]').click();await page.locator('#settings-back').click();await page.locator('#notifications-settings').click();await shot(page,'notifications-on')
  await page.locator('#incoming-notifications').uncheck();await page.locator('#replies-notifications').uncheck();await page.locator('#system-notifications').uncheck();await page.locator('#allow-notifications').uncheck()
  for(const id of ['incoming','replies','system'])await expect(page.locator(`#${id}-notifications`)).toBeDisabled()
  await shot(page,'notifications-off');await signIn(page,user);await page.locator('#notifications-settings').click();await expect(page.locator('#allow-notifications')).not.toBeChecked();await page.locator('#allow-notifications').check()
  for(const id of ['incoming','replies','system']){await expect(page.locator(`#${id}-notifications`)).not.toBeChecked();await page.locator(`#${id}-notifications`).check()}
- await page.locator('#settings-back').click();await page.locator('#privacySettings-settings').click();await expect(page.locator('#profile-visibility')).toBeDisabled();await shot(page,'privacy-unavailable')
+ await page.locator('#settings-back').click();await page.locator('#privacySettings-settings').click();await expect(page.locator('#profile-visibility')).toBeEnabled();await shot(page,'privacy')
+ await page.locator('#profile-visibility').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('.settings-veil')).toHaveCSS('opacity','1');await shot(page,'privacy-visibility')
+ await page.locator('[data-visibility="friends"]').click();await page.locator('#save-visibility').click();await expect(page.locator('#profile-visibility small')).toHaveText('Friends')
+ expect((await request.get('http://127.0.0.1:3001'+card.url,{headers:otherHeaders})).status()).toBe(403)
+ await page.locator('#profile-visibility').click();await page.locator('[data-visibility="only_me"]').click();await page.locator('#save-visibility').click();await expect(page.locator('#profile-visibility small')).toHaveText('Only me');await shot(page,'privacy-only-me')
+ const second=await browser.newContext();const secondPage=await second.newPage();await signIn(secondPage,other)
+ const denied=await secondPage.evaluate(async({token,url})=>{const r=await fetch('/api'+url,{headers:{Authorization:`Bearer ${token}`}});return {status:r.status,body:await r.json()}},{token:other.token,url:card.url});expect(denied.status).toBe(403)
+ await second.setExtraHTTPHeaders(otherHeaders);const refused=await secondPage.goto('http://127.0.0.1:3001'+card.url);expect(refused?.status()).toBe(403);await secondPage.screenshot({path:'docs/d6-other-account-denied.png'})
+ await second.close()
+ expect((await request.get('http://127.0.0.1:3001'+card.url,{headers})).status()).toBe(200)
+ expect((await (await request.get('http://127.0.0.1:3001/users/me/image-cards',{headers})).json()).items.find((c:{id:string})=>c.id===card.id).visibility).toBe('only_me')
+ await page.locator('#settings-back').click();await page.locator('#privacySettings-settings').click();await expect(page.locator('#profile-visibility small')).toHaveText('Only me')
  await page.locator('#settings-back').click();await page.locator('#general-settings').click();await shot(page,'general');await page.locator('#systemFont').check();await expect(page.locator('html')).toHaveClass(/system-font/);await shot(page,'general-font')
- await page.locator('#haptics').uncheck();await page.locator('#recommendations').uncheck();await signIn(page,user);await page.locator('#general-settings').click()
- await expect(page.locator('#systemFont')).toBeChecked();await expect(page.locator('#haptics')).not.toBeChecked();await expect(page.locator('#recommendations')).not.toBeChecked()
+ await page.locator('#haptics').uncheck();await expect(page.locator('#recommendations')).toBeDisabled();await signIn(page,user);await page.locator('#general-settings').click()
+ await expect(page.locator('#systemFont')).toBeChecked();await expect(page.locator('#haptics')).not.toBeChecked();await expect(page.locator('#recommendations')).toBeDisabled()
  await page.evaluate(()=>{sessionStorage.setItem('chat-draft-d6','Keep this draft');localStorage.setItem('maugo-bird',JSON.stringify({gender:'male',variant:2,motion:true,trails:true}))})
+ await page.evaluate(async()=>{const temporary=await caches.open('maugo-temp-d6');await temporary.put('/d6-thumbnail',new Response('nonempty temporary bytes'));const durable=await caches.open('maugo-profile-d6');await durable.put('/d6-kept',new Response('keep'));const foreign=await caches.open('other-app-cache');await foreign.put('/other-kept',new Response('keep other'))})
+ expect(await page.evaluate(async()=>(await (await caches.open('maugo-temp-d6')).keys()).length)).toBe(1)
  const beforeCache=await (await request.get('http://127.0.0.1:3001/users/me/export',{headers})).json()
  for(const key of ['wallet','collections','conversations','messages','filterPassPurchases'])expect(beforeCache[key]).toEqual(before[key])
  const stored=await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}}))
  let mutations=0;page.on('request',r=>{if(['POST','PATCH','DELETE'].includes(r.method())&&r.url().includes('/api/'))mutations++})
- await page.locator('#clear-cache').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('.settings-veil')).toHaveCSS('opacity','1');await shot(page,'cache-confirm');await page.locator('#cancel-clear-cache').click();await expect(page.getByRole('dialog')).toHaveCount(0)
- await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-body [role="status"]')).toContainText('No temporary cache')
+ await page.locator('#clear-cache').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('.settings-veil')).toHaveCSS('opacity','1');await shot(page,'cache-confirm');await page.locator('#cancel-clear-cache').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(await page.evaluate(()=>caches.has('maugo-temp-d6'))).toBe(true)
+ await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-body [role="status"]')).toContainText('Temporary cache cleared');expect(await page.evaluate(()=>caches.has('maugo-temp-d6'))).toBe(false);expect(await page.evaluate(async()=>await (await caches.open('maugo-profile-d6')).match('/d6-kept').then(r=>r?.text()))).toBe('keep');expect(await page.evaluate(()=>caches.has('other-app-cache'))).toBe(true)
  expect(mutations).toBe(0);expect(await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}}))).toEqual(stored)
  const after=await (await request.get('http://127.0.0.1:3001/users/me/export',{headers})).json()
  for(const key of ['profile','wallet','collections','conversations','messages','filterPassPurchases'])expect(after[key]).toEqual(beforeCache[key])
+ await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-body [role="status"]')).toContainText('No temporary cache')
  await signIn(page,user);await expect(page.locator('.settings-flow')).toBeVisible();expect(errors).toEqual([])
- // Missing contract is asserted explicitly; these responses do not count as settings integration success.
- expect((await request.get('http://127.0.0.1:3001/settings',{headers})).status()).toBe(404)
- expect((await request.patch('http://127.0.0.1:3001/settings',{headers,data:{}})).status()).toBe(404)
+
+})
+
+test('D6 Korean business screens keep user content intact',async({page,request})=>{
+ test.setTimeout(120000)
+ const seed=await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'read'}});expect(seed.ok()).toBeTruthy();const user=await seed.json()
+ await signIn(page,user);await page.locator('#language-settings').click();await page.locator('[data-language="ko"]').click()
+ await page.locator('#settings-back').click();await page.locator('#help-settings').click();await expect(page.locator('.settings-body')).toContainText('답장 10개');await shot(page,'help-ko')
+ await page.locator('#settings-back').click();await page.locator('#security-settings').click();await expect(page.locator('#account-signin')).toBeVisible();await page.locator('.account-security header button').click();await page.locator('#settings-back').click();await expect(page.locator('#upload-image-card')).toBeEnabled()
+ await page.locator('#edit-profile').click();await expect(page.locator('#save-profile')).toHaveText('변경사항 저장');await page.screenshot({path:'docs/d6-business-profile-edit-ko.png'});await page.locator('#page-back').click();await page.locator('#page-back').click()
+ await page.locator('#settings').click();await expect(page.locator('.home-sheet')).toContainText('나이');await page.screenshot({path:'docs/d6-business-filters-ko.png'});await page.locator('.home-sheet header button').click()
+ await page.locator('#magic').click();await expect(page.locator('.home-sheet')).toContainText('비행');await page.screenshot({path:'docs/d6-business-bird-ko.png'});await page.locator('.home-sheet header button').click()
+ await page.locator('#compose').click();await expect(page.locator('#publish')).toContainText('날려');await expect(page.locator('#letter-text')).toHaveAttribute('placeholder','작은 인사 한 번, 첫 메시지 하나.');await page.screenshot({path:'docs/d6-business-letters-ko.png'});await page.locator('.letters-panel > header button').click()
+ await page.locator('#open-inbox').click();await page.locator(`[data-chat="${user.conversations[0]}"]`).click();await expect(page.locator('#chat-input')).toHaveAttribute('placeholder','다정한 말을 건네 보세요…')
+ await page.locator('#chat-input').fill('Home');await page.locator('#chat-send').click();await expect(page.locator('.chat-bubble span').last()).toHaveText('Home');await expect(page.locator('.c6-chat h1')).toHaveText('Tea wanderer 0');await page.screenshot({path:'docs/d6-business-chat-ko.png'})
+ await page.locator('#chat-details').click();await expect(page.locator('.c6-chat h1')).toHaveText('대화 상세');await page.screenshot({path:'docs/d6-business-chat-details-ko.png'})
+ await page.goto('/?auth=consent');await expect(page.locator('html')).toHaveAttribute('lang','ko');await expect(page.locator('#terms-continue')).toHaveText('동의하고 계속하기');await page.screenshot({path:'docs/d6-business-auth-ko.png'})
 })
