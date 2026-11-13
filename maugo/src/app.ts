@@ -1,3 +1,4 @@
+import { registerPrivacy } from './privacy.js';
 import { registerMedia } from './media.js';
 import { registerModeration, lockPair } from './moderation.js';
 import { registerFilterPass } from './filter-pass.js';
@@ -27,11 +28,12 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
   async function authenticate(client: PoolClient, authorization?: string) {
     if (!authorization?.startsWith('Bearer ')) fail(401, 'Bearer token required');
     const result = await client.query('SELECT * FROM users WHERE token_hash=$1 OR id IN (SELECT user_id FROM auth_sessions WHERE token_hash=$1 AND expires_at>NOW()) FOR UPDATE', [hash(authorization.slice(7))]);
-    if (!result.rowCount) fail(401, 'Invalid token');
+    if (!result.rowCount || result.rows[0].deleted_at) fail(401, 'Invalid token');
     if (result.rows[0].is_suspended) fail(403, 'Account suspended');
     return result.rows[0];
   }
   registerAuth(app, db as Pool, authOptions);
+  registerPrivacy(app, transaction, authenticate);
   registerMedia(app, transaction, authenticate);
   registerDiscovery(app, transaction, authenticate);
   registerModeration(app, transaction, authenticate);
@@ -65,6 +67,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     await lockPair(c,sender,recipient);
     if ((await c.query('SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2) OR (blocker_id=$2 AND blocked_id=$1)', [recipient,sender])).rowCount) fail(403, 'Conversation blocked');
     const peer = (await c.query('SELECT * FROM users WHERE id=$1',[recipient])).rows[0];
+    if(peer?.deleted_at) fail(410, 'Account deleted');
     if(peer?.is_suspended) fail(403, 'Account suspended');
   }
   app.post<{ Params: { id: string }; Body: { content: string } }>('/conversations/:id/messages', {

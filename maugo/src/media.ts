@@ -32,7 +32,9 @@ export function registerMedia(app: FastifyInstance,
    const peer=u.id===v.opener_id?v.peer_id:v.opener_id;
    await lockPair(c,u.id,peer);
    if((await c.query('SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2) OR (blocker_id=$2 AND blocked_id=$1)',[u.id,peer])).rowCount) fail(403,'Conversation blocked');
-   if((await c.query('SELECT is_suspended FROM users WHERE id=$1',[peer])).rows[0]?.is_suspended) fail(403,'Account suspended');
+   const account=(await c.query('SELECT * FROM users WHERE id=$1',[peer])).rows[0];
+   if(account?.deleted_at) fail(410,'Account deleted');
+   if(account?.is_suspended) fail(403,'Account suspended');
    if(!v.unlocked_at) fail(403,'Wait for recipient reply');
   } else if(conversationId) fail(400,'conversationId only allowed for chat');
   return u;

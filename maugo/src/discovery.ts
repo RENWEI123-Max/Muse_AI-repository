@@ -20,15 +20,15 @@ const selection = (f: Filters) => ({ gender: f.gender ?? null, city: f.city ?? n
 const visible = `NOT EXISTS(SELECT 1 FROM user_blocks b WHERE
  (b.blocker_id=$1 AND b.blocked_id=u.id) OR (b.blocker_id=u.id AND b.blocked_id=$1))`;
 const columns = `v.id AS conversation_id,v.opening_message_id,v.unlocked_at,m.content,m.created_at,
- u.id AS sender_id,u.display_name,u.avatar,u.city,u.age,u.gender,
+ to_jsonb(u)->>'deleted_at' AS deleted_at,u.id AS sender_id,u.display_name,u.avatar,u.city,u.age,u.gender,
  (v.unlocked_at IS NOT NULL) AS replied,
  EXISTS(SELECT 1 FROM messages r WHERE r.conversation_id=v.id AND r.kind='reply' AND r.sender_id=v.opener_id) AS received_reply`;
 function letter(r: any) {
   return { openingMessageId: r.opening_message_id, conversationId: r.conversation_id, content: r.content,
-    createdAt: r.created_at, sender: { id: r.sender_id, displayName: r.display_name, avatar: r.avatar,
+    createdAt: r.created_at, sender: { id: r.sender_id, displayName: r.display_name, deleted: r.deleted_at != null, avatar: r.avatar,
       city: r.city, age: r.age, gender: r.gender }, replied: r.replied, unlocked: r.unlocked_at != null,
-    unlockedAt: r.unlocked_at, state: r.received_reply ? 'letter-replied' : r.replied ? 'letter-waiting' : 'letter-open',
-    canReply: !r.replied, canChat: r.unlocked_at != null };
+    unlockedAt: r.unlocked_at, state: r.deleted_at ? 'account-deleted' : r.received_reply ? 'letter-replied' : r.replied ? 'letter-waiting' : 'letter-open',
+    canReply: !r.deleted_at && !r.replied, canChat: !r.deleted_at && r.unlocked_at != null };
 }
 export function registerDiscovery(app: FastifyInstance,
   transaction: (work: (c: PoolClient) => Promise<unknown>) => Promise<unknown>,

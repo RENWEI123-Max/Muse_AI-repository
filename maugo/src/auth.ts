@@ -51,9 +51,9 @@ export function registerAuth(app: FastifyInstance, db: Pool, options: AuthOption
     const b=req.body,address=b.email.toLowerCase(); await limit(req.ip,address,'login',10);
     return tx(async c=>{
       const r=await c.query('SELECT * FROM users WHERE email=$1 FOR UPDATE',[address]);
-      const user=r.rows[0]; const [salt,stored]=(user?.password_hash ?? 'dummy:'+ '00'.repeat(64)).split(':');
+      const user=r.rows[0]; const [salt,stored]=(user && !user.deleted_at ? user.password_hash : 'dummy:'+ '00'.repeat(64)).split(':');
       const actual=scryptSync(b.password,salt,64); const expected=Buffer.from(stored,'hex');
-      if(!user || expected.length!==actual.length || !timingSafeEqual(expected,actual)) fail(401,'Invalid email or password');
+      if(!user || user.deleted_at || expected.length!==actual.length || !timingSafeEqual(expected,actual)) fail(401,'Invalid email or password');
       await c.query('UPDATE users SET privacy_version=$2,terms_version=$3,consented_at=NOW() WHERE id=$1',[user.id,b.privacyVersion,b.termsVersion]);
       return session(c,user.id);
     });

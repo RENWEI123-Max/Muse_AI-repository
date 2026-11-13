@@ -14,8 +14,8 @@ export async function creditWallet(db: Pool, userId: string, amount: number, pay
   try {
     await c.query('BEGIN');
     await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))', ['payment:'+paymentReference]);
-    const user = (await c.query('SELECT diamonds FROM users WHERE id=$1 FOR UPDATE', [userId])).rows[0];
-    if (!user) fail(404, 'User not found');
+    const user = (await c.query('SELECT * FROM users WHERE id=$1 FOR UPDATE', [userId])).rows[0];
+    if (!user || user.deleted_at) fail(404, 'User not found');
     const previous = (await c.query('SELECT * FROM wallet_ledger WHERE payment_reference=$1', [paymentReference])).rows[0];
     if (previous && (previous.user_id !== userId || previous.amount !== amount)) fail(409, 'Payment reference reused');
     let entry = previous;
@@ -66,6 +66,7 @@ export function registerWallet(app: FastifyInstance,
         WHERE m.id=$1 AND v.id=$2 AND (v.opener_id=$3 OR v.peer_id=$3) AND m.sender_id<>$3
         AND m.kind='reply' AND v.unlocked_at IS NOT NULL`, [request.params.replyId,request.params.id,u.id])).rows[0];
       if (!message) fail(404, 'Reply not found');
+      if((await c.query('SELECT * FROM users WHERE id=$1',[message.sender_id])).rows[0]?.deleted_at) fail(410,'Account deleted');
       await lockPair(c,u.id,message.sender_id);
       if ((await c.query(`SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2)
         OR (blocker_id=$2 AND blocked_id=$1)`, [u.id,message.sender_id])).rowCount) fail(403, 'Conversation blocked');
