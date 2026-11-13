@@ -101,6 +101,53 @@ test('B16 posts, image card slots and server visibility including media download
   status(await call('GET',`/posts/${publicId}`,b),403);status(await call('GET',media.url,b),403);
   await db.query('UPDATE users SET is_suspended=false WHERE id=$1',[a.id]);
  });
+ await t.test('B17 migration backfills old posts, defaults Life and rejects invalid database category',async()=>{
+  // Reproduce an existing 015 row before applying 016, in this isolated schema.
+  await db.query('ALTER TABLE user_posts DROP COLUMN category');
+  const migration=await readFile(new URL('016_posts_category.sql',dir),'utf8');
+  await db.query(migration);await db.query(migration);
+  assert.equal((await db.query('SELECT category FROM user_posts WHERE id=$1',[publicId])).rows[0].category,'Life');
+  await assert.rejects(db.query('UPDATE user_posts SET category=$2 WHERE id=$1',[publicId,'invalid']),{code:'23514'});
+ });
+ await t.test('B17 create/list/detail categories, All and author/category filtering',async()=>{
+  for(const category of ['Life','Portrait','Style','Outfit']) {
+   const r=await call('POST','/posts',a,{content:'category',category});status(r,201);assert.equal(r.json().category,category);
+   const detail=await call('GET',`/posts/${r.json().id}`,stranger);status(detail,200);assert.equal(detail.json().category,category);
+   const filtered=await call('GET',`/posts?category=${category}&userId=${a.id}`,stranger);status(filtered,200);
+   assert.ok(filtered.json().items.some((p:any)=>p.id===r.json().id));
+   assert.ok(filtered.json().items.every((p:any)=>p.category===category&&p.userId===a.id));
+  }
+  const r=await publish(a,'everyone',[]);status(r,201);assert.equal(r.json().category,'Life');
+  const all=await call('GET','/posts?category=All',stranger);status(all,200);
+  assert.deepEqual(all.json(),(await list(stranger)).json());
+  assert.equal(new Set(all.json().items.map((p:any)=>p.category)).size,4);
+  status(await call('GET','/posts?category=invalid',a),400);
+  status(await call('POST','/posts',a,{content:'bad',category:'invalid'}),400);
+ });
+ await t.test('B17 author updates category/visibility and server immediately enforces visibility',async()=>{
+  const m=await upload();status(m,201);
+  const r=await publish(a,'everyone',[m.json().id]);status(r,201);const id=r.json().id;
+  status(await call('GET',m.json().url,stranger),200);
+  const patch=(u:any,payload:any)=>call('PATCH',`/posts/${id}`,u,payload);
+  status(await patch(undefined,{category:'Style'}),401);
+  status(await patch(b,{category:'Style'}),403);status(await patch(b,{visibility:'only_me'}),403);
+  status(await call('PATCH',`/posts/${randomUUID()}`,a,{category:'Style'}),404);
+  for(const body of [{category:'invalid'},{visibility:'invalid'},{category:'All'},{}]) status(await patch(a,body),400);
+  let updated=await patch(a,{category:'Portrait'});status(updated,200);
+  assert.equal(updated.json().category,'Portrait');assert.equal(updated.json().visibility,'everyone');
+  assert.deepEqual(updated.json().attachments,r.json().attachments);
+  updated=await patch(a,{visibility:'only_me'});status(updated,200);assert.equal(updated.json().category,'Portrait');
+  status(await call('GET',`/posts/${id}`,stranger),403);status(await call('GET',m.json().url,stranger),403);
+  assert.equal((await call('GET','/posts?category=Portrait',stranger)).json().items.some((p:any)=>p.id===id),false);
+  status(await call('GET',`/posts/${id}`,a),200);
+  updated=await patch(a,{visibility:'friends',category:'Style'});status(updated,200);
+  assert.equal(updated.json().visibility,'friends');assert.equal(updated.json().category,'Style');
+  status(await call('GET',`/posts/${id}`,b),200);status(await call('GET',`/posts/${id}`,stranger),403);
+  status(await call('GET',m.json().url,b),200);status(await call('GET',m.json().url,stranger),403);
+  status(await patch(a,{visibility:'everyone'}),200);status(await call('GET',`/posts/${id}`,stranger),200);
+  assert.equal((await call('GET','/posts?category=Style',stranger)).json().items.some((p:any)=>p.id===id),true);
+  status(await call('DELETE',`/posts/${id}`,a),200);
+ });
  await t.test('image cards: ownership, type, primary, eight slots, concurrent full and deletion/refill',async()=>{
   assert.deepEqual((await call('GET','/users/me/image-cards',a)).json(),{items:[]});
   status(await call('POST','/users/me/image-cards',b,{mediaId:media.id,type:'life'}),403);
