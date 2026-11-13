@@ -1,0 +1,110 @@
+{
+  "id": "letters",
+  "title": "03 · 阅读与写信",
+  "description": "展开信件、第一句话、等待回复与发送结果。",
+  "pages": [
+    {
+      "id": "letter-open",
+      "title": "来信详情 / 未回应",
+      "task": "letter",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "letter-typed",
+      "title": "来信详情 / 编辑回应",
+      "task": "letter",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#reply",
+          "That small moment made me smile."
+        ]
+      ]
+    },
+    {
+      "id": "letter-waiting",
+      "title": "来信详情 / 已回应，等待回信",
+      "task": "letter",
+      "seed": "letter-waiting",
+      "actions": []
+    },
+    {
+      "id": "letter-replied",
+      "title": "来信详情 / 已收到回复",
+      "task": "letter",
+      "seed": "letter-replied",
+      "actions": []
+    },
+    {
+      "id": "letter-safety",
+      "title": "来信详情 / 举报或屏蔽",
+      "task": "letter",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#report-note"
+        ]
+      ]
+    },
+    {
+      "id": "letter-report",
+      "title": "来信详情 / 举报原因",
+      "task": "letter",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#report-note"
+        ],
+        [
+          "click",
+          "#safety-report"
+        ]
+      ]
+    },
+    {
+      "id": "compose-empty",
+      "title": "写信 / 空白",
+      "task": "compose",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "compose-draft",
+      "title": "写信 / 已填写",
+      "task": "compose",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#letter-text",
+          "Today I found a quiet little bookshop. What small discovery stayed with you?"
+        ]
+      ]
+    },
+    {
+      "id": "compose-invalid",
+      "title": "写信 / 多行校验",
+      "task": "compose",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#letter-text",
+          "A first line.\nA second line."
+        ]
+      ]
+    },
+    {
+      "id": "compose-sent",
+      "title": "写信 / 发送后等待",
+      "task": "sent-letter",
+      "seed": "standard",
+      "actions": [],
+      "note": "可查看已发出的信，不能重复发送开场白。"
+    }
+  ]
+}

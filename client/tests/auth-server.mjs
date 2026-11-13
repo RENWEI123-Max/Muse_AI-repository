@@ -31,6 +31,16 @@ app.post('/__c3/seed', async () => {
 })
 app.post('/__c3/expire', async req=>{await db.query("UPDATE users SET filter_pass_expires_at=NOW()+interval '2 seconds' WHERE id=$1",[req.body.id]);return {ok:true}})
 
+app.post('/__c4/seed', async () => {
+ const password='SamplePass2026', stamp=Date.now()+'-'+Math.random()
+ async function user(name){const email=name.toLowerCase().replaceAll(' ','-')+'-'+stamp+'@test.local';const r=(await app.inject({method:'POST',url:'/auth/signup',payload:{email,password,termsVersion:'1.0',privacyVersion:'1.0'}})).json();await db.query("UPDATE users SET display_name=$2,city='Seoul',age=25 WHERE id=$1",[r.id,name]);return {...r,email,password}}
+ const viewer=await user('Reader'),author=await user('Little wanderer'),target=await user('Quiet friend')
+ const opening=await app.inject({method:'POST',url:`/conversations/${viewer.id}/opening`,headers:{authorization:`Bearer ${author.token}`},payload:{content:'Today I found a quiet little bookshop. What small discovery stayed with you?'}});if(opening.statusCode!==201)throw Error(opening.body);const letter=opening.json()
+ return {viewer,author,target,letter}
+})
+app.post('/__c4/reply',async req=>{await db.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES(gen_random_uuid(),$1,$2,'reply','Thank you for listening.')",[req.body.conversationId,req.body.senderId]);return {ok:true}})
+app.get('/__c4/count/:id',async req=>({count:Number((await db.query("SELECT count(*) FROM messages WHERE conversation_id=$1 AND kind='opening'",[req.params.id])).rows[0].count)}))
+
 await app.listen({host:'127.0.0.1',port:3001})
 console.log('C2 isolated test backend ready: '+database)
 async function stop(){await app.close();await db.end();await admin.end();process.exit(0)}
