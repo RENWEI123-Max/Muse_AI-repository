@@ -8,6 +8,7 @@ import PageTransition from './components/PageTransition.vue'
 const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
 const sessionToken = ref('')
 const audit = new URLSearchParams(location.search).has('assets')
+document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
 <template>
