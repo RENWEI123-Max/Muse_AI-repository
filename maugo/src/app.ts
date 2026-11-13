@@ -1,3 +1,4 @@
+import { registerFeedback } from './feedback.js';
 import { registerProfiles } from './profiles.js';
 import { registerPosts } from './posts.js';
 import { registerApplePayments, type AppleOptions } from './payments.js';
@@ -46,6 +47,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
   registerPosts(app, transaction, authenticate);
   registerDiscovery(app, transaction, authenticate);
   registerModeration(app, transaction, authenticate);
+  registerFeedback(app, transaction, authenticate);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {
     schema: { params: { type: 'object', required: ['peerId'], properties: { peerId: uuid } },
       body: { type: 'object', additionalProperties: false, required: ['content'], properties: { content: text } } }
