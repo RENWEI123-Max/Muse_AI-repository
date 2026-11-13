@@ -1,3 +1,4 @@
+import { registerMedia } from './media.js';
 import { registerModeration, lockPair } from './moderation.js';
 import { registerFilterPass } from './filter-pass.js';
 import { registerWallet } from './wallet.js';
@@ -31,6 +32,7 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     return result.rows[0];
   }
   registerAuth(app, db as Pool, authOptions);
+  registerMedia(app, transaction, authenticate);
   registerDiscovery(app, transaction, authenticate);
   registerModeration(app, transaction, authenticate);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {

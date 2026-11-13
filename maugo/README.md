@@ -167,3 +167,19 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 审核接口仅允许数据库 `users.is_moderator=true` 的审核账号；默认所有用户为 false，客户端和注册接口不能设置该权限。由运营通过受控数据库管理授予审核员，不提供公开提权接口。
 
 屏蔽任一方向都会阻断双方开场白、回信、已解锁聊天以及回信收取；发送与屏蔽使用相同用户对事务锁，在提交屏蔽后不能绕过检查。解除屏蔽不会删除会话和消息，也不会重置 B3 权限账本：未收到回信仍须等待，已解锁会话继续允许聊天，对方仍保留屏蔽时仍拒绝发送。
+
+### B8 媒体上传
+
+`POST /media/uploads?purpose=chat|avatar|post&filename=photo.png[&conversationId=UUID]`
+使用 Bearer 登录令牌，Content-Type 为媒体的真实 MIME，请求体为文件原始二进制（不是 JSON/base64 或 multipart）。
+返回 201：`id, url, uploaderId, purpose, kind, mimeType, size, createdAt`。上传前验证用户及用途权限，收到文件后再次验证，防止上传期间被屏蔽或封禁。
+
+- chat 必须指定本人参与且已有效回复解锁的会话，双方在解锁前均不能上传媒体；屏蔽、封禁后拒绝。
+- avatar 仅接受图片；post 接受图片、语音、视频。非 chat 不允许携带 conversationId。
+- 图片白名单 JPEG/PNG/WebP；语音 MP3/OGG Opus/WAV；视频 MP4/WebM。服务端识别文件内容，要求 MIME、后缀与识别结果一致；拒绝 SVG、HTML、路径分隔符、多重后缀等。
+- 图片和语音必须小于 10 MiB，视频必须小于 30 MiB（31,457,280 字节，等于上限也拒绝）。框架请求体限制同时拒绝超大请求，包括无 Content-Length 的请求。
+- 文件使用随机 UUID 名称写入 `MEDIA_DIRECTORY` 指定的服务器目录，默认 `var/media/`（相对服务进程工作目录），目录需持久化并可写。数据库 `media_uploads` 记录上传者、用途、会话、类型、字节数、原始名称和时间；数据库事务失败会删除本次文件。备份时应同时备份数据库与该目录。
+- `GET /media/uploads/:id` 为鉴权下载路径；聊天参与者读取仍需会话解锁且无屏蔽/封禁，avatar/post 当前仅上传者可读取，后续公开动态发布接口需单独授权，禁止直接公开挂载存储目录。
+- `POST /conversations/:id/media`，JSON `{ "mediaId": "UUID" }`，发送本人为该会话上传的媒体，再次执行解锁与屏蔽校验；不能发送其他用户、其他会话或 avatar/post 上传的文件。响应包含消息 id、conversationId、mediaId。
+
+迁移 `009_media.sql` 可重复执行。集成测试覆盖授权、解锁、屏蔽、封禁、内容类型/后缀、路径穿越、视频大小边界、真实落盘与读取、媒体发送归属及迁移幂等性。
