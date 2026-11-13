@@ -10,8 +10,8 @@
 | --- | --- | --- |
 | wallet-empty | 通过（余额功能） | 真实 GET /wallet 返回 0，显示 0 diamonds；[截图](d9-wallet-empty.png)。价格与支付缺口见下方。 |
 | wallet-balance | 通过（余额功能） | 隔离库设为 1000，重新进入后 GET /wallet 回读显示 1000；[截图](d9-wallet-balance.png)。 |
-| topup-confirm | **未通过** | 商品目录取自 B12 /payments/apple/products，显示 100/550/1200/2600 四档；已去掉写死美元价。尚无 StoreKit 本地化价格和交易接入，明确显示不可购买并禁用支付；[阻塞截图](d9-topup-confirm-blocked.png)。不能将此当作套餐确认完成。 |
-| topup-success | **未通过** | 没有伪造充值或余额增量；B12 verify 返回 503（Apple 配置缺失）。[阻塞截图](d9-topup-success-blocked.png)。未执行真实沙盒充值、Apple 取消或成功后余额回读。 |
+| topup-confirm | **代码完成，待沙盒验收**（任务 #95） | 四档目录取自 B12 /payments/apple/products，价格取 StoreKit `Product.displayPrice` 本地化价格，无写死美元价；浏览器无商店时显示 Unavailable 且不扣款。旧[阻塞截图](d9-topup-confirm-blocked.png)仅为 #76 记录。 |
+| topup-success | **代码完成，待沙盒验收**（任务 #95） | StoreKit 2 购买带 appAccountToken=当前用户 UUID，签名交易 JWS 提交 POST /payments/apple/verify；仅服务端验证成功后才 finish 交易并 GET /wallet 回读余额；取消/待批准/失败明确提示且不改余额；验证失败的交易保持未完成，下次打开充值页重新提交。真实沙盒充值未执行。 |
 | pass-default | 通过 | 默认选中 7 天 / 150 钻石，未开通，显示余额与非自动续费说明；[截图](d9-pass-default.png)。 |
 | pass-one-day | 通过 | 点击选择 1 天 / 30 钻石，选中状态过渡；[截图](d9-pass-one-day.png)。 |
 | pass-month | 通过 | 点击选择 30 天 / 480 钻石；[截图](d9-pass-month.png)。 |
@@ -38,7 +38,7 @@
 
 ## 未通过项与 Smith 待决定事项
 
-1. **topup-confirm、topup-success 未完成**。客户端尚缺真实 StoreKit 商品查询、购买、签名交易提交到 `/payments/apple/verify` 的实现；浏览器没有原生商店。当前明确禁止付款，不接受输入伪收据，不使用 economy.json 的 usd 字段作为商店展示价。
+1. **topup-confirm、topup-success 客户端链路已于任务 #95 实现**：原生插件 `ios/App/App/StoreKitPlugin.swift`（StoreKit 2，无新依赖，由 `MainViewController` 注册）+ `src/components/ReplyTopup.vue`；`tests/d9-storekit.spec.ts`（`tests/d9-storekit.config.ts`）以模拟原生桥和接口验证商品、购买、取消、验证失败与未完成交易重提。本机无 Xcode，iOS 原生编译与沙盒端到端未验证。
 2. 后端实际返回：`Missing Apple configuration: APPLE_BUNDLE_ID, APPLE_API_KEY_ID, APPLE_API_ISSUER_ID, APPLE_API_KEY_PATH`。需要 Smith 提供/部署 Apple 沙盒配置（安全注入，不提交密钥）、确认 App Store Connect 中四个商品及沙盒测试账号可用，并确定原生 iOS 商店验收环境。之后仍需实现并验收 StoreKit 客户端链路，不能仅配置后端就宣布完成。
 3. 真实沙盒充值成功、Apple 取消不扣款、服务端验证入账及充值成功余额回读，以及原生设备动效/完整高保真验收仍未通过。Filter Pass 只花钻石，不另设 IAP 商品。
 
