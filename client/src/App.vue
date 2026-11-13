@@ -10,9 +10,10 @@ const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'w
 const sessionToken = ref(''), sessionUser = ref('')
 const securityOpen = ref(false)
 const appLocked = ref(false)
-// F07: device storage holds drafts/preferences of the last signed-in account; another account starts clean.
-function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);localStorage.setItem('maugo-account',account);document.documentElement.classList.remove('system-font')}sessionToken.value=token;sessionUser.value=account;page.value='home'}
-function signedOut(){sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
+// F07: drafts/preferences/chat appearance are cleared on sign-out (#103) and when another account signs in; language and per-account App lock stay.
+function clearDevice(){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);document.documentElement.classList.remove('system-font')}
+function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){clearDevice();localStorage.setItem('maugo-account',account)}sessionToken.value=token;sessionUser.value=account;page.value='home'}
+function signedOut(){clearDevice();sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
 const audit = new URLSearchParams(location.search).has('assets')
 document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
@@ -46,7 +47,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
             <button class="auth-preview" @click="page = 'preview'">{{ t('explore') }}</button>
           </div>
         </section>
-        <AuthFlow v-else-if="page !== 'preview'" :key="page" :initial="page" @back="page = 'welcome'" @authenticated="signedIn" />
+        <AuthFlow v-else-if="page !== 'preview'" :key="page" :initial="page" @back="page = 'welcome'" @signedout="signedOut" @authenticated="signedIn" />
       </PageTransition>
       <div class="home-indicator" aria-hidden="true"></div>
     </div>
