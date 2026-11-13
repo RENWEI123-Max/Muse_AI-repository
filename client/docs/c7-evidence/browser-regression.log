@@ -1,0 +1,35 @@
+
+> maugo-client@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:264899) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:264911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:264979) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 2 workers
+
+(node:265019) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:265020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send (7.1s)
+  ✓   3 tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission (23.9s)
+  ✓   4 tests/chat.spec.ts:6:1 › C6 photo history rendering and pending photo (read contract) (10.0s)
+  ✓   5 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (5.2s)
+  ✓   6 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (7.1s)
+  ✓   1 tests/auth.spec.ts:4:1 › 19 prototype states (59.0s)
+  ✓   8 tests/auth.spec.ts:31:1 › real database signup, SMTP failure, wrong code, logout and login (5.7s)
+  ✓   9 tests/auth.spec.ts:58:1 › empty validation and honest Apple error (2.8s)
+  ✓   7 tests/home.spec.ts:2:1 › C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL (17.6s)
+  ✓  10 tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore (20.3s)
+  ✓  11 tests/letters.spec.ts:2:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database (17.0s)
+  ✓  12 tests/inbox.spec.ts:20:39 › C5: empty and notification reminder (3.3s)
+  ✓  13 tests/inbox.spec.ts:20:39 › C5: waiting and notification reminder (3.6s)
+  ✓  14 tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge (5.7s)
+  ✓  15 tests/inbox.spec.ts:27:1 › C5: pagination and API failure are recoverable (6.3s)
+  ✓  16 tests/inbox.spec.ts:29:1 › C5: insufficient balance and modal keyboard focus (4.5s)
+
+  16 passed (2.0m)

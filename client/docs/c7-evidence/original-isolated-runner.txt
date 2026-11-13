@@ -1,0 +1,9 @@
+import pg from '/root/Muse_AI-repository/maugo/node_modules/pg/lib/index.js';
+import dotenv from '/root/Muse_AI-repository/maugo/node_modules/dotenv/lib/main.js';
+import {spawn} from 'node:child_process';
+dotenv.config({path:'/root/Muse_AI-repository/maugo/.env',quiet:true});
+const source=process.env.DATABASE_URL; const pool=new pg.Pool({connectionString:source});
+const name='maugo_c7_acceptance_'+Date.now(); await pool.query(`CREATE DATABASE ${name}`); await pool.end();
+const url=new URL(source);url.pathname='/'+name;console.log('Dedicated test database: '+name);
+const child=spawn('npm',['test'],{cwd:'/root/Muse_AI-repository/maugo',env:{...process.env,DATABASE_URL:url.toString()},stdio:'inherit'});
+child.on('exit',code=>process.exit(code??1));

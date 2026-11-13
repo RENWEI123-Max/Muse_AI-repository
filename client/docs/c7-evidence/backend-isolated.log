@@ -1,0 +1,154 @@
+Dedicated test database: maugo_c7_acceptance_1794538206174
+
+> maugo-backend@0.1.0 test
+> tsx --test test/*.test.ts
+
+TAP version 13
+# Subtest: health is independent of database
+ok 1 - health is independent of database
+  ---
+  duration_ms: 1476.155506
+  type: 'test'
+  ...
+# Subtest: ready checks database
+ok 2 - ready checks database
+  ---
+  duration_ms: 514.411243
+  type: 'test'
+  ...
+# Subtest: database failure returns 503 without exposing details
+ok 3 - database failure returns 503 without exposing details
+  ---
+  duration_ms: 490.984274
+  type: 'test'
+  ...
+# Subtest: configuration validates database and port
+ok 4 - configuration validates database and port
+  ---
+  duration_ms: 8.146391
+  type: 'test'
+  ...
+# Subtest: B2 authentication routes with real PostgreSQL
+ok 5 - B2 authentication routes with real PostgreSQL
+  ---
+  duration_ms: 7928.266888
+  type: 'test'
+  ...
+# Subtest: B3 durable opening ledger and concurrent devices on real PostgreSQL
+ok 6 - B3 durable opening ledger and concurrent devices on real PostgreSQL
+  ---
+  duration_ms: 3203.413776
+  type: 'test'
+  ...
+# Subtest: B10 registration → discovery → opening → reply → collection → chat
+    # Subtest: 00 全量数据库迁移连续执行两次，迁移记录不重复
+    ok 1 - 00 全量数据库迁移连续执行两次，迁移记录不重复
+      ---
+      duration_ms: 3889.09993
+      type: 'test'
+      ...
+    # Subtest: 01 注册与认证异常：真实邮件验证码、非法邮箱、密码不一致、错误及重复验证码
+    ok 2 - 01 注册与认证异常：真实邮件验证码、非法邮箱、密码不一致、错误及重复验证码
+      ---
+      duration_ms: 2100.992768
+      type: 'test'
+      ...
+    # Subtest: 02 并发开场白仅创建一条账本，第二条 409，未解锁消息与媒体拒绝
+    ok 3 - 02 并发开场白仅创建一条账本，第二条 409，未解锁消息与媒体拒绝
+      ---
+      duration_ms: 786.63524
+      type: 'test'
+      ...
+    # Subtest: 03 B 发现 A 来信，详情、免费筛选和 Refresh
+    ok 4 - 03 B 发现 A 来信，详情、免费筛选和 Refresh
+      ---
+      duration_ms: 126.054337
+      type: 'test'
+      ...
+    # Subtest: 04 B 有效回信仍锁定，A 首次免费收取原子解锁，双方可聊天
+    ok 5 - 04 B 有效回信仍锁定，A 首次免费收取原子解锁，双方可聊天
+      ---
+      duration_ms: 195.731082
+      type: 'test'
+      ...
+    # Subtest: 05 前十次免费，第十一次付费，并发及不同重试键只扣一次
+    ok 6 - 05 前十次免费，第十一次付费，并发及不同重试键只扣一次
+      ---
+      duration_ms: 1285.861535
+      type: 'test'
+      ...
+    # Subtest: 06 上海自然日边界：前日 23:59:59 不计额度，当日 00:00 计入
+    ok 7 - 06 上海自然日边界：前日 23:59:59 不计额度，当日 00:00 计入
+      ---
+      duration_ms: 122.844746
+      type: 'test'
+      ...
+    # Subtest: 07 Filter Pass 购买与到期撤销高级筛选
+    ok 8 - 07 Filter Pass 购买与到期撤销高级筛选
+      ---
+      duration_ms: 108.846298
+      type: 'test'
+      ...
+    # Subtest: 08 账本写入失败回滚收取、扣费及解锁，重试仅解锁一次
+    ok 9 - 08 账本写入失败回滚收取、扣费及解锁，重试仅解锁一次
+      ---
+      duration_ms: 617.799338
+      type: 'test'
+      ...
+    1..9
+ok 7 - B10 registration → discovery → opening → reply → collection → chat
+  ---
+  duration_ms: 9931.113609
+  type: 'test'
+  ...
+# Subtest: B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL
+ok 8 - B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL
+  ---
+  duration_ms: 3253.721295
+  type: 'test'
+  ...
+# Subtest: B6 purchases, renewal, expiry, retry, cancellation and atomic ledger on PostgreSQL
+ok 9 - B6 purchases, renewal, expiry, retry, cancellation and atomic ledger on PostgreSQL
+  ---
+  duration_ms: 3302.330068
+  type: 'test'
+  ...
+# Subtest: B11 real database inbox, collection, visibility and permission boundaries
+ok 10 - B11 real database inbox, collection, visibility and permission boundaries
+  ---
+  duration_ms: 2957.795555
+  type: 'test'
+  ...
+# Subtest: B8 persistent media, permissions, signatures, limits and sending
+ok 11 - B8 persistent media, permissions, signatures, limits and sending
+  ---
+  duration_ms: 4824.703371
+  type: 'test'
+  ...
+# Subtest: B7 durable blocks, report ownership, moderation and B3 permissions
+ok 12 - B7 durable blocks, report ownership, moderation and B3 permissions
+  ---
+  duration_ms: 3547.220903
+  type: 'test'
+  ...
+# Subtest: B9 export allowlists, two-stage deletion, tombstones, media retries and new identity
+ok 13 - B9 export allowlists, two-stage deletion, tombstones, media retries and new identity
+  ---
+  duration_ms: 6584.772977
+  type: 'test'
+  ...
+# Subtest: PostgreSQL signup, opening, free and paid collection smoke
+ok 14 - PostgreSQL signup, opening, free and paid collection smoke
+  ---
+  duration_ms: 4330.622298
+  type: 'test'
+  ...
+1..14
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 32257.019149

@@ -1,0 +1,54 @@
+[WebServer] (node:269220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:269231) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:269281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:269300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode (16.0s)
+(node:269469) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/c7-acceptance.spec.ts:16:1 › C7 chat network failure and upload failure preserve retry intent; empty send disabled (3.7s)
+
+
+  1) tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode ───────────
+
+    Error: MauGo-手机壳交互版-离线.html
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 12
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "alt": "Letter author",
+    +     "id": "note-avatar",
+    +     "source": undefined,
+    +   },
+    +   Object {
+    +     "alt": "Your messenger bird",
+    +     "id": "sender-avatar",
+    +     "source": undefined,
+    +   },
+    + ]
+
+      11 |   const images=await page.locator('img').evaluateAll(async imgs=>{imgs.forEach(i=>i.loading="eager");await Promise.all(imgs.map(i=>Promise.race([i.decode().catch(()=>{}),new Promise(r=>setTimeout(r,5000))])));return imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>({id:i.id,alt:i.alt,source:i.getAttribute('src')?.slice(0,70)}))})
+      12 |   await page.screenshot({path:'test-results/c7-'+(file.includes('平铺')?'boards':'shell')+'.png'})
+    > 13 |   expect.soft(images,file).toEqual([]);expect.soft(errors,file).toEqual([])
+         |                            ^
+      14 |  }
+      15 | })
+      16 | test('C7 chat network failure and upload failure preserve retry intent; empty send disabled',async({page,request})=>{
+        at /root/Muse_AI-repository/client/tests/c7-acceptance.spec.ts:13:28
+
+    Error Context: test-results/c7-acceptance-C7-offline-d-90922-es-open-local-images-decode/error-context.md
+
+  1 failed
+    tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode ────────────
+  1 passed (25.5s)
