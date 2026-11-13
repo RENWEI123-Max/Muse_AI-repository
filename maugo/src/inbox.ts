@@ -4,7 +4,7 @@ import type { PoolClient } from 'pg';
 const uuid={type:'string',format:'uuid'};
 const params={type:'object',required:['id'],properties:{id:uuid}};
 const pagination={offset:{type:'integer',minimum:0,default:0},limit:{type:'integer',minimum:1,maximum:100,default:20}};
-const visible=`(m.kind='opening' OR m.sender_id=$1 OR EXISTS(SELECT 1 FROM reply_collections r WHERE r.reply_id=m.id AND r.user_id=$1))
+const visible=`NOT EXISTS(SELECT 1 FROM users sender WHERE sender.id=m.sender_id AND sender.is_suspended) AND (m.kind='opening' OR m.sender_id=$1 OR EXISTS(SELECT 1 FROM reply_collections r WHERE r.reply_id=m.id AND r.user_id=$1))
  AND (p.cleared_at IS NULL OR m.created_at>p.cleared_at)`;
 export function registerInbox(app:FastifyInstance,transaction:(work:(c:PoolClient)=>Promise<unknown>)=>Promise<unknown>,authenticate:(c:PoolClient,authorization?:string)=>Promise<any>){
  async function own(c:PoolClient,id:string,user:string){
@@ -32,6 +32,7 @@ export function registerInbox(app:FastifyInstance,transaction:(work:(c:PoolClien
  app.get<{Params:{id:string};Querystring:{offset:number;limit:number}}>('/conversations/:id/replies/pending',{schema:{params,querystring:{type:'object',additionalProperties:false,properties:pagination}}},async req=>transaction(async c=>{
   const u=await authenticate(c,req.headers.authorization);await own(c,req.params.id,u.id);
   const items=(await c.query(`SELECT m.id,m.created_at AS "createdAt" FROM messages m WHERE m.conversation_id=$1 AND m.kind='reply' AND m.sender_id<>$2
+  AND NOT EXISTS(SELECT 1 FROM users sender WHERE sender.id=m.sender_id AND sender.is_suspended)
   AND NOT EXISTS(SELECT 1 FROM reply_collections r WHERE r.reply_id=m.id AND r.user_id=$2) ORDER BY m.created_at,m.id LIMIT $3 OFFSET $4`,[req.params.id,u.id,req.query.limit+1,req.query.offset])).rows;
   const {rows:[quota]}=await c.query(`SELECT count(*)::int AS used FROM reply_collections WHERE user_id=$1
   AND created_at >= (date_trunc('day',clock_timestamp() AT TIME ZONE 'Asia/Shanghai') AT TIME ZONE 'Asia/Shanghai')
