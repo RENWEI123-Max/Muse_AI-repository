@@ -43,7 +43,7 @@ onUnmounted(()=>{clearInterval(timer);document.removeEventListener('keydown',key
 <template>
 <div class="letters-veil" :class="{'is-composing':compose}" @click.self="close">
 <section class="letters-panel" :class="{'composer-panel':view==='compose','is-sending':busy}" role="dialog" aria-modal="true" :aria-label="tr(view==='compose'?'Share a little story':'A letter for you')" :data-state="state" :aria-busy="busy">
-<header><span aria-hidden="true">✉</span><h2>{{tr(view==='compose'?'Share a little story':view==='sent'?'Your sent letter':'A letter for you')}}</h2><button :aria-label="tr('Close')" @click="close">×</button></header>
+<header><img :src="asset('08-interface-icons/icon-mail-lime-22')" alt="" aria-hidden="true"><h2>{{tr(view==='compose'?'Share a little story':view==='sent'?'Your sent letter':'A letter for you')}}</h2><button :aria-label="tr('Close')" @click="close"><img :src="asset('11-symbol-icons/icon-close-22-8a9290')" alt=""></button></header>
 <template v-if="view==='compose'">
 <div class="sender-preview"><img :src="asset('02-bird-static/female-1')" :alt="tr('Your messenger bird')"><span>{{tr("Your little messenger")}}</span></div>
 <label class="recipient-label">{{tr("Recipient ID")}}<input v-model.trim="recipient" :aria-label="tr('Recipient ID')" :disabled="busy" :placeholder="tr('Paste your recipient’s ID')" autocomplete="off"></label>

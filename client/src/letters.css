@@ -15,3 +15,5 @@
 .d11-flying-letter{position:absolute;left:calc(50% - 19.5px);top:188px;width:39px;height:28px;object-fit:contain;z-index:41;pointer-events:none;animation:d11-letter-flight .44s cubic-bezier(.333333,1,.666667,1) both}
 @keyframes d11-letter-flight{0%{opacity:1;transform:translate(var(--letter-x),var(--letter-y)) rotate(-12deg) scale(.9)}55%{opacity:1}100%{opacity:0;transform:translate(0,0) rotate(0) scale(1.7)}}
 @media(prefers-reduced-motion:reduce){.letter-overlay-enter-active,.letter-overlay-leave-active{transition-duration:.01ms}.d11-flying-letter{display:none}}
+.letters-panel header>img{width:22px;height:22px}.letters-panel header button img{display:block;width:22px;height:22px}
+.letter-validation{text-align:center}
