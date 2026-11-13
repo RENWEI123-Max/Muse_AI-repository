@@ -14,7 +14,7 @@ test('B12 Apple verification, idempotent credit, refunds and atomic ledger', asy
   const admin = new pg.Pool({connectionString:process.env.DATABASE_URL});
   const schema = 'apple_'+randomUUID().replaceAll('-','');
   await admin.query(`CREATE SCHEMA ${schema}`);
-  const pool = new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
+  const pool = new pg.Pool({connectionString:process.env.DATABASE_URL,application_name:schema,options:`-c search_path=${schema}`});
   const { privateKey, publicKey } = await generateKeyPair('ES256',{extractable:true});
   const directory = await mkdtemp(tmpdir()+'/maugo-apple-');
   const keyPath = directory+'/test.p8';
@@ -93,6 +93,53 @@ test('B12 Apple verification, idempotent credit, refunds and atomic ledger', asy
   assert.equal((await notify(tx('40001'))).statusCode,200);
   assert.equal((await submit(await prepare(tx('40001')))).statusCode,409);
   await pool.query('UPDATE users SET diamonds=0 WHERE id=$1',[id]);
+  // Queue both requests behind a real PostgreSQL advisory lock so arrival order is deterministic.
+  async function race(transactionId:string, first:()=>Promise<any>, second:()=>Promise<any>) {
+    const blocker = await admin.connect();
+    const pending:Promise<any>[] = [];
+    await blocker.query('BEGIN');
+    await blocker.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',['apple:'+transactionId]);
+    try {
+      for (const request of [first,second]) {
+        pending.push(Promise.resolve(request()));
+        const deadline = Date.now()+5000;
+        while (true) {
+          const waiting = await admin.query(`SELECT count(*)::int AS n FROM pg_locks l
+            JOIN pg_stat_activity a ON a.pid=l.pid
+            WHERE a.application_name=$1 AND l.locktype='advisory' AND NOT l.granted`,[schema]);
+          if (waiting.rows[0].n === pending.length) break;
+          assert.ok(Date.now()<deadline,'Requests must queue on advisory locks before user row locks');
+          await new Promise(resolve=>setTimeout(resolve,10));
+        }
+      }
+    } finally {
+      await blocker.query('ROLLBACK');
+      blocker.release();
+      await Promise.all(pending);
+    }
+    return Promise.all(pending);
+  }
+  for (let attempt=0; attempt<3; attempt++) {
+    for (const [baseId,refundFirst,existing] of [
+      ['60001',false,false],['60002',true,true],['60003',true,false]
+    ] as const) {
+      const transactionId = baseId+attempt;
+      await t.test(`concurrent ${refundFirst?'refund then verify':'verify then refund'} (${existing?'credited':'new'}, run ${attempt+1})`,async()=>{
+        const transaction = tx(transactionId);
+        const signed = await prepare(transaction);
+        if (existing) assert.equal((await submit(signed)).statusCode,200);
+        const verify = ()=>submit(signed), refund = ()=>notify(transaction);
+        const responses = await race(transactionId,refundFirst?refund:verify,refundFirst?verify:refund);
+        assert.deepEqual(responses.map(r=>r.statusCode),refundFirst?[200,409]:[200,200]);
+        if (refundFirst) assert.equal(responses[1].json().message,'Apple transaction refunded');
+        assert.equal(await balance(),0);
+        const ledger = (await pool.query(`SELECT amount,balance_after FROM wallet_ledger
+          WHERE payment_reference=$1 OR apple_refund_transaction_id=$2 ORDER BY amount DESC`,['apple:'+transactionId,transactionId])).rows;
+        assert.deepEqual(ledger,refundFirst&&!existing?[]:[{amount:100,balance_after:100},{amount:-100,balance_after:0}]);
+        assert.equal((await pool.query('SELECT refunded FROM apple_transactions WHERE transaction_id=$1',[transactionId])).rows[0].refunded,true);
+      });
+    }
+  }
   // Ledger failures roll back both credit and durable transaction identity.
   await pool.query(`CREATE FUNCTION reject_apple_credit() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN RAISE EXCEPTION 'ledger unavailable'; END $$`);
   await pool.query('CREATE TRIGGER reject_apple_credit BEFORE INSERT ON wallet_ledger FOR EACH ROW EXECUTE FUNCTION reject_apple_credit()');
