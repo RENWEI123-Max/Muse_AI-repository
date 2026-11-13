@@ -7,12 +7,13 @@ const fail = (statusCode: number, message: string): never => { throw Object.assi
 
 // Only invoke after the payment adapter verifies signature, order owner and server-side
 // product amount. This is deliberately not exposed as a client-controlled credit endpoint.
-export async function creditWallet(db: Pool, userId: string, amount: number, paymentReference: string) {
+export async function creditWallet(db: Pool | PoolClient, userId: string, amount: number, paymentReference: string) {
   if (!Number.isSafeInteger(amount) || amount <= 0 || amount > 2147483647 || !paymentReference.trim() || paymentReference.length > 256)
     fail(400, 'Invalid payment credit');
-  const c = await db.connect();
+  const ownsTransaction = !('release' in db);
+  const c = ownsTransaction ? await (db as Pool).connect() : db as PoolClient;
   try {
-    await c.query('BEGIN');
+    if (ownsTransaction) await c.query('BEGIN');
     await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))', ['payment:'+paymentReference]);
     const user = (await c.query('SELECT * FROM users WHERE id=$1 FOR UPDATE', [userId])).rows[0];
     if (!user || user.deleted_at) fail(404, 'User not found');
@@ -26,10 +27,10 @@ export async function creditWallet(db: Pool, userId: string, amount: number, pay
       entry = (await c.query(`INSERT INTO wallet_ledger(id,user_id,amount,balance_after,payment_reference)
         VALUES($1,$2,$3,$4,$5) RETURNING *`, [randomUUID(),userId,amount,balance,paymentReference])).rows[0];
     }
-    await c.query('COMMIT');
+    if (ownsTransaction) await c.query('COMMIT');
     return entry;
-  } catch (error) { await c.query('ROLLBACK'); throw error; }
-  finally { c.release(); }
+  } catch (error) { if (ownsTransaction) await c.query('ROLLBACK'); throw error; }
+  finally { if (ownsTransaction) c.release(); }
 }
 
 export function registerWallet(app: FastifyInstance,
