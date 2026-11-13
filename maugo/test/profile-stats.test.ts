@@ -29,7 +29,7 @@ test('B15 live HTTP: empty stats, durable counts, visits and letter ownership', 
  const stats=async(u:{token:string},suffix='')=>{const r=await get('/profiles/me/stats'+suffix,u);assert.equal(r.status,200);return r.json() as Promise<any>;};
  assert.equal((await get('/profiles/me/stats')).status,401);
  assert.equal((await get('/profiles/me/stats',{token:'invalid'})).status,401);
- const zero={followingCount:0,followersCount:0,likesCount:0,visits:[],letters:[]};
+ const zero={followingCount:0,followersCount:0,likesCount:0,postLikesCount:0,imageCardLikesCount:0,visits:[],letters:[]};
  assert.deepEqual(await stats(a),zero);
  const conversation=async(opener:string,peer:string)=>{
   const id=randomUUID();await pool.query('INSERT INTO conversations(id,opener_id,peer_id,unlocked_at,opening_message_id) VALUES($1,$2,$3,NOW(),gen_random_uuid())',[id,opener,peer]);return id;
