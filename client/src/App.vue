@@ -3,9 +3,10 @@ import { ref, watchEffect } from 'vue'
 import { asset, assets, assetCategories } from './lib/assets'
 import { locale, t } from './lib/i18n'
 import AuthFlow from './components/AuthFlow.vue'
-import Avatar from './components/Avatar.vue'
+import HomeFlow from './components/HomeFlow.vue'
 import PageTransition from './components/PageTransition.vue'
 const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
+const sessionToken = ref('')
 const audit = new URLSearchParams(location.search).has('assets')
 watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
@@ -18,7 +19,8 @@ watchEffect(() => { document.documentElement.lang = locale.value })
     </section>
   </main>
   <main v-else class="device" :lang="locale" aria-label="MauGo">
-    <div class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
+    <HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" @signin="page='email'" />
+    <div v-else class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">
         <img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo" class="wordmark">
         <button class="language" aria-label="Switch language" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ locale === 'en' ? '한국어' : 'EN' }}</button>
@@ -36,17 +38,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
             <button class="auth-preview" @click="page = 'preview'">{{ t('explore') }}</button>
           </div>
         </section>
-        <AuthFlow v-else-if="page !== 'preview'" :key="page" :initial="page" @back="page = 'welcome'" />
-        <section v-else :key="page" class="preview-content">
-          <button class="text-button" @click="page = 'welcome'">← {{ t('back') }}</button>
-          <template v-if="page === 'preview'">
-            <h1>{{ t('home') }}</h1>
-            <img class="preview-bird" :src="asset('02-bird-static/female-1')" alt="A little bird carrying a letter">
-            <Avatar :src="asset('05-avatars/portrait-1')" alt="Preview profile" />
-            <p>{{ t('placeholder') }}</p>
-          </template>
-          <template v-else><h1>{{ t(page as 'email' | 'apple' | 'create' | 'terms' | 'privacy') }}</h1><p>{{ t('note') }}</p></template>
-        </section>
+        <AuthFlow v-else-if="page !== 'preview'" :key="page" :initial="page" @back="page = 'welcome'" @authenticated="sessionToken=$event;page='home'" />
       </PageTransition>
       <div class="home-indicator" aria-hidden="true"></div>
     </div>

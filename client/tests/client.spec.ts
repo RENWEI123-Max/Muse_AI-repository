@@ -14,8 +14,8 @@ test('welcome, language entry, preview and circular avatar', async ({ page }) =>
   await expect(page.getByRole('heading', { name: 'MauGo에 오신 것을 환영해요' })).toBeVisible()
   await page.getByRole('button', { name: 'Switch language' }).click()
   await page.getByRole('button', { name: 'Explore preview' }).click()
-  await expect(page.getByRole('heading', { name: 'MauGo Home' })).toBeVisible()
-  await expect(page.locator('.avatar')).toHaveCSS('border-radius', '50%')
+  await expect(page.locator('.home-flow')).toBeVisible()
+  await expect(page.getByRole('button', {name:'Filters',exact:true})).toBeVisible()
   expect(errors).toEqual([])
 })
 test('all 343 manifest images load and decode without 404', async ({ page }) => {
