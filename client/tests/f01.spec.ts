@@ -1,0 +1,27 @@
+import { test, expect } from '@playwright/test'
+test('F01 Pass: shortage, cancellation, automatic return, retry once and renewal',async({page,request})=>{
+ test.setTimeout(90000)
+ const u=await(await request.post('http://127.0.0.1:3001/__c3/seed')).json()
+ const headers={Authorization:`Bearer ${u.token}`}
+ const balance=async(n:number)=>{expect((await request.post('http://127.0.0.1:3001/__c5/balance',{data:{id:u.id,diamonds:n}})).ok()).toBeTruthy()}
+ const wallet=async()=>await(await request.get('http://127.0.0.1:3001/wallet',{headers})).json()
+ await balance(0)
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click()
+ const plan=page.locator('.pass-plan').last();const label=await plan.innerText();const cost=Number(label.split('◆')[1].trim());await plan.click()
+ await expect(page.locator('#confirm-pass-payment')).toBeDisabled();await page.locator('#pass-topup').click();await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await page.keyboard.press('Escape')
+ await expect(page.getByRole('status')).toContainText('selection saved');expect((await wallet()).diamonds).toBe(0)
+ await page.locator('#pass-topup').click();await balance(5000);await expect(page.getByRole('dialog',{name:'Diamonds',exact:true})).toHaveCount(0)
+ await expect(page.getByRole('status')).toContainText('Diamonds added');expect((await wallet()).diamonds).toBe(5000)
+ await page.screenshot({path:'test-results/f01-pass-return.png'})
+ const keys:string[]=[]
+ await page.route('**/filter-pass/purchase',async route=>{keys.push(route.request().headers()['idempotency-key']!);if(keys.length===1){await route.fetch();await route.abort()}else await route.continue()})
+ await page.locator('#confirm-pass-payment').click();await expect(page.locator('#confirm-pass-payment')).toBeEnabled();await page.locator('#confirm-pass-payment').click()
+ await expect(page.getByRole('button',{name:'Filter Woman',exact:true})).toHaveAttribute('aria-pressed','true')
+ expect(keys).toHaveLength(2);expect(keys[0]).toBe(keys[1]);expect((await wallet()).diamonds).toBe(5000-cost)
+ let ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers})).json();expect(ledger.items).toHaveLength(1)
+ await page.unroute('**/filter-pass/purchase')
+ await page.getByLabel('City',{exact:true}).selectOption('Seoul');await page.locator('.pass-badge').first().click();await page.locator('.pass-plan').first().click();await page.locator('#confirm-pass-payment').click()
+ await expect(page.getByLabel('City',{exact:true})).toHaveValue('Seoul')
+ ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers})).json();expect(ledger.items).toHaveLength(2)
+})
