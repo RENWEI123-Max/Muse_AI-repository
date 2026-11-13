@@ -1,3 +1,4 @@
+import { lockPair } from './moderation.js';
 import type { FastifyInstance } from 'fastify';
 import type { Pool, PoolClient } from 'pg';
 import { randomUUID } from 'node:crypto';
@@ -65,6 +66,7 @@ export function registerWallet(app: FastifyInstance,
         WHERE m.id=$1 AND v.id=$2 AND (v.opener_id=$3 OR v.peer_id=$3) AND m.sender_id<>$3
         AND m.kind='reply' AND v.unlocked_at IS NOT NULL`, [request.params.replyId,request.params.id,u.id])).rows[0];
       if (!message) fail(404, 'Reply not found');
+      await lockPair(c,u.id,message.sender_id);
       if ((await c.query(`SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2)
         OR (blocker_id=$2 AND blocked_id=$1)`, [u.id,message.sender_id])).rowCount) fail(403, 'Conversation blocked');
       if (request.body?.cancel) return { state:'cancelled',unlocked:false,context };

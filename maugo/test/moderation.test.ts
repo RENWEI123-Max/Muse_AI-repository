@@ -1,0 +1,76 @@
+import 'dotenv/config';
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { randomUUID } from 'node:crypto';
+import { readdir,readFile } from 'node:fs/promises';
+import pg from 'pg';
+import { buildApp } from '../src/app.js';
+import { digest } from '../src/auth.js';
+
+test('B7 durable blocks, report ownership, moderation and B3 permissions',async t=>{
+ const schema='moderation_'+randomUUID().replaceAll('-','');
+ const admin=new pg.Pool({connectionString:process.env.DATABASE_URL});
+ await admin.query(`CREATE SCHEMA ${schema}`);
+ const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
+ const app=buildApp(pool);
+ t.after(async()=>{await app.close();await pool.end();await admin.end();});
+ const dir=new URL('../server/migrations/',import.meta.url);
+ for(const name of (await readdir(dir)).filter(x=>x.endsWith('.sql')).sort()) await pool.query(await readFile(new URL(name,dir),'utf8'));
+ await pool.query(await readFile(new URL('008_moderation.sql',dir),'utf8'));
+ const user=async(moderator=false)=>{
+  const id=randomUUID(),token=randomUUID();
+  await pool.query('INSERT INTO users(id,email,password_hash,token_hash,is_moderator) VALUES($1,$2,$3,$4,$5)',[id,id+'@test.local','unused',digest(token),moderator]);
+  return {id,token};
+ };
+ const a=await user(),b=await user(),other=await user(),mod=await user(true);
+ const call=(method:any,url:string,u:any,payload?:any)=>app.inject({method,url,headers:u?{authorization:'Bearer '+u.token}:{},payload});
+ const open=(u:any,v:any)=>call('POST',`/conversations/${v.id}/opening`,u,{content:'hello'});
+ const opening=await open(a,b);assert.equal(opening.statusCode,201);
+ const id=opening.json().id;
+ const send=(u:any)=>call('POST',`/conversations/${id}/messages`,u,{content:'reply/chat'});
+ assert.equal((await call('PUT',`/blocks/${b.id}`,undefined)).statusCode,401);
+ assert.equal((await call('PUT',`/blocks/${a.id}`,a)).statusCode,400);
+ assert.equal((await call('PUT',`/blocks/${randomUUID()}`,a)).statusCode,404);
+ for(let i=0;i<2;i++) assert.equal((await call('PUT',`/blocks/${b.id}`,a)).statusCode,200);
+ assert.equal((await pool.query('SELECT * FROM user_blocks')).rowCount,1);
+ assert.equal((await call('GET','/blocks',a)).json().items[0].userId,b.id);
+ for(const [u,v] of [[a,b],[b,a]]) {assert.equal((await open(u,v)).statusCode,403);assert.equal((await send(u)).statusCode,403);}
+ assert.equal((await pool.query('SELECT * FROM messages')).rowCount,1);
+ assert.equal((await pool.query('SELECT unlocked_at FROM conversations WHERE id=$1',[id])).rows[0].unlocked_at,null);
+ // A third party cannot remove A's block.
+ await call('DELETE',`/blocks/${b.id}`,other);assert.equal((await send(b)).statusCode,403);
+ await call('DELETE',`/blocks/${b.id}`,a);
+ assert.equal((await send(a)).statusCode,403); // original B3 wait rule survives unblock
+ assert.equal((await send(b)).statusCode,201);assert.equal((await send(a)).statusCode,201);
+ await call('PUT',`/blocks/${a.id}`,b);
+ for(const u of [a,b]) assert.equal((await send(u)).statusCode,403);
+ await call('DELETE',`/blocks/${a.id}`,b);assert.equal((await send(a)).statusCode,201);
+ const fresh=await user();await call('PUT',`/blocks/${fresh.id}`,a);
+ assert.equal((await open(a,fresh)).statusCode,403);assert.equal((await open(fresh,a)).statusCode,403);
+ assert.equal((await pool.query('SELECT * FROM conversations')).rowCount,1);
+ const report=(u:any,target:any,messageId?:string)=>call('POST','/reports',u,{reportedUserId:target.id,messageId,category:'harassment',reason:'abusive content'});
+ assert.equal((await report(undefined,a)).statusCode,401);
+ assert.equal((await report(a,a)).statusCode,400);
+ assert.equal((await report(other,a,opening.json().messageId)).statusCode,404);
+ assert.equal((await report(b,b,opening.json().messageId)).statusCode,400);
+ const r=await report(b,a,opening.json().messageId);assert.equal(r.statusCode,201);assert.equal(r.json().status,'pending');
+ const rid=r.json().id;
+ assert.equal((await call('GET',`/reports/${rid}`,other)).statusCode,404);
+ assert.equal((await call('GET',`/reports/${rid}`,b)).json().status,'pending');
+ assert.equal((await call('GET','/admin/reports',a)).statusCode,403);
+ assert.equal((await call('GET','/admin/reports?status=pending',mod)).json().items.length,1);
+ const resolve=(u:any,decision:string,action='none')=>call('POST',`/admin/reports/${rid}/resolve`,u,{decision,action,result:'reviewed evidence'});
+ assert.equal((await resolve(a,'approve')).statusCode,403);
+ assert.equal((await resolve(mod,'reject','suspend')).statusCode,400);
+ const resolved=await resolve(mod,'approve','suspend');assert.equal(resolved.statusCode,200);assert.equal(resolved.json().handledBy,mod.id);assert.ok(resolved.json().handledAt);
+ assert.equal((await call('GET',`/reports/${rid}`,b)).json().status,'processed');
+ assert.equal((await call('GET','/admin/reports?status=pending',mod)).json().items.length,0);
+ assert.equal((await call('GET','/admin/reports?status=processed',mod)).json().items.length,1);
+ assert.equal((await resolve(mod,'reject')).statusCode,409);
+ assert.equal((await send(a)).statusCode,403);assert.equal((await send(b)).statusCode,403);
+ const rejected=await report(b,other);
+ const reject=await call('POST',`/admin/reports/${rejected.json().id}/resolve`,mod,{decision:'reject',result:'no violation'});
+ assert.equal(reject.json().status,'rejected');
+ assert.equal((await call('GET',`/reports/${rejected.json().id}`,b)).json().status,'rejected');
+ assert.equal((await pool.query('SELECT * FROM reports')).rowCount,2);
+});

@@ -153,3 +153,17 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 - 同一用户同一键的提交和重试/重复回调只扣一次，同键改档位返回 409。新的真实续购必须使用新键。该接口直接消费已有钻石，不接受客户端支付金额或到账声明；充值继续使用 B5 的可信支付适配器 `creditWallet`。
 - 认证持有的用户行锁串行化购买、续购和其他钱包操作；购买记录、权益到期时间、余额扣除与 `wallet_ledger` 在同一事务提交，任何失败全部回滚。`GET /wallet/ledger` 通过 `filterPassPurchaseId` 关联购买。
 - `007_filter_pass.sql` 可重复执行；集成测试覆盖三档、未开通/过期锁定、有效期累加、并发提交、取消、余额回补重试及流水故障回滚。
+
+### B7 举报、屏蔽与审核
+
+所有接口使用 Bearer 会话认证。数据持久化在 PostgreSQL `reports`、`user_blocks`，应用新增迁移 `008_moderation.sql`；迁移可重复执行。不涉及 client/。
+
+- `POST /reports`：提交 `{reportedUserId, messageId?, category, reason}`，category 为 spam/harassment/sexual/violence/hate/other，reason 为 1–2000 字符。可举报账号；举报消息时必须是本人参与会话内被举报人发送的消息。返回举报 id 和 pending 状态。
+- `GET /reports/:id`：仅举报人查询自己的举报，返回状态及处理结果、处理人、处理时间。状态为 pending（待处理）、processed（已处理）、rejected（已驳回）。
+- `PUT /blocks/:id`、`DELETE /blocks/:id`：幂等屏蔽、解除屏蔽；只能修改自己的屏蔽关系。`GET /blocks` 返回自己的屏蔽列表和时间。
+- `GET /admin/reports?status=pending&limit=20&offset=0`：审核队列，status 可省略或使用上述三种状态，按举报时间及 id 倒序。
+- `POST /admin/reports/:id/resolve`：`{decision:"approve"|"reject", action:"none"|"suspend", result:"处理说明"}`，action 默认为 none。通过映射为 processed，驳回映射为 rejected；驳回不可处罚账号，已处理不可覆盖（409）。处理结果与审核人、时间一同事务提交；suspend 会冻结被举报账号的服务端访问和他人向该账号的发送。
+
+审核接口仅允许数据库 `users.is_moderator=true` 的审核账号；默认所有用户为 false，客户端和注册接口不能设置该权限。由运营通过受控数据库管理授予审核员，不提供公开提权接口。
+
+屏蔽任一方向都会阻断双方开场白、回信、已解锁聊天以及回信收取；发送与屏蔽使用相同用户对事务锁，在提交屏蔽后不能绕过检查。解除屏蔽不会删除会话和消息，也不会重置 B3 权限账本：未收到回信仍须等待，已解锁会话继续允许聊天，对方仍保留屏蔽时仍拒绝发送。

@@ -1,3 +1,4 @@
+import { registerModeration, lockPair } from './moderation.js';
 import { registerFilterPass } from './filter-pass.js';
 import { registerWallet } from './wallet.js';
 import { registerDiscovery } from './discovery.js';
@@ -26,10 +27,12 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     if (!authorization?.startsWith('Bearer ')) fail(401, 'Bearer token required');
     const result = await client.query('SELECT * FROM users WHERE token_hash=$1 OR id IN (SELECT user_id FROM auth_sessions WHERE token_hash=$1 AND expires_at>NOW()) FOR UPDATE', [hash(authorization.slice(7))]);
     if (!result.rowCount) fail(401, 'Invalid token');
+    if (result.rows[0].is_suspended) fail(403, 'Account suspended');
     return result.rows[0];
   }
   registerAuth(app, db as Pool, authOptions);
   registerDiscovery(app, transaction, authenticate);
+  registerModeration(app, transaction, authenticate);
   app.post<{ Params: { peerId: string }; Body: { content: string } }>('/conversations/:peerId/opening', {
     schema: { params: { type: 'object', required: ['peerId'], properties: { peerId: uuid } },
       body: { type: 'object', additionalProperties: false, required: ['content'], properties: { content: text } } }
@@ -57,7 +60,10 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
       openerId: row.opener_id, peerId: row.peer_id, unlocked: row.unlocked_at != null, unlockedAt: row.unlocked_at };
   }
   async function checkBlocked(c: PoolClient, sender: string, recipient: string) {
-    if ((await c.query('SELECT 1 FROM user_blocks WHERE blocker_id=$1 AND blocked_id=$2', [recipient,sender])).rowCount) fail(403, 'Blocked by recipient');
+    await lockPair(c,sender,recipient);
+    if ((await c.query('SELECT 1 FROM user_blocks WHERE (blocker_id=$1 AND blocked_id=$2) OR (blocker_id=$2 AND blocked_id=$1)', [recipient,sender])).rowCount) fail(403, 'Conversation blocked');
+    const peer = (await c.query('SELECT * FROM users WHERE id=$1',[recipient])).rows[0];
+    if(peer?.is_suspended) fail(403, 'Account suspended');
   }
   app.post<{ Params: { id: string }; Body: { content: string } }>('/conversations/:id/messages', {
     schema: { params: { type:'object', required:['id'], properties:{id:uuid} },
@@ -66,10 +72,11 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     if ([...request.body.content].length > 200) fail(400, 'Message exceeds 200 characters');
     const result = await transaction(async c => {
       const user = await authenticate(c, request.headers.authorization);
-      const found = await c.query('SELECT * FROM conversations WHERE id=$1 AND (opener_id=$2 OR peer_id=$2) FOR UPDATE', [request.params.id,user.id]);
+      const found = await c.query('SELECT * FROM conversations WHERE id=$1 AND (opener_id=$2 OR peer_id=$2)', [request.params.id,user.id]);
       if (!found.rowCount) fail(404, 'Conversation not found');
-      const v = found.rows[0];
+      let v = found.rows[0];
       await checkBlocked(c,user.id,user.id === v.opener_id ? v.peer_id : v.opener_id);
+      v = (await c.query('SELECT * FROM conversations WHERE id=$1 FOR UPDATE',[v.id])).rows[0];
       if (!v.unlocked_at && user.id === v.opener_id) fail(403, 'Wait for recipient reply');
       const id = randomUUID();
       await c.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES($1,$2,$3,'reply',$4)", [id,v.id,user.id,request.body.content]);
