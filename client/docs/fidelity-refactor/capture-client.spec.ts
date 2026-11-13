@@ -19,6 +19,7 @@ async function stub(page: Page) {
   if (path==='/auth/login') body={token:'visual-only'}
   else if (path==='/auth/me'||path==='/users/me') body={id:'me',email:'reader@example.com',emailVerified:true}
   else if (path==='/wallet') body={diamonds:120,freeRemaining:3,paidCost:10}
+  else if (path==='/payments/apple/products') body={products:[{id:'maugo.diamonds.100',diamonds:100,label:'A little boost'},{id:'maugo.diamonds.550',diamonds:550,label:'Most popular'},{id:'maugo.diamonds.1200',diamonds:1200,label:'More possibilities'},{id:'maugo.diamonds.2600',diamonds:2600,label:'Best value'}]}
   else if (path==='/filter-pass') body={active:false,expiresAt:null,remainingDays:0,plans:[{days:1,diamonds:30},{days:7,diamonds:150},{days:30,diamonds:480}]}
   else if (path==='/discovery/filters') body={cities:['Seoul','Busan','Tokyo']}
   else if (path==='/letters'||path==='/letters/refresh') body={items:letters,responses:[]}
@@ -119,7 +120,8 @@ test('profile and settings detail states',async({page})=>{
  await enter(page);await page.locator('#open-profile').click();await page.locator('#edit-profile').click();await shot(page,'profile-edit');await page.locator('#page-back').click();await page.locator('#edit-avatar').click();await shot(page,'avatar-gallery');await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#open-settings').click();await page.locator('#language-settings').click();await shot(page,'language-en');await page.locator('[data-language="ko"]').click();await shot(page,'language-ko');await page.locator('[data-language="en"]').click();await page.locator('#settings-back').click();await page.locator('#notifications-settings').click();await shot(page,'notifications-on');await page.locator('#allow-notifications').uncheck();await shot(page,'notifications-off');await page.locator('#settings-back').click();await page.locator('#general-settings').click();await shot(page,'general');await page.locator('#clear-cache').click();await shot(page,'cache-confirm')
 })
 test('wallet selection and unavailable payment',async({page})=>{
- await enter(page);await page.locator('#open-wallet').click();await expect(page.locator('.d1-topup')).toBeVisible();await page.locator('.diamond-pack').nth(1).click();await shot(page,'topup-confirm');await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await shot(page,'wallet-payment-unavailable')
+ // Load the Home balance first: the top-up closes itself as funded when /wallet exceeds the balance it was opened with.
+ await enter(page);await Promise.all([page.waitForResponse(r=>r.url().endsWith('/wallet')),page.locator('#settings').click()]);await page.getByRole('button',{name:'Close'}).click();await page.locator('#open-wallet').click();await expect(page.locator('.d1-topup')).toBeVisible();await page.locator('.diamond-pack').nth(1).click();await shot(page,'topup-confirm');await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await shot(page,'wallet-payment-unavailable')
 })
 test('D11 opening, sending, collection and unlock motion',async({browser,baseURL})=>{
  const context=await browser.newContext({baseURL,viewport:{width:375,height:812},recordVideo:{dir:'/tmp/maugo-fidelity-video',size:{width:375,height:812}}})
