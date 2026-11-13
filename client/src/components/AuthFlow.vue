@@ -6,7 +6,7 @@ import { ApiError, post } from '../lib/api'
 import PageTransition from './PageTransition.vue'
 import { asset } from '../lib/assets'
 const props = defineProps<{initial: string}>()
-const emit = defineEmits<{back: []; authenticated: [token:string, account:string]}>()
+const emit = defineEmits<{back: []; signedout: []; authenticated: [token:string, account:string]}>()
 const target = ref(props.initial === 'create' ? 'signup' : props.initial === 'apple' ? 'apple' : 'signin')
 const route = new URLSearchParams(location.search).get('auth')
 const mode = ref(['terms','privacy'].includes(props.initial) ? props.initial : 'consent')
@@ -40,7 +40,7 @@ async function submit() {
 }
 async function verify() {error.value='';if(!/^\d{6}$/.test(code.value)){error.value='Enter a 6-digit code.';return}if(!validEmail())return;await request(async()=>{const r=await post<{verified:boolean}>('/auth/code/verify',{email:email.value.trim(),code:code.value});if(r.verified)go(recovery.value?'password':'session')})}
 async function apple(cancelled=false) {await request(async()=>{const result=await post<{cancelled?:boolean}>('/auth/apple',cancelled?{cancelled:true}:{});if(result.cancelled)emit('back');else error.value='Apple sign-in did not complete. No session was issued.'})}
-async function logout(){await request(async()=>{await post('/auth/logout',{},token.value);token.value='';emit('back')})}
+async function logout(){await request(async()=>{await post('/auth/logout',{},token.value);token.value='';emit('signedout')})}
 </script>
 <template>
 <div class="auth-flow"><button class="text-button back" :aria-label="tr('Back')" @click="back">{{tr("‹ Back")}}</button>

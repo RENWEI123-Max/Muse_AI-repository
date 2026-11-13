@@ -31,3 +31,29 @@ test('F07 account switch isolation and revoked token',async({page,request})=>{
  await login(page,a);expect(await stored(page)).not.toContain('B private draft for F07');await openChat(page);await expect(page.locator('#chat-input')).toHaveValue('')
  expect((await request.get(api+'/users/me/export',{headers:{Authorization:`Bearer ${tokenB}`}})).status()).toBe(200)
 })
+test('F07 sign-out clears this device immediately (#103)',async({page,request})=>{
+ test.setTimeout(120000)
+ const a=await (await request.post(api+'/__c5/seed',{data:{mode:'read'}})).json()
+ const b={email:a.email.replace('Reader','Tea-wanderer-0'),password:a.password},conversation=a.conversations[0]
+ const tokenA=await login(page,a);await openChat(page);await page.locator('#chat-input').fill('A draft cleared on sign-out')
+ await page.locator('#chat-details').click();await page.locator('#chat-background').click();await page.locator('[data-wallpaper="moon-road"]').click();await page.locator('#apply-wallpaper').click();await page.evaluate(()=>localStorage.setItem('maugo-language','en'))
+ await toSettings(page);await page.locator('#general-settings').click();await page.locator('#systemFont').check();await expect(page.locator('html')).toHaveClass(/system-font/)
+ expect(await stored(page)).toContain('A draft cleared on sign-out');expect(await stored(page)).toContain('maugo-chat-appearance')
+ await page.locator('#settings-back').click();await signOut(page)
+ // Nobody signs in yet: drafts, settings/filter preferences and chat appearance are already gone; language stays.
+ await expect(page.locator('html')).not.toHaveClass(/system-font/)
+ const after=await stored(page)
+ for(const text of ['A draft cleared on sign-out','systemFont','maugo-settings','maugo-chat-appearance','chat-draft-','maugo-discovery-filters','maugo-account'])expect(after).not.toContain(text)
+ expect(await page.evaluate(()=>localStorage.getItem('maugo-language'))).toBe('en')
+ const auth={Authorization:`Bearer ${tokenA}`}
+ expect((await request.get(api+'/profiles/me',{headers:auth})).status()).toBe(401)
+ expect((await request.get(api+'/conversations',{headers:auth})).status()).toBe(401)
+ expect((await request.post(`${api}/conversations/${conversation}/messages`,{headers:auth,data:{content:'replayed'}})).status()).toBe(401)
+ // Same account signs back in: nothing is restored.
+ await login(page,a);await expect(page.locator('html')).not.toHaveClass(/system-font/)
+ await openChat(page);await expect(page.locator('#chat-input')).toHaveValue('')
+ await toSettings(page);await page.locator('#general-settings').click();await expect(page.locator('#systemFont')).not.toBeChecked()
+ await page.locator('#settings-back').click();await signOut(page)
+ // B after A's sign-out sees none of A's data.
+ await login(page,b);expect(await stored(page)).not.toContain('A draft cleared on sign-out');await openChat(page);await expect(page.locator('#chat-input')).toHaveValue('')
+})
