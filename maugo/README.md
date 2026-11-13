@@ -34,7 +34,7 @@ HOST 默认 0.0.0.0，PORT 默认 3000，DATABASE_URL 必填。收到 SIGINT/SIG
 
 - `POST /auth/signup`：JSON `{ "email": "a@example.com", "password": "Password1!", "privacyVersion": "1", "termsVersion": "1" }`，返回 201 和 `{id, token}`；邮箱重复返回 409。密码使用随机盐 scrypt，数据库仅存令牌摘要。B2 认证扩展见下文。
 - 业务请求携带 `Authorization: Bearer <token>`。`POST /conversations/:peerId/opening`，JSON `{ "content": "你好" }`，纯文本 1–200 个 Unicode 字符，返回 201；同一对用户只能建立一次会话，重复返回 409。不解析 HTML 或 Markdown，客户端展示时应作为纯文本。
-- `POST /conversations/:id/replies/:replyId/collect`：携带非空 `Idempotency-Key`，返回 `{id, cost, content}`。仅会话成员可收取对方的 reply；每个用户按 Asia/Shanghai 自然日（00:00 至次日 00:00）每天前十条不同回复免费，此后每条 10 钻，余额不足返回 402。按用户锁行串行化计数、余额、收取记录及账本，全部同一事务提交。相同键和回复重试返回原结果，键用于其他回复返回 409；不同键重复收取同一回复同样不会重复扣费。免费收取不写扣费账本。
+- `POST /conversations/:id/replies/:replyId/collect`：携带非空 `Idempotency-Key`。B5 的确认、取消、重试与钱包契约见下文；免费收取不写扣费流水。
 
 B1 提供上述三个业务接口；B 回复通过数据库测试夹具写入，不提供回复发送、充值、支付或客户端功能。注册余额为零，B2 已增加登录和会话管理。
 
@@ -121,3 +121,24 @@ Pass 仅依据数据库 `filter_pass_expires_at`，这些接口不授予或出�
 迁移 `005_discovery.sql` 可重复执行；发现批次与已看记录持久化，不依赖进程内缓存。
 测试在隔离 PostgreSQL schema 中覆盖筛选锁定和到期、边界分页、并发刷新不重复、
 双向屏蔽、资料隔离、回应提示与 B3 状态，且重复执行新迁移。
+
+
+## B5 回信收取与钱包
+
+迁移 `006_reply_wallet.sql` 可重复执行，保留旧收取及扣费记录。`reply_collections` 中一条记录代表一次成功解锁，`collection_count=1`、`unlocked_at` 标记解锁；重试不增加次数。Conversation 的 `unlocked_at` 仍是 B3 的已回复/聊天权限账本，与逐封回信的付费解锁分开，`openingMessageId` 始终沿用原账本。
+
+所有接口要求 Bearer 登录。收取接口要求 `Idempotency-Key`（1–128 字符），正文可省略或为 `{}`：
+
+- 前 10 次不同回信免费，成功返回 `state: collected`、`id`、`cost`、`content`、`unlocked`、`unlockedAt`、`collectionCount`、`openingMessageId`。
+- 第 11 次起首次请求返回 HTTP 200、`state: confirmation-required`、`code: PAID_CONFIRMATION_REQUIRED`、`cost: 10`，不返回内容、不产生解锁或流水。用户确认后在原 URL、原键提交 `{ "confirmPaid": true }`。
+- 确认后余额不足返回 HTTP 402、`code: INSUFFICIENT_DIAMONDS`、`diamonds`、`cost` 和 `context: { conversationId, replyId, idempotencyKey }`。客户端保留该上下文，充值完成后以原 URL、原键及确认正文重试；失败不会消耗幂等键或免费次数。
+- 取消可直接关闭确认界面，或发送 `{ "cancel": true }`，返回 `state: cancelled`，不改变余额、解锁或流水；取消不会撤销先前已完成的收取。
+- 同一用户的成功键绑定回信，换回信返回 409，包括重复收取时使用的备用键。不同键并发收取同一回信也仅解锁/扣费一次。仅允许收取会话中对方发出的 reply，未回复的会话及任一方向屏蔽关系均拒绝。
+
+免费额度以 Asia/Shanghai 00:00 为界，每日 10 次，成功记录按创建时间计数。认证取得用户行锁后再确定日期，计数、解锁记录、扣费及流水在同一 PostgreSQL 事务内完成。
+
+`GET /wallet` 返回 `diamonds`、`freeRemaining`、`dailyFreeLimit`、`paidCost`、`timeZone`。`GET /wallet/ledger?limit=20&offset=0` 返回本用户的流水 `items`（limit 1–100），包括 `id`、`collectionId`、`amount`、`balanceAfter`、`paymentReference`、`createdAt`。旧流水的 `balanceAfter` 为 null，不伪造历史余额。
+
+`src/wallet.ts` 导出可信服务函数 `creditWallet(pool, userId, amount, paymentReference)`，供支付适配器核验签名、订单归属及服务端商品金额后调用；未开放客户端自行指定金额的充值接口。支付全局唯一编号保证重复回调只入账一次，编号绑定用户与金额，篡改重放返回 409，余额更新及正数流水在同一事务提交。本任务不接入实际支付供应商。
+
+测试使用真实 PostgreSQL，覆盖第 10/11 次边界、付费确认与取消、余额不足原操作重试、同键/异键并发、重复支付回调、事务中途故障回滚、双向屏蔽、钱包归属、上海午夜边界及迁移重复执行。

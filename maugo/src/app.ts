@@ -1,3 +1,4 @@
+import { registerWallet } from './wallet.js';
 import { registerDiscovery } from './discovery.js';
 import { registerAuth, type AuthOptions } from './auth.js';
 import Fastify from 'fastify';
@@ -76,34 +77,6 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     });
     return reply.code(201).send(result);
   });
-  app.post<{ Params: { id: string; replyId: string } }>('/conversations/:id/replies/:replyId/collect', {
-    schema: { params: { type: 'object', required: ['id','replyId'], properties: { id: uuid, replyId: uuid } },
-      headers: { type: 'object', required: ['idempotency-key'], properties: { 'idempotency-key': { type: 'string', minLength: 1, maxLength: 128, pattern: '\\S' } } } }
-  }, async request => transaction(async c => {
-    const user = await authenticate(c, request.headers.authorization);
-    const key = request.headers['idempotency-key'] as string;
-    const message = await c.query(`SELECT m.* FROM messages m JOIN conversations v ON v.id=m.conversation_id
-      WHERE m.id=$1 AND v.id=$2 AND (v.opener_id=$3 OR v.peer_id=$3) AND m.sender_id<>$3 AND m.kind='reply'`,
-      [request.params.replyId,request.params.id,user.id]);
-    if (!message.rowCount) fail(404, 'Reply not found');
-    const existing = await c.query('SELECT * FROM reply_collections WHERE user_id=$1 AND (idempotency_key=$2 OR reply_id=$3)', [user.id,key,request.params.replyId]);
-    if (existing.rows.some(r => r.idempotency_key === key && r.reply_id !== request.params.replyId)) fail(409, 'Idempotency key reused');
-    if (existing.rowCount) return { id: existing.rows[0].id, cost: existing.rows[0].cost, content: message.rows[0].content };
-    // The user row is locked before counting, so concurrent collections share the quota.
-    // Capture the day after acquiring the lock, including when a request waits across midnight.
-    const { rows: [day] } = await c.query(`SELECT
-      date_trunc('day', clock_timestamp() AT TIME ZONE 'Asia/Shanghai') ::text AS start`);
-    const daily = await c.query(`SELECT count(*)::int AS count FROM reply_collections
-      WHERE user_id=$1 AND created_at >= ($2::timestamp AT TIME ZONE 'Asia/Shanghai')
-      AND created_at < (($2::timestamp + interval '1 day') AT TIME ZONE 'Asia/Shanghai')`,
-      [user.id, day.start]);
-    const cost = daily.rows[0].count < 10 ? 0 : 10;
-    if (user.diamonds < cost) fail(402, 'Insufficient diamonds');
-    const id = randomUUID();
-    await c.query('INSERT INTO reply_collections(id,user_id,reply_id,idempotency_key,cost,created_at) VALUES($1,$2,$3,$4,$5,clock_timestamp())', [id,user.id,request.params.replyId,key,cost]);
-    await c.query('UPDATE users SET collected_count=collected_count+1, diamonds=diamonds-$2 WHERE id=$1', [user.id,cost]);
-    if (cost) await c.query('INSERT INTO wallet_ledger(id,user_id,collection_id,amount) VALUES($1,$2,$3,$4)', [randomUUID(),user.id,id,-cost]);
-    return { id, cost, content: message.rows[0].content };
-  }));
+  registerWallet(app, transaction, authenticate);
   return app;
 }
