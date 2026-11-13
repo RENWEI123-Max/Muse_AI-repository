@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
+import ProfileFlow from './ProfileFlow.vue'
 import ReplyTopup from './ReplyTopup.vue'
 import InboxFlow from './InboxFlow.vue'
 import LettersFlow, { type Letter } from './LettersFlow.vue'
@@ -41,6 +42,7 @@ onUnmounted(()=>{clearInterval(tick);document.removeEventListener('keydown',esca
 </script>
 <template>
 <InboxFlow v-if="sheet==='inbox'" :token="token" @close="sheet=''" @signin="emit('signin')" />
+<ProfileFlow v-else-if="sheet==='profile'" :token="token" @close="sheet=''" />
 <section v-else class="home-flow" :class="{'motion-off':!motion,'refreshing':busy}" :data-state="responses.length?'home-response':items.length?'home-ready':'home-empty'">
 <header class="home-header"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><div><button id="magic" aria-label="Bird appearance" @click="sheet='appearance'">✦</button><button id="settings" aria-label="Filters" @click="openFilters">☷</button></div></header>
 <div v-if="error&&sheet!=='pass-confirm'" class="home-error" role="alert">{{error}} <button v-if="!token" @click="emit('signin')">Sign in</button><button v-else :disabled="busy" @click="load()">Retry</button></div>
@@ -50,7 +52,7 @@ onUnmounted(()=>{clearInterval(tick);document.removeEventListener('keydown',esca
 <button id="hat" class="magic-hat" aria-label="Tap the hat to meet three new letters" :disabled="busy" @click="load(true)"><img :src="asset('01-brand-scenes/hat')" alt="A black magic hat with a glowing green ribbon"></button>
 </section>
 <p class="scene-hint">{{busy?'Your little birds are on their way…':loaded&&!items.length?'No letters match just yet. Try another little wish.':'Tap a bird. Open a little story.'}}</p>
-<div class="home-actions"><button id="compose" aria-label="Write a letter" @click="sheet='compose'">✎ Write a letter</button><button id="refresh" aria-label="Refresh" :disabled="busy" @click="load(true)">⟳ Refresh</button><button class="primary" @click="openFilters">Find your letters</button></div><nav class="home-nav"><span aria-current="page">✧ Home</span><button id="open-inbox" @click="sheet='inbox'">Messages</button><button @click="sheet='appearance'">Choose your bird</button></nav>
+<div class="home-actions"><button id="compose" aria-label="Write a letter" @click="sheet='compose'">✎ Write a letter</button><button id="refresh" aria-label="Refresh" :disabled="busy" @click="load(true)">⟳ Refresh</button><button class="primary" @click="openFilters">Find your letters</button></div><nav class="home-nav"><span aria-current="page">✧ Home</span><button id="open-inbox" @click="sheet='inbox'">Messages</button><button @click="sheet='appearance'">Choose your bird</button><button id="open-profile" @click="sheet='profile'">My profile</button></nav>
 <LettersFlow v-if="sheet==='letter'||sheet==='compose'" :token="token" :letter="sheet==='letter'?detail:undefined" :compose="sheet==='compose'" @close="sheet=''" @blocked="items=items.filter(i=>i.openingMessageId!==$event);responses=responses.filter(i=>i.openingMessageId!==$event)" />
 <ReplyTopup v-if="passTopup" :balance="passBalance" :token="token" :required="selectedPlan?.diamonds" context="Pass" @back="returnToPass()" @funded="returnToPass(true)" />
 <Transition name="sheet"><div v-if="!passTopup&&sheet&&!['letter','compose','inbox'].includes(sheet)" class="home-veil" :class="{'pass-payment-veil':sheet==='pass-confirm'}" @click.self="closeSheet">
