@@ -94,7 +94,7 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 
 城市选项为 **mock-fixed-list 占位数据**，不是实时城市目录；代码中保留 TODO。
 新用户的城市、年龄、性别默认空，不伪造资料；筛选时未知资料不匹配对应条件。
-Pass 仅依据数据库 `filter_pass_expires_at`，这些接口不授予或出售 Pass。
+发现接口按数据库 `filter_pass_expires_at` 实时校验权限；购买与续购由下述 B6 接口提供。
 
 未开通或已到期时，任何年龄/城市筛选（包括读取历史高级筛选批次）均返回 HTTP 200、
 `locked=true`、`code=FILTER_PASS_REQUIRED`、锁定提示及空 items，绝不退回未筛选结果。
@@ -142,3 +142,14 @@ Pass 仅依据数据库 `filter_pass_expires_at`，这些接口不授予或出�
 `src/wallet.ts` 导出可信服务函数 `creditWallet(pool, userId, amount, paymentReference)`，供支付适配器核验签名、订单归属及服务端商品金额后调用；未开放客户端自行指定金额的充值接口。支付全局唯一编号保证重复回调只入账一次，编号绑定用户与金额，篡改重放返回 409，余额更新及正数流水在同一事务提交。本任务不接入实际支付供应商。
 
 测试使用真实 PostgreSQL，覆盖第 10/11 次边界、付费确认与取消、余额不足原操作重试、同键/异键并发、重复支付回调、事务中途故障回滚、双向屏蔽、钱包归属、上海午夜边界及迁移重复执行。
+
+
+### B6 Filter Pass
+
+- `GET /filter-pass`（Bearer）：返回 `active`、`expiresAt`、`remainingDays`、`plans`、`features`。剩余天数按 24 小时向上取整，到期后为 0；过期时间保留用于展示。
+- `POST /filter-pass/purchase`（Bearer + `Idempotency-Key`）：请求 `{ "days": 7, "filters": { "city": "Seoul", "minAge": 20, "maxAge": 30 } }`，可选 `cancel: true`。档位由 `src/economy.json` 定义：1/7/30 天分别为 30/150/480 钻，解锁 age、city。
+- 成功返回 `state: purchased`、`purchase`（购买 ID、用户、档位、钻石、起止时间）、当前权益状态与 `context`。起点为购买时间和当前到期时间的较晚者，每天增加 24 小时；立即获得筛选权限，过期自动锁定。
+- 取消返回 `state: cancelled`，不写购买或流水；余额不足返回 HTTP 402、`INSUFFICIENT_DIAMONDS`。两者均返回包含 days、filters、idempotencyKey 的 `context`，调用方应保留该上下文，充值完成后用原键和档位重试。取消本身不会消耗幂等键；成功后再取消/回调仅返回原购买结果，不撤销购买。
+- 同一用户同一键的提交和重试/重复回调只扣一次，同键改档位返回 409。新的真实续购必须使用新键。该接口直接消费已有钻石，不接受客户端支付金额或到账声明；充值继续使用 B5 的可信支付适配器 `creditWallet`。
+- 认证持有的用户行锁串行化购买、续购和其他钱包操作；购买记录、权益到期时间、余额扣除与 `wallet_ledger` 在同一事务提交，任何失败全部回滚。`GET /wallet/ledger` 通过 `filterPassPurchaseId` 关联购买。
+- `007_filter_pass.sql` 可重复执行；集成测试覆盖三档、未开通/过期锁定、有效期累加、并发提交、取消、余额回补重试及流水故障回滚。

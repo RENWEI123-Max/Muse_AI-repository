@@ -20,6 +20,7 @@ test('PostgreSQL signup, opening, free and paid collection smoke', async t => {
   await pool.query(await readFile(new URL('../server/migrations/003_auth.sql', import.meta.url), 'utf8'));
   await pool.query(await readFile(new URL('../server/migrations/004_conversation_ledger.sql',import.meta.url),'utf8'));
   for (let n=0;n<2;n++) await pool.query(await readFile(new URL('../server/migrations/006_reply_wallet.sql',import.meta.url),'utf8'));
+  await pool.query(await readFile(new URL('../server/migrations/007_filter_pass.sql',import.meta.url),'utf8'));
   const signup = async (email: string) => {
     const response = await app.inject({ method: 'POST', url: '/auth/signup', payload: { email, password: 'Password1!'+randomUUID(), privacyVersion:'1',termsVersion:'1' } });
     assert.equal(response.statusCode, 201, response.body);

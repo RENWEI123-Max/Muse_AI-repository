@@ -47,7 +47,7 @@ export function registerWallet(app: FastifyInstance,
     } } }
   }, async request => transaction(async c => {
     const u = await authenticate(c, request.headers.authorization);
-    const entries = await c.query(`SELECT id,collection_id AS "collectionId",amount,balance_after AS "balanceAfter",
+    const entries = await c.query(`SELECT id,filter_pass_purchase_id AS "filterPassPurchaseId",collection_id AS "collectionId",amount,balance_after AS "balanceAfter",
       payment_reference AS "paymentReference",created_at AS "createdAt" FROM wallet_ledger
       WHERE user_id=$1 ORDER BY created_at DESC,id DESC LIMIT $2 OFFSET $3`, [u.id,request.query.limit,request.query.offset]);
     return { items:entries.rows };

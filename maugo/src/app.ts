@@ -1,3 +1,4 @@
+import { registerFilterPass } from './filter-pass.js';
 import { registerWallet } from './wallet.js';
 import { registerDiscovery } from './discovery.js';
 import { registerAuth, type AuthOptions } from './auth.js';
@@ -78,5 +79,6 @@ export function buildApp(db: { query(sql: string): Promise<unknown>; connect?: P
     return reply.code(201).send(result);
   });
   registerWallet(app, transaction, authenticate);
+  registerFilterPass(app, transaction, authenticate);
   return app;
 }
