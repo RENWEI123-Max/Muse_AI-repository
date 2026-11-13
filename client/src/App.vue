@@ -3,10 +3,14 @@ import { ref, watchEffect } from 'vue'
 import { asset, assets, assetCategories } from './lib/assets'
 import { locale, t } from './lib/i18n'
 import AuthFlow from './components/AuthFlow.vue'
+import AccountSecurity from './components/AccountSecurity.vue'
 import HomeFlow from './components/HomeFlow.vue'
 import PageTransition from './components/PageTransition.vue'
 const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
 const sessionToken = ref('')
+const securityOpen = ref(false)
+const appLocked = ref(false)
+function signedOut(){sessionToken.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
 const audit = new URLSearchParams(location.search).has('assets')
 document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
@@ -20,8 +24,9 @@ watchEffect(() => { document.documentElement.lang = locale.value })
     </section>
   </main>
   <main v-else class="device" :lang="locale" aria-label="MauGo">
-    <HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" @signin="page='email'" />
-    <div v-else class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
+    <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" @signin="page='email'" @security="securityOpen=true" /></div>
+    <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
+    <div v-if="page !== 'home' && page !== 'preview'" class="screen" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">
         <img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo" class="wordmark">
         <button class="language" aria-label="Switch language" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ locale === 'en' ? '한국어' : 'EN' }}</button>

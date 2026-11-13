@@ -2,7 +2,7 @@
 import {computed, ref, watch} from 'vue'
 import {locale,t} from '../lib/i18n'
 import {asset} from '../lib/assets'
-const emit=defineEmits<{close:[]}>()
+const emit=defineEmits<{close:[];security:[]}>()
 const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'>('settings')
 const confirm=ref(false),notice=ref('')
 const defaults={notifications:true,incoming:true,replies:true,system:true,haptics:true,recommendations:true,systemFont:false}
@@ -19,7 +19,7 @@ function cleared(){confirm.value=false;notice.value=t('cacheCleared')}
 <section class="settings-flow" @keydown.esc.stop="back">
 <header><button id="settings-back" :aria-label="t('back')" @click="back"><img :src="asset('08-interface-icons/icon-chevron-left-light-settings-22')" alt=""></button><h1>{{title}}</h1><span></span></header>
 <Transition name="settings-page" mode="out-in"><div :key="view" class="settings-body">
-<template v-if="view==='settings'"><div class="settings-group"><button v-for="[page,icon] in pages" :key="page" :id="`${page}-settings`" class="settings-row" @click="view=page"><img :src="asset(icon)" alt=""><span>{{t(page)}}</span><small v-if="page==='language'">{{locale==='en'?'English':'한국어'}}</small><b aria-hidden="true">›</b></button></div></template>
+<template v-if="view==='settings'"><div class="settings-group"><button id="security-settings" class="settings-row" @click="emit('security')"><img :src="asset('08-interface-icons/icon-lock-lime-22')" alt=""><span>Account &amp; security</span><b>›</b></button><button v-for="[page,icon] in pages" :key="page" :id="`${page}-settings`" class="settings-row" @click="view=page"><img :src="asset(icon)" alt=""><span>{{t(page)}}</span><small v-if="page==='language'">{{locale==='en'?'English':'한국어'}}</small><b aria-hidden="true">›</b></button></div></template>
 <template v-else-if="view==='language'"><p>{{t('chooseLanguage')}}</p><div class="language-options"><button v-for="lang in ['en','ko'] as const" :key="lang" :data-language="lang" :aria-pressed="locale===lang" @click="locale=lang"><span>{{lang==='en'?'English':'한국어'}}</span><b>{{locale===lang?'✓':''}}</b></button></div></template>
 <template v-else-if="view==='notifications'"><div class="settings-group"><label class="settings-row"><span>{{t('allowNotifications')}}</span><input id="allow-notifications" v-model="preferences.notifications" type="checkbox" role="switch"><i aria-hidden="true"></i></label><label v-for="item in categories" :key="item" class="settings-row" :class="{'category-disabled':!preferences.notifications}"><span>{{t(item)}}</span><input :id="`${item}-notifications`" v-model="preferences[item]" type="checkbox" role="switch" :disabled="!preferences.notifications"><i aria-hidden="true"></i></label></div></template>
 <template v-else-if="view==='privacySettings'"><div class="settings-group"><button id="profile-visibility" class="settings-row" disabled><span>{{t('profileVisibility')}}</span><small>{{t('unavailable')}}</small></button></div><p role="status">{{t('privacyUnavailable')}}</p></template>
