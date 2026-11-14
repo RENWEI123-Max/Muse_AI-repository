@@ -72,6 +72,5 @@ onUnmounted(()=>{generation++;searchGeneration++;document.removeEventListener('k
 </section>
 </template>
 <style src="../styles/pages/inbox.css"></style>
-<style src="../styles/pages/reply.css"></style>
 
 <style src="../styles/pages/safety.css"></style>

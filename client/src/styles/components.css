@@ -189,3 +189,38 @@
 [lang=ko] .ui-button--cards-text{font-family:var(--font-family-ko)}
 
 .ui-button--cards-delete{border-radius:var(--radius-24);background:var(--grad-primary-height-48);font:var(--font-button);letter-spacing:0}
+
+/* Shell motion, from the embedded prototype. Pages switch instantly. */
+.app-shell :is(.page-enter-active,.page-leave-active,.tab-page-enter-active,.tab-page-leave-active,.push-enter-active,.push-leave-active,.d11-chat-enter-active,.d11-chat-leave-active){transition:none;animation:none}
+.app-shell :is(.page-enter-from,.page-leave-to,.tab-page-enter-from,.tab-page-leave-to,.push-enter-from,.push-leave-to,.d11-chat-enter-from,.d11-chat-leave-to){opacity:1;transform:none}
+.app-shell button{transition:none}
+.app-shell button:not(:disabled):active{scale:none}
+/* Six prototype press rules; floating compose is a reusable opt-in. */
+.app-shell :is(.round,.ui-icon-button):not(:disabled):active{transform:scale(.94)}
+.app-shell :is(.actions button,.home-actions button,.ui-button):not(:disabled):active{transform:scale(.96)}
+.app-shell :is(.tool-button,.ui-icon-button--chat-tool):not(:disabled):active{color:var(--accent);transform:none}
+.app-shell :is(.hold-button,.ui-button--chat-hold):not(:disabled):active{background:var(--press-hold);transform:none}
+.app-shell .collect-replies:not(:disabled):active{transform:scale(.99)}
+.app-shell .profile-floating-compose:not(:disabled):active{transform:scale(.96)}
+.app-shell .home-actions button{transition:transform .2s,opacity .2s}
+
+@keyframes sheet-in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.app-shell :is(.ui-sheet,.home-sheet,.moments-overlay .sheet){animation:sheet-in .3s ease-out}
+.app-shell :is(.ui-dialog,.ui-sheet--reply,.pass-payment-dialog){animation:sheet-in .22s ease-out}
+/* Remove the older 100% travel and .38s sheet animation. */
+.app-shell :is(.sheet-enter-active,.sheet-leave-active,.inbox-sheet-enter-active,.inbox-sheet-leave-active,.d4-sheet-enter-active,.d4-sheet-leave-active,.d5-sheet-enter-active,.d5-sheet-leave-active){transition:none}
+.app-shell :is(.sheet-enter-active,.sheet-leave-active,.sheet-enter-from,.sheet-leave-to) .home-sheet{transition:none;transform:none}
+.app-shell :is(.sheet-enter-from,.sheet-leave-to){opacity:1}
+
+/* Toast supports persistent .show and Vue's existing receipt lifecycle. */
+.app-shell :is(.toast,.ui-toast,.reply-receipt){transition:opacity .2s,transform .2s}
+.app-shell :is(.toast,.ui-toast):not(.show){opacity:0;transform:translateY(8px)}
+.app-shell :is(.toast,.ui-toast).show{opacity:1;transform:translateY(0)}
+.app-shell :is(.reply-receipt-enter-active,.reply-receipt-leave-active){transition:opacity .2s,transform .2s}
+.app-shell :is(.reply-receipt-enter-from,.reply-receipt-leave-to){opacity:0;transform:translateY(8px)}
+.app-shell .ui-switch{transition:background .2s}
+.app-shell .ui-switch::after{transition:transform .2s}
+
+@media(prefers-reduced-motion:reduce){
+ .app-shell.app-shell.app-shell *,.app-shell.app-shell.app-shell *::before,.app-shell.app-shell.app-shell *::after{animation:none;transition:none;scroll-behavior:auto}
+}

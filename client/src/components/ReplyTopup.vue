@@ -75,5 +75,3 @@ onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('
 <p v-if="notice" role="status">{{tr(notice)}}</p><p class="reply-topup-note">{{tr("Purchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.")}}</p><button class="ui-button ui-button--text reply-back" @click="leave">{{tr("Back to")}} {{tr(context||'replies')}}</button>
 </div></Transition>
 </template>
-
-<style src="../styles/pages/reply.css"></style>

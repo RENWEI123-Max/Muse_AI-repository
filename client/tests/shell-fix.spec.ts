@@ -1,0 +1,47 @@
+import {test,expect} from '@playwright/test'
+for(const height of [667,760,812])test(`viewport ${height}`,async({page})=>{
+ await page.setViewportSize({width:375,height});await page.goto('/')
+ expect(await page.locator('.device').evaluate(e=>e.getBoundingClientRect().height)).toBe(height)
+ expect(await page.evaluate(()=>document.documentElement.scrollHeight)).toBe(height)
+ await page.locator('.auth-preview').click()
+ await expect(page.locator('.home-flow')).toBeVisible()
+ for(const sel of ['#refresh','#compose','.main-nav']){
+  const b=await page.locator(sel).boundingBox();expect(b!.y+b!.height,sel).toBeLessThanOrEqual(height)
+ }
+})
+test('shared sheet, switch and press use prototype timing',async({page})=>{
+ await page.goto('/');await page.locator('.auth-preview').click();await page.locator('#magic').click()
+ await expect(page.locator('.r07-sheet')).toHaveCSS('animation-name','sheet-in')
+ await expect(page.locator('.r07-sheet')).toHaveCSS('animation-duration','0.3s')
+ await expect(page.locator('.ui-switch').first()).toHaveCSS('transition-duration','0.2s')
+ await page.locator('.r07-close').click();const icon=page.locator('#magic');await icon.hover();await page.mouse.down()
+ await expect(icon).toHaveCSS('transform','matrix(0.94, 0, 0, 0.94, 0, 0)');await page.mouse.move(0,0);await page.mouse.up()
+ await page.emulateMedia({reducedMotion:'reduce'});await icon.click()
+ await expect(page.locator('.r07-sheet')).toHaveCSS('animation-name','none')
+})
+
+for(const height of [667,812])for(const lang of ['en','ko'])test(`capture and scroll ${height} ${lang}`,async({page})=>{
+ await page.setViewportSize({width:375,height})
+ await page.addInitScript(lang=>{localStorage.setItem('maugo-language',lang);localStorage.setItem('maugo-bird',JSON.stringify({motion:false}))},lang)
+ await page.goto('/');await page.locator('.auth-preview').click();await page.evaluate(()=>document.fonts.ready)
+ await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})))})
+ await page.screenshot({animations:'disabled',path:`docs/ui-redo/shell-fix/home-375x${height}-${lang}.png`})
+ for(const selector of ['#refresh','#compose','.scene-hint'])expect(await page.locator(selector).evaluate(e=>e.scrollWidth<=e.clientWidth),selector).toBeTruthy()
+ await page.locator('#magic').click();const sheet=page.locator('.r07-sheet');await expect(sheet).toBeVisible()
+ await expect(sheet).toHaveCSS('overflow-y','auto')
+ await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})))})
+ await page.screenshot({animations:'disabled',path:`docs/ui-redo/shell-fix/appearance-top-375x${height}-${lang}.png`})
+ const scroll=await sheet.evaluate(e=>{const before=e.scrollTop;e.scrollTop=10000;return {height:e.clientHeight,content:e.scrollHeight,top:e.scrollTop,before}})
+ if(height===667)expect(scroll.top).toBeGreaterThan(0)
+ const done=page.locator('.r07-done');await done.scrollIntoViewIfNeeded();await expect(done).toBeInViewport()
+ await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})))})
+ await page.screenshot({animations:'disabled',path:`docs/ui-redo/shell-fix/appearance-375x${height}-${lang}.png`})
+ await page.goto('/?auth=consent');const terms=page.locator('.terms-scroll');await expect(terms).toBeVisible()
+ await expect(terms).toHaveCSS('height','350px');await expect(terms).toHaveCSS('overflow-y','auto')
+ // Stress only in the browser DOM, after captures: short supplied legal copy fits.
+ const legalScroll=await terms.evaluate(e=>{const original=e.innerHTML;e.innerHTML=original.repeat(8);e.scrollTop=10000;const top=e.scrollTop;e.innerHTML=original;return top})
+ expect(legalScroll).toBeGreaterThan(0)
+ const metrics=await page.evaluate(()=>({viewport:innerHeight,document:document.documentElement.scrollHeight,body:document.body.scrollHeight}))
+ expect(metrics.document).toBe(height)
+ await test.info().attach('scroll-measurements',{body:JSON.stringify({height,lang,appearance:scroll,metrics}),contentType:'application/json'})
+})

@@ -1,0 +1,143 @@
+{
+  "keyframes": [
+    "twinkle",
+    "floor-breathe",
+    "mist-breathe",
+    "sheet-in",
+    "responses-flow",
+    "sprite-loop",
+    "wave",
+    "reply-arrive",
+    "preview-frames"
+  ],
+  "press": [
+    {
+      "selector": ".round:active",
+      "declarations": "transform:scale(.94)"
+    },
+    {
+      "selector": ".actions button:active",
+      "declarations": "transform:scale(.96)"
+    },
+    {
+      "selector": ".tool-button:active",
+      "declarations": "color:var(--lime)"
+    },
+    {
+      "selector": ".hold-button:active",
+      "declarations": "background:#314332"
+    },
+    {
+      "selector": ".collect-replies:active",
+      "declarations": "transform:scale(.99)"
+    },
+    {
+      "selector": ".profile-floating-compose:active",
+      "declarations": "transform:scale(.96)"
+    }
+  ],
+  "transitions": [
+    {
+      "selector": ".aura",
+      "value": "opacity .8s"
+    },
+    {
+      "selector": ".bird-art",
+      "value": "filter .25s"
+    },
+    {
+      "selector": ".actions",
+      "value": "opacity .45s,transform .45s"
+    },
+    {
+      "selector": ".actions button",
+      "value": "transform .2s,opacity .2s"
+    },
+    {
+      "selector": ".veil",
+      "value": "opacity .35s"
+    },
+    {
+      "selector": ".note-panel",
+      "value": "opacity .36s,transform .44s cubic-bezier(.2,.8,.2,1)"
+    },
+    {
+      "selector": ".toast",
+      "value": "opacity .2s,transform .2s"
+    },
+    {
+      "selector": ".screen:not(.force-motion) *,.screen:not(.force-motion) *:before,.screen:not(.force-motion) *:after",
+      "value": "none!important"
+    },
+    {
+      "selector": ".scene-hint",
+      "value": "opacity .7s"
+    },
+    {
+      "selector": ".preference-row input[type=checkbox]",
+      "value": "background .2s"
+    },
+    {
+      "selector": ".preference-row input[type=checkbox]:before",
+      "value": "transform .2s"
+    },
+    {
+      "selector": "#sheet-content:has(#appearance-grid) .switch-row input:before",
+      "value": "transform .2s"
+    }
+  ],
+  "scroll": [
+    {
+      "selector": ".reply-history",
+      "declarations": "flex:1;min-height:20px;overflow:auto;display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-top:14px"
+    },
+    {
+      "selector": ".sheet",
+      "declarations": "position:absolute;left:10px;right:10px;bottom:25px;z-index:50;border:1px solid #ffffff16;border-radius:26px;background:#141d1d;padding:10px 22px 23px;box-shadow:0 -50px 100px #0008;max-height:620px;overflow:auto;animation:sheet-in .3s ease-out"
+    },
+    {
+      "selector": ".conversation",
+      "declarations": "overflow:auto;flex:1;min-height:0;scrollbar-width:none;padding-bottom:12px"
+    },
+    {
+      "selector": ".compose-attachments",
+      "declarations": "display:flex;gap:8px;flex-wrap:wrap;max-height:105px;overflow:auto"
+    },
+    {
+      "selector": ".payment-dialog",
+      "declarations": "position:relative;width:100%;max-height:704px;overflow:auto;background:linear-gradient(145deg,#253229,#17221c);border:1px solid #d5eac51a;border-radius:28px;padding:28px 24px 16px;box-shadow:0 28px 80px #0009;text-align:center;animation:sheet-in .22s ease-out"
+    },
+    {
+      "selector": ".emoji-grid",
+      "declarations": "grid-template-columns:repeat(5,1fr);gap:8px;max-height:304px;overflow:auto"
+    },
+    {
+      "selector": ".page-body",
+      "declarations": "height:calc(100% - 64px);overflow:auto;scrollbar-width:none;padding:24px;overscroll-behavior:contain"
+    },
+    {
+      "selector": ".chat-thread",
+      "declarations": "flex:1;min-height:0;overflow:auto;padding:24px 20px;scrollbar-width:none"
+    },
+    {
+      "selector": ".moment-categories",
+      "declarations": "display:flex;align-items:center;gap:8px;overflow:auto;margin-bottom:24px;scrollbar-width:none"
+    },
+    {
+      "selector": ".auth-panel",
+      "declarations": "height:100%;overflow:auto;scrollbar-width:none"
+    },
+    {
+      "selector": ".terms-scroll",
+      "declarations": "height:350px;overflow:auto;padding:0 16px;border:1px solid #ffffff12;border-radius:16px;background:#142119;scrollbar-width:thin;scrollbar-color:#47623a transparent"
+    },
+    {
+      "selector": ".feedback-types",
+      "declarations": "display:flex;gap:8px;overflow:auto;margin-bottom:20px"
+    },
+    {
+      "selector": ".public-profile-reference>.page-body",
+      "declarations": "display:block;overflow:auto;padding:4px 24px 120px"
+    }
+  ]
+}

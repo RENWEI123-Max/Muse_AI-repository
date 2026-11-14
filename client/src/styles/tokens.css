@@ -877,3 +877,6 @@
  --moments-font-content:400 13px/21px Fredoka;
  --moments-font-confirm:550 22px/28px Fredoka;
 }
+
+/* Prototype hold-button:active; kept out of shared component literals. */
+:root{--press-hold:rgb(49 67 50)}

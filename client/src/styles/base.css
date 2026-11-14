@@ -2,15 +2,33 @@
 @font-face{font-family:Fredoka;src:url('../assets/fonts/Fredoka.ttf') format('truetype');font-weight:300 700;font-display:swap}
 @font-face{font-family:GowunDodum;src:url('../assets/fonts/GowunDodum.ttf') format('truetype');font-weight:400;font-display:swap}
 *{box-sizing:border-box}
+html,body,#app{height:100%;overflow:hidden;overscroll-behavior:none}
 body{margin:0;min-width:280px}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer;touch-action:manipulation}
 img{max-width:100%;user-select:none}
-.device{position:relative;width:100%;max-width:375px;min-height:812px;height:100svh;overflow:hidden;isolation:isolate}
+.app-shell{position:relative;width:100%;max-width:375px;min-height:0;height:min(812px,100svh);overflow:hidden;isolation:isolate}
 .client-statusbar{position:absolute;left:0;top:0;width:100%;height:var(--status-height);object-fit:fill;z-index:96;pointer-events:none}
-.device::after{content:'';position:absolute;bottom:8px;left:50%;width:144px;height:5px;transform:translateX(-50%);background:var(--shell-indicator);mask-image:url('../assets/apple/home-indicator-dark.svg');mask-position:0 -7px;mask-size:144px 20px;mask-repeat:no-repeat;z-index:96;pointer-events:none}
+.app-shell::after{content:'';position:absolute;bottom:8px;left:50%;width:144px;height:5px;transform:translateX(-50%);background:var(--shell-indicator);mask-image:url('../assets/apple/home-indicator-dark.svg');mask-position:0 -7px;mask-size:144px 20px;mask-repeat:no-repeat;z-index:96;pointer-events:none}
 .home-indicator{visibility:hidden}
 [lang=ko]{font-family:var(--font-family-ko)}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:0s;animation-iteration-count:1;transition-duration:0s;scroll-behavior:auto}
 }
+
+/* Bounded content regions: headers and navigation stay outside the scroller. */
+.app-shell :is(.page-body,.d4-body,.d2-body,.settings-body,.inbox-body,.c6-thread,.chat-settings-body,.c6-results,.auth-flow,.auth-content,.d3-report){min-height:0;overscroll-behavior:contain}
+.app-shell :is(.page-body,.d4-body,.d2-body,.settings-body,.auth-content){overflow:auto;scrollbar-width:none}
+.app-shell :is(.ui-sheet,.ui-dialog,.home-sheet,.inbox-drawer,.c6-stickers,.terms-scroll,.letter-conversation,.compose-attachments,.ui-sticker-grid,.categories,.feedback-types){overscroll-behavior:contain}
+.app-shell :is(.ui-sheet,.ui-dialog){max-height:calc(100% - 96px);overflow:auto}
+.app-shell .ui-scrim--dialog>:is(.ui-sheet,.ui-dialog){top:auto;max-height:calc(100% - 48px)}
+.app-shell :is(.cards-overlay,.moments-overlay) :is(.cards-panel,.sheet){top:auto;bottom:24px;max-height:calc(100% - 96px);overflow:auto}
+.app-shell .letters-flow .letters-panel{top:min(144px,calc(100% - 584px))}
+.app-shell .letters-flow .composer-panel{top:min(144px,calc(100% - 520px))}
+/* Welcome content scrolls inside the screen, including absolutely placed actions. */
+.app-shell .auth-content{padding-bottom:32px}
+.app-shell .auth-actions{padding-bottom:32px}
+/* Keep the original 678px appearance contents inside a shorter sheet viewport.
+   Absolute controls otherwise collapse the scroll extent and overlap Done. */
+.app-shell .appearance-sheet::after{content:'';display:block;height:628px;pointer-events:none}
+.app-shell .appearance-sheet .r07-done{top:610px;bottom:auto}

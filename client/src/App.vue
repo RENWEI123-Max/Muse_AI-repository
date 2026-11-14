@@ -26,7 +26,7 @@ watchEffect(() => { document.documentElement.lang = locale.value })
       <img v-for="entry in assets.filter(a => a.category === category)" :key="entry.id" :src="entry.url" :alt="tr(entry.name)" width="64" height="64">
     </section>
   </main>
-  <main v-else class="device" :lang="locale" :aria-label="tr('MauGo')">
+  <main v-else class="device app-shell" :lang="locale" :aria-label="tr('MauGo')">
     <img class="client-statusbar" :src="asset('09-navigation-system/status-bar-light-content')" alt="" aria-hidden="true">
     <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" :user-id="sessionUser" @signin="page='email'" @security="securityOpen=true" /></div>
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
