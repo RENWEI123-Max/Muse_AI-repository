@@ -1,9 +1,9 @@
 /* Measurements from the rendered offline prototype; canvas 375 × 812.
    Keep these shared overrides together so the older flow styles cannot diverge. */
 :root{--white:#f3f4f4;--control-height:48px;--page-gutter:24px}
-.device{overflow:hidden;isolation:isolate}
-.device>.client-statusbar{position:absolute;left:0;top:0;width:100%;height:60px;object-fit:fill;z-index:96;pointer-events:none}
-.device::after{content:'';position:absolute;bottom:8px;left:50%;width:144px;height:5px;transform:translateX(-50%);border-radius:4px;background:#f3f4f4;z-index:96;pointer-events:none}
+
+
+
 .device .home-indicator,.device .inbox-home-indicator{visibility:hidden}
 .device .primary{background:#b5fa70 linear-gradient(110deg,#bdff81,#b0fb61);font-weight:500;box-shadow:none}
 /* Authentication shares the same 48px status area and centered brand. */
@@ -60,9 +60,6 @@
 .device .economy-actions{position:absolute;top:695px;left:24px;right:24px;padding:0;margin:0;height:20px;z-index:3}
 .device .economy-actions button{font-size:9px;padding:0;color:#91a786}
 .device .economy-actions img{width:12px;height:12px}
-.device .home-nav,.device .inbox-nav{position:absolute;left:0;right:0;bottom:0;height:96px;padding:16px 4px 20px;border-radius:24px 24px 0 0;border-top:1px solid #ffffff07;background:linear-gradient(#13181869,#0c111133);align-items:flex-start;z-index:3}
-.device .home-nav>*,.device .inbox-nav button{font-size:0;min-width:64px;min-height:44px;padding:0;gap:0;align-content:start}
-.device .home-nav img,.device .inbox-nav img{width:42px;height:42px;object-fit:contain}
 /* Floating panels have a 12px canvas inset and a visible drag handle. */
 .device .home-veil{background:#0009;backdrop-filter:none;padding:0 12px 24px}
 .device .home-sheet:not(.pass-payment-dialog):not(.pass-page){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
@@ -112,9 +109,8 @@
 .device .inbox-body{padding:12px 24px 112px;scrollbar-width:none}
 .device .inbox-menu-button{gap:5px;width:36px;height:40px}
 .device .inbox-menu-button i,.device .inbox-menu-button i:nth-child(2),.device .inbox-menu-button i:last-child{width:21px;height:2px;margin:0}
-.device .inbox-nav{background:#0d1713;border-radius:0}
 /* Keep small viewports usable without scaling text or distorting artwork. */
-@media(max-height:740px){.device{min-height:100svh}.device .magic-scene{transform:translateY(-30px) scale(.85);transform-origin:50% 40%}.device .scene-hint{top:auto;bottom:176px}.device .home-actions{top:auto;bottom:120px}.device .economy-actions{top:auto;bottom:98px}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
+@media(max-height:740px){.device{min-height:100svh}.device .magic-scene{transform:translateY(calc(-30px - max(0px, 740px - 100svh)));transform-origin:50% 40%}.device .scene-hint{top:auto;bottom:176px}.device .home-actions{top:auto;bottom:120px}.device .economy-actions{top:auto;bottom:98px}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
 @media(prefers-reduced-motion:reduce){.device .magic-hat{animation:none}.magic-trails{opacity:.45}}
 /* Profile keeps the actual account data, with the prototype's spacing. */
 .device .d4-profile>header{height:64px;padding:0 24px;border-bottom:1px solid #ffffff07}
@@ -175,7 +171,6 @@
 .device .inbox-statusbar{visibility:hidden}
 .device .home-actions #compose{min-width:0}
 .device .home-flow:has(.letters-veil) .magic-scene,.device .home-flow:has(.letters-veil)>.scene-hint,.device .home-flow:has(.letters-veil)>.economy-actions,.device .home-flow:has(.letters-veil)>.home-actions{visibility:hidden}
-.device .home-flow:has(.letters-veil:not(.is-composing))>.home-nav{opacity:.15}
 .device .letter-content{font-size:14px!important;line-height:1.55!important;white-space:pre-wrap}
 .device .note-meta>span{flex:1;text-align:center}
 .device .letter-reply-area{min-height:104px}
@@ -200,12 +195,8 @@
 .device .d1-topup>.primary{font-size:12px;min-height:40px;padding:8px 12px}
 .device .d1-topup-note{font-size:9px;line-height:15px;color:#8a9381;margin:12px 0 0}
 .device .d1-topup>.text-button{font-size:10px;min-height:28px}
-.device .d4-profile:has(.profile-nav) .d4-body{padding-bottom:120px}
 .device .d5{position:relative}
 .device .d5 #profile-global-visibility{font-size:9px;width:auto;padding:0 0 0 12px;margin:0 0 0 auto;min-height:20px;border:0}
-.device .profile-nav{position:absolute;left:0;right:0;bottom:0;height:96px;display:flex;justify-content:space-evenly;align-items:flex-start;padding:16px 4px 20px;border-top:1px solid #ffffff07;background:#0d1713;z-index:3}
-.device .profile-nav button{background:none;min-width:64px;height:44px;display:grid;place-items:start center;padding:0}
-.device .profile-nav img{width:42px;height:42px;object-fit:contain}
 .device .profile-card-actions .compose-link>span:first-child{font-size:30px;line-height:44px}
 .device .profile-card-actions .compose-link>.compose-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .device .letters-panel.composer-panel{overflow:visible}
@@ -243,8 +234,7 @@
 .device .switch-row input:focus-visible{outline:2px solid #e4efd9;outline-offset:3px}
 .device .home-sheet:has(#appearance-genders)>.primary{height:48px;min-height:48px;margin-top:16px}
 .device #publish:disabled{background:#252e29;color:#849288;opacity:1}
-@media(max-height:740px){
- .device .magic-scene{transform:translateY(-88px) scale(.72);transform-origin:50% 40%}
+@media(max-height:740px){.device{min-height:100svh}
  .device .letters-panel.composer-panel{top:112px;height:calc(100% - 220px);max-height:none;overflow:auto}
  .device .composer-panel .opening-form textarea{min-height:48px}
  .device .opening-form footer{position:static;flex:none;margin-top:12px;min-height:48px}

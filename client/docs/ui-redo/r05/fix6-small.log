@@ -1,0 +1,16 @@
+[WebServer] (node:1301837) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1301850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1302003) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:1302050) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"height":667,"matrix":[1,1],"nav":{"x":0,"y":571,"width":375,"height":96},"actions":{"x":24,"y":499,"width":327,"height":48}}
+{"height":740,"matrix":[1,1],"nav":{"x":0,"y":644,"width":375,"height":96},"actions":{"x":24,"y":572,"width":327,"height":48}}
+  ✓  1 .r05-run/r05-small.spec.ts:3:1 › R05 small screen layout (7.8s)
+
+  1 passed (17.1s)
