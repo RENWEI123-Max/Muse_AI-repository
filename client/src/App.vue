@@ -6,14 +6,14 @@ import AuthFlow from './components/AuthFlow.vue'
 import AccountSecurity from './components/AccountSecurity.vue'
 import HomeFlow from './components/HomeFlow.vue'
 import PageTransition from './components/PageTransition.vue'
-const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : 'welcome')
-const sessionToken = ref(''), sessionUser = ref('')
+const sessionToken = ref(localStorage.getItem('maugo-token') || ''), sessionUser = ref(localStorage.getItem('maugo-account') || '')
+const page = ref(new URLSearchParams(location.search).has('auth') ? 'email' : (sessionToken.value ? 'home' : 'welcome'))
 const securityOpen = ref(false)
 const appLocked = ref(false)
 // F07: drafts/preferences/chat appearance are cleared on sign-out (#103) and when another account signs in; language and per-account App lock stay.
 function clearDevice(){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);document.documentElement.classList.remove('system-font')}
-function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){clearDevice();localStorage.setItem('maugo-account',account)}sessionToken.value=token;sessionUser.value=account;page.value='home'}
-function signedOut(){clearDevice();sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
+function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){clearDevice();localStorage.setItem('maugo-account',account)}localStorage.setItem('maugo-token',token);sessionToken.value=token;sessionUser.value=account;page.value='home'}
+function signedOut(){clearDevice();localStorage.removeItem('maugo-token');sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
 const audit = new URLSearchParams(location.search).has('assets')
 document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
