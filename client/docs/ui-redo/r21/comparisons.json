@@ -1,0 +1,66 @@
+[
+  {
+    "state": "settings-home",
+    "differentPixels": 13046,
+    "totalPixels": 304500,
+    "differenceRatio": 0.0428440065681445,
+    "meanAbsoluteChannelDifference": 1.5309384236453203,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "language-en",
+    "differentPixels": 5759,
+    "totalPixels": 304500,
+    "differenceRatio": 0.01891297208538588,
+    "meanAbsoluteChannelDifference": 0.867576354679803,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "language-ko",
+    "differentPixels": 5049,
+    "totalPixels": 304500,
+    "differenceRatio": 0.01658128078817734,
+    "meanAbsoluteChannelDifference": 0.7215073891625616,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "notifications-on",
+    "differentPixels": 47282,
+    "totalPixels": 304500,
+    "differenceRatio": 0.1552775041050903,
+    "meanAbsoluteChannelDifference": 3.1544630541871923,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "notifications-off",
+    "differentPixels": 49065,
+    "totalPixels": 304500,
+    "differenceRatio": 0.16113300492610838,
+    "meanAbsoluteChannelDifference": 2.6584433497536946,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "general",
+    "differentPixels": 10889,
+    "totalPixels": 304500,
+    "differenceRatio": 0.035760262725779965,
+    "meanAbsoluteChannelDifference": 1.4773111658456486,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "general-font",
+    "differentPixels": 10325,
+    "totalPixels": 304500,
+    "differenceRatio": 0.0339080459770115,
+    "meanAbsoluteChannelDifference": 1.3984679802955664,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "cache-confirm",
+    "differentPixels": 197735,
+    "totalPixels": 304500,
+    "differenceRatio": 0.649376026272578,
+    "meanAbsoluteChannelDifference": 6.433832512315271,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  }
+]

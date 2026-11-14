@@ -1,0 +1,160 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5351 --strictPort
+
+
+  VITE v7.3.8  ready in 77 ms
+
+  ➜  Local:   http://127.0.0.1:5351/
+  ➜  press h + enter to show help
+3:59:26 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:26 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:32 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:34 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:34 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:41 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:42 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:42 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:48 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:50 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:50 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+3:59:57 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:04 AM [vite] (client) hmr update /src/fidelity.css
+4:00:04 AM [vite] (client) hmr update /src/styles.css
+4:00:29 AM [vite] (client) hmr update /src/styles/pages/settings.css?vue&type=style&index=0&src=82f29632&scoped=82f29632&lang.css
+4:00:29 AM [vite] (client) hmr update /src/components/SettingsFlow.vue
+4:00:29 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:29 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:35 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:37 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:37 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:44 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:45 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:45 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:51 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:53 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:00:53 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:00 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:48 AM [vite] (client) hmr update /src/styles/pages/settings.css?vue&type=style&index=0&src=82f29632&scoped=82f29632&lang.css
+4:01:48 AM [vite] (client) hmr update /src/fidelity.css
+4:01:48 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:48 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:56 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:57 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:01:57 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:06 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:07 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:07 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:15 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:16 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:16 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:02:25 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:02 AM [vite] (client) hmr update /src/components/SettingsFlow.vue
+4:04:03 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:03 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:10 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:12 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:12 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:20 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:22 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:22 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:30 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:31 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:31 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+4:04:40 AM [vite] http proxy error: /profiles/me
+Error: connect ECONNREFUSED 127.0.0.1:3001
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)

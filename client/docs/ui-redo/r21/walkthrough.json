@@ -1,0 +1,4566 @@
+[
+  {
+    "height": 812,
+    "lang": "en",
+    "mode": "real preview entry; no fixtures, interception or injected account",
+    "steps": [
+      {
+        "state": "settings-home",
+        "screenshot": "812-en-settings-home.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 136,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 137,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 193,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 249,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 326,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 327,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 383,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 460,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 461,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 517,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 573,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open language",
+        "actual": "Language\n\nChoose the language that feels like home.\n\nEnglish\n✓\n한국어"
+      },
+      {
+        "state": "language-en",
+        "screenshot": "812-en-language-en.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Switch language",
+        "actual": "언어\n\n편안한 언어를 선택해 주세요.\n\nEnglish\n한국어\n✓"
+      },
+      {
+        "state": "language-ko",
+        "screenshot": "812-en-language-ko.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open notifications",
+        "actual": "Notifications\nAllow app notifications\nIncoming letters\nReplies\nSystem"
+      },
+      {
+        "state": "notifications-on",
+        "screenshot": "812-en-notifications-on.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Disable all notifications",
+        "actual": "Notifications\nAllow app notifications\nIncoming letters\nReplies\nSystem"
+      },
+      {
+        "disabledCategories": 3
+      },
+      {
+        "state": "notifications-off",
+        "screenshot": "812-en-notifications-off.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open general",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "state": "general",
+        "screenshot": "812-en-general.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Enable system font",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "state": "general-font",
+        "screenshot": "812-en-general-font.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open cache confirmation",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nClear temporary cache?\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nClear temporary cache\nCancel"
+      },
+      {
+        "state": "cache-confirm",
+        "screenshot": "812-en-cache-confirm.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-confirm settings-cache ui-dialog",
+            "box": {
+              "x": 24,
+              "y": 277,
+              "width": 327,
+              "height": 258
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) linear-gradient(153deg, rgb(37, 50, 41) 6.17%, rgb(23, 34, 28) 93.83%) repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "28px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Cancel cache clearing",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "action": "Confirm cache clearing",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nNo temporary cache is stored by this client."
+      },
+      {
+        "cacheResult": "Haptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nNo temporary cache is stored by this client."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open privacy",
+        "actual": "Privacy\n\nThese settings control each image card on the server. They do not hide your profile, avatar or existing posts.\n\nNo server image cards yet. Upload image cards before setting their visibility.\n\nCould not load server settings. Go back and retry."
+      },
+      {
+        "state": "privacy-backend-unavailable",
+        "screenshot": "812-en-privacy-backend-unavailable.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "missingAuthenticatedStates": [
+          "privacy",
+          "privacy-visibility",
+          "privacy-only-me"
+        ],
+        "reason": "No backend on isolated port 3001; real profile/card API load fails."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "pressed": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "scale": "none"
+        }
+      }
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "mode": "real preview entry; no fixtures, interception or injected account",
+    "steps": [
+      {
+        "state": "settings-home",
+        "screenshot": "812-ko-settings-home.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 136,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 137,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 193,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 249,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 326,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 327,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 383,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 460,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 461,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 517,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 573,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open language",
+        "actual": "언어\n\n편안한 언어를 선택해 주세요.\n\nEnglish\n한국어\n✓"
+      },
+      {
+        "state": "language-ko",
+        "screenshot": "812-ko-language-ko.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Switch language",
+        "actual": "Language\n\nChoose the language that feels like home.\n\nEnglish\n✓\n한국어"
+      },
+      {
+        "state": "language-en",
+        "screenshot": "812-ko-language-en.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open notifications",
+        "actual": "알림\n앱 알림 허용\n새 편지\n답장\n시스템"
+      },
+      {
+        "state": "notifications-on",
+        "screenshot": "812-ko-notifications-on.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Disable all notifications",
+        "actual": "알림\n앱 알림 허용\n새 편지\n답장\n시스템"
+      },
+      {
+        "disabledCategories": 3
+      },
+      {
+        "state": "notifications-off",
+        "screenshot": "812-ko-notifications-off.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open general",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "state": "general",
+        "screenshot": "812-ko-general.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Enable system font",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "state": "general-font",
+        "screenshot": "812-ko-general-font.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open cache confirmation",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n임시 캐시를 지울까요?\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n임시 캐시 지우기\n취소"
+      },
+      {
+        "state": "cache-confirm",
+        "screenshot": "812-ko-cache-confirm.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-confirm settings-cache ui-dialog",
+            "box": {
+              "x": 24,
+              "y": 287,
+              "width": 327,
+              "height": 238
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) linear-gradient(153deg, rgb(37, 50, 41) 6.17%, rgb(23, 34, 28) 93.83%) repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "28px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Cancel cache clearing",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "action": "Confirm cache clearing",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n이 클라이언트에 저장된 임시 캐시가 없습니다."
+      },
+      {
+        "cacheResult": "햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n이 클라이언트에 저장된 임시 캐시가 없습니다."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open privacy",
+        "actual": "개인정보 보호\n\n서버에 저장된 이미지 카드별 공개 범위예요. 프로필, 아바타와 기존 게시물에는 적용되지 않아요.\n\n아직 서버 이미지 카드가 없어요. 먼저 이미지 카드를 올려 주세요.\n\n서버 설정을 불러오지 못했어요. 돌아가서 다시 시도해 주세요."
+      },
+      {
+        "state": "privacy-backend-unavailable",
+        "screenshot": "812-ko-privacy-backend-unavailable.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          700,
+          700
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "missingAuthenticatedStates": [
+          "privacy",
+          "privacy-visibility",
+          "privacy-only-me"
+        ],
+        "reason": "No backend on isolated port 3001; real profile/card API load fails."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "pressed": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "scale": "none"
+        }
+      }
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "mode": "real preview entry; no fixtures, interception or injected account",
+    "steps": [
+      {
+        "state": "settings-home",
+        "screenshot": "667-en-settings-home.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 136,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 137,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 193,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 249,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 326,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 327,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 383,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 460,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 461,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 517,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 573,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "state": "settings-middle",
+        "screenshot": "667-en-settings-middle.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 124,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 125,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 181,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 237,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 314,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 315,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 371,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 448,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 449,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 505,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 561,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "state": "settings-bottom",
+        "screenshot": "667-en-settings-bottom.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 113,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 114,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 170,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 226,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 303,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 304,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 360,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 437,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 438,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 494,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 550,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open language",
+        "actual": "Language\n\nChoose the language that feels like home.\n\nEnglish\n✓\n한국어"
+      },
+      {
+        "state": "language-en",
+        "screenshot": "667-en-language-en.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Switch language",
+        "actual": "언어\n\n편안한 언어를 선택해 주세요.\n\nEnglish\n한국어\n✓"
+      },
+      {
+        "state": "language-ko",
+        "screenshot": "667-en-language-ko.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open notifications",
+        "actual": "Notifications\nAllow app notifications\nIncoming letters\nReplies\nSystem"
+      },
+      {
+        "state": "notifications-on",
+        "screenshot": "667-en-notifications-on.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Disable all notifications",
+        "actual": "Notifications\nAllow app notifications\nIncoming letters\nReplies\nSystem"
+      },
+      {
+        "disabledCategories": 3
+      },
+      {
+        "state": "notifications-off",
+        "screenshot": "667-en-notifications-off.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open general",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "state": "general",
+        "screenshot": "667-en-general.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Enable system font",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "state": "general-font",
+        "screenshot": "667-en-general-font.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open cache confirmation",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nClear temporary cache?\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nClear temporary cache\nCancel"
+      },
+      {
+        "state": "cache-confirm",
+        "screenshot": "667-en-cache-confirm.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-confirm settings-cache ui-dialog",
+            "box": {
+              "x": 24,
+              "y": 204.5,
+              "width": 327,
+              "height": 258
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) linear-gradient(153deg, rgb(37, 50, 41) 6.17%, rgb(23, 34, 28) 93.83%) repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "28px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Cancel cache clearing",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept."
+      },
+      {
+        "action": "Confirm cache clearing",
+        "actual": "General\nHaptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nNo temporary cache is stored by this client."
+      },
+      {
+        "cacheResult": "Haptics\nPersonalized recommendations\nUse system font\nClear temporary cache\n\nHaptics use your device vibration support. Desktop browsers may not vibrate.\n\nOn · Letter discovery uses your saved filters.\n\nYour account, wallet, permissions, letters, messages and photos will be kept.\n\nNo temporary cache is stored by this client."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Open privacy",
+        "actual": "Privacy\n\nThese settings control each image card on the server. They do not hide your profile, avatar or existing posts.\n\nNo server image cards yet. Upload image cards before setting their visibility.\n\nCould not load server settings. Go back and retry."
+      },
+      {
+        "state": "privacy-backend-unavailable",
+        "screenshot": "667-en-privacy-backend-unavailable.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "missingAuthenticatedStates": [
+          "privacy",
+          "privacy-visibility",
+          "privacy-only-me"
+        ],
+        "reason": "No backend on isolated port 3001; real profile/card API load fails."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "pressed": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "scale": "none"
+        }
+      }
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "mode": "real preview entry; no fixtures, interception or injected account",
+    "steps": [
+      {
+        "state": "settings-home",
+        "screenshot": "667-ko-settings-home.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 136,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 137,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 193,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 249,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 326,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 327,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 383,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 460,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 461,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 517,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 573,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "state": "settings-middle",
+        "screenshot": "667-ko-settings-middle.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 124,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 125,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 181,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 237,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 314,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 315,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 371,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 448,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 449,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 505,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 561,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "state": "settings-bottom",
+        "screenshot": "667-ko-settings-bottom.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          578
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 113,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "security-settings",
+            "box": {
+              "x": 41,
+              "y": 114,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "privacySettings-settings",
+            "box": {
+              "x": 41,
+              "y": 170,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "notifications-settings",
+            "box": {
+              "x": 41,
+              "y": 226,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 303,
+              "width": 327,
+              "height": 114
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "general-settings",
+            "box": {
+              "x": 41,
+              "y": 304,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "language-settings",
+            "box": {
+              "x": 41,
+              "y": 360,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-group settings-main ui-card",
+            "box": {
+              "x": 24,
+              "y": 437,
+              "width": 327,
+              "height": 170
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(27, 42, 32) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "16px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "feedback-settings",
+            "box": {
+              "x": 41,
+              "y": 438,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "help-settings",
+            "box": {
+              "x": 41,
+              "y": 494,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "about-settings",
+            "box": {
+              "x": 41,
+              "y": 550,
+              "width": 293,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open language",
+        "actual": "언어\n\n편안한 언어를 선택해 주세요.\n\nEnglish\n한국어\n✓"
+      },
+      {
+        "state": "language-ko",
+        "screenshot": "667-ko-language-ko.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Switch language",
+        "actual": "Language\n\nChoose the language that feels like home.\n\nEnglish\n✓\n한국어"
+      },
+      {
+        "state": "language-en",
+        "screenshot": "667-ko-language-en.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 181,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 24,
+              "y": 249,
+              "width": 327,
+              "height": 56
+            },
+            "font": "14px / 16.94px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(34, 48, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "14px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open notifications",
+        "actual": "알림\n앱 알림 허용\n새 편지\n답장\n시스템"
+      },
+      {
+        "state": "notifications-on",
+        "screenshot": "667-ko-notifications-on.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Disable all notifications",
+        "actual": "알림\n앱 알림 허용\n새 편지\n답장\n시스템"
+      },
+      {
+        "disabledCategories": 3
+      },
+      {
+        "state": "notifications-off",
+        "screenshot": "667-ko-notifications-off.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row category-disabled",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open general",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "state": "general",
+        "screenshot": "667-ko-general.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Enable system font",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "state": "general-font",
+        "screenshot": "667-ko-general-font.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Open cache confirmation",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n임시 캐시를 지울까요?\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n임시 캐시 지우기\n취소"
+      },
+      {
+        "state": "cache-confirm",
+        "screenshot": "667-ko-cache-confirm.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 136,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 196,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-row ui-row",
+            "box": {
+              "x": 40,
+              "y": 256,
+              "width": 295,
+              "height": 60
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "clear-cache",
+            "box": {
+              "x": 40,
+              "y": 316,
+              "width": 295,
+              "height": 56
+            },
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "settings-confirm settings-cache ui-dialog",
+            "box": {
+              "x": 24,
+              "y": 214.5,
+              "width": 327,
+              "height": 238
+            },
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) linear-gradient(153deg, rgb(37, 50, 41) 6.17%, rgb(23, 34, 28) 93.83%) repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "28px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "action": "Cancel cache clearing",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다."
+      },
+      {
+        "action": "Confirm cache clearing",
+        "actual": "일반\n햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n이 클라이언트에 저장된 임시 캐시가 없습니다."
+      },
+      {
+        "cacheResult": "햅틱\n맞춤 추천\n시스템 글꼴 사용\n임시 캐시 지우기\n\n기기의 진동 기능을 사용해요. 데스크톱 브라우저에서는 진동하지 않을 수 있어요.\n\n켜짐 · 편지 발견에 저장한 필터를 사용해요.\n\n계정, 지갑, 권한, 편지, 메시지와 사진은 유지됩니다.\n\n이 클라이언트에 저장된 임시 캐시가 없습니다."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Open privacy",
+        "actual": "개인정보 보호\n\n서버에 저장된 이미지 카드별 공개 범위예요. 프로필, 아바타와 기존 게시물에는 적용되지 않아요.\n\n아직 서버 이미지 카드가 없어요. 먼저 이미지 카드를 올려 주세요.\n\n서버 설정을 불러오지 못했어요. 돌아가서 다시 시도해 주세요."
+      },
+      {
+        "state": "privacy-backend-unavailable",
+        "screenshot": "667-ko-privacy-backend-unavailable.png",
+        "pageScroll": 0,
+        "rootOverflow": false,
+        "body": [
+          555,
+          555
+        ],
+        "elements": [
+          {
+            "selector": "ui-header",
+            "box": {
+              "x": 0,
+              "y": 48,
+              "width": 375,
+              "height": 64
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          },
+          {
+            "selector": "",
+            "box": {
+              "x": 68,
+              "y": 67.5,
+              "width": 239,
+              "height": 24
+            },
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+            "borderRadius": "0px",
+            "horizontalOverflow": false
+          }
+        ]
+      },
+      {
+        "missingAuthenticatedStates": [
+          "privacy",
+          "privacy-visibility",
+          "privacy-only-me"
+        ],
+        "reason": "No backend on isolated port 3001; real profile/card API load fails."
+      },
+      {
+        "action": "Back to settings",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "pressed": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "scale": "none"
+        }
+      }
+    ]
+  }
+]

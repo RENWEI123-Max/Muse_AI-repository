@@ -1,0 +1,10 @@
+[WebServer] /Users/anna/Muse_AI-repository/client/tests/d6-followup-server.mjs:10
+[WebServer] if(!source)throw Error('Database connection unavailable')
+[WebServer]                  ^
+[WebServer] 
+[WebServer] Error: Database connection unavailable
+[WebServer]     at <anonymous> (/Users/anna/Muse_AI-repository/client/tests/d6-followup-server.mjs:10:18)
+[WebServer] 
+[WebServer] Node.js v26.13.1
+Error: Process from config.webServer was not able to start. Exit code: 1
+

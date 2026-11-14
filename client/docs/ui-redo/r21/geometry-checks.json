@@ -1,0 +1,209 @@
+[
+  {
+    "state": "settings-home",
+    "selector": "ui-header",
+    "target": [
+      0,
+      48,
+      375,
+      64
+    ],
+    "actual": [
+      0,
+      48,
+      375,
+      64
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "settings-home",
+    "selector": "",
+    "target": [
+      68,
+      67.5,
+      239,
+      24
+    ],
+    "actual": [
+      68,
+      67.5,
+      239,
+      24
+    ],
+    "delta": [
+      0,
+      0.0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "settings-home",
+    "selector": "settings-group settings-main ui-card",
+    "target": [
+      24,
+      136,
+      327,
+      170
+    ],
+    "actual": [
+      24,
+      136,
+      327,
+      170
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "settings-home",
+    "selector": "settings-group settings-main ui-card",
+    "target": [
+      24,
+      326,
+      327,
+      114
+    ],
+    "actual": [
+      24,
+      326,
+      327,
+      114
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "settings-home",
+    "selector": "settings-group settings-main ui-card",
+    "target": [
+      24,
+      460,
+      327,
+      170
+    ],
+    "actual": [
+      24,
+      460,
+      327,
+      170
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "language-en",
+    "selector": "",
+    "target": [
+      24,
+      181,
+      327,
+      56
+    ],
+    "actual": [
+      24,
+      181,
+      327,
+      56
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "language-en",
+    "selector": "",
+    "target": [
+      24,
+      249,
+      327,
+      56
+    ],
+    "actual": [
+      24,
+      249,
+      327,
+      56
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "general",
+    "selector": "clear-cache",
+    "target": [
+      40,
+      316,
+      295,
+      56
+    ],
+    "actual": [
+      40,
+      316,
+      295,
+      56
+    ],
+    "delta": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "within1px": true
+  },
+  {
+    "state": "cache-confirm",
+    "selector": "settings-confirm settings-cache ui-dialog",
+    "target": [
+      24,
+      287,
+      327,
+      238
+    ],
+    "actual": [
+      24,
+      277,
+      327,
+      258
+    ],
+    "delta": [
+      0,
+      -10,
+      0,
+      20
+    ],
+    "within1px": false
+  }
+]
