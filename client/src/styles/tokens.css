@@ -894,3 +894,24 @@
 --support-services-bg:#1e2f23;--support-message-bg:#1e2b21;--support-action-bg:#233529;--support-field-bg:#1c2b20;--support-label:#bacdb2;--support-copy:#a5be97;--support-faq:#d0e2c4;--support-answer:#93ac8b;--support-policy-title:#c1dbb0;--support-policy-copy:#99b38f;--support-tab:#8eab7b;--support-tab-border:#819b6a33;
 --support-font-service:550 13px/16px Fredoka;--support-font-grid:400 9px/11px Fredoka;--support-font-greeting:550 12px/14.5px Fredoka;--support-font-note:400 11px/18px Fredoka;--support-font-faq:400 13px/21px Fredoka;--support-font-tab:400 10px/12px Fredoka;--support-font-policy-title:550 16px/19px Fredoka;--support-font-policy:400 13px/23px Fredoka;
 }
+
+/* R24 wallet / Filter Pass, local Figma 39:3382 and 41:2298. */
+:root{
+--wallet-symbol-bg:rgb(181 250 112 / .08);
+--wallet-benefit-bg:rgb(181 250 112 / .035);
+--wallet-benefit-border:rgb(181 250 112 / .08);
+--wallet-plan-selected:rgb(181 250 112 / .10);
+--wallet-summary-bg:rgb(14 24 21 / .4);
+--wallet-symbol-glow:radial-gradient(ellipse,rgb(181 250 112 / .15),transparent 70%);
+--wallet-shadow-dialog:0 28px 80px rgb(0 0 0 / .6);
+--wallet-font-intro:500 22px/27px Fredoka;
+--wallet-font-benefit:500 13px/15.5px Fredoka;
+--wallet-font-days:500 25px/30px Fredoka;
+--wallet-font-day-unit:400 11px/14px Fredoka;
+--wallet-font-price:400 13px/16px Fredoka;
+--wallet-font-note:400 11px/20px Fredoka;
+--wallet-font-balance:400 12px/14.5px Fredoka;
+--wallet-font-confirm:600 22px/28px Fredoka;
+--wallet-font-eyebrow:400 10px/12px Fredoka;
+}
+:root{--wallet-transparent:transparent;--wallet-button-ink:#0a1406;--wallet-button-shadow:0 6px 24px rgb(7 14 10 / .5);}

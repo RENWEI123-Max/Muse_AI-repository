@@ -1,0 +1,36 @@
+[WebServer] (node:80313) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80314) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80337) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:80339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/pass-confirmation.spec.ts:15:1 › F02: confirmation, every cancel path, complete filters, purchase and cumulative renewal (3.8s)
+  ✘  2 tests/pass-confirmation.spec.ts:35:1 › F02: failure preserves intention; response lost after debit retries once with the same key (3.0s)
+
+
+  1) tests/pass-confirmation.spec.ts:35:1 › F02: failure preserves intention; response lost after debit retries once with the same key
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      45 |  await choose(page,2);await page.locator('#confirm-pass-payment').click();await expect(page.locator('.pass-confirmation [role=alert]')).toContainText('Test payment unavailable');expect(await wallet()).toBe(before);await expect(page.locator('.pass-confirmation h3')).toContainText('30 days');await expect(page.locator('.pass-confirmation')).toHaveCSS('opacity','1');await page.screenshot({path:'docs/c7-evidence/f02-retry.png'})
+      46 |  await page.locator('#cancel-pass').click();await selected(page);await choose(page,2);await page.locator('#confirm-pass-payment').click();await expect(page.locator('.pass-confirmation [role=alert]')).toBeVisible();expect(await wallet()).toBe(before-480)
+    > 47 |  await page.locator('#confirm-pass-payment').click();await expect(page.locator('#confirm-pass-payment')).toBeDisabled();await expect(page.locator('#cancel-pass')).toBeDisabled();await expect(page.getByRole('button',{name:'Close',exact:true})).toBeDisabled();await page.keyboard.press('Escape');await expect(page.locator('.pass-confirmation')).toBeVisible();await expect.poll(()=>typeof release).toBe('function');release!();await selected(page);expect(keys).toHaveLength(3);expect(new Set(keys).size).toBe(1);expect(await wallet()).toBe(before-480)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+      48 |  const ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers})).json();expect(ledger.items.filter((r:{amount:number})=>r.amount===-480)).toHaveLength(1)
+      49 | })
+      50 |
+        at /Users/anna/Muse_AI-repository/client/tests/pass-confirmation.spec.ts:47:501
+
+    Error Context: test-results/pass-confirmation-F02-fail-1c914-ries-once-with-the-same-key/error-context.md
+
+  1 failed
+    tests/pass-confirmation.spec.ts:35:1 › F02: failure preserves intention; response lost after debit retries once with the same key
+  1 passed (8.4s)

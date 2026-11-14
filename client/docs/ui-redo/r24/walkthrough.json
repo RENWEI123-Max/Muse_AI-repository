@@ -1,0 +1,926 @@
+[
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "wallet-empty",
+    "text": "‹ Back to Home\nDiamonds\nDiamonds for filters and extra replies.\n\nYour balance · 0 diamonds\n\n100\nStarter pack\nA little boost\nUnavailable\n550\n+10% bonus\nMost popular\nUnavailable\n1,200\n+20% bonus\nMore possibilities\nUnavailable\n2,600\n+30% bonus\nBest value\nUnavailable\nGet 100 diamonds\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nBack to Home",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 722,
+        "clientHeight": 602
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "topup-confirm",
+    "text": "100 diamonds\n\nUnavailable\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nConfirm purchaseNot now",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "top": 0,
+      "right": 375,
+      "bottom": 812,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "pass-default",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 150 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "pass-one-day",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 30 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "pass-month",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 480 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "pass-shortage",
+    "text": "Confirm Filter Pass\nFILTER PASS\nUnlock Filter Pass · 30 days\n\nAge and city filters · Valid until 12/15/2026, 5:14:46 AM.\nOne-time payment. No automatic renewal.\n\nPlan\n30 days\nPrice\n480 diamonds\nTotal deduction\n◆ 480 diamonds\n\nYour balance · 0 diamonds\n\nNot enough diamonds · 480 diamonds\n\nGet diamonds\nPay 480 diamonds\nNot now · Back to filters",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 716,
+      "top": 48,
+      "right": 351,
+      "bottom": 764,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 720,
+        "clientHeight": 714
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "shortage-topup",
+    "text": "‹ Back to Pass\nDiamonds\nDiamonds for filters and extra replies.\n\nYour balance · 0 diamonds\n\n100\nStarter pack\nA little boost\nUnavailable\n550\n+10% bonus\nMost popular\nUnavailable\n1,200\n+20% bonus\nMore possibilities\nUnavailable\n2,600\n+30% bonus\nBest value\nUnavailable\nGet 100 diamonds\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nBack to Pass",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 722,
+        "clientHeight": 602
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "topup-return",
+    "text": "Confirm Filter Pass\nFILTER PASS\nUnlock Filter Pass · 30 days\n\nAge and city filters · Valid until 12/15/2026, 5:14:47 AM.\nOne-time payment. No automatic renewal.\n\nPlan\n30 days\nPrice\n480 diamonds\nTotal deduction\n◆ 480 diamonds\n\nYour balance · 0 diamonds\n\nNot enough diamonds · 480 diamonds\n\nTop-up closed. No Pass purchased; selection saved.\n\nGet diamonds\nPay 480 diamonds\nNot now · Back to filters",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 716,
+      "top": 48,
+      "right": 351,
+      "bottom": 764,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 780,
+        "clientHeight": 714
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "en",
+    "state": "pass-sheet",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 150 diamondsBack to filters",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet wallet-pass",
+        "scrollHeight": 798,
+        "clientHeight": 682
+      }
+    ],
+    "horizontalOverflow": [
+      ""
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "wallet-empty",
+    "text": "‹ 돌아가기: 홈\n다이아몬드\n필터와 추가 답장을 위한 다이아몬드.\n\n내 잔액 · 0 다이아몬드\n\n100\n스타터 팩\n작은 응원\n구매 불가\n550\n+10% 보너스\n인기 패키지\n구매 불가\n1,200\n+20% 보너스\n더 많은 가능성\n구매 불가\n2,600\n+30% 보너스\n가장 큰 혜택\n구매 불가\n받기 100 다이아몬드\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n돌아가기: 홈",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 706,
+        "clientHeight": 602
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "topup-confirm",
+    "text": "100 다이아몬드\n\n구매 불가\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n구매 확인나중에",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "top": 0,
+      "right": 375,
+      "bottom": 812,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "pass-default",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 150 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "pass-one-day",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 30 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "pass-month",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 480 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 736,
+      "top": 48,
+      "right": 375,
+      "bottom": 784,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 672
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "pass-shortage",
+    "text": "필터 패스 확인\n필터 패스\n잠금 해제 필터 패스 · 30 일\n\n나이 및 도시 필터 · 만료일 2026. 12. 15. 오전 5:14:52.\n일회성 결제예요. 자동 갱신은 없어요.\n\n이용권\n30 일\n가격\n480 다이아몬드\n총 차감액\n◆ 480 다이아몬드\n\n내 잔액 · 0 다이아몬드\n\n다이아몬드가 부족해요 · 480 다이아몬드\n\n다이아몬드 충전\n다이아몬드 480개 결제\n나중에 · 필터로 돌아가기",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 716,
+      "top": 48,
+      "right": 351,
+      "bottom": 764,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 724,
+        "clientHeight": 714
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "shortage-topup",
+    "text": "‹ 돌아가기: 패스\n다이아몬드\n필터와 추가 답장을 위한 다이아몬드.\n\n내 잔액 · 0 다이아몬드\n\n100\n스타터 팩\n작은 응원\n구매 불가\n550\n+10% 보너스\n인기 패키지\n구매 불가\n1,200\n+20% 보너스\n더 많은 가능성\n구매 불가\n2,600\n+30% 보너스\n가장 큰 혜택\n구매 불가\n받기 100 다이아몬드\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n돌아가기: 패스",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 706,
+        "clientHeight": 602
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "topup-return",
+    "text": "필터 패스 확인\n필터 패스\n잠금 해제 필터 패스 · 30 일\n\n나이 및 도시 필터 · 만료일 2026. 12. 15. 오전 5:14:53.\n일회성 결제예요. 자동 갱신은 없어요.\n\n이용권\n30 일\n가격\n480 다이아몬드\n총 차감액\n◆ 480 다이아몬드\n\n내 잔액 · 0 다이아몬드\n\n다이아몬드가 부족해요 · 480 다이아몬드\n\n충전을 닫았어요. 패스를 구매하지 않았으며 선택은 유지돼요.\n\n다이아몬드 충전\n다이아몬드 480개 결제\n나중에 · 필터로 돌아가기",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 716,
+      "top": 48,
+      "right": 351,
+      "bottom": 764,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 784,
+        "clientHeight": 714
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "state": "pass-sheet",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 150 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 12,
+      "y": 104,
+      "width": 351,
+      "height": 684,
+      "top": 104,
+      "right": 363,
+      "bottom": 788,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet wallet-pass",
+        "scrollHeight": 825,
+        "clientHeight": 682
+      }
+    ],
+    "horizontalOverflow": [
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "wallet-empty",
+    "text": "‹ Back to Home\nDiamonds\nDiamonds for filters and extra replies.\n\nYour balance · 0 diamonds\n\n100\nStarter pack\nA little boost\nUnavailable\n550\n+10% bonus\nMost popular\nUnavailable\n1,200\n+20% bonus\nMore possibilities\nUnavailable\n2,600\n+30% bonus\nBest value\nUnavailable\nGet 100 diamonds\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nBack to Home",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 571,
+      "top": 16,
+      "right": 363,
+      "bottom": 587,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 722,
+        "clientHeight": 489
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "topup-confirm",
+    "text": "100 diamonds\n\nUnavailable\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nConfirm purchaseNot now",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 667,
+      "top": 0,
+      "right": 375,
+      "bottom": 667,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "pass-default",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 150 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "pass-one-day",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 30 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "pass-month",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 480 diamondsBack to filters",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 738,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "pass-shortage",
+    "text": "Confirm Filter Pass\nFILTER PASS\nUnlock Filter Pass · 30 days\n\nAge and city filters · Valid until 12/15/2026, 5:14:57 AM.\nOne-time payment. No automatic renewal.\n\nPlan\n30 days\nPrice\n480 diamonds\nTotal deduction\n◆ 480 diamonds\n\nYour balance · 0 diamonds\n\nNot enough diamonds · 480 diamonds\n\nGet diamonds\nPay 480 diamonds\nNot now · Back to filters",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 571,
+      "top": 48,
+      "right": 351,
+      "bottom": 619,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 720,
+        "clientHeight": 569
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "shortage-topup",
+    "text": "‹ Back to Pass\nDiamonds\nDiamonds for filters and extra replies.\n\nYour balance · 0 diamonds\n\n100\nStarter pack\nA little boost\nUnavailable\n550\n+10% bonus\nMost popular\nUnavailable\n1,200\n+20% bonus\nMore possibilities\nUnavailable\n2,600\n+30% bonus\nBest value\nUnavailable\nGet 100 diamonds\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nBack to Pass",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 571,
+      "top": 16,
+      "right": 363,
+      "bottom": 587,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 722,
+        "clientHeight": 489
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "topup-return",
+    "text": "Confirm Filter Pass\nFILTER PASS\nUnlock Filter Pass · 30 days\n\nAge and city filters · Valid until 12/15/2026, 5:14:58 AM.\nOne-time payment. No automatic renewal.\n\nPlan\n30 days\nPrice\n480 diamonds\nTotal deduction\n◆ 480 diamonds\n\nYour balance · 0 diamonds\n\nNot enough diamonds · 480 diamonds\n\nTop-up closed. No Pass purchased; selection saved.\n\nGet diamonds\nPay 480 diamonds\nNot now · Back to filters",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 571,
+      "top": 48,
+      "right": 351,
+      "bottom": 619,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 780,
+        "clientHeight": 569
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "state": "pass-sheet",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 150 diamondsBack to filters",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 627,
+      "top": 16,
+      "right": 363,
+      "bottom": 643,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet wallet-pass",
+        "scrollHeight": 798,
+        "clientHeight": 625
+      }
+    ],
+    "horizontalOverflow": [
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "wallet-empty",
+    "text": "‹ 돌아가기: 홈\n다이아몬드\n필터와 추가 답장을 위한 다이아몬드.\n\n내 잔액 · 0 다이아몬드\n\n100\n스타터 팩\n작은 응원\n구매 불가\n550\n+10% 보너스\n인기 패키지\n구매 불가\n1,200\n+20% 보너스\n더 많은 가능성\n구매 불가\n2,600\n+30% 보너스\n가장 큰 혜택\n구매 불가\n받기 100 다이아몬드\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n돌아가기: 홈",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 571,
+      "top": 16,
+      "right": 363,
+      "bottom": 587,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 706,
+        "clientHeight": 489
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "topup-confirm",
+    "text": "100 다이아몬드\n\n구매 불가\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n구매 확인나중에",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 667,
+      "top": 0,
+      "right": 375,
+      "bottom": 667,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "pass-default",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 150 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "pass-one-day",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 30 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "pass-month",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 480 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 591,
+      "top": 48,
+      "right": 375,
+      "bottom": 639,
+      "left": 0
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-pass-body",
+        "scrollHeight": 765,
+        "clientHeight": 527
+      }
+    ],
+    "horizontalOverflow": []
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "pass-shortage",
+    "text": "필터 패스 확인\n필터 패스\n잠금 해제 필터 패스 · 30 일\n\n나이 및 도시 필터 · 만료일 2026. 12. 15. 오전 5:15:03.\n일회성 결제예요. 자동 갱신은 없어요.\n\n이용권\n30 일\n가격\n480 다이아몬드\n총 차감액\n◆ 480 다이아몬드\n\n내 잔액 · 0 다이아몬드\n\n다이아몬드가 부족해요 · 480 다이아몬드\n\n다이아몬드 충전\n다이아몬드 480개 결제\n나중에 · 필터로 돌아가기",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 571,
+      "top": 48,
+      "right": 351,
+      "bottom": 619,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 724,
+        "clientHeight": 569
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "shortage-topup",
+    "text": "‹ 돌아가기: 패스\n다이아몬드\n필터와 추가 답장을 위한 다이아몬드.\n\n내 잔액 · 0 다이아몬드\n\n100\n스타터 팩\n작은 응원\n구매 불가\n550\n+10% 보너스\n인기 패키지\n구매 불가\n1,200\n+20% 보너스\n더 많은 가능성\n구매 불가\n2,600\n+30% 보너스\n가장 큰 혜택\n구매 불가\n받기 100 다이아몬드\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n돌아가기: 패스",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 571,
+      "top": 16,
+      "right": 363,
+      "bottom": 587,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "wallet-body",
+        "scrollHeight": 706,
+        "clientHeight": 489
+      }
+    ],
+    "horizontalOverflow": [
+      "reply-topup-heading"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "topup-return",
+    "text": "필터 패스 확인\n필터 패스\n잠금 해제 필터 패스 · 30 일\n\n나이 및 도시 필터 · 만료일 2026. 12. 15. 오전 5:15:04.\n일회성 결제예요. 자동 갱신은 없어요.\n\n이용권\n30 일\n가격\n480 다이아몬드\n총 차감액\n◆ 480 다이아몬드\n\n내 잔액 · 0 다이아몬드\n\n다이아몬드가 부족해요 · 480 다이아몬드\n\n충전을 닫았어요. 패스를 구매하지 않았으며 선택은 유지돼요.\n\n다이아몬드 충전\n다이아몬드 480개 결제\n나중에 · 필터로 돌아가기",
+    "rect": {
+      "x": 24,
+      "y": 48,
+      "width": 327,
+      "height": 571,
+      "top": 48,
+      "right": 351,
+      "bottom": 619,
+      "left": 24
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet pass-payment-dialog wallet-pass",
+        "scrollHeight": 784,
+        "clientHeight": 569
+      }
+    ],
+    "horizontalOverflow": [
+      "",
+      ""
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "state": "pass-sheet",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 150 다이아몬드필터로 돌아가기",
+    "rect": {
+      "x": 12,
+      "y": 16,
+      "width": 351,
+      "height": 627,
+      "top": 16,
+      "right": 363,
+      "bottom": 643,
+      "left": 12
+    },
+    "documentScroll": false,
+    "containers": [
+      {
+        "class": "home-sheet wallet-pass",
+        "scrollHeight": 825,
+        "clientHeight": 625
+      }
+    ],
+    "horizontalOverflow": [
+      ""
+    ]
+  }
+]

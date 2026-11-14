@@ -1,0 +1,195 @@
+[WebServer] (node:80273) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:80275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD (5.6s)
+(node:80347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back (30.0s)
+(node:80373) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change (6.0s)
+(node:80413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown (6.0s)
+(node:80428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open (5.5s)
+(node:80441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge (5.6s)
+
+
+  1) tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.diamond-pack b')
+    Timeout: 5000ms
+    - Expected  - 6
+    + Received  + 1
+
+    - Array [
+    -   "₩100",
+    -   "₩550",
+    -   "₩1200",
+    -   "₩2600",
+    - ]
+    + Array []
+
+    Call log:
+      - Expect "toHaveText" locator('.diamond-pack b') with timeout 5000ms
+      - waiting for locator('.diamond-pack b')
+        14 × locator resolved to 0 elements
+
+
+      32 | test('topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD',async({page})=>{
+      33 |  const log=await setup(page,{purchase:'cancelled',verify:200})
+    > 34 |  await expect(page.locator('.diamond-pack b')).toHaveText(['₩100','₩550','₩1200','₩2600'])
+         |                                                ^
+      35 |  await expect(page.locator('.d1-topup')).not.toContainText('$')
+      36 |  expect(log.calls[0]).toEqual(['getProducts',{ids:products.map(p=>p.id)}])
+      37 | })
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:34:48
+
+    Error Context: test-results/d9-storekit-topup-confirm--89313-it-prices-no-hard-coded-USD/error-context.md
+
+  2) tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.diamond-pack').nth(1)
+
+
+      38 | test('topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back',async({page})=>{
+      39 |  const log=await setup(page,{purchase:'purchased',verify:200})
+    > 40 |  await page.locator('.diamond-pack').nth(1).click();await expect(page.locator('#confirm-pack')).toHaveText('Get 550 diamonds · ₩550');await page.locator('#confirm-pack').click()
+         |                                             ^
+      41 |  await expect(status(page)).toHaveText('Added 550 diamonds. Your balance is 550 diamonds.');await expect(page.locator('.d1-topup p strong')).toHaveText('550 diamonds')
+      42 |  expect(log.calls.find(c=>c[0]==='purchase')![1]).toEqual({productId:'maugo.diamonds.550',appAccountToken:user})
+      43 |  expect(log.verify).toEqual([{body:{signedTransaction:'jws.maugo.diamonds.550'},auth:'Bearer t',finishedBefore:false}])
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:40:45
+
+    Error Context: test-results/d9-storekit-topup-success--3aaa8-er-verify-balance-read-back/error-context.md
+
+  3) tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change ────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.d1-topup [role=status]')
+    Expected: "Purchase cancelled. No charge has been made."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.d1-topup [role=status]') with timeout 5000ms
+      - waiting for locator('.d1-topup [role=status]')
+
+
+      46 | test('cancel and store errors: no verify, no balance change',async({page})=>{
+      47 |  const mode={purchase:'cancelled',verify:200},log=await setup(page,mode)
+    > 48 |  await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('Purchase cancelled. No charge has been made.')
+         |                                                                         ^
+      49 |  mode.purchase='pending';await page.locator('#confirm-pack').click();await expect(status(page)).toContainText('pending approval')
+      50 |  mode.purchase='error';await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('Purchase failed: Cannot connect to iTunes Store. No charge has been made.')
+      51 |  expect(log.verify).toEqual([]);await expect(page.locator('.d1-topup p strong')).toHaveText('0 diamonds')
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:48:73
+
+    Error Context: test-results/d9-storekit-cancel-and-sto-f0fc5-no-verify-no-balance-change/error-context.md
+
+  4) tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.d1-topup [role=status]')
+    Expected substring: "Payment received but not yet confirmed: Missing Apple configuration"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.d1-topup [role=status]') with timeout 5000ms
+      - waiting for locator('.d1-topup [role=status]')
+
+
+      53 | test('verify failure: transaction left unfinished, no diamonds shown',async({page})=>{
+      54 |  const log=await setup(page,{purchase:'purchased',verify:503})
+    > 55 |  await page.locator('#confirm-pack').click();await expect(status(page)).toContainText('Payment received but not yet confirmed: Missing Apple configuration');await expect(status(page)).toContainText('No diamonds were added yet')
+         |                                                                         ^
+      56 |  expect(log.calls.some(c=>c[0]==='finish')).toBe(false);await expect(page.locator('.d1-topup p strong')).toHaveText('0 diamonds')
+      57 | })
+      58 | test('unfinished transactions of this account are resubmitted on open',async({page})=>{
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:55:73
+
+    Error Context: test-results/d9-storekit-verify-failure-d3158-nfinished-no-diamonds-shown/error-context.md
+
+  5) tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.d1-topup [role=status]')
+    Expected: "Added 100 diamonds. Your balance is 100 diamonds."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.d1-topup [role=status]') with timeout 5000ms
+      - waiting for locator('.d1-topup [role=status]')
+
+
+      58 | test('unfinished transactions of this account are resubmitted on open',async({page})=>{
+      59 |  const log=await setup(page,{purchase:'cancelled',verify:200,unfinished:[{signedTransaction:'jws.maugo.diamonds.100',transactionId:'1',appAccountToken:user.toLowerCase()},{signedTransaction:'jws.maugo.diamonds.2600',transactionId:'2',appAccountToken:'00000000-0000-0000-0000-000000000000'}]})
+    > 60 |  await expect(status(page)).toHaveText('Added 100 diamonds. Your balance is 100 diamonds.')
+         |                             ^
+      61 |  expect(log.verify.map(v=>v.body.signedTransaction)).toEqual(['jws.maugo.diamonds.100']);expect(log.calls.filter(c=>c[0]==='finish').map(c=>c[1])).toEqual([{transactionId:'1'}])
+      62 | })
+      63 | test('browser without StoreKit: no price, no charge',async({page})=>{
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:60:29
+
+    Error Context: test-results/d9-storekit-unfinished-tra-0bbe5-unt-are-resubmitted-on-open/error-context.md
+
+  6) tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge ────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.diamond-pack b')
+    Timeout: 5000ms
+    - Expected  - 6
+    + Received  + 1
+
+    - Array [
+    -   "Unavailable",
+    -   "Unavailable",
+    -   "Unavailable",
+    -   "Unavailable",
+    - ]
+    + Array []
+
+    Call log:
+      - Expect "toHaveText" locator('.diamond-pack b') with timeout 5000ms
+      - waiting for locator('.diamond-pack b')
+        14 × locator resolved to 0 elements
+
+
+      63 | test('browser without StoreKit: no price, no charge',async({page})=>{
+      64 |  const log=await setup(page)
+    > 65 |  await expect(page.locator('.diamond-pack b')).toHaveText(Array(4).fill('Unavailable'))
+         |                                                ^
+      66 |  await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('In-app purchases are only available in the MauGo iOS app. No charge has been made.');expect(log.verify).toEqual([])
+      67 | })
+      68 |
+        at /Users/anna/Muse_AI-repository/client/tests/d9-storekit.spec.ts:65:48
+
+    Error Context: test-results/d9-storekit-browser-without-StoreKit-no-price-no-charge/error-context.md
+
+  6 failed
+    tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD
+    tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back
+    tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change ─────────
+    tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown
+    tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open
+    tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge ─────────────────

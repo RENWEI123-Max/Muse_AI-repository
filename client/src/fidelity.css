@@ -12,13 +12,13 @@
 /* Retain the existing wallet/Pass shortcuts while keeping them secondary. */
 /* Floating panels have a 12px canvas inset and a visible drag handle. */
 .device .home-veil:not(.r07-veil){background:#0009;backdrop-filter:none;padding:0 12px 24px}
-.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
-.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
-.device .home-sheet:not(.r07-sheet) header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
-.device .home-sheet:not(.r07-sheet) header h2{font-size:18px;font-weight:550;line-height:24px}
-.device .home-sheet:not(.r07-sheet) header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
-.device .home-sheet:not(.r07-sheet) header button img{width:18px;height:18px}
-.device .home-sheet:not(.r07-sheet) p{font-size:12px;line-height:20px;margin:0 0 12px}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
+.device .home-sheet:not(.r07-sheet):not(.wallet-pass) header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
+.device .home-sheet:not(.r07-sheet):not(.wallet-pass) header h2{font-size:18px;font-weight:550;line-height:24px}
+.device .home-sheet:not(.r07-sheet):not(.wallet-pass) header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
+.device .home-sheet:not(.r07-sheet):not(.wallet-pass) header button img{width:18px;height:18px}
+.device .home-sheet:not(.r07-sheet):not(.wallet-pass) p{font-size:12px;line-height:20px;margin:0 0 12px}
 /* Keep small viewports usable without scaling text or distorting artwork. */
 @media(max-height:740px){.device{min-height:100svh}}
 

@@ -68,6 +68,12 @@ export function t(key: keyof typeof en): string { return locale.value === 'ko' ?
 
 // Business copy reuses the Korean wording supplied in the offline handover.
 const businessKo: Record<string,string> = {
+  "More ways to browse letters.": "더 다양한 방법으로 편지를 만나 보세요.",
+  "Set age and city filters for the letters you read.": "읽을 편지의 나이와 도시 필터를 설정해요.",
+  "Filter letters by author age.": "작성자의 나이로 편지를 찾아요.",
+  "Browse letters from a selected city.": "선택한 도시에서 온 편지를 찾아요.",
+  "Choose your duration": "이용 기간을 선택하세요",
+
   "Feedback":"피드백",
   "About MauGo":"MauGo 소개",
   "Community guidelines":"커뮤니티 가이드라인",

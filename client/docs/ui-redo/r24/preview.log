@@ -1,0 +1,16 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5354 --strictPort
+
+
+  VITE v7.3.8  ready in 69 ms
+
+  ➜  Local:   http://127.0.0.1:5354/
+5:11:35 AM [vite] (client) hmr update /src/styles/pages/wallet.css?vue&type=style&index=0&src=true&lang.css
+5:11:35 AM [vite] (client) hmr update /src/App.vue, /src/components/AuthFlow.vue, /src/components/AccountSecurity.vue, /src/components/HomeFlow.vue, /src/components/UiToast.vue, /src/components/ReplyTopup.vue, /src/components/ProfileFlow.vue, /src/components/LettersFlow.vue, /src/components/InboxFlow.vue, /src/components/SettingsFlow.vue, /src/components/MomentsFlow.vue, /src/components/ChatFlow.vue
+5:12:11 AM [vite] (client) hmr update /src/fidelity.css
+5:12:56 AM [vite] (client) hmr update /src/fidelity.css
+5:12:56 AM [vite] (client) hmr update /src/styles/pages/wallet.css?vue&type=style&index=0&src=true&lang.css
+5:13:44 AM [vite] (client) hmr update /src/styles/pages/reply.css
+5:14:10 AM [vite] (client) hmr update /src/styles/pages/wallet.css?vue&type=style&index=0&src=true&lang.css
+5:14:35 AM [vite] (client) hmr update /src/styles/pages/wallet.css?vue&type=style&index=0&src=true&lang.css
