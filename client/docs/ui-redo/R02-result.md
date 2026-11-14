@@ -8,7 +8,7 @@ JSON SHA-256：`aad8e4348a7ebfaf67ed7e4dc2c37b9cf215b90a68991ff7872d208f0836ca63
 
 计数口径：颜色为匹配的可见 fill/stroke paint 数，文字色只计 TEXT fills；渐变为对应 stops 与 handles 的 fill 数；字体为 Fredoka、字重/字号/行高/字距完全匹配的文本节点数；间距为 itemSpacing 和四侧 padding 属性出现次数；圆角为 cornerRadius 节点数；效果为 visible effect 数；尺寸为 bounding box / 相对画框坐标匹配节点数。尺寸统计不等于语义控件数。
 
-RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON 浮点值，不进行近似替换。自动行高按任务规定写无单位 1.21，其余行高为 px。字体 token 是 `font` 简写（含字重、字号、行高、字体），必须与同名前缀的 `-letter-spacing` 一起使用。变体后缀仅展开 §3 一格里的多值；没有新增页面样式。
+RGB 由 JSON 通道乘 255 还原 hex；alpha 约到 3 位、字距约掉 float32 尾数，角度与色标位置约到 2 位小数；尺寸保留 JSON 精确值。自动行高按任务规定写无单位 1.21，其余行高为 px。字体 token 是 `font` 简写（含字重、字号、行高、字体），必须与同名前缀的 `-letter-spacing` 一起使用。变体后缀仅展开 §3 一格里的多值；没有新增页面样式。
 
 ## 每个 token 的值、出现次数和节点证据
 
@@ -40,15 +40,15 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 | `--sparkle` | `#E5FFB3` | 411 | 节点用途：35:3548 /home-ready · 首页 / 三封来信/scene/div/✦；35:3550 /home-ready · 首页 / 三封来信/scene/div/✦；35:3552 /home-ready · 首页 / 三封来信/scene/div/✦ |
 | `--icon-muted` | `#849288` | 691 | 节点用途：I43:3334;43:1929 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1931 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Group/Vector；I43:3334;43:1932 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Group/Vector |
 | `--icon-ink` | `#080D0A` | 283 | 节点用途：I43:3334;43:1918 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1919 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1922 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Group/Vector |
-| `--bg-auth-overlay` | `rgb(12 22 18 / 0.9200000166893005)` | 18 | 节点用途：35:2473 /terms-unchecked · 协议 / 未勾选/auth-overlay；35:2567 /terms-checked · 协议 / 已勾选/auth-overlay；35:2661 /signin-empty · 邮箱登录 / 空表单/auth-overlay |
-| `--scrim` | `rgb(0 0 0 / 0.46700000762939453)` | 21 | 节点用途：29:7175 /inbox-options · 会话 / 更多操作/Text；29:8571 /reply-topup · 回信 / 进入钻石补充/Text；29:10658 /chat-remark · 对话设置 / 备注名/Text |
-| `--scrim-dialog` | `rgb(3 8 5 / 0.7900000214576721)` | 19 | 节点用途：29:7922 /reply-payment · 回信 / 10 次用完，付费确认/Container；29:8098 /reply-shortage · 回信 / 钻石不足/Container；29:11069 /chat-clear-confirm · 聊天记录 / 清空确认/Container |
-| `--grabber` | `rgb(255 255 255 / 0.15700000524520874)` | 37 | 节点用途：36:2013 /filters-free · 筛选 / 未开通 Pass/sheet/div；36:2185 /filters-active · 筛选 / Pass 生效/sheet/div；36:2353 /filters-selected · 筛选 / 已选择条件/sheet/div |
-| `--hairline-card` | `rgb(255 255 255 / 0.009999999776482582)` | 6 | 节点用途：34:1922 /settings-home · 设置 / 主页面/app-view/div/div；34:1958 /settings-home · 设置 / 主页面/app-view/div/div；34:1986 /settings-home · 设置 / 主页面/app-view/div/div |
-| `--hairline` | `rgb(255 255 255 / 0.027000000700354576)` | 206 | 节点用途：29:5631 /inbox-empty · 消息 / 从未收到消息/Section/Header；29:5719 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header；29:5814 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Header |
-| `--hairline-strong` | `rgb(255 255 255 / 0.0430000014603138)` | 130 | 节点用途：35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password；35:2733 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email |
+| `--bg-auth-overlay` | `rgb(12 22 18 / 0.92)` | 18 | 节点用途：35:2473 /terms-unchecked · 协议 / 未勾选/auth-overlay；35:2567 /terms-checked · 协议 / 已勾选/auth-overlay；35:2661 /signin-empty · 邮箱登录 / 空表单/auth-overlay |
+| `--scrim` | `rgb(0 0 0 / 0.467)` | 21 | 节点用途：29:7175 /inbox-options · 会话 / 更多操作/Text；29:8571 /reply-topup · 回信 / 进入钻石补充/Text；29:10658 /chat-remark · 对话设置 / 备注名/Text |
+| `--scrim-dialog` | `rgb(3 8 5 / 0.79)` | 19 | 节点用途：29:7922 /reply-payment · 回信 / 10 次用完，付费确认/Container；29:8098 /reply-shortage · 回信 / 钻石不足/Container；29:11069 /chat-clear-confirm · 聊天记录 / 清空确认/Container |
+| `--grabber` | `rgb(255 255 255 / 0.157)` | 37 | 节点用途：36:2013 /filters-free · 筛选 / 未开通 Pass/sheet/div；36:2185 /filters-active · 筛选 / Pass 生效/sheet/div；36:2353 /filters-selected · 筛选 / 已选择条件/sheet/div |
+| `--hairline-card` | `rgb(255 255 255 / 0.01)` | 6 | 节点用途：34:1922 /settings-home · 设置 / 主页面/app-view/div/div；34:1958 /settings-home · 设置 / 主页面/app-view/div/div；34:1986 /settings-home · 设置 / 主页面/app-view/div/div |
+| `--hairline` | `rgb(255 255 255 / 0.027)` | 206 | 节点用途：29:5631 /inbox-empty · 消息 / 从未收到消息/Section/Header；29:5719 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header；29:5814 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Header |
+| `--hairline-strong` | `rgb(255 255 255 / 0.043)` | 130 | 节点用途：35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password；35:2733 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email |
 | `--stroke-accent` | `1px solid #B5FA70` | 26 | 节点用途：35:3407 /apple-private · Apple / 隐藏邮箱/auth-overlay/auth-panel/div/div/apple-hide；35:3462 /apple-share · Apple / 共享邮箱/auth-overlay/auth-panel/div/div/apple-share；36:2535 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/appearance-genders/Choose female bird |
-| `--stroke-accent-subtle` | `1px solid rgb(181 250 112 / 0.23000000417232513)` | 23 | 节点用途：29:6864 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Container/Button；29:7374 /inbox-hidden · 隐藏会话 / 有记录/Section/Container/Container/Button；29:10298 /chat-details · 对话设置 / 已解锁/Section/Container/Container/Container/Button |
+| `--stroke-accent-subtle` | `1px solid rgb(181 250 112 / 0.23)` | 23 | 节点用途：29:6864 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Container/Button；29:7374 /inbox-hidden · 隐藏会话 / 有记录/Section/Container/Container/Button；29:10298 /chat-details · 对话设置 / 已解锁/Section/Container/Container/Container/Button |
 | `--text-conversation-preview` | `#86978C` | 58 | 节点用途：39:2322 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Today I found a quiet little bookshop.；39:2337 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Thank you for listening. Today feels a little lighter.；39:2352 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Some songs feel like little letters. What have you been listening to? |
 | `--text-conversation-options` | `#788F80` | 58 | 节点用途：39:2329 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · Your sent letter/•••；39:2344 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · A cup of tea/•••；39:2357 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · Ocean in my headphones/••• |
 | `--text-profile-stat` | `#F1F4ED` | 45 | 节点用途：29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13725 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 |
@@ -66,31 +66,35 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 | `--text-profile-visibility` | `#859D80` | 30 | 节点用途：29:13741 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Section/Container/Button/Everyone；29:13747 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Section/Container/Button/›；29:13899 /profile-content · 个人页 / 已有形象照/Section/Container/Section/Container/Button/Everyone |
 | `--text-profile-menu` | `#9FB593` | 30 | 节点用途：29:13761 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Text/My letters；29:13768 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Text/My bird appearance；29:13925 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Button/Text/My letters |
 | `--grad-primary` | `linear-gradient(to right, #BDFF81 0%, #B0FB61 100%)` | 62 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2540 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue；35:2634 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/terms-continue |
-| `--grad-primary-height-48` | `linear-gradient(115.0000003037923deg, #BDFF81 0%, #B0FB61 100%)` | 36 | 渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button |
-| `--grad-icon-btn` | `linear-gradient(to right, #1B2121 0%, #131818 100%)` | 46 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:3621 /home-ready · 首页 / 三封来信/header/div/magic；35:3626 /home-ready · 首页 / 三封来信/header/div/settings；35:3731 /home-empty · 首页 / 无符合条件的信件/header/div/magic |
-| `--grad-icon-btn-horizontal` | `linear-gradient(135deg, #1B2121 0%, #131818 100%)` | 228 | 渐变 handle=[{"x": 0.0, "y": 0.0}, {"x": 1.0, "y": 1.0}, {"x": -1.0, "y": 1.0}]；29:5620 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Bird appearance；29:5625 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Find your letters；29:5708 /inbox-waiting · 消息 / 已寄出，尚无回信/Header/Container/Button - Bird appearance |
+| `--grad-primary-diagonal-w327` | `linear-gradient(162.53deg, #BDFF81 8.49%, #B0FB61 91.51%)` | 16 | 节点尺寸 327×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:11369 /wallpaper-preview · 背景 / 大图预览/Section/Container/Container/Button；29:11608 /wallpaper-colors · 背景 / 纯色选择/Section/Container/Container/Button；29:12085 /report-empty · 举报 / 原因表单/Section/Container/Container/Button |
+| `--grad-primary-diagonal-w277` | `linear-gradient(159.61deg, #BDFF81 8.49%, #B0FB61 91.51%)` | 7 | 节点尺寸 277×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:12466 /block-confirm · 屏蔽 / 二次确认/Container/Dialog/Container/Button:margin/Button |
+| `--grad-primary-diagonal-w143-5` | `linear-gradient(144.35deg, #BDFF81 8.49%, #B0FB61 91.51%)` | 6 | 节点尺寸 143.5×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:12981 /person-profile · 用户资料 / 内容完整/Section/Container/Container/Button；29:13088 /person-waiting · 用户资料 / 尚未回复/Section/Container/Container/Button；29:13212 /person-followed · 用户资料 / 已关注/Section/Container/Container/Button |
+| `--grad-primary-diagonal-w309` | `linear-gradient(161.58deg, #BDFF81 8.49%, #B0FB61 91.51%)` | 6 | 节点尺寸 309×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button；29:14405 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container/Button；29:14631 /avatar-remove · 头像 / 移除确认/Dialog/Container/Container/Button |
+| `--grad-primary-diagonal-w165` | `linear-gradient(148.04deg, #BDFF81 8.49%, #B0FB61 91.51%)` | 1 | 节点尺寸 165×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:12262 /report-saved · 举报 / 保存结果/Container/Button |
+| `--grad-icon-btn` | `linear-gradient(135deg, #1B2121 0%, #131818 100%)` | 228 | 节点尺寸 44×44；归一化角度 135°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.0, "y": 0.0}, {"x": 1.0, "y": 1.0}, {"x": -1.0, "y": 1.0}]；29:5620 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Bird appearance；29:5625 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Find your letters；29:5708 /inbox-waiting · 消息 / 已寄出，尚无回信/Header/Container/Button - Bird appearance |
+| `--grad-icon-btn-horizontal` | `linear-gradient(to right, #1B2121 0%, #131818 100%)` | 46 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:3621 /home-ready · 首页 / 三封来信/header/div/magic；35:3626 /home-ready · 首页 / 三封来信/header/div/settings；35:3731 /home-empty · 首页 / 无符合条件的信件/header/div/magic |
 | `--grad-secondary` | `linear-gradient(to right, #1C2223 0%, #171D1E 100%)` | 17 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:3568 /home-ready · 首页 / 三封来信/actions/refresh；35:3678 /home-empty · 首页 / 无符合条件的信件/actions/refresh；35:3806 /home-response · 首页 / 回应到达/actions/refresh |
-| `--grad-secondary-height-48` | `linear-gradient(119.99999955470795deg, #1C2223 0%, #171D1E 100%)` | 1 | 渐变 handle=[{"x": 1.1566712143640245e-08, "y": 0.21132485739622453}, {"x": 1.0000000205408277, "y": 0.7886751214046419}, {"x": -0.5773502524417053, "y": 1.2113248663703402}]；29:12256 /report-saved · 举报 / 保存结果/Container/Button |
-| `--grad-card` | `linear-gradient(140.02616070900152deg, #253229 6.173274176069732%, #17221C 93.82672582393027%)` | 1 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog |
-| `--grad-card-height-341` | `linear-gradient(143.86361050543428deg, #253229 6.173274176069726%, #17221C 93.82672582393027%)` | 1 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog |
-| `--grad-card-height-258` | `linear-gradient(151.0812233221214deg, #253229 6.173274176069726%, #17221C 93.82672582393026%)` | 3 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog；29:12459 /block-confirm · 屏蔽 / 二次确认/Container/Dialog；29:14636 /avatar-remove · 头像 / 移除确认/Container/Dialog |
-| `--grad-card-height-238` | `linear-gradient(152.99519141088012deg, #253229 6.173274176069726%, #17221C 93.82672582393027%)` | 3 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:12881 /unblock-confirm · 解除屏蔽 / 确认/Container/Dialog；11:1130 /card-remove · 已上传照片 / 移除确认/Container/Dialog；29:17743 /moment-delete · 动态 / 删除确认/Container/Dialog |
-| `--grad-card-height-294` | `linear-gradient(147.80776382468184deg, #253229 6.173274176069726%, #17221C 93.82672582393026%)` | 1 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:15619 /profile-likes · 个人页 / 获赞汇总/Container/Dialog |
-| `--grad-card-height-322` | `linear-gradient(145.41369827558555deg, #253229 6.173274176069721%, #17221C 93.82672582393027%)` | 1 | 渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:17466 /moment-leave · 发布动态 / 离开前保留草稿/Container/Dialog |
-| `--grad-card-horizontal` | `linear-gradient(to right, #253229 0%, #17221C 100%)` | 9 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:2397 /cache-confirm · 缓存 / 清理确认/payment-overlay/payment-dialog；39:2849 /pin-locked · 应用锁 / 输入 PIN/payment-overlay/payment-dialog；39:2929 /pin-wrong · 应用锁 / PIN 错误/payment-overlay/payment-dialog |
-| `--bg-scene-glow` | `radial-gradient(ellipse closest-side at 50% 50%, rgb(16 32 23 / 0.4000000059604645) 0%, rgb(0 0 0 / 0) 100%)` | 23 | 渐变 handle=[{"x": 0.5, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.5, "y": 1.0}]；35:3533 /home-ready · 首页 / 三封来信；35:3647 /home-empty · 首页 / 无符合条件的信件；35:3757 /home-response · 首页 / 回应到达 |
+| `--grad-secondary-diagonal` | `linear-gradient(151deg, #1C2223 7.74%, #171D1E 92.26%)` | 1 | 节点尺寸 150×48；归一化角度 120°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 1.1566712143640245e-08, "y": 0.21132485739622453}, {"x": 1.0000000205408277, "y": 0.7886751214046419}, {"x": -0.5773502524417053, "y": 1.2113248663703402}]；29:12256 /report-saved · 举报 / 保存结果/Container/Button |
+| `--grad-card` | `linear-gradient(to right, #253229 0%, #17321C 100%)` | 9 | 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:2397 /cache-confirm · 缓存 / 清理确认/payment-overlay/payment-dialog；39:2849 /pin-locked · 应用锁 / 输入 PIN/payment-overlay/payment-dialog；39:2929 /pin-wrong · 应用锁 / PIN 错误/payment-overlay/payment-dialog |
+| `--grad-card-diagonal-h238` | `linear-gradient(153deg, #253229 6.17%, #17321C 93.83%)` | 3 | 节点尺寸 327×238；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:12881 /unblock-confirm · 解除屏蔽 / 确认/Container/Dialog；11:1130 /card-remove · 已上传照片 / 移除确认/Container/Dialog；29:17743 /moment-delete · 动态 / 删除确认/Container/Dialog |
+| `--grad-card-diagonal-h258` | `linear-gradient(151.08deg, #253229 6.17%, #17321C 93.83%)` | 3 | 节点尺寸 327×258；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog；29:12459 /block-confirm · 屏蔽 / 二次确认/Container/Dialog；29:14636 /avatar-remove · 头像 / 移除确认/Container/Dialog |
+| `--grad-card-diagonal-h294` | `linear-gradient(147.81deg, #253229 6.17%, #17321C 93.83%)` | 1 | 节点尺寸 327×294；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:15619 /profile-likes · 个人页 / 获赞汇总/Container/Dialog |
+| `--grad-card-diagonal-h322` | `linear-gradient(145.41deg, #253229 6.17%, #17321C 93.83%)` | 1 | 节点尺寸 327×322；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:17466 /moment-leave · 发布动态 / 离开前保留草稿/Container/Dialog |
+| `--grad-card-diagonal-h341` | `linear-gradient(143.86deg, #253229 6.17%, #17321C 93.83%)` | 1 | 节点尺寸 327×341；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog |
+| `--grad-card-diagonal-h391-5` | `linear-gradient(140.03deg, #253229 6.17%, #17321C 93.83%)` | 1 | 节点尺寸 327×391.5；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog |
+| `--bg-scene-glow` | `radial-gradient(ellipse closest-side at 50% 50%, rgb(16 32 23 / 0.4) 0%, rgb(0 0 0 / 0) 100%)` | 23 | 渐变 handle=[{"x": 0.5, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.5, "y": 1.0}]；35:3533 /home-ready · 首页 / 三封来信；35:3647 /home-empty · 首页 / 无符合条件的信件；35:3757 /home-response · 首页 / 回应到达 |
 | `--font-button` | `600 16px/22px "Fredoka"` | 154 | 文字：Continue with email、Continue with Apple、Agree & continue、Sign in；35:2434 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin/Continue with email；35:2438 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin/Continue with Apple；35:2541 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue |
 | `--font-button-letter-spacing` | `0px` | 154 | 文字：Continue with email、Continue with Apple、Agree & continue、Sign in；35:2434 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin/Continue with email；35:2438 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin/Continue with Apple；35:2541 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue |
 | `--font-h1` | `500 24px/32px "Fredoka"` | 18 | 文字：Before you continue、Welcome back；35:2484 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2578 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2672 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/h1/Welcome back |
-| `--font-h1-letter-spacing` | `-0.30000001192092896px` | 18 | 文字：Before you continue、Welcome back；35:2484 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2578 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2672 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/h1/Welcome back |
+| `--font-h1-letter-spacing` | `-0.3px` | 18 | 文字：Before you continue、Welcome back；35:2484 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2578 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2672 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/h1/Welcome back |
 | `--font-title-page` | `550 17px/24px "Fredoka"` | 58 | 文字：Hidden conversations、Your sent letter、Chat details；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations；29:8678 /chat-waiting · 对话 / 等待对方回复/Section/Header/Heading 1/Your sent letter |
-| `--font-title-page-letter-spacing` | `-0.30000001192092896px` | 58 | 文字：Hidden conversations、Your sent letter、Chat details；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations；29:8678 /chat-waiting · 对话 / 等待对方回复/Section/Header/Heading 1/Your sent letter |
+| `--font-title-page-letter-spacing` | `-0.3px` | 58 | 文字：Hidden conversations、Your sent letter、Chat details；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations；29:8678 /chat-waiting · 对话 / 等待对方回复/Section/Header/Heading 1/Your sent letter |
 | `--font-title-page-medium` | `500 17px/24px "Fredoka"` | 31 | 文字：Inbox、Settings、Language、언어、Privacy；39:2375 /compose-sent · 写信 / 发送后等待/app-view/header/h1/Inbox；34:2035 /settings-home · 设置 / 主页面/app-view/header/h1/Settings；34:2075 /language-en · 语言 / English/app-view/header/h1/Language |
-| `--font-title-page-medium-letter-spacing` | `-0.30000001192092896px` | 31 | 文字：Inbox、Settings、Language、언어、Privacy；39:2375 /compose-sent · 写信 / 发送后等待/app-view/header/h1/Inbox；34:2035 /settings-home · 设置 / 主页面/app-view/header/h1/Settings；34:2075 /language-en · 语言 / English/app-view/header/h1/Language |
+| `--font-title-page-medium-letter-spacing` | `-0.3px` | 31 | 文字：Inbox、Settings、Language、언어、Privacy；39:2375 /compose-sent · 写信 / 发送后等待/app-view/header/h1/Inbox；34:2035 /settings-home · 设置 / 主页面/app-view/header/h1/Settings；34:2075 /language-en · 语言 / English/app-view/header/h1/Language |
 | `--font-title-sheet` | `550 18px/1.21 "Fredoka"` | 60 | 文字：Passing breeze、0；29:13709 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button - Edit profile/Bold Text/Passing breeze；29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 |
 | `--font-title-sheet-letter-spacing` | `0px` | 60 | 文字：Passing breeze、0；29:13709 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button - Edit profile/Bold Text/Passing breeze；29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 |
 | `--font-title-sheet-fixed` | `550 18px/24px "Fredoka"` | 21 | 文字：Conversation options、Diamonds、Remark name、Report or block、Photo；29:7181 /inbox-options · 会话 / 更多操作/Dialog/Container/Heading 2/Conversation options；29:8577 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Heading 2/Diamonds；29:10664 /chat-remark · 对话设置 / 备注名/Dialog/Container/Heading 2/Remark name |
-| `--font-title-sheet-fixed-letter-spacing` | `-0.30000001192092896px` | 21 | 文字：Conversation options、Diamonds、Remark name、Report or block、Photo；29:7181 /inbox-options · 会话 / 更多操作/Dialog/Container/Heading 2/Conversation options；29:8577 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Heading 2/Diamonds；29:10664 /chat-remark · 对话设置 / 备注名/Dialog/Container/Heading 2/Remark name |
+| `--font-title-sheet-fixed-letter-spacing` | `-0.3px` | 21 | 文字：Conversation options、Diamonds、Remark name、Report or block、Photo；29:7181 /inbox-options · 会话 / 更多操作/Dialog/Container/Heading 2/Conversation options；29:8577 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Heading 2/Diamonds；29:10664 /chat-remark · 对话设置 / 备注名/Dialog/Container/Heading 2/Remark name |
 | `--font-title-card` | `550 15px/21px "Fredoka"` | 54 | 文字：Your sent letter 、A cup of tea 、Ocean in my headphones 、Seaside moments 、Window-side friend ；29:5738 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button/Text/Bold Text/Your sent letter；29:5857 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/A cup of tea；29:5871 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/Ocean in my headphones |
 | `--font-title-card-letter-spacing` | `0px` | 54 | 文字：Your sent letter 、A cup of tea 、Ocean in my headphones 、Seaside moments 、Window-side friend ；29:5738 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button/Text/Bold Text/Your sent letter；29:5857 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/A cup of tea；29:5871 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/Ocean in my headphones |
 | `--font-body` | `400 13px/20px "Fredoka"` | 283 | 文字：you@example.com、Enter your password、reader@example.com、invalid、Choose a nickname；53:1956 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email/Placeholder；53:1957 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password/Placeholder；53:1958 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email/Field value |
@@ -110,7 +114,7 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 | `--font-caption-18` | `400 11px/18px "Fredoka"` | 28 | 文字：Tell us about inappropriate content、Stop contact from this person；36:3642 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-report/small/Tell us about inappropriate content；36:3649 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-block/small/Stop contact from this person；29:12015 /safety-choice · 安全操作 / 举报或屏蔽/Dialog/Container/Container/Button/Small/Tell us about inappropriate content |
 | `--font-caption-18-letter-spacing` | `0px` | 28 | 文字：Tell us about inappropriate content、Stop contact from this person；36:3642 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-report/small/Tell us about inappropriate content；36:3649 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-block/small/Stop contact from this person；29:12015 /safety-choice · 安全操作 / 举报或屏蔽/Dialog/Container/Container/Button/Small/Tell us about inappropriate content |
 | `--font-hint` | `400 11px/16px "Fredoka"` | 15 | 文字：Tap a bird. Open a little story.、No letters yet. Try a wider search.；35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. |
-| `--font-hint-letter-spacing` | `0.4000000059604645px` | 15 | 文字：Tap a bird. Open a little story.、No letters yet. Try a wider search.；35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. |
+| `--font-hint-letter-spacing` | `0.4px` | 15 | 文字：Tap a bird. Open a little story.、No letters yet. Try a wider search.；35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. |
 | `--font-micro` | `400 10px/1.21 "Fredoka"` | 181 | 文字： · 、Flight preview、Replay；35:2447 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/span/·；36:2579 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/span/Flight preview；36:2581 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/preview-flight/Replay |
 | `--font-micro-letter-spacing` | `0px` | 181 | 文字： · 、Flight preview、Replay；35:2447 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/span/·；36:2579 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/span/Flight preview；36:2581 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/preview-flight/Replay |
 | `--font-micro-17` | `400 10px/17px "Fredoka"` | 73 | 文字：At least 8 characters, with a letter and a number.；35:2861 /signup-empty · 注册 / 空表单/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2927 /signup-filled · 注册 / 已填写/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2993 /signup-mismatch · 注册 / 密码不一致/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number. |
@@ -161,11 +165,11 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 | `--radius-10` | `10px` | 26 | 29:5847 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button/Bold Text；29:5990 /inbox-collected-one · 消息 / 收取 1 封，剩余 2 封/Section/Container/Button:margin/Button/Bold Text；29:7696 /reply-last-free · 回信 / 剩余 1 次免费/Section/Container/Button:margin/Button/Bold Text |
 | `--radius-28` | `28px` | 25 | 36:3054 /letter-open · 来信详情 / 未回应/note-panel；36:3187 /letter-typed · 来信详情 / 编辑回应/note-panel；36:3321 /letter-waiting · 来信详情 / 已回应，等待回信/note-panel |
 | `--radius-10-5` | `10.5px` | 23 | 35:3538 /home-ready · 首页 / 三封来信/scene/div；35:3652 /home-empty · 首页 / 无符合条件的信件/scene/div；35:3762 /home-response · 首页 / 回应到达/scene/div |
-| `--shadow-sheet` | `0px -50px 100px 0px rgb(0 0 0 / 0.5329999923706055)` | 21 | 29:7176 /inbox-options · 会话 / 更多操作/Dialog；29:8572 /reply-topup · 回信 / 进入钻石补充/Dialog；29:10659 /chat-remark · 对话设置 / 备注名/Dialog |
-| `--shadow-dialog` | `0px 28px 80px 0px rgb(0 0 0 / 0.6000000238418579)` | 10 | 29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog |
-| `--shadow-glow` | `0px 0px 20px 0px rgb(181 250 112 / 0.0430000014603138)` | 39 | 29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button |
-| `--shadow-sm` | `0px 2px 4px 0px rgb(0 0 0 / 0.20000000298023224)` | 19 | 29:14354 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 1；29:14361 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 2；29:14367 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 3 |
-| `--shadow-md` | `0px 3px 12px 0px rgb(0 0 0 / 0.09399999678134918)` | 15 | 29:13771 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Button - New moment；29:13935 /profile-content · 个人页 / 已有形象照/Section/Container/Button - New moment；29:14301 /avatar-gallery · 头像 / 已上传与空槽位/Section/Container/Button - New moment |
+| `--shadow-sheet` | `0px -50px 100px 0px rgb(0 0 0 / 0.533)` | 21 | 29:7176 /inbox-options · 会话 / 更多操作/Dialog；29:8572 /reply-topup · 回信 / 进入钻石补充/Dialog；29:10659 /chat-remark · 对话设置 / 备注名/Dialog |
+| `--shadow-dialog` | `0px 28px 80px 0px rgb(0 0 0 / 0.6)` | 10 | 29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog |
+| `--shadow-glow` | `0px 0px 20px 0px rgb(181 250 112 / 0.043)` | 39 | 29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button |
+| `--shadow-sm` | `0px 2px 4px 0px rgb(0 0 0 / 0.2)` | 19 | 29:14354 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 1；29:14361 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 2；29:14367 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 3 |
+| `--shadow-md` | `0px 3px 12px 0px rgb(0 0 0 / 0.094)` | 15 | 29:13771 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Button - New moment；29:13935 /profile-content · 个人页 / 已有形象照/Section/Container/Button - New moment；29:14301 /avatar-gallery · 头像 / 已上传与空槽位/Section/Container/Button - New moment |
 | `--ring-page` | `0px 0px 0px 10px #0D1713` | 8 | 29:5827 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button；29:5972 /inbox-collected-one · 消息 / 收取 1 封，剩余 2 封/Section/Container/Button:margin/Button；29:7676 /reply-last-free · 回信 / 剩余 1 次免费/Section/Container/Button:margin/Button |
 | `--blur-trail` | `6px` | 411 | 35:3556 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector；35:3558 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector；35:3560 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector |
 | `--blur-backdrop` | `16px` | 10 | 29:7922 /reply-payment · 回信 / 10 次用完，付费确认/Container；29:8098 /reply-shortage · 回信 / 钻石不足/Container；29:11069 /chat-clear-confirm · 聊天记录 / 清空确认/Container |
@@ -209,8 +213,8 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 
 | 原待核对项 | 核对后用途及节点 |
 | --- | --- |
-| `--grad-card` | 确认对话框：付费、余额不足、清空记录、屏蔽等；斜向版本，按原节点高宽保留方向变体；29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog |
-| `--grad-card-horizontal` | 缓存清理、PIN、退出、注销、套餐与 Pass 确认等；9 个水平版本；35:2397 /cache-confirm · 缓存 / 清理确认/payment-overlay/payment-dialog；39:2849 /pin-locked · 应用锁 / 输入 PIN/payment-overlay/payment-dialog |
+| `--grad-card-diagonal-h391-5` | 确认对话框：付费、余额不足、清空记录、屏蔽等；斜向版本，按原节点高宽保留方向变体；29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog |
+| `--grad-card` | 缓存清理、PIN、退出、注销、套餐与 Pass 确认等；9 个水平版本；35:2397 /cache-confirm · 缓存 / 清理确认/payment-overlay/payment-dialog；39:2849 /pin-locked · 应用锁 / 输入 PIN/payment-overlay/payment-dialog |
 | `--hairline` | 页头分隔描边、容器细边框；29:5631 /inbox-empty · 消息 / 从未收到消息/Section/Header；29:5719 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header |
 | `--hairline-strong` | 登录输入框描边，也见其他输入/选项容器；35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password |
 | `--font-title-page` | 页头主标题：Hidden conversations 等；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations |
@@ -240,8 +244,12 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 
 ## 计划与 JSON 的差异
 
-- `shadow-sheet`：计划 53%，JSON `0.5329999923706055`（约53.3%），保留 JSON。其余 alpha 的二进制浮点尾数也原样保留，上表即精确值。
-- `grad-card`：计划合计19次，JSON 为10次斜向 + 9次水平，分别保留；前者按 handles 与节点实际高宽，通过逆转置方向和投影计算 CSS 角度及 stops（另以 height 后缀展开各高宽变体），后者明确 to right。主/次/图标按钮均为 to right。
+- `shadow-sheet`：计划 53%，JSON `0.5329999923706055`（约53.3%），token 写为 0.533；其余 alpha 同样约到 3 位，去除 float32 存储尾数。
+- `grad-primary`：98 次拆为水平 62 次和斜向 36 次；斜向按宽 143.5 / 165 / 277 / 309 / 327、高 48 分成 6 / 1 / 7 / 6 / 16 次，归一化角度 115°，实际 CSS 角度为 144.35°–162.53°。
+- `grad-secondary`：18 次拆为水平 17 次和 150×48 斜向 1 次；归一化角度 120°，实际 CSS 角度 151°。
+- `grad-icon-btn`：计划写横向 274 次，JSON 实为 44×44 的 135° 斜向 228 次和水平 46 次；多数斜向用无后缀名，水平用 `-horizontal`。
+- `grad-card`：19 次拆为水平 9 次和斜向 10 次；水平是单个精确值中最多的，使用无后缀名，斜向按 327×238 / 258 / 294 / 322 / 341 / 391.5 保留六个 `-diagonal-h*` 变体。
+- 换算规则：所有非横向线性渐变按节点 w×h 换算。等色线为 `((h2−h0).x·w, (h2−h0).y·h)`，取垂线并朝向 `((h1−h0).x·w, (h1−h0).y·h)`，单位方向 `(nx, ny)` 的 CSS 角度为 `atan2(nx, −ny)`；渐变线长为 `|nx|·w + |ny|·h`，将 h0/h1 相对元素中心的位置投影得到首尾色标。不同宽高不能直接复用斜向 token，必须从 handles 重算；分组键包含宽高。
 - 字体 body：计划284，完整匹配 Fredoka 400 13/20 字距0统计为283；不把其他字距或字体的节点混为同一组。
 - blur-trail：计划72，189状态内 visible LAYER_BLUR 6px 统计为411，包含各状态保留的场景轨迹；不缩小范围迎合计划次数。
 - 场景底等计划次数有的按画框、有的按文字；本报告统一给出明确口径的次数，不把总 paint 数当作画框数。§3.1 text-primary 计划780，JSON TEXT fills 精确计数为779。
@@ -255,7 +263,11 @@ RGB 由 JSON 通道乘 255 还原 hex；alpha、字距、尺寸直接保留 JSON
 
 ## 构建
 
-`cd client && npm run build`：退出码0；包含素材校验、vue-tsc --noEmit、vite build。最终 169 个属性生成后重跑确认；素材校验 PASS（343 PNG、SHA256、尺寸、字体和许可证），Vite 完成（5.39s）。静态检查另确认：169 行 token 证据与 CSS 一致、仅 :root 自定义属性、styles.css 与 HEAD 仅指定 lime 字串替换、import 顺序正确；现有源码引用交集仅 accent 与被旧定义覆盖的 space-2/3/4/5/6。git diff --check 通过。
+计数纠错：基线实际为 13 个线性渐变（2+2+2+7），不是验收文档所写的 14 个。按 §3.4 的 17 项表完整展开后，169+4=173 个 token；其余 token 未删除。四组次数为 98 / 18 / 274 / 19。两个指定节点 29:7947 / 29:7923 分别重算为 159.61deg / 140.03deg。生成脚本重跑后 tokens.css 字节一致。
+
+分支与 origin/main 的构建 CSS 对比：仅多一个含 173 条声明的 :root 块，以及 --lime 的指定替换，其他字节完全相同。
+
+`cd client && npm run build`：退出码0；包含素材校验、vue-tsc --noEmit、vite build。最终 173 个属性生成后重跑确认；素材校验 PASS（343 PNG、SHA256、尺寸、字体和许可证），Vite 完成。静态检查另确认：173 行 token 证据与 CSS 一致、仅 :root 自定义属性、styles.css 与 HEAD 仅指定 lime 字串替换、import 顺序正确；现有源码引用交集仅 accent 与被旧定义覆盖的 space-2/3/4/5/6。git diff --check 通过。
 
 ## 可复现生成脚本
 
@@ -279,7 +291,7 @@ assert len(frames)==189 and j['version']=='2421258509127695554'
 def num(v):return str(int(v)) if v==int(v) else repr(v)
 def color(c,a=1):
  h=hx(c); a*=c.get('a',1)
- return h if a==1 else 'rgb('+ ' '.join(str(round(c[k]*255)) for k in ('r','g','b'))+' / '+num(a)+')'
+ return h if a==1 else 'rgb('+ ' '.join(str(round(c[k]*255)) for k in ('r','g','b'))+' / '+num(round(a,3))+')'
 rows=[]
 def add(name,value,hits,use):
  assert hits,(name,value)
@@ -310,20 +322,31 @@ cnt=collections.Counter(hx(v['color'])[1:] for n,p,pr,v in paints if pr=='fills'
 for h,c in cnt.items():
  if 30<=c<=60 and h not in base.values() and h not in extra:extra[h]='node-'+h.lower()
 for h,name in extra.items():solid('text-'+name,h,text=True,prop='fills')
-for name,ends in {'grad-primary':('BDFF81','B0FB61'),'grad-icon-btn':('1B2121','131818'),'grad-secondary':('1C2223','171D1E'),'grad-card':('253229','17221C'),'bg-scene-glow':('102017','000000')}.items():
+for name,ends in {'grad-primary':('BDFF81','B0FB61'),'grad-icon-btn':('1B2121','131818'),'grad-secondary':('1C2223','171D1E'),'grad-card':('253229','17321C'),'bg-scene-glow':('102017','000000')}.items():
  hits=[(n,p,v) for n,p,pr,v in paints if tuple(hx(s['color'])[1:] for s in v.get('gradientStops',[]))==ends]
- # Same stops can have different directions; keep each exact variant.
+ # Non-horizontal linear variants include both node dimensions in their grouping key.
+ def horizontal(v):
+  h=v['gradientHandlePositions']
+  return v['type']=='GRADIENT_LINEAR' and h[1]['x']-h[0]['x']==1 and h[1]['y']-h[0]['y']==0
  groups=collections.defaultdict(list)
- for n,p,v in hits:groups[(json.dumps(v['gradientHandlePositions']), (n['absoluteBoundingBox']['width'],n['absoluteBoundingBox']['height']) if name=='grad-card' and v['gradientHandlePositions'][0]['x']!=0 else None)].append((n,p,v))
- for i,group in enumerate(groups.values()):
+ for n,p,v in hits:
+  box=n['absoluteBoundingBox']
+  size=(box['width'],box['height']) if v['type']=='GRADIENT_LINEAR' and not horizontal(v) else None
+  groups[(json.dumps(v['gradientHandlePositions']),size)].append((n,p,v))
+ ordered=sorted(groups.values(),key=lambda g:(-len(g),g[0][0]['absoluteBoundingBox']['width'],g[0][0]['absoluteBoundingBox']['height']))
+ diagonals=[g for g in ordered if g[0][2]['type']=='GRADIENT_LINEAR' and not horizontal(g[0][2])]
+ for i,group in enumerate(ordered):
   n,p,v=group[0];h=v['gradientHandlePositions'];dx=h[1]['x']-h[0]['x'];dy=h[1]['y']-h[0]['y']
+  positions=[s['position'] for s in v['gradientStops']];suffix='';use=''
   if v['type']=='GRADIENT_RADIAL':prefix='radial-gradient(ellipse closest-side at 50% 50%, '
   else:
-   # Figma's normalized handle direction maps to a CSS angle in normalized gradient space.
-   angle=math.degrees(math.atan2(dx,-dy))%360
-   positions=[s['position'] for s in v['gradientStops']]
-   if name=='grad-card' and h[0]['x']!=0:
-    w=n['absoluteBoundingBox']['width'];height=n['absoluteBoundingBox']['height']
+   w=n['absoluteBoundingBox']['width'];height=n['absoluteBoundingBox']['height']
+   normalized=math.degrees(math.atan2(dx,-dy))%360
+   if horizontal(v):
+    prefix='linear-gradient(to right, '
+    if i:suffix='-horizontal'
+   else:
+    # Perpendicular to the physical equal-color line, facing h1 from h0.
     nx=(h[2]['y']-h[0]['y'])*height;ny=-(h[2]['x']-h[0]['x'])*w
     if nx*dx*w+ny*dy*height<0:nx=-nx;ny=-ny
     length=math.hypot(nx,ny);nx/=length;ny/=length
@@ -332,9 +355,16 @@ for name,ends in {'grad-primary':('BDFF81','B0FB61'),'grad-icon-btn':('1B2121','
     end=.5+((h[1]['x']-.5)*w*nx+(h[1]['y']-.5)*height*ny)/span
     positions=[start+(end-start)*t for t in positions]
     angle=math.degrees(math.atan2(nx,-ny))%360
-   prefix='linear-gradient('+('to right' if dx==1 and dy==0 else num(angle)+'deg')+', '
-  value=prefix+', '.join(color(s['color'])+' '+num((positions[k] if v['type']=='GRADIENT_LINEAR' else s['position'])*100)+'%' for k,s in enumerate(v['gradientStops']))+')'
-  add(name+('' if i==0 else '-horizontal' if h[0]['x']==0 else '-height-'+num(n['absoluteBoundingBox']['height']).replace('.','-')),value,group,'渐变 handle='+json.dumps(h)+'；'+sample(group))
+    prefix='linear-gradient('+num(round(angle,2))+'deg, '
+    if i:
+     suffix='-diagonal'
+     if len(diagonals)>1:
+      widths={g[0][0]['absoluteBoundingBox']['width'] for g in diagonals}
+      suffix+=('-w'+num(w) if len(widths)>1 else '-h'+num(height)).replace('.','-')
+    use='节点尺寸 '+num(w)+'×'+num(height)+'；归一化角度 '+num(round(normalized,2))+'°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；'
+  value=prefix+', '.join(color(s['color'])+' '+num(round(positions[k]*100,2))+'%' for k,s in enumerate(v['gradientStops']))+')'
+  add(name+suffix,value,group,use+'渐变 handle='+json.dumps(h)+'；'+sample(group))
+
 fontspec={'font-button':(600,16,22),'font-h1':(500,24,32),'font-title-page':(550,17,24),'font-title-page-medium':(500,17,24),'font-title-sheet':(550,18,21.78),'font-title-sheet-fixed':(550,18,24),'font-title-card':(550,15,21),'font-body':(400,13,20),'font-body-sm':(400,12,20),'font-body-sm-18':(400,12,18),'font-body-sm-21':(400,12,21),'font-caption':(400,11,13.31),'font-caption-20':(400,11,20),'font-caption-21':(400,11,21),'font-caption-18':(400,11,18),'font-hint':(400,11,16),'font-micro':(400,10,12.1),'font-micro-17':(400,10,17),'font-micro-13':(400,10,13),'font-micro-16':(400,10,16),'font-tiny':(400,9,10.89),'font-tiny-16':(400,9,16),'font-symbol-star':(400,19,22.99),'font-symbol-chevron':(400,24,29.04)}
 for name,key in fontspec.items():
  hits=[(n,p,n['style']) for n,p in nodes if n['type']=='TEXT' and (n['style']['fontWeight'],n['style']['fontSize'],round(n['style']['lineHeightPx'],2))==key]
@@ -347,7 +377,7 @@ for name,key in fontspec.items():
   stem=name+suffix;s=group[0][2]; use='文字：'+ '、'.join(dict.fromkeys(n.get('characters','')[:70].replace('\n',' ') for n,p,s in group[:5]))+'；'+sample(group)
   lh='1.21' if round(s['lineHeightPx'],2)==round(s['fontSize']*1.21,2) else num(s['lineHeightPx'])+'px'
   add(stem,num(s['fontWeight'])+' '+num(s['fontSize'])+'px/'+lh+' "'+family+'"',group,use)
-  add(stem+'-letter-spacing',num(s['letterSpacing'])+'px',group,use)
+  add(stem+'-letter-spacing',num(round(s['letterSpacing'],3))+'px',group,use)
 # All listed spaces/radii; count property occurrences (not unique nodes).
 for v in [2,3,4,5,6,7,8,10,12,14,16,20,24,28,32,40]:
  hits=[(n,p,k) for n,p in nodes for k in ['itemSpacing','paddingLeft','paddingRight','paddingTop','paddingBottom'] if n.get(k)==v]
