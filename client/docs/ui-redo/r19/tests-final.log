@@ -1,0 +1,29 @@
+
+Running 1 test using 1 worker
+
+(node:1344769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r19-cards.spec.ts:3:1 › six card states use one real registered session (9.2s)
+
+
+  1) tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ─────────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 1
+    Received:    8
+
+       8 |  await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#upload-image-card')).toBeEnabled()
+       9 |  const metrics:any[]=[]
+    > 10 |  const box=async(selector:string,target:number[])=>{const b=await page.locator(selector).first().boundingBox();metrics.push({selector,target,actual:b});expect.soft(b).not.toBeNull();if(b)for(const [i,k] of ['x','y','width','height'].entries())expect.soft(Math.abs(b[k as keyof typeof b]-target[i]!)).toBeLessThanOrEqual(1)}
+         |                                                                                                                                                                                                                                                                                                             ^
+      11 |  const shot=async(name:string)=>{await page.waitForTimeout(400);await page.screenshot({path:`docs/ui-redo/r19/${name}.png`,animations:'disabled'})}
+      12 |  await page.locator('#upload-image-card').click();await shot('card-type');await box('.cards-panel',[12,418,351,370]);await box('.cards-title',[33,451,309,24]);await box('[data-card-type=portrait]',[33,499,309,52]);await box('.cards-cancel',[33,719,309,48])
+      13 |  await expect.soft(page.locator('.cards-panel')).toHaveCSS('background-color','rgb(24, 33, 30)');await expect.soft(page.locator('.cards-title')).toHaveCSS('font-size','18px');await expect.soft(page.locator('.cards-panel')).toHaveCSS('border-radius','24px')
+        at box (/root/Muse_AI-repository/client/tests/r19-cards.spec.ts:10:301)
+        at /root/Muse_AI-repository/client/tests/r19-cards.spec.ts:20:175
+
+    Error Context: docs/ui-redo/r19/test-results/r19-cards-six-card-states-use-one-real-registered-session/error-context.md
+
+  1 failed
+    tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ──────────────────

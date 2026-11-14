@@ -23,15 +23,6 @@
 @media(max-height:740px){.device{min-height:100svh}}
 
 /* Profile keeps the actual account data, with the prototype's spacing. */
-.device .d5>.section-heading h2{font-size:14px;line-height:20px;margin:0}
-.device .d5>.section-heading{margin:0 0 12px;align-items:center}
-.device .d5>.section-heading button{font-size:9px;color:#859d80}
-.device .d5 .card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.device .d5 .image-card,.device .d5 .upload-card{height:144px;border-radius:12px}
-.device .d5 .upload-card{background:#15231a;border:1px dashed #637e5c66;gap:20px}
-.device .d5 .upload-card b{font-size:32px;font-weight:400;color:#638257}
-.device .d5 .upload-card small{font-size:8px;color:#74916a}
-.device .d5>.hint{font-size:10px;line-height:16px;color:#74916a}
 /* Settings: 56px rows and 20px between groups; fine 1× assets. */
 .device .settings-flow header{padding:0 24px}
 .device .settings-flow h1{font-size:17px;line-height:24px;font-weight:550}

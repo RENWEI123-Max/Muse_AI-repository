@@ -813,3 +813,54 @@
 :root{/* white opacity .157, 6 occurrences: 29:14342; crop opacity .467, 1 occurrence: 29:15444 */ --avatar-grabber:rgb(255 255 255 / .15700000524520874);--avatar-crop-border:rgb(181 250 112 / .46700000762939453);}
 
 :root{/* 29:14636, 1 occurrence; exact gradient stops #253229/#17221c at 0/100%. */ --avatar-dialog-gradient:linear-gradient(138.41183168216892deg,#253229 0%,#17221c 100%);}
+
+/* R19 exact paints; counts and node references: docs/ui-redo/r19/colors.json. */
+:root{
+ /* 6 occurrences; local JSON 11:161; measured rgba(0,0,0,0.46700000762939453) */
+ --cards-veil:rgba(0,0,0,0.46700000762939453);
+ /* 6 occurrences; local JSON 11:169; measured #8e9696 */
+ --cards-close:var(--safety-choice-close);
+ /* 10 occurrences; local JSON 11:172; measured #203125 */
+ --cards-option:#203125;
+ /* 10 occurrences; local JSON 11:172; measured rgba(255,255,255,0.029999999329447746) */
+ --cards-option-border:rgba(255,255,255,0.029999999329447746);
+ /* 18 occurrences; local JSON 11:36; measured rgba(255,255,255,0.027000000700354576) */
+ --cards-row-border:rgba(255,255,255,0.027000000700354576);
+ /* 3 occurrences; local JSON 11:182; measured #a7b5aa */
+ --cards-secondary:var(--person-paint-28);
+ /* 10 occurrences; local JSON 11:115; measured #91a48a */
+ --cards-muted:var(--text-profile-count);
+ /* 20 occurrences; local JSON 11:117; measured #7c927c */
+ --cards-chevron:var(--text-chevron);
+ /* 2 occurrences; local JSON 11:378; measured #e69d96 */
+ --cards-danger:var(--chat-clear-label);
+ /* 3 occurrences; local JSON 11:919; measured #223026 */
+ --cards-audience-bg:var(--r09-notice-bg);
+ /* 5 occurrences; local JSON 11:284; measured rgba(8,15,11,0.5329999923706055) */
+ --cards-badge:rgba(8,15,11,0.5329999923706055);
+ /* 5 occurrences; local JSON 11:286; measured linear-gradient(180deg,rgba(7,16,11,0),rgba(7,16,11,0.7329999804496765)) */
+ --cards-footer:linear-gradient(180deg,rgba(7,16,11,0),rgba(7,16,11,0.7329999804496765));
+ /* 6 occurrences; local JSON 11:102; measured #15231a */
+ --cards-upload:#15231a;
+ /* 6 occurrences; local JSON 11:102; measured rgba(99,126,92,0.4000000059604645) */
+ --cards-upload-border:rgba(99,126,92,0.4000000059604645);
+ /* 6 occurrences; local JSON 11:107; measured #74916a */
+ --cards-upload-text:#74916a;
+ /* 1 occurrences; local JSON 11:1135; measured #a1b29f */
+ --cards-description:var(--reply-description);
+ /* 1 occurrences; local JSON 11:1129; measured rgba(3,8,5,0.7900000214576721) */
+ --cards-confirm-veil:rgba(3,8,5,0.7900000214576721);
+ --font-family-en:Fredoka,GowunDodum,sans-serif;
+ --radius-0:0px;
+ --cards-font-title:550 18px/24px Fredoka;
+ --cards-font-type:400 14px/17px Fredoka;
+ --cards-font-row:400 13px/20px Fredoka;
+ --cards-font-meta:400 11px/13px Fredoka;
+ --cards-font-caption:400 12px/15px Fredoka;
+ --cards-font-confirm:500 22px/28px Fredoka;
+ --cards-font-description:400 12px/20px Fredoka;
+ --cards-font-heading:500 14px/20px Fredoka;
+ --cards-font-badge:400 8px/12px Fredoka;
+ --cards-font-upload:400 8px/12px Fredoka;
+ --cards-font-plus:400 32px/32px Fredoka;
+}

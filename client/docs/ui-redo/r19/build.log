@@ -1,0 +1,11 @@
+
+> maugo-client@0.1.0 build
+> npm run verify:assets && vue-tsc --noEmit && vite build
+
+
+> maugo-client@0.1.0 verify:assets
+> node scripts/verify-assets.mjs
+
+PASS: 343 PNGs; manifest paths, SHA256, dimensions, fonts and OFL licenses
+src/components/MomentsFlow.vue(66,204): error TS2367: This comparison appears to be unintentional because the types '"moment-visibility" | "post-visibility"' and '"card-visibility"' have no overlap.
+src/components/MomentsFlow.vue(66,363): error TS2367: This comparison appears to be unintentional because the types '"moment-visibility" | "post-visibility"' and '"card-visibility"' have no overlap.

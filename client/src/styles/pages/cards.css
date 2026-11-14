@@ -1,0 +1,42 @@
+/* R19: measured from local Figma 11:7 / 187 / 385 / 562 / 748 / 933. */
+.cards-overlay{position:fixed;inset:0;z-index:85;width:375px;height:100%;margin:auto;background:var(--cards-veil);font-family:var(--font-family-en);color:var(--text-primary)}
+.cards-overlay .cards-panel{position:absolute;left:12px;top:418px;width:351px;height:370px;margin:0;padding:0;overflow:visible}
+.cards-overlay .cards-title{position:absolute;left:20px;top:32px;width:309px;height:24px;margin:0;text-align:center;font:var(--cards-font-title)}
+.cards-overlay .cards-close{z-index:1;position:absolute;left:297px;top:16px}
+.cards-overlay .cards-types{position:absolute;left:20px;top:80px;width:309px;height:208px;overflow:hidden;border-radius:var(--radius-14)}
+.cards-overlay .cards-cancel{position:absolute;left:20px;top:300px;width:309px;height:48px}
+.cards-card-options .cards-panel{top:462px;height:326px}
+.cards-overlay .cards-options{position:absolute;left:20px;top:80px;width:309px}
+.cards-overlay .cards-primary-action{position:absolute;left:20px;top:-48px;width:309px;height:40px}
+.cards-card-preview .cards-panel{top:179.5px;height:608.5px}
+.cards-overlay .cards-preview{position:absolute;left:20px;top:80px;width:309px;height:480px;max-height:none;object-fit:contain;border-radius:var(--radius-0)}
+.cards-overlay .cards-caption{position:absolute;left:20px;top:560px;width:309px;height:15px;margin:0;text-align:center;color:var(--cards-secondary);font:var(--cards-font-caption);text-transform:capitalize}
+.cards-card-visibility .cards-panel{top:494px;height:294px}
+.cards-overlay .cards-audience{position:absolute;left:20px;top:80px;width:309px;display:grid;gap:12px}
+.cards-card-remove .cards-panel{left:24px;top:287px;width:327px;height:238px}
+.cards-card-remove .cards-title{left:24px;top:36px;width:277px;height:28px;font:var(--cards-font-confirm)}
+.cards-card-remove .cards-close{left:277px;top:8px;width:40px;height:40px}
+.cards-overlay .cards-description{position:absolute;left:24px;top:76px;width:277px;margin:0;text-align:center;font:var(--cards-font-description);color:var(--cards-description)}
+.cards-overlay .cards-delete{position:absolute;left:24px;top:120px;width:277px;height:48px}
+.cards-card-remove .cards-cancel{left:24px;top:176px;width:277px;height:44px}
+.cards-ko{display:none}
+[lang=ko] .cards-en{display:none}
+[lang=ko] .cards-ko{display:contents}
+[lang=ko] .cards-overlay{font-family:var(--font-family-ko)}
+.d5 .section-heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px}
+.d5 .section-heading h2{font:var(--cards-font-heading);margin:0}
+.d5 .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.d5 .image-card{height:144px;border-radius:var(--radius-12);overflow:hidden;position:relative;padding:0;background:var(--avatar-cell)}
+.d5 .image-card img{height:100%;width:100%;object-fit:cover}
+.d5 .image-card span{position:absolute;top:8px;left:8px;font:var(--cards-font-badge);background:var(--cards-badge);padding:2px 4px;border-radius:var(--radius-4);text-transform:capitalize}
+.d5 .image-card small{position:absolute;bottom:0;left:0;right:0;font:var(--cards-font-caption);padding:8px;background:var(--cards-footer)}
+.d5 .upload-card{height:144px;border-radius:var(--radius-12);background:var(--cards-upload);border:1px dashed var(--cards-upload-border);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;color:var(--cards-upload-text);padding:0}
+.d5 .upload-card b{font:var(--cards-font-plus)}
+.d5 .upload-card small{font:var(--cards-font-upload)}
+@media(max-height:740px){.cards-overlay .cards-panel{top:auto;bottom:24px}.cards-card-preview .cards-panel{top:65px;bottom:auto}.cards-card-remove .cards-panel{top:calc(50% - 119px);bottom:auto}}
+
+.cards-overlay .cards-underlay{position:absolute;left:12px;top:462px;width:351px;height:326px;margin:0;padding:0}
+.cards-overlay .cards-confirm-veil{position:absolute;inset:0;background:var(--cards-confirm-veil);backdrop-filter:blur(8px)}
+.cards-card-remove .cards-panel{z-index:1}
+
+[lang=ko] :is(.cards-title,.cards-caption,.cards-description){font-family:var(--font-family-ko)}

@@ -167,3 +167,25 @@
 .ui-sheet--profile-avatar .ui-sheet__grabber{background:var(--avatar-grabber)}
 
 .ui-dialog--avatar{background:var(--avatar-dialog-gradient)}
+
+/* R19 shared card sheet / options, local JSON 11:162, 172, 357, 919. */
+.ui-sheet--cards{border:1px solid var(--avatar-border);border-radius:var(--radius-24);background:var(--bg-sheet);box-shadow:none;color:var(--text-primary)}
+.ui-sheet--cards .ui-sheet__grabber{background:var(--avatar-grabber)}
+.ui-icon-button--cards{background:none;color:var(--cards-close);font:var(--font-symbol-chevron)}
+.ui-card-type{display:block;width:309px;height:52px;padding:0;border:0;border-bottom:1px solid var(--cards-option-border);background:var(--cards-option);color:var(--text-primary);font:var(--cards-font-type);text-transform:capitalize}
+.ui-button--cards-secondary{background:var(--cards-option);color:var(--cards-secondary);border-radius:var(--radius-14);font:var(--cards-font-type);letter-spacing:0}
+.ui-row--cards{height:56px;border-bottom:1px solid var(--cards-row-border);font:var(--cards-font-row);letter-spacing:0}
+.ui-row--cards small{margin-left:auto;color:var(--cards-muted);font:var(--cards-font-meta);text-transform:capitalize}
+.ui-row--cards .ui-chevron{margin-left:auto;color:var(--cards-chevron)}
+.ui-row--cards small+.ui-chevron{margin-left:0}
+.ui-row--cards-danger{color:var(--cards-danger);border:0}
+.ui-row--cards-audience{height:56px;padding:0 16px;background:var(--cards-audience-bg);border:1px solid var(--cards-option-border);border-radius:var(--radius-14);font:var(--cards-font-type);letter-spacing:0}
+.ui-row--cards-audience[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.ui-row--cards-audience b{margin-left:auto}
+.ui-dialog--cards{background:var(--grad-card-height-238);border:1px solid var(--dialog-border);border-radius:var(--radius-28);box-shadow:var(--shadow-dialog)}
+[lang=ko] :is(.ui-card-type,.ui-button--cards-secondary,.ui-row--cards,.ui-row--cards-audience){font-family:var(--font-family-ko)}
+
+.ui-button--cards-text{min-height:44px;padding:0;background:none;color:var(--cards-secondary);font:var(--cards-font-caption)}
+[lang=ko] .ui-button--cards-text{font-family:var(--font-family-ko)}
+
+.ui-button--cards-delete{border-radius:var(--radius-24);background:var(--grad-primary-height-48);font:var(--font-button);letter-spacing:0}
