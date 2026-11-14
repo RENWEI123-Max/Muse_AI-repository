@@ -1,0 +1,37 @@
+[WebServer] (node:1162299) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1162311) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1162351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:1162408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r11-chat.spec.ts:5:1 › R11 twelve actual chat states, geometry, styles and screenshots (10.6s)
+
+
+  1) tests/r11-chat.spec.ts:5:1 › R11 twelve actual chat states, geometry, styles and screenshots ──
+
+    Error: #chat-input y
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 1
+    Received:    4.87225341796875
+
+      2 | import {mkdir,writeFile} from 'node:fs/promises'
+      3 | test.use({channel:'chromium',launchOptions:{args:['--use-fake-device-for-media-stream']}})
+    > 4 | async function box(page:Page,selector:string,target:number[]){const b=await page.locator(selector).boundingBox();expect(b).toBeTruthy();for(const [i,k] of ['x','y','width','height'].entries())expect(Math.abs(b![k as keyof typeof b]!-target[i]),selector+' '+k).toBeLessThanOrEqual(1)}
+        |                                                                                                                                                                                                                                                                     ^
+      5 | test('R11 twelve actual chat states, geometry, styles and screenshots',async({page,request,context})=>{
+      6 |  test.setTimeout(120000);await mkdir('docs/ui-redo/r11',{recursive:true})
+      7 |  const evidence:any[]=[]
+        at box (/root/Muse_AI-repository/client/tests/r11-chat.spec.ts:4:261)
+        at /root/Muse_AI-repository/client/tests/r11-chat.spec.ts:14:2
+
+    Error Context: ../../../tmp/r11-playwright-results/r11-chat-R11-twelve-actual-ab49e-etry-styles-and-screenshots/error-context.md
+
+  1 failed
+    tests/r11-chat.spec.ts:5:1 › R11 twelve actual chat states, geometry, styles and screenshots ───

@@ -1,0 +1,3 @@
+df4526b InboxFlow.vue literal inbox-veil count: 2
+D11 test waits for .inbox-veil after paid confirmation (tests/d11.spec.ts:35).
+This is a static source check, NOT a baseline D11 test pass.

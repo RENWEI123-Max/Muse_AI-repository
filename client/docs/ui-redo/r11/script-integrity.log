@@ -1,0 +1,3 @@
+PASS: <script setup> byte-identical to df4526b
+SHA256: 9284ea11a25a468bd3e6cbb2cda28d9e041888b7ddd2f154574085b8a6c48f4a
+PASS: every baseline id, data-state and aria-label expression retained (checked separately)

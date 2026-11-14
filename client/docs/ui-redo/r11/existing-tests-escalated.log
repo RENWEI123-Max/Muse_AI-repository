@@ -1,0 +1,138 @@
+[WebServer] (node:1147638) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1147650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1147687) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:1147730) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send (1.0m)
+(node:1148723) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission (24.0s)
+(node:1149118) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/chat.spec.ts:6:1 › C6 photo history rendering and pending photo (read contract) (5.1s)
+(node:1149247) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 tests/chat-voice.spec.ts:5:1 › F03 permission, empty, cancel, offline retry, real B8 audio playback and history (8.5s)
+  ✓  5 tests/chat-voice.spec.ts:25:1 › F03 silent microphone is rejected without upload (5.7s)
+  ✘  6 tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard (1.2m)
+
+
+  1) tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('#chat-send')
+        - locator resolved to <button id="chat-send" data-v-acc76d6f="" aria-label="Send message" class="ui-icon-button ui-icon-button--chat-send">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        106 × waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> intercepts pointer events
+          - retrying click action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      1 | import {test,expect} from '@playwright/test'
+      2 | async function enter(page:any,request:any,mode='waiting'){const u=await(await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode}})).json();await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await expect(page.locator('[data-chat]')).toHaveCount(1);await page.locator('[data-chat]').click();return u}
+    > 3 | test('C6 B8 real upload, image attachment, authenticated history, sticker send',async({page,request})=>{test.setTimeout(60000);await enter(page,request,'read');await expect(page.locator('#chat-form')).toBeVisible();await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await expect(page.locator('.chat-bubble img')).toHaveCount(1);await page.getByLabel('Back to messages').click();await page.locator('[data-chat]').click();await expect(page.locator('.chat-bubble img')).toHaveCount(1);await expect(page.locator('.chat-bubble img')).toHaveJSProperty('complete',true);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.chat-bubble img')).toHaveCount(2);await expect(page.locator('.c6-error')).toHaveCount(0)})
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      4 |
+        at /root/Muse_AI-repository/client/tests/chat-media.spec.ts:3:834
+
+    Error Context: test-results/chat-media-C6-B8-real-uplo-46f11-icated-history-sticker-send/error-context.md
+
+  2) tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.c6-voice-preview')
+    Expected: visible
+    Timeout: 65000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.c6-voice-preview') with timeout 65000ms
+      - waiting for locator('.c6-voice-preview')
+
+
+      32 |  test.setTimeout(90000);await context.grantPermissions(['microphone']);await enter(page,request,'read')
+      33 |  const b=(await page.locator('#chat-hold').boundingBox())!;await page.mouse.move(b.x+20,b.y+10);await page.mouse.down();await expect(page.locator('.c6-record')).toContainText('0:00')
+    > 34 |  await expect(page.locator('.c6-voice-preview')).toBeVisible({timeout:65000});await page.mouse.up();await expect(page.locator('.c6-voice-notice')).toContainText('60 second limit')
+         |                                                  ^
+      35 |  const duration=await page.getByLabel('Preview voice',{exact:true}).evaluate(async(a:HTMLAudioElement)=>{if(!a.duration)await new Promise(r=>a.addEventListener('loadedmetadata',r,{once:true}));return a.duration});expect(duration).toBeGreaterThan(59);expect(duration).toBeLessThanOrEqual(60)
+      36 |  await page.getByRole('button',{name:'Cancel',exact:true}).click();await expect(page.locator('.c6-voice-preview')).toHaveCount(0);await expect(page.getByLabel('Voice message',{exact:true})).toHaveCount(0)
+      37 | })
+        at /root/Muse_AI-repository/client/tests/chat-voice.spec.ts:34:50
+
+    Error Context: test-results/chat-voice-F03-real-60-sec-ac6e7-capture-and-permits-discard/error-context.md
+
+  3) tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Remove attachment')
+        - locator resolved to <button type="button" data-v-acc76d6f="" aria-label="Remove attachment">×</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img alt="Sticker" data-v-acc76d6f="" src="/src/assets/06-stickers/sticker-5-562.png"/> from <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img alt="Sticker" data-v-acc76d6f="" src="/src/assets/06-stickers/sticker-5-562.png"/> from <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        23 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <img alt="Sticker" data-v-acc76d6f="" src="/src/assets/06-stickers/sticker-5-562.png"/> from <div data-v-acc76d6f="" class="c6-stickers ui-sticker-picker">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      2 | async function enter(page:any,request:any,mode='waiting'){const u=await(await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode}})).json();await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await expect(page.locator('[data-chat]')).toHaveCount(1);await page.locator('[data-chat]').click();return u}
+      3 | async function state(page:any,s:string){await expect(page.locator('.c6-chat')).toHaveAttribute('data-state',s);await page.waitForTimeout(400);await page.screenshot({path:`test-results/c6-${s}.png`})}
+    > 4 | test('C6 waiting → reply → collect → send, settings, search, clear preserves permission',async({page,request})=>{test.setTimeout(90000);page.setDefaultTimeout(12000);const u=await enter(page,request);await state(page,'chat-waiting');await expect(page.locator('#chat-form')).toHaveCount(0);await page.locator('#chat-details').click();await state(page,'chat-details-waiting');await page.getByLabel('Back to messages').click();await request.post('http://127.0.0.1:3001/__c6/reply',{data:{id:u.conversations[0]}});await state(page,'chat-receipt-waiting');const denied=await request.post(`http://127.0.0.1:3001/media/uploads?purpose=chat&filename=test.png&conversationId=${u.conversations[0]}`,{headers:{Authorization:`Bearer ${u.token}`,'Content-Type':'image/png'},data:Buffer.from('test')});expect(denied.status()).toBe(403);await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);await state(page,'chat-open');await page.locator('#chat-input').fill('I would love to hear more about that book.');await state(page,'chat-draft');await page.locator('#chat-send').click();await state(page,'chat-sent');await expect(page.locator('.c6-thread')).toContainText('I would love');await page.locator('#chat-stickers').click();await state(page,'chat-stickers');await page.locator('.sticker-option').first().click();await state(page,'chat-sticker-selected');await page.getByLabel('Remove attachment').click();await page.locator('#chat-stickers').click();await page.evaluate(()=>{navigator.mediaDevices.getUserMedia=async()=>{throw new DOMException('Denied by test','NotAllowedError')}});await page.locator('#chat-hold').click();await state(page,'chat-mic-denied');await page.locator('#chat-details').click();await state(page,'chat-details');await page.locator('#remark-name').click();await state(page,'chat-remark');await page.getByLabel('Remark',{exact:true}).fill('Quiet friend');await page.getByRole('button',{name:'Save remark',exact:true}).click();await page.getByRole('button',{name:'Search chat history'}).click();await state(page,'chat-search-empty');await page.locator('#message-search').fill('listening');await state(page,'chat-search-result');await page.locator('#message-search').fill('unmatched-query');await expect(page.locator('.c6-results')).toContainText('No messages found.');await state(page,'chat-search-none');await page.getByLabel('Back to messages').click();await page.locator('#chat-details').click();await page.locator('#clear-chat').click();await state(page,'chat-clear-confirm');await page.getByRole('button',{name:'Clear history',exact:true}).click();await state(page,'chat-cleared');await page.locator('#chat-input').fill('Still connected');await page.locator('#chat-send').click();await state(page,'chat-sent');await expect(page.locator('.c6-thread')).toContainText('Still connected')})
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+      5 |
+      6 | test('C6 photo history rendering and pending photo (read contract)',async({page,request})=>{test.setTimeout(60000);await page.route('**/api/conversations/*/messages?*',async route=>{const r=await route.fetch(),d=await r.json();d.items.push({id:'photo-fixture',content:'A little photo',kind:'reply',mine:false,createdAt:new Date().toISOString(),media:[{url:'/src/assets/05-avatars/portrait-1.png',kind:'image'}]});await route.fulfill({response:r,json:d})});await enter(page,request,'read');await state(page,'chat-photo');await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await state(page,'chat-attachment');await expect(page.locator('.c6-attachment img')).toBeVisible()})
+      7 |
+        at /root/Muse_AI-repository/client/tests/chat.spec.ts:4:1514
+
+    Error Context: test-results/chat-C6-waiting-→-reply-→--13ff1--clear-preserves-permission/error-context.md
+
+  3 failed
+    tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send
+    tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard ─────
+    tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission
+  3 passed (3.1m)

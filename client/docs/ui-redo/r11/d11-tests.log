@@ -1,0 +1,47 @@
+[WebServer] (node:1160528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1160541) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1160610) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:1160679) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft (10.9s)
+  ✘  2 tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle (2.1m)
+(node:1163238) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits (6.0s)
+  ✓  4 tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue (5.7s)
+
+
+  1) tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.evaluate: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('.inbox-veil')
+
+
+       9 |  await writeFile(`docs/d11/${name}-motion.json`,JSON.stringify(data,null,2));return data
+      10 | }
+    > 11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+         |                                                                                ^
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+      13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+      14 |
+        at settled (/root/Muse_AI-repository/client/tests/d11.spec.ts:11:80)
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:35:153
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../tmp/maugo-d11-task80-results/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../tmp/maugo-d11-task80-results/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/error-context.md
+
+  1 failed
+    tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+  3 passed (2.8m)

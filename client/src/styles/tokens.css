@@ -536,3 +536,51 @@
 }
 
 :root { /* R10 29:7930 stroke / 29:7952 close */ --reply-summary-border: rgb(255 255 255 / .03); --reply-close: #ACBCAA; }
+
+/* R11: local Figma 2421258509127695554, exact paints. */
+:root {
+  --chat-surface: #102017; /* 29:8872 */
+  --chat-notice: #799776; /* 29:8871 */
+  --chat-composer: #18251D; /* 29:8886 */
+  --chat-input: #233328; /* 29:8888 */
+  --chat-hold: #223429; /* 29:8906 */
+  --chat-hold-text: #9EB994; /* 29:8911 */
+  --chat-mine: #AEF879; /* 29:8875 */
+  --chat-mine-text: #153011; /* 29:8876 */
+  --chat-peer: #28362E; /* 29:8880 */
+  --chat-peer-text: #E1E9DD; /* 29:8881 */
+  --chat-time: #779174; /* 29:8878 */
+  --chat-waiting: #1B2B21; /* 29:8691 */
+  --chat-waiting-title: #CDE3BE; /* 29:8693 */
+  --chat-waiting-copy: #8BA781; /* 29:8696 */
+  --chat-picker: #1D2923; /* 29:9577 */
+  --chat-sticker: rgb(255 255 255 / 0.016); /* 29:9585 */
+  --chat-record: rgb(6 12 9 / 0.96); /* 29:9933 */
+  --chat-denied: rgb(32 41 41 / 0.93); /* 29:10245 */
+  --chat-denied-text: #E6ECDF; /* 29:10246 */
+  --chat-font-message: 400 13px/21px Fredoka;
+  --chat-font-time: 400 9px/11px Fredoka;
+  --chat-font-notice: 400 10px/12px Fredoka;
+  --chat-font-waiting: 550 14px/19.5px Fredoka;
+  --chat-font-waiting-copy: 400 11px/19px Fredoka;
+  --chat-radius-mine: 16px 16px 4px 16px;
+  --chat-radius-peer: 16px 16px 16px 4px;
+}
+
+:root { --chat-input-border: rgb(255 255 255 / 0.03); --chat-picker-border: rgb(255 255 255 / 0.086); }
+
+/* 29:9963 / 29:9964 */
+:root { --chat-cancel-target: #26302A; --chat-cancel-label: #B4BFB0; }
+
+:root {
+ --chat-record-cancel-wave: #E9B19D; /* 29:10091 */
+ --chat-record-cancel-target: #61473F; /* 29:10119 */
+ --chat-record-cancel-label: #FFCDC0; /* 29:10120 */
+ --chat-record-cancel-finish: #B18A7B; /* 29:10121 */
+ --chat-record-finish: #718076; /* 29:9965 */
+ --chat-record-finish-text: #152719; /* 29:9966 */
+ --chat-attachment-card: #26312A; /* 29:9390 */
+ --chat-radius-record-finish: 101.85774230957031px 101.85774230957031px 0 0;
+ --chat-radius-thumbnail: 7px;
+ --chat-font-duration: 400 16px/19px Fredoka;
+}

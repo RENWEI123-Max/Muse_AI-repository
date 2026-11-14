@@ -1,0 +1,45 @@
+{
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  "coreTests": {
+    "command": "npx playwright test tests/chat.spec.ts tests/chat-media.spec.ts tests/chat-voice.spec.ts tests/r11-chat.spec.ts --workers=1",
+    "exitCode": 0,
+    "passed": 7,
+    "log": "final-tests.log"
+  },
+  "extended": {
+    "d3AndReportAttachment": {
+      "passed": 5,
+      "log": "related-tests.log"
+    },
+    "f07": {
+      "passed": 2,
+      "failed": 0,
+      "log": "f07-tests.log"
+    },
+    "d11": {
+      "passed": 3,
+      "failed": 1,
+      "log": "d11-tests.log"
+    },
+    "d2": {
+      "passed": 0,
+      "failed": 2,
+      "baselineFailed": 2,
+      "log": "baseline-d2-tests.log"
+    }
+  },
+  "acceptance": {
+    "A1": "通过",
+    "A2": "未通过",
+    "A3": "未通过",
+    "A4": "未通过/待R01/R04",
+    "A5": "未通过",
+    "A6": "未通过",
+    "A7": "通过",
+    "A8": "通过"
+  }
+}

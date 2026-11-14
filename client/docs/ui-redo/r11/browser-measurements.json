@@ -1,0 +1,148 @@
+[
+  {
+    "state": "chat-waiting",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": null
+  },
+  {
+    "state": "chat-receipt-waiting",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": null
+  },
+  {
+    "state": "chat-open",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-draft",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-sent",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-attachment",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-photo",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-stickers",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-sticker-selected",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-recording",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-record-cancel",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  },
+  {
+    "state": "chat-mic-denied",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "input": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    }
+  }
+]
