@@ -1,0 +1,194 @@
+[WebServer] (node:66762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:66764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough (26.8s)
+(node:66785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough (27.0s)
+(node:66800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough (26.9s)
+(node:66815) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough (27.0s)
+
+
+  1) tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: card-remove
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error: delete-failure
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error Context: test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: card-remove
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error: delete-failure
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error Context: test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: card-remove
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error: delete-failure
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+      61 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+    > 62 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+         |                                                                                                                                                                                                                                                                                                          ^
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error Context: test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: card-remove
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  checks.clipped=records.flatMap(r=>r.metric?.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c}))||[]);save()
+      61 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+    > 62 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+         |                                                                                                      ^
+      63 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+      64 | })
+      65 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error: delete-failure
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      60 |  checks.clipped=records.flatMap(r=>r.metric?.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c}))||[]);save()
+      61 |  expect.soft(checks.preview).toEqual({width:309,height:480,loaded:true});expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect(errors).toEqual([])
+    > 62 |  if(height===667)expect.soft(checks.previewScroll.top,'short preview must scroll').toBeGreaterThan(0)
+         |                                                                                                      ^
+      63 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.scroll.overflow,r.name+' overflow').toBe('auto');expect.soft(r.metric.animation.veilTransition,r.name+' veil').toBe('0s');expect.soft(r.metric.animation.name,r.name).toBe('sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(['card-remove','delete-failure'].includes(r.name)?'0.22s':'0.3s')}
+      64 | })
+      65 |
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:62:298
+
+    Error Context: test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ──────────────────────────────────

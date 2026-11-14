@@ -1,0 +1,13 @@
+{
+  "scope": "root Codex session snapshot before commit; reviewer and subsequent finish not included; not billing",
+  "rootSessionId": "01a1da70-15dd-7011-b9ab-b79324f68fca",
+  "timestamp": "2026-11-14T14:35:07.395Z",
+  "usage": {
+    "input_tokens": 4393824,
+    "cached_input_tokens": 4298752,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 25853,
+    "reasoning_output_tokens": 3381,
+    "total_tokens": 4419677
+  }
+}

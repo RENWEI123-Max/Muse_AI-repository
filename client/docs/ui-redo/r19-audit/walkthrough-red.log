@@ -1,0 +1,152 @@
+[WebServer] (node:66521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:66523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough (18.5s)
+(node:66542) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough (18.7s)
+(node:66589) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough (18.5s)
+(node:66601) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough (18.5s)
+
+
+  1) tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "dialogs": 0,
+    -   "profile": true,
+    +   "profile": false,
+      }
+
+      50 |   if(target==='card-type'){await open();await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await d5.locator('#upload-image-card').click()}
+      51 |   else{await open();if(target!=='card-options')await panel.locator({'card-preview':'#card-view','card-change-type':'#card-type','card-visibility':'#card-visibility','card-remove':'#card-remove'}[target]!).click()}
+    > 52 |   await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks[target+'Escape']={profile:await root.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,dialogs:0})
+         |                                                                                                                                                                                                                                                   ^
+      53 |   if(!await root.isVisible())return
+      54 |  }
+      55 |  await open();await d5.locator('.cards-overlay').click({position:{x:3,y:3}});await expect(panel).toHaveCount(0);checks.backdropClose=true
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:52:243
+
+    Error Context: test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "dialogs": 0,
+    -   "profile": true,
+    +   "profile": false,
+      }
+
+      50 |   if(target==='card-type'){await open();await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await d5.locator('#upload-image-card').click()}
+      51 |   else{await open();if(target!=='card-options')await panel.locator({'card-preview':'#card-view','card-change-type':'#card-type','card-visibility':'#card-visibility','card-remove':'#card-remove'}[target]!).click()}
+    > 52 |   await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks[target+'Escape']={profile:await root.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,dialogs:0})
+         |                                                                                                                                                                                                                                                   ^
+      53 |   if(!await root.isVisible())return
+      54 |  }
+      55 |  await open();await d5.locator('.cards-overlay').click({position:{x:3,y:3}});await expect(panel).toHaveCount(0);checks.backdropClose=true
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:52:243
+
+    Error Context: test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "dialogs": 0,
+    -   "profile": true,
+    +   "profile": false,
+      }
+
+      50 |   if(target==='card-type'){await open();await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await d5.locator('#upload-image-card').click()}
+      51 |   else{await open();if(target!=='card-options')await panel.locator({'card-preview':'#card-view','card-change-type':'#card-type','card-visibility':'#card-visibility','card-remove':'#card-remove'}[target]!).click()}
+    > 52 |   await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks[target+'Escape']={profile:await root.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,dialogs:0})
+         |                                                                                                                                                                                                                                                   ^
+      53 |   if(!await root.isVisible())return
+      54 |  }
+      55 |  await open();await d5.locator('.cards-overlay').click({position:{x:3,y:3}});await expect(panel).toHaveCount(0);checks.backdropClose=true
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:52:243
+
+    Error Context: test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "dialogs": 0,
+    -   "profile": true,
+    +   "profile": false,
+      }
+
+      50 |   if(target==='card-type'){await open();await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await d5.locator('#upload-image-card').click()}
+      51 |   else{await open();if(target!=='card-options')await panel.locator({'card-preview':'#card-view','card-change-type':'#card-type','card-visibility':'#card-visibility','card-remove':'#card-remove'}[target]!).click()}
+    > 52 |   await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks[target+'Escape']={profile:await root.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,dialogs:0})
+         |                                                                                                                                                                                                                                                   ^
+      53 |   if(!await root.isVisible())return
+      54 |  }
+      55 |  await open();await d5.locator('.cards-overlay').click({position:{x:3,y:3}});await expect(panel).toHaveCount(0);checks.backdropClose=true
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:52:243
+
+    Error Context: test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ──────────────────────────────────

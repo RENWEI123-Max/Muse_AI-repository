@@ -1,0 +1,132 @@
+{
+  "fixtureOnly": true,
+  "overallAcceptance": "未通过／待 Smith",
+  "testResult": "4 passed",
+  "screenshots": 76,
+  "primaryScreenshots": 24,
+  "pngDimensionsCRCAndInflation": "valid",
+  "groups": [
+    {
+      "group": "667-en",
+      "records": 19,
+      "screenshots": 19,
+      "primaryStates": [
+        "card-type",
+        "card-options",
+        "card-preview",
+        "card-change-type",
+        "card-visibility",
+        "card-remove"
+      ],
+      "gridScroll": {
+        "top": 583,
+        "documentY": 0
+      },
+      "previewScroll": {
+        "top": 6,
+        "client": 569,
+        "content": 575,
+        "documentY": 0
+      },
+      "escape": true,
+      "copyHorizontalClipping": [],
+      "animationsCaptured": 6,
+      "apiCalls": 116,
+      "realBackendVerified": false
+    },
+    {
+      "group": "667-ko",
+      "records": 19,
+      "screenshots": 19,
+      "primaryStates": [
+        "card-type",
+        "card-options",
+        "card-preview",
+        "card-change-type",
+        "card-visibility",
+        "card-remove"
+      ],
+      "gridScroll": {
+        "top": 583,
+        "documentY": 0
+      },
+      "previewScroll": {
+        "top": 7,
+        "client": 569,
+        "content": 576,
+        "documentY": 0
+      },
+      "escape": true,
+      "copyHorizontalClipping": [],
+      "animationsCaptured": 6,
+      "apiCalls": 116,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-en",
+      "records": 19,
+      "screenshots": 19,
+      "primaryStates": [
+        "card-type",
+        "card-options",
+        "card-preview",
+        "card-change-type",
+        "card-visibility",
+        "card-remove"
+      ],
+      "gridScroll": {
+        "top": 438,
+        "documentY": 0
+      },
+      "previewScroll": {
+        "top": 0,
+        "client": 607,
+        "content": 607,
+        "documentY": 0
+      },
+      "escape": true,
+      "copyHorizontalClipping": [],
+      "animationsCaptured": 6,
+      "apiCalls": 116,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-ko",
+      "records": 19,
+      "screenshots": 19,
+      "primaryStates": [
+        "card-type",
+        "card-options",
+        "card-preview",
+        "card-change-type",
+        "card-visibility",
+        "card-remove"
+      ],
+      "gridScroll": {
+        "top": 438,
+        "documentY": 0
+      },
+      "previewScroll": {
+        "top": 0,
+        "client": 607,
+        "content": 607,
+        "documentY": 0
+      },
+      "escape": true,
+      "copyHorizontalClipping": [],
+      "animationsCaptured": 6,
+      "apiCalls": 116,
+      "realBackendVerified": false
+    }
+  ],
+  "scriptsUnchanged": true,
+  "escapeProtectionPreserved": true,
+  "staticLegacyGaps": [
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "realBackendVerified": false,
+  "fullTranslationVerified": false,
+  "build": "build-final.log: exit 0 (shell command result)"
+}

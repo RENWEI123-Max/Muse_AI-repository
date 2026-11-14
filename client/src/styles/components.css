@@ -207,6 +207,7 @@
 @keyframes sheet-in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 .app-shell :is(.ui-sheet,.home-sheet,.moments-overlay .sheet){animation:sheet-in .3s ease-out}
 .app-shell :is(.ui-dialog,.ui-sheet--reply,.pass-payment-dialog){animation:sheet-in .22s ease-out}
+.app-shell .ui-dialog.ui-dialog--cards{animation-duration:.22s}
 /* Remove the older 100% travel and .38s sheet animation. */
 .app-shell :is(.sheet-enter-active,.sheet-leave-active,.inbox-sheet-enter-active,.inbox-sheet-leave-active,.d4-sheet-enter-active,.d4-sheet-leave-active,.d5-sheet-enter-active,.d5-sheet-leave-active){transition:none}
 .app-shell :is(.sheet-enter-active,.sheet-leave-active,.sheet-enter-from,.sheet-leave-to) .home-sheet{transition:none;transform:none}

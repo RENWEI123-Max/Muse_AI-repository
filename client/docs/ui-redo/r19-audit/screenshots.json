@@ -1,0 +1,686 @@
+[
+  {
+    "file": "667-en-card-change-type.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21542,
+    "sha256": "5e1ca8ec723574d00a46f495d96df51c21e079fee41251117ac2df9146d9933b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-card-options.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 26609,
+    "sha256": "b55b071ff0b17d802d6929916b35d1e76eef5fa3f4599abedb5561f5416a1c0a",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-card-preview.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 155407,
+    "sha256": "e2eab542434d2be957472ce31f968c9b487e6e160f1e2e0194bbad0d0825de7a",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-card-remove.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 65500,
+    "sha256": "7d5ff2f0018d8050ff798c8970ace84d6aa69412c620435e4632e7a39769fb4d",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-card-type.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 20565,
+    "sha256": "04c5afee991a4bf7db7595bfbfb7c6a81c98ef5c105df0d06e3e77611dd81b0e",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-card-visibility.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 25709,
+    "sha256": "8e686fa36f1f57b3fc5b7aeb5ad0be6bc809039445aaaf6ecc676a5baab65ad8",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-create-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21542,
+    "sha256": "5e1ca8ec723574d00a46f495d96df51c21e079fee41251117ac2df9146d9933b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-delete-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 65500,
+    "sha256": "7d5ff2f0018d8050ff798c8970ace84d6aa69412c620435e4632e7a39769fb4d",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 25910,
+    "sha256": "ac0f702205da47a9f5961044d9d7b70ed4f11c7b43ad3bc7327920b2c55e9801",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-full-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 97151,
+    "sha256": "6ee15cc0e2f14b3ccad4cd715531377c5aa3b9a6ab8116618e3caa7dd2893af9",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-full.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 118179,
+    "sha256": "bfce3d2ed74b38bd2d2d635bf215facf66119599af378debbb6e0330df9d0f79",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-invalid-file.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21751,
+    "sha256": "b0f9982711d0022309d58160c3eac795068f3f383ce12e62dcd5ef41f677bb24",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-list-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 27510,
+    "sha256": "bf8bccb0b3b24d5f93372cfb0b9862b5baa7b390b5aa52218f5c02483caf6dbe",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-preview-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 155744,
+    "sha256": "d58ef5326ca9b580c230bde386c3301684e49b7322093554e1679c4297da24cf",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-removed-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 24484,
+    "sha256": "cb284c8adf21cb104c6cc3e46cfbf8200995b6940a9a4fa389e2a2051ccb8b3f",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-size-boundary.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 27340,
+    "sha256": "8216c82e39067769ce82ba77f286511c19c651c1642f593a807de675bdd6de59",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-type-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21542,
+    "sha256": "5e1ca8ec723574d00a46f495d96df51c21e079fee41251117ac2df9146d9933b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-upload-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21542,
+    "sha256": "5e1ca8ec723574d00a46f495d96df51c21e079fee41251117ac2df9146d9933b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-en-visibility-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 26683,
+    "sha256": "7add883c2fdeedbb1ea1a1c31202bef93cbdda332fe966ec738554eb1095bc02",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-change-type.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21165,
+    "sha256": "cdffdbd50d1ac35398de4b59729d872636646a10b42ea9d180a949ef3c0fd346",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-options.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 25671,
+    "sha256": "21b0b0dc6c13d868db6196d6ad93ee7e678c599e6387345b0df084a18d9c6ca0",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-preview.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 155210,
+    "sha256": "a7d81fa9284cd58425a50d3bdc90f62349ac4e68e501fa31181aafc928f9ce27",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-remove.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 64278,
+    "sha256": "0a4079fc979a4f14a2cbab2eba330d30b118ee81a6737db4ff8b7f1a6fcf99f1",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-type.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 20172,
+    "sha256": "b4be2b7ce81cb775012ac163ebeb3eecb1a35225d42a2a3a3abd905412f8e0db",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-card-visibility.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 23740,
+    "sha256": "45f258ccbed32ddbec89666f79bc2bf937d6aca53c19334e10c3d2fd780f6aa0",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-create-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21177,
+    "sha256": "75ba0f30db6a793924e08695fe9d15b2e3ca95637dddf602d79d493a893ce7ad",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-delete-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 64278,
+    "sha256": "0a4079fc979a4f14a2cbab2eba330d30b118ee81a6737db4ff8b7f1a6fcf99f1",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 25741,
+    "sha256": "479b84098b2570c546cf06fafa5bf3a30d8e2dde835ede4935f9476faf66277d",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-full-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 96301,
+    "sha256": "21935185fe8af7107c0d0658e9046cd2cd9104e31995057fc3a8555105197086",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-full.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 117098,
+    "sha256": "994e3f2a9cb6f7b29f9a7cc4e44e71600fdbc33288c4fb6ecae227ccc2c08037",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-invalid-file.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21320,
+    "sha256": "af8a98229a60dddc4d4c258596002c713f9705a309f9c772d3337e0dd7dc1db0",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-list-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 27270,
+    "sha256": "b1a25a541c40f979eeb60b8f0f4a074d5eafdcac34e0aea62e39d9a55ca3cf71",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-preview-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 155446,
+    "sha256": "635de66336832055bfc1a8a9ae0aeb2b364ea6e709952f4f76269373b79311fc",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-removed-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 24053,
+    "sha256": "f96c22e61efa91e2f7baf3d5432d01a74e115e262e89ca756c74f9d46013c678",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-size-boundary.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 26618,
+    "sha256": "959b7ff08093cbffa71668a8f3cdce83af93131e1782fef7f8db644e060e412f",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-type-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21177,
+    "sha256": "75ba0f30db6a793924e08695fe9d15b2e3ca95637dddf602d79d493a893ce7ad",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-upload-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 21177,
+    "sha256": "75ba0f30db6a793924e08695fe9d15b2e3ca95637dddf602d79d493a893ce7ad",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "667-ko-visibility-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 24787,
+    "sha256": "47a58696427c810b93ef9945ce150e809f11fbd517184ebe41c501a5239a3dba",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-change-type.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27428,
+    "sha256": "b555c15ad3fda7a2e4e43484c3a9acbd6bf417ce1ec8c483fe17bb0ea63a1584",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-options.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29521,
+    "sha256": "1cd4baa3da6958c979c87b0121dc8027e7bb94e53b948095f996e15d21fa3e9f",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-preview.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 160614,
+    "sha256": "a3addc5494bb70798b1fea2eca5b9952bd3dfa3505ca61a3729dcb3e51dd921a",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-remove.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 70145,
+    "sha256": "142ed526973e253d4ceddebb2c6241b1083bba92ee225dbde8eccb6144c5bdc6",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-type.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 25982,
+    "sha256": "2e2e20583ba28a6bf2aa7839c54549de12de2dab39927645631a68f50d7b1473",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-card-visibility.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29345,
+    "sha256": "d797fd5bdb3e8944d69e842e4bd1197b0aff59782c43361e15e2e58e01723cd8",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-create-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27428,
+    "sha256": "b555c15ad3fda7a2e4e43484c3a9acbd6bf417ce1ec8c483fe17bb0ea63a1584",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-delete-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 70145,
+    "sha256": "142ed526973e253d4ceddebb2c6241b1083bba92ee225dbde8eccb6144c5bdc6",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 30306,
+    "sha256": "212e55925a34fccf2be8ec3c1b108f9fdd3e4490d640ea4066b418d85791eb4b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-full-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 133272,
+    "sha256": "735063ec79ee114d4634b6ec2e957a2c608547c0f73bf102b351a8cffd7c94d7",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-full.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 131144,
+    "sha256": "7baaa8cd21f463fd5a857266341e068a36b7762e52c2f5161656bc96ad21d5fe",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-invalid-file.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27664,
+    "sha256": "90919d51242f04c5d72fd91b1c0ddf47a0cd0f090a93b00087243cf40f018392",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-list-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 30131,
+    "sha256": "ee3021e0e8c7838cfa9af4ac08df149d4da77da6b70623ede27b79997b042c1b",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-preview-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 160614,
+    "sha256": "a3addc5494bb70798b1fea2eca5b9952bd3dfa3505ca61a3729dcb3e51dd921a",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-removed-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29049,
+    "sha256": "7be80c4f4750d9ff8bd649261f20f20b7c95a60bfe0896f6e759fbdeef94fa2d",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-size-boundary.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 32880,
+    "sha256": "e4f272869591b03b28f0efd90dea010d9e96794505ca7987de3e809f5ee90b58",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-type-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27428,
+    "sha256": "b555c15ad3fda7a2e4e43484c3a9acbd6bf417ce1ec8c483fe17bb0ea63a1584",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-upload-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27428,
+    "sha256": "b555c15ad3fda7a2e4e43484c3a9acbd6bf417ce1ec8c483fe17bb0ea63a1584",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-en-visibility-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 30886,
+    "sha256": "e74ad894d751ab42d524ad5d17293085ab7ec7650c83ad7ec9635a3b1cffdc27",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-change-type.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 26917,
+    "sha256": "98ed180c48078a4f4916027fd6ad3bfb0ea64e3f2ea186423e09fcb9be33d57c",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-options.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 28665,
+    "sha256": "9e63eee74e741579e2115bab73ea207922c8d5a2c283bddf44329714d287204c",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-preview.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 160199,
+    "sha256": "e1a1f90a48c140f142d16f3a75f9d639c69689b2b5d629aee031db1af32bce85",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-remove.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68633,
+    "sha256": "db1bd725e297e00aa9ce4d3b25cfe5e3a8e5a4de2e1a7962a4cc45be20539def",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-type.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 25530,
+    "sha256": "5ea01a52c378af6032369ec3066025ffc3e1a02f34eee13cf0ea92ee378e7e90",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-card-visibility.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27404,
+    "sha256": "62836df2186c4f30db7e36e25fd3bb66226ef9e5e7a9ebe6c187f0bc218b4852",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-create-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 26929,
+    "sha256": "d67940db2c4430e48f5585a3e182f57d84ed93b3188180fb24098c312e9e2352",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-delete-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68633,
+    "sha256": "db1bd725e297e00aa9ce4d3b25cfe5e3a8e5a4de2e1a7962a4cc45be20539def",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29694,
+    "sha256": "7c1887f356120c46a0a83119cd9bdd910c1bf91e891454606d128bc6ae189762",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-full-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 133722,
+    "sha256": "687f8a605771e8a961e8f165beda0a07df895a7659cb4af9594fd57559a78f06",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-full.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 131589,
+    "sha256": "cbbb7eb9643377483f570ff9732c1485badc5bfe2988e5b8aca150e4d5638018",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-invalid-file.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 27080,
+    "sha256": "81d4871e5e61b108026b02b2483b7536fd8be5c98b675879fe4f929f6e9c9aa7",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-list-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29732,
+    "sha256": "40f7efc596e3d5216403d3ddac593ff5fb88fa1dfc05c142f54b4fce0ea82ed9",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-preview-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 160199,
+    "sha256": "e1a1f90a48c140f142d16f3a75f9d639c69689b2b5d629aee031db1af32bce85",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-removed-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 28701,
+    "sha256": "44f685ec2b7fba6171946e42082b385295e757650f5bc09eb070d38b9f8d0718",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-size-boundary.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 31909,
+    "sha256": "6db8a83967f187252ea60ea5112fcab2222fa643c1c2d441094a74521c50cb4a",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-type-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 26929,
+    "sha256": "d67940db2c4430e48f5585a3e182f57d84ed93b3188180fb24098c312e9e2352",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-upload-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 26929,
+    "sha256": "d67940db2c4430e48f5585a3e182f57d84ed93b3188180fb24098c312e9e2352",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  },
+  {
+    "file": "812-ko-visibility-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 29000,
+    "sha256": "9582424c12adf3fee2d59292997ff13a1a8889e03adde327d42e78d1d05006db",
+    "chunksCRC": "valid",
+    "compressedData": "valid"
+  }
+]
