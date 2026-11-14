@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, onMounted, ref, watch} from 'vue'
-import {supportEmail,legalText,faqs,guides} from '../lib/support-content'
+import {supportEmail,legalText,termsVersion,termsSections,faqs,guides} from '../lib/support-content'
 import {locale,t,tr} from '../lib/i18n'
 import {asset} from '../lib/assets'
 import {api,post,ApiError} from '../lib/api'
@@ -66,7 +66,7 @@ async function cleared(){busy.value=true;error.value='';try{const keys='caches' 
 </template>
 <template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>Support email: {{supportEmail}} · Pending Smith</p></template>
 <template v-else-if="view==='guidelines'||view==='safety'"><article class="support-policy"><section v-for="[heading,copy] in guides[view]" :key="heading"><h2>{{tr(heading)}}</h2><p>{{tr(copy)}}</p></section></article></template>
-<template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><p>Official text pending Smith (E2). Not ready for release.</p><template v-if="view==='privacy'"><h2>Privacy policy</h2><p>{{legalText.privacy}}</p></template><template v-else><h2>Terms of service</h2><p>{{legalText.terms}}</p><h2>EULA</h2><p>{{legalText.eula}}</p></template></article></template>
+<template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><template v-if="view==='privacy'"><h2>{{tr('Privacy information')}}</h2><p>{{legalText.privacy[locale]}}</p></template><template v-else><p>{{tr(termsVersion)}}</p><section v-for="section in termsSections" :key="section.title"><h2>{{tr(section.title)}}</h2><p>{{tr(section.body)}}</p></section></template></article></template>
 <template v-else-if="view==='system'||view==='interactions'"><div class="support-empty"><img :src="asset('01-brand-scenes/envelope')" alt=""><h2>{{tr(view==='system'?'You are all caught up.':'Nothing here yet.')}}</h2><p>No {{view==='system'?'system message':'interaction'}} feed is connected.</p></div></template>
 <template v-else><div class="settings-group"><label v-for="item in generalItems" :key="item" class="settings-row"><span>{{t(item)}}</span><input :id="item" :disabled="item==='haptics'&&!hapticsAvailable" :checked="preferences[item]" @change="preferences[item]=($event.target as HTMLInputElement).checked" type="checkbox" role="switch"><i aria-hidden="true"></i></label><button id="clear-cache" class="settings-row" @click="confirm=true;notice=''"><span>{{t('clearCache')}}</span><b aria-hidden="true"><img :src="asset('08-interface-icons/icon-chevron-right-muted-16')" alt=""></b></button></div><p>{{t('hapticsNote')}}</p><p id="recommendations-status" role="status">{{t(preferences.recommendations?'recommendationsOn':'recommendationsOff')}}</p><p v-if="!hapticsAvailable">{{t('hapticsUnavailable')}}</p><p>{{t('cacheNote')}}</p><p v-if="notice" role="status">{{notice}}</p></template>
 <p v-if="error" role="alert">{{error}}</p></div></Transition>
