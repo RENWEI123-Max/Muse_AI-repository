@@ -1,0 +1,115 @@
+ function confirm(title,message,action,label='Confirm',danger=false){const close=showPaymentDialog(`<h2 id="payment-title">${T(title)}</h2><p>${T(message)}</p><button id="action-confirm" class="primary ${danger?'danger':''}">${T(label)}</button><button id="action-cancel" class="text-button">${T('Cancel')}</button>`);$('#action-cancel').onclick=close;$('#action-confirm').onclick=()=>{close();action();};}
+
+ async function hashPIN(pin,salt){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(salt+pin));return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');}
+
+ function deleteAccount(){page('Delete account',`<div class="delete-account-intro"><span>⊘</span><h2>${T('Before you leave')}</h2><p>${T('This removes the current preview profile and its data from this browser. Other preview profiles are kept. No server account is connected.')}</p></div><div class="deletion-summary"><p>${T('Your profile, letters, messages, uploads and preview diamonds will be permanently removed.')}</p><p>${T('This cannot be undone. Export your data first if you want a copy.')}</p></div><button class="outline-button full-width" id="delete-export">${T('Export my data')}</button><label class="field-label deletion-input">${T('Type DELETE to continue')}<input id="delete-account-input" autocomplete="off" autocapitalize="characters" aria-label="Type DELETE to continue"></label><label class="terms-check"><input type="checkbox" id="delete-account-check"><span>${T('I understand that this deletion cannot be undone.')}</span></label><button class="primary danger full-width" id="request-account-deletion" disabled>${T('Delete account')}</button><button class="text-button" id="keep-account">${T('Keep my account')}</button>`);$('#delete-export').onclick=exportData;const ready=()=>$('#request-account-deletion').disabled=$('#delete-account-input').value!=='DELETE'||!$('#delete-account-check').checked;$('#delete-account-input').oninput=ready;$('#delete-account-check').onchange=ready;$('#keep-account').onclick=back;$('#request-account-deletion').onclick=()=>{if($('#delete-account-input').value!=='DELETE'||!$('#delete-account-check').checked)return;confirm('Delete this preview account?', 'Your current local profile and its content will be permanently removed. This cannot be undone.',async()=>{try{await C.clearLocalProfileData();}catch{toast(T('Close other MauGo tabs and try again.'));}},'Delete account',true);};}
+
+ function account(){const person=window.MauGoAuth.getUser();if(!person){window.MauGoAuth.open('welcome');return;}page('Account',`<div class="menu-group"><div class="info-row"><span>${T('Email address')}</span><small data-user-content>${escape(person.email)}</small></div><div class="info-row"><span>${T('Sign-in method')}</span><small>${T(person.provider==='apple'?'Apple':'Email')}</small></div><div class="info-row"><span>${T('Account type')}</span><small>${T('Preview account')}</small></div></div><div class="menu-group">${row('Password recovery','profile-recovery')}${row('Switch account','switch-account')}${row('Sign out','account-logout')}${row('Delete account','account-delete','','destructive')}</div><p class="local-note">${T('Interactive preview. No real account, email or password change.')}</p>`);$('#profile-recovery').onclick=()=>window.MauGoAuth.open('forgot',person.email);$('#switch-account').onclick=()=>window.MauGoAuth.open('welcome');$('#account-delete').onclick=()=>open('delete-account');$('#account-logout').onclick=()=>confirm('Sign out?','Your local letters and messages will be kept for this preview profile.',()=>window.MauGoAuth.logout(),'Sign out');}
+
+ function security(){page('Account & security',`<div class="menu-group">${row(window.MauGoAuth.getUser()?'Preview account':'Sign in / Create account','account-signin',window.MauGoAuth.getUser()?.provider==='apple'?'Apple':window.MauGoAuth.getUser()?'Email':'')}${row('Password recovery','account-recovery')}${row('App lock','app-lock',state.lock?T('On'):T('Off'))}${row('Identity verification','identity-verification')}${row('Export my data','export-data')}${row('Delete account','delete-local','','destructive')}</div><p class="local-note">${T('This preview uses a local profile. Phone sign-in, passwords and identity checks require an account service.')}</p>`);$('#account-signin').onclick=()=>window.MauGoAuth.getUser()?open('account'):window.MauGoAuth.open('welcome');$('#account-recovery').onclick=()=>window.MauGoAuth.open('forgot',window.MauGoAuth.getUser()?.email??'');$('#identity-verification').onclick=()=>open('verification');$('#app-lock').onclick=()=>{showSheet('App lock',`<p>${T(state.lock?'Enter your current PIN to turn off app lock.':'Create a 4-digit PIN to lock this device session.')}</p><input type="password" inputmode="numeric" maxlength="4" id="lock-pin" autocomplete="off" aria-label="4-digit PIN"><button class="primary" id="save-lock">${T(state.lock?'Turn off':'Set PIN')}</button><p class="local-note">${T('Device session only. This is not account authentication.')}</p>`);$('#save-lock').onclick=async()=>{const pin=$('#lock-pin').value;if(!/^\d{4}$/.test(pin)){toast(T('Enter a 4-digit PIN.'));return;}if(state.lock){if(await hashPIN(pin,state.lock.salt)!==state.lock.hash){toast(T('Incorrect PIN.'));return;}state.lock=null;}else{const salt=crypto.randomUUID();state.lock={salt,hash:await hashPIN(pin,salt)};}save('maugo-lock',state.lock);closeSheet();render();};};$('#export-data').onclick=exportData;$('#delete-local').onclick=()=>open('delete-account');}
+
+ function verification(){page('Identity verification',`<div class="verification-art"><img src="${birdAsset('male',1)}" alt=""></div><h2 class="center-title">${T('A face behind a little bird.')}</h2><p class="intro-copy">${T('Identity verification is not connected in this preview. No photo or biometric data is collected here.')}</p><div class="menu-group"><div class="info-row">${T('Verification service')}<small>${T('Not connected')}</small></div></div><button class="outline-button full-width" id="verify-back">${T('Back to security')}</button>`);$('#verify-back').onclick=back;}
+
+ function lockNow(){const close=showPaymentDialog(`<h2 id="payment-title">${T('Welcome back')}</h2><p>${T('Enter your PIN to unlock MauGo.')}</p><input class="pin-field" id="unlock-pin" type="password" inputmode="numeric" maxlength="4" aria-label="4-digit PIN"><button class="primary" id="unlock-session">${T('Unlock')}</button><p class="local-note">${T('Device session only.')}</p>`);$('#payment-close').hidden=true;$('#payment-overlay')._cancel=()=>{};$('#payment-overlay').onpointerdown=null;$('#unlock-session').onclick=async()=>{if(await hashPIN($('#unlock-pin').value,state.lock.salt)!==state.lock.hash){toast(T('Incorrect PIN.'));return;}$('#payment-close').hidden=false;close();};}
+
+ function settings(){const settingRow=(label,id,glyph,value='')=>`<button class="menu-row settings-icon-row" id="${id}">${icon(glyph)}<span class="settings-row-label">${T(label)}</span><small>${escape(value)}</small><span class="settings-row-arrow" aria-hidden="true">${icon('chevron')}</span></button>`;page('Settings',`<div class="menu-group">${settingRow('Account & security','account-security','lock')}${settingRow('Privacy','privacy-settings','shield')}${settingRow('Notifications','notification-settings','bell')}</div><div class="menu-group">${settingRow('General','general-settings','gear')}${settingRow('Language','language-settings','globe',window.MauGoI18n.get()==='ko'?'한국어':'English')}</div><div class="menu-group">${settingRow('Feedback','feedback-settings','feedback')}${settingRow('Help & support','help-settings','help')}${settingRow('About MauGo','about-settings','info')}</div><button class="text-button settings-signout" id="logout">${T('Sign out')}</button><button class="delete-account-link" id="delete-account-settings">${T('Delete account')}</button>`);view.classList.add('settings-reference');for(const[id,name]of Object.entries({'account-security':'security','privacy-settings':'privacy','notification-settings':'notifications','language-settings':'language','general-settings':'general','feedback-settings':'feedback','help-settings':'help','about-settings':'about'}))$('#'+id).onclick=()=>open(name);$('#delete-account-settings').onclick=()=>open('delete-account');$('#logout').onclick=()=>confirm('Sign out?','Your local letters and messages will be kept for this preview profile.',()=>window.MauGoAuth.logout(),'Sign out');}
+
+.round{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1b2121,#131818);display:grid;place-items:center}
+
+.round svg{width:25px;height:25px}
+
+.round:active{transform:scale(.94)}
+
+.actions{position:absolute;top:597px;left:24px;right:22px;display:flex;gap:11px;z-index:10;opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s;pointer-events:none}
+
+.actions.ready{opacity:1;transform:translateY(0);pointer-events:auto}
+
+.actions button{height:51px;flex:1;border-radius:30px;display:flex;align-items:center;justify-content:center;gap:11px;font-size:15px;font-weight:550;transition:transform .2s,opacity .2s}
+
+.actions svg{width:24px;height:24px}
+
+.actions button:active{transform:scale(.96)}
+
+.sheet{position:absolute;left:10px;right:10px;bottom:25px;z-index:50;border:1px solid #ffffff16;border-radius:26px;background:#141d1d;padding:10px 22px 23px;box-shadow:0 -50px 100px #0008;max-height:620px;overflow:auto;animation:sheet-in .3s ease-out}
+
+.sheet p{font-size:13px;line-height:1.7;color:#99a7a5}
+
+.sheet input[type=text]{background:#26312f;color:#fff;padding:12px;width:100%;border:1px solid #ffffff15;border-radius:12px}
+
+.sheet .primary{border-radius:24px;padding:13px;width:100%;font-size:14px;margin-top:15px}
+
+.tool-button{background:transparent;padding:3px;color:#cdd6d2;display:grid;place-items:center;width:27px;height:30px;flex:none}
+
+.tool-button:active{color:var(--lime)}
+
+.screen .actions{top:596px;left:25px;right:25px;gap:13px}
+
+.screen .actions button{font-size:14px;height:49px}
+
+.screen .actions .secondary{flex:.95}
+
+.screen .actions .primary{flex:1.05}
+
+.screen.reading .actions,.screen.composing .actions{opacity:0;pointer-events:none}
+
+.reply-bar .tool-button{width:23px}
+
+.composer-panel{position:absolute;top:145px;left:12px;right:12px;height:499px;border:1px solid #6d7868;border-radius:27px;background:linear-gradient(130deg,#131c1c,#0f1515);z-index:24;padding:0 18px;display:flex;flex-direction:column;animation:sheet-in .3s ease-out}
+
+.composer-heading .tool-button{position:absolute;right:0;color:#808e83}
+
+.sheet{padding:10px 18px 20px;bottom:22px;background:#18211e;border-color:#ffffff0b;max-height:645px;border-radius:25px;scrollbar-width:none}
+
+.sheet p{font-size:11px;margin:8px 0 14px;color:#829382}
+
+.sheet .primary{padding:12px;margin-top:17px;font-size:13px;flex:none}
+
+.sheet input[type=text]{font-size:13px;padding:10px;background:#263428;margin-top:8px}
+
+.screen .actions{top:644px}
+
+.screen .actions button{font-size:13px;gap:9px}
+
+.screen .actions{left:var(--page-gutter);right:var(--page-gutter);top:644px;gap:var(--space-3)}
+
+.screen .actions button{height:var(--control-height);font-size:14px;gap:var(--space-2)}
+
+.sheet p{font-size:12px;line-height:20px;margin:0 0 var(--space-4)}
+
+.sheet .primary{min-height:var(--control-height);height:var(--control-height);padding:var(--space-3) var(--space-4);font-size:14px;line-height:20px;margin-top:var(--space-4)}
+
+.sheet input[type=text]{height:var(--control-height);font-size:14px;line-height:20px;padding:var(--space-3) var(--space-4);margin-top:var(--space-2);border-radius:var(--radius-control)}
+
+.tool-button{width:32px;height:32px}
+
+.sheet .primary .diamond-icon{margin-right:8px}
+
+.payment-dialog{position:relative;width:100%;max-height:704px;overflow:auto;background:linear-gradient(145deg,#253229,#17221c);border:1px solid #d5eac51a;border-radius:28px;padding:28px 24px 16px;box-shadow:0 28px 80px #0009;text-align:center;animation:sheet-in .22s ease-out}
+
+.payment-open .sheet{pointer-events:none}
+
+.field-label input,.field-label textarea,.field-label select,.pin-field{font:inherit;border:1px solid #ffffff0b;background:#202f24;color:#dce8d5;width:100%;padding:12px 16px;border-radius:12px;margin:0!important;min-height:48px;outline:none}
+
+.verification-art{text-align:center}
+
+.verification-art img{width:180px;height:180px;object-fit:contain;margin:0 auto}
+
+.pin-field{margin-bottom:24px!important;text-align:center;letter-spacing:12px}
+
+.sheet .filter-label{margin:24px 0 12px}
+
+.sheet .filter-label:first-child{margin-top:8px}
+
+.delete-account-intro{text-align:center;margin:0 0 24px}
+
+.delete-account-intro>span{display:block;font-size:40px;color:#d6a491;margin-bottom:16px}
+
+.delete-account-intro h2{font-size:21px;line-height:28px;margin:0 0 12px}
+
+.delete-account-intro p,.deletion-summary p{font-size:12px;line-height:21px;color:#a4b69b}
+
+.deletion-summary{padding:16px;background:#63392d22;border:1px solid #d6a49122;border-radius:16px;margin-bottom:24px}
+
+.deletion-summary p{margin:0 0 12px}
+
+.deletion-summary p:last-child{margin:0}

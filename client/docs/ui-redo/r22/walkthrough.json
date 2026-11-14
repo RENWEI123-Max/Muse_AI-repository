@@ -1,0 +1,126 @@
+[
+  {
+    "height": 812,
+    "lang": "en",
+    "steps": [
+      {
+        "action": "Welcome → Explore preview → Profile → Settings; choose language",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Click Account & security",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo",
+        "accountSecurityCount": 0,
+        "reason": "App.vue only mounts AccountSecurity when sessionToken is present; preview entry has no real account session."
+      }
+    ],
+    "missingStates": [
+      "security",
+      "account-info",
+      "verification",
+      "pin-create",
+      "pin-invalid",
+      "pin-locked",
+      "pin-wrong",
+      "signout-confirm",
+      "signed-out",
+      "delete-disabled",
+      "delete-typed",
+      "delete-ready",
+      "delete-final"
+    ]
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "steps": [
+      {
+        "action": "Welcome → Explore preview → Profile → Settings; choose language",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Click Account & security",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보",
+        "accountSecurityCount": 0,
+        "reason": "App.vue only mounts AccountSecurity when sessionToken is present; preview entry has no real account session."
+      }
+    ],
+    "missingStates": [
+      "security",
+      "account-info",
+      "verification",
+      "pin-create",
+      "pin-invalid",
+      "pin-locked",
+      "pin-wrong",
+      "signout-confirm",
+      "signed-out",
+      "delete-disabled",
+      "delete-typed",
+      "delete-ready",
+      "delete-final"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "steps": [
+      {
+        "action": "Welcome → Explore preview → Profile → Settings; choose language",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo"
+      },
+      {
+        "action": "Click Account & security",
+        "actual": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo",
+        "accountSecurityCount": 0,
+        "reason": "App.vue only mounts AccountSecurity when sessionToken is present; preview entry has no real account session."
+      }
+    ],
+    "missingStates": [
+      "security",
+      "account-info",
+      "verification",
+      "pin-create",
+      "pin-invalid",
+      "pin-locked",
+      "pin-wrong",
+      "signout-confirm",
+      "signed-out",
+      "delete-disabled",
+      "delete-typed",
+      "delete-ready",
+      "delete-final"
+    ]
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "steps": [
+      {
+        "action": "Welcome → Explore preview → Profile → Settings; choose language",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보"
+      },
+      {
+        "action": "Click Account & security",
+        "actual": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보",
+        "accountSecurityCount": 0,
+        "reason": "App.vue only mounts AccountSecurity when sessionToken is present; preview entry has no real account session."
+      }
+    ],
+    "missingStates": [
+      "security",
+      "account-info",
+      "verification",
+      "pin-create",
+      "pin-invalid",
+      "pin-locked",
+      "pin-wrong",
+      "signout-confirm",
+      "signed-out",
+      "delete-disabled",
+      "delete-typed",
+      "delete-ready",
+      "delete-final"
+    ]
+  }
+]

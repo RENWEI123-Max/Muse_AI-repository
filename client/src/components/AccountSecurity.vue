@@ -2,6 +2,57 @@
 import {computed,onMounted,onUnmounted,ref,watch} from 'vue'
 import {api,post} from '../lib/api'
 import {asset} from '../lib/assets'
+import {tr,locale} from '../lib/i18n'
+
+// Presentation dictionary only; account state and operations below are unchanged.
+const accountKo:Record<string,string>={
+  "Account": "계정",
+  "Account & security": "계정 및 보안",
+  "App lock": "앱 잠금",
+  "Identity verification": "본인 인증",
+  "Delete account": "계정 삭제",
+  "Email": "이메일",
+  "On": "켜짐",
+  "Off": "꺼짐",
+  "Lock now": "지금 잠그기",
+  "Export my data": "내 데이터 내보내기",
+  "Sign out": "로그아웃",
+  "Your account is connected securely. App lock protects this device session and is not account authentication.": "계정이 안전하게 연결되어 있어요. 앱 잠금은 이 기기의 세션을 보호하며 계정 인증이 아니에요.",
+  "Email address": "이메일 주소",
+  "Sign-in method": "로그인 방식",
+  "Account type": "계정 유형",
+  "MauGo account": "MauGo 계정",
+  "Switch account": "계정 전환",
+  "A face behind a little bird.": "작은 새 뒤에 있는 당신.",
+  "Identity verification is not connected. No photo or biometric data is collected here.": "본인 인증 서비스가 연결되지 않았어요. 여기서는 사진이나 생체 정보를 수집하지 않아요.",
+  "Verification service": "인증 서비스",
+  "Not connected": "연결되지 않음",
+  "Back to security": "보안으로 돌아가기",
+  "Before you leave": "떠나기 전에",
+  "Your current account and its data will be permanently removed. Other accounts are kept.": "현재 계정과 데이터가 영구 삭제돼요. 다른 계정은 유지돼요.",
+  "Your profile, letters, messages, uploads and diamonds will be permanently removed.": "프로필, 편지, 메시지, 업로드 및 다이아몬드가 영구 삭제돼요.",
+  "This cannot be undone. Export your data first if you want a copy.": "이 작업은 되돌릴 수 없어요. 사본이 필요하면 먼저 데이터를 내보내세요.",
+  "Type DELETE to continue": "계속하려면 DELETE를 입력하세요",
+  "I understand that this deletion cannot be undone.": "이 삭제를 되돌릴 수 없음을 이해했어요.",
+  "Keep my account": "내 계정 유지",
+  "Welcome back": "다시 만나 반가워요",
+  "Enter your PIN to unlock MauGo.": "MauGo 잠금을 해제하려면 PIN을 입력하세요.",
+  "Enter your current PIN to turn off app lock.": "앱 잠금을 끄려면 현재 PIN을 입력하세요.",
+  "Create a 4-digit PIN to lock this device session.": "이 기기 세션을 잠글 4자리 PIN을 만드세요.",
+  "Unlock": "잠금 해제",
+  "Turn off": "끄기",
+  "Set PIN": "PIN 설정",
+  "Device session only. This is not account authentication.": "기기 세션 전용이며 계정 인증이 아니에요.",
+  "Sign out?": "로그아웃할까요?",
+  "Signing out clears this account’s local drafts, preferences and chat appearance. Your language and App lock are kept.": "로그아웃하면 이 계정의 기기 내 초안, 환경설정 및 채팅 모양이 삭제돼요. 언어와 앱 잠금은 유지돼요.",
+  "Delete this account?": "이 계정을 삭제할까요?",
+  "Your current profile and its content will be permanently removed. This cannot be undone.": "현재 프로필과 콘텐츠가 영구 삭제돼요. 되돌릴 수 없어요.",
+  "Confirm your password": "비밀번호 확인",
+  "Cancel": "취소",
+  "Enter a 4-digit PIN.": "4자리 PIN을 입력하세요.",
+  "Incorrect PIN.": "PIN이 올바르지 않아요."
+}
+const accountText=(value:unknown)=>locale.value==='ko'?(accountKo[String(value)]??tr(value)):String(value??'')
 const props=defineProps<{token:string;active:boolean}>()
 const emit=defineEmits<{close:[];signedout:[];locking:[value:boolean]}>()
 const view=ref('security'),sheet=ref(''),error=ref(''),busy=ref(false),pin=ref(''),typed=ref(''),understood=ref(false),password=ref(''),challenge=ref('')
@@ -27,26 +78,24 @@ onMounted(()=>{document.addEventListener('visibilitychange',visibility);void act
 onUnmounted(()=>document.removeEventListener('visibilitychange',visibility))
 </script>
 <template>
-<section v-if="active||locked" class="account-security" @keydown.esc.stop="back">
-<header><button aria-label="Back" :disabled="locked" @click="back">‹</button><h1>{{locked?'App lock':title}}</h1><span></span></header>
+<section v-if="active||locked" class="account-security" :data-page="view" @keydown.esc.stop="back">
+<header class="ui-header"><button class="ui-header__back" aria-label="Back" :disabled="locked" @click="back"><img :src="asset('08-interface-icons/icon-back-light-22')" alt=""></button><h1>{{accountText(locked?'App lock':title)}}</h1><span></span></header>
 <Transition name="account-page" mode="out-in"><div :key="view" class="account-body" :inert="locked||!!sheet">
 <template v-if="view==='security'">
-<div class="account-group"><button id="account-signin" @click="view='account'">Account <small>Email ›</small></button><button id="app-lock" :disabled="!profile" @click="openSheet('pin')">App lock <small>{{lock?'On':'Off'}} ›</small></button><button v-if="lock" id="lock-now" @click="locked=true;pin='';error=''">Lock now <small>›</small></button><button id="identity-verification" @click="view='verification'">Identity verification <small>›</small></button><button id="export-data" :disabled="busy" @click="exportData">Export my data <small>›</small></button><button id="delete-local" class="destructive" @click="view='delete'">Delete account <small>›</small></button></div>
-<p>Your account is connected securely. App lock protects this device session and is not account authentication.</p><button id="logout" class="outline" @click="openSheet('logout')">Sign out</button>
+<div class="account-group ui-card"><button class="ui-row" id="account-signin" @click="view='account'">{{accountText('Account')}}<small>{{accountText('Email')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" id="app-lock" :disabled="!profile" @click="openSheet('pin')">{{accountText('App lock')}}<small>{{accountText(lock?'On':'Off')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" v-if="lock" id="lock-now" @click="locked=true;pin='';error=''">{{accountText('Lock now')}}<small><b aria-hidden="true">›</b></small></button><button class="ui-row" id="identity-verification" @click="view='verification'">{{accountText('Identity verification')}}<small><b aria-hidden="true">›</b></small></button><button class="ui-row" id="export-data" :disabled="busy" @click="exportData">{{accountText('Export my data')}}<small><b aria-hidden="true">›</b></small></button><button id="delete-local" class="ui-row destructive" @click="view='delete'">{{accountText('Delete account')}}<small><b aria-hidden="true">›</b></small></button></div>
+<p>{{accountText('Your account is connected securely. App lock protects this device session and is not account authentication.')}}</p><button id="logout" class="outline" @click="openSheet('logout')">{{accountText('Sign out')}}</button>
 </template>
-<template v-else-if="view==='account'"><div class="account-group"><div>Email address <small id="account-email">{{profile?.email}}</small></div><div>Sign-in method <small>Email</small></div><div>Account type <small>MauGo account</small></div></div><button class="outline" @click="openSheet('logout')">Switch account</button><button class="outline" @click="openSheet('logout')">Sign out</button><button class="danger-link" @click="view='delete'">Delete account</button></template>
-<template v-else-if="view==='verification'"><img class="verification-bird" :src="asset('02-bird-static/male-1')" alt=""><h2>A face behind a little bird.</h2><p>Identity verification is not connected. No photo or biometric data is collected here.</p><div class="account-group"><div>Verification service <small>Not connected</small></div></div><button class="outline" @click="view='security'">Back to security</button></template>
-<template v-else><div class="deletion-intro"><span>⊘</span><h2>Before you leave</h2><p>Your current account and its data will be permanently removed. Other accounts are kept.</p></div><div class="deletion-summary"><p>Your profile, letters, messages, uploads and diamonds will be permanently removed.</p><p>This cannot be undone. Export your data first if you want a copy.</p></div><button class="outline" :disabled="busy" @click="exportData">Export my data</button><label class="field">Type DELETE to continue<input id="delete-account-input" v-model="typed" autocomplete="off"></label><label class="deletion-check"><input id="delete-account-check" v-model="understood" type="checkbox"><span>I understand that this deletion cannot be undone.</span></label><button id="request-account-deletion" class="primary danger" :disabled="!ready||busy" @click="requestDeletion">Delete account</button><button class="keep" @click="view='security'">Keep my account</button></template>
-<p v-if="error&&!sheet&&!locked" role="alert">{{error}}</p>
+<template v-else-if="view==='account'"><div class="account-group ui-card"><div class="ui-row">{{accountText('Email address')}}<small id="account-email">{{profile?.email}}</small></div><div class="ui-row">{{accountText('Sign-in method')}}<small>{{accountText('Email')}}</small></div><div class="ui-row">{{accountText('Account type')}}<small>{{accountText('MauGo account')}}</small></div></div><button class="outline" @click="openSheet('logout')">{{accountText('Switch account')}}</button><button class="outline" @click="openSheet('logout')">{{accountText('Sign out')}}</button><button class="danger-link" @click="view='delete'">{{accountText('Delete account')}}</button></template>
+<template v-else-if="view==='verification'"><img class="verification-bird" :src="asset('02-bird-static/male-1')" alt=""><h2>{{accountText('A face behind a little bird.')}}</h2><p>{{accountText('Identity verification is not connected. No photo or biometric data is collected here.')}}</p><div class="account-group ui-card"><div class="ui-row">{{accountText('Verification service')}}<small>{{accountText('Not connected')}}</small></div></div><button class="outline" @click="view='security'">{{accountText('Back to security')}}</button></template>
+<template v-else><div class="deletion-intro"><span>⊘</span><h2>{{accountText('Before you leave')}}</h2><p>{{accountText('Your current account and its data will be permanently removed. Other accounts are kept.')}}</p></div><div class="deletion-summary"><p>{{accountText('Your profile, letters, messages, uploads and diamonds will be permanently removed.')}}</p><p>{{accountText('This cannot be undone. Export your data first if you want a copy.')}}</p></div><button class="outline" :disabled="busy" @click="exportData">{{accountText('Export my data')}}</button><label class="field">{{accountText('Type DELETE to continue')}}<input class="ui-input" id="delete-account-input" v-model="typed" autocomplete="off"></label><label class="deletion-check"><input id="delete-account-check" v-model="understood" type="checkbox"><span>{{accountText('I understand that this deletion cannot be undone.')}}</span></label><button id="request-account-deletion" class="ui-button primary danger" :disabled="!ready||busy" @click="requestDeletion">{{accountText('Delete account')}}</button><button class="keep" @click="view='security'">{{accountText('Keep my account')}}</button></template>
+<p v-if="error&&!sheet&&!locked" role="alert">{{accountText(error)}}</p>
 </div></Transition>
-<Transition name="account-dialog"><div v-if="sheet||locked" class="account-veil" :class="{bottom:sheet==='pin'&&!locked}" @click.self="!locked&&!busy&&back()"><section class="account-dialog" role="dialog" aria-modal="true" :aria-label="locked?'Welcome back':sheet==='pin'?'App lock':sheet==='logout'?'Sign out?':'Delete this account?'">
-<template v-if="locked||sheet==='pin'"><h2>{{locked?'Welcome back':'App lock'}}</h2><p>{{locked?'Enter your PIN to unlock MauGo.':lock?'Enter your current PIN to turn off app lock.':'Create a 4-digit PIN to lock this device session.'}}</p><form @submit.prevent="locked?unlock():savePin()"><input :id="locked?'unlock-pin':'lock-pin'" v-model="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-label="4-digit PIN" :aria-invalid="!!error"><button :id="locked?'unlock-session':'save-lock'" class="primary" :disabled="busy||!profile">{{locked?'Unlock':lock?'Turn off':'Set PIN'}}</button></form><p>Device session only. This is not account authentication.</p></template>
-<template v-else-if="sheet==='logout'"><h2>Sign out?</h2><p>Your letters and messages will be kept for this account.</p><button id="confirm-logout" class="primary" :disabled="busy" @click="logout">Sign out</button></template>
-<template v-else><h2>Delete this account?</h2><p>Your current profile and its content will be permanently removed. This cannot be undone.</p><label class="field">Confirm your password<input id="deletion-password" v-model="password" type="password" autocomplete="current-password"></label><button id="confirm-account-deletion" class="primary danger" :disabled="busy||!password" @click="deleteAccount">Delete account</button></template>
-<p v-if="error" class="account-error" role="alert">{{error}}</p><button v-if="!locked" class="keep" :disabled="busy" @click="back">Cancel</button>
+<Transition name="account-dialog"><div v-if="sheet||locked" class="account-veil" :class="{bottom:sheet==='pin'&&!locked}" @click.self="!locked&&!busy&&back()"><section class="account-dialog ui-dialog" :class="{'ui-sheet':sheet==='pin'&&!locked}" role="dialog" aria-modal="true" :aria-label="locked?'Welcome back':sheet==='pin'?'App lock':sheet==='logout'?'Sign out?':'Delete this account?'">
+<template v-if="locked||sheet==='pin'"><span v-if="!locked" class="ui-sheet__grabber" aria-hidden="true"></span><h2>{{accountText(locked?'Welcome back':'App lock')}}</h2><p>{{accountText(locked?'Enter your PIN to unlock MauGo.':lock?'Enter your current PIN to turn off app lock.':'Create a 4-digit PIN to lock this device session.')}}</p><form @submit.prevent="locked?unlock():savePin()"><input class="ui-input" :id="locked?'unlock-pin':'lock-pin'" v-model="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-label="4-digit PIN" :aria-invalid="!!error"><button :id="locked?'unlock-session':'save-lock'" class="ui-button primary" :disabled="busy||!profile">{{accountText(locked?'Unlock':lock?'Turn off':'Set PIN')}}</button></form><p>{{accountText('Device session only. This is not account authentication.')}}</p></template>
+<template v-else-if="sheet==='logout'"><h2>{{accountText('Sign out?')}}</h2><p>{{accountText('Signing out clears this account’s local drafts, preferences and chat appearance. Your language and App lock are kept.')}}</p><button id="confirm-logout" class="ui-button primary" :disabled="busy" @click="logout">{{accountText('Sign out')}}</button></template>
+<template v-else><h2>{{accountText('Delete this account?')}}</h2><p>{{accountText('Your current profile and its content will be permanently removed. This cannot be undone.')}}</p><label class="field">{{accountText('Confirm your password')}}<input class="ui-input" id="deletion-password" v-model="password" type="password" autocomplete="current-password"></label><button id="confirm-account-deletion" class="ui-button primary danger" :disabled="busy||!password" @click="deleteAccount">{{accountText('Delete account')}}</button></template>
+<p v-if="error" class="account-error" role="alert">{{accountText(error)}}</p><button v-if="!locked" class="keep" :disabled="busy" @click="back">{{accountText('Cancel')}}</button>
 </section></div></Transition>
 </section>
 </template>
-<style scoped>
-.account-security{position:absolute;inset:0;z-index:80;background:#0d1713;color:#d3e5c9;padding-top:48px;display:flex;flex-direction:column;animation:account-open .22s ease-out}.account-security header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;flex-shrink:0}.account-security header button,.account-security header span{width:28px;background:none;color:#b8ccb0;font-size:30px;padding:0}.account-security h1{font-size:19px;font-weight:500;margin:0}.account-body{padding:16px 24px 36px;overflow:auto;flex:1}.account-group{margin-bottom:20px;background:#1b2a20;border-radius:16px;padding:0 16px}.account-group>button,.account-group>div{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:62px;padding:16px 0;background:none;border-bottom:1px solid #ffffff0b;text-align:left;font-size:14px;color:inherit}.account-group small{font-size:12px;color:#8dae7e;overflow-wrap:anywhere;text-align:right}.account-security p{font-size:12px;line-height:22px;color:#8dae7e;margin:8px 0 22px}.account-security h2{font-size:20px;font-weight:500;margin:12px 0 16px;text-align:center}.account-security .outline{width:100%;min-height:46px;border:1px solid #45563c;border-radius:25px;background:none;color:#b5fa70;margin-bottom:14px}.account-security .primary{width:100%;min-height:48px;border-radius:26px;background:#b5fa70;color:#19362b;margin:12px 0}.account-security .danger{background:#c89c8f;color:#281b18}.account-security .destructive,.danger-link{color:#c89c8f}.danger-link,.keep{display:block;background:none;color:#b5fa70;margin:10px auto;min-height:34px}.account-security button:disabled{opacity:.35;cursor:default}.verification-bird{display:block;width:150px;height:145px;object-fit:contain;margin:25px auto}.deletion-intro{text-align:center}.deletion-intro>span{font-size:48px;color:#c89c8f}.deletion-summary{border:1px solid #c89c8f33;background:#c89c8f0a;padding:10px 16px;border-radius:16px;margin:18px 0}.deletion-summary p{margin:6px 0}.field{display:block;font-size:12px;color:#a2b797;margin:12px 0}.account-security input:not([type=checkbox]){display:block;width:100%;padding:14px;margin:10px 0;border:1px solid #42523b;border-radius:12px;background:#15221b;color:#e4efd9;font-size:16px}.deletion-check{display:flex;gap:10px;align-items:center;font-size:12px;line-height:20px;margin:18px 0}.deletion-check input{accent-color:#b5fa70;width:18px;height:18px;flex-shrink:0}.account-veil{position:absolute;inset:0;z-index:1;background:#030805dc;backdrop-filter:blur(8px);display:flex;align-items:center;padding:24px}.account-veil.bottom{align-items:flex-end;padding:0}.account-dialog{width:100%;padding:26px 22px 14px;border:1px solid #ffffff12;border-radius:24px;background:#1c2c22;text-align:center}.bottom .account-dialog{border-radius:24px 24px 0 0;padding-bottom:32px}.account-dialog input[type=password]{text-align:center;letter-spacing:10px}.account-dialog #deletion-password{letter-spacing:normal}.account-security .account-error{color:#efb2a1}.account-page-enter-active,.account-page-leave-active{transition:opacity .18s,transform .18s}.account-page-enter-from{opacity:0;transform:translateX(16px)}.account-page-leave-to{opacity:0;transform:translateX(-12px)}.account-dialog-enter-active,.account-dialog-leave-active{transition:opacity .22s}.account-dialog-enter-active .account-dialog,.account-dialog-leave-active .account-dialog{transition:transform .22s}.account-dialog-enter-from,.account-dialog-leave-to{opacity:0}.account-dialog-enter-from .account-dialog,.account-dialog-leave-to .account-dialog{transform:translateY(35px)}@keyframes account-open{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-</style>
+<style scoped src="../styles/pages/account.css"></style>

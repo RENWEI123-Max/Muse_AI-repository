@@ -1,0 +1,57 @@
+/* R22 local Figma 39:2444–39:3311; shared primitives in components.css. */
+.account-security{position:absolute;inset:0;z-index:80;padding-top:48px;display:flex;flex-direction:column;overflow:hidden;background:var(--bg-page);color:var(--text-primary);font:var(--font-body)}
+.account-security>.ui-header h1{position:absolute;left:68px;top:19.5px;width:239px;height:24px;margin:0;text-align:center;font:var(--font-title-page-medium);letter-spacing:var(--font-title-page-medium-letter-spacing)}
+.account-body{padding:24px 24px 40px;overflow:auto;flex:1;min-height:0;overscroll-behavior:contain;scrollbar-width:none}
+.account-group{margin-bottom:24px}
+.account-group>.ui-row{min-height:56px;height:auto;border-bottom:1px solid var(--hairline);justify-content:space-between}
+.account-group>.ui-row:last-child{border-bottom:0}
+.account-group small{display:flex;align-items:center;gap:12px;font:var(--font-caption);color:var(--text-profile-count);overflow-wrap:anywhere;text-align:right;min-width:0}
+.account-group small b{font:var(--font-symbol-chevron);color:var(--text-chevron)}
+.account-security p{font:var(--font-micro-17);color:var(--text-note);margin:0 0 24px;overflow-wrap:anywhere}
+.account-security h2{font:var(--cards-font-confirm);margin:12px 0 16px;text-align:center}
+.account-security .outline{display:block;width:100%;min-height:48px;padding:8px 16px;border:var(--stroke-accent-subtle);border-radius:var(--radius-24);background:none;color:var(--accent);font:var(--font-button);margin:16px 0 24px}
+.account-security .primary{width:100%;margin:16px 0}
+.account-security .danger{background:var(--chat-clear-label);color:var(--icon-ink)}
+.account-security .destructive,.account-security .danger-link{color:var(--chat-clear-label)}
+.account-security .danger-link,.account-security .keep{display:block;width:100%;background:none;color:var(--avatar-muted);font:var(--font-body-sm);margin:12px auto 0;min-height:40px;padding:8px}
+.account-security button:disabled{opacity:.35;cursor:default}
+.account-security button{transition:transform .15s,background-color .15s}
+.account-security button:not(:disabled):active{transform:scale(.96);scale:1}
+.account-security .ui-header__back:not(:disabled):active{transform:scale(.94)}
+.verification-bird{display:block;width:180px;height:184px;object-fit:contain;margin:0 auto 12px}
+.account-security[data-page=verification] .account-body>h2{margin:0 0 20px;font:var(--cards-font-confirm)}
+.account-security[data-page=verification] .account-body>p{font:var(--font-body-sm-21);color:var(--text-label);text-align:center;margin-bottom:24px}
+.account-security[data-page=verification] .account-body>.outline{margin-top:36px}
+.deletion-intro{text-align:center;min-height:170px;margin-bottom:24px}
+.deletion-intro>span{display:block;font:var(--font-symbol-star);font-size:var(--space-40);color:var(--text-danger);margin-bottom:16px}
+.deletion-intro h2{font:var(--cards-font-confirm);margin:0 0 12px}
+.deletion-intro p,.deletion-summary p{font:var(--font-body-sm-21);color:var(--text-label)}
+.deletion-summary{border:1px solid var(--hairline-strong);background:var(--bg-card);padding:16px;border-radius:var(--radius-16);margin:0 0 24px}
+.deletion-summary p{margin:0 0 12px}
+.deletion-summary p:last-child{margin-bottom:0}
+.account-security .field{display:block;font:var(--font-body-sm);color:var(--text-label);margin:24px 0}
+.account-security .ui-input:not([type=checkbox]){display:block;width:100%;margin:12px 0 0}
+.deletion-check{display:flex;gap:10px;align-items:center;font:var(--font-body-sm);margin:24px 0 16px;color:var(--text-primary)}
+.deletion-check input{accent-color:var(--accent);width:20px;height:20px;flex-shrink:0;margin:0}
+.account-veil{position:absolute;inset:0;z-index:1;background:var(--scrim-dialog);backdrop-filter:blur(var(--blur-backdrop));display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto;overscroll-behavior:contain}
+.account-veil.bottom{align-items:flex-end;padding:0;background:var(--scrim);backdrop-filter:none}
+.account-dialog{flex:none;max-height:100%;overflow:auto;padding:28px 24px 16px;text-align:center}
+.account-dialog.ui-sheet{max-height:calc(100% - 48px);padding:24px 20px 20px}
+.account-dialog h2{margin:0 0 20px;font:var(--cards-font-confirm)}
+.account-dialog.ui-sheet h2{font:var(--font-title-sheet-fixed);margin:8px 0 32px}
+.account-dialog>p{font:var(--font-body-sm);color:var(--reply-description);margin:0 0 16px}
+.account-dialog form+p{font:var(--font-micro-17);margin:0}
+.account-dialog input[type=password]{text-align:center;letter-spacing:12px}
+.account-dialog #deletion-password{letter-spacing:0;text-align:left}
+.account-security .account-error{color:var(--chat-clear-label);margin:12px 0}
+.account-security input[aria-invalid=true]{border-color:var(--chat-clear-label)}
+.account-page-enter-active,.account-page-leave-active{transition:opacity .18s,transform .18s}
+.account-page-enter-from{opacity:0;transform:translateX(16px)}
+.account-page-leave-to{opacity:0;transform:translateX(-12px)}
+.account-dialog-enter-active,.account-dialog-leave-active{transition:opacity .3s ease-out}
+.account-dialog-enter-active .account-dialog,.account-dialog-leave-active .account-dialog{transition:transform .3s ease-out}
+.account-dialog-enter-from,.account-dialog-leave-to{opacity:0}
+.account-dialog-enter-from .account-dialog,.account-dialog-leave-to .account-dialog{transform:translateY(40px)}
+.account-security:lang(ko),.account-security:lang(ko) :is(h1,h2,p,button,small,label,input){font-family:var(--font-family-ko)}
+@media(max-height:740px){.account-body{padding-bottom:28px}.account-dialog.ui-sheet{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.account-security *{transition:none}.account-security button:not(:disabled):active{transform:none}}
