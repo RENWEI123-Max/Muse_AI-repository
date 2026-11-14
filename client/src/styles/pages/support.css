@@ -1,0 +1,45 @@
+/* R23 — geometry from local Figma; flows retain existing server behavior. */
+.support-flow>.ui-header h1{top:19.5px;font:var(--font-title-page)}
+.support-flow .settings-body{padding:24px 24px 40px;scrollbar-width:thin;scrollbar-color:var(--text-note) var(--bg-page)}
+.support-services{padding:16px;margin-bottom:24px;background:var(--support-services-bg);border-radius:var(--radius-16)}
+.support-services h2{margin:0 0 16px;font:var(--support-font-service);letter-spacing:var(--font-title-page-letter-spacing)}
+.support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.support-grid button{display:flex;flex-direction:column;align-items:center;gap:12px;padding:0;background:none;color:var(--text-label);font:var(--support-font-grid)}
+.support-grid img{width:24px;height:24px;object-fit:contain}
+.support-grid span{min-height:11px}
+.support-message{display:flex;align-items:flex-start;gap:12px}
+.support-message>img{width:32px;height:32px;object-fit:contain;flex:none}
+.support-message>div{min-width:0;flex:1;padding:16px;border-radius:var(--radius-14);background:var(--support-message-bg)}
+.support-message strong{font:var(--support-font-greeting)}
+.support-message p{font:var(--support-font-note);color:var(--support-copy);margin:12px 0}
+.support-message button{display:block;background:none;text-align:left;color:var(--accent);font:var(--support-font-note);padding:4px 0}
+.support-bottom{display:flex;gap:16px;margin:32px 0 24px}
+.support-bottom button{flex:1;min-width:0;min-height:43px;padding:14px 8px;border-radius:var(--radius-12);background:var(--support-action-bg);font:var(--support-font-note)}
+.faq-list{margin-bottom:24px}
+.faq-list details{border-bottom:1px solid var(--hairline);padding:16px 0}
+.faq-list summary{font:var(--support-font-faq);color:var(--support-faq);cursor:pointer}
+.faq-list summary:active{transform:scale(.96)}
+.faq-list details p{font:var(--font-body-sm-21);color:var(--support-answer);margin:16px 0 0;animation:support-answer-in .2s ease-out}
+.feedback-types{display:flex;gap:8px;overflow:auto;margin-bottom:20px}
+.feedback-types button{flex:none;padding:6px 12px;border:1px solid var(--support-tab-border);border-radius:var(--radius-18);background:none;color:var(--support-tab);font:var(--support-font-tab)}
+.feedback-types button[aria-pressed=true]{background:var(--accent);color:var(--text-on-accent);border-color:var(--accent)}
+.support-flow[data-page=feedback] .settings-body>p{font:var(--support-font-faq);margin:0 0 24px}
+.support-field{display:block;margin:0 0 24px;font:var(--font-body);color:var(--support-label)}
+.support-field textarea,.support-field input{display:block;width:100%;margin-top:12px;padding:12px 16px;border:1px solid var(--hairline-strong);border-radius:var(--radius-12);background:var(--support-field-bg);color:var(--text-primary);font:var(--font-body);box-sizing:border-box}
+.support-field textarea{height:168px;resize:none;overflow:auto}
+.support-field input{height:48px}
+.support-field input[aria-invalid=true]{border-color:var(--text-danger)}
+.support-field textarea:focus-visible,.support-field input:focus-visible{outline:1px solid var(--accent);outline-offset:2px}
+.support-flow #save-feedback{width:100%;min-height:48px;border-radius:var(--radius-24);background:var(--grad-primary-diagonal-w277);color:var(--text-on-accent);font:var(--font-button);box-shadow:var(--shadow-glow)}
+.about-logo{text-align:center;padding:32px 0}
+.about-logo img{display:block;width:190px;height:auto;margin:0 auto}
+.about-logo p{font:var(--font-body-sm-21);margin:12px 0;color:var(--support-copy)}
+.about-logo small{font:var(--font-micro);color:var(--text-note)}
+.support-policy h2{font:var(--support-font-policy-title);letter-spacing:var(--font-title-page-letter-spacing);color:var(--support-policy-title);margin:0 0 12px}
+.support-policy p{font:var(--support-font-policy);color:var(--support-policy-copy);margin:0 0 32px;overflow-wrap:anywhere}
+.support-empty{text-align:center;padding-top:80px}
+.support-empty img{display:block;width:88px;height:88px;object-fit:contain;margin:0 auto 28px}
+.support-empty h2{font:var(--font-title-card);margin:0 0 12px}
+.support-empty p{font:var(--support-font-note)}
+@keyframes support-answer-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.faq-list details p{animation:none}}

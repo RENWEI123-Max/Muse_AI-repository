@@ -1,0 +1,93 @@
+[
+  {
+    "state": "help",
+    "differentPixels": 16769,
+    "totalPixels": 304500,
+    "percent": 5.507060755336617,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "faq",
+    "differentPixels": 10687,
+    "totalPixels": 304500,
+    "percent": 3.509688013136289,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "faq-expanded",
+    "differentPixels": 13793,
+    "totalPixels": 304500,
+    "percent": 4.529720853858785,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "feedback-empty",
+    "differentPixels": 84669,
+    "totalPixels": 304500,
+    "percent": 27.80591133004926,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "feedback-filled",
+    "differentPixels": 87659,
+    "totalPixels": 304500,
+    "percent": 28.787848932676518,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "feedback-invalid",
+    "differentPixels": 93407,
+    "totalPixels": 304500,
+    "percent": 30.675533661740555,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "about",
+    "differentPixels": 105494,
+    "totalPixels": 304500,
+    "percent": 34.64499178981937,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "guidelines",
+    "differentPixels": 12893,
+    "totalPixels": 304500,
+    "percent": 4.234154351395731,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "safety-guide",
+    "differentPixels": 11440,
+    "totalPixels": 304500,
+    "percent": 3.7569786535303775,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "privacy-policy",
+    "differentPixels": 22378,
+    "totalPixels": 304500,
+    "percent": 7.349096880131363,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "terms-full",
+    "differentPixels": 55253,
+    "totalPixels": 304500,
+    "percent": 18.145484400656812,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "system-empty",
+    "differentPixels": 13602,
+    "totalPixels": 304500,
+    "percent": 4.466995073891625,
+    "method": "exact RGBA inequality, no mask or threshold"
+  },
+  {
+    "state": "interactions-empty",
+    "differentPixels": 12976,
+    "totalPixels": 304500,
+    "percent": 4.261412151067324,
+    "method": "exact RGBA inequality, no mask or threshold"
+  }
+]

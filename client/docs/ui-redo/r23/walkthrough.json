@@ -1,0 +1,5402 @@
+[
+  {
+    "height": 812,
+    "lang": "en",
+    "entry": "Welcome → Explore preview → Profile → Settings; real clicks, no token or API mocks",
+    "steps": [
+      {
+        "state": "help",
+        "text": "Help & support\nSelf service\nHelp centre\nGuidelines\nSafety guide\nDelete account\nHello, from MauGo.\n\nFind quick answers in Help centre, or leave your suggestions in Feedback.\n\nSend feedback directly to the MauGo team.\n\nHow do letters work?\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nFeedback\nPrivacy information\n\nSupport email: [SUPPORT_EMAIL_PENDING_SMITH] · Pending Smith",
+        "page": "help",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help & support",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Self service",
+            "x": 40,
+            "y": 152,
+            "width": 295,
+            "height": 16,
+            "font": "550 13px / 16px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-centre",
+            "text": "Help centre",
+            "x": 40,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "community-guidelines",
+            "text": "Guidelines",
+            "x": 115.75,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "safety-guide",
+            "text": "Safety guide",
+            "x": 191.5,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-delete",
+            "text": "Delete account",
+            "x": 267.25,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 84,
+            "y": 397,
+            "width": 103.390625,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 84,
+            "y": 423,
+            "width": 154.03125,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 84,
+            "y": 449,
+            "width": 87.890625,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 84,
+            "y": 475,
+            "width": 135.296875,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "support-feedback",
+            "text": "Feedback",
+            "x": 24,
+            "y": 549,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-privacy",
+            "text": "Privacy information",
+            "x": 195.5,
+            "y": 549,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          }
+        ]
+      },
+      {
+        "state": "faq",
+        "text": "Help centre\nHow do letters work?\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nWhere are my messages saved?\nHow do I delete my data?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help centre",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 24.049293518066406,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 24.049293518066406,
+            "y": 206,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 24.049293518066406,
+            "y": 260,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 24.049293518066406,
+            "y": 314,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Where are my messages saved?",
+            "x": 24.049293518066406,
+            "y": 368,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do I delete my data?",
+            "x": 24.049293518066406,
+            "y": 422,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "faq-expanded",
+        "text": "Help centre\nHow do letters work?\n\nTap a bird, then send one opening message. Wait for their reply before chatting, following or sending attachments.\n\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nWhere are my messages saved?\nHow do I delete my data?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help centre",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 24,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 24,
+            "y": 264,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 24,
+            "y": 318,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 24,
+            "y": 372,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Where are my messages saved?",
+            "x": 24,
+            "y": 426,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do I delete my data?",
+            "x": 24,
+            "y": 480,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "guidelines",
+        "text": "Community guidelines\nBe kind\n\nTreat each person with care. Harassment, threats and unwanted sexual content do not belong here.\n\nRespect privacy\n\nDo not share someone else’s personal information. Ask before sharing private conversations.\n\nUse your own words\n\nAvoid spam, impersonation and scams. Report unwanted messages and block people when needed.",
+        "page": "guidelines",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Community guidelines",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Be kind",
+            "x": 24.048675537109375,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Respect privacy",
+            "x": 24.048675537109375,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Use your own words",
+            "x": 24.048675537109375,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "safety-guide",
+        "text": "Safety guide\nProtect your account\n\nKeep passwords and verification codes private. MauGo will not ask you to send them in a chat.\n\nBe careful with links\n\nAvoid unfamiliar downloads or payment requests from strangers.\n\nStay in control\n\nReport suspicious contact, block unwanted messages, and use the Privacy controls.",
+        "page": "safety",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Safety guide",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Protect your account",
+            "x": 24,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Be careful with links",
+            "x": 24,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Stay in control",
+            "x": 24,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "privacy-policy",
+        "text": "Privacy information\nPrivacy information\n\nOfficial privacy policy pending Smith (E2). This is not a privacy policy. Not ready for release.",
+        "page": "privacy",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Privacy information",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Privacy information",
+            "x": 24,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-empty",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24.04857063293457,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.23606872558594,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.70481872558594,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.78294372558594,
+            "y": 136,
+            "width": 51.89064025878906,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24.04857063293457,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24.04857063293457,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24.04857063293457,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-filled",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.1875,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.65625,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.734375,
+            "y": 136,
+            "width": 51.890625,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-invalid",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback\n\nEnter a valid email address.",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.1875,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.65625,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.734375,
+            "y": 136,
+            "width": 51.890625,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "action": "invalid email submit",
+        "actual": "Enter a valid email address.",
+        "note": "client validation only; no valid server submission"
+      },
+      {
+        "state": "about",
+        "text": "About MauGo\n\nA little bird. A little story.\n\nVersion 0.1.0\nCommunity guidelines\n›\nTerms of Use & EULA\n›\nPrivacy information\n›\nHelp & support\n›\nSystem messages\n›\nInteractions\n›\n\nSupport email: [SUPPORT_EMAIL_PENDING_SMITH] · Pending Smith",
+        "page": "about",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "About MauGo",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-guidelines",
+            "text": "Community guidelines›",
+            "x": 24,
+            "y": 314.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-terms",
+            "text": "Terms of Use & EULA›",
+            "x": 24,
+            "y": 370.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-privacy",
+            "text": "Privacy information›",
+            "x": 24,
+            "y": 426.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-help",
+            "text": "Help & support›",
+            "x": 24,
+            "y": 482.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-system",
+            "text": "System messages›",
+            "x": 24,
+            "y": 538.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-interactions",
+            "text": "Interactions›",
+            "x": 24,
+            "y": 594.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "terms-full",
+        "text": "Terms of Use & EULA\n\nVersion 1.0 · 13 October 2026 · Review draft\n\n1. About this agreement\n\nMauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.\n\n2. Your account\n\nUse accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.\n\n3. Permission to use MauGo\n\nMauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand.\n\n4. Content and respectful conduct\n\nMauGo has zero tolerance for objectionable content or abusive users. Do not post or send harassment, bullying, threats, hate speech, sexual exploitation, illegal sexual content, scams, spam, impersonation, or content that infringes rights. Do not publish private information without permission. These rules apply to letters, chats, profiles, images, recordings, stickers and moments.\n\n5. Your content and conversation rules\n\nYou retain ownership of your content and must have permission to share it. You grant MauGo only the rights needed to store, display, transmit and moderate it for the service. One opening text message is permitted per new connection; further chat and attachments unlock after the recipient replies. Do not bypass this limit or repeatedly contact someone who declines or blocks you.\n\n6. Reporting, blocking and enforcement\n\nUse Report and Block in letter or conversation controls to flag unwanted content and stop contact. In the released service, MauGo may review reports, remove content and restrict or terminate abusive accounts, with notice and review where required by law. This preview saves reports locally; it has no connected moderation team and cannot deliver reports. It is not an emergency service.\n\n7. Diamonds and paid features\n\nIn the intended app, diamonds are purchased in USD through the applicable store and used for features at the displayed price. Diamonds are not money, cannot be cashed out or transferred, and have no value outside MauGo. Filter Pass duration and diamond cost are shown before confirmation; extra days extend expiry and there is no automatic renewal. Store rules and mandatory consumer rights govern refunds. This preview uses test balances and makes no real charge.\n\n8. Privacy and permissions\n\nRead Privacy information to understand the current data use. This preview stores account personas, messages and preferences in browser storage and selected media in IndexedDB. It does not send authentication emails or store passwords. File access follows your selection; microphone permission is requested for recording. Clearing local browser data may remove content. Hosting providers may process access logs.\n\n9. Availability and your rights\n\nMauGo may change or discontinue features, subject to applicable law and purchased entitlements. You may stop using it and use account settings to export or delete local data. The preview is provided for evaluation without a promise of uninterrupted availability. Nothing in these terms excludes non-excludable warranties, liability or consumer rights under the laws that apply to you.\n\n10. Apple distribution\n\nFor an app distributed by Apple, this agreement is between you and MauGo. Apple is not responsible for app support, app-related claims or intellectual-property disputes; MauGo is responsible as required by law. If the app fails an applicable warranty, Apple may refund its purchase price under its rules. Apple and its subsidiaries may enforce this agreement as third-party beneficiaries. Use Apple devices you own or control and follow store usage rules, including permitted family access. Comply with applicable export and sanctions restrictions.\n\n11. Updates and contact\n\nMaterial changes will be shown before requesting renewed agreement. Contact MauGo at maugo.support@example.com. This is a reserved example address for the design preview, not an active support inbox; replace it with the actual MauGo support address before release. Version 1.0 · 13 October 2026. This document is a review draft for the prototype and does not create a real service contract.",
+        "page": "terms",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 2790,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Terms of Use & EULA",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "1. About this agreement",
+            "x": 24.048524856567383,
+            "y": 191,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "2. Your account",
+            "x": 24.048524856567383,
+            "y": 392,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "3. Permission to use MauGo",
+            "x": 24.048524856567383,
+            "y": 593,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "4. Content and respectful conduct",
+            "x": 24.048524856567383,
+            "y": 794,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "5. Your content and conversation rules",
+            "x": 24.048524856567383,
+            "y": 1018,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "6. Reporting, blocking and enforcement",
+            "x": 24.048524856567383,
+            "y": 1265,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "7. Diamonds and paid features",
+            "x": 24.048524856567383,
+            "y": 1512,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "8. Privacy and permissions",
+            "x": 24.048524856567383,
+            "y": 1782,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "9. Availability and your rights",
+            "x": 24.048524856567383,
+            "y": 2052,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "10. Apple distribution",
+            "x": 24.048524856567383,
+            "y": 2299,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "11. Updates and contact",
+            "x": 24.048524856567383,
+            "y": 2615,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "system-empty",
+        "text": "System messages\nYou are all caught up.\n\nNo system message feed is connected.",
+        "page": "system",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "System messages",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "You are all caught up.",
+            "x": 24.048629760742188,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "interactions-empty",
+        "text": "Interactions\nNothing here yet.\n\nNo interaction feed is connected.",
+        "page": "interactions",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Interactions",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Nothing here yet.",
+            "x": 24,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      }
+    ],
+    "missing": [
+      "feedback-history: no implementation or history endpoint in SettingsFlow"
+    ],
+    "validSubmission": "Not executed: backend 3001 unavailable; no fake account/session"
+  },
+  {
+    "height": 812,
+    "lang": "ko",
+    "entry": "Welcome → Explore preview → Profile → Settings; real clicks, no token or API mocks",
+    "steps": [
+      {
+        "state": "help",
+        "text": "도움말 및 지원\n셀프 서비스\n도움말 센터\n커뮤니티 가이드라인\n안전 가이드\n계정 삭제\nMauGo에서 인사드려요.\n\n도움말 센터에서 답을 찾거나 피드백으로 의견을 남겨 주세요.\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n편지는 어떻게 보내나요?\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n피드백\n개인정보 안내\n\n지원 이메일: [SUPPORT_EMAIL_PENDING_SMITH] · Smith 확인 대기 중",
+        "page": "help",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 및 지원",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "셀프 서비스",
+            "x": 40,
+            "y": 152,
+            "width": 295,
+            "height": 16,
+            "font": "550 13px / 16px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-centre",
+            "text": "도움말 센터",
+            "x": 40,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "community-guidelines",
+            "text": "커뮤니티 가이드라인",
+            "x": 115.75,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "safety-guide",
+            "text": "안전 가이드",
+            "x": 191.5,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-delete",
+            "text": "계정 삭제",
+            "x": 267.25,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 84,
+            "y": 408,
+            "width": 111.109375,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 84,
+            "y": 434,
+            "width": 133.65625,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 84,
+            "y": 460,
+            "width": 164.125,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 84,
+            "y": 486,
+            "width": 145.203125,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "support-feedback",
+            "text": "피드백",
+            "x": 24,
+            "y": 560,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-privacy",
+            "text": "개인정보 안내",
+            "x": 195.5,
+            "y": 560,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          }
+        ]
+      },
+      {
+        "state": "faq",
+        "text": "도움말 센터\n편지는 어떻게 보내나요?\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n메시지는 어디에 저장되나요?\n내 데이터는 어떻게 삭제하나요?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 센터",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 24.049232482910156,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 24.049232482910156,
+            "y": 206,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 24.049232482910156,
+            "y": 260,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 24.049232482910156,
+            "y": 314,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "메시지는 어디에 저장되나요?",
+            "x": 24.049232482910156,
+            "y": 368,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "내 데이터는 어떻게 삭제하나요?",
+            "x": 24.049232482910156,
+            "y": 422,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "faq-expanded",
+        "text": "도움말 센터\n편지는 어떻게 보내나요?\n\n새를 누르고 첫 메시지를 한 번 보내세요. 상대의 답장을 받은 뒤 대화하거나 팔로우하고 첨부파일을 보낼 수 있어요.\n\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n메시지는 어디에 저장되나요?\n내 데이터는 어떻게 삭제하나요?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 센터",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 24,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 24,
+            "y": 264,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 24,
+            "y": 318,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 24,
+            "y": 372,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "메시지는 어디에 저장되나요?",
+            "x": 24,
+            "y": 426,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "내 데이터는 어떻게 삭제하나요?",
+            "x": 24,
+            "y": 480,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "guidelines",
+        "text": "커뮤니티 가이드라인\n다정하게 대하기\n\n서로를 배려해 주세요. 괴롭힘, 위협, 원치 않는 성적 콘텐츠는 허용되지 않아요.\n\n개인정보 존중하기\n\n다른 사람의 개인정보를 공유하지 마세요. 개인 대화를 공유하기 전에 동의를 구하세요.\n\n자신의 말로 표현하기\n\n스팸, 사칭, 사기를 피하세요. 원치 않는 메시지는 신고하고 필요하면 차단하세요.",
+        "page": "guidelines",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "커뮤니티 가이드라인",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "다정하게 대하기",
+            "x": 24,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "개인정보 존중하기",
+            "x": 24,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "자신의 말로 표현하기",
+            "x": 24,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "safety-guide",
+        "text": "안전 가이드\n계정 보호하기\n\n비밀번호와 인증 코드를 비밀로 유지하세요. MauGo는 채팅으로 이를 요청하지 않아요.\n\n링크 주의하기\n\n낯선 사람의 다운로드나 결제 요청을 피하세요.\n\n내가 선택하기\n\n의심스러운 연락을 신고하고 원치 않는 메시지를 차단하세요. 개인정보 설정을 이용하세요.",
+        "page": "safety",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "안전 가이드",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "계정 보호하기",
+            "x": 24.04905128479004,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "링크 주의하기",
+            "x": 24.04905128479004,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "내가 선택하기",
+            "x": 24.04905128479004,
+            "y": 331,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "privacy-policy",
+        "text": "개인정보 안내\n개인정보 안내\n\n공식 개인정보 처리방침은 Smith의 정식 문안을 기다리고 있습니다(E2). 이 안내는 개인정보 처리방침이 아니며 출시용이 아닙니다.",
+        "page": "privacy",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "개인정보 안내",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "개인정보 안내",
+            "x": 24,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-empty",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-filled",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-invalid",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기\n\n올바른 이메일 주소를 입력하세요.",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "action": "invalid email submit",
+        "actual": "올바른 이메일 주소를 입력하세요.",
+        "note": "client validation only; no valid server submission"
+      },
+      {
+        "state": "about",
+        "text": "MauGo 소개\n\n작은 새 한 마리. 작은 이야기 하나.\n\nVersion 0.1.0\n커뮤니티 가이드라인\n›\n이용약관 및 EULA\n›\n개인정보 안내\n›\n도움말 및 지원\n›\n시스템 메시지\n›\n소식\n›\n\n지원 이메일: [SUPPORT_EMAIL_PENDING_SMITH] · Smith 확인 대기 중",
+        "page": "about",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "MauGo 소개",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-guidelines",
+            "text": "커뮤니티 가이드라인›",
+            "x": 24,
+            "y": 314.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-terms",
+            "text": "이용약관 및 EULA›",
+            "x": 24,
+            "y": 370.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-privacy",
+            "text": "개인정보 안내›",
+            "x": 24,
+            "y": 426.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-help",
+            "text": "도움말 및 지원›",
+            "x": 24,
+            "y": 482.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-system",
+            "text": "시스템 메시지›",
+            "x": 24,
+            "y": 538.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-interactions",
+            "text": "소식›",
+            "x": 24,
+            "y": 594.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "terms-full",
+        "text": "이용약관 및 EULA\n\n버전 1.0 · 2026년 10월 13일 · 검토용 초안\n\n1. 이 약관에 대하여\n\nMauGo는 편지, 메시지와 일상을 나누는 공간입니다. 이 이용약관 및 최종 사용자 라이선스 계약은 MauGo 이용에 적용됩니다. 이용자는 만 18세 이상이며 약관에 동의할 법적 능력이 있어야 합니다. 동의하지 않으면 가입, 로그인 및 계정 기능을 이용하지 마세요.\n\n2. 계정\n\n정확한 정보를 사용하고 로그인 정보를 안전하게 관리하세요. 타인을 사칭하거나 허락 없이 계정 접근을 공유하지 마세요. 승인한 계정 활동에 책임을 집니다. 실제 앱은 이메일과 Apple 로그인을 제공할 예정이며, 현재 미리보기는 화면 흐름만 보여 줍니다.\n\n3. 이용 라이선스\n\nMauGo는 본 약관과 적용되는 스토어 규칙에 따라 앱을 사용할 개인적이고 제한적이며 비독점적이고 양도 불가능한 라이선스를 부여합니다. 재판매, 불법 복제, 보안 우회, 서비스 방해 또는 법이 허용하지 않는 역공학은 금지됩니다. 앱과 브랜드에 대한 권리는 MauGo에 있습니다.\n\n4. 콘텐츠와 이용 태도\n\nMauGo는 부적절한 콘텐츠와 가해 행위를 용납하지 않습니다. 괴롭힘, 따돌림, 위협, 혐오 표현, 성적 착취, 불법 성적 콘텐츠, 사기, 스팸, 사칭 또는 권리 침해 콘텐츠를 게시하거나 보내지 마세요. 허락 없이 개인정보를 공개하지 마세요. 편지, 대화, 프로필, 이미지, 녹음, 스티커와 일상 게시물 모두에 적용됩니다.\n\n5. 나의 콘텐츠와 대화 규칙\n\n콘텐츠 소유권은 이용자에게 있으며 공유할 권한이 있어야 합니다. 서비스 제공에 필요한 저장, 표시, 전달 및 검토 권한만 MauGo에 부여합니다. 새로운 연결에서는 첫 텍스트 메시지를 한 번만 보낼 수 있으며 상대가 답장한 후 대화와 첨부 기능이 열립니다. 이를 우회하거나 거절 또는 차단한 사람에게 반복적으로 연락하지 마세요.\n\n6. 신고, 차단 및 조치\n\n편지나 대화의 신고 및 차단 기능으로 원치 않는 콘텐츠를 알리고 연락을 멈출 수 있습니다. 실제 서비스에서는 MauGo가 신고를 검토하고 콘텐츠 삭제, 계정 제한 또는 종료 조치를 취할 수 있으며 법이 요구하는 안내와 검토 절차를 제공합니다. 현재 미리보기의 신고는 기기에만 저장되며 운영팀에 전달되지 않습니다. 긴급 지원 서비스가 아닙니다.\n\n7. 다이아몬드와 유료 기능\n\n실제 앱에서는 해당 스토어에서 USD로 다이아몬드를 구매하고 표시된 가격으로 기능을 이용합니다. 다이아몬드는 현금이 아니며 현금화 또는 양도할 수 없고 MauGo 밖에서는 가치가 없습니다. 필터 패스 기간과 가격은 확인 전에 표시되며 추가 기간은 만료일을 연장하고 자동 갱신은 없습니다. 환불에는 스토어 규칙과 법정 소비자 권리가 적용됩니다. 현재 미리보기는 테스트 잔액만 사용하며 실제 결제는 없습니다.\n\n8. 개인정보와 권한\n\n현재 데이터 처리 내용은 개인정보 안내에서 확인하세요. 미리보기의 계정 프로필, 메시지와 설정은 브라우저에, 선택한 미디어는 IndexedDB에 저장됩니다. 인증 이메일을 발송하거나 비밀번호를 저장하지 않습니다. 파일은 직접 선택한 경우에만 접근하며 녹음 시 마이크 권한을 요청합니다. 브라우저 데이터를 지우면 콘텐츠가 삭제될 수 있습니다. 호스팅 제공자는 접속 기록을 처리할 수 있습니다.\n\n9. 서비스 이용과 권리\n\nMauGo는 관련 법률과 구매한 이용 권리를 고려하여 기능을 변경하거나 종료할 수 있습니다. 이용을 중단하거나 계정 설정에서 기기 데이터를 내보내고 삭제할 수 있습니다. 미리보기는 평가용이며 중단 없는 제공을 보장하지 않습니다. 이 약관은 적용 법률상 배제할 수 없는 보증, 책임 또는 소비자 권리를 제한하지 않습니다.\n\n10. Apple 배포\n\nApple을 통해 배포되는 앱에서 이 계약은 이용자와 MauGo 사이의 계약입니다. 앱 지원, 앱 관련 청구 및 지식재산권 분쟁에 대한 책임은 법률에 따라 MauGo에 있으며 Apple에는 없습니다. 적용되는 보증을 충족하지 못하면 Apple은 스토어 규칙에 따라 앱 구매 금액을 환불할 수 있습니다. Apple과 그 자회사는 제3자 수익자로서 본 계약을 집행할 수 있습니다. 소유하거나 관리하는 Apple 기기를 사용하고 허용된 가족 접근 등 스토어 이용 규칙과 수출 및 제재 규정을 준수하세요.\n\n11. 변경 및 연락처\n\n중요한 변경 사항은 재동의를 요청하기 전에 표시합니다. MauGo 연락처: maugo.support@example.com. 이 주소는 디자인 미리보기용 예시이며 실제 지원 메일함이 아닙니다. 출시 전에 실제 MauGo 지원 주소로 교체해야 합니다. 버전 1.0 · 2026년 10월 13일. 이 문서는 프로토타입 검토용 초안이며 실제 서비스 계약을 체결하지 않습니다.",
+        "page": "terms",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 2353,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "이용약관 및 EULA",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "1. 이 약관에 대하여",
+            "x": 24.04897689819336,
+            "y": 191,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "2. 계정",
+            "x": 24.04897689819336,
+            "y": 369,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "3. 이용 라이선스",
+            "x": 24.04897689819336,
+            "y": 547,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "4. 콘텐츠와 이용 태도",
+            "x": 24.04897689819336,
+            "y": 725,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "5. 나의 콘텐츠와 대화 규칙",
+            "x": 24.04897689819336,
+            "y": 926,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "6. 신고, 차단 및 조치",
+            "x": 24.04897689819336,
+            "y": 1127,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "7. 다이아몬드와 유료 기능",
+            "x": 24.04897689819336,
+            "y": 1328,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "8. 개인정보와 권한",
+            "x": 24.04897689819336,
+            "y": 1552,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "9. 서비스 이용과 권리",
+            "x": 24.04897689819336,
+            "y": 1776,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "10. Apple 배포",
+            "x": 24.04897689819336,
+            "y": 1977,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "11. 변경 및 연락처",
+            "x": 24.04897689819336,
+            "y": 2224,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "system-empty",
+        "text": "시스템 메시지\n모든 소식을 확인했어요.\n\n연결된 시스템 메시지 피드가 없습니다.",
+        "page": "system",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "시스템 메시지",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "모든 소식을 확인했어요.",
+            "x": 24,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "interactions-empty",
+        "text": "소식\n아직 아무것도 없어요.\n\n연결된 활동 피드가 없습니다.",
+        "page": "interactions",
+        "documentScroll": false,
+        "body": {
+          "height": 700,
+          "scroll": 700,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "소식",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "아직 아무것도 없어요.",
+            "x": 24,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      }
+    ],
+    "missing": [
+      "feedback-history: no implementation or history endpoint in SettingsFlow"
+    ],
+    "validSubmission": "Not executed: backend 3001 unavailable; no fake account/session"
+  },
+  {
+    "height": 667,
+    "lang": "en",
+    "entry": "Welcome → Explore preview → Profile → Settings; real clicks, no token or API mocks",
+    "steps": [
+      {
+        "state": "help",
+        "text": "Help & support\nSelf service\nHelp centre\nGuidelines\nSafety guide\nDelete account\nHello, from MauGo.\n\nFind quick answers in Help centre, or leave your suggestions in Feedback.\n\nSend feedback directly to the MauGo team.\n\nHow do letters work?\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nFeedback\nPrivacy information\n\nSupport email: [SUPPORT_EMAIL_PENDING_SMITH] · Pending Smith",
+        "page": "help",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 588,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help & support",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Self service",
+            "x": 40,
+            "y": 152,
+            "width": 295,
+            "height": 16,
+            "font": "550 13px / 16px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-centre",
+            "text": "Help centre",
+            "x": 40,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "community-guidelines",
+            "text": "Guidelines",
+            "x": 115.75,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "safety-guide",
+            "text": "Safety guide",
+            "x": 191.5,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-delete",
+            "text": "Delete account",
+            "x": 267.25,
+            "y": 184,
+            "width": 67.75,
+            "height": 47,
+            "font": "9px / 11px Fredoka",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 84,
+            "y": 397,
+            "width": 103.390625,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 84,
+            "y": 423,
+            "width": 154.03125,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 84,
+            "y": 449,
+            "width": 87.890625,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 84,
+            "y": 475,
+            "width": 135.296875,
+            "height": 26,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "support-feedback",
+            "text": "Feedback",
+            "x": 24,
+            "y": 549,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-privacy",
+            "text": "Privacy information",
+            "x": 195.5,
+            "y": 549,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          }
+        ]
+      },
+      {
+        "state": "faq",
+        "text": "Help centre\nHow do letters work?\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nWhere are my messages saved?\nHow do I delete my data?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help centre",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 24.048999786376953,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 24.048999786376953,
+            "y": 206,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 24.048999786376953,
+            "y": 260,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 24.048999786376953,
+            "y": 314,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Where are my messages saved?",
+            "x": 24.048999786376953,
+            "y": 368,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do I delete my data?",
+            "x": 24.048999786376953,
+            "y": 422,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "faq-expanded",
+        "text": "Help centre\nHow do letters work?\n\nTap a bird, then send one opening message. Wait for their reply before chatting, following or sending attachments.\n\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nWhere are my messages saved?\nHow do I delete my data?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Help centre",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do letters work?",
+            "x": 24,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How many replies can I collect?",
+            "x": 24,
+            "y": 264,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Are all birds free?",
+            "x": 24,
+            "y": 318,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How does Filter Pass work?",
+            "x": 24,
+            "y": 372,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "Where are my messages saved?",
+            "x": 24,
+            "y": 426,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "How do I delete my data?",
+            "x": 24,
+            "y": 480,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "guidelines",
+        "text": "Community guidelines\nBe kind\n\nTreat each person with care. Harassment, threats and unwanted sexual content do not belong here.\n\nRespect privacy\n\nDo not share someone else’s personal information. Ask before sharing private conversations.\n\nUse your own words\n\nAvoid spam, impersonation and scams. Report unwanted messages and block people when needed.",
+        "page": "guidelines",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Community guidelines",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Be kind",
+            "x": 24.04863739013672,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Respect privacy",
+            "x": 24.04863739013672,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Use your own words",
+            "x": 24.04863739013672,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "safety-guide",
+        "text": "Safety guide\nProtect your account\n\nKeep passwords and verification codes private. MauGo will not ask you to send them in a chat.\n\nBe careful with links\n\nAvoid unfamiliar downloads or payment requests from strangers.\n\nStay in control\n\nReport suspicious contact, block unwanted messages, and use the Privacy controls.",
+        "page": "safety",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Safety guide",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Protect your account",
+            "x": 24.049074172973633,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Be careful with links",
+            "x": 24.049074172973633,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Stay in control",
+            "x": 24.049074172973633,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "privacy-policy",
+        "text": "Privacy information\nPrivacy information\n\nOfficial privacy policy pending Smith (E2). This is not a privacy policy. Not ready for release.",
+        "page": "privacy",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Privacy information",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Privacy information",
+            "x": 24,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-empty",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 572,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.1875,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.65625,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.734375,
+            "y": 136,
+            "width": 51.890625,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-filled",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 572,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.1875,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.65625,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.734375,
+            "y": 136,
+            "width": 51.890625,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-invalid",
+        "text": "Feedback\nSuggestion\nBug\nExperience\nOther\n\nHelp make this little space better.\n\nYour feedback\nContact email (optional)\n\nSend feedback directly to the MauGo team.\n\nSend feedback\n\nEnter a valid email address.",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 617,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Feedback",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Suggestion",
+            "x": 24,
+            "y": 136,
+            "width": 75.1875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Bug",
+            "x": 107.1875,
+            "y": 136,
+            "width": 43.46875,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Experience",
+            "x": 158.65625,
+            "y": 136,
+            "width": 76.078125,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "Other",
+            "x": 242.734375,
+            "y": 136,
+            "width": 51.890625,
+            "height": 26,
+            "font": "10px / 12px Fredoka",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "Send feedback",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "action": "invalid email submit",
+        "actual": "Enter a valid email address.",
+        "note": "client validation only; no valid server submission"
+      },
+      {
+        "state": "about",
+        "text": "About MauGo\n\nA little bird. A little story.\n\nVersion 0.1.0\nCommunity guidelines\n›\nTerms of Use & EULA\n›\nPrivacy information\n›\nHelp & support\n›\nSystem messages\n›\nInteractions\n›\n\nSupport email: [SUPPORT_EMAIL_PENDING_SMITH] · Pending Smith",
+        "page": "about",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 620,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "About MauGo",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-guidelines",
+            "text": "Community guidelines›",
+            "x": 24,
+            "y": 314.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-terms",
+            "text": "Terms of Use & EULA›",
+            "x": 24,
+            "y": 370.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-privacy",
+            "text": "Privacy information›",
+            "x": 24,
+            "y": 426.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-help",
+            "text": "Help & support›",
+            "x": 24,
+            "y": 482.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-system",
+            "text": "System messages›",
+            "x": 24,
+            "y": 538.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-interactions",
+            "text": "Interactions›",
+            "x": 24,
+            "y": 594.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "terms-full",
+        "text": "Terms of Use & EULA\n\nVersion 1.0 · 13 October 2026 · Review draft\n\n1. About this agreement\n\nMauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.\n\n2. Your account\n\nUse accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.\n\n3. Permission to use MauGo\n\nMauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand.\n\n4. Content and respectful conduct\n\nMauGo has zero tolerance for objectionable content or abusive users. Do not post or send harassment, bullying, threats, hate speech, sexual exploitation, illegal sexual content, scams, spam, impersonation, or content that infringes rights. Do not publish private information without permission. These rules apply to letters, chats, profiles, images, recordings, stickers and moments.\n\n5. Your content and conversation rules\n\nYou retain ownership of your content and must have permission to share it. You grant MauGo only the rights needed to store, display, transmit and moderate it for the service. One opening text message is permitted per new connection; further chat and attachments unlock after the recipient replies. Do not bypass this limit or repeatedly contact someone who declines or blocks you.\n\n6. Reporting, blocking and enforcement\n\nUse Report and Block in letter or conversation controls to flag unwanted content and stop contact. In the released service, MauGo may review reports, remove content and restrict or terminate abusive accounts, with notice and review where required by law. This preview saves reports locally; it has no connected moderation team and cannot deliver reports. It is not an emergency service.\n\n7. Diamonds and paid features\n\nIn the intended app, diamonds are purchased in USD through the applicable store and used for features at the displayed price. Diamonds are not money, cannot be cashed out or transferred, and have no value outside MauGo. Filter Pass duration and diamond cost are shown before confirmation; extra days extend expiry and there is no automatic renewal. Store rules and mandatory consumer rights govern refunds. This preview uses test balances and makes no real charge.\n\n8. Privacy and permissions\n\nRead Privacy information to understand the current data use. This preview stores account personas, messages and preferences in browser storage and selected media in IndexedDB. It does not send authentication emails or store passwords. File access follows your selection; microphone permission is requested for recording. Clearing local browser data may remove content. Hosting providers may process access logs.\n\n9. Availability and your rights\n\nMauGo may change or discontinue features, subject to applicable law and purchased entitlements. You may stop using it and use account settings to export or delete local data. The preview is provided for evaluation without a promise of uninterrupted availability. Nothing in these terms excludes non-excludable warranties, liability or consumer rights under the laws that apply to you.\n\n10. Apple distribution\n\nFor an app distributed by Apple, this agreement is between you and MauGo. Apple is not responsible for app support, app-related claims or intellectual-property disputes; MauGo is responsible as required by law. If the app fails an applicable warranty, Apple may refund its purchase price under its rules. Apple and its subsidiaries may enforce this agreement as third-party beneficiaries. Use Apple devices you own or control and follow store usage rules, including permitted family access. Comply with applicable export and sanctions restrictions.\n\n11. Updates and contact\n\nMaterial changes will be shown before requesting renewed agreement. Contact MauGo at maugo.support@example.com. This is a reserved example address for the design preview, not an active support inbox; replace it with the actual MauGo support address before release. Version 1.0 · 13 October 2026. This document is a review draft for the prototype and does not create a real service contract.",
+        "page": "terms",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 2790,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Terms of Use & EULA",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "1. About this agreement",
+            "x": 24.048877716064453,
+            "y": 191,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "2. Your account",
+            "x": 24.048877716064453,
+            "y": 392,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "3. Permission to use MauGo",
+            "x": 24.048877716064453,
+            "y": 593,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "4. Content and respectful conduct",
+            "x": 24.048877716064453,
+            "y": 794,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "5. Your content and conversation rules",
+            "x": 24.048877716064453,
+            "y": 1018,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "6. Reporting, blocking and enforcement",
+            "x": 24.048877716064453,
+            "y": 1265,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "7. Diamonds and paid features",
+            "x": 24.048877716064453,
+            "y": 1512,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "8. Privacy and permissions",
+            "x": 24.048877716064453,
+            "y": 1782,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "9. Availability and your rights",
+            "x": 24.048877716064453,
+            "y": 2052,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "10. Apple distribution",
+            "x": 24.048877716064453,
+            "y": 2299,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "11. Updates and contact",
+            "x": 24.048877716064453,
+            "y": 2615,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px Fredoka",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "system-empty",
+        "text": "System messages\nYou are all caught up.\n\nNo system message feed is connected.",
+        "page": "system",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "System messages",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "You are all caught up.",
+            "x": 24.049028396606445,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "interactions-empty",
+        "text": "Interactions\nNothing here yet.\n\nNo interaction feed is connected.",
+        "page": "interactions",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "Interactions",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "Nothing here yet.",
+            "x": 24.049013137817383,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      }
+    ],
+    "missing": [
+      "feedback-history: no implementation or history endpoint in SettingsFlow"
+    ],
+    "validSubmission": "Not executed: backend 3001 unavailable; no fake account/session"
+  },
+  {
+    "height": 667,
+    "lang": "ko",
+    "entry": "Welcome → Explore preview → Profile → Settings; real clicks, no token or API mocks",
+    "steps": [
+      {
+        "state": "help",
+        "text": "도움말 및 지원\n셀프 서비스\n도움말 센터\n커뮤니티 가이드라인\n안전 가이드\n계정 삭제\nMauGo에서 인사드려요.\n\n도움말 센터에서 답을 찾거나 피드백으로 의견을 남겨 주세요.\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n편지는 어떻게 보내나요?\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n피드백\n개인정보 안내\n\n지원 이메일: [SUPPORT_EMAIL_PENDING_SMITH] · Smith 확인 대기 중",
+        "page": "help",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 599,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 및 지원",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "셀프 서비스",
+            "x": 40,
+            "y": 152,
+            "width": 295,
+            "height": 16,
+            "font": "550 13px / 16px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-centre",
+            "text": "도움말 센터",
+            "x": 40,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "community-guidelines",
+            "text": "커뮤니티 가이드라인",
+            "x": 115.75,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "safety-guide",
+            "text": "안전 가이드",
+            "x": 191.5,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-delete",
+            "text": "계정 삭제",
+            "x": 267.25,
+            "y": 184,
+            "width": 67.75,
+            "height": 58,
+            "font": "9px / 11px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(186, 205, 178)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 84,
+            "y": 408,
+            "width": 111.109375,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 84,
+            "y": 434,
+            "width": 133.65625,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 84,
+            "y": 460,
+            "width": 164.125,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 84,
+            "y": 486,
+            "width": 145.203125,
+            "height": 26,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(181, 250, 112)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "support-feedback",
+            "text": "피드백",
+            "x": 24,
+            "y": 560,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "help-privacy",
+            "text": "개인정보 안내",
+            "x": 195.5,
+            "y": 560,
+            "width": 155.5,
+            "height": 46,
+            "font": "11px / 18px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(35, 53, 41)"
+          }
+        ]
+      },
+      {
+        "state": "faq",
+        "text": "도움말 센터\n편지는 어떻게 보내나요?\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n메시지는 어디에 저장되나요?\n내 데이터는 어떻게 삭제하나요?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 센터",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 24.04945945739746,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 24.04945945739746,
+            "y": 206,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 24.04945945739746,
+            "y": 260,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 24.04945945739746,
+            "y": 314,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "메시지는 어디에 저장되나요?",
+            "x": 24.04945945739746,
+            "y": 368,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "내 데이터는 어떻게 삭제하나요?",
+            "x": 24.04945945739746,
+            "y": 422,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "faq-expanded",
+        "text": "도움말 센터\n편지는 어떻게 보내나요?\n\n새를 누르고 첫 메시지를 한 번 보내세요. 상대의 답장을 받은 뒤 대화하거나 팔로우하고 첨부파일을 보낼 수 있어요.\n\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n메시지는 어디에 저장되나요?\n내 데이터는 어떻게 삭제하나요?",
+        "page": "faq",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "도움말 센터",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "편지는 어떻게 보내나요?",
+            "x": 24,
+            "y": 152,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "답장을 몇 개 받을 수 있나요?",
+            "x": 24,
+            "y": 264,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "모든 새를 무료로 이용할 수 있나요?",
+            "x": 24,
+            "y": 318,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "필터 패스는 어떻게 이용하나요?",
+            "x": 24,
+            "y": 372,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "메시지는 어디에 저장되나요?",
+            "x": 24,
+            "y": 426,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "SUMMARY",
+            "id": "",
+            "text": "내 데이터는 어떻게 삭제하나요?",
+            "x": 24,
+            "y": 480,
+            "width": 327,
+            "height": 21,
+            "font": "13px / 21px Fredoka",
+            "color": "rgb(208, 226, 196)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "guidelines",
+        "text": "커뮤니티 가이드라인\n다정하게 대하기\n\n서로를 배려해 주세요. 괴롭힘, 위협, 원치 않는 성적 콘텐츠는 허용되지 않아요.\n\n개인정보 존중하기\n\n다른 사람의 개인정보를 공유하지 마세요. 개인 대화를 공유하기 전에 동의를 구하세요.\n\n자신의 말로 표현하기\n\n스팸, 사칭, 사기를 피하세요. 원치 않는 메시지는 신고하고 필요하면 차단하세요.",
+        "page": "guidelines",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "커뮤니티 가이드라인",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "다정하게 대하기",
+            "x": 24.048555374145508,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "개인정보 존중하기",
+            "x": 24.048555374145508,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "자신의 말로 표현하기",
+            "x": 24.048555374145508,
+            "y": 354,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "safety-guide",
+        "text": "안전 가이드\n계정 보호하기\n\n비밀번호와 인증 코드를 비밀로 유지하세요. MauGo는 채팅으로 이를 요청하지 않아요.\n\n링크 주의하기\n\n낯선 사람의 다운로드나 결제 요청을 피하세요.\n\n내가 선택하기\n\n의심스러운 연락을 신고하고 원치 않는 메시지를 차단하세요. 개인정보 설정을 이용하세요.",
+        "page": "safety",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "안전 가이드",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "계정 보호하기",
+            "x": 24.048795700073242,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "링크 주의하기",
+            "x": 24.048795700073242,
+            "y": 245,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "내가 선택하기",
+            "x": 24.048795700073242,
+            "y": 331,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "privacy-policy",
+        "text": "개인정보 안내\n개인정보 안내\n\n공식 개인정보 처리방침은 Smith의 정식 문안을 기다리고 있습니다(E2). 이 안내는 개인정보 처리방침이 아니며 출시용이 아닙니다.",
+        "page": "privacy",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "개인정보 안내",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "개인정보 안내",
+            "x": 24.04878044128418,
+            "y": 136,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-empty",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 572,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-filled",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 572,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "feedback-invalid",
+        "text": "피드백\n제안\n오류\n사용 경험\n기타\n\n이 작은 공간을 더 좋게 만들 수 있도록 도와주세요.\n\n피드백 내용\n연락 이메일 (선택)\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n피드백 보내기\n\n올바른 이메일 주소를 입력하세요.",
+        "page": "feedback",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 617,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "피드백",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "제안",
+            "x": 24,
+            "y": 136,
+            "width": 44.203125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgb(181, 250, 112)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "오류",
+            "x": 76.203125,
+            "y": 136,
+            "width": 44.40625,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "사용 경험",
+            "x": 128.609375,
+            "y": 136,
+            "width": 65.5,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "text": "기타",
+            "x": 202.109375,
+            "y": 136,
+            "width": 43.703125,
+            "height": 26,
+            "font": "10px / 12px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(142, 171, 123)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "TEXTAREA",
+            "id": "feedback-text",
+            "text": "",
+            "x": 24,
+            "y": 259,
+            "width": 327,
+            "height": 168,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "INPUT",
+            "id": "feedback-email",
+            "text": "",
+            "x": 24,
+            "y": 483,
+            "width": 327,
+            "height": 48,
+            "font": "13px / 20px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgb(28, 43, 32)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-feedback",
+            "text": "피드백 보내기",
+            "x": 24,
+            "y": 596,
+            "width": 327,
+            "height": 48,
+            "font": "600 16px / 22px Fredoka",
+            "color": "rgb(10, 20, 6)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "action": "invalid email submit",
+        "actual": "올바른 이메일 주소를 입력하세요.",
+        "note": "client validation only; no valid server submission"
+      },
+      {
+        "state": "about",
+        "text": "MauGo 소개\n\n작은 새 한 마리. 작은 이야기 하나.\n\nVersion 0.1.0\n커뮤니티 가이드라인\n›\n이용약관 및 EULA\n›\n개인정보 안내\n›\n도움말 및 지원\n›\n시스템 메시지\n›\n소식\n›\n\n지원 이메일: [SUPPORT_EMAIL_PENDING_SMITH] · Smith 확인 대기 중",
+        "page": "about",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 620,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "MauGo 소개",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-guidelines",
+            "text": "커뮤니티 가이드라인›",
+            "x": 24,
+            "y": 314.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-terms",
+            "text": "이용약관 및 EULA›",
+            "x": 24,
+            "y": 370.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-privacy",
+            "text": "개인정보 안내›",
+            "x": 24,
+            "y": 426.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-help",
+            "text": "도움말 및 지원›",
+            "x": 24,
+            "y": 482.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-system",
+            "text": "시스템 메시지›",
+            "x": 24,
+            "y": 538.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "about-interactions",
+            "text": "소식›",
+            "x": 24,
+            "y": 594.609375,
+            "width": 327,
+            "height": 56,
+            "font": "13px / 20px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "terms-full",
+        "text": "이용약관 및 EULA\n\n버전 1.0 · 2026년 10월 13일 · 검토용 초안\n\n1. 이 약관에 대하여\n\nMauGo는 편지, 메시지와 일상을 나누는 공간입니다. 이 이용약관 및 최종 사용자 라이선스 계약은 MauGo 이용에 적용됩니다. 이용자는 만 18세 이상이며 약관에 동의할 법적 능력이 있어야 합니다. 동의하지 않으면 가입, 로그인 및 계정 기능을 이용하지 마세요.\n\n2. 계정\n\n정확한 정보를 사용하고 로그인 정보를 안전하게 관리하세요. 타인을 사칭하거나 허락 없이 계정 접근을 공유하지 마세요. 승인한 계정 활동에 책임을 집니다. 실제 앱은 이메일과 Apple 로그인을 제공할 예정이며, 현재 미리보기는 화면 흐름만 보여 줍니다.\n\n3. 이용 라이선스\n\nMauGo는 본 약관과 적용되는 스토어 규칙에 따라 앱을 사용할 개인적이고 제한적이며 비독점적이고 양도 불가능한 라이선스를 부여합니다. 재판매, 불법 복제, 보안 우회, 서비스 방해 또는 법이 허용하지 않는 역공학은 금지됩니다. 앱과 브랜드에 대한 권리는 MauGo에 있습니다.\n\n4. 콘텐츠와 이용 태도\n\nMauGo는 부적절한 콘텐츠와 가해 행위를 용납하지 않습니다. 괴롭힘, 따돌림, 위협, 혐오 표현, 성적 착취, 불법 성적 콘텐츠, 사기, 스팸, 사칭 또는 권리 침해 콘텐츠를 게시하거나 보내지 마세요. 허락 없이 개인정보를 공개하지 마세요. 편지, 대화, 프로필, 이미지, 녹음, 스티커와 일상 게시물 모두에 적용됩니다.\n\n5. 나의 콘텐츠와 대화 규칙\n\n콘텐츠 소유권은 이용자에게 있으며 공유할 권한이 있어야 합니다. 서비스 제공에 필요한 저장, 표시, 전달 및 검토 권한만 MauGo에 부여합니다. 새로운 연결에서는 첫 텍스트 메시지를 한 번만 보낼 수 있으며 상대가 답장한 후 대화와 첨부 기능이 열립니다. 이를 우회하거나 거절 또는 차단한 사람에게 반복적으로 연락하지 마세요.\n\n6. 신고, 차단 및 조치\n\n편지나 대화의 신고 및 차단 기능으로 원치 않는 콘텐츠를 알리고 연락을 멈출 수 있습니다. 실제 서비스에서는 MauGo가 신고를 검토하고 콘텐츠 삭제, 계정 제한 또는 종료 조치를 취할 수 있으며 법이 요구하는 안내와 검토 절차를 제공합니다. 현재 미리보기의 신고는 기기에만 저장되며 운영팀에 전달되지 않습니다. 긴급 지원 서비스가 아닙니다.\n\n7. 다이아몬드와 유료 기능\n\n실제 앱에서는 해당 스토어에서 USD로 다이아몬드를 구매하고 표시된 가격으로 기능을 이용합니다. 다이아몬드는 현금이 아니며 현금화 또는 양도할 수 없고 MauGo 밖에서는 가치가 없습니다. 필터 패스 기간과 가격은 확인 전에 표시되며 추가 기간은 만료일을 연장하고 자동 갱신은 없습니다. 환불에는 스토어 규칙과 법정 소비자 권리가 적용됩니다. 현재 미리보기는 테스트 잔액만 사용하며 실제 결제는 없습니다.\n\n8. 개인정보와 권한\n\n현재 데이터 처리 내용은 개인정보 안내에서 확인하세요. 미리보기의 계정 프로필, 메시지와 설정은 브라우저에, 선택한 미디어는 IndexedDB에 저장됩니다. 인증 이메일을 발송하거나 비밀번호를 저장하지 않습니다. 파일은 직접 선택한 경우에만 접근하며 녹음 시 마이크 권한을 요청합니다. 브라우저 데이터를 지우면 콘텐츠가 삭제될 수 있습니다. 호스팅 제공자는 접속 기록을 처리할 수 있습니다.\n\n9. 서비스 이용과 권리\n\nMauGo는 관련 법률과 구매한 이용 권리를 고려하여 기능을 변경하거나 종료할 수 있습니다. 이용을 중단하거나 계정 설정에서 기기 데이터를 내보내고 삭제할 수 있습니다. 미리보기는 평가용이며 중단 없는 제공을 보장하지 않습니다. 이 약관은 적용 법률상 배제할 수 없는 보증, 책임 또는 소비자 권리를 제한하지 않습니다.\n\n10. Apple 배포\n\nApple을 통해 배포되는 앱에서 이 계약은 이용자와 MauGo 사이의 계약입니다. 앱 지원, 앱 관련 청구 및 지식재산권 분쟁에 대한 책임은 법률에 따라 MauGo에 있으며 Apple에는 없습니다. 적용되는 보증을 충족하지 못하면 Apple은 스토어 규칙에 따라 앱 구매 금액을 환불할 수 있습니다. Apple과 그 자회사는 제3자 수익자로서 본 계약을 집행할 수 있습니다. 소유하거나 관리하는 Apple 기기를 사용하고 허용된 가족 접근 등 스토어 이용 규칙과 수출 및 제재 규정을 준수하세요.\n\n11. 변경 및 연락처\n\n중요한 변경 사항은 재동의를 요청하기 전에 표시합니다. MauGo 연락처: maugo.support@example.com. 이 주소는 디자인 미리보기용 예시이며 실제 지원 메일함이 아닙니다. 출시 전에 실제 MauGo 지원 주소로 교체해야 합니다. 버전 1.0 · 2026년 10월 13일. 이 문서는 프로토타입 검토용 초안이며 실제 서비스 계약을 체결하지 않습니다.",
+        "page": "terms",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 2353,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "이용약관 및 EULA",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "1. 이 약관에 대하여",
+            "x": 24,
+            "y": 191,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "2. 계정",
+            "x": 24,
+            "y": 369,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "3. 이용 라이선스",
+            "x": 24,
+            "y": 547,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "4. 콘텐츠와 이용 태도",
+            "x": 24,
+            "y": 725,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "5. 나의 콘텐츠와 대화 규칙",
+            "x": 24,
+            "y": 926,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "6. 신고, 차단 및 조치",
+            "x": 24,
+            "y": 1127,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "7. 다이아몬드와 유료 기능",
+            "x": 24,
+            "y": 1328,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "8. 개인정보와 권한",
+            "x": 24,
+            "y": 1552,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "9. 서비스 이용과 권리",
+            "x": 24,
+            "y": 1776,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "10. Apple 배포",
+            "x": 24,
+            "y": 1977,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "11. 변경 및 연락처",
+            "x": 24,
+            "y": 2224,
+            "width": 327,
+            "height": 19,
+            "font": "550 16px / 19px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(193, 219, 176)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "system-empty",
+        "text": "시스템 메시지\n모든 소식을 확인했어요.\n\n연결된 시스템 메시지 피드가 없습니다.",
+        "page": "system",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "시스템 메시지",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "모든 소식을 확인했어요.",
+            "x": 24,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      {
+        "state": "interactions-empty",
+        "text": "소식\n아직 아무것도 없어요.\n\n연결된 활동 피드가 없습니다.",
+        "page": "interactions",
+        "documentScroll": false,
+        "body": {
+          "height": 555,
+          "scroll": 555,
+          "width": 375,
+          "contentWidth": 375
+        },
+        "elements": [
+          {
+            "tag": "BUTTON",
+            "id": "settings-back",
+            "text": "",
+            "x": 16,
+            "y": 59.5,
+            "width": 40,
+            "height": 40,
+            "font": "500 17px / 24px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H1",
+            "id": "",
+            "text": "소식",
+            "x": 68,
+            "y": 67.5,
+            "width": 239,
+            "height": 24,
+            "font": "550 17px / 24px Fredoka",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "text": "아직 아무것도 없어요.",
+            "x": 24,
+            "y": 332,
+            "width": 327,
+            "height": 21,
+            "font": "550 15px / 21px GowunDodum, Fredoka, sans-serif",
+            "color": "rgb(228, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      }
+    ],
+    "missing": [
+      "feedback-history: no implementation or history endpoint in SettingsFlow"
+    ],
+    "validSubmission": "Not executed: backend 3001 unavailable; no fake account/session"
+  }
+]

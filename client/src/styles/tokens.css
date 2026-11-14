@@ -888,3 +888,9 @@
 
 /* Prototype hold-button:active; kept out of shared component literals. */
 :root{--press-hold:rgb(49 67 50)}
+
+/* R23 local Figma support typography and surfaces. */
+:root {
+--support-services-bg:#1e2f23;--support-message-bg:#1e2b21;--support-action-bg:#233529;--support-field-bg:#1c2b20;--support-label:#bacdb2;--support-copy:#a5be97;--support-faq:#d0e2c4;--support-answer:#93ac8b;--support-policy-title:#c1dbb0;--support-policy-copy:#99b38f;--support-tab:#8eab7b;--support-tab-border:#819b6a33;
+--support-font-service:550 13px/16px Fredoka;--support-font-grid:400 9px/11px Fredoka;--support-font-greeting:550 12px/14.5px Fredoka;--support-font-note:400 11px/18px Fredoka;--support-font-faq:400 13px/21px Fredoka;--support-font-tab:400 10px/12px Fredoka;--support-font-policy-title:550 16px/19px Fredoka;--support-font-policy:400 13px/23px Fredoka;
+}

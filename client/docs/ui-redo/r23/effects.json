@@ -1,0 +1,62 @@
+[
+  {
+    "selector": "#settings-back",
+    "style": {
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+      "scale": "1"
+    }
+  },
+  {
+    "selector": "#help-centre",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": "#community-guidelines",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": "#safety-guide",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": "#help-delete",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": "#support-feedback",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": "#help-privacy",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "selector": ".support-message button",
+    "style": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "none"
+    }
+  },
+  {
+    "faqOpen": "",
+    "animation": "support-answer-in-82f29632"
+  }
+]
