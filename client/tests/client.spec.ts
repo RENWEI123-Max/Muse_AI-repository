@@ -12,7 +12,7 @@ test('welcome, language entry, preview and circular avatar', async ({ page }) =>
   await page.screenshot({ path: 'test-results/welcome-375x812.png' })
   await page.getByRole('button', { name: 'Switch language' }).click()
   await expect(page.getByRole('heading', { name: 'MauGo에 오신 것을 환영해요' })).toBeVisible()
-  await page.getByRole('button', { name: 'Switch language' }).click()
+  await page.getByRole('button', { name: '언어 변경' }).click()
   await page.getByRole('button', { name: 'Explore preview' }).click()
   await expect(page.locator('.home-flow')).toBeVisible()
   await expect(page.getByRole('button', {name:'Filters',exact:true})).toBeVisible()
