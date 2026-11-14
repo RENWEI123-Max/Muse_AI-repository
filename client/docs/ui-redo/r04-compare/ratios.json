@@ -1,0 +1,34 @@
+[
+  {
+    "id": "home-ready",
+    "differentPixels": 13002,
+    "totalPixels": 304500,
+    "maskedPixels": 16500,
+    "ratio": 0.04269950738916256,
+    "percent": 4.269950738916256
+  },
+  {
+    "id": "terms-unchecked",
+    "differentPixels": 21760,
+    "totalPixels": 304500,
+    "maskedPixels": 16500,
+    "ratio": 0.07146141215106733,
+    "percent": 7.1461412151067325
+  },
+  {
+    "id": "signin-empty",
+    "differentPixels": 4555,
+    "totalPixels": 304500,
+    "maskedPixels": 16500,
+    "ratio": 0.014958949096880132,
+    "percent": 1.4958949096880132
+  },
+  {
+    "id": "signup-empty",
+    "differentPixels": 4947,
+    "totalPixels": 304500,
+    "maskedPixels": 16500,
+    "ratio": 0.01624630541871921,
+    "percent": 1.6246305418719211
+  }
+]
