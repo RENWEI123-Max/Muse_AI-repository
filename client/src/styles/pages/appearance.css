@@ -1,7 +1,7 @@
 /* R13 local JSON v2421258509127695554. Section y=48, body y=112. */
 .d2-appearance .d2-header-space{position:absolute;right:16px;width:40px}
 .d2-appearance h1{width:239px;text-align:center}
-.d2-appearance .d2-body{position:relative;flex:1;min-height:0;overflow:auto;padding:24px 24px 28px;animation:d2-open .22s ease-out;scrollbar-width:none}
+.d2-appearance .d2-body{position:relative;flex:1;min-height:0;overflow:auto;padding:24px 24px 28px;scrollbar-width:none}
 .d2-appearance .page-tabs{width:327px;height:48px;margin-bottom:24px}
 .d2-appearance .wallpaper-grid{display:grid;grid-template-columns:repeat(3,101px);gap:12px}
 .d2-appearance .appearance-tile-image{display:block;width:99px;height:173.0625px;max-width:none;object-fit:cover}
@@ -34,9 +34,5 @@
 .c6-chat.theme-stars,.d2-appearance .theme-stars{background:var(--appearance-stars-start)}
 .chat-flow.d2-custom-bubbles .chat-bubble{background:var(--their-bubble);color:var(--their-text)}
 .chat-flow.d2-custom-bubbles .chat-bubble--mine{background:var(--my-bubble);color:var(--my-text)}
-.d2-appearance .d2-page-enter-active,.d2-appearance .d2-page-leave-active{transition:opacity .18s,transform .18s}
-.d2-appearance .d2-page-enter-from{opacity:0;transform:translateX(16px)}
-.d2-appearance .d2-page-leave-to{opacity:0;transform:translateX(-12px)}
 .d2-appearance:lang(ko) :is(h1,span,div,figcaption,p,#my-bubble,#their-bubble){font-family:var(--font-family-ko)}
-@keyframes d2-open{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @media(max-height:740px){.d2-appearance .d2-body{padding-bottom:40px}}

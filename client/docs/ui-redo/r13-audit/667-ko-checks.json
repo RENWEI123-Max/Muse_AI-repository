@@ -1,0 +1,307 @@
+{
+  "fixture": true,
+  "checks": {
+    "wallpaperScroll": {
+      "top": 171,
+      "height": 555,
+      "content": 726,
+      "bottom": 667
+    },
+    "previewScroll": {
+      "top": 81,
+      "height": 555,
+      "content": 636,
+      "bottom": 667
+    },
+    "colorScroll": {
+      "top": 413,
+      "height": 555,
+      "content": 968,
+      "bottom": 667
+    },
+    "custom": {
+      "background": "night",
+      "myBubble": "#d9c6ff",
+      "myText": "#1a102a",
+      "theirBubble": "#244039",
+      "theirText": "#ffffff"
+    },
+    "customColors": [
+      {
+        "background": "rgb(36, 64, 57)",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "background": "rgb(217, 198, 255)",
+        "color": "rgb(26, 16, 42)"
+      }
+    ],
+    "bubbleScroll": {
+      "top": 4,
+      "height": 555,
+      "content": 559,
+      "bottom": 667
+    },
+    "otherAppearance": null,
+    "errors": [],
+    "clipped": [],
+    "motion": {
+      "animation": "none",
+      "transition": "0s"
+    },
+    "failedImage": {
+      "decoded": false,
+      "alt": "빛나는 숲",
+      "alert": false
+    }
+  },
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "errors": [],
+  "forbidden": []
+}

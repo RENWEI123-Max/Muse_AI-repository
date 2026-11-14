@@ -1,0 +1,2898 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "wallpapers",
+      "state": "wallpapers",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 726,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면",
+          "clipped": false
+        },
+        {
+          "text": "색상",
+          "clipped": false
+        },
+        {
+          "text": "기본✓",
+          "clipped": false
+        },
+        {
+          "text": "기본",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "배경화면을 눌러 미리 보세요. 이 대화에 저장돼요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/moon-road--PC2Nc27.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/glowing-deer-CVSLckVa.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/blue-cosmos-DXn_aY1i.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/little-soot-BZHU38Q_.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/night-glass-CUf1uk3B.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/sunset-peak-vxOCVATP.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/silver-feather-B6ZQXqcZ.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/aurora-sky-BWTk6kaD.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "wallpaper-tile ui-wallpaper-tile wallpaper-default",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        }
+      ]
+    },
+    {
+      "name": "wallpapers-scrolled",
+      "state": "wallpapers",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 726,
+          "top": 171,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면",
+          "clipped": false
+        },
+        {
+          "text": "색상",
+          "clipped": false
+        },
+        {
+          "text": "기본✓",
+          "clipped": false
+        },
+        {
+          "text": "기본",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "배경화면을 눌러 미리 보세요. 이 대화에 저장돼요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/moon-road--PC2Nc27.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/glowing-deer-CVSLckVa.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/blue-cosmos-DXn_aY1i.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/little-soot-BZHU38Q_.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/night-glass-CUf1uk3B.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/sunset-peak-vxOCVATP.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/silver-feather-B6ZQXqcZ.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/aurora-sky-BWTk6kaD.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "wallpaper-tile ui-wallpaper-tile wallpaper-default",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        }
+      ]
+    },
+    {
+      "name": "preview-cancel",
+      "state": "wallpaper-preview",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 636,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면 미리보기",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "당신에게 보내는 작은 인사.",
+          "clipped": false
+        },
+        {
+          "text": "만나서 반가워요!",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "이 배경화면 사용",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/aurora-sky-BWTk6kaD.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "appearance-caption",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "ui-button ui-button--appearance-primary appearance-apply",
+          "theme": null,
+          "background": "linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%)"
+        }
+      ]
+    },
+    {
+      "name": "preview-return",
+      "state": "wallpapers",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 726,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면",
+          "clipped": false
+        },
+        {
+          "text": "색상",
+          "clipped": false
+        },
+        {
+          "text": "기본✓",
+          "clipped": false
+        },
+        {
+          "text": "기본",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "푸른 우주",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "작은 먼지 친구",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "밤의 유리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "노을 봉우리",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "은빛 깃털",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "오로라 하늘",
+          "clipped": false
+        },
+        {
+          "text": "배경화면을 눌러 미리 보세요. 이 대화에 저장돼요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/moon-road--PC2Nc27.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/glowing-deer-CVSLckVa.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/blue-cosmos-DXn_aY1i.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/little-soot-BZHU38Q_.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/night-glass-CUf1uk3B.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/sunset-peak-vxOCVATP.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/silver-feather-B6ZQXqcZ.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/aurora-sky-BWTk6kaD.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "wallpaper-tile ui-wallpaper-tile wallpaper-default",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "wallpaper-name ui-wallpaper-name",
+          "theme": null,
+          "background": "none"
+        }
+      ]
+    },
+    {
+      "name": "wallpaper-preview",
+      "state": "wallpaper-preview",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 636,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면 미리보기",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "당신에게 보내는 작은 인사.",
+          "clipped": false
+        },
+        {
+          "text": "만나서 반가워요!",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "이 배경화면 사용",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/moon-road--PC2Nc27.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "appearance-caption",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "ui-button ui-button--appearance-primary appearance-apply",
+          "theme": null,
+          "background": "linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%)"
+        }
+      ]
+    },
+    {
+      "name": "preview-scrolled",
+      "state": "wallpaper-preview",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 636,
+          "top": 81,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면 미리보기",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "당신에게 보내는 작은 인사.",
+          "clipped": false
+        },
+        {
+          "text": "만나서 반가워요!",
+          "clipped": false
+        },
+        {
+          "text": "달빛 길",
+          "clipped": false
+        },
+        {
+          "text": "이 배경화면 사용",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/moon-road--PC2Nc27.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "appearance-caption",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "ui-button ui-button--appearance-primary appearance-apply",
+          "theme": null,
+          "background": "linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%)"
+        }
+      ]
+    },
+    {
+      "name": "wallpaper-applied",
+      "state": "wallpaper-applied",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 378,
+          "content": 2448,
+          "top": 2070,
+          "bottom": 526,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-send-dark-24-DqMQDc9y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-smile-muted-20-CV448TtS.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-photo-muted-20-BimuATP2.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-microphone-muted-20-Bp-uA_YU.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "wallpaper-colors",
+      "state": "wallpaper-colors",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 968,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면",
+          "clipped": false
+        },
+        {
+          "text": "색상",
+          "clipped": false
+        },
+        {
+          "text": "밤",
+          "clipped": false
+        },
+        {
+          "text": "밤",
+          "clipped": false
+        },
+        {
+          "text": "숲",
+          "clipped": false
+        },
+        {
+          "text": "숲",
+          "clipped": false
+        },
+        {
+          "text": "Clouds",
+          "clipped": false
+        },
+        {
+          "text": "Clouds",
+          "clipped": false
+        },
+        {
+          "text": "Lavender",
+          "clipped": false
+        },
+        {
+          "text": "Lavender",
+          "clipped": false
+        },
+        {
+          "text": "노을",
+          "clipped": false
+        },
+        {
+          "text": "노을",
+          "clipped": false
+        },
+        {
+          "text": "Ocean",
+          "clipped": false
+        },
+        {
+          "text": "Ocean",
+          "clipped": false
+        },
+        {
+          "text": "Stars",
+          "clipped": false
+        },
+        {
+          "text": "Stars",
+          "clipped": false
+        },
+        {
+          "text": "완료",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "theme-card ui-appearance-swatch theme-night",
+          "theme": "night",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-forest",
+          "theme": "forest",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-clouds",
+          "theme": "clouds",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-lavender",
+          "theme": "lavender",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-sunset",
+          "theme": "sunset",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-ocean",
+          "theme": "ocean",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-stars",
+          "theme": "stars",
+          "background": "none"
+        }
+      ]
+    },
+    {
+      "name": "color-back-applied",
+      "state": "wallpaper-applied",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 378,
+          "content": 2448,
+          "top": 2070,
+          "bottom": 526,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-send-dark-24-DqMQDc9y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-smile-muted-20-CV448TtS.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-photo-muted-20-BimuATP2.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-microphone-muted-20-Bp-uA_YU.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "colors-scrolled",
+      "state": "wallpaper-colors",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 968,
+          "top": 413,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면",
+          "clipped": false
+        },
+        {
+          "text": "색상",
+          "clipped": false
+        },
+        {
+          "text": "밤",
+          "clipped": false
+        },
+        {
+          "text": "밤",
+          "clipped": false
+        },
+        {
+          "text": "숲",
+          "clipped": false
+        },
+        {
+          "text": "숲",
+          "clipped": false
+        },
+        {
+          "text": "Clouds",
+          "clipped": false
+        },
+        {
+          "text": "Clouds",
+          "clipped": false
+        },
+        {
+          "text": "Lavender",
+          "clipped": false
+        },
+        {
+          "text": "Lavender",
+          "clipped": false
+        },
+        {
+          "text": "노을",
+          "clipped": false
+        },
+        {
+          "text": "노을",
+          "clipped": false
+        },
+        {
+          "text": "Ocean✓",
+          "clipped": false
+        },
+        {
+          "text": "Ocean",
+          "clipped": false
+        },
+        {
+          "text": "Stars",
+          "clipped": false
+        },
+        {
+          "text": "Stars",
+          "clipped": false
+        },
+        {
+          "text": "완료",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "theme-card ui-appearance-swatch theme-night",
+          "theme": "night",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-forest",
+          "theme": "forest",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-clouds",
+          "theme": "clouds",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-lavender",
+          "theme": "lavender",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-sunset",
+          "theme": "sunset",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-ocean",
+          "theme": "ocean",
+          "background": "none"
+        },
+        {
+          "selector": "theme-card ui-appearance-swatch theme-stars",
+          "theme": "stars",
+          "background": "none"
+        }
+      ]
+    },
+    {
+      "name": "color-done",
+      "state": "wallpaper-applied",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 378,
+          "content": 2448,
+          "top": 2070,
+          "bottom": 526,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-send-dark-24-DqMQDc9y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-smile-muted-20-CV448TtS.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-photo-muted-20-BimuATP2.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-microphone-muted-20-Bp-uA_YU.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "default-applied",
+      "state": "chat-open",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 378,
+          "content": 2448,
+          "top": 2070,
+          "bottom": 526,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-send-dark-24-DqMQDc9y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-smile-muted-20-CV448TtS.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-photo-muted-20-BimuATP2.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-microphone-muted-20-Bp-uA_YU.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "chat-bubbles",
+      "state": "chat-bubbles",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 559,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "기본값으로 초기화",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "chat-bubbles-custom",
+      "state": "chat-bubbles-custom",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 559,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "기본값으로 초기화",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "custom-applied",
+      "state": "chat-open",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 378,
+          "content": 2448,
+          "top": 2070,
+          "bottom": 526,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-send-dark-24-DqMQDc9y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-smile-muted-20-CV448TtS.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-photo-muted-20-BimuATP2.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-microphone-muted-20-Bp-uA_YU.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "bubbles-scrolled",
+      "state": "chat-bubbles-custom",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 559,
+          "top": 4,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "기본값으로 초기화",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "bubbles-reset",
+      "state": "chat-bubbles",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 559,
+          "top": 4,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "내 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 말풍선",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "상대 글자",
+          "clipped": false
+        },
+        {
+          "text": "기본값으로 초기화",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "wallpaper-image-failure",
+      "state": "wallpaper-preview",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 636,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "배경화면 미리보기",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "당신에게 보내는 작은 인사.",
+          "clipped": false
+        },
+        {
+          "text": "만나서 반가워요!",
+          "clipped": false
+        },
+        {
+          "text": "빛나는 숲",
+          "clipped": false
+        },
+        {
+          "text": "이 배경화면 사용",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/glowing-deer-CVSLckVa.png",
+          "decoded": false
+        }
+      ],
+      "gradients": [
+        {
+          "selector": "appearance-caption",
+          "theme": null,
+          "background": "none"
+        },
+        {
+          "selector": "ui-button ui-button--appearance-primary appearance-apply",
+          "theme": null,
+          "background": "linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%)"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "wallpaperScroll": {
+      "top": 171,
+      "height": 555,
+      "content": 726,
+      "bottom": 667
+    },
+    "previewScroll": {
+      "top": 81,
+      "height": 555,
+      "content": 636,
+      "bottom": 667
+    },
+    "colorScroll": {
+      "top": 413,
+      "height": 555,
+      "content": 968,
+      "bottom": 667
+    },
+    "custom": {
+      "background": "night",
+      "myBubble": "#d9c6ff",
+      "myText": "#1a102a",
+      "theirBubble": "#244039",
+      "theirText": "#ffffff"
+    },
+    "customColors": [
+      {
+        "background": "rgb(36, 64, 57)",
+        "color": "rgb(255, 255, 255)"
+      },
+      {
+        "background": "rgb(217, 198, 255)",
+        "color": "rgb(26, 16, 42)"
+      }
+    ],
+    "bubbleScroll": {
+      "top": 4,
+      "height": 555,
+      "content": 559,
+      "bottom": 667
+    },
+    "otherAppearance": null,
+    "errors": [],
+    "clipped": [],
+    "motion": {
+      "animation": "none",
+      "transition": "0s"
+    }
+  },
+  "errors": []
+}

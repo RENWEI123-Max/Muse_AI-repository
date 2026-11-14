@@ -1,0 +1,128 @@
+[WebServer] (node:59082) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:59084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures (14.0s)
+(node:59092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures (14.0s)
+(node:59109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures (14.1s)
+(node:59121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures (14.2s)
+
+
+  1) tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      59 |  await page.locator('[data-chat="open"]').click();await background();expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).overscrollBehaviorY)).toBe('contain');expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).animationName)).toBe('none')
+      60 |  checks.motion=await page.locator('.d2-body').evaluate(e=>({animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}))
+    > 61 |  await page.route('**/*glowing-deer*.png',route=>route.fulfill({status:503,body:''}));await page.locator('[data-wallpaper="glowing-deer"]').click();await snap('wallpaper-image-failure','wallpaper-preview');checks.failedImage=await page.locator('.appearance-preview-image').evaluate(e=>({decoded:(e as HTMLImageElement).naturalWidth>0,alt:e.getAttribute('alt'),alert:!!document.querySelector('[role=alert]')}));expect(checks.failedImage.decoded).toBe(false);await page.unroute('**/*glowing-deer*.png');await back();await expect(root).toHaveAttribute('data-state','wallpapers')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      62 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors,forbidden},null,2))
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:61:446
+
+    Error Context: test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      59 |  await page.locator('[data-chat="open"]').click();await background();expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).overscrollBehaviorY)).toBe('contain');expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).animationName)).toBe('none')
+      60 |  checks.motion=await page.locator('.d2-body').evaluate(e=>({animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}))
+    > 61 |  await page.route('**/*glowing-deer*.png',route=>route.fulfill({status:503,body:''}));await page.locator('[data-wallpaper="glowing-deer"]').click();await snap('wallpaper-image-failure','wallpaper-preview');checks.failedImage=await page.locator('.appearance-preview-image').evaluate(e=>({decoded:(e as HTMLImageElement).naturalWidth>0,alt:e.getAttribute('alt'),alert:!!document.querySelector('[role=alert]')}));expect(checks.failedImage.decoded).toBe(false);await page.unroute('**/*glowing-deer*.png');await back();await expect(root).toHaveAttribute('data-state','wallpapers')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      62 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors,forbidden},null,2))
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:61:446
+
+    Error Context: test-results/r13-audit/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      59 |  await page.locator('[data-chat="open"]').click();await background();expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).overscrollBehaviorY)).toBe('contain');expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).animationName)).toBe('none')
+      60 |  checks.motion=await page.locator('.d2-body').evaluate(e=>({animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}))
+    > 61 |  await page.route('**/*glowing-deer*.png',route=>route.fulfill({status:503,body:''}));await page.reload();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click();await background();await page.locator('[data-wallpaper="glowing-deer"]').click();await snap('wallpaper-image-failure','wallpaper-preview');checks.failedImage=await page.locator('.appearance-preview-image').evaluate(e=>({decoded:(e as HTMLImageElement).naturalWidth>0,alt:e.getAttribute('alt'),alert:!!document.querySelector('[role=alert]')}));expect(checks.failedImage.decoded).toBe(false);await page.unroute('**/*glowing-deer*.png');await back();await expect(root).toHaveAttribute('data-state','wallpapers')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      62 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors,forbidden},null,2))
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:61:446
+
+    Error Context: test-results/r13-audit/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      59 |  await page.locator('[data-chat="open"]').click();await background();expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).overscrollBehaviorY)).toBe('contain');expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).animationName)).toBe('none')
+      60 |  checks.motion=await page.locator('.d2-body').evaluate(e=>({animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}))
+    > 61 |  await page.route('**/*glowing-deer*.png',route=>route.fulfill({status:503,body:''}));await page.reload();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click();await background();await page.locator('[data-wallpaper="glowing-deer"]').click();await snap('wallpaper-image-failure','wallpaper-preview');checks.failedImage=await page.locator('.appearance-preview-image').evaluate(e=>({decoded:(e as HTMLImageElement).naturalWidth>0,alt:e.getAttribute('alt'),alert:!!document.querySelector('[role=alert]')}));expect(checks.failedImage.decoded).toBe(false);await page.unroute('**/*glowing-deer*.png');await back();await expect(root).toHaveAttribute('data-state','wallpapers')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      62 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors,forbidden},null,2))
+      63 | })
+      64 |
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:61:446
+
+    Error Context: test-results/r13-audit/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures ─────────────
