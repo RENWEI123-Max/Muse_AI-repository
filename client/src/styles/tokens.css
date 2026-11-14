@@ -374,3 +374,60 @@
   --font-home-response: 500 10px/1.21 "Fredoka";
   --font-home-economy: 400 9px/1.21 "Fredoka";
 }
+
+/* R07: measured local JSON, version 2421258509127695554. */
+:root {
+  --r07-gender-idle: rgb(103 112 108 / 1.0);
+  --r07-gender-label: rgb(170 182 163 / 1.0);
+  --r07-gender-card: rgb(41 49 46 / 1.0);
+  --r07-gender-card-selected: rgb(181 250 112 / 0.04699999839067459);
+  --r07-range-label: rgb(129 145 125 / 1.0);
+  --r07-pass-status: rgb(158 164 145 / 1.0);
+  --r07-switch-label: rgb(164 179 156 / 1.0);
+  --r07-preview: rgb(16 24 19 / 1.0);
+  --r07-preview-text: rgb(141 157 132 / 1.0);
+  --r07-replay: rgb(194 223 170 / 1.0);
+  --r07-badge: rgb(161 92 225 / 0.07999999821186066);
+  --r07-city: rgb(37 49 38 / 1.0);
+  --r07-tile-1: radial-gradient(ellipse closest-side at 50% 50%, rgb(70 122 164 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-2: radial-gradient(ellipse closest-side at 50% 50%, rgb(161 137 66 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-3: radial-gradient(ellipse closest-side at 50% 50%, rgb(116 150 61 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-4: radial-gradient(ellipse closest-side at 50% 50%, rgb(130 105 170 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-5: radial-gradient(ellipse closest-side at 50% 50%, rgb(79 157 134 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-6: radial-gradient(ellipse closest-side at 50% 50%, rgb(181 120 110 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-7: radial-gradient(ellipse closest-side at 50% 50%, rgb(102 143 189 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-8: radial-gradient(ellipse closest-side at 50% 50%, rgb(171 159 125 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-tile-9: radial-gradient(ellipse closest-side at 50% 50%, rgb(66 127 165 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(32 42 36 / 1.0);
+  --r07-font-title: 500 18px/24px "Fredoka";
+  --r07-font-gender: 400 12px/16px "Fredoka";
+  --r07-font-switch: 400 12px/14.520000457763672px "Fredoka";
+  --r07-font-range: 400 11px/16px "Fredoka";
+  --r07-font-value: 400 11px/17px "Fredoka";
+  --r07-selection-bg: #2A3828;
+  --r07-tile-bg: #202A24;
+  --r07-tile-text: #B3BFB0;
+  --r07-gender-card-text: #A8B3A6;
+}
+
+:root { --r07-badge-border: rgb(201 154 242 / .1599999964237213); --r07-city-border: rgb(255 255 255 / .03500000014901161); }
+
+:root {
+ --r07-tile-selected-1: radial-gradient(ellipse closest-side at 50% 50%, rgb(70 122 164 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-2: radial-gradient(ellipse closest-side at 50% 50%, rgb(161 137 66 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-3: radial-gradient(ellipse closest-side at 50% 50%, rgb(116 150 61 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-4: radial-gradient(ellipse closest-side at 50% 50%, rgb(130 105 170 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-5: radial-gradient(ellipse closest-side at 50% 50%, rgb(79 157 134 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-6: radial-gradient(ellipse closest-side at 50% 50%, rgb(181 120 110 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-7: radial-gradient(ellipse closest-side at 50% 50%, rgb(102 143 189 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-8: radial-gradient(ellipse closest-side at 50% 50%, rgb(171 159 125 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+ --r07-tile-selected-9: radial-gradient(ellipse closest-side at 50% 50%, rgb(66 127 165 / 0.17000000178813934) 0.0%, rgb(0 0 0 / 0.0) 100.0%), rgb(42 56 40 / 1.0);
+}
+
+:root { --r07-badge-label: #D1B3ED; --r07-age-value: #9DAD96; }
+
+:root { --r07-city-disabled: rgb(228 239 217 / .550000011920929); --r07-value-disabled: rgb(228 239 217 / .44999998807907104); --r07-value-active: rgb(228 239 217 / .8500000238418579); }
+
+/* 53:1983 / 53:2003: exact slider track. */
+:root { --r07-range-track: #3A4C40; --r07-radius-track: 2px; }
+
+:root { --r07-clear-stroke: rgb(0 0 0 / 0); }

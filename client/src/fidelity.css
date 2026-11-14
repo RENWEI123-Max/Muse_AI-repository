@@ -34,28 +34,14 @@
 /* The hat and birds use the full canvas, independently of list/action height. */
 /* Retain the existing wallet/Pass shortcuts while keeping them secondary. */
 /* Floating panels have a 12px canvas inset and a visible drag handle. */
-.device .home-veil{background:#0009;backdrop-filter:none;padding:0 12px 24px}
-.device .home-sheet:not(.pass-payment-dialog):not(.pass-page){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
-.device .home-sheet:not(.pass-payment-dialog):not(.pass-page)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
-.device .home-sheet header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
-.device .home-sheet header h2{font-size:18px;font-weight:550;line-height:24px}
-.device .home-sheet header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
-.device .home-sheet header button img{width:18px;height:18px}
-.device .home-sheet p{font-size:12px;line-height:20px;margin:0 0 12px}
-.device .home-sheet .gender-options{gap:12px;margin-bottom:24px}
-.device .home-sheet .gender-options button{background:none;border:0;padding:0;gap:8px;color:#b8c6af}
-.device .home-sheet .gender-options i{display:grid;place-items:center;background:#66726a;width:44px;height:44px;border-radius:50%;color:#19291e;font-size:26px}
-.device .home-sheet .gender-options [aria-pressed=true] i{background:#b5fa70}
-.device .premium-zone{padding:0;background:none;margin:0 0 24px;gap:20px}
-.device .premium-zone label{font-size:10px;line-height:18px}
-.device .premium-zone input{display:block;margin:12px 0 0;height:16px}
-.device .premium-cover{opacity:0;border:0;animation:none}
-.device .home-sheet select{height:48px;padding:12px 16px;background:#202c23;border:1px solid #ffffff06;font-size:12px;color:#a6b69b}
-.device .home-sheet .pass-badge{height:24px;border-radius:6px;background:#26262e;border:1px solid #ffffff15;color:#d8bcf0;line-height:20px;padding:0 8px;margin-left:8px;font-size:10px}
-.device .city-source{font-size:8px;margin:5px 0;color:#74846c}
-.device .home-sheet .pass-status{margin-top:12px;font-size:10px!important;line-height:18px;color:#a0b192!important}
-.device .unlock-pass{font-size:10px;padding:4px;min-height:24px}
-.device .switch-row{height:44px;padding:0;font-size:12px}
+.device .home-veil:not(.r07-veil){background:#0009;backdrop-filter:none;padding:0 12px 24px}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
+.device .home-sheet:not(.r07-sheet) header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
+.device .home-sheet:not(.r07-sheet) header h2{font-size:18px;font-weight:550;line-height:24px}
+.device .home-sheet:not(.r07-sheet) header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
+.device .home-sheet:not(.r07-sheet) header button img{width:18px;height:18px}
+.device .home-sheet:not(.r07-sheet) p{font-size:12px;line-height:20px;margin:0 0 12px}
 /* Reading retains D11's flight and delayed unfold, with prototype geometry. */
 .device .letters-veil{background:#030a0a70;backdrop-filter:none}
 .device .letters-panel{left:12px;right:12px;top:144px;height:560px;min-height:0;max-height:calc(100% - 172px);padding:0 20px 16px;border-radius:24px;background:linear-gradient(135deg,#11191ae6,#0c1313f2);color:#f3f4f4}
@@ -183,34 +169,12 @@
 .device .profile-card-actions #profile-moments{font-size:9px;min-height:44px;color:#859d80}
 .device .profile-card-actions #new-profile-moment{display:grid;place-items:center;border-radius:50%;width:44px;height:44px;padding:0;margin:0;background:#b5fa70;color:#19362b;font-size:0}
 .device .settings-row>b{font-weight:400}.device .settings-row>b img{width:16px;height:24px;object-fit:contain}
-/* Figma bird-female: 309px content, 64px gender cards, 74px swatches. */
-.device .home-sheet:has(#appearance-genders){height:678px;max-height:calc(100% - 72px);padding:24px 20px 20px}
-.device .home-sheet:has(#appearance-genders) header{height:40px;margin-bottom:16px}
-.device #appearance-genders{gap:12px;margin:0}
-.device #appearance-genders button{position:relative;flex-direction:row;justify-content:center;height:64px;padding:5px 10px;gap:8px;white-space:nowrap;border:1px solid #ffffff0d;border-radius:12px;background:#29312e;font-size:11px}
-.device #appearance-genders img{width:56px;height:52px;object-fit:contain}
-.device #appearance-genders [aria-pressed=true]{border-color:#b5fa70;background:#2a3828;color:#e4efd9}
-.device .appearance-grid{gap:14px 12px;margin-top:16px;height:252px;align-content:start}
-.device .appearance-grid button{position:relative;height:74px;padding:4px;border-radius:12px;background:#202a24;font-size:10px}
-.device .appearance-grid img{width:64px;height:48px;object-fit:contain}
-.device .appearance-grid [aria-pressed=true]{border-color:#b5fa70;background:#2a3828}
-.device #appearance-genders [aria-pressed=true]::after,.device .appearance-grid [aria-pressed=true]::after{content:'✓';position:absolute;bottom:6px;right:6px;width:16px;height:16px;display:grid;place-items:center;border-radius:50%;background:#b5fa70;color:#18251e;font-size:10px}
-.device .home-sheet:has(#appearance-genders) .flight-preview{height:64px;margin:16px 0 12px;padding:6px 12px;border:1px solid #ffffff0d;border-radius:12px;background:#101813;justify-content:space-between;font-size:10px}
-.device .flight-preview .flight-sprite,.device .flight-preview>img{width:50px;height:50px;flex:none}
-.device .flight-preview button{background:none;color:#c2dfaa;font:inherit;padding:6px}
-.device .switch-row input{appearance:none;position:relative;flex:none;width:38px;height:22px;margin:0;border:0;border-radius:11px;background:#35483b;cursor:pointer;transition:background .2s}
-.device .switch-row input::before{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#afbeb3;transition:transform .2s}
-.device .switch-row input:checked{background:#b5fa70}
-.device .switch-row input:checked::before{transform:translateX(16px);background:#18251e}
-.device .switch-row input:focus-visible{outline:2px solid #e4efd9;outline-offset:3px}
-.device .home-sheet:has(#appearance-genders)>.primary{height:48px;min-height:48px;margin-top:16px}
 .device #publish:disabled{background:#252e29;color:#849288;opacity:1}
 @media(max-height:740px){.device{min-height:100svh}
  .device .letters-panel.composer-panel{top:112px;height:calc(100% - 220px);max-height:none;overflow:auto}
  .device .composer-panel .opening-form textarea{min-height:48px}
  .device .opening-form footer{position:static;flex:none;margin-top:12px;min-height:48px}
  .device .opening-form .letter-validation{min-height:16px}
- .device .home-sheet:has(#appearance-genders){height:auto}
 }
 
 .device #publish{display:flex;align-items:center;justify-content:center;gap:8px}
