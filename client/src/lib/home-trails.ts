@@ -25,7 +25,7 @@ export const vHomeTrails: ObjectDirective<SVGSVGElement, SceneMotion> = {
    frame: 0,
    stop() { cancelAnimationFrame(run.frame); reduced.removeEventListener('change', paint) },
    update(next) {
-    if (next.refreshing && !value.refreshing) elapsed = 0
+    if (!next.refreshing && value.refreshing) elapsed = 0
     value = next
     paint()
    }

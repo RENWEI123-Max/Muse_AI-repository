@@ -1,0 +1,115 @@
+{
+  "fixture": true,
+  "steps": [
+    {
+      "step": "01-response",
+      "time": "2026-11-14T10:26:04.942Z"
+    },
+    {
+      "step": "02-letter",
+      "time": "2026-11-14T10:26:05.886Z"
+    },
+    {
+      "step": "03-ready-motion",
+      "time": "2026-11-14T10:26:10.459Z"
+    },
+    {
+      "step": "03b-bird-letter",
+      "time": "2026-11-14T10:26:11.381Z"
+    },
+    {
+      "step": "04-appearance",
+      "time": "2026-11-14T10:26:13.402Z"
+    },
+    {
+      "step": "05-compose-filled",
+      "time": "2026-11-14T10:26:14.841Z"
+    },
+    {
+      "step": "06-compose-failure",
+      "time": "2026-11-14T10:26:15.607Z"
+    },
+    {
+      "step": "07-wallet",
+      "time": "2026-11-14T10:26:18.143Z"
+    },
+    {
+      "step": "08-pass",
+      "time": "2026-11-14T10:26:18.929Z"
+    },
+    {
+      "step": "09-refresh-failure",
+      "time": "2026-11-14T10:26:19.739Z"
+    },
+    {
+      "step": "10-empty",
+      "time": "2026-11-14T10:26:20.540Z"
+    }
+  ],
+  "scroll": {
+    "document": 812,
+    "viewport": 812,
+    "top": 0,
+    "home": 0
+  },
+  "sheetScroll": {
+    "top": 0,
+    "height": 676,
+    "content": 676
+  },
+  "copy": [
+    {
+      "text": "새를 눌러 작은 이야기를 펼쳐 보세요.",
+      "clipped": false
+    },
+    {
+      "text": "다이아몬드",
+      "clipped": false
+    },
+    {
+      "text": "필터 패스 ›",
+      "clipped": false
+    },
+    {
+      "text": "새로고침",
+      "clipped": false
+    },
+    {
+      "text": "편지 보내기",
+      "clipped": false
+    }
+  ],
+  "motion": {
+    "transform": "matrix(0.999434, 0.0336454, -0.0336454, 0.999434, 1.97368, 2.00902)",
+    "sprite": "sprite-loop",
+    "duration": "0.65s"
+  },
+  "effects": [
+    {
+      "name": "home-floor-breathe",
+      "duration": "4s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-mist-breathe",
+      "duration": "5.4s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "-1.1s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "-2s"
+    }
+  ],
+  "errors": []
+}

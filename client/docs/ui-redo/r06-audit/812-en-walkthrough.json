@@ -1,0 +1,115 @@
+{
+  "fixture": true,
+  "steps": [
+    {
+      "step": "01-response",
+      "time": "2026-11-14T10:25:47.514Z"
+    },
+    {
+      "step": "02-letter",
+      "time": "2026-11-14T10:25:48.456Z"
+    },
+    {
+      "step": "03-ready-motion",
+      "time": "2026-11-14T10:25:53.046Z"
+    },
+    {
+      "step": "03b-bird-letter",
+      "time": "2026-11-14T10:25:53.965Z"
+    },
+    {
+      "step": "04-appearance",
+      "time": "2026-11-14T10:25:55.978Z"
+    },
+    {
+      "step": "05-compose-filled",
+      "time": "2026-11-14T10:25:57.410Z"
+    },
+    {
+      "step": "06-compose-failure",
+      "time": "2026-11-14T10:25:58.179Z"
+    },
+    {
+      "step": "07-wallet",
+      "time": "2026-11-14T10:26:00.712Z"
+    },
+    {
+      "step": "08-pass",
+      "time": "2026-11-14T10:26:01.507Z"
+    },
+    {
+      "step": "09-refresh-failure",
+      "time": "2026-11-14T10:26:02.317Z"
+    },
+    {
+      "step": "10-empty",
+      "time": "2026-11-14T10:26:03.105Z"
+    }
+  ],
+  "scroll": {
+    "document": 812,
+    "viewport": 812,
+    "top": 0,
+    "home": 0
+  },
+  "sheetScroll": {
+    "top": 0,
+    "height": 676,
+    "content": 676
+  },
+  "copy": [
+    {
+      "text": "Tap a bird. Open a little story.",
+      "clipped": false
+    },
+    {
+      "text": "Diamonds",
+      "clipped": false
+    },
+    {
+      "text": "Filter Pass ›",
+      "clipped": false
+    },
+    {
+      "text": "Refresh",
+      "clipped": false
+    },
+    {
+      "text": "Send a letter",
+      "clipped": false
+    }
+  ],
+  "motion": {
+    "transform": "matrix(0.999434, 0.0336474, -0.0336474, 0.999434, 1.97377, 2.00939)",
+    "sprite": "sprite-loop",
+    "duration": "0.65s"
+  },
+  "effects": [
+    {
+      "name": "home-floor-breathe",
+      "duration": "4s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-mist-breathe",
+      "duration": "5.4s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "0s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "-1.1s"
+    },
+    {
+      "name": "home-twinkle",
+      "duration": "3.3s",
+      "delay": "-2s"
+    }
+  ],
+  "errors": []
+}

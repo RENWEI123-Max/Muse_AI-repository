@@ -1,0 +1,63 @@
+{
+  "files": {
+    "/Users/anna/maugo-design/MauGo.html": {
+      "bytes": 432119,
+      "sha256": "57212722c9a0fa199b1281e19630a178c56a6e5807038f6ed6ad650ae2b56831"
+    },
+    "/Users/anna/maugo-figma/maugo-file-full.json": {
+      "bytes": 29416938,
+      "sha256": "aad8e4348a7ebfaf67ed7e4dc2c37b9cf215b90a68991ff7872d208f0836ca63"
+    },
+    "client/docs/design-reference/page-states.json": {
+      "bytes": 47839,
+      "sha256": "a354a7cbcfe19a5f695652a6baa5c36c1a8f0b728d35404768f247d85810f1ed"
+    }
+  },
+  "homeStates": {
+    "35:3533": {
+      "name": "home-ready \u00b7 \u9996\u9875 / \u4e09\u5c01\u6765\u4fe1",
+      "absoluteBoundingBox": {
+        "x": 40.0,
+        "y": 1164.0,
+        "width": 375.0,
+        "height": 812.0
+      },
+      "backgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "35:3647": {
+      "name": "home-empty \u00b7 \u9996\u9875 / \u65e0\u7b26\u5408\u6761\u4ef6\u7684\u4fe1\u4ef6",
+      "absoluteBoundingBox": {
+        "x": 455.0,
+        "y": 1164.0,
+        "width": 375.0,
+        "height": 812.0
+      },
+      "backgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "35:3757": {
+      "name": "home-response \u00b7 \u9996\u9875 / \u56de\u5e94\u5230\u8fbe",
+      "absoluteBoundingBox": {
+        "x": 870.0,
+        "y": 1164.0,
+        "width": 375.0,
+        "height": 812.0
+      },
+      "backgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

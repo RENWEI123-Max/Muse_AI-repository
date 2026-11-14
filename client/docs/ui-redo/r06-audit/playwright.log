@@ -1,0 +1,57 @@
+[WebServer] (node:49050) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:49052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en 01-response
+667 en 02-letter
+667 en 03-ready-motion
+667 en 03b-bird-letter
+667 en 04-appearance
+667 en 05-compose-filled
+667 en 06-compose-failure
+667 en 07-wallet
+667 en 08-pass
+667 en 09-refresh-failure
+667 en 10-empty
+  ✓  1 tests/r06-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (17.1s)
+667 ko 01-response
+667 ko 02-letter
+667 ko 03-ready-motion
+667 ko 03b-bird-letter
+667 ko 04-appearance
+667 ko 05-compose-filled
+667 ko 06-compose-failure
+667 ko 07-wallet
+667 ko 08-pass
+667 ko 09-refresh-failure
+667 ko 10-empty
+  ✓  2 tests/r06-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (17.1s)
+812 en 01-response
+812 en 02-letter
+812 en 03-ready-motion
+812 en 03b-bird-letter
+812 en 04-appearance
+812 en 05-compose-filled
+812 en 06-compose-failure
+812 en 07-wallet
+812 en 08-pass
+812 en 09-refresh-failure
+812 en 10-empty
+  ✓  3 tests/r06-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (17.1s)
+812 ko 01-response
+812 ko 02-letter
+812 ko 03-ready-motion
+812 ko 03b-bird-letter
+812 ko 04-appearance
+812 ko 05-compose-filled
+812 ko 06-compose-failure
+812 ko 07-wallet
+812 ko 08-pass
+812 ko 09-refresh-failure
+812 ko 10-empty
+  ✓  4 tests/r06-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (17.2s)
+
+  4 passed (1.2m)

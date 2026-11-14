@@ -144,3 +144,20 @@
 .home-flow .range-fill{position:absolute;left:7px;top:10px;width:var(--range-fill);height:4px;background:var(--accent);border-radius:var(--r07-radius-track)}
 .home-flow .range-thumb{position:absolute;left:var(--range-position);top:0;width:16px;height:24px;background-image:url('../../assets/12-control-states/slider-min-default.png');background-size:146.5px 24px;background-repeat:no-repeat}
 .home-flow .range-art--disabled{opacity:.44999998807907104}
+
+/* R06 prototype ambient motion; reduced/disabled motion keeps approved stills. */
+.home-flow:not(.motion-off) .hat-glow{animation:home-floor-breathe 4s ease-in-out infinite}
+.home-flow:not(.motion-off) .scene-mist{animation:home-mist-breathe 5.4s ease-in-out infinite;transform-origin:50% 87%}
+.home-flow:not(.motion-off) .magic-spark{animation:home-twinkle 3.3s ease-in-out infinite}
+.home-flow:not(.motion-off) .spark-two{animation-delay:-1.1s}
+.home-flow:not(.motion-off) .spark-three{animation-delay:-2s}
+.home-flow .aura{transition:opacity .8s}
+.home-flow .home-flight-sprite{transition:filter .25s}
+.home-flow .home-actions{transition:opacity .45s,transform .45s}
+.home-flow .scene-hint{transition:opacity .7s;pointer-events:none}
+@keyframes home-twinkle{0%,100%{opacity:.25;transform:scale(.75)}50%{opacity:.9;transform:scale(1)}}
+@keyframes home-floor-breathe{0%,100%{opacity:.65;transform:scale(.94)}50%{opacity:1;transform:scale(1.05)}}
+@keyframes home-mist-breathe{0%,100%{opacity:.30;transform:scale(.97,.98) translateY(3px)}50%{opacity:.46;transform:scale(1.03,1.06) translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){
+ .home-flow:not(.motion-off) :is(.hat-glow,.scene-mist,.magic-spark){animation:none}
+}
