@@ -1,0 +1,1675 @@
+[
+  {
+    "id": "39:2308",
+    "name": "compose-sent · 写信 / 发送后等待",
+    "type": "FRAME",
+    "absoluteBoundingBox": {
+      "x": 3775.0,
+      "y": 2180.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "children": [
+      {
+        "id": "39:2309",
+        "name": "announcement",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 3775.0,
+          "y": 2180.0,
+          "width": 1.0,
+          "height": 1.0
+        },
+        "children": [
+          {
+            "id": "39:2310",
+            "name": "Tap a bird to open a letter.",
+            "type": "TEXT",
+            "characters": "Tap a bird to open a letter.",
+            "absoluteBoundingBox": {
+              "x": 3775.0,
+              "y": 2180.0,
+              "width": 40.733001708984375,
+              "height": 136.5
+            }
+          }
+        ]
+      },
+      {
+        "id": "39:2311",
+        "name": "app-view",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 3775.0,
+          "y": 2228.0,
+          "width": 375.0,
+          "height": 668.0
+        },
+        "children": [
+          {
+            "id": "39:2312",
+            "name": "div",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3775.0,
+              "y": 2292.0,
+              "width": 375.0,
+              "height": 604.0
+            },
+            "children": [
+              {
+                "id": "39:2313",
+                "name": "chat-list",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3799.0,
+                  "y": 2304.0,
+                  "width": 327.0,
+                  "height": 527.0
+                },
+                "children": [
+                  {
+                    "id": "39:2314",
+                    "name": "div",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2304.0,
+                      "width": 327.0,
+                      "height": 84.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2315",
+                        "name": "button",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 3799.0,
+                          "y": 2304.0,
+                          "width": 327.0,
+                          "height": 84.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2316",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3799.0,
+                              "y": 2322.0,
+                              "width": 48.0,
+                              "height": 48.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2317",
+                                "name": "img",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3799.0,
+                                  "y": 2322.0,
+                                  "width": 48.0,
+                                  "height": 48.0
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "39:2318",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3861.0,
+                              "y": 2323.5,
+                              "width": 165.0,
+                              "height": 45.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2319",
+                                "name": "strong",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2323.5,
+                                  "width": 165.0,
+                                  "height": 21.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2320",
+                                    "name": "Your sent letter",
+                                    "type": "TEXT",
+                                    "characters": "Your sent letter ",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2325.0,
+                                      "width": 104.0,
+                                      "height": 21.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2321",
+                                "name": "span",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2350.5,
+                                  "width": 165.0,
+                                  "height": 18.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2322",
+                                    "name": "Today I found a quiet little bookshop.",
+                                    "type": "TEXT",
+                                    "characters": "Today I found a quiet little bookshop.",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2350.5,
+                                      "width": 165.0,
+                                      "height": 18.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "39:2323",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 4040.0,
+                              "y": 2331.0,
+                              "width": 58.0,
+                              "height": 30.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2324",
+                                "name": "small",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4074.5390625,
+                                  "y": 2331.0,
+                                  "width": 23.461000442504883,
+                                  "height": 12.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2325",
+                                    "name": "19:32",
+                                    "type": "TEXT",
+                                    "characters": "19:32",
+                                    "absoluteBoundingBox": {
+                                      "x": 4074.26953125,
+                                      "y": 2331.0,
+                                      "width": 24.0,
+                                      "height": 12.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2326",
+                                "name": "small",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4041.0,
+                                  "y": 2350.0,
+                                  "width": 57.0,
+                                  "height": 11.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2327",
+                                    "name": "Awaiting reply",
+                                    "type": "TEXT",
+                                    "characters": "Awaiting reply",
+                                    "absoluteBoundingBox": {
+                                      "x": 4040.5,
+                                      "y": 2350.0,
+                                      "width": 58.0,
+                                      "height": 11.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "39:2328",
+                        "name": "Conversation options · Your sent letter",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 4106.0,
+                          "y": 2331.0,
+                          "width": 28.0,
+                          "height": 32.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2329",
+                            "name": "•••",
+                            "type": "TEXT",
+                            "characters": "•••",
+                            "absoluteBoundingBox": {
+                              "x": 4115.0,
+                              "y": 2340.5,
+                              "width": 10.0,
+                              "height": 13.0
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "39:2330",
+                    "name": "div",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2388.0,
+                      "width": 327.0,
+                      "height": 84.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2331",
+                        "name": "button",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 3799.0,
+                          "y": 2388.0,
+                          "width": 327.0,
+                          "height": 84.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2332",
+                            "name": "img",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3799.0,
+                              "y": 2406.0,
+                              "width": 48.0,
+                              "height": 48.0
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": "39:2333",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3861.0,
+                              "y": 2407.5,
+                              "width": 165.0,
+                              "height": 45.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2334",
+                                "name": "strong",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2407.5,
+                                  "width": 165.0,
+                                  "height": 21.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2335",
+                                    "name": "A cup of tea",
+                                    "type": "TEXT",
+                                    "characters": "A cup of tea ",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2409.0,
+                                      "width": 82.0,
+                                      "height": 21.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2336",
+                                "name": "span",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2434.5,
+                                  "width": 165.0,
+                                  "height": 18.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2337",
+                                    "name": "Thank you for listening. Today feels a little lighter.",
+                                    "type": "TEXT",
+                                    "characters": "Thank you for listening. Today feels a little lighter.",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2434.5,
+                                      "width": 165.0,
+                                      "height": 18.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "39:2338",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 4040.0,
+                              "y": 2412.5,
+                              "width": 58.0,
+                              "height": 35.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2339",
+                                "name": "small",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4074.5390625,
+                                  "y": 2412.5,
+                                  "width": 23.461000442504883,
+                                  "height": 12.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2340",
+                                    "name": "19:02",
+                                    "type": "TEXT",
+                                    "characters": "19:02",
+                                    "absoluteBoundingBox": {
+                                      "x": 4074.26953125,
+                                      "y": 2412.5,
+                                      "width": 24.0,
+                                      "height": 12.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2341",
+                                "name": "b",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4082.0,
+                                  "y": 2431.5,
+                                  "width": 16.0,
+                                  "height": 16.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2342",
+                                    "name": "1",
+                                    "type": "TEXT",
+                                    "characters": "1",
+                                    "absoluteBoundingBox": {
+                                      "x": 4088.0,
+                                      "y": 2433.5,
+                                      "width": 4.0,
+                                      "height": 16.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "39:2343",
+                        "name": "Conversation options · A cup of tea",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 4106.0,
+                          "y": 2415.0,
+                          "width": 28.0,
+                          "height": 32.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2344",
+                            "name": "•••",
+                            "type": "TEXT",
+                            "characters": "•••",
+                            "absoluteBoundingBox": {
+                              "x": 4115.0,
+                              "y": 2424.5,
+                              "width": 10.0,
+                              "height": 13.0
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "39:2345",
+                    "name": "div",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2472.0,
+                      "width": 327.0,
+                      "height": 84.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2346",
+                        "name": "button",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 3799.0,
+                          "y": 2472.0,
+                          "width": 327.0,
+                          "height": 84.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2347",
+                            "name": "img",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3799.0,
+                              "y": 2490.0,
+                              "width": 48.0,
+                              "height": 48.0
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": "39:2348",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3861.0,
+                              "y": 2491.5,
+                              "width": 165.0,
+                              "height": 45.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2349",
+                                "name": "strong",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2491.5,
+                                  "width": 165.0,
+                                  "height": 21.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2350",
+                                    "name": "Ocean in my headphones",
+                                    "type": "TEXT",
+                                    "characters": "Ocean in my headphones ",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2491.5,
+                                      "width": 165.0,
+                                      "height": 21.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2351",
+                                "name": "span",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2518.5,
+                                  "width": 165.0,
+                                  "height": 18.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2352",
+                                    "name": "Some songs feel like little letters. What have you been listening to?",
+                                    "type": "TEXT",
+                                    "characters": "Some songs feel like little letters. What have you been listening to?",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2518.5,
+                                      "width": 165.0,
+                                      "height": 18.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "39:2353",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 4040.0,
+                              "y": 2508.0,
+                              "width": 58.0,
+                              "height": 12.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2354",
+                                "name": "small",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4075.01611328125,
+                                  "y": 2508.0,
+                                  "width": 22.983999252319336,
+                                  "height": 12.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2355",
+                                    "name": "18:52",
+                                    "type": "TEXT",
+                                    "characters": "18:52",
+                                    "absoluteBoundingBox": {
+                                      "x": 4075.008056640625,
+                                      "y": 2508.0,
+                                      "width": 23.0,
+                                      "height": 12.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "39:2356",
+                        "name": "Conversation options · Ocean in my headphones",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 4106.0,
+                          "y": 2499.0,
+                          "width": 28.0,
+                          "height": 32.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2357",
+                            "name": "•••",
+                            "type": "TEXT",
+                            "characters": "•••",
+                            "absoluteBoundingBox": {
+                              "x": 4115.0,
+                              "y": 2508.5,
+                              "width": 10.0,
+                              "height": 13.0
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "39:2358",
+                    "name": "div",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2556.0,
+                      "width": 327.0,
+                      "height": 84.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2359",
+                        "name": "button",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 3799.0,
+                          "y": 2556.0,
+                          "width": 327.0,
+                          "height": 84.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2360",
+                            "name": "img",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3799.0,
+                              "y": 2574.0,
+                              "width": 48.0,
+                              "height": 48.0
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": "39:2361",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 3861.0,
+                              "y": 2575.5,
+                              "width": 165.0,
+                              "height": 45.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2362",
+                                "name": "strong",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2575.5,
+                                  "width": 165.0,
+                                  "height": 21.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2363",
+                                    "name": "Seaside moments",
+                                    "type": "TEXT",
+                                    "characters": "Seaside moments ",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2577.0,
+                                      "width": 118.0,
+                                      "height": 21.0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "39:2364",
+                                "name": "span",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 3861.0,
+                                  "y": 2602.5,
+                                  "width": 165.0,
+                                  "height": 18.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2365",
+                                    "name": "Some songs feel like little letters. What have you been listening to?",
+                                    "type": "TEXT",
+                                    "characters": "Some songs feel like little letters. What have you been listening to?",
+                                    "absoluteBoundingBox": {
+                                      "x": 3861.0,
+                                      "y": 2602.5,
+                                      "width": 165.0,
+                                      "height": 18.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "39:2366",
+                            "name": "span",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 4040.0,
+                              "y": 2592.0,
+                              "width": 58.0,
+                              "height": 12.0
+                            },
+                            "children": [
+                              {
+                                "id": "39:2367",
+                                "name": "small",
+                                "type": "FRAME",
+                                "absoluteBoundingBox": {
+                                  "x": 4074.73388671875,
+                                  "y": 2592.0,
+                                  "width": 23.266000747680664,
+                                  "height": 12.0
+                                },
+                                "children": [
+                                  {
+                                    "id": "39:2368",
+                                    "name": "18:42",
+                                    "type": "TEXT",
+                                    "characters": "18:42",
+                                    "absoluteBoundingBox": {
+                                      "x": 4074.366943359375,
+                                      "y": 2592.0,
+                                      "width": 24.0,
+                                      "height": 12.0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "39:2369",
+                        "name": "Conversation options · Seaside moments",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 4106.0,
+                          "y": 2583.0,
+                          "width": 28.0,
+                          "height": 32.0
+                        },
+                        "children": [
+                          {
+                            "id": "39:2370",
+                            "name": "•••",
+                            "type": "TEXT",
+                            "characters": "•••",
+                            "absoluteBoundingBox": {
+                              "x": 4115.0,
+                              "y": 2592.5,
+                              "width": 10.0,
+                              "height": 13.0
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "39:2371",
+                "name": "p",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3799.0,
+                  "y": 2855.0,
+                  "width": 327.0,
+                  "height": 17.0
+                },
+                "children": [
+                  {
+                    "id": "39:2372",
+                    "name": "Sample conversations · Stored on this device",
+                    "type": "TEXT",
+                    "characters": "Sample conversations · Stored on this device",
+                    "absoluteBoundingBox": {
+                      "x": 3863.5,
+                      "y": 2857.5,
+                      "width": 198.0,
+                      "height": 17.0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "39:2373",
+            "name": "header",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3775.0,
+              "y": 2228.0,
+              "width": 375.0,
+              "height": 64.0
+            },
+            "children": [
+              {
+                "id": "39:2374",
+                "name": "h1",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3799.0,
+                  "y": 2259.0,
+                  "width": 1.0,
+                  "height": 1.0
+                },
+                "children": [
+                  {
+                    "id": "39:2375",
+                    "name": "Inbox",
+                    "type": "TEXT",
+                    "characters": "Inbox",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2260.5,
+                      "width": 1.0,
+                      "height": 120.0
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "39:2376",
+                "name": "div",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3799.0,
+                  "y": 2237.5,
+                  "width": 184.28900146484375,
+                  "height": 44.0
+                },
+                "children": [
+                  {
+                    "id": "39:2377",
+                    "name": "tab-messages",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3799.0,
+                      "y": 2237.5,
+                      "width": 102.0,
+                      "height": 44.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2378",
+                        "name": "Messages",
+                        "type": "TEXT",
+                        "characters": "Messages",
+                        "absoluteBoundingBox": {
+                          "x": 3799.0,
+                          "y": 2245.5,
+                          "width": 102.0,
+                          "height": 28.0
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "39:2379",
+                    "name": "tab-friends",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 3919.741943359375,
+                      "y": 2237.5,
+                      "width": 63.547000885009766,
+                      "height": 44.0
+                    },
+                    "children": [
+                      {
+                        "id": "39:2380",
+                        "name": "Friends",
+                        "type": "TEXT",
+                        "characters": "Friends",
+                        "absoluteBoundingBox": {
+                          "x": 3919.515380859375,
+                          "y": 2248.0,
+                          "width": 64.0,
+                          "height": 28.0
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "39:2381",
+                "name": "inbox-menu",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 4090.0,
+                  "y": 2239.5,
+                  "width": 36.0,
+                  "height": 40.0
+                },
+                "children": [
+                  {
+                    "id": "39:2382",
+                    "name": "i",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 4097.5,
+                      "y": 2251.202880859375,
+                      "width": 21.0,
+                      "height": 2.194999933242798
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "39:2383",
+                    "name": "i",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 4097.5,
+                      "y": 2258.39794921875,
+                      "width": 21.0,
+                      "height": 2.194999933242798
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "39:2384",
+                    "name": "i",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 4097.5,
+                      "y": 2265.593994140625,
+                      "width": 21.0,
+                      "height": 2.194999933242798
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "39:2385",
+                    "name": "b",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 4115.0,
+                      "y": 2246.5,
+                      "width": 6.0,
+                      "height": 6.0
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "43:3928",
+        "name": "Main navigation",
+        "type": "INSTANCE",
+        "absoluteBoundingBox": {
+          "x": 3775.0,
+          "y": 2896.0,
+          "width": 375.0,
+          "height": 96.0
+        },
+        "children": [
+          {
+            "id": "I43:3928;43:1980",
+            "name": "home",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3827.25,
+              "y": 2921.5,
+              "width": 42.0,
+              "height": 42.0
+            },
+            "children": [
+              {
+                "id": "I43:3928;43:1981",
+                "name": "h2d-svg-use-0",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3827.25,
+                  "y": 2921.5,
+                  "width": 42.0,
+                  "height": 42.0
+                },
+                "children": [
+                  {
+                    "id": "I43:3928;43:1982",
+                    "name": "Group",
+                    "type": "GROUP",
+                    "absoluteBoundingBox": {
+                      "x": 3830.244873046875,
+                      "y": 2926.75,
+                      "width": 34.01180648803711,
+                      "height": 30.425737380981445
+                    },
+                    "children": [
+                      {
+                        "id": "I43:3928;43:1983",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 3832.9375,
+                          "y": 2926.75,
+                          "width": 5.6875,
+                          "height": 5.25
+                        }
+                      },
+                      {
+                        "id": "I43:3928;43:1984",
+                        "name": "Group",
+                        "type": "GROUP",
+                        "absoluteBoundingBox": {
+                          "x": 3830.244873046875,
+                          "y": 2927.881521899253,
+                          "width": 34.01180543191731,
+                          "height": 29.294110294431448
+                        },
+                        "children": [
+                          {
+                            "id": "I43:3928;43:1985",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 3832.24609375,
+                              "y": 2937.296072680503,
+                              "width": 32.01065546274185,
+                              "height": 19.879439394921064
+                            }
+                          },
+                          {
+                            "id": "I43:3928;43:1986",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 3835.775634765625,
+                              "y": 2929.057196573139,
+                              "width": 21.267437892698126,
+                              "height": 19.02601616385482
+                            }
+                          },
+                          {
+                            "id": "I43:3928;43:1987",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 3841.279541015625,
+                              "y": 2934.5689020026475,
+                              "width": 4.697818139609808,
+                              "height": 2.8781357661646325
+                            }
+                          },
+                          {
+                            "id": "I43:3928;43:1988",
+                            "name": "Group",
+                            "type": "GROUP",
+                            "absoluteBoundingBox": {
+                              "x": 3838.849609375,
+                              "y": 2944.910549291669,
+                              "width": 19.713318869584782,
+                              "height": 8.930016432742377
+                            },
+                            "children": [
+                              {
+                                "id": "I43:3928;43:1989",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "absoluteBoundingBox": {
+                                  "x": 3838.849609375,
+                                  "y": 2948.3670813540284,
+                                  "width": 2.9058445202490475,
+                                  "height": 2.9058445202495022
+                                }
+                              },
+                              {
+                                "id": "I43:3928;43:1990",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "absoluteBoundingBox": {
+                                  "x": 3847.526123046875,
+                                  "y": 2949.2064368227784,
+                                  "width": 2.9058448672390114,
+                                  "height": 2.905846152709273
+                                }
+                              },
+                              {
+                                "id": "I43:3928;43:1991",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "absoluteBoundingBox": {
+                                  "x": 3855.111328125,
+                                  "y": 2944.9105376912985,
+                                  "width": 2.905847785169044,
+                                  "height": 2.90584521422943
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "I43:3928;43:1992",
+            "name": "inbox",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3941.5,
+              "y": 2921.5,
+              "width": 42.0,
+              "height": 42.0
+            },
+            "children": [
+              {
+                "id": "I43:3928;43:1993",
+                "name": "h2d-svg-use-0",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 3941.5,
+                  "y": 2921.5,
+                  "width": 42.0,
+                  "height": 42.0
+                },
+                "children": [
+                  {
+                    "id": "I43:3928;43:1994",
+                    "name": "Group",
+                    "type": "GROUP",
+                    "absoluteBoundingBox": {
+                      "x": 3947.974609375,
+                      "y": 2928.871826171875,
+                      "width": 29.034568786621094,
+                      "height": 27.256250381469727
+                    },
+                    "children": [
+                      {
+                        "id": "I43:3928;43:1995",
+                        "name": "Group",
+                        "type": "GROUP",
+                        "absoluteBoundingBox": {
+                          "x": 3947.974609375,
+                          "y": 2928.871826171875,
+                          "width": 29.034568786621094,
+                          "height": 27.256250381469727
+                        },
+                        "children": [
+                          {
+                            "id": "I43:3928;43:1996",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 3947.974609375,
+                              "y": 2928.871826171875,
+                              "width": 29.034568786621094,
+                              "height": 27.256250381469727
+                            }
+                          },
+                          {
+                            "id": "I43:3928;43:1997",
+                            "name": "Group",
+                            "type": "GROUP",
+                            "absoluteBoundingBox": {
+                              "x": 3957.22900390625,
+                              "y": 2937.43798828125,
+                              "width": 11.447625160217285,
+                              "height": 5.451250076293945
+                            },
+                            "children": [
+                              {
+                                "id": "I43:3928;43:1998",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "absoluteBoundingBox": {
+                                  "x": 3957.22900390625,
+                                  "y": 2937.43798828125,
+                                  "width": 2.881375551223755,
+                                  "height": 5.451250076293945
+                                }
+                              },
+                              {
+                                "id": "I43:3928;43:1999",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "absoluteBoundingBox": {
+                                  "x": 3965.795166015625,
+                                  "y": 2937.43798828125,
+                                  "width": 2.881375551223755,
+                                  "height": 5.451250076293945
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "id": "I43:3928;43:2000",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 3958.08544921875,
+                              "y": 2946.00439453125,
+                              "width": 11.058250427246094,
+                              "height": 2.465794563293457
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "I43:3928;43:2001",
+            "name": "profile",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 4055.75,
+              "y": 2921.5,
+              "width": 42.0,
+              "height": 42.0
+            },
+            "children": [
+              {
+                "id": "I43:3928;43:2002",
+                "name": "h2d-svg-use-0",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 4055.75,
+                  "y": 2921.5,
+                  "width": 42.0,
+                  "height": 42.0
+                },
+                "children": [
+                  {
+                    "id": "I43:3928;43:2003",
+                    "name": "Group",
+                    "type": "GROUP",
+                    "absoluteBoundingBox": {
+                      "x": 4061.4375,
+                      "y": 2925.875,
+                      "width": 29.83749771118164,
+                      "height": 31.14999771118164
+                    },
+                    "children": [
+                      {
+                        "id": "I43:3928;43:2004",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 4061.4375,
+                          "y": 2925.875,
+                          "width": 4.8125,
+                          "height": 6.5625
+                        }
+                      },
+                      {
+                        "id": "I43:3928;43:2005",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 4062.22509765625,
+                          "y": 2927.97509765625,
+                          "width": 29.049997329711914,
+                          "height": 29.049997329711914
+                        }
+                      },
+                      {
+                        "id": "I43:3928;43:2006",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 4064.675048828125,
+                          "y": 2938.125,
+                          "width": 24.14999771118164,
+                          "height": 0.0
+                        }
+                      },
+                      {
+                        "id": "I43:3928;43:2007",
+                        "name": "Group",
+                        "type": "GROUP",
+                        "absoluteBoundingBox": {
+                          "x": 4066.6875,
+                          "y": 2937.512451171875,
+                          "width": 20.125,
+                          "height": 6.912501335144043
+                        },
+                        "children": [
+                          {
+                            "id": "I43:3928;43:2008",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 4066.6875,
+                              "y": 2937.512451171875,
+                              "width": 8.75,
+                              "height": 6.912501335144043
+                            }
+                          },
+                          {
+                            "id": "I43:3928;43:2009",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "absoluteBoundingBox": {
+                              "x": 4078.0625,
+                              "y": 2937.512451171875,
+                              "width": 8.75,
+                              "height": 6.912501335144043
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "I43:3928;43:2010",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 4072.375,
+                          "y": 2939.0,
+                          "width": 8.75,
+                          "height": 11.046874046325684
+                        }
+                      },
+                      {
+                        "id": "I43:3928;43:2011",
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 4069.3125,
+                          "y": 2939.612548828125,
+                          "width": 1.9250006675720215,
+                          "height": 0.0
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "39:2423",
+        "name": "toast",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 3803.0,
+          "y": 2826.5,
+          "width": 319.0,
+          "height": 40.5
+        },
+        "children": [
+          {
+            "id": "39:2424",
+            "name": "Your letter is saved. Let kindness find its way.",
+            "type": "TEXT",
+            "characters": "Your letter is saved. Let kindness find its way.",
+            "absoluteBoundingBox": {
+              "x": 3841.5,
+              "y": 2837.75,
+              "width": 242.0,
+              "height": 18.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "39:2425",
+        "name": "div",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 3775.0,
+          "y": 2180.0,
+          "width": 375.0,
+          "height": 57.827999114990234
+        },
+        "children": [
+          {
+            "id": "39:2426",
+            "name": "Image / status-bar-dark.svg",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3775.0,
+              "y": 2180.0,
+              "width": 375.0,
+              "height": 57.827999114990234
+            },
+            "children": [
+              {
+                "id": "39:2427",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4124.1083984375,
+                  "y": 2207.981201171875,
+                  "width": 1.8656716346740723,
+                  "height": 4.663548469543457
+                }
+              },
+              {
+                "id": "39:2428",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4098.61083984375,
+                  "y": 2203.939697265625,
+                  "width": 24.564645767211914,
+                  "height": 12.747026443481445
+                }
+              },
+              {
+                "id": "39:2429",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4073.11376953125,
+                  "y": 2203.62890625,
+                  "width": 18.034515380859375,
+                  "height": 13.36852741241455
+                }
+              },
+              {
+                "id": "39:2430",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4062.5419921875,
+                  "y": 2204.561279296875,
+                  "width": 3.1091418266296387,
+                  "height": 12.747343063354492
+                }
+              },
+              {
+                "id": "39:2431",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4057.25927734375,
+                  "y": 2207.04833984375,
+                  "width": 3.1091418266296387,
+                  "height": 10.259806632995605
+                }
+              },
+              {
+                "id": "39:2432",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4051.9765625,
+                  "y": 2209.224365234375,
+                  "width": 3.1091418266296387,
+                  "height": 8.083794593811035
+                }
+              },
+              {
+                "id": "39:2433",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 4046.694091796875,
+                  "y": 2211.4013671875,
+                  "width": 3.1091418266296387,
+                  "height": 5.906850337982178
+                }
+              },
+              {
+                "id": "39:2434",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 3904.19775390625,
+                  "y": 2193.057861328125,
+                  "width": 116.60447692871094,
+                  "height": 34.510257720947266
+                }
+              },
+              {
+                "id": "39:2435",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 3821.92333984375,
+                  "y": 2204.00830078125,
+                  "width": 31.0285587310791,
+                  "height": 12.18457317352295
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "39:2436",
+        "name": "div",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 3890.5,
+          "y": 2972.0,
+          "width": 144.0,
+          "height": 20.0
+        },
+        "children": [
+          {
+            "id": "39:2437",
+            "name": "Image / home-indicator-dark.svg",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 3890.5,
+              "y": 2972.0,
+              "width": 144.0,
+              "height": 20.0
+            },
+            "children": [
+              {
+                "id": "39:2438",
+                "name": "Vector",
+                "type": "VECTOR",
+                "absoluteBoundingBox": {
+                  "x": 3890.5,
+                  "y": 2979.0,
+                  "width": 144.0,
+                  "height": 5.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "46:2331",
+        "name": "→ home",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 3803.25,
+          "y": 2913.0,
+          "width": 90.0,
+          "height": 59.0
+        }
+      },
+      {
+        "id": "46:2333",
+        "name": "→ inbox",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 3917.5,
+          "y": 2913.0,
+          "width": 90.0,
+          "height": 59.0
+        }
+      },
+      {
+        "id": "46:2335",
+        "name": "→ profile",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4031.75,
+          "y": 2913.0,
+          "width": 90.0,
+          "height": 59.0
+        }
+      },
+      {
+        "id": "46:2337",
+        "name": "→ tab-messages",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 3799.0,
+          "y": 2237.5,
+          "width": 100.73999786376953,
+          "height": 44.0
+        }
+      },
+      {
+        "id": "46:2339",
+        "name": "→ tab-friends",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 3919.739990234375,
+          "y": 2237.5,
+          "width": 63.54999923706055,
+          "height": 44.0
+        }
+      },
+      {
+        "id": "46:2341",
+        "name": "→ inbox-menu",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4090.0,
+          "y": 2239.5,
+          "width": 36.0,
+          "height": 40.0
+        }
+      },
+      {
+        "id": "46:2343",
+        "name": "→ Conversation options · Your sent letter",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4106.0,
+          "y": 2331.0,
+          "width": 28.0,
+          "height": 32.0
+        }
+      },
+      {
+        "id": "46:2345",
+        "name": "→ Conversation options · A cup of tea",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4106.0,
+          "y": 2415.0,
+          "width": 28.0,
+          "height": 32.0
+        }
+      },
+      {
+        "id": "46:2347",
+        "name": "→ Conversation options · Ocean in my headphones",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4106.0,
+          "y": 2499.0,
+          "width": 28.0,
+          "height": 32.0
+        }
+      },
+      {
+        "id": "46:2349",
+        "name": "→ Conversation options · Seaside moments",
+        "type": "RECTANGLE",
+        "absoluteBoundingBox": {
+          "x": 4106.0,
+          "y": 2583.0,
+          "width": 28.0,
+          "height": 32.0
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,546 @@
+{
+  "fixture": true,
+  "steps": [
+    {
+      "step": "letter-open",
+      "time": "2026-11-14T10:43:47.010Z"
+    },
+    {
+      "step": "letter-typed",
+      "time": "2026-11-14T10:43:47.931Z"
+    },
+    {
+      "step": "letter-safety",
+      "time": "2026-11-14T10:43:48.799Z"
+    },
+    {
+      "step": "block-confirmation",
+      "time": "2026-11-14T10:43:49.569Z"
+    },
+    {
+      "step": "block-failure",
+      "time": "2026-11-14T10:43:50.347Z"
+    },
+    {
+      "step": "letter-report",
+      "time": "2026-11-14T10:43:51.133Z"
+    },
+    {
+      "step": "report-failure",
+      "time": "2026-11-14T10:43:51.914Z"
+    },
+    {
+      "step": "letter-waiting",
+      "time": "2026-11-14T10:43:53.513Z"
+    },
+    {
+      "step": "letter-replied",
+      "time": "2026-11-14T10:43:54.313Z"
+    },
+    {
+      "step": "compose-empty",
+      "time": "2026-11-14T10:43:55.877Z"
+    },
+    {
+      "step": "compose-draft",
+      "time": "2026-11-14T10:43:56.614Z"
+    },
+    {
+      "step": "compose-invalid",
+      "time": "2026-11-14T10:43:57.327Z"
+    },
+    {
+      "step": "compose-text-scroll",
+      "time": "2026-11-14T10:43:58.138Z"
+    },
+    {
+      "step": "compose-failure",
+      "time": "2026-11-14T10:43:58.912Z"
+    },
+    {
+      "step": "draft-restored",
+      "time": "2026-11-14T10:44:00.480Z"
+    },
+    {
+      "step": "compose-sent",
+      "time": "2026-11-14T10:44:03.474Z"
+    },
+    {
+      "step": "blocked-home",
+      "time": "2026-11-14T10:44:07.945Z"
+    }
+  ],
+  "records": [
+    {
+      "state": "letter-open",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "0 / 200",
+          "clipped": false
+        },
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-typed",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-safety",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-report",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-waiting",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "That small moment made me smile.",
+          "clipped": false
+        },
+        {
+          "text": "신고를 접수했어요. MauGo의 안전에 도움을 주셔서 감사해요.",
+          "clipped": false
+        },
+        {
+          "text": "✧ 답장을 보냈어요. 상대의 답장을 기다리고 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "답장을 기다리는 중",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-replied",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "당신에게 온 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "작은 여행자에게,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "That small moment made me smile.",
+          "clipped": false
+        },
+        {
+          "text": "신고를 접수했어요. MauGo의 안전에 도움을 주셔서 감사해요.",
+          "clipped": false
+        },
+        {
+          "text": "✧ 당신의 작은 인사에 답장이 왔어요.",
+          "clipped": false
+        },
+        {
+          "text": "답장 도착 · 새 소식 확인",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-empty",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "새 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "먼저 작은 인사를 써 주세요.",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "날려 보내기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-draft",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "새 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "일반 텍스트 · 최대 200자 · 한 줄",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "날려 보내기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-invalid",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "작은 이야기를 나눠 보세요",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "새 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지는 한 줄로 작성하세요.",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "날려 보내기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-sent",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "내가 보낸 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "답장을 기다리고 있어요. 답장이 오면 채팅이 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "홈으로 돌아가기",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "conversationScroll": {
+    "top": 700,
+    "height": 345,
+    "content": 1223
+  },
+  "textareaScroll": {
+    "top": 1496,
+    "height": 321,
+    "content": 1830
+  },
+  "opening": {
+    "duration": "0s",
+    "animation": "none"
+  },
+  "flightMs": 1515.8999999910593,
+  "timing": [
+    {
+      "phase": "sending",
+      "time": 15192.70000000298
+    },
+    {
+      "phase": null,
+      "time": 16708.59999999404
+    }
+  ],
+  "scroll": {
+    "height": 812,
+    "viewport": 812,
+    "y": 0
+  },
+  "errors": []
+}

@@ -1,0 +1,546 @@
+{
+  "fixture": true,
+  "steps": [
+    {
+      "step": "letter-open",
+      "time": "2026-11-14T10:43:24.174Z"
+    },
+    {
+      "step": "letter-typed",
+      "time": "2026-11-14T10:43:25.076Z"
+    },
+    {
+      "step": "letter-safety",
+      "time": "2026-11-14T10:43:25.936Z"
+    },
+    {
+      "step": "block-confirmation",
+      "time": "2026-11-14T10:43:26.703Z"
+    },
+    {
+      "step": "block-failure",
+      "time": "2026-11-14T10:43:27.486Z"
+    },
+    {
+      "step": "letter-report",
+      "time": "2026-11-14T10:43:28.284Z"
+    },
+    {
+      "step": "report-failure",
+      "time": "2026-11-14T10:43:29.062Z"
+    },
+    {
+      "step": "letter-waiting",
+      "time": "2026-11-14T10:43:30.662Z"
+    },
+    {
+      "step": "letter-replied",
+      "time": "2026-11-14T10:43:31.461Z"
+    },
+    {
+      "step": "compose-empty",
+      "time": "2026-11-14T10:43:33.025Z"
+    },
+    {
+      "step": "compose-draft",
+      "time": "2026-11-14T10:43:33.746Z"
+    },
+    {
+      "step": "compose-invalid",
+      "time": "2026-11-14T10:43:34.461Z"
+    },
+    {
+      "step": "compose-text-scroll",
+      "time": "2026-11-14T10:43:35.270Z"
+    },
+    {
+      "step": "compose-failure",
+      "time": "2026-11-14T10:43:36.045Z"
+    },
+    {
+      "step": "draft-restored",
+      "time": "2026-11-14T10:43:37.614Z"
+    },
+    {
+      "step": "compose-sent",
+      "time": "2026-11-14T10:43:40.608Z"
+    },
+    {
+      "step": "blocked-home",
+      "time": "2026-11-14T10:43:45.062Z"
+    }
+  ],
+  "records": [
+    {
+      "state": "letter-open",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "0 / 200",
+          "clipped": false
+        },
+        {
+          "text": "Share a little story",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-typed",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "Share a little story",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-safety",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "Share a little story",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-report",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "➤",
+          "clipped": false
+        },
+        {
+          "text": "32 / 200",
+          "clipped": false
+        },
+        {
+          "text": "Share a little story",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-waiting",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "That small moment made me smile.",
+          "clipped": false
+        },
+        {
+          "text": "Report received. Thank you for helping keep MauGo safe.",
+          "clipped": false
+        },
+        {
+          "text": "✧ Your reply is on its way. Waiting for their reply.",
+          "clipped": false
+        },
+        {
+          "text": "Waiting for their reply",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "letter-replied",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "A letter for you",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "⚑",
+          "clipped": false
+        },
+        {
+          "text": "Dear little wanderer,",
+          "clipped": false
+        },
+        {
+          "text": "A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. A little story. The world felt gentle again. ",
+          "clipped": false
+        },
+        {
+          "text": "— Little bird 0",
+          "clipped": false
+        },
+        {
+          "text": "That small moment made me smile.",
+          "clipped": false
+        },
+        {
+          "text": "Report received. Thank you for helping keep MauGo safe.",
+          "clipped": false
+        },
+        {
+          "text": "✧ They replied to your little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Reply received · Check for updates",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-empty",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "Share a little story",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Change bird",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Write a little hello first.",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        },
+        {
+          "text": "Let it fly",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-draft",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "Share a little story",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Change bird",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Plain text · up to 200 characters · a single line",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        },
+        {
+          "text": "Let it fly",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-invalid",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "Share a little story",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Change bird",
+          "clipped": false
+        },
+        {
+          "text": "One opening message. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "One opening message, on a single line.",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        },
+        {
+          "text": "Let it fly",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "compose-sent",
+      "document": {
+        "height": 812,
+        "viewport": 812,
+        "y": 0
+      },
+      "copy": [
+        {
+          "text": "Your sent letter",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Waiting for their reply. Chat starts when they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Back to home",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "conversationScroll": {
+    "top": 700,
+    "height": 345,
+    "content": 1245
+  },
+  "textareaScroll": {
+    "top": 1495,
+    "height": 321,
+    "content": 1830
+  },
+  "opening": {
+    "duration": "0s",
+    "animation": "none"
+  },
+  "flightMs": 1515.7000000029802,
+  "timing": [
+    {
+      "phase": "sending",
+      "time": 15126.70000000298
+    },
+    {
+      "phase": null,
+      "time": 16642.40000000596
+    }
+  ],
+  "scroll": {
+    "height": 812,
+    "viewport": 812,
+    "y": 0
+  },
+  "errors": []
+}

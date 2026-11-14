@@ -1,0 +1,120 @@
+[WebServer] (node:50030) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:50032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en letter-open
+667 en letter-typed
+667 en letter-safety
+667 en block-confirmation
+667 en block-failure
+667 en letter-report
+667 en report-failure
+667 en letter-waiting
+667 en letter-replied
+667 en compose-empty
+667 en compose-draft
+667 en compose-invalid
+667 en compose-text-scroll
+667 en compose-failure
+667 en draft-restored
+667 en compose-sent
+667 en blocked-home
+  ✓  1 tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (22.4s)
+667 ko letter-open
+667 ko letter-typed
+667 ko letter-safety
+667 ko block-confirmation
+667 ko block-failure
+667 ko letter-report
+667 ko report-failure
+667 ko letter-waiting
+667 ko letter-replied
+667 ko compose-empty
+667 ko compose-draft
+667 ko compose-invalid
+667 ko compose-text-scroll
+667 ko compose-failure
+667 ko draft-restored
+667 ko compose-sent
+667 ko blocked-home
+  ✓  2 tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (22.4s)
+812 en letter-open
+812 en letter-typed
+812 en letter-safety
+812 en block-confirmation
+812 en block-failure
+812 en letter-report
+812 en report-failure
+812 en letter-waiting
+812 en letter-replied
+812 en compose-empty
+812 en compose-draft
+812 en compose-invalid
+812 en compose-text-scroll
+812 en compose-failure
+812 en draft-restored
+812 en compose-sent
+812 en blocked-home
+  ✓  3 tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (22.3s)
+812 ko letter-open
+812 ko letter-typed
+812 ko letter-safety
+812 ko block-confirmation
+812 ko block-failure
+812 ko letter-report
+812 ko report-failure
+812 ko letter-waiting
+812 ko letter-replied
+812 ko compose-empty
+812 ko compose-draft
+812 ko compose-invalid
+812 ko compose-text-scroll
+812 ko compose-failure
+812 ko draft-restored
+812 ko compose-sent
+  ✘  4 tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (32.7s)
+
+
+  1) tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for locator('#safety-block')
+        - locator resolved to <button id="safety-block" class="safety-option">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is not stable
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      62 |  await page.getByRole('button',{name:t('Back to home'),exact:true}).click();await expect(panel).toHaveCount(0)
+      63 |  await page.locator('.response-capsule').first().click();await expect(panel).toBeVisible();await page.locator('#report-note').click();await page.keyboard.press('Escape');await expect(page.locator('.letter-safety')).toHaveCount(0);await expect(panel).toBeVisible();await page.keyboard.press('Escape');await expect(panel).toHaveCount(0)
+    > 64 |  await page.locator('.response-capsule').first().click();await page.locator('#report-note').click();await page.locator('#safety-block').click();blockFail=false;await page.locator('.letter-safety').getByRole('button',{name:t('Block'),exact:true}).click();await expect(panel).toHaveCount(0);await shot('blocked-home')
+         |                                                                                                                                         ^
+      65 |  await page.mouse.wheel(0,700);const scroll=await page.evaluate(()=>({height:document.documentElement.scrollHeight,viewport:innerHeight,y:scrollY}));expect(scroll.height).toBe(height);expect(scroll.y).toBe(0)
+      66 |  for(const r of records){expect(r.document.height).toBe(height);expect(r.document.y).toBe(0)}
+      67 |  expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:64:137
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ────────────────────────
+  3 passed (1.7m)

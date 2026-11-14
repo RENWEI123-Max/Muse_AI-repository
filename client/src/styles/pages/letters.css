@@ -103,3 +103,24 @@
  .letters-flow:has(.is-sending) #publish{animation-duration:.01ms}
  .letters-flow:is(.letter-overlay-enter-active,.letter-overlay-leave-active) .letters-panel{transition-duration:.01ms}
 }
+
+/* R08 audit: only transient presentation and short viewport scroll allocation. */
+.letters-flow .letter-conversation,.letters-flow .compose-text,.letters-flow .letter-safety{overscroll-behavior:contain}
+.letters-flow .letter-safety{overflow-y:auto}
+.letters-flow.is-flying .letters-panel{visibility:hidden;pointer-events:none}
+.letters-flow .letter-send-flight{position:absolute;left:0;top:0;width:132px;height:132px;background-size:792px 132px;pointer-events:none;z-index:41}
+.letters-flow :is(#report-note,#reply-send,.change-bird,.write-opening,.safety-option):active{transform:scale(.96)}
+@media(max-height:740px){
+ .letters-flow{--r08-compact:max(0px,calc(760px - 100dvh))}
+ .letters-flow .letters-panel{height:calc(560px - var(--r08-compact))}
+ .letters-flow .composer-panel{height:calc(496px - var(--r08-compact))}
+ .letters-flow .letter-conversation{height:calc(345px - var(--r08-compact))}
+ .letters-flow .letter-reply-area,.letters-flow .reply-rule{top:calc(461px - var(--r08-compact))}
+ .letters-flow .compose-text{height:calc(321px - var(--r08-compact))}
+ .letters-flow .letter-count{top:calc(433px - var(--r08-compact))}
+ .letters-flow .opening-rule{top:calc(477px - var(--r08-compact))}
+ .letters-flow .compose-actions{top:calc(512px - var(--r08-compact))}
+ .letters-flow .letter-validation{top:calc(570px - var(--r08-compact))}
+ .letters-flow .letter-safety{max-height:calc(100% - 140px)}
+ .letters-flow .letter-safety.is-report{top:auto;bottom:24px}
+}
