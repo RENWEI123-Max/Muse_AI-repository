@@ -1,0 +1,42 @@
+@import "../../ProfileFlow.legacy-1.css";
+/* R16: 375 × 812; local JSON version 2421258509127695554. */
+.person-page{position:absolute;inset:0;z-index:30;background:var(--bg-page);color:var(--text-primary);font:var(--font-body);padding:0;display:block}
+.person-page .person-header{position:absolute;left:0;top:48px;width:375px;height:64px;background:var(--bg-page)}
+.person-page #page-back{position:absolute;left:16px;top:12px}
+.person-page #public-more{position:absolute;left:319px;top:12px}
+.person-page .d4-body{position:absolute;left:0;top:112px;width:375px;height:calc(100% - 140px);padding:4px 24px 100px;overflow:auto;scrollbar-width:none}
+.person-page .person-hero{padding:18px 0 30px;text-align:center}
+.person-page .person-hero:not(:has(.person-meta)){padding-bottom:39px}
+.person-page #public-avatar{display:block;margin:0 auto 16px}
+.person-page .person-name{height:28px;margin:0;font:var(--person-font-name);letter-spacing:var(--font-title-page-letter-spacing);overflow-wrap:anywhere}
+.person-page .person-gender{display:inline-block;margin-left:8px;font:var(--person-font-gender);color:var(--person-paint-10)}
+.person-page .person-gender-male{color:var(--person-paint-21)}
+.person-page .person-meta{margin:9px 0 0;font:var(--person-font-meta);color:var(--person-paint-11)}
+.person-page .person-bio{margin:12px 0 0;font:var(--person-font-meta);color:var(--person-paint-11);overflow-wrap:anywhere}
+.person-page .person-cards{display:flex;gap:12px;height:190px;overflow:auto;scrollbar-width:none}
+.person-page .person-moments-title{margin:26px 0 0;font:var(--person-font-section);letter-spacing:var(--font-title-page-letter-spacing)}
+.person-page .person-moment{margin:0;padding:36.5px 0 13px;border-bottom:1px solid var(--hairline)}
+.person-page .person-moment-text{margin:9px 0 14px;font:var(--person-font-moment);overflow-wrap:anywhere}
+.person-page .person-empty{margin:40px 0 0;text-align:center;font:var(--person-font-empty);color:var(--person-paint-22)}
+.person-page .person-unlock{margin:18px 0 0;text-align:center;font:var(--person-font-unlock);color:var(--person-paint-16)}
+.person-page .person-actions{position:absolute;left:0;bottom:26px;width:375px;height:74px;padding:18px 24px 8px;display:flex;gap:12px;background:var(--person-actions-gradient);z-index:2}
+.person-page #public-follow{width:171.5px;flex:none}
+.person-page #public-chat{width:143.5px;flex:none}
+.person-page .person-veil{position:absolute;inset:0;z-index:40;background:var(--scrim);backdrop-filter:none}
+.person-page .person-sheet{position:absolute;left:12px;bottom:24px;margin:0;width:351px;padding:0;max-height:calc(100% - 48px);overflow:auto}
+.person-page .person-photo-sheet{height:437.5px}
+.person-page .person-safety-sheet{height:298px}
+.person-page .person-sheet-title{position:absolute;left:20px;top:32px;width:309px;margin:0;text-align:center;font:var(--font-title-sheet-fixed);letter-spacing:var(--font-title-sheet-fixed-letter-spacing)}
+.person-page .person-close{position:absolute;right:8px;top:16px;z-index:2}
+.person-page .person-photo{position:absolute;left:20px;top:80px;width:309px;height:309px;object-fit:contain}
+.person-page .person-safety-description{position:absolute;left:20px;top:80px;width:309px;margin:0;font:var(--person-font-description);color:var(--reply-topup-description)}
+.person-page .person-safety-option{position:absolute;left:20px;width:309px;height:74px}
+.person-page #safety-report{top:116px}
+.person-page #safety-block{top:202px}
+.person-page .person-option-description{display:block;margin-top:4px;font:var(--font-caption);font-size:11px;line-height:18px;color:var(--person-paint-31)}
+.person-page .person-block-symbol{width:24px;flex:none;color:var(--person-paint-32);font:var(--font-symbol-chevron)}
+.person-page .d4-error{position:absolute;top:112px;z-index:3;color:var(--text-danger);font:var(--font-caption)}
+.person-page .d4-note{position:absolute;top:112px;color:var(--person-paint-16);font:var(--font-caption)}
+[lang=ko] .person-page{font-family:var(--font-family-ko)}
+[lang=ko] .person-page :is(h2,p,small,span){font-family:var(--font-family-ko)}
+@media(max-height:740px){.person-page .person-actions{bottom:12px}.person-page .person-sheet{bottom:12px}}

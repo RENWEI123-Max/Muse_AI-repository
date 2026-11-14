@@ -1,0 +1,204 @@
+{
+  "source": "isolated D4 fixture, not real-session acceptance",
+  "figma": "29:13254",
+  "actual": {
+    ".person-header": {
+      "box": {
+        "x": 0,
+        "y": 48,
+        "width": 375,
+        "height": 64
+      },
+      "style": {
+        "color": "rgb(228, 239, 217)",
+        "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "opacity": "1"
+      }
+    },
+    "#page-back": {
+      "box": {
+        "x": 16,
+        "y": 60,
+        "width": 40,
+        "height": 40
+      },
+      "style": {
+        "color": "rgb(224, 234, 218)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "20px",
+        "fontFamily": "Fredoka",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "24.2px",
+        "opacity": "1"
+      }
+    },
+    "#public-more": {
+      "box": {
+        "x": 319,
+        "y": 60,
+        "width": 40,
+        "height": 40
+      },
+      "style": {
+        "color": "rgb(224, 234, 218)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "20px",
+        "fontFamily": "Fredoka",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "24.2px",
+        "opacity": "1"
+      }
+    },
+    "#public-avatar": {
+      "box": {
+        "x": 141.5,
+        "y": 134,
+        "width": 92,
+        "height": 92
+      },
+      "style": {
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(33, 49, 38) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "46px",
+        "fontFamily": "Fredoka",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "opacity": "1"
+      }
+    },
+    ".person-name": {
+      "box": {
+        "x": 24,
+        "y": 242,
+        "width": 327,
+        "height": 28
+      },
+      "style": {
+        "color": "rgb(228, 239, 217)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "20px",
+        "fontWeight": "550",
+        "lineHeight": "28px",
+        "opacity": "1"
+      }
+    },
+    ".person-cards": {
+      "box": {
+        "x": 24,
+        "y": 327,
+        "width": 327,
+        "height": 190
+      },
+      "style": {
+        "color": "rgb(228, 239, 217)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "opacity": "1"
+      }
+    },
+    ".person-moments-title": {
+      "box": {
+        "x": 24,
+        "y": 543,
+        "width": 327,
+        "height": 17
+      },
+      "style": {
+        "color": "rgb(228, 239, 217)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "14px",
+        "fontWeight": "550",
+        "lineHeight": "17px",
+        "opacity": "1"
+      }
+    },
+    "#public-follow": {
+      "box": {
+        "x": 24,
+        "y": 730,
+        "width": 171.5,
+        "height": 48
+      },
+      "style": {
+        "color": "rgb(202, 228, 181)",
+        "background": "rgb(38, 49, 43) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "24px",
+        "fontFamily": "Fredoka",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22px",
+        "opacity": "0.5"
+      }
+    },
+    "#public-chat": {
+      "box": {
+        "x": 207.5,
+        "y": 730,
+        "width": 143.5,
+        "height": 48
+      },
+      "style": {
+        "color": "rgb(10, 20, 6)",
+        "background": "rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "24px",
+        "fontFamily": "Fredoka",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "22px",
+        "opacity": "1"
+      }
+    },
+    ".person-empty": {
+      "box": {
+        "x": 24,
+        "y": 600,
+        "width": 327,
+        "height": 21
+      },
+      "style": {
+        "color": "rgb(85, 115, 77)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "opacity": "1"
+      }
+    },
+    ".person-unlock": {
+      "box": {
+        "x": 24,
+        "y": 639,
+        "width": 327,
+        "height": 21
+      },
+      "style": {
+        "color": "rgb(127, 146, 132)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "borderRadius": "0px",
+        "fontFamily": "Fredoka",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "opacity": "1"
+      }
+    }
+  }
+}

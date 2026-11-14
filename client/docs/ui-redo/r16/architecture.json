@@ -1,0 +1,21 @@
+{
+  "hex": [
+    {
+      "file": "client/src/components/ChatFlow.vue",
+      "line": 23,
+      "text": "const bubbleFields=[['myBubble','My bubble','#aef879'],['myText','My text','#153011'],['theirBubble','Their bubble','#28362e'],['theirText','Their text','#e1e9dd']]"
+    },
+    {
+      "file": "client/src/components/ChatFlow.vue",
+      "line": 30,
+      "text": "const appearanceStyle=computed(()=>({'--my-bubble':appearance.value.myBubble||'#aef879','--my-text':appearance.value.myText||'#153011','--their-bubble':appearance.value.theirBubble||'#28362e','--their-text':appearance.value.theirText||'#e1e9dd',...(screen.value==='chat'&&appearance.value.wallpaperId?{backgroundImage:`linear-gradient(#07100b26,#07100b26),url(\"${asset('04-chat-backgrounds/'+appearance.value.wallpaperId)}\")`}:{})}))"
+    }
+  ],
+  "rgb-literal": [],
+  "person-important": 0,
+  "person-device-prefix": 0,
+  "old-public-only-selectors": [],
+  "script-unchanged": true,
+  "protected-flow-diff": [],
+  "note": "R17/R18 generic rules in old files explicitly exclude .person-page. They are retained to avoid changing own-profile and avatar editing."
+}

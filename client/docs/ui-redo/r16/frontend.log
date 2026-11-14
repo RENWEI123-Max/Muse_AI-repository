@@ -1,0 +1,47 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5296 --strictPort
+
+
+  VITE v7.3.8  ready in 511 ms
+
+  ➜  Local:   http://127.0.0.1:5296/
+6:52:14 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+6:52:15 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+      at transformStyle (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+      at TransformPluginContext.handler (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+      at EnvironmentPluginContainer.transform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async loadAndTransform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+6:52:49 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=1&src=true&lang.css
+6:52:49 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5296 --strictPort
+
+
+  VITE v7.3.8  ready in 598 ms
+
+  ➜  Local:   http://127.0.0.1:5296/
+6:53:14 AM [vite] http proxy error: /auth/login
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1638:16)
+6:55:54 AM [vite] (client) hmr update /src/styles/tokens.css
+6:55:54 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css
+6:59:31 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css
+6:59:31 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+6:59:49 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css
+6:59:49 AM [vite] (client) hmr update /src/styles/tokens.css
+6:59:49 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+7:00:09 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css
+7:01:35 AM [vite] (client) hmr update /src/styles/components.css
+7:01:35 AM [vite] (client) hmr update /src/styles/components.css
+7:01:35 AM [vite] (client) hmr update /src/styles/tokens.css
+7:02:25 AM [vite] (client) hmr update /src/styles/components.css
+7:06:58 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css
+7:09:29 AM [vite] (client) hmr update /src/styles/pages/person.css?vue&type=style&index=0&src=e838ed77&scoped=e838ed77&lang.css

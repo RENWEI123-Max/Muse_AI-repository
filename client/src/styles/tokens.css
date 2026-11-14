@@ -693,3 +693,62 @@
   --auth-font-address:400 13px/22px Fredoka;
  --auth-font-option:400 14px/16.940000534057617px Fredoka;
  }
+
+/* R16: exact local JSON solid paints, including hidden underlay paints. */
+:root{
+  /* #171C1C; 12 occurrences; node 29:12925. */
+  --person-paint-6: #171C1C;
+  /* #E0EADA; 12 occurrences; node 29:12932. */
+  --person-paint-8: #E0EADA;
+  /* #213126; 6 occurrences; node 29:12938. */
+  --person-paint-9: #213126;
+  /* #DD8ABB; 4 occurrences; node 29:12944. */
+  --person-paint-10: #DD8ABB;
+  /* #899D91; 5 occurrences; node 29:12946. */
+  --person-paint-11: #899D91;
+  /* #1E2A23; 14 occurrences; node 29:12948. */
+  --person-paint-12: #1E2A23;
+  /* rgb(6 17 11 / 0.667); 10 occurrences; node 29:12950. */
+  --person-paint-13: rgb(6 17 11 / 0.667);
+  /* #819387; 4 occurrences; node 29:12965. */
+  --person-paint-14: #819387;
+  /* #A9B8AE; 8 occurrences; node 29:12973. */
+  --person-paint-15: #A9B8AE;
+  /* #7F9284; 8 occurrences; node 29:12977. */
+  --person-paint-16: #7F9284;
+  /* #26312B; 6 occurrences; node 29:12979. */
+  --person-paint-17: #26312B;
+  /* rgb(0 0 0 / 0.001); 22 occurrences; node 46:3145. */
+  --person-paint-20: rgb(0 0 0 / 0.001);
+  /* #7BD3F2; 2 occurrences; node 29:13068. */
+  --person-paint-21: #7BD3F2;
+  /* #55734D; 2 occurrences; node 29:13080. */
+  --person-paint-22: #55734D;
+  /* #A7B5AA; 1 occurrences; node 29:13495. */
+  --person-paint-28: #A7B5AA;
+  /* #213025; 2 occurrences; node 29:13633. */
+  --person-paint-30: #213025;
+  /* #8FA582; 2 occurrences; node 29:13640. */
+  --person-paint-31: #8FA582;
+  /* #C89C8F; 1 occurrences; node 29:13643. */
+  --person-paint-32: #C89C8F;
+  --person-font-name: 550 20px/28px "Fredoka";
+  --person-font-meta: 400 12px/18px "Fredoka";
+  --person-font-moment: 400 14px/23px "Fredoka";
+  --person-font-empty: 400 11px/21px "Fredoka";
+  --person-radius-avatar: 46px;
+  --person-radius-card: 15px;
+}
+:root{
+  /* 29:12978; 6 occurrences; page fade, stops at 0 and .25. */
+  --person-actions-gradient: linear-gradient(180deg, rgb(13 23 19 / 0) 0%, #0D1713 25%);
+  --person-font-section: 550 14px/17px "Fredoka";
+  --person-font-unlock: 400 10px/21px "Fredoka";
+  --person-font-description: 400 12px/20px "Fredoka";
+}
+
+:root{
+  /* Arial import residue: 29:12944 / 13068 / 13175 / 13299 / 13408 / 13545. */
+  --person-font-gender: 400 19px/28px "Fredoka";
+}
+:root{--person-font-options: 400 20px/24.2px "Fredoka";}

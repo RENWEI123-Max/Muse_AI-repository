@@ -1,0 +1,13 @@
+
+Running 6 tests using 1 worker
+
+(node:1272276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r16-person.spec.ts:7:27 › R16 isolated person-profile geometry and computed styles (2.6s)
+  ✓  2 tests/r16-person.spec.ts:7:27 › R16 isolated person-waiting geometry and computed styles (1.8s)
+  ✓  3 tests/r16-person.spec.ts:7:27 › R16 isolated person-followed geometry and computed styles (1.7s)
+  ✓  4 tests/r16-person.spec.ts:7:27 › R16 isolated person-no-content geometry and computed styles (1.6s)
+  ✓  5 tests/r16-person.spec.ts:7:27 › R16 isolated person-photo geometry and computed styles (1.8s)
+  ✓  6 tests/r16-person.spec.ts:7:27 › R16 isolated person-safety geometry and computed styles (2.2s)
+
+  6 passed (13.4s)
