@@ -148,7 +148,6 @@
 .ui-profile-tabs [aria-pressed=true]{background:var(--appearance-tab-selected);color:var(--accent)}
 [lang=ko] :is(.ui-input--profile,.ui-profile-tabs button){font-family:var(--font-family-ko)}
 
-.ui-sheet--profile-avatar{width:100%;margin:0;padding:26px 22px 36px;background:var(--avatar-legacy-sheet);border:1px solid var(--avatar-legacy-sheet-border);border-radius:var(--avatar-legacy-sheet-radius);box-shadow:none}
 .ui-dialog--profile-likes{background:var(--grad-card)}
 
 .ui-icon-button--profile-header{width:40px;height:40px;border-radius:var(--radius-20);background:none}
@@ -157,9 +156,14 @@
 .ui-row--profile-visitor{height:72px;font:var(--profile-font-field)}
 
 /* Preserve pre-R18 sheet controls while relocating the old module. */
-.ui-sheet--profile-avatar h2{font:var(--avatar-legacy-font-title)}
-.ui-sheet--profile-avatar p{font:var(--avatar-legacy-font-copy);color:var(--avatar-legacy-2)}
-.ui-sheet--profile-avatar label{display:block;margin:16px 0;font:var(--avatar-legacy-font-label);color:var(--avatar-legacy-2)}
-.ui-sheet--profile-avatar .primary{margin-top:16px;border:0;border-radius:var(--radius-24)}
-.ui-sheet--profile-avatar .d4-row{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--avatar-legacy-row-border);padding:18px 4px;color:var(--avatar-legacy-row-text);background:none;font:var(--avatar-legacy-font-row)}
-.ui-sheet--profile-avatar .d4-close{padding:0;border:0;background:none;color:var(--avatar-legacy-2);font:var(--avatar-legacy-font-close)}
+/* R18 shared avatar sheet and button variants. */
+.ui-sheet--profile-avatar{position:absolute;left:12px;bottom:24px;width:351px;margin:0;padding:0;border:1px solid var(--avatar-border);border-radius:var(--radius-24);background:var(--avatar-surface);box-shadow:none}
+.ui-button--text{background:none;box-shadow:none;border:0;color:var(--avatar-muted);font:var(--avatar-font-copy)}
+.ui-avatar-range{appearance:none;background:none;padding:0;border:0}
+.ui-avatar-range::-webkit-slider-runnable-track{height:4px;margin:0 7px;background:var(--avatar-track);border-radius:var(--r07-radius-track)}
+.ui-avatar-range::-webkit-slider-thumb{appearance:none;width:16px;height:16px;margin-top:-6px;border:0;border-radius:var(--radius-full);background:var(--accent)}
+
+.ui-sheet--profile-avatar .ui-icon-button{width:44px;height:44px}
+.ui-sheet--profile-avatar .ui-sheet__grabber{background:var(--avatar-grabber)}
+
+.ui-dialog--avatar{background:var(--avatar-dialog-gradient)}

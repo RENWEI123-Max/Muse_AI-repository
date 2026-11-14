@@ -1,0 +1,25 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5173 --strictPort
+
+
+  VITE v7.3.8  ready in 448 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+8:05:11 AM [vite] (client) hmr update /src/styles/pages/profile.css?vue&type=style&index=1&src=e838ed77&scoped=e838ed77&lang.css
+8:05:11 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+8:07:32 AM [vite] (client) hmr update /src/styles/pages/profile.css?vue&type=style&index=1&src=e838ed77&scoped=e838ed77&lang.css
+8:07:32 AM [vite] (client) hmr update /src/styles/tokens.css
+8:07:32 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+8:07:32 AM [vite] (client) hmr update /src/styles/components.css
+8:08:43 AM [vite] (client) hmr update /src/styles/pages/profile.css?vue&type=style&index=1&src=e838ed77&scoped=e838ed77&lang.css
+8:08:43 AM [vite] (client) hmr update /src/styles/components.css
+8:08:43 AM [vite] (client) hmr update /src/styles/tokens.css
+8:08:43 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+8:09:25 AM [vite] (client) hmr update /src/styles/components.css
+8:09:25 AM [vite] (client) hmr update /src/styles/tokens.css
+8:09:25 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+8:09:51 AM [vite] (client) hmr update /src/styles/components.css
+8:09:52 AM [vite] (client) hmr update /src/styles/tokens.css
+8:09:52 AM [vite] (client) hmr update /src/components/ProfileFlow.vue
+8:12:46 AM [vite] (client) hmr update /src/styles/tokens.css

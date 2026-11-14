@@ -1,0 +1,36 @@
+
+Running 1 test using 1 worker
+
+(node:1328323) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session (11.0s)
+
+
+  1) tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#avatar-canvas')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#avatar-canvas') with timeout 5000ms
+      - waiting for locator('#avatar-canvas')
+
+
+      11 |  const shot=async(name:string)=>{await page.waitForTimeout(350);await page.screenshot({animations:'disabled',path:`docs/ui-redo/r18/${name}.png`})}
+      12 |  const open=()=>page.locator('#edit-avatar').click()
+    > 13 |  const upload=async()=>{await page.locator('input[accept="image/*"]').setInputFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('#avatar-canvas')).toBeVisible()}
+         |                                                                                                                                                                          ^
+      14 |  await box('#edit-avatar',[143.5,152,88,88]);await open();await upload();await shot('avatar-crop');await box('.avatar-panel',[12,270,351,518]);await box('#avatar-canvas',[75.5,351,224,224]);await box('#save-avatar',[33,719,309,48]);await page.locator('#avatar-zoom').fill('1.5');await page.locator('#save-avatar').click();await expect(page.locator('#save-avatar')).toHaveCount(0)
+      15 |  await open();await shot('avatar-gallery');await box('.avatar-panel',[12,442.5,351,345.5]);await box('.avatar-option',[33,527.5,66.75,66.75]);await expect.soft(page.locator('.avatar-option')).toHaveCSS('border-radius','16px');await expect.soft(page.locator('.avatar-panel h2')).toHaveCSS('font-size','18px')
+      16 |  await page.locator('[data-remove-avatar="0"]').click();await shot('avatar-remove');await box('.avatar-confirm',[24,277,327,258]);await box('#confirm-remove-avatar',[49,418,277,48]);await page.locator('#confirm-remove-avatar').click();await expect(page.locator('#removed-avatars')).toBeVisible();await shot('avatar-removed');await box('.avatar-panel',[12,378.5,351,409.5]);await page.locator('#removed-avatars').click();await shot('avatar-restore');await box('.avatar-panel',[12,487.25,351,300.75]);await box('[data-restore-avatar]',[33,608.25,66.75,66.75]);await page.locator('[data-restore-avatar="0"]').click();await expect(page.locator('.avatar-option')).toHaveCount(1)
+        at upload (/root/Muse_AI-repository/client/tests/r18-avatar.spec.ts:13:170)
+        at /root/Muse_AI-repository/client/tests/r18-avatar.spec.ts:17:23
+
+    Error Context: docs/ui-redo/r18/test-results/r18-avatar-six-avatar-states-share-one-real-account-session/error-context.md
+
+  1 failed
+    tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session ────────────────

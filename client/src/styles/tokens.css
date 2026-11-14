@@ -764,7 +764,6 @@
  --profile-font-empty:550 14px/22px Fredoka;
 }
 
-:root{--avatar-legacy-0:#1a2a20;--avatar-legacy-1:#ffffff11;--avatar-legacy-2:#a2b797;--avatar-legacy-3:#b5fa70;--avatar-legacy-4:#19362b;--avatar-legacy-5:#52684e;--avatar-legacy-6:#e4efd9;}
 
 /* R17 circular media mask: 29:13700 and 29:15776. */
 :root{--radius-full:50%;}
@@ -786,7 +785,31 @@
 /* 29:16233 */
 :root{--profile-font-letter:400 14px/22px Fredoka;}
 
-/* Unchanged pre-R18 avatar sheet, relocated with its gallery rules. */
-:root{--avatar-legacy-sheet:#1c2c22;--avatar-legacy-sheet-border:#b8ccb018;--avatar-legacy-sheet-radius:26px 26px 0 0;}
 
-:root{--avatar-legacy-font-title:500 17px/normal Fredoka;--avatar-legacy-font-copy:400 13px/1.8 Fredoka;--avatar-legacy-font-label:400 12px/normal Fredoka;--avatar-legacy-font-row:400 14px/normal Fredoka;--avatar-legacy-font-close:400 26px/normal Fredoka;--avatar-legacy-row-border:#b8ccb015;--avatar-legacy-row-text:#d0e2c4;}
+
+
+/* R18 measured paints; counts and node provenance in r18/colors.json. */
+:root{
+/* #18211e; 6 occurrences; 29:14340 */ --avatar-surface:var(--bg-sheet);
+/* #ffffff0b; 6 occurrences; 29:14340 */ --avatar-border:rgb(255 255 255 / .0430000014603138);
+/* #1a2a20; 20 occurrences; 29:14352 */ --avatar-cell:#1a2a20;
+/* #ffffff11; 16 occurrences; 29:14352 */ --avatar-cell-border:rgb(255 255 255 / .06700000166893005);
+/* #122018; 19 occurrences; 29:14354 */ --avatar-remove-bg:#122018;
+/* #90aa9566; 19 occurrences; 29:14354 */ --avatar-remove-border:rgb(144 170 149 / .4000000059604645);
+/* #ffa498; 19 occurrences; 29:14356 */ --avatar-remove-text:#ffa498;
+/* #1a2a204d; 13 occurrences; 29:14377 */ --avatar-empty-bg:rgb(26 42 32 / .30000001192092896);
+/* #78977b88; 13 occurrences; 29:14377 */ --avatar-empty-border:rgb(120 151 123 / .5329999923706055);
+/* #93b18d; 39 occurrences; 29:14380 */ --avatar-empty-text:#93b18d;
+/* #bacdb2; 1 occurrences; 29:15447 */ --avatar-copy:#bacdb2;
+/* #99b086; 2 occurrences; 29:14875 */ --avatar-muted:#99b086;
+
+--avatar-font-title:550 18px/24px "Fredoka";
+--avatar-font-copy:400 12px/20px "Fredoka";
+--avatar-font-empty:400 9px/13px "Fredoka";
+--avatar-font-check:400 16px/19px "Fredoka";
+}
+:root{/* #3a4c40, 1 occurrence, 53:2076 */ --avatar-track:var(--r07-range-track);}
+
+:root{/* white opacity .157, 6 occurrences: 29:14342; crop opacity .467, 1 occurrence: 29:15444 */ --avatar-grabber:rgb(255 255 255 / .15700000524520874);--avatar-crop-border:rgb(181 250 112 / .46700000762939453);}
+
+:root{/* 29:14636, 1 occurrence; exact gradient stops #253229/#17221c at 0/100%. */ --avatar-dialog-gradient:linear-gradient(138.41183168216892deg,#253229 0%,#17221c 100%);}
