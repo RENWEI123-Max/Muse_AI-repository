@@ -34,7 +34,7 @@ test('R05: real home, inbox and profile navigation share geometry and computed s
    expect(sample.items[i].style.fontSize).toBe('0px');expect(sample.items[i].style.color).toBe('rgb(132, 146, 136)')
   }
   samples.push(sample);if(active>0)expect(sample).toEqual(samples[0])
-  await page.screenshot({path:`test-results/r05-nav-${active}.png`})
+  await page.screenshot({path:`docs/ui-redo/r05/r05-nav-${active}.png`})
  }
  await test.info().attach('navigation-computed-styles',{body:JSON.stringify(samples,null,2),contentType:'application/json'})
 })
