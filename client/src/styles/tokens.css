@@ -864,3 +864,16 @@
  --cards-font-upload:400 8px/12px Fredoka;
  --cards-font-plus:400 32px/32px Fredoka;
 }
+/* R20 local Figma: 16321, 16333, 16335, 16429, 16626. */
+:root{
+ --moments-category:#223227;
+ --moments-empty-title:#BAC9B3;
+ --moments-empty-copy:#6F876D;
+ --moments-card:#1B2B20;
+ --moments-card-border:rgb(255 255 255 / .03);
+ --moments-tool:#233728;
+ --moments-font-icon:400 24px/29px Fredoka;
+ --moments-font-input:400 14px/21px Fredoka;
+ --moments-font-content:400 13px/21px Fredoka;
+ --moments-font-confirm:550 22px/28px Fredoka;
+}

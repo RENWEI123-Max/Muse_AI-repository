@@ -1,0 +1,47 @@
+
+Running 1 test using 1 worker
+
+(node:1361119) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-moments.spec.ts:3:1 › R20 local JSON geometry and style samples, Korean overflow and short viewport (6.8s)
+
+
+  1) tests/r20-moments.spec.ts:3:1 › R20 local JSON geometry and style samples, Korean overflow and short viewport 
+
+    Error: .sheet background-color
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "rgb(29, 41, 35)"
+    Received: "rgb(24, 33, 30)"
+
+       7 |  const results:any[]=[]
+       8 |  const box=async(s:string,target:number[])=>{const b=await page.locator(s).first().boundingBox();const pass=!!b&&['x','y','width','height'].every((k,i)=>Math.abs((b as any)[k]-target[i]!)<=1);results.push({kind:'geometry',selector:s,target,actual:b,pass});expect.soft(pass,s).toBeTruthy()}
+    >  9 |  const css=async(s:string,p:string,v:string)=>{const actual=await page.locator(s).first().evaluate((e,p)=>getComputedStyle(e).getPropertyValue(p),p);results.push({kind:'style',selector:s,property:p,target:v,actual,pass:actual===v});expect.soft(actual,s+' '+p).toBe(v)}
+         |                                                                                                                                                                                                                                                                     ^
+      10 |  await box('.d5-page',[0,48,375,764]);await box('.d5-page>header',[0,48,375,64]);await box('#d5-back',[16,59.5,40,40]);await box('.d5-page h1',[68,67.5,239,24]);await box('#moment-text',[24,136,327,160]);await box('#compose-category',[24,452,327,48]);await box('#moment-audience',[24,524,327,56]);
+      11 |  await css('.d5-page','background-color','rgb(13, 23, 19)');await css('.d5-page h1','font-size','17px');await css('.d5-page h1','font-weight','550');await css('#moment-text','font-size','14px');await css('#moment-text','line-height','21px');await css('#compose-category','background-color','rgb(32, 47, 36)');await css('#compose-category','border-radius','12px')
+      12 |  await page.locator('#moment-audience').click();await page.waitForTimeout(400);await box('.sheet',[12,494,351,294]);await box('.sheet h2',[33,527,309,24]);await css('.sheet','background-color','rgb(24, 33, 30)');await css('.sheet','border-radius','24px');await page.getByRole('button',{name:'Close D5 dialog'}).click()
+        at css (/root/Muse_AI-repository/client/tests/r20-moments.spec.ts:9:261)
+        at /root/Muse_AI-repository/client/tests/r20-moments.spec.ts:13:116
+
+    Error: .sheet
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+       6 |  await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#new-profile-moment')).toBeEnabled();await page.locator('#profile-moments').click();await page.locator('#new-moment').click();await page.waitForTimeout(400)
+       7 |  const results:any[]=[]
+    >  8 |  const box=async(s:string,target:number[])=>{const b=await page.locator(s).first().boundingBox();const pass=!!b&&['x','y','width','height'].every((k,i)=>Math.abs((b as any)[k]-target[i]!)<=1);results.push({kind:'geometry',selector:s,target,actual:b,pass});expect.soft(pass,s).toBeTruthy()}
+         |                                                                                                                                                                                                                                                                                     ^
+       9 |  const css=async(s:string,p:string,v:string)=>{const actual=await page.locator(s).first().evaluate((e,p)=>getComputedStyle(e).getPropertyValue(p),p);results.push({kind:'style',selector:s,property:p,target:v,actual,pass:actual===v});expect.soft(actual,s+' '+p).toBe(v)}
+      10 |  await box('.d5-page',[0,48,375,764]);await box('.d5-page>header',[0,48,375,64]);await box('#d5-back',[16,59.5,40,40]);await box('.d5-page h1',[68,67.5,239,24]);await box('#moment-text',[24,136,327,160]);await box('#compose-category',[24,452,327,48]);await box('#moment-audience',[24,524,327,56]);
+      11 |  await css('.d5-page','background-color','rgb(13, 23, 19)');await css('.d5-page h1','font-size','17px');await css('.d5-page h1','font-weight','550');await css('#moment-text','font-size','14px');await css('#moment-text','line-height','21px');await css('#compose-category','background-color','rgb(32, 47, 36)');await css('#compose-category','border-radius','12px')
+        at box (/root/Muse_AI-repository/client/tests/r20-moments.spec.ts:8:277)
+        at /root/Muse_AI-repository/client/tests/r20-moments.spec.ts:16:153
+
+    Error Context: docs/ui-redo/r20/measurement-results/r20-moments-R20-local-JSON-10960-overflow-and-short-viewport/error-context.md
+
+  1 failed
+    tests/r20-moments.spec.ts:3:1 › R20 local JSON geometry and style samples, Korean overflow and short viewport 

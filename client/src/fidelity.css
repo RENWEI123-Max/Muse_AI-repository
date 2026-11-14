@@ -35,16 +35,9 @@
 /* Chat canvas, header, timestamps and two-row composer. Custom themes retain
    their existing background and bubble variables. */
 /* Wallet stays a real balance/selection flow; no simulated purchase success. */
-.device .d5{position:relative}
-.device .d5 #profile-global-visibility{font-size:9px;width:auto;padding:0 0 0 12px;margin:0 0 0 auto;min-height:20px;border:0}
-.device .profile-card-actions .compose-link>span:first-child{font-size:30px;line-height:44px}
-.device .profile-card-actions .compose-link>.compose-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 
 
 /* #119: actions follow any number of image-card rows. */
-.device .profile-card-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:20px;min-height:44px}
-.device .profile-card-actions #profile-moments{font-size:9px;min-height:44px;color:#859d80}
-.device .profile-card-actions #new-profile-moment{display:grid;place-items:center;border-radius:50%;width:44px;height:44px;padding:0;margin:0;background:#b5fa70;color:#19362b;font-size:0}
 .device .settings-row>b{font-weight:400}.device .settings-row>b img{width:16px;height:24px;object-fit:contain}
 .device #publish:disabled{background:#252e29;color:#849288;opacity:1}
 @media(max-height:740px){.device{min-height:100svh}

@@ -1,0 +1,31 @@
+
+Running 1 test using 1 worker
+
+(node:1358613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access (1.2m)
+
+
+  1) tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 
+
+    Test was interrupted.
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for locator('#open-profile')
+
+
+      3 | const evidence=process.env.D5_EVIDENCE||'docs/d5'
+      4 | // Reuse tokens returned by the real isolated fixture signup; never repeat login requests.
+    > 5 | async function login(page:any,user:any){await page.addInitScript((token:string)=>localStorage.setItem('maugo-token',token),user.token);await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#upload-image-card')).toBeEnabled()}
+        |                                                                                                                                                                                                 ^
+      6 | test('D5 real B17: supported states, limits, persistence and second-account access',async({page,request,browser})=>{
+      7 |  test.setTimeout(180000);await mkdir(evidence,{recursive:true})
+      8 |  const fixture=process.env.D5_SHARED_FIXTURE?JSON.parse(await readFile(process.env.D5_SHARED_FIXTURE,'utf8')):await(await request.post('http://127.0.0.1:3069/__d5/seed')).json()
+        at login (/root/Muse_AI-repository/client/tests/d5.spec.ts:5:193)
+        at /root/Muse_AI-repository/client/tests/d5.spec.ts:14:2
+
+    Error Context: docs/ui-redo/r20/test-results/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md
+
+  1 interrupted
+    tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 

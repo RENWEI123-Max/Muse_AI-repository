@@ -1,0 +1,8 @@
+/root/Muse_AI-repository/client/tests/d5-server.mjs:10
+if(!source)throw Error('Database connection unavailable')
+                 ^
+
+Error: Database connection unavailable
+    at <anonymous> (/root/Muse_AI-repository/client/tests/d5-server.mjs:10:18)
+
+Node.js v22.23.4

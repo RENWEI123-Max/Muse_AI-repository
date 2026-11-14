@@ -1,0 +1,1431 @@
+{
+  "database": "maugo_d5_task75_1794645664402",
+  "evidenceKind": "implementation screenshots; no Figma comparison",
+  "postUpdate": {
+    "category": "Portrait",
+    "visibility": "only_me",
+    "nonAuthorOptions": 0,
+    "nonAuthorPatch": 403
+  },
+  "checks": {
+    "list": {
+      "status": 200,
+      "body": {
+        "items": [],
+        "limit": 20,
+        "offset": 0
+      }
+    },
+    "detail": {
+      "status": 403,
+      "body": {
+        "message": "Post is not visible"
+      }
+    },
+    "cardMedia": {
+      "status": 403,
+      "body": {
+        "message": "Media belongs to another user"
+      }
+    },
+    "postMedia": {
+      "status": 403,
+      "body": {
+        "message": "Media belongs to another user"
+      }
+    }
+  },
+  "receipts": [
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/users/me/image-cards",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b0d0d894-eff0-4d60-9550-0bfcce19fd58",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/users/me/image-cards/f05792e5-885c-41e2-a626-c8c4482492d7",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b0d0d894-eff0-4d60-9550-0bfcce19fd58",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/users/me/image-cards/f05792e5-885c-41e2-a626-c8c4482492d7",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b0d0d894-eff0-4d60-9550-0bfcce19fd58",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b0d0d894-eff0-4d60-9550-0bfcce19fd58",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=sticker.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/posts",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=Outfit&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=Life&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=Style&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=Outfit&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=Portrait&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/73b28b02-0cef-45c7-a30a-693abe4a76a0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/cb0bb7f1-1a6a-4122-84b0-8b22bdc42963",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/posts/0664b49c-c25a-4042-8ed0-3e196a507abb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/b0d0d894-eff0-4d60-9550-0bfcce19fd58",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/users/me/image-cards/f05792e5-885c-41e2-a626-c8c4482492d7",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/me/image-cards",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/4edb0ef9-5ecc-4f41-bc23-62fac2440523",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/17d213b5-53e0-4431-bfd5-5d2d4974f3ca",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/8bc26d73-07bf-4cf0-8775-e50cdb2f7f96",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/f10cdadd-564d-4f05-b256-750c77e8d26b",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/a45c36d9-0c33-495c-8cb1-86878b7d3672",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/media/uploads?purpose=post&filename=portrait-5.png",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/4793a1eb-3a60-4553-9670-f3a132ef9a7b",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/posts",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/posts?userId=b3880527-cff0-4ba8-a939-bcc8080ece6d&category=All&limit=20&offset=0",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/8bc26d73-07bf-4cf0-8775-e50cdb2f7f96",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/17d213b5-53e0-4431-bfd5-5d2d4974f3ca",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/4edb0ef9-5ecc-4f41-bc23-62fac2440523",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/a45c36d9-0c33-495c-8cb1-86878b7d3672",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/f10cdadd-564d-4f05-b256-750c77e8d26b",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/uploads/4793a1eb-3a60-4553-9670-f3a132ef9a7b",
+      "status": 200
+    }
+  ],
+  "motion": [
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "empty d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "background-color"
+    },
+    {
+      "target": "",
+      "property": "scale"
+    },
+    {
+      "target": "",
+      "property": "color"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-leave-active d5-panel-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "sheet d5-panel-enter-active d5-panel-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-leave-active d5-item-leave-to",
+      "property": "opacity"
+    },
+    {
+      "target": "sheet",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "",
+      "property": "opacity"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "d5-page d5-page-enter-active d5-page-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "transform"
+    },
+    {
+      "target": "moment-card d5-item-enter-active d5-item-enter-to",
+      "property": "opacity"
+    }
+  ],
+  "friendUnlock": {
+    "friendsPost": 200,
+    "friendsCardMedia": 200,
+    "privatePost": 403
+  },
+  "pendingEveryoneStatus": 403,
+  "deletedPostStatus": 404,
+  "sixAttachments": 6
+}
