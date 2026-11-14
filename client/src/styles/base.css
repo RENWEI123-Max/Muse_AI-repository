@@ -9,7 +9,7 @@ img{max-width:100%;user-select:none}
 .device{position:relative;width:100%;max-width:375px;min-height:812px;height:100svh;overflow:hidden;isolation:isolate}
 .client-statusbar{position:absolute;left:0;top:0;width:100%;height:var(--status-height);object-fit:fill;z-index:96;pointer-events:none}
 .device::after{content:'';position:absolute;bottom:8px;left:50%;width:144px;height:5px;transform:translateX(-50%);background:var(--shell-indicator);mask-image:url('../assets/apple/home-indicator-dark.svg');mask-position:0 -7px;mask-size:144px 20px;mask-repeat:no-repeat;z-index:96;pointer-events:none}
-.home-indicator,.inbox-home-indicator{visibility:hidden}
+.home-indicator{visibility:hidden}
 [lang=ko]{font-family:var(--font-family-ko)}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:0s;animation-iteration-count:1;transition-duration:0s;scroll-behavior:auto}

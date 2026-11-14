@@ -1,0 +1,1242 @@
+[
+  {
+    "element": "inbox-statusbar",
+    "box": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-top ui-header",
+    "box": [
+      0,
+      48,
+      375,
+      64
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(13, 23, 19)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.3px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-heading-tabs",
+    "box": [
+      24,
+      57,
+      186,
+      44
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.3px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "tab-messages",
+    "box": [
+      24,
+      57,
+      102,
+      44
+    ],
+    "style": {
+      "color": "rgb(237, 246, 231)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "23px",
+      "fontWeight": "550",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "tab-friends",
+    "box": [
+      146,
+      57,
+      64,
+      44
+    ],
+    "style": {
+      "color": "rgb(124, 146, 133)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "19px",
+      "fontWeight": "500",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu",
+    "box": [
+      311,
+      57.5,
+      44,
+      44
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "22px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      71.3125,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      78.5,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      85.6875,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-body",
+    "box": [
+      0,
+      112,
+      375,
+      604
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "collect-replies",
+    "box": [
+      24,
+      124,
+      327,
+      56
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(19, 32, 23)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "24px",
+      "boxShadow": "rgb(13, 23, 19) 0px 0px 0px 10px"
+    }
+  },
+  {
+    "element": "collect-symbol",
+    "box": [
+      37,
+      141,
+      24,
+      22
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-collect-icon",
+    "box": [
+      37,
+      141,
+      22,
+      22
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "collect-copy",
+    "box": [
+      69,
+      136,
+      92,
+      32
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-collect-title",
+    "box": [
+      69,
+      136,
+      92,
+      18
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "14px",
+      "fontWeight": "550",
+      "lineHeight": "18px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-collect-allowance",
+    "box": [
+      69,
+      156,
+      92,
+      12
+    ],
+    "style": {
+      "color": "rgb(142, 167, 127)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "lineHeight": "12px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "reply-avatar-stack",
+    "box": [
+      229,
+      139,
+      68,
+      26
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-stack-avatar",
+    "box": [
+      220,
+      139,
+      26,
+      26
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "13px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-stack-avatar",
+    "box": [
+      237,
+      139,
+      26,
+      26
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "13px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-stack-avatar",
+    "box": [
+      254,
+      139,
+      26,
+      26
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "13px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-stack-more",
+    "box": [
+      271,
+      139,
+      26,
+      26
+    ],
+    "style": {
+      "color": "rgb(23, 48, 32)",
+      "backgroundColor": "rgb(232, 242, 217)",
+      "fontFamily": "Fredoka",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "borderRadius": "13px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-collect-count",
+    "box": [
+      305,
+      143.953125,
+      17,
+      16.09375
+    ],
+    "style": {
+      "color": "rgb(20, 41, 18)",
+      "backgroundColor": "rgb(181, 250, 112)",
+      "fontFamily": "Fredoka",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "borderRadius": "10px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "collect-chevron",
+    "box": [
+      330,
+      140,
+      8,
+      24
+    ],
+    "style": {
+      "color": "rgb(181, 250, 112)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "25px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-conversations",
+    "box": [
+      24,
+      200,
+      327,
+      492
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-wrap",
+    "box": [
+      24,
+      200,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row is-waiting",
+    "box": [
+      24,
+      200,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-avatar",
+    "box": [
+      24,
+      218,
+      48,
+      48
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(36, 49, 42)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "24px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-text",
+    "box": [
+      86,
+      219.5,
+      165,
+      45
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-name",
+    "box": [
+      86,
+      219.5,
+      165,
+      21
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "15px",
+      "fontWeight": "550",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-preview",
+    "box": [
+      86,
+      246.5,
+      165,
+      18
+    ],
+    "style": {
+      "color": "rgb(134, 151, 140)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-end",
+    "box": [
+      265,
+      227,
+      58,
+      29.984375
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-time",
+    "box": [
+      298,
+      227,
+      25,
+      12.09375
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "pending-dot",
+    "box": [
+      265,
+      246.09375,
+      58,
+      10.890625
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "lineHeight": "10.89px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "conversation-options",
+    "box": [
+      331,
+      227,
+      28,
+      32
+    ],
+    "style": {
+      "color": "rgb(120, 143, 128)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "lineHeight": "13.31px",
+      "letterSpacing": "1px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-wrap",
+    "box": [
+      24,
+      284,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row is-waiting",
+    "box": [
+      24,
+      284,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-avatar",
+    "box": [
+      24,
+      302,
+      48,
+      48
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(36, 49, 42)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "24px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-text",
+    "box": [
+      86,
+      303.5,
+      165,
+      45
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-name",
+    "box": [
+      86,
+      303.5,
+      165,
+      21
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "15px",
+      "fontWeight": "550",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-preview",
+    "box": [
+      86,
+      330.5,
+      165,
+      18
+    ],
+    "style": {
+      "color": "rgb(134, 151, 140)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-end",
+    "box": [
+      265,
+      311,
+      58,
+      29.984375
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-time",
+    "box": [
+      298,
+      311,
+      25,
+      12.09375
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "pending-dot",
+    "box": [
+      265,
+      330.09375,
+      58,
+      10.890625
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "lineHeight": "10.89px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "conversation-options",
+    "box": [
+      331,
+      311,
+      28,
+      32
+    ],
+    "style": {
+      "color": "rgb(120, 143, 128)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "lineHeight": "13.31px",
+      "letterSpacing": "1px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-wrap",
+    "box": [
+      24,
+      368,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row is-waiting",
+    "box": [
+      24,
+      368,
+      327,
+      84
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-avatar",
+    "box": [
+      24,
+      386,
+      48,
+      48
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(36, 49, 42)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "24px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-text",
+    "box": [
+      86,
+      387.5,
+      165,
+      45
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-name",
+    "box": [
+      86,
+      387.5,
+      165,
+      21
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "15px",
+      "fontWeight": "550",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-preview",
+    "box": [
+      86,
+      414.5,
+      165,
+      18
+    ],
+    "style": {
+      "color": "rgb(134, 151, 140)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "chat-row-end",
+    "box": [
+      265,
+      395,
+      58,
+      29.984375
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-row-time",
+    "box": [
+      298,
+      395,
+      25,
+      12.09375
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "pending-dot",
+    "box": [
+      265,
+      414.09375,
+      58,
+      10.890625
+    ],
+    "style": {
+      "color": "rgb(140, 160, 148)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "lineHeight": "10.89px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "conversation-options",
+    "box": [
+      331,
+      395,
+      28,
+      32
+    ],
+    "style": {
+      "color": "rgb(120, 143, 128)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "lineHeight": "13.31px",
+      "letterSpacing": "1px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-home-indicator",
+    "box": [
+      0,
+      112,
+      375,
+      0
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav",
+    "box": [
+      0,
+      716,
+      375,
+      96
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgb(13, 24, 18)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      52.25,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      52.25,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      166.5,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      166.5,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      280.75,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      280.75,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  }
+]

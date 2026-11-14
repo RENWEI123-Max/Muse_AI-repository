@@ -468,3 +468,39 @@
  --r08-safety-detail: rgb(143 165 130);
  --r08-rule: rgb(145 165 128);
 }
+
+/* R09: local JSON paints and typography. */
+:root {
+ --r09-menu: #E8F3DE;
+ --r09-tab-idle: #7C9285;
+ --r09-tab-active: #EDF6E7;
+ --r09-unread-ink: #15321A;
+ --r09-collect-border: rgb(181 250 112 / 0.699999988079071);
+ --r09-collect-bg: #132017;
+ --r09-allowance: #8EA77F;
+ --r09-stack-bg: #E8F2D9;
+ --r09-stack-ink: #173020;
+ --r09-count-ink: #142912;
+ --r09-empty-title: #BAC9B3;
+ --r09-notice-bg: #223026;
+ --r09-notice-text: #9EB194;
+ --r09-dismiss: #81947A;
+ --r09-font-muted: 400 16px/19.360000610351562px "Fredoka";
+ --r09-font-tab: 500 19px/28px "Fredoka";
+ --r09-font-tab-active: 550 23px/28px "Fredoka";
+ --r09-font-pending: 400 9px/10.890000343322754px "Fredoka";
+ --r09-font-unread: 700 10px/16px "Fredoka";
+ --r09-font-options: 400 11px/13.3100004196167px "Fredoka";
+ --r09-font-collect: 550 14px/18px "Fredoka";
+ --r09-font-allowance: 400 9px/12px "Fredoka";
+ --r09-font-count: 700 10px/12.100000381469727px "Fredoka";
+ --r09-font-chevron: 400 25px/24px "Fredoka";
+ --r09-font-empty-title: 550 14px/22px "Fredoka";
+ --r09-font-notice: 400 10px/21px "Fredoka";
+ --r09-font-dismiss: 400 18px/21.780000686645508px "Fredoka";
+ --r09-font-drawer: 550 19px/26px "Fredoka";
+}
+
+
+/* 29:7263, 29:7586 and 29:7590. */
+:root { --r09-font-muted: 400 16px/19.360000610351562px "Fredoka"; --r09-enable: #D3E6C6; }

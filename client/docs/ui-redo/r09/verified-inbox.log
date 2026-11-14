@@ -1,0 +1,56 @@
+[WebServer] (node:1110339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:1110351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:1110391) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 10 tests using 1 worker
+
+(node:1110439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/10] tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+[2/10] tests/inbox.spec.ts:20:39 › C5: empty and notification reminder
+[3/10] tests/inbox.spec.ts:20:39 › C5: waiting and notification reminder
+[4/10] tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge
+[5/10] tests/inbox.spec.ts:27:1 › C5: pagination and API failure are recoverable
+[6/10] tests/inbox.spec.ts:29:1 › C5: insufficient balance and modal keyboard focus
+[7/10] tests/r09-inbox.spec.ts:32:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+[8/10] tests/r09-inbox.spec.ts:48:39 › R09: empty and notification reminder
+[9/10] tests/r09-inbox.spec.ts:48:39 › R09: waiting and notification reminder
+[10/10] tests/r09-inbox.spec.ts:50:1 › R09 Korean labels and short viewport keep artwork size
+  1) tests/r09-inbox.spec.ts:50:1 › R09 Korean labels and short viewport keep artwork size ─────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('.inbox-tab').first()
+    Expected pattern: /GowunDodum/
+    Received string:  "Fredoka"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.inbox-tab').first() with timeout 5000ms
+      - waiting for locator('.inbox-tab').first()
+        14 × locator resolved to <button class="inbox-tab" id="tab-messages" aria-pressed="true">대화</button>
+           - unexpected value "Fredoka"
+
+
+      56 |  await expect(page.locator('.inbox-empty-image')).toBeVisible();await page.evaluate(()=>document.fonts.ready)
+      57 |  for(const selector of ['.inbox-tab','.inbox-empty-title','.inbox-empty-description','.inbox-notice-copy'])for(const el of await page.locator(selector).all()){
+    > 58 |   await expect(el).toHaveCSS('font-family',/GowunDodum/)
+         |                    ^
+      59 |   expect(await el.evaluate(e=>e.scrollWidth<=e.clientWidth+1),selector).toBeTruthy()
+      60 |  }
+      61 |  await page.setViewportSize({width:375,height:700});await expect(page.locator('.inbox-empty-image')).toHaveCSS('width','112px');await expect(page.locator('.inbox-empty-image')).toHaveCSS('height','112px')
+        at /root/Muse_AI-repository/client/tests/r09-inbox.spec.ts:58:20
+
+    Error Context: test-results/r09-inbox-R09-Korean-label-047d1--viewport-keep-artwork-size/error-context.md
+
+
+  1 failed
+    tests/r09-inbox.spec.ts:50:1 › R09 Korean labels and short viewport keep artwork size ──────────
+  9 passed (1.5m)
