@@ -1,0 +1,42 @@
+[WebServer] (node:68472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:68474) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough (30.8s)
+  ✓  2 tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough (30.9s)
+  ✓  3 tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough (30.9s)
+  ✘  4 tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough (31.7s)
+
+
+  1) tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      70 |  for(const target of ['moment-stickers','moment-visibility','compose-category','moment-leave']){if(target==='moment-leave'){await view.locator('#moment-text').fill('Keyboard cancellation');await view.locator('#d5-back').click()}else await view.locator({'moment-stickers':'#moment-sticker','moment-visibility':'#moment-audience','compose-category':'#compose-category'}[target]!).click();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks[target+'Escape']={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,page:true,dialogs:0});if(!await profilePage.isVisible())return}
+      71 |  await view.locator('#moment-audience').click();await overlay.click({position:{x:2,y:2}});await expect(panel).toHaveCount(0);checks.backdropClose=true;await page.emulateMedia({reducedMotion:'reduce'});await view.locator('#moment-audience').click();checks.reducedMotion=await panel.evaluate(e=>({animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}));expect(checks.reducedMotion).toEqual({animation:'none',transition:'0s'});await close()
+    > 72 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect(errors).toEqual([])
+         |                                                                                              ^
+      73 |  expect.soft(checks.composeScroll.top).toBeGreaterThan(0);expect.soft(checks.listScroll.top).toBeGreaterThan(0)
+      74 |  expect.soft(checks.keepPress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)');expect.soft(checks.closePress).toBe('matrix(0.94, 0, 0, 0.94, 0, 0)');expect.soft(checks.deletePress).toBe('matrix(0.96, 0, 0, 0.96, 0, 0)')
+      75 |  for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.animation.name,r.name).toBe(r.name==='moment-stickers'?'none':'sheet-in');expect.soft(r.metric.animation.duration,r.name).toBe(r.name==='moment-stickers'?'0s':['moment-leave','moment-delete','delete-failure'].includes(r.name)?'0.22s':'0.3s');expect.soft(r.metric.transition,r.name+' nested transition').toBe('0s')}
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:72:94
+
+    Error Context: test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ──────────────────────────────────
+  3 passed (2.1m)

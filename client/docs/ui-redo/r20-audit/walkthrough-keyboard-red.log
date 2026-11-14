@@ -1,0 +1,196 @@
+[WebServer] (node:68189) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:68191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough (29.6s)
+(node:68206) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough (29.8s)
+(node:68218) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough (29.7s)
+(node:68246) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough (30.0s)
+
+
+  1) tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.moments-overlay').locator('.sheet').locator('#moment-category')
+        - locator resolved to <button class="row" id="moment-category">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+          - waiting 100ms
+        15 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="moments-overlay moments-moment-options">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      59 |  await view.locator('.categories button').filter({hasText:/^Outfit$/}).click();await expect(d5).toHaveAttribute('data-state','moments-category-empty');await shot('moments-category-empty',true);await view.locator('.categories button').filter({hasText:/^All$/}).click()
+      60 |  await options();await shot('moment-options',true);await panel.locator('#moment-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('patch-failure');fail='';await panel.locator('[data-visibility=friends]').click();await expect(panel).toHaveCount(0);expect(posts[0]!.visibility).toBe('friends');checks.visibilityPatched=true
+    > 61 |  await options();await panel.locator('#moment-category').click();await panel.locator('[data-post-category=Portrait]').click();await expect(panel).toHaveCount(0);expect(posts[0]!.category).toBe('Portrait');checks.categoryPatched=true
+         |                                                          ^
+      62 |  await options();await panel.locator('#delete-moment').click();await shot('moment-delete',true);await press('deletePress',panel.locator('#d5-confirm-delete'));await panel.locator('.row').click();await expect(panel).toHaveCount(0);expect(posts).toHaveLength(1);checks.deleteCancelToList=true
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:61:58
+
+    Error Context: test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.moments-overlay').locator('.sheet').locator('#moment-category')
+        - locator resolved to <button class="row" id="moment-category">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+          - waiting 100ms
+        15 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="moments-overlay moments-moment-options">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      59 |  await view.locator('.categories button').filter({hasText:/^Outfit$/}).click();await expect(d5).toHaveAttribute('data-state','moments-category-empty');await shot('moments-category-empty',true);await view.locator('.categories button').filter({hasText:/^All$/}).click()
+      60 |  await options();await shot('moment-options',true);await panel.locator('#moment-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('patch-failure');fail='';await panel.locator('[data-visibility=friends]').click();await expect(panel).toHaveCount(0);expect(posts[0]!.visibility).toBe('friends');checks.visibilityPatched=true
+    > 61 |  await options();checks.categoryEntry=await panel.locator('#moment-category').evaluate(e=>{const r=e.getBoundingClientRect();return {box:{x:r.x,y:r.y,width:r.width,height:r.height},hit:e.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2))}});await shot('category-entry-clipped');await close()
+         |                                                          ^
+      62 |  await options();await panel.locator('#delete-moment').click();await shot('moment-delete',true);await press('deletePress',panel.locator('#d5-confirm-delete'));await panel.locator('.row').click();await expect(panel).toHaveCount(0);expect(posts).toHaveLength(1);checks.deleteCancelToList=true
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:61:58
+
+    Error Context: test-results/r20-audit/r20-audit-667-ko-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-667-ko-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-667-ko-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.moments-overlay').locator('.sheet').locator('#moment-category')
+        - locator resolved to <button class="row" id="moment-category">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+          - waiting 100ms
+        15 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="moments-overlay moments-moment-options">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      59 |  await view.locator('.categories button').filter({hasText:/^Outfit$/}).click();await expect(d5).toHaveAttribute('data-state','moments-category-empty');await shot('moments-category-empty',true);await view.locator('.categories button').filter({hasText:/^All$/}).click()
+      60 |  await options();await shot('moment-options',true);await panel.locator('#moment-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('patch-failure');fail='';await panel.locator('[data-visibility=friends]').click();await expect(panel).toHaveCount(0);expect(posts[0]!.visibility).toBe('friends');checks.visibilityPatched=true
+    > 61 |  await options();checks.categoryEntry=await panel.locator('#moment-category').evaluate(e=>{const r=e.getBoundingClientRect();return {box:{x:r.x,y:r.y,width:r.width,height:r.height},hit:e.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2))}});await shot('category-entry-clipped');await close()
+         |                                                          ^
+      62 |  await options();await panel.locator('#delete-moment').click();await shot('moment-delete',true);await press('deletePress',panel.locator('#d5-confirm-delete'));await panel.locator('.row').click();await expect(panel).toHaveCount(0);expect(posts).toHaveLength(1);checks.deleteCancelToList=true
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:61:58
+
+    Error Context: test-results/r20-audit/r20-audit-812-en-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-812-en-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-812-en-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.moments-overlay').locator('.sheet').locator('#moment-category')
+        - locator resolved to <button class="row" id="moment-category">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+          - waiting 100ms
+        15 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="moments-overlay moments-moment-options">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      59 |  await view.locator('.categories button').filter({hasText:/^Outfit$/}).click();await expect(d5).toHaveAttribute('data-state','moments-category-empty');await shot('moments-category-empty',true);await view.locator('.categories button').filter({hasText:/^All$/}).click()
+      60 |  await options();await shot('moment-options',true);await panel.locator('#moment-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('patch-failure');fail='';await panel.locator('[data-visibility=friends]').click();await expect(panel).toHaveCount(0);expect(posts[0]!.visibility).toBe('friends');checks.visibilityPatched=true
+    > 61 |  await options();checks.categoryEntry=await panel.locator('#moment-category').evaluate(e=>{const r=e.getBoundingClientRect();return {box:{x:r.x,y:r.y,width:r.width,height:r.height},hit:e.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2))}});await shot('category-entry-clipped');await close()
+         |                                                          ^
+      62 |  await options();await panel.locator('#delete-moment').click();await shot('moment-delete',true);await press('deletePress',panel.locator('#d5-confirm-delete'));await panel.locator('.row').click();await expect(panel).toHaveCount(0);expect(posts).toHaveLength(1);checks.deleteCancelToList=true
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:61:58
+
+    Error Context: test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ──────────────────────────────────

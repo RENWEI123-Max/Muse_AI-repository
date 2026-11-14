@@ -93,3 +93,9 @@
 
 .d5-sheet-enter-active .sheet,.d5-sheet-leave-active .sheet{transition:transform .25s}
 .d5-sheet-enter-from .sheet,.d5-sheet-leave-to .sheet{transform:translateY(80px)}
+
+/* R20 audit: prototype sheets use only sheet-in; emoji picker has no entrance tween. */
+.app-shell .moments-overlay{transition:none;opacity:1}
+.app-shell .moments-overlay .sheet{transition:none;transform:none}
+.app-shell .moments-overlay .sheet[data-panel=dialog]{animation-duration:.22s}
+.app-shell .moments-overlay .sheet[data-panel=stickers]{animation:none}

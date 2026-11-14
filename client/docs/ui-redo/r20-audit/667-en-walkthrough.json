@@ -1,0 +1,2686 @@
+{
+  "fixture": true,
+  "initialPosts": 0,
+  "contentOrigin": "Only browser typed content and UI uploads/publish; no seeded posts/likes/comments or Vue state injection",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "email": "r20-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads/1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=sticker.png",
+      "method": "POST",
+      "bytes": 215251
+    },
+    {
+      "path": "/media/uploads/2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads/3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads/4",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads/5",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "query": "?purpose=post&filename=portrait-5.png",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads/6",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "content": "Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. ",
+        "mediaIds": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "category": "Life",
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/posts",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "content": "Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. ",
+        "mediaIds": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "category": "Life",
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=Outfit&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts/post-7",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/posts/post-7",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/posts/post-7",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts/post-7",
+      "query": "",
+      "method": "DELETE"
+    },
+    {
+      "path": "/posts/post-7",
+      "query": "",
+      "method": "DELETE"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "moments-empty",
+      "primary": true,
+      "decoded": [],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "list-failure",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        }
+      ],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. Retry",
+          "clipped": false
+        },
+        {
+          "text": "Retry",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-empty",
+      "primary": true,
+      "decoded": [],
+      "state": "moment-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "0 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-stickers",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "repository asset"
+        }
+      ],
+      "state": "moment-stickers",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 14,
+          "y": 267,
+          "width": 347,
+          "height": 376
+        },
+        "overflow": "auto",
+        "scrollHeight": 374,
+        "clientHeight": 374,
+        "animation": {
+          "name": "none",
+          "duration": "0s",
+          "timing": "ease"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "A little expression",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-visibility",
+      "primary": true,
+      "decoded": [],
+      "state": "moment-visibility",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "overflow": "auto",
+        "scrollHeight": 304,
+        "clientHeight": 292,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?",
+          "clipped": false
+        },
+        {
+          "text": "Everyone\n✓",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "Friends",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Only me",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Friends are people with a collected reply.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-draft",
+      "primary": true,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "37 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-leave",
+      "primary": true,
+      "decoded": [],
+      "state": "moment-leave",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 220,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 321,
+          "width": 327,
+          "height": 322
+        },
+        "overflow": "auto",
+        "scrollHeight": 320,
+        "clientHeight": 320,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Leave this draft?",
+          "clipped": false
+        },
+        {
+          "text": "Keep your draft on this device, or discard it before leaving.",
+          "clipped": false
+        },
+        {
+          "text": "Keep draft",
+          "clipped": false
+        },
+        {
+          "text": "Discard draft",
+          "clipped": false
+        },
+        {
+          "text": "Continue editing",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "invalid-file",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "Use PNG, JPEG, WebP, MP4, WebM, OGG, WAV or MP3 below 10 MB (video below 30 MB).",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "37 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "size-boundary",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "Use PNG, JPEG, WebP, MP4, WebM, OGG, WAV or MP3 below 10 MB (video below 30 MB).",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "37 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "upload-failure",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "37 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-photo",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-photo",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "37 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "text-over-limit",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-photo",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "1001 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "six-attachments",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-photo",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "1000 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "compose-scrolled",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-photo",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "1000 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "publish-failure",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-photo",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "A little moment",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "What is on your mind?",
+          "clipped": false
+        },
+        {
+          "text": "252 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "▧ Media",
+          "clipped": false
+        },
+        {
+          "text": "☺ Stickers",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Up to 6 attachments. Visibility is enforced when shared.",
+          "clipped": false
+        },
+        {
+          "text": "Publish moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-saved",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moments-list",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Moment published.",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "11/14/2026 · Everyone · Life",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. ",
+          "clipped": false
+        },
+        {
+          "text": "View moment ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moments-list",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moments-list",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Moment published.",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "11/14/2026 · Everyone · Life",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. ",
+          "clipped": false
+        },
+        {
+          "text": "View moment ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "list-scrolled",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moments-list",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Moment published.",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "11/14/2026 · Everyone · Life",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. Audit content created by typing and publishing through the UI. ",
+          "clipped": false
+        },
+        {
+          "text": "View moment ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moments-category-empty",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moments-category-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Moment published.",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-options",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-options",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 429,
+          "width": 351,
+          "height": 214
+        },
+        "overflow": "auto",
+        "scrollHeight": 212,
+        "clientHeight": 212,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Moment options",
+          "clipped": false
+        },
+        {
+          "text": "Visibility\nEveryone ›",
+          "clipped": false
+        },
+        {
+          "text": "Everyone ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Delete moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "patch-failure",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "post-visibility",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "overflow": "auto",
+        "scrollHeight": 304,
+        "clientHeight": 292,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Who can see this?",
+          "clipped": false
+        },
+        {
+          "text": "Everyone\n✓",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "Friends",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Only me",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Friends are people with a collected reply.",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "category-entry-clipped",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-options",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 429,
+          "width": 351,
+          "height": 214
+        },
+        "overflow": "auto",
+        "scrollHeight": 212,
+        "clientHeight": 212,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Moment options",
+          "clipped": false
+        },
+        {
+          "text": "Visibility\nFriends ›",
+          "clipped": false
+        },
+        {
+          "text": "Friends ›",
+          "clipped": false
+        },
+        {
+          "text": "Category\nLife ›",
+          "clipped": false
+        },
+        {
+          "text": "Life ›",
+          "clipped": false
+        },
+        {
+          "text": "Delete moment",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "moment-delete",
+      "primary": true,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-delete",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 405,
+          "width": 327,
+          "height": 238
+        },
+        "overflow": "auto",
+        "scrollHeight": 236,
+        "clientHeight": 236,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Delete this moment?",
+          "clipped": false
+        },
+        {
+          "text": "This removes the published moment.",
+          "clipped": false
+        },
+        {
+          "text": "Delete",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "delete-failure",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        },
+        {
+          "loaded": true,
+          "src": "uploaded blob"
+        }
+      ],
+      "state": "moment-delete",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 405,
+          "width": 327,
+          "height": 238
+        },
+        "overflow": "auto",
+        "scrollHeight": 236,
+        "clientHeight": 236,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Delete this moment?",
+          "clipped": false
+        },
+        {
+          "text": "This removes the published moment.",
+          "clipped": false
+        },
+        {
+          "text": "Delete",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "deleted-empty",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        }
+      ],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "Deleted.",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "whitespaceDisabled": true,
+    "stickerScroll": {
+      "top": 0,
+      "client": 304,
+      "content": 304,
+      "documentY": 0
+    },
+    "keepPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+    "closePress": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+    "keepRestored": true,
+    "fileCancel": true,
+    "stickerUploaded": true,
+    "textBoundary": true,
+    "composeScroll": {
+      "top": 255,
+      "client": 555,
+      "content": 810,
+      "documentY": 0
+    },
+    "attachmentBoundary": true,
+    "listScroll": {
+      "top": 235,
+      "client": 555,
+      "content": 790,
+      "documentY": 0
+    },
+    "visibilityPatched": true,
+    "categoryEntry": {
+      "box": {
+        "x": 33,
+        "y": 412,
+        "width": 309,
+        "height": 56
+      },
+      "hit": false
+    },
+    "deletePress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+    "deleteCancelToList": true,
+    "optionsEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "post-visibilityEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "moment-deleteEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "discardCleared": true,
+    "moment-stickersEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "moment-visibilityEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "compose-categoryEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "moment-leaveEscape": {
+      "profile": true,
+      "page": true,
+      "dialogs": 0
+    },
+    "backdropClose": true,
+    "reducedMotion": {
+      "animation": "none",
+      "transition": "0s"
+    },
+    "clipped": []
+  },
+  "errors": []
+}

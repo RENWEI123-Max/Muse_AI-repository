@@ -1,0 +1,58 @@
+{
+  "module": "12",
+  "states": [
+    "moments-empty",
+    "moments-list",
+    "moments-category-empty",
+    "moment-empty",
+    "moment-draft",
+    "moment-photo",
+    "moment-stickers",
+    "moment-visibility",
+    "moment-leave",
+    "moment-options",
+    "moment-delete",
+    "moment-saved"
+  ],
+  "count": 12,
+  "originalR20Commit": "04326fa",
+  "originalReportMatchesMomentsBranch": true,
+  "eachStateInOriginalReport": {
+    "moments-empty": true,
+    "moments-list": true,
+    "moments-category-empty": true,
+    "moment-empty": true,
+    "moment-draft": true,
+    "moment-photo": true,
+    "moment-stickers": true,
+    "moment-visibility": true,
+    "moment-leave": true,
+    "moment-options": true,
+    "moment-delete": true,
+    "moment-saved": true
+  },
+  "originalImagesPresent": {
+    "moments-empty": true,
+    "moments-list": true,
+    "moments-category-empty": true,
+    "moment-empty": true,
+    "moment-draft": true,
+    "moment-photo": true,
+    "moment-stickers": true,
+    "moment-visibility": true,
+    "moment-leave": true,
+    "moment-options": true,
+    "moment-delete": true,
+    "moment-saved": true
+  },
+  "staticAcceptanceInherited": {
+    "A1": "original pass; current build separately checked",
+    "A2": "未通过",
+    "A3": "未通过",
+    "A4": "未通过／原轮待 R01/R04；素材现可用，本轮不重做",
+    "A5": "current scan architecture.json",
+    "A6": "original pass; NOT rerun",
+    "A7": "original pass; current screenshots separately verified",
+    "A8": "original pass; current evidence separately recorded"
+  }
+}

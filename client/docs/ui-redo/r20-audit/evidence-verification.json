@@ -1,0 +1,202 @@
+{
+  "fixtureOnly": true,
+  "overallAcceptance": "未通过／待 Smith",
+  "fourAcceptanceRows": {
+    "静态": "未通过／待 Smith",
+    "流程": "未通过／待 Smith",
+    "效果": "未通过／待 Smith",
+    "滑动与文案": "未通过／待 Smith"
+  },
+  "testResult": "4 passed",
+  "screenshots": 100,
+  "primaryScreenshots": 48,
+  "pngDimensionsCRCAndInflation": "valid",
+  "groups": [
+    {
+      "group": "667-en",
+      "records": 25,
+      "screenshots": 25,
+      "primaryStates": [
+        "moments-empty",
+        "moments-list",
+        "moments-category-empty",
+        "moment-empty",
+        "moment-draft",
+        "moment-photo",
+        "moment-stickers",
+        "moment-visibility",
+        "moment-leave",
+        "moment-options",
+        "moment-delete",
+        "moment-saved"
+      ],
+      "composeScroll": {
+        "top": 255,
+        "client": 555,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 235,
+        "client": 555,
+        "content": 790,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "horizontalClippingObserved": [],
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "667-ko",
+      "records": 25,
+      "screenshots": 25,
+      "primaryStates": [
+        "moments-empty",
+        "moments-list",
+        "moments-category-empty",
+        "moment-empty",
+        "moment-draft",
+        "moment-photo",
+        "moment-stickers",
+        "moment-visibility",
+        "moment-leave",
+        "moment-options",
+        "moment-delete",
+        "moment-saved"
+      ],
+      "composeScroll": {
+        "top": 255,
+        "client": 555,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 193,
+        "client": 555,
+        "content": 748,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "horizontalClippingObserved": [],
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-en",
+      "records": 25,
+      "screenshots": 25,
+      "primaryStates": [
+        "moments-empty",
+        "moments-list",
+        "moments-category-empty",
+        "moment-empty",
+        "moment-draft",
+        "moment-photo",
+        "moment-stickers",
+        "moment-visibility",
+        "moment-leave",
+        "moment-options",
+        "moment-delete",
+        "moment-saved"
+      ],
+      "composeScroll": {
+        "top": 110,
+        "client": 700,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 90,
+        "client": 700,
+        "content": 790,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "horizontalClippingObserved": [],
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-ko",
+      "records": 25,
+      "screenshots": 25,
+      "primaryStates": [
+        "moments-empty",
+        "moments-list",
+        "moments-category-empty",
+        "moment-empty",
+        "moment-draft",
+        "moment-photo",
+        "moment-stickers",
+        "moment-visibility",
+        "moment-leave",
+        "moment-options",
+        "moment-delete",
+        "moment-saved"
+      ],
+      "composeScroll": {
+        "top": 110,
+        "client": 700,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 48,
+        "client": 700,
+        "content": 748,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "horizontalClippingObserved": [],
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    }
+  ],
+  "scriptsUnchanged": true,
+  "escapeProtectionPreserved": true,
+  "staticLegacyGaps": [
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "realBackendVerified": false,
+  "fullTranslationVerified": false,
+  "build": "build-final.log: exit 0 (shell command result)"
+}

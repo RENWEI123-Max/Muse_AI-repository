@@ -1,0 +1,23 @@
+{
+  "scope": "Pre-commit snapshot, not final billing; excludes approval guardian and subsequent finish/final-response tokens",
+  "snapshotUTC": "2026-11-14T15:00:22.043047+00:00",
+  "sessions": {
+    "root": {
+      "input_tokens": 6703270,
+      "cached_input_tokens": 6600448,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 27027,
+      "reasoning_output_tokens": 5740,
+      "total_tokens": 6730297
+    },
+    "reviewer": {
+      "input_tokens": 215077,
+      "cached_input_tokens": 184576,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1071,
+      "reasoning_output_tokens": 187,
+      "total_tokens": 216148
+    }
+  },
+  "combinedTotalTokens": 6946445
+}
