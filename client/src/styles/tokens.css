@@ -1,0 +1,349 @@
+/* Generated from maugo-file-full.json, version 2421258509127695554. See R02-result.md. */
+:root {
+  /* 419 occurrences; 节点用途：39:2308 /compose-sent · 写信 / 发送后等待；39:2311 /compose-sent · 写信 / 发送后等待/app-view；39:2373 /compose-sent · 写信 / 发送后等待/app-view/header */
+  --bg-page: #0D1713;
+  /* 33 occurrences; 节点用途：35:3533 /home-ready · 首页 / 三封来信；35:3647 /home-empty · 首页 / 无符合条件的信件；35:3757 /home-response · 首页 / 回应到达 */
+  --bg-scene: #090E0E;
+  /* 20 occurrences; 节点用途：35:2414 /welcome · 欢迎 / 未登录；35:2470 /terms-unchecked · 协议 / 未勾选；35:2564 /terms-checked · 协议 / 已勾选 */
+  --bg-auth: #081017;
+  /* 61 occurrences; 节点用途：43:3334 /home-ready · 首页 / 三封来信/Main navigation；43:3367 /home-empty · 首页 / 无符合条件的信件/Main navigation；43:3400 /home-response · 首页 / 回应到达/Main navigation */
+  --bg-nav: #0D1812;
+  /* 46 occurrences; 节点用途：29:10301 /chat-details · 对话设置 / 已解锁/Section/Container/Container:margin/Container；29:10328 /chat-details · 对话设置 / 已解锁/Section/Container/Container:margin/Container；29:10436 /chat-details-waiting · 对话设置 / 未回复锁定/Section/Container/Container:margin/Container */
+  --bg-card: #1B2A20;
+  /* 37 occurrences; 节点用途：36:2012 /filters-free · 筛选 / 未开通 Pass/sheet；36:2184 /filters-active · 筛选 / Pass 生效/sheet；36:2352 /filters-selected · 筛选 / 已选择条件/sheet */
+  --bg-sheet: #18211E;
+  /* 58 occurrences; 节点用途：35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password；35:2733 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email */
+  --bg-input: #202F24;
+  /* 38 occurrences; 节点用途：29:8596 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD；29:8605 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 550 diamonds for 4.99 USD；29:8614 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 1200 diamonds for 9.99 USD */
+  --bg-tile: #222D25;
+  /* 30 occurrences; 节点用途：29:13686 /profile-empty · 个人页 / 尚未上传照片/Section/Header/Container/Button - My diamonds；29:13689 /profile-empty · 个人页 / 尚未上传照片/Section/Header/Container/Button；29:13844 /profile-content · 个人页 / 已有形象照/Section/Header/Container/Button - My diamonds */
+  --bg-chip: #23362A;
+  /* 55 occurrences; 节点用途：29:5854 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Image；29:5868 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Image；29:5880 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Image */
+  --bg-media-btn: #24312A;
+  /* 26 occurrences; 节点用途：36:2584 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/label/motion-switch；36:2587 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/label/trail-switch；36:2767 /bird-male · 信使外观 / 男鸟/sheet/sheet-content/label/motion-switch */
+  --switch-off-track: #35483B;
+  /* 26 occurrences; 节点用途：53:2014 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/label/motion-switch/Off；53:2015 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/label/trail-switch/Off；53:2016 /bird-male · 信使外观 / 男鸟/sheet/sheet-content/label/motion-switch/Off */
+  --switch-off-thumb: #AFBEB3;
+  /* 779 occurrences; 节点用途：35:2416 /welcome · 欢迎 / 未登录/announcement/Tap a bird to open a letter.；35:2428 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/h1/Welcome to MauGo；35:2472 /terms-unchecked · 协议 / 未勾选/announcement/Tap a bird to open a letter. */
+  --text-primary: #E4EFD9;
+  /* 98 occurrences; 节点用途：35:2434 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin/Continue with email；35:2541 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue；35:2635 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue */
+  --text-on-accent: #0A1406;
+  /* 61 occurrences; 节点用途：35:2677 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/Email address；35:2680 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/Password；35:2732 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/Email address */
+  --text-label: #BACDB2;
+  /* 15 occurrences; 节点用途：35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. */
+  --text-hint: #849284;
+  /* 60 occurrences; 节点用途：39:2372 /compose-sent · 写信 / 发送后等待/app-view/div/p/Sample conversations · Stored on this device；29:5652 /inbox-empty · 消息 / 从未收到消息/Section/Container/Paragraph/Sample conversations · Stored on this device；29:5747 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Paragraph/Sample conversations · Stored on this device */
+  --text-note: #728571;
+  /* 60 occurrences; 节点用途：39:2325 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/small/19:32；39:2327 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/small/Awaiting reply；39:2340 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/small/19:02 */
+  --text-time: #8CA094;
+  /* 156 occurrences; 节点用途：29:6819 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Button/Text/›；29:6824 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Button/Text/›；29:6829 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Button/Text/› */
+  --text-chevron: #7C927C;
+  /* 2 occurrences; 节点用途：34:2026 /settings-home · 设置 / 主页面/app-view/div/logout/Sign out；39:3051 /signout-confirm · 退出登录 / 确认/app-view/div/logout/Sign out */
+  --text-danger: #D9A48E;
+  /* 2 occurrences; 节点用途：34:2028 /settings-home · 设置 / 主页面/app-view/div/delete-account-settings/Delete account；39:3053 /signout-confirm · 退出登录 / 确认/app-view/div/delete-account-settings/Delete account */
+  --text-danger-delete: #CF9E8E;
+  /* 44 occurrences; 节点用途：56:1957 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/Pack heading/Diamond amount/100；56:1965 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 550 diamonds for 4.99 USD/Pack heading/Diamond amount/550；56:1973 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 1200 diamonds for 9.99 USD/Pack heading/Diamond amount/1,200 */
+  --text-diamond: #E6D0EF;
+  /* 514 occurrences; 节点用途：35:2631 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/label/accept-terms；35:3041 /verify-empty · 验证码 / 待输入/auth-overlay/auth-panel/div/div/✉ */
+  --accent: #B5FA70;
+  /* 411 occurrences; 节点用途：35:3548 /home-ready · 首页 / 三封来信/scene/div/✦；35:3550 /home-ready · 首页 / 三封来信/scene/div/✦；35:3552 /home-ready · 首页 / 三封来信/scene/div/✦ */
+  --sparkle: #E5FFB3;
+  /* 691 occurrences; 节点用途：I43:3334;43:1929 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1931 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Group/Vector；I43:3334;43:1932 /home-ready · 首页 / 三封来信/Main navigation/inbox/h2d-svg-use-0/Group/Group/Group/Vector */
+  --icon-muted: #849288;
+  /* 283 occurrences; 节点用途：I43:3334;43:1918 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1919 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Vector；I43:3334;43:1922 /home-ready · 首页 / 三封来信/Main navigation/home/h2d-svg-use-0/Group/Group/Group/Vector */
+  --icon-ink: #080D0A;
+  /* 18 occurrences; 节点用途：35:2473 /terms-unchecked · 协议 / 未勾选/auth-overlay；35:2567 /terms-checked · 协议 / 已勾选/auth-overlay；35:2661 /signin-empty · 邮箱登录 / 空表单/auth-overlay */
+  --bg-auth-overlay: rgb(12 22 18 / 0.92);
+  /* 21 occurrences; 节点用途：29:7175 /inbox-options · 会话 / 更多操作/Text；29:8571 /reply-topup · 回信 / 进入钻石补充/Text；29:10658 /chat-remark · 对话设置 / 备注名/Text */
+  --scrim: rgb(0 0 0 / 0.467);
+  /* 19 occurrences; 节点用途：29:7922 /reply-payment · 回信 / 10 次用完，付费确认/Container；29:8098 /reply-shortage · 回信 / 钻石不足/Container；29:11069 /chat-clear-confirm · 聊天记录 / 清空确认/Container */
+  --scrim-dialog: rgb(3 8 5 / 0.79);
+  /* 37 occurrences; 节点用途：36:2013 /filters-free · 筛选 / 未开通 Pass/sheet/div；36:2185 /filters-active · 筛选 / Pass 生效/sheet/div；36:2353 /filters-selected · 筛选 / 已选择条件/sheet/div */
+  --grabber: rgb(255 255 255 / 0.157);
+  /* 6 occurrences; 节点用途：34:1922 /settings-home · 设置 / 主页面/app-view/div/div；34:1958 /settings-home · 设置 / 主页面/app-view/div/div；34:1986 /settings-home · 设置 / 主页面/app-view/div/div */
+  --hairline-card: rgb(255 255 255 / 0.01);
+  /* 206 occurrences; 节点用途：29:5631 /inbox-empty · 消息 / 从未收到消息/Section/Header；29:5719 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header；29:5814 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Header */
+  --hairline: rgb(255 255 255 / 0.027);
+  /* 130 occurrences; 节点用途：35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password；35:2733 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email */
+  --hairline-strong: rgb(255 255 255 / 0.043);
+  /* 26 occurrences; 节点用途：35:3407 /apple-private · Apple / 隐藏邮箱/auth-overlay/auth-panel/div/div/apple-hide；35:3462 /apple-share · Apple / 共享邮箱/auth-overlay/auth-panel/div/div/apple-share；36:2535 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/appearance-genders/Choose female bird */
+  --stroke-accent: 1px solid #B5FA70;
+  /* 23 occurrences; 节点用途：29:6864 /inbox-drawer · 消息 / 右侧菜单/Container/Dialog - Inbox tools/Container/Container/Button；29:7374 /inbox-hidden · 隐藏会话 / 有记录/Section/Container/Container/Button；29:10298 /chat-details · 对话设置 / 已解锁/Section/Container/Container/Container/Button */
+  --stroke-accent-subtle: 1px solid rgb(181 250 112 / 0.23);
+  /* 58 occurrences; 节点用途：39:2322 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Today I found a quiet little bookshop.；39:2337 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Thank you for listening. Today feels a little lighter.；39:2352 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Some songs feel like little letters. What have you been listening to? */
+  --text-conversation-preview: #86978C;
+  /* 58 occurrences; 节点用途：39:2329 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · Your sent letter/•••；39:2344 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · A cup of tea/•••；39:2357 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/Conversation options · Ocean in my headphones/••• */
+  --text-conversation-options: #788F80;
+  /* 45 occurrences; 节点用途：29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13725 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 */
+  --text-profile-stat: #F1F4ED;
+  /* 45 occurrences; 节点用途：29:13720 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/Following；29:13723 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/Followers；29:13726 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/Likes */
+  --text-profile-stat-label: #93AA8A;
+  /* 44 occurrences; 节点用途：56:1959 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/A little boost；56:1967 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 550 diamonds for 4.99 USD/Most popular；56:1975 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 1200 diamonds for 9.99 USD/More possibilities */
+  --text-diamond-pack-description: #B6C6A5;
+  /* 43 occurrences; 节点用途：35:2492 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/h2/1. About this agreement；35:2496 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/h2/2. Your account；35:2500 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/h2/3. Permission to use MauGo */
+  --text-legal-heading: #C1DBB0;
+  /* 40 occurrences; 节点用途：35:2421 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-back/‹；35:2425 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-language/한국어；35:2477 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-back/‹ */
+  --text-auth-navigation: #B8CCB0;
+  /* 40 occurrences; 节点用途：29:13763 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Small/0；29:13927 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Button/Small/1；29:14293 /avatar-gallery · 头像 / 已上传与空槽位/Section/Container/Container/Button/Small/0 */
+  --text-profile-count: #91A48A;
+  /* 36 occurrences; 节点用途：29:8911 /chat-open · 对话 / 已回复，可继续交流/Section/Container/Form/Container/Button/Hold to talk；29:9033 /chat-draft · 对话 / 正在编辑/Section/Container/Form/Container/Button/Hold to talk；29:9161 /chat-sent · 对话 / 消息已发送/Section/Container/Form/Container/Button/Hold to talk */
+  --text-chat-tool: #9EB994;
+  /* 33 occurrences; 节点用途：35:2494 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/p/MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.；35:2498 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/p/Use accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.；35:2502 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/p/MauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand. */
+  --text-legal-body: #AFC2A5;
+  /* 37 occurrences; 节点用途：36:2018 /filters-free · 筛选 / 未开通 Pass/sheet/div/close-sheet/×；36:2190 /filters-active · 筛选 / Pass 生效/sheet/div/close-sheet/×；36:2358 /filters-selected · 筛选 / 已选择条件/sheet/div/close-sheet/× */
+  --text-sheet-close: #8E9696;
+  /* 30 occurrences; 节点用途：29:13688 /profile-empty · 个人页 / 尚未上传照片/Section/Header/Container/Button - My diamonds/0；29:13690 /profile-empty · 个人页 / 尚未上传照片/Section/Header/Container/Button/Filter Pass；29:13846 /profile-content · 个人页 / 已有形象照/Section/Header/Container/Button - My diamonds/0 */
+  --text-profile-wallet: #B2DA9C;
+  /* 30 occurrences; 节点用途：29:13713 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Paragraph/24 · Libra · Shanghai；29:13715 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Paragraph/Collecting little stories along the way.；29:13871 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Paragraph/24 · Libra · Shanghai */
+  --text-profile-bio: #8BA381;
+  /* 30 occurrences; 节点用途：29:13733 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Visitors；29:13735 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Text/›；29:13891 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Button/Visitors */
+  --text-profile-visitors: #A8B89A;
+  /* 30 occurrences; 节点用途：29:13741 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Section/Container/Button/Everyone；29:13747 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Section/Container/Button/›；29:13899 /profile-content · 个人页 / 已有形象照/Section/Container/Section/Container/Button/Everyone */
+  --text-profile-visibility: #859D80;
+  /* 30 occurrences; 节点用途：29:13761 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Text/My letters；29:13768 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button/Text/My bird appearance；29:13925 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Button/Text/My letters */
+  --text-profile-menu: #9FB593;
+  /* 62 occurrences; 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2540 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue；35:2634 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/terms-continue */
+  --grad-primary: linear-gradient(to right, #BDFF81 0%, #B0FB61 100%);
+  /* 16 occurrences; 节点尺寸 327×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:11369 /wallpaper-preview · 背景 / 大图预览/Section/Container/Container/Button；29:11608 /wallpaper-colors · 背景 / 纯色选择/Section/Container/Container/Button；29:12085 /report-empty · 举报 / 原因表单/Section/Container/Container/Button */
+  --grad-primary-diagonal-w327: linear-gradient(162.53deg, #BDFF81 8.49%, #B0FB61 91.51%);
+  /* 7 occurrences; 节点尺寸 277×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:12466 /block-confirm · 屏蔽 / 二次确认/Container/Dialog/Container/Button:margin/Button */
+  --grad-primary-diagonal-w277: linear-gradient(159.61deg, #BDFF81 8.49%, #B0FB61 91.51%);
+  /* 6 occurrences; 节点尺寸 143.5×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:12981 /person-profile · 用户资料 / 内容完整/Section/Container/Container/Button；29:13088 /person-waiting · 用户资料 / 尚未回复/Section/Container/Container/Button；29:13212 /person-followed · 用户资料 / 已关注/Section/Container/Container/Button */
+  --grad-primary-diagonal-w143-5: linear-gradient(144.35deg, #BDFF81 8.49%, #B0FB61 91.51%);
+  /* 6 occurrences; 节点尺寸 309×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button；29:14405 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container/Button；29:14631 /avatar-remove · 头像 / 移除确认/Dialog/Container/Container/Button */
+  --grad-primary-diagonal-w309: linear-gradient(161.58deg, #BDFF81 8.49%, #B0FB61 91.51%);
+  /* 1 occurrences; 节点尺寸 165×48；归一化角度 115°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 6.534001562030767e-09, "y": 0.2668461526004954}, {"x": 1.0000000222642116, "y": 0.7331538245457078}, {"x": -0.4663076654112108, "y": 1.2668461683307055}]；29:12262 /report-saved · 举报 / 保存结果/Container/Button */
+  --grad-primary-diagonal-w165: linear-gradient(148.04deg, #BDFF81 8.49%, #B0FB61 91.51%);
+  /* 228 occurrences; 节点尺寸 44×44；归一化角度 135°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.0, "y": 0.0}, {"x": 1.0, "y": 1.0}, {"x": -1.0, "y": 1.0}]；29:5620 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Bird appearance；29:5625 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Find your letters；29:5708 /inbox-waiting · 消息 / 已寄出，尚无回信/Header/Container/Button - Bird appearance */
+  --grad-icon-btn: linear-gradient(135deg, #1B2121 0%, #131818 100%);
+  /* 46 occurrences; 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:3621 /home-ready · 首页 / 三封来信/header/div/magic；35:3626 /home-ready · 首页 / 三封来信/header/div/settings；35:3731 /home-empty · 首页 / 无符合条件的信件/header/div/magic */
+  --grad-icon-btn-horizontal: linear-gradient(to right, #1B2121 0%, #131818 100%);
+  /* 17 occurrences; 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:3568 /home-ready · 首页 / 三封来信/actions/refresh；35:3678 /home-empty · 首页 / 无符合条件的信件/actions/refresh；35:3806 /home-response · 首页 / 回应到达/actions/refresh */
+  --grad-secondary: linear-gradient(to right, #1C2223 0%, #171D1E 100%);
+  /* 1 occurrences; 节点尺寸 150×48；归一化角度 120°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 1.1566712143640245e-08, "y": 0.21132485739622453}, {"x": 1.0000000205408277, "y": 0.7886751214046419}, {"x": -0.5773502524417053, "y": 1.2113248663703402}]；29:12256 /report-saved · 举报 / 保存结果/Container/Button */
+  --grad-secondary-diagonal: linear-gradient(151deg, #1C2223 7.74%, #171D1E 92.26%);
+  /* 9 occurrences; 渐变 handle=[{"x": 0.0, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.0, "y": 1.0}]；35:2397 /cache-confirm · 缓存 / 清理确认/payment-overlay/payment-dialog；39:2849 /pin-locked · 应用锁 / 输入 PIN/payment-overlay/payment-dialog；39:2929 /pin-wrong · 应用锁 / PIN 错误/payment-overlay/payment-dialog */
+  --grad-card: linear-gradient(to right, #253229 0%, #17221C 100%);
+  /* 3 occurrences; 节点尺寸 327×238；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:12881 /unblock-confirm · 解除屏蔽 / 确认/Container/Dialog；11:1130 /card-remove · 已上传照片 / 移除确认/Container/Dialog；29:17743 /moment-delete · 动态 / 删除确认/Container/Dialog */
+  --grad-card-diagonal-h238: linear-gradient(153deg, #253229 6.17%, #17221C 93.83%);
+  /* 3 occurrences; 节点尺寸 327×258；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog；29:12459 /block-confirm · 屏蔽 / 二次确认/Container/Dialog；29:14636 /avatar-remove · 头像 / 移除确认/Container/Dialog */
+  --grad-card-diagonal-h258: linear-gradient(151.08deg, #253229 6.17%, #17221C 93.83%);
+  /* 1 occurrences; 节点尺寸 327×294；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:15619 /profile-likes · 个人页 / 获赞汇总/Container/Dialog */
+  --grad-card-diagonal-h294: linear-gradient(147.81deg, #253229 6.17%, #17221C 93.83%);
+  /* 1 occurrences; 节点尺寸 327×322；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:17466 /moment-leave · 发布动态 / 离开前保留草稿/Container/Dialog */
+  --grad-card-diagonal-h322: linear-gradient(145.41deg, #253229 6.17%, #17221C 93.83%);
+  /* 1 occurrences; 节点尺寸 327×341；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog */
+  --grad-card-diagonal-h341: linear-gradient(143.86deg, #253229 6.17%, #17221C 93.83%);
+  /* 1 occurrences; 节点尺寸 327×391.5；归一化角度 145°；换成别的宽高时不能直接复用，要用同一换算规则从 handles 重算；渐变 handle=[{"x": 0.1498962351829276, "y": -1.5345269499533742e-10}, {"x": 0.8501037648170722, "y": 1.0000000001534528}, {"x": -0.8501037651239778, "y": 0.7002075294806919}]；29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog */
+  --grad-card-diagonal-h391-5: linear-gradient(140.03deg, #253229 6.17%, #17221C 93.83%);
+  /* 23 occurrences; 渐变 handle=[{"x": 0.5, "y": 0.5}, {"x": 1.0, "y": 0.5}, {"x": 0.5, "y": 1.0}]；35:3533 /home-ready · 首页 / 三封来信；35:3647 /home-empty · 首页 / 无符合条件的信件；35:3757 /home-response · 首页 / 回应到达 */
+  --bg-scene-glow: radial-gradient(ellipse closest-side at 50% 50%, rgb(16 32 23 / 0.4) 0%, rgb(0 0 0 / 0) 100%);
+  /* 154 occurrences; 文字：Continue with email、Continue with Apple、Agree & continue、Sign in；35:2434 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin/Continue with email；35:2438 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin/Continue with Apple；35:2541 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue */
+  --font-button: 600 16px/22px "Fredoka";
+  /* 154 occurrences; 文字：Continue with email、Continue with Apple、Agree & continue、Sign in；35:2434 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin/Continue with email；35:2438 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin/Continue with Apple；35:2541 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue/Agree & continue */
+  --font-button-letter-spacing: 0px;
+  /* 18 occurrences; 文字：Before you continue、Welcome back；35:2484 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2578 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2672 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/h1/Welcome back */
+  --font-h1: 500 24px/32px "Fredoka";
+  /* 18 occurrences; 文字：Before you continue、Welcome back；35:2484 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2578 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/h1/Before you continue；35:2672 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/h1/Welcome back */
+  --font-h1-letter-spacing: -0.3px;
+  /* 58 occurrences; 文字：Hidden conversations、Your sent letter、Chat details；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations；29:8678 /chat-waiting · 对话 / 等待对方回复/Section/Header/Heading 1/Your sent letter */
+  --font-title-page: 550 17px/24px "Fredoka";
+  /* 58 occurrences; 文字：Hidden conversations、Your sent letter、Chat details；29:7365 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Heading 1/Hidden conversations；29:7451 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Heading 1/Hidden conversations；29:8678 /chat-waiting · 对话 / 等待对方回复/Section/Header/Heading 1/Your sent letter */
+  --font-title-page-letter-spacing: -0.3px;
+  /* 31 occurrences; 文字：Inbox、Settings、Language、언어、Privacy；39:2375 /compose-sent · 写信 / 发送后等待/app-view/header/h1/Inbox；34:2035 /settings-home · 设置 / 主页面/app-view/header/h1/Settings；34:2075 /language-en · 语言 / English/app-view/header/h1/Language */
+  --font-title-page-medium: 500 17px/24px "Fredoka";
+  /* 31 occurrences; 文字：Inbox、Settings、Language、언어、Privacy；39:2375 /compose-sent · 写信 / 发送后等待/app-view/header/h1/Inbox；34:2035 /settings-home · 设置 / 主页面/app-view/header/h1/Settings；34:2075 /language-en · 语言 / English/app-view/header/h1/Language */
+  --font-title-page-medium-letter-spacing: -0.3px;
+  /* 60 occurrences; 文字：Passing breeze、0；29:13709 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button - Edit profile/Bold Text/Passing breeze；29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 */
+  --font-title-sheet: 550 18px/1.21 "Fredoka";
+  /* 60 occurrences; 文字：Passing breeze、0；29:13709 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Button - Edit profile/Bold Text/Passing breeze；29:13719 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0；29:13722 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button/0 */
+  --font-title-sheet-letter-spacing: 0px;
+  /* 21 occurrences; 文字：Conversation options、Diamonds、Remark name、Report or block、Photo；29:7181 /inbox-options · 会话 / 更多操作/Dialog/Container/Heading 2/Conversation options；29:8577 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Heading 2/Diamonds；29:10664 /chat-remark · 对话设置 / 备注名/Dialog/Container/Heading 2/Remark name */
+  --font-title-sheet-fixed: 550 18px/24px "Fredoka";
+  /* 21 occurrences; 文字：Conversation options、Diamonds、Remark name、Report or block、Photo；29:7181 /inbox-options · 会话 / 更多操作/Dialog/Container/Heading 2/Conversation options；29:8577 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Heading 2/Diamonds；29:10664 /chat-remark · 对话设置 / 备注名/Dialog/Container/Heading 2/Remark name */
+  --font-title-sheet-fixed-letter-spacing: -0.3px;
+  /* 54 occurrences; 文字：Your sent letter 、A cup of tea 、Ocean in my headphones 、Seaside moments 、Window-side friend ；29:5738 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button/Text/Bold Text/Your sent letter；29:5857 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/A cup of tea；29:5871 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/Ocean in my headphones */
+  --font-title-card: 550 15px/21px "Fredoka";
+  /* 54 occurrences; 文字：Your sent letter 、A cup of tea 、Ocean in my headphones 、Seaside moments 、Window-side friend ；29:5738 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button/Text/Bold Text/Your sent letter；29:5857 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/A cup of tea；29:5871 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button/Text/Bold Text/Ocean in my headphones */
+  --font-title-card-letter-spacing: 0px;
+  /* 283 occurrences; 文字：you@example.com、Enter your password、reader@example.com、invalid、Choose a nickname；53:1956 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email/Placeholder；53:1957 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password/Placeholder；53:1958 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email/Field value */
+  --font-body: 400 13px/20px "Fredoka";
+  /* 283 occurrences; 文字：you@example.com、Enter your password、reader@example.com、invalid、Choose a nickname；53:1956 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email/Placeholder；53:1957 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password/Placeholder；53:1958 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email/Field value */
+  --font-body-letter-spacing: 0px;
+  /* 121 occurrences; 文字：I have read and agree to the Terms of Use and EULA.、Email address、Password；35:2539 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/label/span/I have read and agree to the Terms of Use and EULA.；35:2633 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/label/span/I have read and agree to the Terms of Use and EULA.；35:2677 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/Email address */
+  --font-body-sm: 400 12px/20px "Fredoka";
+  /* 121 occurrences; 文字：I have read and agree to the Terms of Use and EULA.、Email address、Password；35:2539 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/label/span/I have read and agree to the Terms of Use and EULA.；35:2633 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/div/label/span/I have read and agree to the Terms of Use and EULA.；35:2677 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/Email address */
+  --font-body-sm-letter-spacing: 0px;
+  /* 80 occurrences; 文字：Thank you for sharing your little story.、Today I found a quiet little bookshop.、Thank you for listening. Today feels a little lighter.、Some songs feel like little letters. What have you been listening to?；36:3352 /letter-waiting · 来信详情 / 已回应，等待回信/note-panel/conversation/reply-history/div/span/Thank you for sharing your little story.；36:3484 /letter-replied · 来信详情 / 已收到回复/note-panel/conversation/reply-history/div/span/Thank you for sharing your little story.；39:2322 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Today I found a quiet little bookshop. */
+  --font-body-sm-18: 400 12px/18px "Fredoka";
+  /* 80 occurrences; 文字：Thank you for sharing your little story.、Today I found a quiet little bookshop.、Thank you for listening. Today feels a little lighter.、Some songs feel like little letters. What have you been listening to?；36:3352 /letter-waiting · 来信详情 / 已回应，等待回信/note-panel/conversation/reply-history/div/span/Thank you for sharing your little story.；36:3484 /letter-replied · 来信详情 / 已收到回复/note-panel/conversation/reply-history/div/span/Thank you for sharing your little story.；39:2322 /compose-sent · 写信 / 发送后等待/app-view/div/chat-list/div/button/span/span/Today I found a quiet little bookshop. */
+  --font-body-sm-18-letter-spacing: 0px;
+  /* 79 occurrences; 文字：Read everyday stories. Share your own.、Read the terms before registering or signing in.、MauGo provides a space to share letters, messages and moments. These T、Use accurate information, keep your sign-in details secure and do not 、MauGo grants a personal, limited, non-exclusive and non-transferable l；35:2432 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/Read everyday stories. Share your own.；35:2486 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/p/Read the terms before registering or signing in.；35:2494 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/p/MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features. */
+  --font-body-sm-21: 400 12px/21px "Fredoka";
+  /* 79 occurrences; 文字：Read everyday stories. Share your own.、Read the terms before registering or signing in.、MauGo provides a space to share letters, messages and moments. These T、Use accurate information, keep your sign-in details secure and do not 、MauGo grants a personal, limited, non-exclusive and non-transferable l；35:2432 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/Read everyday stories. Share your own.；35:2486 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/p/Read the terms before registering or signing in.；35:2494 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA/article/p/MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features. */
+  --font-body-sm-21-letter-spacing: 0px;
+  /* 179 occurrences; 文字：한국어、Show password；35:2425 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-language/한국어；35:2481 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-language/한국어；35:2575 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/auth-language/한국어 */
+  --font-caption: 400 11px/1.21 "Fredoka";
+  /* 179 occurrences; 文字：한국어、Show password；35:2425 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-language/한국어；35:2481 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-language/한국어；35:2575 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/auth-language/한국어 */
+  --font-caption-letter-spacing: 0px;
+  /* 42 occurrences; 文字：Choose a day pass to unlock age and city filters.、Filter Pass active until Oct 20、My letters、My bird appearance；36:2066 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/filter-pass-status/Choose a day pass to unlock age and city filters.；36:2236 /filters-active · 筛选 / Pass 生效/sheet/sheet-content/filter-pass-status/Filter Pass active until Oct 20；36:2404 /filters-selected · 筛选 / 已选择条件/sheet/sheet-content/filter-pass-status/Filter Pass active until Oct 20 */
+  --font-caption-20: 400 11px/20px "Fredoka";
+  /* 42 occurrences; 文字：Choose a day pass to unlock age and city filters.、Filter Pass active until Oct 20、My letters、My bird appearance；36:2066 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/filter-pass-status/Choose a day pass to unlock age and city filters.；36:2236 /filters-active · 筛选 / Pass 生效/sheet/sheet-content/filter-pass-status/Filter Pass active until Oct 20；36:2404 /filters-selected · 筛选 / 已选择条件/sheet/sheet-content/filter-pass-status/Filter Pass active until Oct 20 */
+  --font-caption-20-letter-spacing: 0px;
+  /* 42 occurrences; 文字：Every connection starts with a little hello.、Woman · 24 · Seoul；29:5650 /inbox-empty · 消息 / 从未收到消息/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello.；29:6538 /inbox-friends-empty · 好友 / 空状态/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello.；29:7016 /inbox-search-empty · 消息 / 搜索无结果/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello. */
+  --font-caption-21: 400 11px/21px "Fredoka";
+  /* 42 occurrences; 文字：Every connection starts with a little hello.、Woman · 24 · Seoul；29:5650 /inbox-empty · 消息 / 从未收到消息/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello.；29:6538 /inbox-friends-empty · 好友 / 空状态/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello.；29:7016 /inbox-search-empty · 消息 / 搜索无结果/Section/Container/Container/Container/Paragraph/Every connection starts with a little hello. */
+  --font-caption-21-letter-spacing: 0px;
+  /* 28 occurrences; 文字：Tell us about inappropriate content、Stop contact from this person；36:3642 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-report/small/Tell us about inappropriate content；36:3649 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-block/small/Stop contact from this person；29:12015 /safety-choice · 安全操作 / 举报或屏蔽/Dialog/Container/Container/Button/Small/Tell us about inappropriate content */
+  --font-caption-18: 400 11px/18px "Fredoka";
+  /* 28 occurrences; 文字：Tell us about inappropriate content、Stop contact from this person；36:3642 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-report/small/Tell us about inappropriate content；36:3649 /letter-safety · 来信详情 / 举报或屏蔽/sheet/sheet-content/div/safety-block/small/Stop contact from this person；29:12015 /safety-choice · 安全操作 / 举报或屏蔽/Dialog/Container/Container/Button/Small/Tell us about inappropriate content */
+  --font-caption-18-letter-spacing: 0px;
+  /* 15 occurrences; 文字：Tap a bird. Open a little story.、No letters yet. Try a wider search.；35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. */
+  --font-hint: 400 11px/16px "Fredoka";
+  /* 15 occurrences; 文字：Tap a bird. Open a little story.、No letters yet. Try a wider search.；35:3564 /home-ready · 首页 / 三封来信/scene-hint/Tap a bird. Open a little story.；35:3672 /home-empty · 首页 / 无符合条件的信件/scene-hint/No letters yet. Try a wider search.；35:3788 /home-response · 首页 / 回应到达/scene-hint/Tap a bird. Open a little story. */
+  --font-hint-letter-spacing: 0.4px;
+  /* 181 occurrences; 文字： · 、Flight preview、Replay；35:2447 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/span/·；36:2579 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/span/Flight preview；36:2581 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/preview-flight/Replay */
+  --font-micro: 400 10px/1.21 "Fredoka";
+  /* 181 occurrences; 文字： · 、Flight preview、Replay；35:2447 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/span/·；36:2579 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/span/Flight preview；36:2581 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div/preview-flight/Replay */
+  --font-micro-letter-spacing: 0px;
+  /* 73 occurrences; 文字：At least 8 characters, with a letter and a number.；35:2861 /signup-empty · 注册 / 空表单/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2927 /signup-filled · 注册 / 已填写/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2993 /signup-mismatch · 注册 / 密码不一致/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number. */
+  --font-micro-17: 400 10px/17px "Fredoka";
+  /* 73 occurrences; 文字：At least 8 characters, with a letter and a number.；35:2861 /signup-empty · 注册 / 空表单/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2927 /signup-filled · 注册 / 已填写/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number.；35:2993 /signup-mismatch · 注册 / 密码不一致/auth-overlay/auth-panel/div/auth-form/p/At least 8 characters, with a letter and a number. */
+  --font-micro-17-letter-spacing: 0px;
+  /* 40 occurrences; 文字：Starter pack、A little boost、+10% bonus、Most popular、+20% bonus；56:1958 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/Pack heading/Starter pack；56:1959 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/A little boost；56:1966 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 550 diamonds for 4.99 USD/Pack heading/+10% bonus */
+  --font-micro-13: 400 10px/13px "Fredoka";
+  /* 40 occurrences; 文字：Starter pack、A little boost、+10% bonus、Most popular、+20% bonus；56:1958 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/Pack heading/Starter pack；56:1959 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/A little boost；56:1966 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 550 diamonds for 4.99 USD/Pack heading/+10% bonus */
+  --font-micro-13-letter-spacing: 0px;
+  /* 31 occurrences; 文字：0、 / 200、76、28；39:2034 /compose-empty · 写信 / 空白/composer-panel/div/letter-count/0；39:2035 /compose-empty · 写信 / 空白/composer-panel/div// 200；39:2157 /compose-draft · 写信 / 已填写/composer-panel/div/letter-count/76 */
+  --font-micro-16: 400 10px/16px "Fredoka";
+  /* 31 occurrences; 文字：0、 / 200、76、28；39:2034 /compose-empty · 写信 / 空白/composer-panel/div/letter-count/0；39:2035 /compose-empty · 写信 / 空白/composer-panel/div// 200；39:2157 /compose-draft · 写信 / 已填写/composer-panel/div/letter-count/76 */
+  --font-micro-16-letter-spacing: 0px;
+  /* 300 occurrences; 文字：✦、Tap to chat；35:3552 /home-ready · 首页 / 三封来信/scene/div/✦；35:3660 /home-empty · 首页 / 无符合条件的信件/scene/div/✦；35:3776 /home-response · 首页 / 回应到达/scene/div/✦ */
+  --font-tiny: 400 9px/1.21 "Fredoka";
+  /* 300 occurrences; 文字：✦、Tap to chat；35:3552 /home-ready · 首页 / 三封来信/scene/div/✦；35:3660 /home-empty · 首页 / 无符合条件的信件/scene/div/✦；35:3776 /home-response · 首页 / 回应到达/scene/div/✦ */
+  --font-tiny-letter-spacing: 0px;
+  /* 22 occurrences; 文字：Interactive preview. No real account, email or password change.；35:2453 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change.；35:2547 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change.；35:2641 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change. */
+  --font-tiny-16: 400 9px/16px "Fredoka";
+  /* 22 occurrences; 文字：Interactive preview. No real account, email or password change.；35:2453 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change.；35:2547 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change.；35:2641 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/p/Interactive preview. No real account, email or password change. */
+  --font-tiny-16-letter-spacing: 0px;
+  /* 274 occurrences; 文字：✦；35:3548 /home-ready · 首页 / 三封来信/scene/div/✦；35:3550 /home-ready · 首页 / 三封来信/scene/div/✦；35:3656 /home-empty · 首页 / 无符合条件的信件/scene/div/✦ */
+  --font-symbol-star: 400 19px/1.21 "Fredoka";
+  /* 274 occurrences; 文字：✦；35:3548 /home-ready · 首页 / 三封来信/scene/div/✦；35:3550 /home-ready · 首页 / 三封来信/scene/div/✦；35:3656 /home-empty · 首页 / 无符合条件的信件/scene/div/✦ */
+  --font-symbol-star-letter-spacing: 0px;
+  /* 233 occurrences; 文字：‹；35:2421 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-back/‹；35:2477 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-back/‹；35:2571 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/auth-back/‹ */
+  --font-symbol-chevron: 400 24px/1.21 "Fredoka";
+  /* 233 occurrences; 文字：‹；35:2421 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-back/‹；35:2477 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-back/‹；35:2571 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/auth-back/‹ */
+  --font-symbol-chevron-letter-spacing: 0px;
+  /* 70 occurrences; 自动布局 itemSpacing / padding；36:3086 /letter-open · 来信详情 / 未回应/note-panel/reply-form/reply；36:3219 /letter-typed · 来信详情 / 编辑回应/note-panel/reply-form/reply */
+  --space-2: 2px;
+  /* 26 occurrences; 自动布局 itemSpacing / padding；29:9934 /chat-recording · 对话 / 录音中（演示）/Dialog - Voice recording/Container；29:10090 /chat-record-cancel · 对话 / 上滑取消录音/Dialog - Voice recording/Container；56:2114 /pass-default · Filter Pass / 未开通/app-view/div/div/button/Duration */
+  --space-3: 3px;
+  /* 713 occurrences; 自动布局 itemSpacing / padding；36:2042 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/div/span/age-pass；36:2059 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/div/span/city-pass；36:2214 /filters-active · 筛选 / Pass 生效/sheet/sheet-content/div/span/age-pass */
+  --space-4: 4px;
+  /* 102 occurrences; 自动布局 itemSpacing / padding；29:5637 /inbox-empty · 消息 / 从未收到消息/Section/Header/Button - Inbox menu；29:5725 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header/Button - Inbox menu；29:5820 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Header/Button - Inbox menu */
+  --space-5: 5px;
+  /* 1305 occurrences; 自动布局 itemSpacing / padding；29:5620 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Bird appearance；29:5625 /inbox-empty · 消息 / 从未收到消息/Header/Container/Button - Find your letters */
+  --space-6: 6px;
+  /* 80 occurrences; 自动布局 itemSpacing / padding；36:2576 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/div；36:2759 /bird-male · 信使外观 / 男鸟/sheet/sheet-content/div */
+  --space-7: 7px;
+  /* 853 occurrences; 自动布局 itemSpacing / padding；36:2024 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/filter-genders/Filter Man；36:2029 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/filter-genders/Filter Woman；36:2034 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/filter-genders/Filter Everyone */
+  --space-8: 8px;
+  /* 330 occurrences; 自动布局 itemSpacing / padding；35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2435 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin；35:2540 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue */
+  --space-10: 10px;
+  /* 1539 occurrences; 自动布局 itemSpacing / padding；35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2435 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin */
+  --space-12: 12px;
+  /* 118 occurrences; 自动布局 itemSpacing / padding；29:5733 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button；29:5853 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button；29:5867 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button */
+  --space-14: 14px;
+  /* 860 occurrences; 自动布局 itemSpacing / padding；35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password */
+  --space-16: 16px;
+  /* 199 occurrences; 自动布局 itemSpacing / padding；29:5632 /inbox-empty · 消息 / 从未收到消息/Section/Header/Container；29:5720 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header/Container；29:5815 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Header/Container */
+  --space-20: 20px;
+  /* 749 occurrences; 自动布局 itemSpacing / padding；29:5631 /inbox-empty · 消息 / 从未收到消息/Section/Header；29:5642 /inbox-empty · 消息 / 从未收到消息/Section/Container */
+  --space-24: 24px;
+  /* 141 occurrences; 自动布局 itemSpacing / padding；29:5733 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Container/Container/Container/Button；29:5853 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button；29:5867 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Container/Container/Button */
+  --space-28: 28px;
+  /* 43 occurrences; 自动布局 itemSpacing / padding；29:13736 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Section；29:13758 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container；29:13894 /profile-content · 个人页 / 已有形象照/Section/Container/Section */
+  --space-32: 32px;
+  /* 40 occurrences; 自动布局 itemSpacing / padding；29:5644 /inbox-empty · 消息 / 从未收到消息/Section/Container/Container/Container；29:6532 /inbox-friends-empty · 好友 / 空状态/Section/Container/Container/Container */
+  --space-40: 40px;
+  /* 340 occurrences; 35:2678 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-email；35:2681 /signin-empty · 邮箱登录 / 空表单/auth-overlay/auth-panel/div/auth-form/label/auth-password；35:2733 /signin-filled · 邮箱登录 / 已填写/auth-overlay/auth-panel/div/auth-form/label/auth-email */
+  --radius-12: 12px;
+  /* 310 occurrences; 35:3621 /home-ready · 首页 / 三封来信/header/div/magic；35:3626 /home-ready · 首页 / 三封来信/header/div/settings；35:3731 /home-empty · 首页 / 无符合条件的信件/header/div/magic */
+  --radius-22: 22px;
+  /* 248 occurrences; 35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2435 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin；35:2540 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue */
+  --radius-24: 24px;
+  /* 201 occurrences; 35:2487 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/Terms of Use and EULA；35:2581 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/Terms of Use and EULA；39:2423 /compose-sent · 写信 / 发送后等待/toast */
+  --radius-16: 16px;
+  /* 168 occurrences; 29:7360 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Button - Back；29:7446 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Button - Back；29:8673 /chat-waiting · 对话 / 等待对方回复/Section/Header/Button - Back */
+  --radius-20: 20px;
+  /* 115 occurrences; 35:3407 /apple-private · Apple / 隐藏邮箱/auth-overlay/auth-panel/div/div/apple-hide；35:3412 /apple-private · Apple / 隐藏邮箱/auth-overlay/auth-panel/div/div/apple-share；35:3459 /apple-share · Apple / 共享邮箱/auth-overlay/auth-panel/div/div/apple-hide */
+  --radius-14: 14px;
+  /* 110 occurrences; 36:2013 /filters-free · 筛选 / 未开通 Pass/sheet/div；36:2185 /filters-active · 筛选 / Pass 生效/sheet/div；36:2353 /filters-selected · 筛选 / 已选择条件/sheet/div */
+  --radius-4: 4px;
+  /* 77 occurrences; 35:3794 /home-response · 首页 / 回应到达/response-strip/response-track/A cup of tea replied/img；35:3800 /home-response · 首页 / 回应到达/response-strip/response-track/A cup of tea replied/img；36:2584 /bird-female · 信使外观 / 女鸟/sheet/sheet-content/label/motion-switch */
+  --radius-11: 11px;
+  /* 74 occurrences; 39:2385 /compose-sent · 写信 / 发送后等待/app-view/header/inbox-menu/b；29:5641 /inbox-empty · 消息 / 从未收到消息/Section/Header/Button - Inbox menu/Bold Text；29:5729 /inbox-waiting · 消息 / 已寄出，尚无回信/Section/Header/Button - Inbox menu/Bold Text */
+  --radius-3: 3px;
+  /* 42 occurrences; 35:3793 /home-response · 首页 / 回应到达/response-strip/response-track/A cup of tea replied；35:3799 /home-response · 首页 / 回应到达/response-strip/response-track/A cup of tea replied；56:1960 /reply-topup · 回信 / 进入钻石补充/Dialog/Container/Container:margin/Container/Button - 100 diamonds for 0.99 USD/Price */
+  --radius-18: 18px;
+  /* 36 occurrences; 36:2042 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/div/span/age-pass；36:2059 /filters-free · 筛选 / 未开通 Pass/sheet/sheet-content/div/span/city-pass；36:2214 /filters-active · 筛选 / Pass 生效/sheet/sheet-content/div/span/age-pass */
+  --radius-8: 8px;
+  /* 32 occurrences; 35:3568 /home-ready · 首页 / 三封来信/actions/refresh；35:3574 /home-ready · 首页 / 三封来信/actions/compose；35:3678 /home-empty · 首页 / 无符合条件的信件/actions/refresh */
+  --radius-30: 30px;
+  /* 30 occurrences; 29:5839 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button/Text:align/Text/Image:margin/Image；29:5841 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button/Text:align/Text/Image:margin/Image；29:5843 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button/Text:align/Text/Image:margin/Image */
+  --radius-13: 13px;
+  /* 30 occurrences; 29:13700 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button - Change avatar；29:13701 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Container/Container/Button - Change avatar/Image (Your avatar)；29:13858 /profile-content · 个人页 / 已有形象照/Section/Container/Container/Container/Button - Change avatar */
+  --radius-44: 44px;
+  /* 29 occurrences; 35:3536 /home-ready · 首页 / 三封来信/scene/div；35:3650 /home-empty · 首页 / 无符合条件的信件/scene/div；35:3760 /home-response · 首页 / 回应到达/scene/div */
+  --radius-26: 26px;
+  /* 26 occurrences; 29:5847 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button/Bold Text；29:5990 /inbox-collected-one · 消息 / 收取 1 封，剩余 2 封/Section/Container/Button:margin/Button/Bold Text；29:7696 /reply-last-free · 回信 / 剩余 1 次免费/Section/Container/Button:margin/Button/Bold Text */
+  --radius-10: 10px;
+  /* 25 occurrences; 36:3054 /letter-open · 来信详情 / 未回应/note-panel；36:3187 /letter-typed · 来信详情 / 编辑回应/note-panel；36:3321 /letter-waiting · 来信详情 / 已回应，等待回信/note-panel */
+  --radius-28: 28px;
+  /* 23 occurrences; 35:3538 /home-ready · 首页 / 三封来信/scene/div；35:3652 /home-empty · 首页 / 无符合条件的信件/scene/div；35:3762 /home-response · 首页 / 回应到达/scene/div */
+  --radius-10-5: 10.5px;
+  /* 21 occurrences; 29:7176 /inbox-options · 会话 / 更多操作/Dialog；29:8572 /reply-topup · 回信 / 进入钻石补充/Dialog；29:10659 /chat-remark · 对话设置 / 备注名/Dialog */
+  --shadow-sheet: 0px -50px 100px 0px rgb(0 0 0 / 0.533);
+  /* 10 occurrences; 29:7923 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog；29:8099 /reply-shortage · 回信 / 钻石不足/Container/Dialog；29:11070 /chat-clear-confirm · 聊天记录 / 清空确认/Container/Dialog */
+  --shadow-dialog: 0px 28px 80px 0px rgb(0 0 0 / 0.6);
+  /* 39 occurrences; 29:7947 /reply-payment · 回信 / 10 次用完，付费确认/Container/Dialog/Container/Button:margin/Button；29:8118 /reply-shortage · 回信 / 钻石不足/Container/Dialog/Container/Button:margin/Button；29:10672 /chat-remark · 对话设置 / 备注名/Dialog/Container/Container/Button */
+  --shadow-glow: 0px 0px 20px 0px rgb(181 250 112 / 0.043);
+  /* 19 occurrences; 29:14354 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 1；29:14361 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 2；29:14367 /avatar-gallery · 头像 / 已上传与空槽位/Dialog/Container/Container:margin/Container/Container/Button - Remove photo 3 */
+  --shadow-sm: 0px 2px 4px 0px rgb(0 0 0 / 0.2);
+  /* 15 occurrences; 29:13771 /profile-empty · 个人页 / 尚未上传照片/Section/Container/Button - New moment；29:13935 /profile-content · 个人页 / 已有形象照/Section/Container/Button - New moment；29:14301 /avatar-gallery · 头像 / 已上传与空槽位/Section/Container/Button - New moment */
+  --shadow-md: 0px 3px 12px 0px rgb(0 0 0 / 0.094);
+  /* 8 occurrences; 29:5827 /inbox-pending · 消息 / 收到 3 封待收回信/Section/Container/Button:margin/Button；29:5972 /inbox-collected-one · 消息 / 收取 1 封，剩余 2 封/Section/Container/Button:margin/Button；29:7676 /reply-last-free · 回信 / 剩余 1 次免费/Section/Container/Button:margin/Button */
+  --ring-page: 0px 0px 0px 10px #0D1713;
+  /* 411 occurrences; 35:3556 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector；35:3558 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector；35:3560 /home-ready · 首页 / 三封来信/scene/Icon / vector/trails/Vector */
+  --blur-trail: 6px;
+  /* 10 occurrences; 29:7922 /reply-payment · 回信 / 10 次用完，付费确认/Container；29:8098 /reply-shortage · 回信 / 钻石不足/Container；29:11069 /chat-clear-confirm · 聊天记录 / 清空确认/Container */
+  --blur-backdrop: 16px;
+  /* 2372 occurrences; 35:2427 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/h1；35:2429 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p；35:2431 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p */
+  --page-margin: 24px;
+  /* 158 occurrences; 29:7360 /inbox-hidden · 隐藏会话 / 有记录/Section/Header/Button - Back；29:7446 /inbox-hidden-empty · 隐藏会话 / 空状态/Section/Header/Button - Back；29:8673 /chat-waiting · 对话 / 等待对方回复/Section/Header/Button - Back */
+  --header-back-x: 16px;
+  /* 87 occurrences; 35:2420 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/auth-back；35:2476 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/auth-back；35:2570 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div/auth-back */
+  --auth-header-button-x: 20px;
+  /* 1497 occurrences; 35:2427 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/h1；35:2429 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p；35:2431 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/p */
+  --content-width: 327px;
+  /* 401 occurrences; 35:2433 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/email-signin；35:2435 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/apple-signin；35:2540 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div/div/terms-continue */
+  --control-height: 48px;
+  /* 880 occurrences; 35:3617 /home-ready · 首页 / 三封来信/header；35:3618 /home-ready · 首页 / 三封来信/header/h1；35:3620 /home-ready · 首页 / 三封来信/header/div */
+  --icon-button-size: 44px;
+  /* 224 occurrences; 35:2419 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div；35:2475 /terms-unchecked · 协议 / 未勾选/auth-overlay/auth-panel/div；35:2569 /terms-checked · 协议 / 已勾选/auth-overlay/auth-panel/div */
+  --header-height: 64px;
+  /* 176 occurrences; 35:3041 /verify-empty · 验证码 / 待输入/auth-overlay/auth-panel/div/div/✉；35:3092 /verify-error · 验证码 / 输入错误/auth-overlay/auth-panel/div/div/✉；35:3146 /verify-resend · 验证码 / 重发倒计时/auth-overlay/auth-panel/div/div/✉ */
+  --list-row-height: 56px;
+  /* 75 occurrences; 43:3334 /home-ready · 首页 / 三封来信/Main navigation；43:3367 /home-empty · 首页 / 无符合条件的信件/Main navigation；43:3400 /home-response · 首页 / 回应到达/Main navigation */
+  --nav-height: 96px;
+  /* 242 occurrences; 35:2450 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div/explore-preview；35:3791 /home-response · 首页 / 回应到达/response-strip；35:3792 /home-response · 首页 / 回应到达/response-strip/response-track */
+  --chip-height: 28px;
+  /* 113 occurrences; 36:3350 /letter-waiting · 来信详情 / 已回应，等待回信/note-panel/conversation/reply-history/div；36:3482 /letter-replied · 来信详情 / 已收到回复/note-panel/conversation/reply-history/div；29:7374 /inbox-hidden · 隐藏会话 / 有记录/Section/Container/Container/Button */
+  --chip-height-large: 36px;
+  /* 114 occurrences; 29:5686 /inbox-empty · 消息 / 从未收到消息/Image；29:5781 /inbox-waiting · 消息 / 已寄出，尚无回信/Image；29:5926 /inbox-pending · 消息 / 收到 3 封待收回信/Image */
+  --status-height: 57.828125px;
+  /* 352 occurrences; 35:2417 /welcome · 欢迎 / 未登录/auth-overlay；35:2418 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel；35:2419 /welcome · 欢迎 / 未登录/auth-overlay/auth-panel/div */
+  --content-top: 48px;
+  /* 128 occurrences; 35:2417 /welcome · 欢迎 / 未登录/auth-overlay；35:2473 /terms-unchecked · 协议 / 未勾选/auth-overlay；35:2567 /terms-checked · 协议 / 已勾选/auth-overlay */
+  --content-height: 764px;
+}

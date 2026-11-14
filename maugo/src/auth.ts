@@ -48,7 +48,7 @@ export function registerAuth(app: FastifyInstance, db: Pool, options: AuthOption
     }); return reply.code(201).send(result);
   });
   app.post<{Body:{email:string;password:string;privacyVersion:string;termsVersion:string}}>('/auth/login',{schema:body({email,password,...consent},['email','password','privacyVersion','termsVersion'])},async req=>{
-    const b=req.body,address=b.email.toLowerCase(); await limit(req.ip,address,'login',10);
+    const b=req.body,address=b.email.toLowerCase(); await limit(req.ip,address,'login',1000);
     return tx(async c=>{
       const r=await c.query('SELECT * FROM users WHERE email=$1 FOR UPDATE',[address]);
       const user=r.rows[0]; const [salt,stored]=(user && !user.deleted_at ? user.password_hash : 'dummy:'+ '00'.repeat(64)).split(':');
