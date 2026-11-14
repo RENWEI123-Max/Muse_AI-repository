@@ -69,3 +69,48 @@
 .chat-flow .c6-message-leave-to{opacity:0;transform:scale(.8)}
 
 .chat-flow[data-state="chat-sticker-selected"] .c6-attachment::before{width:98px}
+
+/* R12: settings / search / remark / clear, local JSON v2421258509127695554. */
+.chat-details-flow .chat-settings-body{position:absolute;top:64px;left:0;right:0;bottom:28px;overflow:auto;padding:24px 24px 20px;scrollbar-width:none}
+.chat-details-flow .c6-person{height:189px;position:relative;text-align:center}
+.chat-details-flow .ui-avatar-button{position:absolute;left:128.5px;top:0}
+.chat-details-flow .chat-person-name{position:absolute;top:82px;left:0;right:0;margin:0;color:var(--text-primary);font:var(--chat-font-person);letter-spacing:var(--font-title-sheet-fixed-letter-spacing)}
+.chat-details-flow .chat-person-note{position:absolute;top:112px;left:0;right:0;margin:0;color:var(--text-profile-bio);font:var(--font-caption-21)}
+.chat-details-flow .chat-settings-body--waiting{padding-top:24px}
+.chat-details-flow:has(.chat-settings-body--waiting) .c6-person{height:277.5px}
+.chat-details-flow:has(.chat-settings-body--waiting) .ui-avatar-button{left:107.5px}
+.chat-details-flow:has(.chat-settings-body--waiting) .chat-person-name{top:124px}
+.chat-details-flow:has(.chat-settings-body--waiting) .chat-person-note{top:153.5px}
+.chat-details-flow .chat-settings-group{margin-top:24px}
+.chat-details-flow .chat-settings-secondary{margin-top:20px}
+.chat-details-flow .chat-row-value{margin-left:auto;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-chevron)}
+.chat-details-flow .c6-search{position:absolute;left:24px;top:88px;margin:0}
+.chat-details-flow .c6-results{position:absolute;left:24px;right:24px;top:160px;bottom:28px;overflow:auto}
+.chat-details-flow .chat-search-result{margin:16px 0 0;padding:22px 16px 16px;background:var(--chat-search-result);border-radius:var(--radius-12);min-height:80.5px}
+.chat-details-flow .chat-search-time{display:block;color:var(--chat-search-time);font:var(--chat-font-search-time)}
+.chat-details-flow .chat-search-content{margin:9.5px 0 0;font:var(--chat-font-message);color:var(--text-primary)}
+.chat-details-flow .chat-search-progress{font:var(--font-body-sm);color:var(--text-hint)}
+.chat-details-flow .chat-search-none{height:267px;padding:40px 8px;text-align:center}
+.chat-details-flow .chat-search-image{display:block;width:112px;height:112px;object-fit:contain;margin:0 auto 20px}
+.chat-details-flow .chat-search-none-title{margin:0;color:var(--r09-empty-title);font:var(--r09-font-empty-title);letter-spacing:var(--font-title-page-letter-spacing)}
+.chat-details-flow .chat-search-none-copy{margin:12px 0 0;color:var(--text-empty);font:var(--font-caption-21)}
+.chat-details-flow .c6-veil{position:fixed;inset:0;z-index:40}
+.chat-details-flow .chat-dialog-title{position:absolute;left:20px;right:20px;top:32px;margin:0;text-align:center;font:var(--font-title-sheet-fixed);letter-spacing:var(--font-title-sheet-fixed-letter-spacing)}
+.chat-details-flow .chat-dialog-close{z-index:1;position:absolute;right:8px;top:16px}
+.chat-details-flow .chat-remark-label{position:absolute;left:20px;right:20px;top:80px;color:var(--text-label);font:var(--font-body-sm)}
+.chat-details-flow .chat-remark-input{display:block;margin-top:12px;width:309px}
+.chat-details-flow .chat-dialog-save{position:absolute;left:20px;right:20px;top:200px;width:309px}
+.chat-details-flow .ui-dialog--chat-clear{top:277px}
+.chat-details-flow[data-state="chat-clear-confirm"] .chat-dialog-title{top:36px;left:24px;right:24px;font:var(--reply-font-title)}
+.chat-details-flow .chat-dialog-copy{position:absolute;left:24px;right:24px;top:76px;margin:0;text-align:center;color:var(--reply-description);font:var(--font-body-sm)}
+.chat-details-flow[data-state="chat-clear-confirm"] .chat-dialog-save{left:24px;right:24px;top:140px;width:277px}
+.chat-details-flow .chat-dialog-cancel{position:absolute;left:24px;top:188px;width:277px}
+.chat-details-flow[data-state="chat-clear-confirm"] .chat-dialog-close{right:8px;top:8px}
+.chat-details-flow:lang(ko) :is(h2,h3,p,small,label,input,button){font-family:var(--font-family-ko)}
+.chat-flow[data-state="chat-cleared"] .c6-empty{visibility:hidden}
+@media(max-height:740px){.chat-details-flow .ui-dialog--chat-clear{top:calc(50% - 129px)}}
+
+.chat-details-flow .chat-follow{position:absolute;left:124.93px;top:149px}
+.chat-details-flow:has(.chat-settings-body--waiting) .chat-follow{top:190.5px}
+.chat-details-flow .chat-follow-note{position:absolute;top:243.5px;left:0;right:0;margin:0;text-align:center;color:var(--text-profile-bio);font:var(--font-caption-21)}
+@media(max-height:740px){.chat-details-flow{bottom:calc(812px - 100svh)}}

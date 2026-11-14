@@ -584,3 +584,20 @@
  --chat-radius-thumbnail: 7px;
  --chat-font-duration: 400 16px/19px Fredoka;
 }
+
+/* R12 local JSON: 29:10716,10800,10802,10619,11077,11078. */
+:root {
+ --chat-search-input: #1B2920;
+ --chat-search-border: rgb(255 255 255 / .035);
+ --chat-search-result: #1B2A21;
+ --chat-search-time: #87A77E;
+ --chat-clear-label: #E69D96;
+ --chat-clear-button: #E1A39B;
+ --chat-clear-ink: #42241F;
+ --chat-radius-avatar: 35px;
+ --chat-font-person: 550 18px/22px Fredoka;
+ --chat-font-search-time: 400 10px/12.100000381469727px Fredoka;
+}
+
+/* R12 29:10298 / 29:10428: unsupported Follow shown disabled. */
+:root { --chat-follow-bg: rgb(181 250 112 / .035); --chat-follow-border: rgb(181 250 112 / .23); --chat-radius-waiting-avatar: 32px; --chat-font-follow: 400 12px/15px Fredoka; }

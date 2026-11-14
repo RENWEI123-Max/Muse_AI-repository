@@ -1,20 +1,4 @@
-/* R12 settings / appearance only. Main conversation moved to styles/pages/chat.css. */
-.c6-person p{color:#9caf91;line-height:21px}
-.c6-search,.c6-veil input{background:#1d2c24;color:#e5ecde;border:1px solid #ffffff12;border-radius:20px;padding:12px;min-width:0;flex:1}
-.c6-person{text-align:center;padding:36px 20px}
-.c6-person>img{width:80px;height:80px;border-radius:50%}
-.c6-person h2{font-size:20px}
-.c6-row{padding:20px!important;text-align:left;border-bottom:1px solid #ffffff0d!important}
-.c6-row span{float:right;color:#91a587}
-.c6-search{flex:none;margin:20px}
-.c6-results{padding:0 24px;overflow:auto;color:#a8bd9b}
-.c6-results article{border-bottom:1px solid #ffffff15;padding:12px 0}
-.c6-veil{position:absolute;inset:0;background:#0009;display:flex;align-items:flex-end;z-index:20}
-.c6-veil section{width:100%;padding:28px;background:#1a2a20;border-radius:24px 24px 0 0}
-.c6-veil h2{font-size:20px}
-.c6-veil p{line-height:22px;color:#a8bd9b}
-.c6-veil button{display:block;width:100%;padding:14px;margin-top:12px}
-.c6-veil .primary{background:#b5fa70;color:#18310e;border-radius:24px}
+/* R07 appearance only; R12 moved to styles/pages/chat.css. */
 .d2-appearance header{height:64px;min-height:64px;padding:0 16px;background:#101a15;gap:12px}
 .d2-appearance header h1{flex:1;text-align:center;font-weight:600}
 .d2-appearance header button,.d2-header-space{width:40px;flex:none}
@@ -72,9 +56,10 @@
 .d2-appearance .bubble-preview #my-bubble{background:var(--my-bubble);color:var(--my-text)}
 .d2-body{animation:d2-open .22s ease-out}
 
-.c6-chat:where(:not(.chat-flow)) button{background:transparent;color:inherit;border:0;cursor:pointer}
-.c6-chat:where(:not(.chat-flow)) header{height:64px;min-height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid #ffffff07;background:#0d1713}
-.c6-chat:where(:not(.chat-flow)) header button{font-size:24px}
+/* Preserve non-R12 appearance/report header behavior. */
+.c6-chat:where(:not(.chat-flow):not(.chat-details-flow)) button{background:transparent;color:inherit;border:0;cursor:pointer}
+.c6-chat:where(:not(.chat-flow):not(.chat-details-flow)) header{height:64px;min-height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid #ffffff07;background:#0d1713}
+.c6-chat:where(:not(.chat-flow):not(.chat-details-flow)) header button{font-size:24px}
 
 /* R07 existing per-conversation backgrounds, unchanged. */
 .c6-chat.theme-wallpaper{background-size:cover;background-position:center}
