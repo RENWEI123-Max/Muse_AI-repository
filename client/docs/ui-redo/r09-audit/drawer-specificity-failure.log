@@ -1,0 +1,220 @@
+[WebServer] (node:53509) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:53514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en inbox-read
+667 en mark-read-failure
+667 en inbox-read
+667 en inbox-friends-empty
+667 en inbox-options
+667 en pin-failure
+667 en inbox-pinned
+667 en inbox-friends
+  ✘  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (21.3s)
+(node:53528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 ko inbox-pending
+667 ko collect-cancelled
+667 ko inbox-collected-one
+667 ko inbox-collected-all
+667 ko inbox-unread
+667 ko inbox-read
+667 ko mark-read-failure
+667 ko inbox-read
+667 ko inbox-friends-empty
+667 ko inbox-options
+667 ko pin-failure
+667 ko inbox-pinned
+667 ko inbox-friends
+  ✘  2 tests/r09-audit.spec.ts:6:61 › 667 ko: inbox real-click walkthrough (API fixture) (21.5s)
+(node:53534) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+812 en inbox-pending
+812 en collect-cancelled
+812 en inbox-collected-one
+812 en inbox-collected-all
+812 en inbox-unread
+812 en inbox-read
+812 en mark-read-failure
+812 en inbox-read
+812 en inbox-friends-empty
+812 en inbox-options
+812 en pin-failure
+812 en inbox-pinned
+812 en inbox-friends
+  ✘  3 tests/r09-audit.spec.ts:6:61 › 812 en: inbox real-click walkthrough (API fixture) (21.2s)
+(node:53555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+812 ko inbox-pending
+812 ko collect-cancelled
+812 ko inbox-collected-one
+812 ko inbox-collected-all
+812 ko inbox-unread
+812 ko inbox-read
+812 ko mark-read-failure
+812 ko inbox-read
+812 ko inbox-friends-empty
+812 ko inbox-options
+812 ko pin-failure
+812 ko inbox-pinned
+812 ko inbox-friends
+  ✘  4 tests/r09-audit.spec.ts:6:61 › 812 ko: inbox real-click walkthrough (API fixture) (21.3s)
+
+
+  1) tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.inbox-drawer')
+    Expected: "none"
+    Received: "sheet-in"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.inbox-drawer') with timeout 5000ms
+      - waiting for locator('.inbox-drawer')
+        14 × locator resolved to <aside role="dialog" aria-modal="true" aria-label="Inbox tools" class="inbox-drawer ui-sheet">…</aside>
+           - unexpected value "sheet-in"
+
+
+      39 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(500);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
+      40 |  const settled=()=>expect(root).toHaveAttribute('aria-busy','false')
+    > 41 |  const state=async(name:string)=>{await settled();await expect(root).toHaveAttribute('data-state',name);if(name==='inbox-drawer')await expect(page.locator('.inbox-drawer')).toHaveCSS('animation-name','none');await shot(name);records.push({state:name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h1,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+         |                                                                                                                                                                              ^
+      42 |  const reopen=async()=>{await page.locator('.inbox-flow > .main-nav button').first().click();await page.locator('#open-inbox').click();await settled()}
+      43 |  const menu=()=>page.locator('#inbox-menu').click()
+      44 |  const option=async()=>{await settled();await page.locator('[data-options]').first().click()}
+        at state (/Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:41:174)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:60:15
+
+    Error Context: test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r09-audit.spec.ts:6:61 › 667 ko: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.inbox-drawer')
+    Expected: "none"
+    Received: "sheet-in"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.inbox-drawer') with timeout 5000ms
+      - waiting for locator('.inbox-drawer')
+        14 × locator resolved to <aside role="dialog" aria-modal="true" aria-label="메시지 도구" class="inbox-drawer ui-sheet">…</aside>
+           - unexpected value "sheet-in"
+
+
+      39 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(500);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
+      40 |  const settled=()=>expect(root).toHaveAttribute('aria-busy','false')
+    > 41 |  const state=async(name:string)=>{await settled();await expect(root).toHaveAttribute('data-state',name);if(name==='inbox-drawer')await expect(page.locator('.inbox-drawer')).toHaveCSS('animation-name','none');await shot(name);records.push({state:name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h1,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+         |                                                                                                                                                                              ^
+      42 |  const reopen=async()=>{await page.locator('.inbox-flow > .main-nav button').first().click();await page.locator('#open-inbox').click();await settled()}
+      43 |  const menu=()=>page.locator('#inbox-menu').click()
+      44 |  const option=async()=>{await settled();await page.locator('[data-options]').first().click()}
+        at state (/Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:41:174)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:60:15
+
+    Error Context: test-results/r09-audit/r09-audit-667-ko-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-ko-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-ko-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r09-audit.spec.ts:6:61 › 812 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.inbox-drawer')
+    Expected: "none"
+    Received: "sheet-in"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.inbox-drawer') with timeout 5000ms
+      - waiting for locator('.inbox-drawer')
+        14 × locator resolved to <aside role="dialog" aria-modal="true" aria-label="Inbox tools" class="inbox-drawer ui-sheet">…</aside>
+           - unexpected value "sheet-in"
+
+
+      39 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(500);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
+      40 |  const settled=()=>expect(root).toHaveAttribute('aria-busy','false')
+    > 41 |  const state=async(name:string)=>{await settled();await expect(root).toHaveAttribute('data-state',name);if(name==='inbox-drawer')await expect(page.locator('.inbox-drawer')).toHaveCSS('animation-name','none');await shot(name);records.push({state:name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h1,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+         |                                                                                                                                                                              ^
+      42 |  const reopen=async()=>{await page.locator('.inbox-flow > .main-nav button').first().click();await page.locator('#open-inbox').click();await settled()}
+      43 |  const menu=()=>page.locator('#inbox-menu').click()
+      44 |  const option=async()=>{await settled();await page.locator('[data-options]').first().click()}
+        at state (/Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:41:174)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:60:15
+
+    Error Context: test-results/r09-audit/r09-audit-812-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-812-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-812-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r09-audit.spec.ts:6:61 › 812 ko: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.inbox-drawer')
+    Expected: "none"
+    Received: "sheet-in"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.inbox-drawer') with timeout 5000ms
+      - waiting for locator('.inbox-drawer')
+        14 × locator resolved to <aside role="dialog" aria-modal="true" aria-label="메시지 도구" class="inbox-drawer ui-sheet">…</aside>
+           - unexpected value "sheet-in"
+
+
+      39 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(500);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
+      40 |  const settled=()=>expect(root).toHaveAttribute('aria-busy','false')
+    > 41 |  const state=async(name:string)=>{await settled();await expect(root).toHaveAttribute('data-state',name);if(name==='inbox-drawer')await expect(page.locator('.inbox-drawer')).toHaveCSS('animation-name','none');await shot(name);records.push({state:name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h1,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+         |                                                                                                                                                                              ^
+      42 |  const reopen=async()=>{await page.locator('.inbox-flow > .main-nav button').first().click();await page.locator('#open-inbox').click();await settled()}
+      43 |  const menu=()=>page.locator('#inbox-menu').click()
+      44 |  const option=async()=>{await settled();await page.locator('[data-options]').first().click()}
+        at state (/Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:41:174)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:60:15
+
+    Error Context: test-results/r09-audit/r09-audit-812-ko-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-812-ko-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-812-ko-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ──────────────
+    tests/r09-audit.spec.ts:6:61 › 667 ko: inbox real-click walkthrough (API fixture) ──────────────
+    tests/r09-audit.spec.ts:6:61 › 812 en: inbox real-click walkthrough (API fixture) ──────────────
+    tests/r09-audit.spec.ts:6:61 › 812 ko: inbox real-click walkthrough (API fixture) ──────────────

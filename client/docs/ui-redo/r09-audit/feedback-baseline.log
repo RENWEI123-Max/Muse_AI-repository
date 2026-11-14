@@ -1,0 +1,120 @@
+[WebServer] (node:53043) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:53045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en mark-read-failure
+667 en inbox-read
+667 en inbox-friends-empty
+667 en inbox-options
+667 en pin-failure
+667 en inbox-pinned
+667 en inbox-friends
+667 en inbox-drawer
+667 en inbox-search
+667 en inbox-search-empty
+667 en inbox-hidden
+667 en inbox-hidden-empty
+667 en inbox-waiting
+667 en waiting-chat
+667 en inbox-empty
+667 en inbox-notifications-off
+667 en list-failure
+667 en list-scroll-sticky
+collected geometry 667 en { x: 24, y: -320.035888671875, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: -41.09228515625, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 43.8338623046875, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 44, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 44, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 44, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 44, width: 327, height: 84 }
+collected geometry 667 en { x: 24, y: 44, width: 327, height: 84 }
+  ✘  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (30.2s)
+
+
+  1) tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.reply-receipt')
+    Expected: 0
+    Received: 1
+    Timeout:  4000ms
+
+    Call log:
+      - Expect "soft toHaveCount" locator('.reply-receipt') with timeout 4000ms
+      - waiting for locator('.reply-receipt')
+        12 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      47 |  await page.locator('#collect-replies').click();await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('3');await shot('collect-cancelled')
+      48 |  for(let n=3;n>0;n--){await page.locator('#collect-replies').click();await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0);if(n===3)await state('inbox-collected-one')}
+    > 49 |  await state('inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect.soft(page.locator('.reply-receipt')).toHaveCount(0,{timeout:4000})
+         |                                                                                                                                                     ^
+      50 |  await reopen();await state('inbox-unread')
+      51 |  await option();failRead=true;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('mark-read-failure');await expect(page.getByRole('dialog')).toBeVisible();failRead=false;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0)
+      52 |  for(let i=0;i<3;i++){await settled();await page.locator(`[data-chat="chat-${i}"]`).click();await expect(page.locator('.c6-thread')).toBeVisible();await page.getByLabel(t('Back to messages')).click()}
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:49:149
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      56 |  await option();await page.getByRole('button',{name:t('Follow conversation'),exact:true}).click();await page.locator('#tab-friends').click();await state('inbox-friends');await page.locator('#tab-messages').click();await settled()
+      57 |  await option();await page.getByLabel(t('Remark'),{exact:true}).fill('Window tea');await page.getByRole('button',{name:t('Save remark')}).click();await settled();await expect(page.locator('[data-chat]').first()).toContainText('Window tea')
+    > 58 |  await menu();await state('inbox-drawer');expect.soft(await page.locator('.inbox-flow > .main-nav').evaluate(e=>e.inert)).toBeTruthy();expect.soft(await page.locator('.inbox-top').evaluate(e=>e.inert)).toBeTruthy();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('#inbox-menu')).toBeFocused()
+         |                                                                                                                           ^
+      59 |  await menu();await page.locator('#inbox-drawer-search').fill('Window tea');await page.locator('#inbox-drawer-search').press('Enter');await state('inbox-search');await expect(page.locator('[data-chat]')).toHaveCount(1)
+      60 |  await menu();await page.locator('#inbox-drawer-search').fill('unmatched-query');await page.locator('#drawer-search').click();await state('inbox-search-empty');await page.getByRole('button',{name:t('Clear search')}).click();await settled()
+      61 |  await option();await page.locator('#option-hide').click();await settled();await menu();await page.getByRole('button',{name:t('Hidden conversations'),exact:false}).click();await state('inbox-hidden');await option();await page.locator('#option-hide').click();await state('inbox-hidden-empty');await page.getByLabel(t('Back to messages')).click();await settled()
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:58:123
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      56 |  await option();await page.getByRole('button',{name:t('Follow conversation'),exact:true}).click();await page.locator('#tab-friends').click();await state('inbox-friends');await page.locator('#tab-messages').click();await settled()
+      57 |  await option();await page.getByLabel(t('Remark'),{exact:true}).fill('Window tea');await page.getByRole('button',{name:t('Save remark')}).click();await settled();await expect(page.locator('[data-chat]').first()).toContainText('Window tea')
+    > 58 |  await menu();await state('inbox-drawer');expect.soft(await page.locator('.inbox-flow > .main-nav').evaluate(e=>e.inert)).toBeTruthy();expect.soft(await page.locator('.inbox-top').evaluate(e=>e.inert)).toBeTruthy();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('#inbox-menu')).toBeFocused()
+         |                                                                                                                                                                                                           ^
+      59 |  await menu();await page.locator('#inbox-drawer-search').fill('Window tea');await page.locator('#inbox-drawer-search').press('Enter');await state('inbox-search');await expect(page.locator('[data-chat]')).toHaveCount(1)
+      60 |  await menu();await page.locator('#inbox-drawer-search').fill('unmatched-query');await page.locator('#drawer-search').click();await state('inbox-search-empty');await page.getByRole('button',{name:t('Clear search')}).click();await settled()
+      61 |  await option();await page.locator('#option-hide').click();await settled();await menu();await page.getByRole('button',{name:t('Hidden conversations'),exact:false}).click();await state('inbox-hidden');await option();await page.locator('#option-hide').click();await state('inbox-hidden-empty');await page.getByLabel(t('Back to messages')).click();await settled()
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:58:203
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      69 |  await page.locator('.inbox-body').hover();await page.mouse.wheel(0,550);await expect.poll(()=>page.locator('.inbox-body').evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
+      70 |  const strip=await page.locator('#collect-replies').boundingBox();expect(strip!.y).toBeGreaterThanOrEqual(112);await shot('list-scroll-sticky')
+    > 71 |  await page.locator('#collect-replies').click();await page.locator('#confirm-reply-payment').click();await settled();await expect.poll(async()=>{const row=await page.locator('[data-chat="chat-10"]').boundingBox();console.log('collected geometry',height,lang,row,await page.locator('.inbox-body').evaluate(e=>{const a=[];for(let p:Element|null=e;p;p=p.parentElement){const r=p.getBoundingClientRect();a.push({name:p.className,top:r.top,scroll:p.scrollTop,height:p.clientHeight,content:p.scrollHeight})}return a}));return !!row&&row.y>=112&&row.y+row.height<=height-96}).toBeTruthy();await shot('collected-row-visible')
+         |                                                                                                                                                                                                                                                                                                                                ^
+      72 |  await menu();await page.locator('.inbox-drawer').hover();await page.mouse.wheel(0,600);const drawerScroll=await page.locator('.inbox-drawer').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));await page.keyboard.press('Escape')
+      73 |  const scroll=await page.locator('.inbox-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));await page.mouse.wheel(0,1500);const documentScroll=await page.evaluate(()=>({height:window.document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight}));expect(documentScroll.height).toBe(height);expect(documentScroll.y).toBe(0)
+      74 |  for(const r of records){expect(r.document.height).toBe(height);expect(r.document.y).toBe(0)}expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:71:320
+
+    Error Context: test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ──────────────

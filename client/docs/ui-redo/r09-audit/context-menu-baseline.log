@@ -1,0 +1,55 @@
+[WebServer] (node:53191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:53193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en inbox-read
+667 en mark-read-failure
+667 en inbox-read
+667 en inbox-friends-empty
+667 en inbox-options
+  ✘  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (17.6s)
+
+
+  1) tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('dialog')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('dialog') with timeout 5000ms
+      - waiting for getByRole('dialog')
+
+
+      53 |  await option();failRead=true;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('mark-read-failure');await expect(page.getByRole('dialog')).toBeVisible();failRead=false;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0)
+      54 |  for(let i=0;i<3;i++){await settled();await page.locator(`[data-chat="chat-${i}"]`).click();await expect(page.locator('.c6-thread')).toBeVisible();await page.getByLabel(t('Back to messages')).click()}
+    > 55 |  await state('inbox-read');await page.locator('#tab-friends').click();await state('inbox-friends-empty');await page.locator('#tab-messages').click();await option();await state('inbox-options');await page.keyboard.press('Escape');await page.locator('[data-chat]').first().click({button:'right'});await expect(page.getByRole('dialog')).toBeVisible()
+         |                                                                                                                                                                                                                                                                                                                                               ^
+      56 |  failPatch=true;await page.locator('#option-pin').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('pin-failure');failPatch=false;await page.locator('#option-pin').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+      57 |  await option();await page.locator('#option-mute').click();await state('inbox-pinned')
+      58 |  await option();await page.getByRole('button',{name:t('Follow conversation'),exact:true}).click();await page.locator('#tab-friends').click();await state('inbox-friends');await page.locator('#tab-messages').click();await settled()
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:55:335
+
+    Error Context: test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ──────────────

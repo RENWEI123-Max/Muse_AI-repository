@@ -1,0 +1,15 @@
+{
+  "request": true,
+  "refreshWallet": true,
+  "returnToReply": true,
+  "prepare": true,
+  "patch": true,
+  "search": true,
+  "readAll": true,
+  "enable": true,
+  "list_load_body_unchanged": true,
+  "collect_request_and_fee_gates_unchanged": true,
+  "original_inbox_css_preserved_as_prefix": true,
+  "other_production_modules_unchanged": true,
+  "all_literal_inbox_tr_keys_have_existing_ko_entries": true
+}

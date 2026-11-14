@@ -61,3 +61,11 @@
 @media(prefers-reduced-motion:reduce){.inbox-flow .reply-collected{animation-duration:.01ms}}
 
 .inbox-flow .inbox-heading-tabs:has(.inbox-hidden-title){position:static;transform:none}
+
+/* The prototype keeps collection available while the conversation body scrolls. */
+.inbox-flow .inbox-body .collect-replies{position:sticky;top:0;z-index:2}
+.inbox-flow :is(.reply-receipt-enter-from,.reply-receipt-leave-to){opacity:0;transform:translateY(8px)}
+/* Unlike sheets, the prototype drawer opens without an entrance animation. */
+.inbox-flow.inbox-page .inbox-drawer.ui-sheet{animation:none}
+/* The collection confirmation uses the prototype's 220 ms dialog entrance. */
+.inbox-flow.reply-flow .reply-dialog.ui-sheet{animation-duration:.22s}
