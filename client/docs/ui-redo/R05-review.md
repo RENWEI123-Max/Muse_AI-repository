@@ -1,8 +1,10 @@
 # R05 共用外壳验收结论（任务 #144）
 
-VERDICT: REQUEST_CHANGES
+VERDICT: APPROVE
 
-审查对象：分支 `codex/r05-shell`，提交 `4570d5b`（在 `ecc0338` 之上，分叉点 `281b4bc`）。未合入 main。
+**2026-11-14 更新（任务 #152）**：`codex/r05-shell` 已更新到 `985c844`，§4 第 1–6 条全部修到位，构建通过，回归无新增失败，结论改为 **APPROVE（可合入）**，逐项核实见 §8。以下 §1–§7 是 #144/#148 针对旧提交 `4570d5b` 的历史记录，保留原文。
+
+审查对象（历史）：分支 `codex/r05-shell`，提交 `4570d5b`（在 `ecc0338` 之上，分叉点 `281b4bc`）。未合入 main。
 依据：`docs/ui-redo-plan.md` §5/§6 与 R05 行；本地 Figma JSON `~/maugo-figma/maugo-file-full.json`（版本 `2421258509127695554`）。未调用 Figma API。
 
 外壳、横条、导航、主/次按钮、图标按钮、页头、弹层的数值都对，构建通过，A6 的 4 个失败在 main 上原样复现，与 R05 无关。
@@ -172,3 +174,62 @@ VERDICT: REQUEST_CHANGES
 另需注意：`origin/codex/r06-discover`（`4f4adc9`）直接建在 `4570d5b` 之上，R05 按 §4 修改并变基后，R06 也要跟着变基。
 
 **放行条件**：Codex 在 `codex/r05-shell` 上完成 §4 第 1–6 条并推送新提交，复审通过后才能合入 main。这 6 条都有明确的改法，不需要 Smith 再做决定；如果 Smith 希望连这 6 条也一并豁免，需要另行明确说明，其中第 2、3 条是会进入 main 的样式错值，不建议豁免。
+
+## 8. 六项修复再复审（任务 #152，2026-11-14）
+
+VERDICT: APPROVE
+
+审查对象：`origin/codex/r05-shell` = `985c844`（main `be44f5e` 之上 4 个提交）。只审查，未合入、未推送。分支和 main 各检出到 `/tmp` 的临时 worktree 上核对，用完已移除。
+
+### 8.1 §4 六项逐条核实
+
+| §4 条目 | 在 `985c844` 上的实际情况 | 结果 |
+| --- | --- | --- |
+| 1 变基到当前 main | 与 `origin/main` 的 merge-base 就是 main 头 `be44f5e`，可快进合入；`tokens.css` 用的是 R02 修正后的命名，R05 只在文件末尾追加 6 个 token | 已改 |
+| 2 `.ui-dialog` 渐变 | `background:var(--grad-card-diagonal-h391-5)`，token 值 `140.03deg, #253229 6.17%, #17221C 93.83%`，对应 `29:7923` | 已改 |
+| 3 `.ui-chip` 文字色 | `color:var(--text-profile-wallet)`（`#B2DA9C`），其余属性未动 | 已改 |
+| 4 `R05-result.md` 4 处 | ① 图标按钮写明默认 135°、首页页头两枚由 R06 用 `--grad-icon-btn-horizontal`；② `git diff --check` 我重跑 `origin/main..985c844` 退出码 0，说法属实；③ 小屏 `scale(.72)`、`scale(.85)` 都已从 `fidelity.css` 删除，文档如实写成“删除缩放、改为平移”；④ inbox 失败改写为 main 基线既有。token 名单已加 `--grad-card-diagonal-h391-5`、`--text-profile-wallet`，去掉 `--grad-card` | 已改 |
+| 5 三张导航截图 | `client/docs/ui-redo/r05/r05-nav-0/1/2.png` 已入库（未被 ignore），均 375×812；`R05-result.md` A4 引用了新路径；测试截图路径同步改为该目录。逐张看过：三页导航位置一致、当前页图标高亮、白色横条 | 已改 |
+| 6 legacy 文件末尾空行 | 4 个 `*.legacy-*.css` 末尾只有一个换行；与 `4570d5b` 相比每个文件只少 1 行，其余内容不变 | 已改 |
+
+顺手项也改了：`styles.css` 的 `.auth-open .auth-top{…}` 已恢复成 `.auth-top{…}`。
+
+### 8.2 小屏规则（计划 §5 第 8 条：只许调位置、不许缩放插画）
+
+`@media(max-height:740px)` 里 `.magic-scene` 现为 `transform:translateY(calc(-30px - max(0px, 740px - 100svh)))`，没有任何 scale。我用 Codex 存档的检查脚本在本机重跑 375×667 与 375×740：变换矩阵缩放因子都是 [1,1]，操作按钮在导航上方（y 499 / 572，高 48；导航 y 571 / 644），无横向溢出，通过。对照 main：同样两个高度下 main 的矩阵是 `0.72` 缩放，按钮和导航位置与分支相同。符合计划 §5。
+
+### 8.3 构建
+
+`985c844` 上 `npm ci` 后 `VITE_API_BASE_URL=/api npm run build` 退出码 0：343 PNG 校验、`vue-tsc --noEmit`、vite build 全过。
+
+### 8.4 回归对照（本机独立重跑，一次性本地 PostgreSQL 18.4，同一条命令）
+
+| | 通过 | 失败 | 跳过 |
+| --- | ---: | ---: | ---: |
+| R05 `985c844` | 12 | 4 | 3 |
+| main `be44f5e` | 11 | 4 | 0 |
+
+4 个失败在两边是同一批用例、同一条断言、同一个实际值（d4 三条 + inbox `pending 3 → 2 → 0…` 一条，与 §2.2 完全相同）。R05 多出的 1 个通过是新增导航用例，3 个跳过是已豁免的有未读变体。**无新增失败。**
+
+与 Codex 记录的数字（分支 13/3/3、main 12/3）差 1 条：inbox 那条在 Codex 的服务器上两边都通过，在本机两边都失败。它在同一环境里分支与 main 结果始终一致，属于与 R05 无关的环境相关既有问题，不影响结论；R09 开工前仍需处理。
+
+豁免范围外的其他核对：
+
+- `base.css`、`components.css`：hex / rgb( / `!important` / `.device ` 前缀均为 0；引用的 token 在 `tokens.css` 里全部有定义。
+- 旧导航选择器（`.home-nav` / `.inbox-nav` / `.profile-nav` / `.bottom-nav`）在 `src`、`tests` 下为 0；`d1`、`inbox`、`ui-polish` 三个用例里的选择器已同步改成 `.main-nav`。
+- 三个 `.vue` 相对 `4570d5b` 没有再改动。
+- 我另在 main 上截了首页和“我的”页对照：首页 Refresh 按钮图标在文字上方、“我的”页内容区 `Internal server error` 这两处在 main 上原样存在，不是 R05 带来的。
+
+### 8.5 不挡合入的备注
+
+1. `fidelity.css` 第二个 `@media(max-height:740px)` 块里多了一条与第一个块重复的 `.device{min-height:100svh}`，文件前部留了 3 行空行；无可见影响，随 R06/R25 清理即可。
+2. `r05-shell.spec.ts` 把截图直接写进已入库的 `docs/ui-redo/r05/`，每次跑该用例都会让这 3 张 PNG 变成已修改状态（仓库里 `d1.spec.ts` 写 `docs/c7-evidence/` 是同样做法）。跑完注意别误提交。
+3. `R05-result.md` “复跑”一节仍有一句“本次仅运行 `tests/r05-shell.spec.ts`”，与文末补充的整组重跑不一致；数字本身以文末补充为准。
+4. 375×667 下场景上移 103px，光束顶端贴近页头下沿，没有压住按钮或导航。小屏不做 Figma 对照，首页场景归 R06。
+5. §5 表格里的缺口（A4 并排图、legacy 文件 68 处 hex、d4/inbox 既有失败、`ui-*` 组件暂无页面使用）不变。
+6. `origin/codex/r06-discover` 之前建在 `4570d5b` 上，R05 合入后需变基到新的 main。
+7. `docs/ui-redo-plan.md` 的 R05 行仍写“6 个变体都有断言”，待计划维护方改成豁免口径。
+
+### 8.6 结论
+
+**APPROVE**：§4 第 1–6 条全部到位，第 7 条按 Smith 豁免；构建通过；回归无新增失败。`codex/r05-shell`（`985c844`）可以合入 main，当前 main 仍是 `be44f5e`，可直接快进。合入由流水线执行，本任务未合入、未推送。
