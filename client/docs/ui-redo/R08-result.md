@@ -23,7 +23,7 @@ D4：已在服务器复跑 `d4.spec.ts`：3 通过 / 3 失败。3 项失败（ed
 
 ## 提交与推送状态
 
-（提交与推送见下：Codex 沙箱内 `.git` 只读、github.com DNS 解析失败，均为沙箱限制；改由人工在服务器 SSH 完成提交与推送。）
+已提交并推送：分支 `codex/r08-letters`，提交 `f2f8f50`（“feat(ui): rebuild letter reading and compose for R08”），已推送到 `origin/codex/r08-letters`，未合入 main。注：Codex 沙箱内 `.git` 只读、github.com DNS 解析失败，均为沙箱限制；改由人工在服务器 SSH 完成提交与推送（`.git` 可写、github.com DNS 正常）。
 
 ## 改动与不变量
 
