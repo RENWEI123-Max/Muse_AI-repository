@@ -1,0 +1,83 @@
+[
+  {
+    "id": "chat-details",
+    "title": "对话设置 / 已解锁",
+    "task": "details",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "chat-details-waiting",
+    "title": "对话设置 / 未回复锁定",
+    "task": "details",
+    "seed": "waiting-only",
+    "actions": [],
+    "params": {
+      "id": "waiting"
+    }
+  },
+  {
+    "id": "chat-remark",
+    "title": "对话设置 / 备注名",
+    "task": "details",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#remark-name"
+      ]
+    ]
+  },
+  {
+    "id": "chat-search-empty",
+    "title": "聊天搜索 / 待输入",
+    "task": "chat-search",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "chat-search-result",
+    "title": "聊天搜索 / 有结果",
+    "task": "chat-search",
+    "seed": "standard",
+    "actions": [
+      [
+        "fill",
+        "#message-search",
+        "listening"
+      ]
+    ]
+  },
+  {
+    "id": "chat-search-none",
+    "title": "聊天搜索 / 无结果",
+    "task": "chat-search",
+    "seed": "standard",
+    "actions": [
+      [
+        "fill",
+        "#message-search",
+        "unmatched-query"
+      ]
+    ]
+  },
+  {
+    "id": "chat-clear-confirm",
+    "title": "聊天记录 / 清空确认",
+    "task": "details",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#clear-chat"
+      ]
+    ]
+  },
+  {
+    "id": "chat-cleared",
+    "title": "聊天记录 / 清空后",
+    "task": "chat",
+    "seed": "chat-cleared",
+    "actions": []
+  }
+]

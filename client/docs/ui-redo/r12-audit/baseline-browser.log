@@ -1,0 +1,47 @@
+[WebServer] (node:57420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:57422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures (8.4s)
+
+
+  1) tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('#remark-name')
+    Expected substring: not "Unsaved draft"
+    Received string: "Remark name Unsaved draft›"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toContainText" locator('#remark-name') with timeout 5000ms
+      - waiting for locator('#remark-name')
+        14 × locator resolved to <button id="remark-name" class="c6-row ui-row">…</button>
+           - unexpected value "Remark name Unsaved draft›"
+
+
+      41 |  await page.locator('[data-chat="open"]').click();await page.locator('#chat-details').click();await snap('chat-details','chat-details');checks.detailsScroll=await scroll('.chat-settings-body');expect(checks.detailsScroll.top).toBeGreaterThan(0);await snap('details-scrolled');await root.locator('#remark-name').click();await snap('chat-remark','chat-remark')
+      42 |  checks.remarkMotion=await page.locator('.chat-settings-dialog').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,easing:getComputedStyle(e).animationTimingFunction,box:e.getBoundingClientRect().toJSON()}))
+    > 43 |  await page.getByLabel(t('Remark'),{exact:true}).fill('Unsaved draft');await page.locator('.chat-dialog-close').click();await expect(page.locator('#remark-name')).not.toContainText('Unsaved draft');await page.locator('#remark-name').click();await expect(page.getByLabel(t('Remark'),{exact:true})).toHaveValue('')
+         |                                                                                                                                                                        ^
+      44 |  await page.getByLabel(t('Remark'),{exact:true}).fill(lang==='ko'?'조용한 친구':'Quiet friend');remarkFail=true;await page.getByRole('button',{name:t('Save remark'),exact:true}).click();await expect(root.getByRole('alert')).toBeVisible();await expect(page.locator('.chat-settings-dialog')).toBeVisible();await snap('remark-save-failure');remarkFail=false;await page.getByRole('button',{name:t('Save remark'),exact:true}).click();await expect(page.locator('.chat-settings-dialog')).toHaveCount(0);await expect(page.locator('.chat-person-name')).toHaveText(lang==='ko'?'조용한 친구':'Quiet friend');await snap('remark-saved')
+      45 |  await page.getByRole('button',{name:t('Search chat history')}).click();await snap('chat-search-empty','chat-search-empty');await page.locator('#message-search').fill('listening');await expect(page.locator('.chat-search-result')).toHaveCount(24);await snap('chat-search-result','chat-search-result');checks.resultsScroll=await scroll('.c6-results');expect(checks.resultsScroll.top).toBeGreaterThan(0);await snap('search-scrolled');await page.locator('#message-search').fill('unmatched-query');await expect(page.locator('.chat-search-none')).toBeVisible();await snap('chat-search-none','chat-search-none');await back();await expect(root).toHaveAttribute('data-state','chat-details')
+      46 |  await page.getByRole('button',{name:t('Search chat history')}).click();await expect(page.locator('#message-search')).toHaveValue('');searchFail=true;await page.locator('#message-search').fill('failure');await expect(root.getByRole('alert')).toBeVisible();await snap('search-failure');searchFail=false;await page.locator('#message-search').fill('listening');await expect(page.locator('.chat-search-result')).toHaveCount(24);await back()
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:43:168
+
+    Error Context: test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ────────────────
