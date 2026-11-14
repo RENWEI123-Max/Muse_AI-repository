@@ -347,3 +347,22 @@
   /* 128 occurrences; 35:2417 /welcome · 欢迎 / 未登录/auth-overlay；35:2473 /terms-unchecked · 协议 / 未勾选/auth-overlay；35:2567 /terms-checked · 协议 / 已勾选/auth-overlay */
   --content-height: 764px;
 }
+
+/* R05 shell / font aliases. Source: 36:2083; navigation has no text nodes. */
+:root {
+  --shell-indicator: #FFFFFF;
+  --font-family-ko: GowunDodum, Fredoka, sans-serif;
+  --font-nav: 400 0px/0 Fredoka;
+}
+
+:root {
+  /* 29:7923 Dialog stroke; exact original opacity. */
+  --dialog-border: rgb(213 234 197 / 0.10000000149011612);
+  /* 29:5650 empty inbox description. */
+  --text-empty: rgb(111 135 109 / 1.0);
+}
+
+:root {
+  /* 53:2102 On thumb within 35:1930, 16 × 16 at track x + 19. */
+  --switch-on-thumb: #16321B;
+}
