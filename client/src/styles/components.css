@@ -78,3 +78,20 @@
 
 .ui-button--chat-follow{width:77.14px;height:40px;min-height:40px;border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--accent);font:var(--chat-font-follow)}
 .ui-avatar-button--waiting{width:112px;height:112px;border-radius:var(--chat-radius-waiting-avatar)}
+/* R13 controls measured from local JSON. */
+.ui-appearance-tabs{display:flex;gap:8px;padding:4px;background:var(--appearance-tabs);border-radius:var(--radius-14)}
+.ui-appearance-tabs button{height:40px;flex:1;padding:0;border:0;background:none;border-radius:var(--radius-10);font:var(--appearance-font-tab);color:var(--appearance-tab-idle)}
+.ui-appearance-tabs .selected{background:var(--appearance-tab-selected);color:var(--accent)}
+.ui-wallpaper-tile{position:relative;width:101px;height:175.0625px;overflow:hidden;padding:0;border:1px solid var(--appearance-tile-border);border-radius:var(--radius-14);background:var(--appearance-tile)}
+.ui-wallpaper-tile[aria-pressed=true]{border:2px solid var(--accent)}
+.ui-wallpaper-name{position:absolute;left:0;right:0;bottom:0;padding:20px 6px 10px;text-align:center;color:var(--appearance-tile-text);font:var(--appearance-font-tile)}
+.ui-appearance-swatch{height:180px;border:1px solid var(--appearance-swatch-border);border-radius:var(--radius-16);padding:16px;display:flex;align-items:flex-end;justify-content:space-between;color:var(--appearance-swatch-text);font:var(--appearance-font-swatch)}
+.ui-appearance-swatch[aria-pressed=true]{border-color:var(--accent)}
+.ui-appearance-swatch i{font-style:normal;color:var(--accent)}
+.ui-appearance-color-row{display:flex;align-items:center;justify-content:space-between;gap:16px;height:61px;border-bottom:1px solid var(--appearance-row-border);font:var(--appearance-font-label)}
+.ui-appearance-color-row:last-child{height:60px;border:0}
+.ui-appearance-color-row input{width:40px;height:28px;border:0;padding:0;background:none;border-radius:var(--radius-8)}
+.ui-button--appearance-reset{border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--appearance-reset-text)}
+[lang=ko] :is(.ui-appearance-tabs,.ui-appearance-color-row,.ui-appearance-swatch,.ui-wallpaper-name){font-family:var(--font-family-ko)}
+
+.ui-button--appearance-primary{border-radius:var(--radius-24);background:var(--grad-primary-height-48);color:var(--appearance-preview-mine-text)}

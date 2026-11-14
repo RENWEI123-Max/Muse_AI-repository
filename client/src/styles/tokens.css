@@ -601,3 +601,47 @@
 
 /* R12 29:10298 / 29:10428: unsupported Follow shown disabled. */
 :root { --chat-follow-bg: rgb(181 250 112 / .035); --chat-follow-border: rgb(181 250 112 / .23); --chat-radius-waiting-avatar: 32px; --chat-font-follow: 400 12px/15px Fredoka; }
+
+/* R13 exact solid paints, local JSON v2421258509127695554. */
+:root {
+ --appearance-tabs: rgb(25 38 29 / 1.0); /* 29:11235 */
+ --appearance-tab-selected: rgb(44 59 40 / 1.0); /* 29:11236 */
+ --appearance-tab-idle: rgb(151 171 151 / 1.0); /* 29:11239 */
+ --appearance-tile: rgb(14 32 22 / 1.0); /* 29:11247 */
+ --appearance-tile-border: rgb(255 255 255 / 0.04699999839067459); /* 29:11247 */
+ --appearance-preview-border: rgb(255 255 255 / 0.09399999678134918); /* 29:11359 */
+ --appearance-preview-peer: rgb(29 44 36 / 0.9300000071525574); /* 29:11362 */
+ --appearance-preview-text: rgb(229 236 222 / 1.0); /* 29:11363 */
+ --appearance-preview-mine-text: rgb(24 49 14 / 1.0); /* 29:11365 */
+ --appearance-caption: rgb(235 243 228 / 1.0); /* 29:11367 */
+ --appearance-tile-text: rgb(238 246 233 / 1.0); /* 29:11250 */
+ --appearance-note: rgb(114 133 113 / 1.0); /* 29:11280 */
+ --appearance-swatch-text: rgb(216 231 209 / 1.0); /* 29:11580 */
+ --appearance-swatch-border: rgb(255 255 255 / 0.0860000029206276); /* 29:11583 */
+ --appearance-clouds: rgb(25 52 59 / 1.0); /* 29:11587 */
+ --appearance-lavender: rgb(48 40 57 / 1.0); /* 29:11591 */
+ --appearance-ocean: rgb(21 46 55 / 1.0); /* 29:11599 */
+ --appearance-bubble-preview: rgb(12 26 18 / 1.0); /* 29:11688 */
+ --appearance-color-panel: rgb(27 42 32 / 1.0); /* 29:11694 */
+ --appearance-reset-text: rgb(202 228 181 / 1.0); /* 29:11713 */
+ --appearance-font-label: 400 13px/20px Fredoka;
+ --appearance-font-preview: 400 12px/20px Fredoka;
+ --appearance-font-tile: 400 9px/14px Fredoka;
+ --appearance-font-tab: 400 13px/16px Fredoka;
+ --appearance-font-note: 400 10px/17px Fredoka;
+ --appearance-font-swatch: 400 12px/14.520000457763672px Fredoka;
+ --appearance-font-caption: 400 13px/16px Fredoka;
+ --appearance-font-check: 700 14px/17px Fredoka;
+ --appearance-font-moon: 400 32px/38.720001220703125px Fredoka;
+ --appearance-radius-preview-peer: 14px 14px 14px 4px;
+ --appearance-radius-preview-mine: 14px 14px 4px 14px;
+}
+
+/* R13 measured gradient start colors only; complete paints await R02 token names. */
+:root {
+ --appearance-forest-start: rgb(27 55 36 / 1.0); /* 29:11583 */
+ --appearance-sunset-start: rgb(52 49 71 / 1.0); /* 29:11595 */
+ --appearance-stars-start: rgb(23 29 48 / 1.0); /* 29:11603 */
+}
+
+:root { --appearance-moon: rgb(181 250 112 / .3330000042915344); /* 29:11243 */ --appearance-row-border: rgb(255 255 255 / .027000000700354576); /* 29:11695 */ }

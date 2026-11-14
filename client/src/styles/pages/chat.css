@@ -43,9 +43,6 @@
 .chat-flow .c6-error{position:absolute;top:64px;left:16px;right:16px;padding:12px;background:var(--chat-composer);z-index:15}
 .chat-flow .c6-empty{text-align:center;color:var(--text-note);font:var(--font-caption)}
 .chat-flow button:disabled{cursor:default;opacity:.4}
-.chat-flow.d2-custom-bubbles .chat-bubble{background:var(--their-bubble);color:var(--their-text)}
-.chat-flow.d2-custom-bubbles .chat-bubble--mine{background:var(--my-bubble);color:var(--my-text)}
-.chat-flow.theme-wallpaper{background-size:cover;background-position:center}
 .c6-chat:lang(ko){font-family:var(--font-family-ko)}
 .chat-flow:lang(ko) :is(input,button,strong,p,small,.chat-bubble){font-family:var(--font-family-ko)}
 @media(max-height:740px){.chat-flow .c6-stickers{bottom:72px}

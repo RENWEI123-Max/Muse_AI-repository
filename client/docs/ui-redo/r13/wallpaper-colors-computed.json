@@ -1,0 +1,288 @@
+[
+  {
+    "tag": "HEADER",
+    "id": "",
+    "class": "ui-header",
+    "text": "Chat background",
+    "box": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 64
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-header__back ui-icon-button",
+    "text": "",
+    "box": {
+      "x": 16,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "20px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "H1",
+    "id": "",
+    "class": "",
+    "text": "Chat background",
+    "box": {
+      "x": 68,
+      "y": 68,
+      "width": 239,
+      "height": 24
+    },
+    "style": {
+      "font": "550 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "wallpaper-tab",
+    "class": "",
+    "text": "Wallpapers",
+    "box": {
+      "x": 28,
+      "y": 140,
+      "width": 155.5,
+      "height": 40
+    },
+    "style": {
+      "font": "13px / 16px Fredoka",
+      "color": "rgb(151, 171, 151)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(151, 171, 151)",
+      "borderRadius": "10px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "color-tab",
+    "class": "selected",
+    "text": "Colors",
+    "box": {
+      "x": 191.5,
+      "y": 140,
+      "width": 155.5,
+      "height": 40
+    },
+    "style": {
+      "font": "13px / 16px Fredoka",
+      "color": "rgb(181, 250, 112)",
+      "background": "rgb(44, 59, 40) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(181, 250, 112)",
+      "borderRadius": "10px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-night",
+    "text": "Night",
+    "box": {
+      "x": 24,
+      "y": 208,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(16, 32, 23) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-forest",
+    "text": "Forest",
+    "box": {
+      "x": 195.5,
+      "y": 208,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(27, 55, 36) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-clouds",
+    "text": "Clouds",
+    "box": {
+      "x": 24,
+      "y": 404,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(25, 52, 59) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-lavender",
+    "text": "Lavender",
+    "box": {
+      "x": 195.5,
+      "y": 404,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(48, 40, 57) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-sunset",
+    "text": "Sunset",
+    "box": {
+      "x": 24,
+      "y": 600,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(52, 49, 71) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-ocean",
+    "text": "Ocean",
+    "box": {
+      "x": 195.5,
+      "y": 600,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(21, 46, 55) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "theme-card ui-appearance-swatch theme-stars",
+    "text": "Stars",
+    "box": {
+      "x": 24,
+      "y": 796,
+      "width": 155.5,
+      "height": 180
+    },
+    "style": {
+      "font": "12px / 14.52px Fredoka",
+      "color": "rgb(216, 231, 209)",
+      "background": "rgb(23, 29, 48) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.086)",
+      "borderRadius": "16px",
+      "padding": "16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "background-done",
+    "class": "ui-button ui-button--appearance-primary appearance-done",
+    "text": "Done",
+    "box": {
+      "x": 24,
+      "y": 992,
+      "width": 327,
+      "height": 48
+    },
+    "style": {
+      "font": "600 16px / 22px Fredoka",
+      "color": "rgb(24, 49, 14)",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(24, 49, 14)",
+      "borderRadius": "24px",
+      "padding": "0px 12px",
+      "gap": "10px",
+      "letterSpacing": "normal"
+    }
+  }
+]

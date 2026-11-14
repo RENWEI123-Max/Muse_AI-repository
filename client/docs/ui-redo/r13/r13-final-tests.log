@@ -1,0 +1,40 @@
+[WebServer] (node:1199076) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1199103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r13-wallpapers.spec.ts:12:1 › R13 six appearance states, measured geometry and style (8.8s)
+  ✘  2 tests/r13-wallpapers.spec.ts:26:1 › R13 Korean and small viewport retain layout without scaling images (12.8s)
+
+
+  1) tests/r13-wallpapers.spec.ts:26:1 › R13 Korean and small viewport retain layout without scaling images 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('#my-bubble')
+    Expected pattern: /GowunDodum/
+    Received string:  "Fredoka"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('#my-bubble') with timeout 5000ms
+      - waiting for locator('#my-bubble')
+        14 × locator resolved to <div id="my-bubble" data-v-acc76d6f="">만나서 반가워요!</div>
+           - unexpected value "Fredoka"
+
+
+      26 | test('R13 Korean and small viewport retain layout without scaling images',async({page})=>{
+      27 |  await enter(page,true);await background(page);await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);await expect(page.locator('.wallpaper-name').first()).toHaveCSS('font-family',/GowunDodum/);await page.screenshot({path:'docs/ui-redo/r13/wallpapers-ko.png'});await box(page,'[data-wallpaper="moon-road"] img',138,209,99,173.0625);
+    > 28 |  await page.setViewportSize({width:375,height:700});await box(page,'[data-wallpaper="moon-road"] img',138,209,99,173.0625);await page.screenshot({path:'docs/ui-redo/r13/wallpapers-small.png'});await page.locator('.ui-header__back').click();await page.locator('#chat-bubbles').click();await expect(page.locator('#my-bubble')).toHaveCSS('font-family',/GowunDodum/);for(const el of await page.locator('.preference-row span').all()){const b=await el.boundingBox();expect(b!.x+b!.width).toBeLessThan(295)}await page.screenshot({path:'docs/ui-redo/r13/chat-bubbles-ko-small.png'})
+         |                                                                                                                                                                                                                                                                                                                                      ^
+      29 | })
+      30 |
+        at /tmp/maugo-r13/client/tests/r13-wallpapers.spec.ts:28:326
+
+    Error Context: test-results/r13-wallpapers-R13-Korean--40bc9-yout-without-scaling-images/error-context.md
+
+  1 failed
+    tests/r13-wallpapers.spec.ts:26:1 › R13 Korean and small viewport retain layout without scaling images 
+  1 passed (25.0s)

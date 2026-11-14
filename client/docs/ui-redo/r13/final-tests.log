@@ -1,0 +1,74 @@
+[WebServer] (node:1205827) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:1205848) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset (14.3s)
+(node:1206060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings (10.1s)
+(node:1206253) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/r13-wallpapers.spec.ts:13:1 › R13 six appearance states, measured geometry and style (6.7s)
+  ✓  4 tests/r13-wallpapers.spec.ts:27:1 › R13 Korean and small viewport retain layout without scaling images (3.9s)
+
+
+  1) tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('.c6-chat')
+    Expected pattern: /moon-road/
+    Received string:  "none"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.c6-chat') with timeout 5000ms
+      - waiting for locator('.c6-chat')
+        14 × locator resolved to <section data-v-486be914="" data-state="chat-open" class="c6-chat chat-flow">…</section>
+           - unexpected value "none"
+
+
+      12 |  await page.locator('#chat-details').click();await page.locator('#chat-bubbles').click();await capture(page,'chat-bubbles');await page.locator('#color-myBubble').evaluate((el:HTMLInputElement)=>{el.value='#d9c6ff';el.dispatchEvent(new Event('input',{bubbles:true}))});await page.locator('#color-theirText').evaluate((el:HTMLInputElement)=>{el.value='#ffffff';el.dispatchEvent(new Event('input',{bubbles:true}))});await capture(page,'chat-bubbles-custom');await expect(page.locator('#my-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)');await expect(page.locator('#their-bubble')).toHaveCSS('color','rgb(255, 255, 255)');await page.getByLabel('Back to messages').click();await page.getByLabel('Back to messages').click();await expect(page.locator('.mine .chat-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)')
+      13 |  await page.getByLabel('Back to messages').click();await page.locator('[data-chat="ocean"]').click();await expect(page.locator('.c6-chat')).not.toHaveCSS('background-image',/moon-road/);await page.getByLabel('Back to messages').click();await page.locator('[data-chat="tea"]').click();await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/)
+    > 14 |  await enter(page);await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/);await expect(page.locator('.mine .chat-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)');await background(page);await page.locator('#color-tab').click();await capture(page,'wallpaper-colors');await expect(page.locator('[data-theme]')).toHaveCount(7);await page.locator('[data-theme="lavender"]').click();await expect(page.locator('[data-theme="lavender"]')).toHaveAttribute('aria-pressed','true');await page.locator('#background-done').click();await expect(page.locator('.c6-chat')).toHaveClass(/theme-lavender/);await enter(page);await expect(page.locator('.c6-chat')).toHaveClass(/theme-lavender/)
+         |                                                           ^
+      15 |  await page.locator('#chat-details').click();await page.locator('#chat-bubbles').click();await page.locator('#reset-bubbles').click();await expect(page.locator('#color-myBubble')).toHaveValue('#aef879');await capture(page,'chat-bubbles');await page.getByLabel('Back to messages').click();await page.getByLabel('Back to messages').click();await background(page);await page.locator('#wallpaper-default').click();await expect(page.locator('.c6-chat')).toHaveClass(/theme-night/)
+      16 | })
+      17 | test('D2 removed wallpaper references fall back to default without losing bubble settings',async({page})=>{
+        at /tmp/maugo-r13/client/tests/d2.spec.ts:14:59
+
+    Error Context: test-results/d2-D2-six-states-preview-c-07b5a-ersistence-and-bubble-reset/error-context.md
+
+  2) tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings 
+
+    Error: expect(locator).toHaveClass(expected) failed
+
+    Locator: locator('.c6-chat')
+    Expected pattern: /theme-night/
+    Received string:  "c6-chat chat-flow"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveClass" locator('.c6-chat') with timeout 5000ms
+      - waiting for locator('.c6-chat')
+        14 × locator resolved to <section data-v-486be914="" data-state="chat-open" class="c6-chat chat-flow">…</section>
+           - unexpected value "c6-chat chat-flow"
+
+
+      16 | })
+      17 | test('D2 removed wallpaper references fall back to default without losing bubble settings',async({page})=>{
+    > 18 |  await enter(page);for(const wallpaperId of ['starlit-lake','golden-light']){await page.evaluate(id=>localStorage.setItem('maugo-chat-appearance-tea',JSON.stringify({wallpaperId:id,background:'lavender',myBubble:'#d9c6ff'})),wallpaperId);await enter(page);await expect(page.locator('.c6-chat')).toHaveClass(/theme-night/);await expect(page.locator('.c6-chat')).toHaveCSS('background-image','none');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('maugo-chat-appearance-tea')!))).toEqual({background:'night',myBubble:'#d9c6ff'});await background(page);await expect(page.locator('[data-wallpaper]')).toHaveCount(8);await expect(page.locator('#wallpaper-default')).toHaveAttribute('aria-pressed','true')}
+         |                                                                                                                                                                                                                                                                                                        ^
+      19 | })
+      20 |
+        at /tmp/maugo-r13/client/tests/d2.spec.ts:18:296
+
+    Error Context: test-results/d2-D2-removed-wallpaper-re-e7c7e-hout-losing-bubble-settings/error-context.md
+
+  2 failed
+    tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset 
+    tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings 
+  2 passed (39.6s)

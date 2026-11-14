@@ -1,0 +1,43 @@
+@import "../../chat.css";
+/* R13 local JSON v2421258509127695554. Section y=48, body y=112. */
+.d2-appearance .d2-header-space{position:absolute;right:16px;width:40px}
+.d2-appearance h1{width:239px;text-align:center}
+.d2-appearance .d2-body{position:relative;flex:1;min-height:0;overflow:auto;padding:24px 24px 28px;animation:d2-open .22s ease-out;scrollbar-width:none}
+.d2-appearance .page-tabs{width:327px;height:48px;margin-bottom:24px}
+.d2-appearance .wallpaper-grid{display:grid;grid-template-columns:repeat(3,101px);gap:12px}
+.d2-appearance .appearance-tile-image{display:block;width:99px;height:173.0625px;max-width:none;object-fit:cover}
+.d2-appearance .wallpaper-check{position:absolute;top:8px;right:8px;color:var(--accent);font:var(--appearance-font-check)}
+.d2-appearance .wallpaper-default{background:var(--bg-page)}
+.d2-appearance .wallpaper-default::before{content:'☾';font:var(--appearance-font-moon);color:var(--appearance-moon)}
+.d2-appearance .local-note{font:var(--appearance-font-note);color:var(--appearance-note);margin:24px 0 0;text-align:center}
+.d2-appearance .theme-grid{display:grid;grid-template-columns:repeat(2,155.5px);gap:16px}
+.d2-appearance .appearance-done{width:327px;margin-top:16px}
+.d2-appearance .wallpaper-preview{position:relative;width:327px;height:488px;margin:0;overflow:hidden;border:1px solid var(--appearance-preview-border);border-radius:var(--radius-20);background:var(--chat-surface)}
+.d2-appearance .appearance-preview-image{display:block;width:325px;height:486px;object-fit:cover}
+.d2-appearance .preview-conversation{position:absolute;inset:24px 16px;display:flex;flex-direction:column;gap:20px}
+.d2-appearance :is(.appearance-preview-peer,.appearance-preview-mine){padding:12px 16px;height:44px;background:var(--appearance-preview-peer);color:var(--appearance-preview-text);font:var(--appearance-font-preview);border-radius:var(--appearance-radius-preview-peer)}
+.d2-appearance .appearance-preview-mine{align-self:flex-end;background:var(--accent);color:var(--appearance-preview-mine-text);border-radius:var(--appearance-radius-preview-mine)}
+.d2-appearance .appearance-caption{position:absolute;bottom:0;left:0;right:0;padding:40px 16px 20px;color:var(--appearance-caption);font:var(--appearance-font-caption);text-align:center}
+.d2-appearance .wallpaper-apply{padding:16px 0 20px}
+.d2-appearance .appearance-apply{width:327px}
+.d2-appearance .bubble-preview{display:flex;flex-direction:column;gap:16px;width:327px;height:144px;margin-bottom:24px;padding:20px;background:var(--appearance-bubble-preview);border-radius:var(--radius-16)}
+.d2-appearance #their-bubble{width:287px;height:44px;flex:none;padding:12px;background:var(--their-bubble);color:var(--their-text);font:var(--appearance-font-preview);border-radius:var(--radius-12)}
+.d2-appearance #my-bubble{align-self:flex-end;width:max-content;height:44px;flex:none;padding:12px;background:var(--my-bubble);color:var(--my-text);font:var(--appearance-font-preview);border-radius:var(--radius-12)}
+.d2-appearance .menu-group{width:327px;margin-bottom:36px;padding:0 16px;border-radius:var(--radius-16);background:var(--appearance-color-panel)}
+.d2-appearance .appearance-reset{width:327px}
+.c6-chat.theme-wallpaper{background-size:cover;background-position:center}
+.c6-chat.theme-night,.d2-appearance .theme-night{background:var(--chat-surface)}
+.c6-chat.theme-forest,.d2-appearance .theme-forest{background:var(--appearance-forest-start)}
+.c6-chat.theme-clouds,.d2-appearance .theme-clouds{background:var(--appearance-clouds)}
+.c6-chat.theme-lavender,.d2-appearance .theme-lavender{background:var(--appearance-lavender)}
+.c6-chat.theme-sunset,.d2-appearance .theme-sunset{background:var(--appearance-sunset-start)}
+.c6-chat.theme-ocean,.d2-appearance .theme-ocean{background:var(--appearance-ocean)}
+.c6-chat.theme-stars,.d2-appearance .theme-stars{background:var(--appearance-stars-start)}
+.chat-flow.d2-custom-bubbles .chat-bubble{background:var(--their-bubble);color:var(--their-text)}
+.chat-flow.d2-custom-bubbles .chat-bubble--mine{background:var(--my-bubble);color:var(--my-text)}
+.d2-appearance .d2-page-enter-active,.d2-appearance .d2-page-leave-active{transition:opacity .18s,transform .18s}
+.d2-appearance .d2-page-enter-from{opacity:0;transform:translateX(16px)}
+.d2-appearance .d2-page-leave-to{opacity:0;transform:translateX(-12px)}
+.d2-appearance:lang(ko) :is(h1,span,div,figcaption,p,#my-bubble,#their-bubble){font-family:var(--font-family-ko)}
+@keyframes d2-open{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-height:740px){.d2-appearance .d2-body{padding-bottom:40px}}

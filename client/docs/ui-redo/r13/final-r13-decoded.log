@@ -1,0 +1,11 @@
+[WebServer] (node:1207757) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1207799) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r13-wallpapers.spec.ts:13:1 › R13 six appearance states, measured geometry and style (7.4s)
+  ✓  2 tests/r13-wallpapers.spec.ts:27:1 › R13 Korean and small viewport retain layout without scaling images (4.4s)
+
+  2 passed (14.3s)

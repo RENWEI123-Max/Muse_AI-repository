@@ -1,0 +1,16 @@
+
+> maugo-client@0.1.0 build
+> npm run verify:assets && vue-tsc --noEmit && vite build
+
+
+> maugo-client@0.1.0 verify:assets
+> node scripts/verify-assets.mjs
+
+PASS: 343 PNGs; manifest paths, SHA256, dimensions, fonts and OFL licenses
+tests/r13-wallpapers.spec.ts(12,270): error TS7006: Parameter 'root' implicitly has an 'any' type.
+tests/r13-wallpapers.spec.ts(12,511): error TS18046: 'el' is of type 'unknown'.
+tests/r13-wallpapers.spec.ts(12,557): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Element'.
+tests/r13-wallpapers.spec.ts(12,573): error TS18046: 'el' is of type 'unknown'.
+tests/r13-wallpapers.spec.ts(12,587): error TS18046: 'el' is of type 'unknown'.
+tests/r13-wallpapers.spec.ts(12,599): error TS18046: 'el' is of type 'unknown'.
+tests/r13-wallpapers.spec.ts(12,617): error TS18046: 'el' is of type 'unknown'.
