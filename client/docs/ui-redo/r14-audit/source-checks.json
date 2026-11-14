@@ -1,0 +1,29 @@
+{
+  "client/src/styles/pages/safety.css": {
+    "hex": 0,
+    "important": 0,
+    "devicePrefix": 0
+  },
+  "client/tests/r14-audit.spec.ts": {
+    "hex": 0,
+    "important": 0,
+    "devicePrefix": 0
+  },
+  "client/tests/r14-audit.config.ts": {
+    "hex": 0,
+    "important": 0,
+    "devicePrefix": 0
+  },
+  "client/src/App.vue": {
+    "unchanged": true
+  },
+  "client/src/components/ChatFlow.vue": {
+    "unchanged": true
+  },
+  "client/src/components/InboxFlow.vue": {
+    "unchanged": true
+  },
+  "client/src/styles/tokens.css": {
+    "unchanged": true
+  }
+}

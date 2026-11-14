@@ -16,7 +16,7 @@
 .safety-flow .safety-unblock-dialog{top:287px;height:238px}
 .safety-unblock-dialog .safety-confirm-action{top:120px}
 .safety-unblock-dialog .safety-dialog-cancel{top:168px}
-.safety-report-page .d3-report{padding:24px;overflow:auto;flex:1;animation:d3-in .25s ease-out}
+.safety-report-page .d3-report{padding:24px;overflow:auto;flex:1;min-height:0;overscroll-behavior-y:contain}
 .safety-report-page .d3-intro{margin:0 0 24px;color:var(--safety-report-intro);font:var(--safety-font-intro)}
 .safety-report-page :is(.safety-reason,.safety-details){display:block;margin:0 0 24px;color:var(--safety-report-label);font:var(--font-body-sm)}
 .safety-report-page .d3-add-photo{position:relative;width:327px;margin-top:16px;transition:background .18s,transform .18s;cursor:pointer}
@@ -32,7 +32,7 @@
 .safety-flow[data-state="chat-blocked"] .d11-chat-gate{position:absolute;left:0;top:612.5px;width:375px;height:123.5px}
 .safety-flow[data-state="chat-blocked"] .waiting-card{bottom:0;height:123.5px;padding:22px 24px 20px;border-top:1px solid var(--hairline);background:var(--safety-blocked-bg)}
 .safety-flow[data-state="chat-blocked"] .chat-waiting-title{font:var(--safety-font-blocked-title)}
-.safety-flow.d3-blocked{position:absolute;inset:48px 0 0;z-index:12;overflow:auto;background:var(--bg-page);animation:d3-list-in .25s ease-out}
+.safety-flow.d3-blocked{position:absolute;inset:48px 0 0;z-index:12;overflow:auto;background:var(--bg-page);overscroll-behavior-y:contain}
 .safety-flow .d3-blocked-row{display:flex;align-items:center;gap:12px;width:327px;height:80px;margin:24px 24px 0;padding:16px 0}
 .safety-flow .inbox-block-avatar{width:48px;height:48px;border-radius:var(--radius-24);object-fit:cover}
 .safety-flow h1{margin:0;font:var(--font-title-page);letter-spacing:var(--font-title-page-letter-spacing)}
@@ -43,6 +43,4 @@
 .safety-flow .safety-empty-copy{margin:0;color:var(--text-empty);font:var(--font-caption-21)}
 .safety-flow.safety-list-unblock{position:absolute;inset:0;z-index:44}
 .safety-flow:lang(ko) :is(h1,h2,h3,p,span,small,button,label,input,textarea,select){font-family:var(--font-family-ko)}
-@keyframes d3-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes d3-list-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
 @media(max-height:740px){.safety-flow .safety-choice-sheet{top:auto;bottom:24px}.safety-flow[data-state="chat-blocked"] .d11-chat-gate{top:auto;bottom:28px}.safety-report-page .d3-report{padding-bottom:40px}}

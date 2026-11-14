@@ -1,0 +1,101 @@
+{
+  "id": "safety",
+  "title": "08 · 举报、屏蔽与恢复",
+  "description": "入口、表单、确认、完成与解除屏蔽。",
+  "pages": [
+    {
+      "id": "safety-choice",
+      "title": "安全操作 / 举报或屏蔽",
+      "task": "details",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#report-person"
+        ]
+      ]
+    },
+    {
+      "id": "report-empty",
+      "title": "举报 / 原因表单",
+      "task": "report",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "report-filled",
+      "title": "举报 / 已填写内容",
+      "task": "report",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#report-details",
+          "Repeated unwanted messages after I asked to stop."
+        ]
+      ]
+    },
+    {
+      "id": "report-saved",
+      "title": "举报 / 保存结果",
+      "task": "report",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#report-details",
+          "Sample report for this prototype."
+        ],
+        [
+          "click",
+          "#save-report"
+        ]
+      ]
+    },
+    {
+      "id": "block-confirm",
+      "title": "屏蔽 / 二次确认",
+      "task": "details",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#block-chat"
+        ]
+      ]
+    },
+    {
+      "id": "chat-blocked",
+      "title": "对话 / 已屏蔽",
+      "task": "chat",
+      "seed": "blocked",
+      "actions": []
+    },
+    {
+      "id": "blocked-list",
+      "title": "屏蔽名单 / 有记录",
+      "task": "blocked",
+      "seed": "blocked",
+      "actions": []
+    },
+    {
+      "id": "blocked-empty",
+      "title": "屏蔽名单 / 空状态",
+      "task": "blocked",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "unblock-confirm",
+      "title": "解除屏蔽 / 确认",
+      "task": "details",
+      "seed": "blocked",
+      "actions": [
+        [
+          "click",
+          "#block-chat"
+        ]
+      ]
+    }
+  ]
+}
