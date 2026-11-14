@@ -1,0 +1,94 @@
+[WebServer] (node:68333) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:68335) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough (24.2s)
+
+
+  1) tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+        "dialogs": 0,
+    -   "page": true,
+    -   "profile": true,
+    +   "page": false,
+    +   "profile": false,
+      }
+
+      62 |  await options();await panel.locator('#delete-moment').click();await shot('moment-delete',true);await press('deletePress',panel.locator('#d5-confirm-delete'));await panel.locator('.row').click();await expect(panel).toHaveCount(0);expect(posts).toHaveLength(1);checks.deleteCancelToList=true
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+    > 64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+         |                                                                                                                                                                                                                                                                                         ^
+      65 |  if(!await profilePage.isVisible()){for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.animation.duration,r.name).toBe(r.name==='moment-stickers'?'0s':['moment-leave','moment-delete','delete-failure'].includes(r.name)?'0.22s':'0.3s')}return}
+      66 |  await options();await panel.locator('#delete-moment').click();fail='delete';await panel.locator('#d5-confirm-delete').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('delete-failure');fail='';await panel.locator('#d5-confirm-delete').click();await expect(view.locator('.moment-card')).toHaveCount(0);await shot('deleted-empty');expect(posts).toHaveLength(0)
+      67 |  await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');await view.locator('#moment-text').fill('Discard via UI');await view.locator('#d5-back').click();await panel.locator('#discard-moment-draft').click();await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');checks.discardCleared=true
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:64:281
+
+    Error: moment-stickers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0s"
+    Received: "0.3s"
+
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+    > 65 |  if(!await profilePage.isVisible()){for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.animation.duration,r.name).toBe(r.name==='moment-stickers'?'0s':['moment-leave','moment-delete','delete-failure'].includes(r.name)?'0.22s':'0.3s')}return}
+         |                                                                                                                                 ^
+      66 |  await options();await panel.locator('#delete-moment').click();fail='delete';await panel.locator('#d5-confirm-delete').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('delete-failure');fail='';await panel.locator('#d5-confirm-delete').click();await expect(view.locator('.moment-card')).toHaveCount(0);await shot('deleted-empty');expect(posts).toHaveLength(0)
+      67 |  await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');await view.locator('#moment-text').fill('Discard via UI');await view.locator('#d5-back').click();await panel.locator('#discard-moment-draft').click();await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');checks.discardCleared=true
+      68 |  for(const target of ['moment-stickers','moment-visibility','compose-category','moment-leave']){if(target==='moment-leave'){await view.locator('#moment-text').fill('Keyboard cancellation');await view.locator('#d5-back').click()}else await view.locator({'moment-stickers':'#moment-sticker','moment-visibility':'#moment-audience','compose-category':'#compose-category'}[target]!).click();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks[target+'Escape']={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,page:true,dialogs:0});if(!await profilePage.isVisible())return}
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:65:129
+
+    Error: moment-leave
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+    > 65 |  if(!await profilePage.isVisible()){for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.animation.duration,r.name).toBe(r.name==='moment-stickers'?'0s':['moment-leave','moment-delete','delete-failure'].includes(r.name)?'0.22s':'0.3s')}return}
+         |                                                                                                                                 ^
+      66 |  await options();await panel.locator('#delete-moment').click();fail='delete';await panel.locator('#d5-confirm-delete').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('delete-failure');fail='';await panel.locator('#d5-confirm-delete').click();await expect(view.locator('.moment-card')).toHaveCount(0);await shot('deleted-empty');expect(posts).toHaveLength(0)
+      67 |  await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');await view.locator('#moment-text').fill('Discard via UI');await view.locator('#d5-back').click();await panel.locator('#discard-moment-draft').click();await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');checks.discardCleared=true
+      68 |  for(const target of ['moment-stickers','moment-visibility','compose-category','moment-leave']){if(target==='moment-leave'){await view.locator('#moment-text').fill('Keyboard cancellation');await view.locator('#d5-back').click()}else await view.locator({'moment-stickers':'#moment-sticker','moment-visibility':'#moment-audience','compose-category':'#compose-category'}[target]!).click();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks[target+'Escape']={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,page:true,dialogs:0});if(!await profilePage.isVisible())return}
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:65:129
+
+    Error: moment-delete
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0.22s"
+    Received: "0.3s"
+
+      63 |  // Overlay keyboard handling must preserve the underlying Profile and page.
+      64 |  await options();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks.optionsEscape={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks.optionsEscape).toEqual({profile:true,page:true,dialogs:0})
+    > 65 |  if(!await profilePage.isVisible()){for(const r of records.filter(r=>r.metric)){expect.soft(r.metric.animation.duration,r.name).toBe(r.name==='moment-stickers'?'0s':['moment-leave','moment-delete','delete-failure'].includes(r.name)?'0.22s':'0.3s')}return}
+         |                                                                                                                                 ^
+      66 |  await options();await panel.locator('#delete-moment').click();fail='delete';await panel.locator('#d5-confirm-delete').click();await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('delete-failure');fail='';await panel.locator('#d5-confirm-delete').click();await expect(view.locator('.moment-card')).toHaveCount(0);await shot('deleted-empty');expect(posts).toHaveLength(0)
+      67 |  await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');await view.locator('#moment-text').fill('Discard via UI');await view.locator('#d5-back').click();await panel.locator('#discard-moment-draft').click();await view.locator('#new-moment').click();await expect(view.locator('#moment-text')).toHaveValue('');checks.discardCleared=true
+      68 |  for(const target of ['moment-stickers','moment-visibility','compose-category','moment-leave']){if(target==='moment-leave'){await view.locator('#moment-text').fill('Keyboard cancellation');await view.locator('#d5-back').click()}else await view.locator({'moment-stickers':'#moment-sticker','moment-visibility':'#moment-audience','compose-category':'#compose-category'}[target]!).click();await panel.locator('.close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(400);checks[target+'Escape']={profile:await profilePage.isVisible(),page:await view.isVisible(),dialogs:await panel.count()};save();expect.soft(checks[target+'Escape']).toEqual({profile:true,page:true,dialogs:0});if(!await profilePage.isVisible())return}
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:65:129
+
+    Error Context: test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-audit/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ──────────────────────────────────

@@ -1,0 +1,469 @@
+{
+  "fixture": true,
+  "checks": {
+    "likes": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "focusInside": false,
+      "underlayInert": false
+    },
+    "letterClickStays": true,
+    "scroll": {
+      "top": 245,
+      "height": 555,
+      "content": 800
+    },
+    "press": {
+      "transform": "none",
+      "transition": "0s"
+    },
+    "clipped": [
+      {
+        "step": "profile-empty",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "save-success",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "profile-likes",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "avatar-boundary",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "cards-boundary",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "moments-boundary",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "profile-content",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "load-failure",
+        "text": "",
+        "clipped": true
+      },
+      {
+        "step": "load-recovered",
+        "text": "",
+        "clipped": true
+      }
+    ],
+    "motion": {
+      "animation": "none",
+      "duration": "0s"
+    }
+  },
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit reader",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit saved",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r17-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "errors": []
+}

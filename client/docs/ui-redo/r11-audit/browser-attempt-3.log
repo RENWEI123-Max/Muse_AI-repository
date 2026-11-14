@@ -1,0 +1,184 @@
+[WebServer] (node:56212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:56214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture (19.9s)
+(node:56240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture (20.7s)
+(node:56258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture (20.7s)
+(node:56272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture (20.0s)
+
+
+  1) tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#chat-send')
+        - locator resolved to <button disabled id="chat-send" aria-label="Send message" class="ui-icon-button ui-icon-button--chat-send">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+    > 44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+         |                                                                                                                                                                                                                                                                                                                                                                                     ^
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+      46 |  const hold=await page.locator('#chat-hold').boundingBox();await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(root).toHaveAttribute('data-state','chat-recording');await shot('chat-recording','chat-recording');const wave=await page.locator('.chat-wave-bar').first().evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));expect(wave.duration).toBe('0.6s');await page.mouse.move(hold!.x+20,hold!.y-100);await shot('chat-record-cancel','chat-record-cancel');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0);await expect(page.locator('#voice-send')).toHaveCount(0)
+      47 |  await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(page.locator('.c6-record')).toBeVisible();await page.keyboard.press('Escape');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:44:373
+
+    Error Context: test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#chat-send')
+        - locator resolved to <button disabled id="chat-send" aria-label="메시지 보내기" class="ui-icon-button ui-icon-button--chat-send">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+    > 44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+         |                                                                                                                                                                                                                                                                                                                                                                                     ^
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+      46 |  const hold=await page.locator('#chat-hold').boundingBox();await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(root).toHaveAttribute('data-state','chat-recording');await shot('chat-recording','chat-recording');const wave=await page.locator('.chat-wave-bar').first().evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));expect(wave.duration).toBe('0.6s');await page.mouse.move(hold!.x+20,hold!.y-100);await shot('chat-record-cancel','chat-record-cancel');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0);await expect(page.locator('#voice-send')).toHaveCount(0)
+      47 |  await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(page.locator('.c6-record')).toBeVisible();await page.keyboard.press('Escape');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:44:373
+
+    Error Context: test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#chat-send')
+        - locator resolved to <button disabled id="chat-send" aria-label="Send message" class="ui-icon-button ui-icon-button--chat-send">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+    > 44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+         |                                                                                                                                                                                                                                                                                                                                                                                     ^
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+      46 |  const hold=await page.locator('#chat-hold').boundingBox();await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(root).toHaveAttribute('data-state','chat-recording');await shot('chat-recording','chat-recording');const wave=await page.locator('.chat-wave-bar').first().evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));expect(wave.duration).toBe('0.6s');await page.mouse.move(hold!.x+20,hold!.y-100);await shot('chat-record-cancel','chat-record-cancel');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0);await expect(page.locator('#voice-send')).toHaveCount(0)
+      47 |  await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(page.locator('.c6-record')).toBeVisible();await page.keyboard.press('Escape');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:44:373
+
+    Error Context: test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#chat-send')
+        - locator resolved to <button disabled id="chat-send" aria-label="메시지 보내기" class="ui-icon-button ui-icon-button--chat-send">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+    > 44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+         |                                                                                                                                                                                                                                                                                                                                                                                     ^
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+      46 |  const hold=await page.locator('#chat-hold').boundingBox();await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(root).toHaveAttribute('data-state','chat-recording');await shot('chat-recording','chat-recording');const wave=await page.locator('.chat-wave-bar').first().evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));expect(wave.duration).toBe('0.6s');await page.mouse.move(hold!.x+20,hold!.y-100);await shot('chat-record-cancel','chat-record-cancel');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0);await expect(page.locator('#voice-send')).toHaveCount(0)
+      47 |  await page.mouse.move(hold!.x+20,hold!.y+10);await page.mouse.down();await expect(page.locator('.c6-record')).toBeVisible();await page.keyboard.press('Escape');await page.mouse.up();await expect(page.locator('.c6-record')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:44:373
+
+    Error Context: test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ────────────────────────────

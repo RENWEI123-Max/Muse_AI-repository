@@ -1,0 +1,28 @@
+
+Running 1 test using 1 worker
+
+(node:1309054) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session (4.9s)
+
+
+  1) tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ───────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      12 |  const back=()=>page.locator('#page-back').click()
+      13 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
+    > 14 |  const login=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST');await page.getByRole('button',{name:'Sign in',exact:true}).click();expect((await login).status()).toBe(200);await page.context().storageState({path:'/tmp/r17-storage.json'})
+         |                                                                                                                                                                                                        ^
+      15 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await expect(page.locator('#edit-profile')).toContainText('Reader');await shot('profile-empty');await box('#edit-avatar',[143.5,152,88,88]);await box('#edit-profile',[24,254,327,22]);await box('.profile-counters',[24,357,327,67]);
+      16 |  await page.locator('#edit-profile').click();await shot('profile-edit');for(const [id,y,h] of [['edit-name',168,48],['edit-age',272,48],['edit-city',376,48],['edit-zodiac',480,48],['edit-bio',584,120]] as const)await box('#'+id,[24,y,327,h]);expect.soft(await page.locator('#edit-name').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(32, 47, 36)')
+      17 |  await page.locator('#edit-age').fill('17');await page.locator('#save-profile').click();await expect(page.getByRole('alert')).toBeVisible();await shot('profile-invalid');await box('.d4-error',[28,646.5,319,40.5]);await back()
+        at /root/Muse_AI-repository/client/tests/r17-profile.spec.ts:14:200
+
+    Error Context: docs/ui-redo/r17/test-results/r17-profile-R17-twelve-rea-645ab-states-in-one-login-session/error-context.md
+
+  1 failed
+    tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ────────────

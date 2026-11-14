@@ -1,0 +1,100 @@
+[WebServer] (node:56402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:56404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture (7.1s)
+(node:56409) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture (7.0s)
+(node:56416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture (16.6s)
+  ✘  4 tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture (7.1s)
+
+
+  1) tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ───────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 2070
+
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+    > 42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+         |                                                                                                                                                                                             ^
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+      44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:42:189
+
+    Error Context: test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ───────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 2070
+
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+    > 42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+         |                                                                                                                                                                                             ^
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+      44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:42:189
+
+    Error Context: test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ───────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1925
+
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+    > 42 |  await page.locator('#chat-thread').hover();await page.mouse.wheel(0,-10000);await page.waitForTimeout(250);const up=await page.locator('#chat-thread').evaluate(e=>e.scrollTop);expect(up).toBe(0)
+         |                                                                                                                                                                                             ^
+      43 |  await page.locator('#chat-input').fill('A kind message.');await shot('chat-draft','chat-draft');await back();await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=true;await page.locator('#chat-send').click();await expect(root.getByRole('alert')).toBeVisible();await shot('send-failure');await expect(page.locator('#chat-input')).toHaveValue('A kind message.');fail=false;await page.locator('#chat-send').click();await shot('chat-sent','chat-sent');expect(await page.locator('#chat-thread').evaluate(e=>e.scrollHeight-e.clientHeight-e.scrollTop)).toBeLessThan(2)
+      44 |  await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await shot('chat-attachment','chat-attachment');await page.getByLabel(t('Remove attachment')).click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await page.locator('#chat-photo').setInputFiles('src/assets/05-avatars/portrait-1.png');await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0);await back();await page.locator('[data-chat]').click();await shot('chat-photo','chat-photo')
+      45 |  await page.locator('#chat-stickers').click();await shot('chat-stickers','chat-stickers');await page.locator('.ui-sticker-grid').hover();await page.mouse.wheel(0,900);await page.waitForTimeout(200);const stickerScroll=await page.locator('.ui-sticker-grid').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(stickerScroll.top).toBeGreaterThan(0);await shot('sticker-scroll');await page.keyboard.press('Escape');await expect(page.locator('.c6-stickers')).toHaveCount(0);await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await shot('chat-sticker-selected','chat-sticker-selected');await page.getByLabel(t('Remove attachment')).click();await page.getByLabel(t('Close emoji picker')).click();await page.locator('#chat-stickers').click();await page.locator('.sticker-option').first().click();await page.locator('#chat-send').click();await expect(page.locator('.c6-attachment')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:42:189
+
+    Error Context: test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ────────────────────────────
+  1 passed (39.7s)

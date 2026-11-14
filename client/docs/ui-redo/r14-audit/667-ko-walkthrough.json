@@ -1,0 +1,2357 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/other/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "safety-choice",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 296,
+          "content": 296,
+          "top": 0,
+          "bottom": 643,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.3s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이 사람에 대해 원하는 조치를 선택하세요.",
+          "clipped": false
+        },
+        {
+          "text": "신고부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "신고부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "차단이 사람의 연락을 차단",
+          "clipped": false
+        },
+        {
+          "text": "차단이 사람의 연락을 차단",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-flag-light-22-DoXnTBG3.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-block-24-c89c8f-18THvnxn.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "block-confirm",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 256,
+          "content": 256,
+          "top": 0,
+          "bottom": 462.5,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.22s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "이 사람에게 메시지, 사진 또는 음성을 보낼 수 없게 돼요.",
+          "clipped": false
+        },
+        {
+          "text": "차단",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "report-empty",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 575,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "신고",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "무슨 일이 있었나요?",
+          "clipped": false
+        },
+        {
+          "text": "이유욕설 또는 괴롭힘스팸 또는 광고부적절한 콘텐츠기타",
+          "clipped": false
+        },
+        {
+          "text": "상세 내용",
+          "clipped": false
+        },
+        {
+          "text": "사진 추가",
+          "clipped": false
+        },
+        {
+          "text": "MauGo 운영팀으로 신고를 전송해요.",
+          "clipped": false
+        },
+        {
+          "text": "신고 저장",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "report-filled",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 575,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "신고",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "무슨 일이 있었나요?",
+          "clipped": false
+        },
+        {
+          "text": "이유욕설 또는 괴롭힘스팸 또는 광고부적절한 콘텐츠기타",
+          "clipped": false
+        },
+        {
+          "text": "상세 내용",
+          "clipped": false
+        },
+        {
+          "text": "사진 추가",
+          "clipped": false
+        },
+        {
+          "text": "MauGo 운영팀으로 신고를 전송해요.",
+          "clipped": false
+        },
+        {
+          "text": "신고 저장",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "report-scrolled",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 555,
+          "content": 575,
+          "top": 20,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "신고",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "무슨 일이 있었나요?",
+          "clipped": false
+        },
+        {
+          "text": "이유욕설 또는 괴롭힘스팸 또는 광고부적절한 콘텐츠기타",
+          "clipped": false
+        },
+        {
+          "text": "상세 내용",
+          "clipped": false
+        },
+        {
+          "text": "사진 추가",
+          "clipped": false
+        },
+        {
+          "text": "MauGo 운영팀으로 신고를 전송해요.",
+          "clipped": false
+        },
+        {
+          "text": "신고 저장",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "report-cancel-return",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "blocked-empty",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 619,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/envelope-ClWcXW_-.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "chat-blocked",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [],
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "계속하려면 차단을 해제하세요.",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세 보기",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "unblock-confirm",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 236,
+          "content": 236,
+          "top": 0,
+          "bottom": 452.5,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.22s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "이 대화를 계속할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "blocked-list",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 619,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "list-unblock-confirm",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 619,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "height": 236,
+          "content": 236,
+          "top": 0,
+          "bottom": 452.5,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.22s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "이 대화를 계속할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "list-cancel-return",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 619,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "blocked-list-scrolled",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 2144,
+          "top": 1400,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    },
+    {
+      "name": "blocked-list-failure",
+      "state": null,
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "body": [
+        {
+          "height": 619,
+          "content": 2144,
+          "top": 0,
+          "bottom": 667,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "Please try again. 다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "MauGo member",
+          "clipped": false
+        },
+        {
+          "text": "차단 해제",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/status-bar-light-content-Dl2eC4Xv.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/icon-chevron-left-light-22-BUgrAd9Y.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/avatar-placeholder-BT5ih7my.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-discover-inactive-CYA58eec.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-messages-active-CWGVsRX5.png",
+          "decoded": true
+        },
+        {
+          "src": "/assets/tab-profile-inactive-BolyQtAn.png",
+          "decoded": true
+        }
+      ],
+      "gradients": []
+    }
+  ],
+  "checks": {
+    "sheet": {
+      "animation": "sheet-in",
+      "duration": "0.3s"
+    },
+    "dialog": {
+      "animation": "sheet-in",
+      "duration": "0.22s"
+    },
+    "reportScroll": {
+      "top": 20,
+      "height": 555,
+      "content": 575,
+      "overscroll": "contain",
+      "animation": "none"
+    },
+    "listScroll": {
+      "top": 1400,
+      "height": 619,
+      "content": 2144,
+      "overscroll": "contain"
+    }
+  },
+  "errors": []
+}

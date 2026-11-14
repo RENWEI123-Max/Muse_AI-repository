@@ -1,0 +1,24 @@
+{
+  "changedProductionFiles": [
+    "client/src/styles/pages/appearance.css"
+  ],
+  "hex": 0,
+  "important": 0,
+  "devicePrefix": 0,
+  "baseline": "9d48e3814ec8bdc8c9e6b136628d4e983bca3aaa",
+  "branch": "codex/r13-audit",
+  "client/src/components/ChatFlow.vue": {
+    "unchanged": true
+  },
+  "client/src/App.vue": {
+    "unchanged": true
+  },
+  "client/src/styles/tokens.css": {
+    "unchanged": true
+  },
+  "wallpapersUnchanged": true,
+  "bundles": {
+    "client/dist/assets/index-9u1tqBze.css": "932b48693576c5c7ba7aa64888b526c9394c466329d414fc7089b9814eef9ea2",
+    "client/dist/assets/index-DmdS3TpR.js": "117ea19f1d15e98614494c12028163066db4921adea468b933c26dc1b9de6719"
+  }
+}

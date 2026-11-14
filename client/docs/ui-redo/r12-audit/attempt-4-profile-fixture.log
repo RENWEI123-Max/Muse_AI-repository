@@ -1,0 +1,156 @@
+[WebServer] (node:57597) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:57599) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures (11.1s)
+(node:57656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r12-audit.spec.ts:6:61 › 667 ko R12 safe UI walkthrough with API fixtures (11.3s)
+(node:57676) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r12-audit.spec.ts:6:61 › 812 en R12 safe UI walkthrough with API fixtures (11.1s)
+(node:57684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r12-audit.spec.ts:6:61 › 812 ko R12 safe UI walkthrough with API fixtures (11.3s)
+
+
+  1) tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    + ]
+
+      48 |  await page.locator('#block-chat').click();await snap('block-boundary','block-confirm');await page.locator('.safety-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#report-person').click();await snap('report-choice-boundary','safety-choice');await page.locator('#safety-report').click();await snap('report-form-boundary','report-empty');await back();await expect(root).toHaveAttribute('data-state','chat-details');await snap('report-return');await page.locator('#view-public-profile').click();await expect(page.locator('#public-more')).toBeVisible();await page.locator('#page-back').click();await expect(root).toHaveAttribute('data-state','chat-details');checks.profileReturn=true
+      49 |  await back();await expect(root).toHaveAttribute('data-state','chat-open');await back();await expect(page.locator('.inbox-flow')).toBeVisible()
+    > 50 |  expect(errors).toEqual([]);expect(forbidden).toEqual([]);for(const r of records){expect.soft(r.document.height).toBe(height);expect.soft(r.document.y).toBe(0)}
+         |                 ^
+      51 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,errors,forbidden,calls,clipped:records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))},null,2))
+      52 | })
+      53 |
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:50:17
+
+    Error Context: test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r12-audit.spec.ts:6:61 › 667 ko R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    + ]
+
+      48 |  await page.locator('#block-chat').click();await snap('block-boundary','block-confirm');await page.locator('.safety-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#report-person').click();await snap('report-choice-boundary','safety-choice');await page.locator('#safety-report').click();await snap('report-form-boundary','report-empty');await back();await expect(root).toHaveAttribute('data-state','chat-details');await snap('report-return');await page.locator('#view-public-profile').click();await expect(page.locator('#public-more')).toBeVisible();await page.locator('#page-back').click();await expect(root).toHaveAttribute('data-state','chat-details');checks.profileReturn=true
+      49 |  await back();await expect(root).toHaveAttribute('data-state','chat-open');await back();await expect(page.locator('.inbox-flow')).toBeVisible()
+    > 50 |  expect(errors).toEqual([]);expect(forbidden).toEqual([]);for(const r of records){expect.soft(r.document.height).toBe(height);expect.soft(r.document.y).toBe(0)}
+         |                 ^
+      51 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,errors,forbidden,calls,clipped:records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))},null,2))
+      52 | })
+      53 |
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:50:17
+
+    Error Context: test-results/r12-audit/r12-audit-667-ko-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-667-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-667-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r12-audit.spec.ts:6:61 › 812 en R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    + ]
+
+      48 |  await page.locator('#block-chat').click();await snap('block-boundary','block-confirm');await page.locator('.safety-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#report-person').click();await snap('report-choice-boundary','safety-choice');await page.locator('#safety-report').click();await snap('report-form-boundary','report-empty');await back();await expect(root).toHaveAttribute('data-state','chat-details');await snap('report-return');await page.locator('#view-public-profile').click();await expect(page.locator('#public-more')).toBeVisible();await page.locator('#page-back').click();await expect(root).toHaveAttribute('data-state','chat-details');checks.profileReturn=true
+      49 |  await back();await expect(root).toHaveAttribute('data-state','chat-open');await back();await expect(page.locator('.inbox-flow')).toBeVisible()
+    > 50 |  expect(errors).toEqual([]);expect(forbidden).toEqual([]);for(const r of records){expect.soft(r.document.height).toBe(height);expect.soft(r.document.y).toBe(0)}
+         |                 ^
+      51 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,errors,forbidden,calls,clipped:records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))},null,2))
+      52 | })
+      53 |
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:50:17
+
+    Error Context: test-results/r12-audit/r12-audit-812-en-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-812-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-812-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r12-audit.spec.ts:6:61 › 812 ko R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    +   "Cannot read properties of undefined (reading 'canFollow')",
+    + ]
+
+      48 |  await page.locator('#block-chat').click();await snap('block-boundary','block-confirm');await page.locator('.safety-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#report-person').click();await snap('report-choice-boundary','safety-choice');await page.locator('#safety-report').click();await snap('report-form-boundary','report-empty');await back();await expect(root).toHaveAttribute('data-state','chat-details');await snap('report-return');await page.locator('#view-public-profile').click();await expect(page.locator('#public-more')).toBeVisible();await page.locator('#page-back').click();await expect(root).toHaveAttribute('data-state','chat-details');checks.profileReturn=true
+      49 |  await back();await expect(root).toHaveAttribute('data-state','chat-open');await back();await expect(page.locator('.inbox-flow')).toBeVisible()
+    > 50 |  expect(errors).toEqual([]);expect(forbidden).toEqual([]);for(const r of records){expect.soft(r.document.height).toBe(height);expect.soft(r.document.y).toBe(0)}
+         |                 ^
+      51 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,errors,forbidden,calls,clipped:records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))},null,2))
+      52 | })
+      53 |
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:50:17
+
+    Error Context: test-results/r12-audit/r12-audit-812-ko-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-812-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-812-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ────────────────
+    tests/r12-audit.spec.ts:6:61 › 667 ko R12 safe UI walkthrough with API fixtures ────────────────
+    tests/r12-audit.spec.ts:6:61 › 812 en R12 safe UI walkthrough with API fixtures ────────────────
+    tests/r12-audit.spec.ts:6:61 › 812 ko R12 safe UI walkthrough with API fixtures ────────────────

@@ -1,0 +1,266 @@
+[
+  {
+    "tag": "HEADER",
+    "id": "",
+    "class": "ui-header",
+    "text": "‹tea•••",
+    "box": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 64
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-header__back",
+    "text": "‹",
+    "box": {
+      "x": 16,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "20px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "H1",
+    "id": "",
+    "class": "",
+    "text": "tea",
+    "box": {
+      "x": 174.9375,
+      "y": 68,
+      "width": 25.109375,
+      "height": 24
+    },
+    "style": {
+      "font": "550 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "chat-details",
+    "class": "ui-header__back chat-details-button",
+    "text": "•••",
+    "box": {
+      "x": 319,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "20px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "chat-notice",
+    "text": "A kind space for a little conversation.",
+    "box": {
+      "x": 0,
+      "y": 112,
+      "width": 375,
+      "height": 36
+    },
+    "style": {
+      "font": "10px / 12px Fredoka",
+      "color": "rgb(121, 151, 118)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(121, 151, 118)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "DIV",
+    "id": "chat-thread",
+    "class": "c6-thread",
+    "text": "A little hello for you.05:52 AMLovely to meet you!05:52 AM",
+    "box": {
+      "x": 0,
+      "y": 148,
+      "width": 375,
+      "height": 523
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "24px 20px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "FORM",
+    "id": "chat-form",
+    "class": "c6-composer",
+    "text": "Hold to talk",
+    "box": {
+      "x": 0,
+      "y": 671,
+      "width": 375,
+      "height": 113
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(24, 37, 29) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "13px 16px 8px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "INPUT",
+    "id": "chat-input",
+    "class": "ui-input ui-input--chat",
+    "text": "",
+    "box": {
+      "x": 16,
+      "y": 684,
+      "width": 291,
+      "height": 44
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(35, 51, 40) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.03)",
+      "borderRadius": "24px",
+      "padding": "0px 16px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "chat-send",
+    "class": "ui-icon-button ui-icon-button--chat-send",
+    "text": "",
+    "box": {
+      "x": 315,
+      "y": 684,
+      "width": 44,
+      "height": 44
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(10, 20, 6)",
+      "background": "rgb(181, 250, 112) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(10, 20, 6)",
+      "borderRadius": "22px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "chat-stickers",
+    "class": "ui-icon-button ui-icon-button--chat-tool",
+    "text": "",
+    "box": {
+      "x": 16,
+      "y": 734,
+      "width": 36,
+      "height": 36
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "22px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "INPUT",
+    "id": "chat-photo",
+    "class": "",
+    "text": "",
+    "box": {
+      "x": 68,
+      "y": 734,
+      "width": 36,
+      "height": 36
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "chat-hold",
+    "class": "ui-button ui-button--chat-hold",
+    "text": "Hold to talk",
+    "box": {
+      "x": 120,
+      "y": 734,
+      "width": 239,
+      "height": 36
+    },
+    "style": {
+      "font": "11px / 13.31px Fredoka",
+      "color": "rgb(158, 185, 148)",
+      "background": "rgb(34, 52, 41) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(158, 185, 148)",
+      "borderRadius": "20px",
+      "padding": "0px 12px",
+      "gap": "8px",
+      "letterSpacing": "normal"
+    }
+  }
+]

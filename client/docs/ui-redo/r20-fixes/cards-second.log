@@ -1,0 +1,164 @@
+[WebServer] (node:69832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:69834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough (7.6s)
+(node:69855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (7.9s)
+(node:69861) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough (7.5s)
+(node:69872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough (7.8s)
+
+
+  1) tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+        14 × locator resolved to <button id="card-remove" class="ui-row ui-row--cards ui-row--cards-danger">…</button>
+           - unexpected value "inactive"
+
+
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+    > 41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+         |                                                                                                                                                                                                                                                ^
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+      43 |  await open();await panel.locator('#card-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(d5.locator('.ui-toast')).toBeVisible();await shot('patch-failure');fail='';await close();await open();await expect(d5.locator('.ui-toast')).toHaveCount(0);await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await expect(d5.locator('.image-card')).toHaveCount(0);await shot('deleted-toast',false);await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+      44 |  checks.uploadBytes=calls.filter(c=>c.path==='/media/uploads');save();expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:41:240
+
+    Error Context: test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+        14 × locator resolved to <button id="card-remove" class="ui-row ui-row--cards ui-row--cards-danger">…</button>
+           - unexpected value "inactive"
+
+
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+    > 41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+         |                                                                                                                                                                                                                                                ^
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+      43 |  await open();await panel.locator('#card-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(d5.locator('.ui-toast')).toBeVisible();await shot('patch-failure');fail='';await close();await open();await expect(d5.locator('.ui-toast')).toHaveCount(0);await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await expect(d5.locator('.image-card')).toHaveCount(0);await shot('deleted-toast',false);await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+      44 |  checks.uploadBytes=calls.filter(c=>c.path==='/media/uploads');save();expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:41:240
+
+    Error Context: test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+        14 × locator resolved to <button id="card-remove" class="ui-row ui-row--cards ui-row--cards-danger">…</button>
+           - unexpected value "inactive"
+
+
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+    > 41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+         |                                                                                                                                                                                                                                                ^
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+      43 |  await open();await panel.locator('#card-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(d5.locator('.ui-toast')).toBeVisible();await shot('patch-failure');fail='';await close();await open();await expect(d5.locator('.ui-toast')).toHaveCount(0);await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await expect(d5.locator('.image-card')).toHaveCount(0);await shot('deleted-toast',false);await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+      44 |  checks.uploadBytes=calls.filter(c=>c.path==='/media/uploads');save();expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:41:240
+
+    Error Context: test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.cards-panel').locator('#card-remove')
+        14 × locator resolved to <button id="card-remove" class="ui-row ui-row--cards ui-row--cards-danger">…</button>
+           - unexpected value "inactive"
+
+
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+    > 41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+         |                                                                                                                                                                                                                                                ^
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+      43 |  await open();await panel.locator('#card-visibility').click();fail='patch';await panel.locator('[data-visibility=friends]').click();await expect(d5.locator('.ui-toast')).toBeVisible();await shot('patch-failure');fail='';await close();await open();await expect(d5.locator('.ui-toast')).toHaveCount(0);await panel.locator('#card-remove').click();await panel.locator('#d5-confirm-delete').click();await expect(d5.locator('.image-card')).toHaveCount(0);await shot('deleted-toast',false);await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+      44 |  checks.uploadBytes=calls.filter(c=>c.path==='/media/uploads');save();expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:41:240
+
+    Error Context: test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough ──────────────────────────────

@@ -1,0 +1,44 @@
+[WebServer] (node:52471) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:52473) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en mark-read-failure
+  ✘  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (16.3s)
+
+
+  1) tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Mark as read', exact: true })
+
+
+      49 |  await state('inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0)
+      50 |  await reopen();await state('inbox-unread')
+    > 51 |  await option();failRead=true;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('mark-read-failure');failRead=false;await page.getByRole('button',{name:t('Mark as read'),exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0)
+         |                                                                                                                                                                                                                                                                                                                                                         ^
+      52 |  for(let i=0;i<3;i++){await settled();await page.locator(`[data-chat="chat-${i}"]`).click();await expect(page.locator('.c6-thread')).toBeVisible();await page.getByLabel(t('Back to messages')).click()}
+      53 |  await state('inbox-read');await page.locator('#tab-friends').click();await state('inbox-friends-empty');await page.locator('#tab-messages').click();await option();await state('inbox-options')
+      54 |  failPatch=true;await page.locator('#option-pin').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('pin-failure');failPatch=false;await page.locator('#option-pin').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:51:345
+
+    Error Context: test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ──────────────

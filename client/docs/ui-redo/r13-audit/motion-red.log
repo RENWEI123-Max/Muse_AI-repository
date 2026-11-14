@@ -1,0 +1,38 @@
+[WebServer] (node:58899) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:58901) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures (7.4s)
+
+
+  1) tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      46 |  await page.locator('[data-wallpaper="moon-road"]').click();await snap('wallpaper-preview','wallpaper-preview');checks.previewScroll=await scroll('.d2-body');await snap('preview-scrolled');await page.locator('#apply-wallpaper').click();await snap('wallpaper-applied','wallpaper-applied');expect((await appearance()).wallpaperId).toBe('moon-road');await expect(root).toHaveClass(/theme-wallpaper/)
+      47 |  await background();await expect(page.locator('[data-wallpaper="moon-road"]')).toHaveAttribute('aria-pressed','true');await page.locator('#color-tab').click();await snap('wallpaper-colors','wallpaper-colors');await page.locator('[data-theme="ocean"]').click();await expect(page.locator('[data-theme="ocean"]')).toHaveAttribute('aria-pressed','true');expect((await appearance()).wallpaperId).toBeUndefined();await back();await expect(root).toHaveAttribute('data-state','chat-details');await back();await expect(root).toHaveClass(/theme-ocean/);await snap('color-back-applied')
+    > 48 |  await background();await page.locator('#color-tab').click();checks.colorScroll=await scroll('.d2-body');expect(checks.colorScroll.top).toBeGreaterThan(0);await snap('colors-scrolled');await page.locator('[data-theme="stars"]').click();await page.locator('#background-done').click();await snap('color-done','wallpaper-applied');await expect(root).toHaveClass(/theme-stars/)
+         |                                                                                                                                         ^
+      49 |  await background();await page.locator('#wallpaper-default').click();await expect(root).toHaveClass(/theme-night/);expect((await appearance()).wallpaperId).toBeUndefined();await snap('default-applied')
+      50 |  await details();await page.locator('#chat-bubbles').click();await snap('chat-bubbles','chat-bubbles');
+      51 |  const custom={myBubble:'#d9c6ff',myText:'#1a102a',theirBubble:'#244039',theirText:'#ffffff'}
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:48:137
+
+    Error Context: test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ─────────────

@@ -1,0 +1,45 @@
+[WebServer] (node:72255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:72257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-fixes-navigation.spec.ts:5:61 › 667 en R06-R17 navigation fixes (16.4s)
+
+
+  1) tests/r20-fixes-navigation.spec.ts:5:61 › 667 en R06-R17 navigation fixes ─────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.profile-page')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.profile-page') with timeout 5000ms
+      - waiting for locator('.profile-page')
+
+
+      37 |  await page.locator('#magic').click();await expect(page.locator('.appearance-choice').nth(3)).toHaveAttribute('aria-pressed','true');await shot('purple-default');await page.locator('.r07-done').click()
+      38 |  await page.locator('#compose').click();await page.locator('.recipient-input').fill(peer);await page.locator('#letter-text').fill('A little hello from the fixture.');await page.locator('#publish').click();await expect(page.locator('.inbox-flow')).toBeVisible();await expect(page.locator('.ui-toast')).toBeVisible();await expect(page.locator('.sent-scene')).toHaveCount(0);await shot('compose-sent-inbox');await expect(page.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await page.locator('.inbox-flow .main-nav button').first().click();await page.locator('#compose').click();await page.locator('.recipient-input').fill('00000000-0000-4000-8000-000000000003');await page.locator('#letter-text').fill('Another hello to check the same toast again.');await page.locator('#publish').click();await expect(page.locator('.inbox-flow')).toBeVisible();await expect(page.locator('.ui-toast')).toBeVisible();await shot('compose-second-toast');await expect(page.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await page.locator('.inbox-flow .main-nav button').first().click()
+    > 39 |  await page.locator('#open-profile').click();await page.locator('#profile-letters').click();await page.locator('.profile-letter').click();await expect(page.locator('.letter-content')).toHaveText('The original letter.');await shot('my-original-letter');await page.locator('.letter-close').focus();await page.keyboard.press('Escape');await expect(page.locator('.profile-page')).toBeVisible();await expect(page.locator('.profile-letter')).toBeVisible();await page.locator('.profile-page #page-back').click();await page.locator('.profile-page #page-back').click()
+         |                                                                                                                                                                                                                                                                                                                                                                                         ^
+      40 |  await page.locator('#open-inbox').click();await expect(page.locator('#collect-replies')).toBeVisible();await page.locator('#collect-replies').click();await expect.poll(()=>free).toBe(0);await expect(page.locator('#confirm-reply-payment')).toHaveCount(0);await shot('free-direct')
+      41 |  await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await page.locator('[data-unblock]').click();await expect.poll(()=>blocked).toBe(false);await expect(page.locator('#confirm-unblock')).toHaveCount(0);await shot('unblock-direct');await page.locator('.d3-blocked .ui-header__back').click()
+      42 |  await page.locator('[data-chat]').click();await page.locator('.chat-message img[role=button]').first().click();await expect(page.locator('.person-page')).toBeVisible();await shot('avatar-profile-entry');await page.locator('.person-page #page-back').click();await page.locator('.c6-chat h1').click();await expect(page.locator('.person-page')).toBeVisible();await page.locator('#public-more').click();await page.locator('#safety-report').click();await expect(page.locator('#report-details')).toBeVisible();await page.locator('.c6-chat .ui-header__back').first().click();await expect(page.locator('.person-page')).toBeVisible();await shot('safety-cancel-profile');await page.locator('#public-more').click();await page.locator('#safety-block').click();await expect(page.locator('#confirm-block')).toBeVisible();await page.locator('.safety-dialog-cancel').click();await expect(page.locator('.person-page')).toBeVisible();await shot('safety-block-cancel-profile');await page.locator('#public-more').focus();await page.keyboard.press('Escape');await expect(page.locator('.person-page')).toHaveCount(0);await expect(page.locator('.inbox-flow')).toBeVisible()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-navigation.spec.ts:39:377
+
+    Error Context: test-results/r20-fixes/r20-fixes-navigation-667-en-R06-R17-navigation-fixes/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-navigation-667-en-R06-R17-navigation-fixes/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-navigation-667-en-R06-R17-navigation-fixes/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r20-fixes-navigation.spec.ts:5:61 › 667 en R06-R17 navigation fixes ──────────────────────

@@ -1,0 +1,5 @@
+Listing tests:
+  auth.spec.ts:4:1 › 19 prototype states
+  auth.spec.ts:31:1 › real database signup, SMTP failure, wrong code, logout and login
+  auth.spec.ts:58:1 › empty validation and honest Apple error
+Total: 3 tests in 1 file

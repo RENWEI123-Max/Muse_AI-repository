@@ -1,0 +1,18 @@
+.device .c6-chat{inset:48px 0 0}
+.device .c6-chat:not(.theme-wallpaper):not(.d2-appearance):not(.d2-custom-bubbles):not([class*='theme-']){background:#102017}
+.device .c6-chat>header{height:64px;min-height:64px;padding:0 24px;background:#0d1713;border-bottom:1px solid #ffffff07}
+.device .c6-chat>header h1{font-size:17px;line-height:24px;font-weight:550}
+.device .chat-notice{height:36px;min-height:36px;margin:0;display:grid;place-items:center;font-size:10px;line-height:16px;background:#19291c;color:#829878}
+.device .c6-thread{padding:24px 16px;scrollbar-width:none}
+.device .chat-message{gap:8px;margin-bottom:24px}
+.device .chat-message>img{width:32px;height:32px}
+.device .chat-bubble{font-size:13px;line-height:20px;padding:12px 16px;max-width:80%;border-radius:18px 18px 18px 5px;background:var(--their-bubble,#24382b);color:var(--their-text,#e5ecde)}
+.device .mine .chat-bubble{border-radius:18px 18px 5px 18px;background:var(--my-bubble,#b5fa70);color:var(--my-text,#18310e)}
+.device .chat-message small{font-size:9px;line-height:14px}
+.device .c6-composer{padding:12px 16px 42px;background:#19291f;border-top:1px solid #ffffff0b}
+.device .c6-input{gap:8px;height:44px}
+.device .c6-input input{padding:12px 16px;font-size:12px;border-radius:24px;background:#223528;border:1px solid #ffffff06}
+.device .c6-input button{width:44px;flex:none;border-radius:50%}
+.device .chat-tools{padding-top:6px;gap:24px;height:42px}
+.device .chat-tools #chat-hold{flex:1;justify-content:center;margin-left:0;padding:8px 12px;border:0;background:#243b2c;height:36px;font-size:11px}
+.device .chat-tools img{width:20px;height:20px}

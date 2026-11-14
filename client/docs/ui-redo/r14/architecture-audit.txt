@@ -1,0 +1,14 @@
+color literals: 0 []
+important: 0 []
+device prefix: 0 []
+ChatFlow.vue script exact: True
+ChatFlow.vue missing id: []
+ChatFlow.vue missing data-state: []
+ChatFlow.vue missing aria-label: []
+InboxFlow.vue script exact: True
+InboxFlow.vue missing id: []
+InboxFlow.vue missing data-state: []
+InboxFlow.vue missing aria-label: []
+old CSS safety rules: []
+HomeFlow unchanged: True
+safety selectors: ['/* R14: local Figma JSON 2421258509127695554; viewport coordinates 375 × 812. */\n.safety-flow .safety-choice-sheet', '\n.safety-flow.d3-safety', '\n.safety-flow .safety-choice-title', '\n.safety-flow .safety-choice-copy', '\n.safety-flow .safety-choice-close', '\n.safety-flow .d3-choice', '\n.safety-flow #safety-block', '\n.safety-flow .safety-option-label', '\n.safety-flow .safety-option-detail', '\n.safety-flow .safety-dialog-title', '\n.safety-flow .safety-dialog-copy', '\n.safety-flow .safety-dialog-close', '\n.safety-flow .safety-confirm-action', '\n.safety-flow .safety-dialog-cancel', '\n.safety-flow .safety-unblock-dialog', '\n.safety-unblock-dialog .safety-confirm-action', '\n.safety-unblock-dialog .safety-dialog-cancel', '\n.safety-report-page .d3-report', '\n.safety-report-page .d3-intro', '\n.safety-report-page :is(.safety-reason,.safety-details)', '\n.safety-report-page .d3-add-photo', '\n.safety-report-page .d3-add-photo:active', '\n.safety-report-page .d3-add-photo:focus-within', '\n.safety-report-page #report-photo', '\n.safety-report-page .d3-photo-disabled', '\n.safety-report-page .safety-report-note', '\n.safety-report-page .safety-report-save', '\n.safety-report-page .safety-attachment-image', '\n.safety-report-page .d3-upload-error', '\n.safety-flow .d3-saved', '\n.safety-flow[data-state="chat-blocked"] .d11-chat-gate', '\n.safety-flow[data-state="chat-blocked"] .waiting-card', '\n.safety-flow[data-state="chat-blocked"] .chat-waiting-title', '\n.safety-flow.d3-blocked', '\n.safety-flow .d3-blocked-row', '\n.safety-flow .inbox-block-avatar', '\n.safety-flow h1', '\n.safety-flow .inbox-block-name', '\n.safety-flow .inbox-block-empty', '\n.safety-flow .safety-empty-image', '\n.safety-flow .safety-empty-title', '\n.safety-flow .safety-empty-copy', '\n.safety-flow.safety-list-unblock', '\n.safety-flow:lang(ko) :is(h1,h2,h3,p,span,small,button,label,input,textarea,select)', '\n@keyframes d3-in', 'from', 'to', '\n@keyframes d3-list-in', 'from', 'to', '\n@media(max-height:740px)', '.safety-flow .safety-choice-sheet', '.safety-flow[data-state="chat-blocked"] .d11-chat-gate', '.safety-report-page .d3-report']

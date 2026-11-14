@@ -1,0 +1,439 @@
+{
+  "kind": "real implementation screenshots, not Figma exports",
+  "finalCount": 72,
+  "baselineCount": 17,
+  "images": [
+    {
+      "file": "667-en-bubbles-reset.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "5e95d8c5284773fcc5a6da824d40013011c207e4e8caf8d7205adbc8c58e46e6"
+    },
+    {
+      "file": "667-en-bubbles-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "2dcbf926e45298a82bfd960584463b3aaf30e1805cfc6c0e5296a7b9b674462b"
+    },
+    {
+      "file": "667-en-chat-bubbles-custom.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "b93efc7c4171b02208cc70354e846b02e7f55aa66106a3e0977547d46b36e6eb"
+    },
+    {
+      "file": "667-en-chat-bubbles.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "f791e38385f0f6fd3a024a18449a53a63420683a4756d5f5946206a3154a32b0"
+    },
+    {
+      "file": "667-en-color-back-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "f9d8913659ed98ab66bb012f37d83bcf08c0444850dbc53ebd181958e977f24d"
+    },
+    {
+      "file": "667-en-color-done.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "e53da7c5a83beca1492bea483d1bc5b5162348912a8465eabf71e8db8eafbf5f"
+    },
+    {
+      "file": "667-en-colors-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "46bf104e701993aa4cf13ab425961b217db8a6103e58d2d75a151c8c95326e85"
+    },
+    {
+      "file": "667-en-custom-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "b350cf60d2ca17c7d3d8e9de7cd498b19a49d512c7520633e868229bfe9142f7"
+    },
+    {
+      "file": "667-en-default-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "534c9da8cd6d447bbe0058e088b21d00f595641b040560c0e5a5845b0a5f63f9"
+    },
+    {
+      "file": "667-en-preview-cancel.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "8b20992c7411f3c7e2de45eb2cdb424bce9575cdfc480955d6d053cb8823f8c9"
+    },
+    {
+      "file": "667-en-preview-return.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "37a7c3fa03b41cb3d4628078e6421996c6e36e567c79e339e53733c07edbcf2f"
+    },
+    {
+      "file": "667-en-preview-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "c76205140f7b223ba3955acddc4d54c249c1b316cb8d969a6919e89b8fbbe0a2"
+    },
+    {
+      "file": "667-en-wallpaper-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "f0a16ca66c67038bad19ad4a509cef05602676da1a197a8774957e65eea849e5"
+    },
+    {
+      "file": "667-en-wallpaper-colors.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "000b4fdf081d3c4250bac1e6ea5d9242e54bd8bacc8a74dd562313492c3460fc"
+    },
+    {
+      "file": "667-en-wallpaper-image-failure.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "cccb0f9f45c522d1d0b7c785777a4c4e336cc64d57c1ce836375ef2a4478cb06"
+    },
+    {
+      "file": "667-en-wallpaper-preview.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "bf8bfb4c1b6c40109a786f469f9ebae1ea331220bc5dd49d92f7d9b3c0d72419"
+    },
+    {
+      "file": "667-en-wallpapers-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "dfe9dd119efa65bcdf6256f4399513dcee1bbc580cdbd2768278629c35b359b7"
+    },
+    {
+      "file": "667-en-wallpapers.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "37a7c3fa03b41cb3d4628078e6421996c6e36e567c79e339e53733c07edbcf2f"
+    },
+    {
+      "file": "667-ko-bubbles-reset.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "f7e2ba6a814324597db651151aae28e57cb35cf7506e9b092342bf10542a2abc"
+    },
+    {
+      "file": "667-ko-bubbles-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "68bc96ebe5f05274a6f10c38bb430fa70d1deb3a461515fbb7d94d1533af5fad"
+    },
+    {
+      "file": "667-ko-chat-bubbles-custom.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "e93c6bb5aeab11a8a78866680a860b7430da586e45ba2961d68d16fce535720a"
+    },
+    {
+      "file": "667-ko-chat-bubbles.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "a15ab855272a9ddcf3db67088f5a36f9e57570fa4dcb767a20a6180abc6a3eab"
+    },
+    {
+      "file": "667-ko-color-back-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "b9ac7565489a449860b75cd30133a09bc7e2884edc9bb7db998ec1aa45f58dd0"
+    },
+    {
+      "file": "667-ko-color-done.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "98f6861dc18b5833cced3881dc0ebb0b0601556d2756290553822c089b91566f"
+    },
+    {
+      "file": "667-ko-colors-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "4ae488d9113ec09b9db0ff889224b7ced4c7d269dc37503695f80cc366121a5b"
+    },
+    {
+      "file": "667-ko-custom-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "d11af1b81dd6b7c10b6d510192ff9ad188b809b259db44c3e8e831c1e372558b"
+    },
+    {
+      "file": "667-ko-default-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "c111064727f2ad8a57906439511c6d80f537a9fe3dc91285d27dffb0ee13250a"
+    },
+    {
+      "file": "667-ko-preview-cancel.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "d0ed50bc6fe5573daa4e1552e2c8e8eb66890c76542a6b7b87505cf344f512c3"
+    },
+    {
+      "file": "667-ko-preview-return.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "a7b52e6a77d41da085e74590bb688008491ee98954add9eb7f594d054db33ae0"
+    },
+    {
+      "file": "667-ko-preview-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "ea329431c5cf36e0056cd630c65986db75bdab7b8e110b94c50a909969f148b8"
+    },
+    {
+      "file": "667-ko-wallpaper-applied.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "fd964abf825fb7b984b22ae2df2cd67305ba9f37e40c662ebb082ee2b2bda924"
+    },
+    {
+      "file": "667-ko-wallpaper-colors.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "efad905cfd1261390ce4e275e3b7c230deb6b8a6b92a8ba56a5218710afddec1"
+    },
+    {
+      "file": "667-ko-wallpaper-image-failure.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "0ca4162c997540af1739c08e4a2e540409f03fcabe0835e8db78c6f2450e25a8"
+    },
+    {
+      "file": "667-ko-wallpaper-preview.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "7824f6ca29bc2428d03a9ffae02beeb88f0d3f0069a21bea57c00500a9b3bd64"
+    },
+    {
+      "file": "667-ko-wallpapers-scrolled.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "9207961d720d7bca06be26576be4b37887e2e7e15cf7e1ac01a95ac1046d2ac9"
+    },
+    {
+      "file": "667-ko-wallpapers.png",
+      "width": 375,
+      "height": 667,
+      "sha256": "a7b52e6a77d41da085e74590bb688008491ee98954add9eb7f594d054db33ae0"
+    },
+    {
+      "file": "812-en-bubbles-reset.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1bc53ff62086a0e0adb5a7a2a5c13a9c6b52aad46ba37f123d16089c1eca88a0"
+    },
+    {
+      "file": "812-en-bubbles-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "48317433d08c2c36ed9b88b419e26c3f1e42ea2d0f8a4cb4448d6e60a57b127d"
+    },
+    {
+      "file": "812-en-chat-bubbles-custom.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "48317433d08c2c36ed9b88b419e26c3f1e42ea2d0f8a4cb4448d6e60a57b127d"
+    },
+    {
+      "file": "812-en-chat-bubbles.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "1bc53ff62086a0e0adb5a7a2a5c13a9c6b52aad46ba37f123d16089c1eca88a0"
+    },
+    {
+      "file": "812-en-color-back-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b29cb8b9143e84ce1d19bc32b7d042d80d3eb2ded0e3daf323c3e240f6b74610"
+    },
+    {
+      "file": "812-en-color-done.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "c4839253a36207a171d0907db9b4167b841eb37c07e46cd271b8d0426ae08aa3"
+    },
+    {
+      "file": "812-en-colors-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e2a3469815d38368d7e91d2727837c394e32f4d8be87db47edd8aea7f3b43917"
+    },
+    {
+      "file": "812-en-custom-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "a74cf6603d1bbb6e822fe5e44509c97c6a0c64e4b4d40458cf239562052719c8"
+    },
+    {
+      "file": "812-en-default-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "496992f8764d4bc6102df313543dd970ec72e30683bece7866da3c75f0b01c2e"
+    },
+    {
+      "file": "812-en-preview-cancel.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ec539852146e824b756c50e262709f08437e7d8fe4d0ffd3ab38ca21a503d06c"
+    },
+    {
+      "file": "812-en-preview-return.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "db973ab5fcda45109e65c1ebb7e5e2d8b7c21cf41f06307fa5fa4c6c754ff7a5"
+    },
+    {
+      "file": "812-en-preview-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e9a373c4717d97cf558c5034a2e5444515c2e36f40a8de9572403c862389a4de"
+    },
+    {
+      "file": "812-en-wallpaper-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7274498d9fcd7ae8f11ad38e25a3858b613c2fee98fc9d4ffabd59210b8d71a0"
+    },
+    {
+      "file": "812-en-wallpaper-colors.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5283d67eddcf543b49895c0ed7df7b2a423b439eca624f2d2dccefa8a0235616"
+    },
+    {
+      "file": "812-en-wallpaper-image-failure.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bde1ada9c37f1bf989da62cb29b3029cea9e3475689fd37d44ee7728f4291915"
+    },
+    {
+      "file": "812-en-wallpaper-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e9a373c4717d97cf558c5034a2e5444515c2e36f40a8de9572403c862389a4de"
+    },
+    {
+      "file": "812-en-wallpapers-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "eef2ee361c92d754cbfffda5b52b317f0171756e28dafe65a32813bfbb98b910"
+    },
+    {
+      "file": "812-en-wallpapers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "db973ab5fcda45109e65c1ebb7e5e2d8b7c21cf41f06307fa5fa4c6c754ff7a5"
+    },
+    {
+      "file": "812-ko-bubbles-reset.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ccb50aa9a014a3933441ee35c97434dbe993a6167ad29a5b340268047734bbf0"
+    },
+    {
+      "file": "812-ko-bubbles-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "470311795c0f1a94e011c35da60f9116278d2799fe51be1dec2f509578935276"
+    },
+    {
+      "file": "812-ko-chat-bubbles-custom.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "470311795c0f1a94e011c35da60f9116278d2799fe51be1dec2f509578935276"
+    },
+    {
+      "file": "812-ko-chat-bubbles.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ccb50aa9a014a3933441ee35c97434dbe993a6167ad29a5b340268047734bbf0"
+    },
+    {
+      "file": "812-ko-color-back-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bc0c3ebf5e3588a40cdbca494660d827c2dd99304cb1bd17459102d5a98993cf"
+    },
+    {
+      "file": "812-ko-color-done.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "7bc324f94d9aacc11c479e712d1b3cc7c137b6c01dfbd1159c28b97cf7b647f7"
+    },
+    {
+      "file": "812-ko-colors-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "b38524f6c581fcc13d30b351b8c36e70b021eee8345a2d5a7c4115039883f61c"
+    },
+    {
+      "file": "812-ko-custom-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "4c730c940b561e12bb0aa99d0566f42873c05b10e286c7a28f60fa6b51de7127"
+    },
+    {
+      "file": "812-ko-default-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "3cbdf7c4df3794f4f724f9a17f45363fc218ab63148ed97198ec8986676c6e21"
+    },
+    {
+      "file": "812-ko-preview-cancel.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "bd39c7ba6fdcc532977ce1518cb6c6ed7aa97e738530160832833af603fdc324"
+    },
+    {
+      "file": "812-ko-preview-return.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5b240d92bb7db2251549664d2f61bf74200fd2fa57ec36f58c62e88c97c09ba6"
+    },
+    {
+      "file": "812-ko-preview-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d07ac3d84f0e5f216c2a0902fefdeae4a228fe2f99fb800166e173d38c632777"
+    },
+    {
+      "file": "812-ko-wallpaper-applied.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "644c9701f81b0621058732f03f8b236376bbc15e719971995f8b52eeb2f7eb6c"
+    },
+    {
+      "file": "812-ko-wallpaper-colors.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "ec8fdf0657931040ebbe35ac2e3ec46ea33bc277bb56cec77c7eba0975a8f33a"
+    },
+    {
+      "file": "812-ko-wallpaper-image-failure.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "264d1de2da3e205865f48284d17e8b712b11cd2da41b67b8919df2e56ab3af9a"
+    },
+    {
+      "file": "812-ko-wallpaper-preview.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "d07ac3d84f0e5f216c2a0902fefdeae4a228fe2f99fb800166e173d38c632777"
+    },
+    {
+      "file": "812-ko-wallpapers-scrolled.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "e9bd6ea68e154466d1f96b43480c35cd1a4fd0e80bb8744be7fa78d6ae5f8f84"
+    },
+    {
+      "file": "812-ko-wallpapers.png",
+      "width": 375,
+      "height": 812,
+      "sha256": "5b240d92bb7db2251549664d2f61bf74200fd2fa57ec36f58c62e88c97c09ba6"
+    }
+  ]
+}

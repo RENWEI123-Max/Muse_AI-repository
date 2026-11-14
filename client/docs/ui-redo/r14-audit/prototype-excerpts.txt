@@ -1,0 +1,44 @@
+ function page(title,body,action=''){attachmentHandler=null;closeInboxMenu();screen.classList.remove('wallpaper-chat');screen.style.removeProperty('--chat-wallpaper');view.classList.remove('chat-page','inbox-page','profile-reference','settings-reference','feedback-reference','help-reference','public-profile-reference');view.innerHTML=`<header class="page-header"><button id="page-back" class="page-back" aria-label="Back">${icon('back')}</button><h1>${T(title)}</h1>${action||'<span class="header-space"></span>'}</header><div class="page-body">${body}</div>`;$('#page-back').onclick=back;window.MauGoI18n?.translate(view);refreshOwnAvatar();}
+
+ function confirm(title,message,action,label='Confirm',danger=false){const close=showPaymentDialog(`<h2 id="payment-title">${T(title)}</h2><p>${T(message)}</p><button id="action-confirm" class="primary ${danger?'danger':''}">${T(label)}</button><button id="action-cancel" class="text-button">${T('Cancel')}</button>`);$('#action-cancel').onclick=close;$('#action-confirm').onclick=()=>{close();action();};}
+
+ function report(){page('Report',`<p class="intro-copy">${T('Tell us what happened.')}</p><label class="field-label">${T('Reason')}<select id="report-reason"><option value="Abuse or harassment">${T('Abuse or harassment')}</option><option value="Spam or advertising">${T('Spam or advertising')}</option><option value="Inappropriate content">${T('Inappropriate content')}</option><option value="Something else">${T('Something else')}</option></select></label><label class="field-label">${T('Details')}<textarea id="report-details" maxlength="500" placeholder="${T('Add a little context…')}"></textarea></label><button class="outline-button full-width" id="report-photo">${T('Add a photo')}</button><div id="report-attachment"></div><p class="local-note">${T('Reports are saved locally in this preview. No moderation service is connected.')}</p><button class="primary full-width" id="save-report">${T('Save report')}</button>`);let media=[];attachmentHandler=m=>{media=[m];const target=$('#report-attachment');if(!target)return;target.replaceChildren();renderMedia(target,media);const remove=document.createElement('button');remove.className='text-button';remove.textContent=T('Remove attachment');remove.onclick=()=>{media=[];target.replaceChildren();};target.append(remove);};$('#report-photo').onclick=()=>C.chooseImage('feature');$('#save-report').onclick=()=>{const list=read('maugo-person-reports',[]);list.push({id:route.id,reason:$('#report-reason').value,details:$('#report-details').value,media,time:Date.now()});if(save('maugo-person-reports',list)){toast(T('Report saved on this device.'));back();}};}
+
+ function blocked(){const list=chats.filter(c=>c.blocked);page('Blocked people',list.length?list.map(c=>`<div class="blocked-row"><img src="${avatar(c)}" ${c.sentLetter&&c.status==='waiting'?'data-sent-envelope':''} alt=""><span data-user-content>${escape(c.name)}</span><button class="outline-button" data-unblock="${c.id}">${T('Unblock')}</button></div>`).join(''):empty('No one is blocked.'));view.querySelectorAll('[data-unblock]').forEach(b=>b.onclick=()=>{changeBlock(chatFor(b.dataset.unblock),false);render();});}
+
+ function changeBlock(c,value){const samePerson=p=>c.sentLetter?p.id===c.id:!p.sentLetter&&p.name===c.name;for(const person of chats.filter(samePerson))person.blocked=value;if(value)state.following=state.following.filter(id=>!chats.some(p=>samePerson(p)&&p.id===id));C.setPersonBlocked(c.name,value);persist();}
+
+function showSheet(title,html,type='general'){pauseMedia();closeEmoji();previousFocus=document.activeElement;sheetType=type;$('#sheet-title').textContent=title;$('#sheet-content').innerHTML=html;$('#sheet').hidden=false;screen.classList.add('sheet-open');$('#close-sheet').focus({preventScroll:true});}
+
+function closeSheet(){if($('#sheet').hidden)return;$('#sheet').hidden=true;screen.classList.remove('sheet-open');sheetType='';previousFocus?.isConnected&&previousFocus.focus({preventScroll:true});}
+
+function showSafetyMenu(onReport,onBlock,blocked=false){showSheet('Report or block',`<p>Choose how you would like to manage this person.</p><div class="safety-actions"><button id="safety-report">${icon('flag')}<span>Report</span><small>Tell us about inappropriate content</small></button><button id="safety-block"><span class="block-symbol">⊘</span><span>${blocked?'Unblock':'Block'}</span><small>${blocked?'Allow contact again':'Stop contact from this person'}</small></button></div>`);$('#safety-report').onclick=()=>{closeSheet();onReport();};$('#safety-block').onclick=()=>{closeSheet();onBlock();};}
+
+.actions button:active{transform:scale(.96)}
+
+.sheet{position:absolute;left:10px;right:10px;bottom:25px;z-index:50;border:1px solid #ffffff16;border-radius:26px;background:#141d1d;padding:10px 22px 23px;box-shadow:0 -50px 100px #0008;max-height:620px;overflow:auto;animation:sheet-in .3s ease-out}
+
+@keyframes sheet-in{from{opacity:0;transform:translateY(30px)}
+
+.tool-button:active{color:var(--lime)}
+
+.hold-button:active{background:#314332}
+
+.sheet{padding:10px 18px 20px;bottom:22px;background:#18211e;border-color:#ffffff0b;max-height:645px;border-radius:25px;scrollbar-width:none}
+
+
+.sheet{left:12px;right:12px;bottom:24px;padding:var(--space-3) var(--panel-padding) var(--space-5);border-radius:var(--radius-panel);max-height:684px}
+
+.payment-dialog{position:relative;width:100%;max-height:704px;overflow:auto;background:linear-gradient(145deg,#253229,#17221c);border:1px solid #d5eac51a;border-radius:28px;padding:28px 24px 16px;box-shadow:0 28px 80px #0009;text-align:center;animation:sheet-in .22s ease-out}
+
+.payment-open .sheet{pointer-events:none}
+
+.page-body{height:calc(100% - 64px);overflow:auto;scrollbar-width:none;padding:24px;overscroll-behavior:contain}
+
+.chat-page .page-body{display:flex;flex-direction:column;padding:0;overflow:hidden}
+
+.subpage .page-body{height:calc(100% - 64px)}
+
+.inbox-page>.page-body{display:flex;flex-direction:column;padding-top:12px;gap:0}
+
+.public-profile-reference>.page-body{display:block;overflow:auto;padding:4px 24px 120px}

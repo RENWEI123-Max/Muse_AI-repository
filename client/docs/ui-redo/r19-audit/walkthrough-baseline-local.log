@@ -1,0 +1,128 @@
+[WebServer] (node:66439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:66441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough (9.0s)
+(node:66455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough (9.2s)
+(node:66465) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough (9.0s)
+(node:66473) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough (9.2s)
+
+
+  1) tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('#open-profile')
+
+
+      37 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      38 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 39 |  await shot('empty',false);fail='list';await page.reload();await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                ^
+      40 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      41 |  await d5.locator('#upload-image-card').click();fail='upload';const up=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await up).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('upload-failure');fail='';await close();await upload();await expect(d5.locator('.image-card')).toHaveCount(1)
+      42 |  await open();await shot('card-options');await panel.locator('#card-view').click();await shot('card-preview');checks.preview=await panel.locator('.cards-preview').evaluate(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,loaded:(e as HTMLImageElement).naturalWidth>0}));await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(200);checks.previewScroll=await panel.evaluate(e=>({top:e.scrollTop,client:e.clientHeight,content:e.scrollHeight,documentY:scrollY}));await shot('preview-scrolled');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:39:96
+
+    Error Context: test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('#open-profile')
+
+
+      37 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      38 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 39 |  await shot('empty',false);fail='list';await page.reload();await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                ^
+      40 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      41 |  await d5.locator('#upload-image-card').click();fail='upload';const up=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await up).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('upload-failure');fail='';await close();await upload();await expect(d5.locator('.image-card')).toHaveCount(1)
+      42 |  await open();await shot('card-options');await panel.locator('#card-view').click();await shot('card-preview');checks.preview=await panel.locator('.cards-preview').evaluate(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,loaded:(e as HTMLImageElement).naturalWidth>0}));await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(200);checks.previewScroll=await panel.evaluate(e=>({top:e.scrollTop,client:e.clientHeight,content:e.scrollHeight,documentY:scrollY}));await shot('preview-scrolled');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:39:96
+
+    Error Context: test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('#open-profile')
+
+
+      37 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      38 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 39 |  await shot('empty',false);fail='list';await page.reload();await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                ^
+      40 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      41 |  await d5.locator('#upload-image-card').click();fail='upload';const up=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await up).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('upload-failure');fail='';await close();await upload();await expect(d5.locator('.image-card')).toHaveCount(1)
+      42 |  await open();await shot('card-options');await panel.locator('#card-view').click();await shot('card-preview');checks.preview=await panel.locator('.cards-preview').evaluate(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,loaded:(e as HTMLImageElement).naturalWidth>0}));await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(200);checks.previewScroll=await panel.evaluate(e=>({top:e.scrollTop,client:e.clientHeight,content:e.scrollHeight,documentY:scrollY}));await shot('preview-scrolled');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:39:96
+
+    Error Context: test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('#open-profile')
+
+
+      37 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      38 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 39 |  await shot('empty',false);fail='list';await page.reload();await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                ^
+      40 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      41 |  await d5.locator('#upload-image-card').click();fail='upload';const up=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await up).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel.getByRole('alert')).toHaveText('Please try again.');await shot('upload-failure');fail='';await close();await upload();await expect(d5.locator('.image-card')).toHaveCount(1)
+      42 |  await open();await shot('card-options');await panel.locator('#card-view').click();await shot('card-preview');checks.preview=await panel.locator('.cards-preview').evaluate(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,loaded:(e as HTMLImageElement).naturalWidth>0}));await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(200);checks.previewScroll=await panel.evaluate(e=>({top:e.scrollTop,client:e.clientHeight,content:e.scrollHeight,documentY:scrollY}));await shot('preview-scrolled');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:39:96
+
+    Error Context: test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r19-audit/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ──────────────────────────────────

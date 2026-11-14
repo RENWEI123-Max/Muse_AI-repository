@@ -1,0 +1,254 @@
+[WebServer] (node:49802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:49804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (12.7s)
+(node:49813) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (12.9s)
+(node:49827) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (12.6s)
+(node:49844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (12.8s)
+
+
+  1) tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for locator('.letter-bird').first()
+        - locator resolved to <button data-v-ffc8f466="" aria-label="Open letter from Little bird 0" class="letter-bird birds-enter-from birds-enter-active">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+      21 × retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is not stable
+      - retrying click action
+        - waiting 500ms
+
+
+      33 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+      34 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);await shot(s);records.push({state:s,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,viewport:innerHeight,y:scrollY})),copy:await panel.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+    > 35 |  await page.locator('.letter-bird').first().click();await state('letter-open')
+         |                                             ^
+      36 |  const opening=await panel.evaluate(e=>({duration:getComputedStyle(e).transitionDuration,animation:getComputedStyle(e).animationName}))
+      37 |  await page.locator('.letter-conversation').hover();await page.mouse.wheel(0,700);await expect.poll(()=>page.locator('.letter-conversation').evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
+      38 |  const conversationScroll=await page.locator('.letter-conversation').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}))
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:45
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r08-audit-667-en-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r08-audit-667-en-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r08-audit-667-en-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r08-audit-667-en-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for locator('.letter-bird').first()
+        - locator resolved to <button data-v-ffc8f466="" aria-label="Open letter from Little bird 0" class="letter-bird birds-enter-from birds-enter-active">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+      17 × retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is not stable
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      33 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+      34 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);await shot(s);records.push({state:s,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,viewport:innerHeight,y:scrollY})),copy:await panel.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+    > 35 |  await page.locator('.response-capsule').first().click();await state('letter-open')
+         |                                             ^
+      36 |  const opening=await panel.evaluate(e=>({duration:getComputedStyle(e).transitionDuration,animation:getComputedStyle(e).animationName}))
+      37 |  await page.locator('.letter-conversation').hover();await page.mouse.wheel(0,700);await expect.poll(()=>page.locator('.letter-conversation').evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
+      38 |  const conversationScroll=await page.locator('.letter-conversation').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}))
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:45
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r08-audit-667-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r08-audit-667-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r08-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r08-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for locator('.letter-bird').first()
+        - locator resolved to <button data-v-ffc8f466="" aria-label="Open letter from Little bird 0" class="letter-bird birds-enter-from birds-enter-active">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <img data-v-ffc8f466="" class="home-hat-image" src="/src/assets/01-brand-scenes/hat.png" alt="A black magic hat with a glowing green ribbon"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="Tap the hat to meet three new letters">…</button> subtree intercepts pointer events
+      21 × retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is not stable
+      - retrying click action
+        - waiting 500ms
+
+
+      33 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+      34 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);await shot(s);records.push({state:s,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,viewport:innerHeight,y:scrollY})),copy:await panel.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+    > 35 |  await page.locator('.response-capsule').first().click();await state('letter-open')
+         |                                             ^
+      36 |  const opening=await panel.evaluate(e=>({duration:getComputedStyle(e).transitionDuration,animation:getComputedStyle(e).animationName}))
+      37 |  await page.locator('.letter-conversation').hover();await page.mouse.wheel(0,700);await expect.poll(()=>page.locator('.letter-conversation').evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
+      38 |  const conversationScroll=await page.locator('.letter-conversation').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}))
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:45
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r08-audit-812-en-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r08-audit-812-en-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r08-audit-812-en-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r08-audit-812-en-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for locator('.letter-bird').first()
+        - locator resolved to <button data-v-ffc8f466="" aria-label="Open letter from Little bird 0" class="letter-bird birds-enter-from birds-enter-active">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <img data-v-ffc8f466="" class="home-hat-image" alt="초록빛 리본이 빛나는 검은 마법 모자" src="/src/assets/01-brand-scenes/hat.png"/> from <button id="hat" class="magic-hat" data-v-ffc8f466="" aria-label="모자를 눌러 새 편지 세 개를 만나 보세요">…</button> subtree intercepts pointer events
+      21 × retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is not stable
+      - retrying click action
+        - waiting 500ms
+
+
+      33 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+      34 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);await shot(s);records.push({state:s,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,viewport:innerHeight,y:scrollY})),copy:await panel.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+    > 35 |  await page.locator('.response-capsule').first().click();await state('letter-open')
+         |                                             ^
+      36 |  const opening=await panel.evaluate(e=>({duration:getComputedStyle(e).transitionDuration,animation:getComputedStyle(e).animationName}))
+      37 |  await page.locator('.letter-conversation').hover();await page.mouse.wheel(0,700);await expect.poll(()=>page.locator('.letter-conversation').evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
+      38 |  const conversationScroll=await page.locator('.letter-conversation').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}))
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:45
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ────────────────────────

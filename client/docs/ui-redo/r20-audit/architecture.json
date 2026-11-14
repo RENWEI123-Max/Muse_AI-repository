@@ -1,0 +1,28 @@
+{
+  "baseline": "f3a9ccd",
+  "client/src/components/MomentsFlow.vue": {
+    "scriptUnchanged": true,
+    "scriptSHA256": "eae6f8336a58007bb789db8ba7e2d750f700aef32529280fc8d9d69889afa46e",
+    "wholeFileUnchanged": false
+  },
+  "client/src/components/ProfileFlow.vue": {
+    "scriptUnchanged": true,
+    "scriptSHA256": "e01cf7bbb4af263c1175b25e6a08eb1c911701c7677705e8cc75596ed1ccd6c1",
+    "wholeFileUnchanged": true
+  },
+  "escapeProtectionMatchesBase": true,
+  "A5CurrentScan": {
+    "hex": 0,
+    "rgb": 0,
+    "important": 0,
+    "device": 0
+  },
+  "legacySelectors": {
+    "client/src/styles.css": 0,
+    "client/src/fidelity.css": 0
+  },
+  "productionChanged": [
+    "client/src/components/MomentsFlow.vue",
+    "client/src/styles/pages/moments.css"
+  ]
+}

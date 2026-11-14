@@ -1,0 +1,37 @@
+[WebServer] (node:1245207) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:1245229) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (904ms)
+  ✓  2 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (1.9s)
+  ✘  3 tests/r15-auth.spec.ts:6:1 › R15 safe auth states, geometry and styles (3.4s)
+(node:1245439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 tests/r15-auth.spec.ts:47:1 › R15 Korean and short viewport (911ms)
+  ✓  5 tests/r15-auth.spec.ts:53:1 › R15 seed demo login keeps existing navigation (2.9s)
+
+
+  1) tests/r15-auth.spec.ts:6:1 › R15 safe auth states, geometry and styles ────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0px"
+    Received: "normal"
+
+      39 |    const mark=elements['.wordmark'].box;expect(mark.x).toBeCloseTo(140.5,0);expect(Math.abs(mark.y-(state.id==='welcome'?67.73:67.23))).toBeLessThanOrEqual(1);expect(mark.width).toBeCloseTo(94,0);expect(mark.height).toBeCloseTo(24.54,0)
+      40 |    expect(elements['.flow-content h1']?.style.fontSize||elements['.auth-content h1']?.style.fontSize).toBe(state.id==='welcome'?'26px':'24px')
+    > 41 |    if(elements['.field-label input']){expect(elements['.field-label input'].style.color).toBe('rgb(228, 239, 217)');expect(elements['.field-label input'].style.fontWeight).toBe('400');expect(elements['.field-label input'].style.lineHeight).toBe('20px');expect(elements['.field-label input'].style.letterSpacing).toBe('0px');expect(elements['.field-label input'].style.backgroundColor).toBe('rgb(32, 47, 36)');expect(elements['.field-label input'].style.borderRadius).toBe('12px');expect(elements['.field-label input'].style.fontSize).toBe('13px');const b=elements['.field-label input'].box;expect(b.y).toBeCloseTo(state.id.startsWith('verify')||state.id==='recovery-code'?451:261,0);expect(b.x).toBeCloseTo(24,0);expect(b.width).toBeCloseTo(327,0);expect(b.height).toBeCloseTo(48,0)}
+         |                                                                                                                                                                                                                                                                                                                         ^
+      42 |   }
+      43 |  }
+      44 |  writeFileSync(`${dir}/${baseline?'baseline':'implementation'}-computed.json`,JSON.stringify(results,null,2))
+        at /root/Muse_AI-repository/client/tests/r15-auth.spec.ts:41:313
+
+    Error Context: test-results/r15-auth-R15-safe-auth-states-geometry-and-styles/error-context.md
+
+  1 failed
+    tests/r15-auth.spec.ts:6:1 › R15 safe auth states, geometry and styles ─────────────────────────
+  4 passed (13.6s)

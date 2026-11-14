@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import {computed, onMounted, ref, watch} from 'vue'
-import {supportEmail,legalText,faqs,guides} from '../lib/support-content'
+import {supportEmail,legalText,termsVersion,termsSections,faqs,guides} from '../lib/support-content'
 import {locale,t,tr} from '../lib/i18n'
 import {asset} from '../lib/assets'
 import {api,post,ApiError} from '../lib/api'
-const props=defineProps<{token:string;privacy?:boolean}>()
+const props=defineProps<{token:string;privacy?:boolean;initial?:'notifications'|'system'|'interactions'|'help'}>()
 const emit=defineEmits<{close:[];security:[]}>()
-const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>('settings')
+const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>(props.initial||'settings')
 const confirm=ref(false),notice=ref(''),error=ref(''),busy=ref(false)
 type Card={id:string;position:number;visibility:'everyone'|'friends'|'only_me'}
 const cards=ref<Card[]>([]),selected=ref<Card>(),choice=ref<Card['visibility']>('everyone')
@@ -42,7 +42,7 @@ async function saveFeedback(){
  }catch(e){error.value=tr(e instanceof ApiError&&e.status===429?'Feedback limit reached. Try again in an hour.':'Feedback could not be sent. Please try again.')}finally{busy.value=false}
 }
 const title=computed(()=>view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
-function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';notice.value='';error.value=''}}
+function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(props.initial&&view.value===props.initial)emit('close');else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';notice.value='';error.value=''}}
 async function cleared(){busy.value=true;error.value='';try{const keys='caches' in window?await caches.keys():[];const temporary=keys.filter(k=>k.startsWith('maugo-temp-'));await Promise.all(temporary.map(k=>caches.delete(k)));confirm.value=false;notice.value=t(temporary.length?'cacheDeleted':'cacheCleared')}catch{error.value=t('cacheFailed')}finally{busy.value=false}}
 </script>
 <template>
@@ -66,7 +66,7 @@ async function cleared(){busy.value=true;error.value='';try{const keys='caches' 
 </template>
 <template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>Support email: {{supportEmail}} · Pending Smith</p></template>
 <template v-else-if="view==='guidelines'||view==='safety'"><article class="support-policy"><section v-for="[heading,copy] in guides[view]" :key="heading"><h2>{{tr(heading)}}</h2><p>{{tr(copy)}}</p></section></article></template>
-<template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><p>Official text pending Smith (E2). Not ready for release.</p><template v-if="view==='privacy'"><h2>Privacy policy</h2><p>{{legalText.privacy}}</p></template><template v-else><h2>Terms of service</h2><p>{{legalText.terms}}</p><h2>EULA</h2><p>{{legalText.eula}}</p></template></article></template>
+<template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><template v-if="view==='privacy'"><h2>{{tr('Privacy information')}}</h2><p>{{legalText.privacy[locale]}}</p></template><template v-else><p>{{tr(termsVersion)}}</p><section v-for="section in termsSections" :key="section.title"><h2>{{tr(section.title)}}</h2><p>{{tr(section.body)}}</p></section></template></article></template>
 <template v-else-if="view==='system'||view==='interactions'"><div class="support-empty"><img :src="asset('01-brand-scenes/envelope')" alt=""><h2>{{tr(view==='system'?'You are all caught up.':'Nothing here yet.')}}</h2><p>No {{view==='system'?'system message':'interaction'}} feed is connected.</p></div></template>
 <template v-else><div class="settings-group"><label v-for="item in generalItems" :key="item" class="settings-row"><span>{{t(item)}}</span><input :id="item" :disabled="item==='haptics'&&!hapticsAvailable" :checked="preferences[item]" @change="preferences[item]=($event.target as HTMLInputElement).checked" type="checkbox" role="switch"><i aria-hidden="true"></i></label><button id="clear-cache" class="settings-row" @click="confirm=true;notice=''"><span>{{t('clearCache')}}</span><b aria-hidden="true"><img :src="asset('08-interface-icons/icon-chevron-right-muted-16')" alt=""></b></button></div><p>{{t('hapticsNote')}}</p><p id="recommendations-status" role="status">{{t(preferences.recommendations?'recommendationsOn':'recommendationsOff')}}</p><p v-if="!hapticsAvailable">{{t('hapticsUnavailable')}}</p><p>{{t('cacheNote')}}</p><p v-if="notice" role="status">{{notice}}</p></template>
 <p v-if="error" role="alert">{{error}}</p></div></Transition>

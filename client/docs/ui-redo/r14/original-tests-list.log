@@ -1,0 +1,7 @@
+Listing tests:
+  d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send
+  d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable
+  report-attachment.spec.ts:15:1 › B13 image report persists; foreign media rejected; remove and plain reports omit attachment
+  report-attachment.spec.ts:29:1 › invalid and oversized images rejected; upload failure permits plain report
+  report-attachment.spec.ts:37:1 › removing an in-flight photo ignores its eventual upload result
+Total: 5 tests in 2 files

@@ -1,0 +1,11 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5169 --strictPort
+
+8:19:52 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+error when starting dev server:
+Error: listen EPERM: operation not permitted 127.0.0.1:5169
+    at Server.setupListenHandle [as _listen2] (node:net:1919:21)
+    at listenInCluster (node:net:1998:12)
+    at node:net:2207:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)

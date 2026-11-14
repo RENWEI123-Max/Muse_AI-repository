@@ -1,0 +1,86 @@
+[WebServer] (node:1180306) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1180317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1180381) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 1 worker
+
+(node:1180430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send (7.4s)
+  ✓   2 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (1.5s)
+  ✓   3 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (2.5s)
+  ✓   4 tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send (9.6s)
+  ✓   5 tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable (4.7s)
+  ✓   6 tests/r12-safe-chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission (16.4s)
+  ✓   7 tests/r12-safe-chat.spec.ts:6:1 › C6 photo history rendering and pending photo (read contract) (5.0s)
+  ✓   8 tests/report-attachment.spec.ts:15:1 › B13 image report persists; foreign media rejected; remove and plain reports omit attachment (7.0s)
+  ✓   9 tests/report-attachment.spec.ts:29:1 › invalid and oversized images rejected; upload failure permits plain report (8.2s)
+  ✓  10 tests/report-attachment.spec.ts:37:1 › removing an in-flight photo ignores its eventual upload result (4.5s)
+(node:1181732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/chat-voice.spec.ts:5:1 › F03 permission, empty, cancel, offline retry, real B8 audio playback and history (8.5s)
+  ✓  12 tests/chat-voice.spec.ts:25:1 › F03 silent microphone is rejected without upload (5.4s)
+  ✓  13 tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard (1.1m)
+(node:1182712) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 tests/r11-chat.spec.ts:5:1 › R11 twelve actual chat states, geometry, styles and screenshots (24.7s)
+(node:1183334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 tests/r12-chat-details.spec.ts:5:1 › R12 seven safe states and cancel path (1.7m)
+(node:1184927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 tests/r12-chat-details.spec.ts:14:1 › R12 Korean settings, remark and small screen (7.4s)
+
+
+  1) tests/r12-chat-details.spec.ts:5:1 › R12 seven safe states and cancel path ────────────────────
+
+    Test timeout of 100000ms exceeded.
+
+    Error: locator.click: Test timeout of 100000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Cancel', exact: true })
+        - locator resolved to <button data-v-acc76d6f="" aria-label="Cancel" class="ui-icon-button ui-icon-button--reply-close chat-dialog-close">×</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <h2 data-v-acc76d6f="" class="chat-dialog-title">Remark name</h2> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <h2 data-v-acc76d6f="" class="chat-dialog-title">Remark name</h2> intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        155 × waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <h2 data-v-acc76d6f="" class="chat-dialog-title">Remark name</h2> intercepts pointer events
+          - retrying click action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+
+
+       9 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click();await page.locator('#chat-details').click();await capture('chat-details-waiting');await box(page,'#view-public-profile',[131.5,136,112,112]);await box(page,'#remark-name',[40,437.5,295,56]);await page.getByLabel('Back to messages').click();await request.post('http://127.0.0.1:3001/__c6/reply',{data:{id:u.conversations[0]}});await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await page.locator('#confirm-reply-payment').click();await page.locator('#chat-details').click();await capture('chat-details');await box(page,'#view-public-profile',[152.5,136,70,70]);await box(page,'#remark-name',[40,349,295,56]);await expect(page.locator('#remark-name')).toHaveCSS('font-size','13px');await expect(page.locator('#remark-name')).toHaveCSS('line-height','20px');await expect(page.locator('#remark-name')).toHaveCSS('color','rgb(228, 239, 217)')
+      10 |  await page.locator('#remark-name').click();await capture('chat-remark');await box(page,'.chat-settings-dialog',[12,518,351,270]);await box(page,'.chat-remark-input',[33,631,309,48]);await box(page,'.chat-dialog-save',[33,719,309,48]);await expect(page.locator('.chat-settings-dialog')).toHaveCSS('border-radius','24px');await page.getByLabel('Remark',{exact:true}).fill('Quiet friend');await page.getByRole('button',{name:'Save remark',exact:true}).click();await expect(page.locator('.chat-settings-dialog')).toHaveCount(0)
+    > 11 |  await page.getByRole('button',{name:'Search chat history'}).click();await capture('chat-search-empty');await box(page,'#message-search',[24,136,327,48]);await expect(page.locator('#message-search')).toHaveCSS('background-color','rgb(27, 41, 32)');await expect(page.locator('#message-search')).toHaveCSS('border-radius','14px');await page.locator('#message-search').fill('listening');await capture('chat-search-result');await page.locator('#message-search').fill('unmatched-query');await expect(page.locator('.c6-results')).toContainText('No messages found.');await capture('chat-search-none');await box(page,'.chat-search-none-title',[32,380,311,22]);await page.getByLabel('Back to messages').click();await page.locator('#chat-details').click();await page.locator('#clear-chat').click();await capture('chat-clear-confirm');await box(page,'.chat-settings-dialog',[24,277,327,258]);await box(page,'.chat-dialog-save',[49,418,277,48]);await expect(page.locator('.c6-veil')).toHaveCSS('background-color','rgba(3, 8, 5, 0.79)');await expect(page.locator('.chat-dialog-save')).toHaveCSS('background-color','rgb(225, 163, 155)');await page.getByRole('button',{name:'Cancel',exact:true}).last().click();await expect(page.locator('.c6-chat')).toHaveAttribute('data-state','chat-details');await page.locator('#remark-name').click();await page.getByLabel('Remark',{exact:true}).fill('조용한 친구');await page.screenshot({path:'docs/ui-redo/r12/chat-remark-ko-content.png'});await page.getByRole('button',{name:'Cancel',exact:true}).click();await page.setViewportSize({width:375,height:700});await page.locator('#clear-chat').click();await page.waitForTimeout(300);await page.screenshot({path:'docs/ui-redo/r12/chat-clear-small.png'})
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      12 | })
+      13 |
+      14 | test('R12 Korean settings, remark and small screen',async({page,request})=>{
+        at /root/Muse_AI-repository/client/tests/r12-chat-details.spec.ts:11:1518
+
+    Error Context: test-results/r12-chat-details-R12-seven-safe-states-and-cancel-path/error-context.md
+
+  1 failed
+    tests/r12-chat-details.spec.ts:5:1 › R12 seven safe states and cancel path ─────────────────────
+  15 passed (4.9m)

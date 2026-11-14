@@ -73,7 +73,7 @@ Figma 文件里 **不属于** 189 状态的画框，本计划不纳入：`语音
 
 坐标均为 375×812 画框内的 x/y/宽/高。“现状”取自 `home.css` + `fidelity.css` 当前生效值及 `docs/fidelity-refactor/fix-119/after/home.png`。
 
-| # | 元素 | Figma | 现状 | 
+| # | 元素 | Figma | 现状 |
 | --- | --- | --- | --- |
 | H1 | 画框底 | `#090E0E` 上叠径向渐变 `#102017@40% → 透明`（圆心 50%/50%，半径到边） | `#090e0e` 纯色，无径向层 |
 | H2 | 大光晕 | 69,354 240×271，径向 `#98FA48@12% → #68A734@4%(50%) → 透明` | 64,369 248×242，单层 `#80da35@11%` |
@@ -307,7 +307,7 @@ Claude 验收时独立复核：重新从 JSON 读数抽查 A2/A3 至少 5 个元
 | **R16** 用户资料（6） | `person-profile` 29:12899、`person-waiting` 29:13023、`person-followed` 29:13130、`person-no-content` 29:13254、`person-photo` 29:13363、`person-safety` 29:13500 | `ProfileFlow.vue`、`pages/person.css` | R05 | 缺失色占比最高（57%）；6 处 `Arial` 文本按 §9 第 6 项处理 |
 | **R17** 我的资料与列表（12） | `profile-empty` 29:13655、`profile-content` 29:13813、`profile-edit` 29:13977、`profile-invalid` 29:14080、`profile-likes` 29:15456、`following-empty` 29:15641、`following-list` 29:15731、`followers-empty` 29:15827、`visitors-empty` 29:15917、`visitors-outgoing` 29:16009、`my-letters-empty` 29:16105、`my-letters` 29:16190 | `ProfileFlow.vue`、`pages/profile.css` | R05 | 空状态插画 112×112；`d4.spec.ts`、`d4-reverify.spec.ts` 须全过 |
 | **R18** 头像（6） | `avatar-gallery` 29:14185、`avatar-remove` 29:14411、`avatar-removed` 29:14651、`avatar-restore` 29:14880、`avatar-full` 29:15057、`avatar-crop` 29:15279 | `ProfileFlow.vue`、`Avatar.vue`、`pages/profile.css` | R17 | 槽位 88×88、缩略 64.8×64.8、大图 309×309 |
-| **R19** 形象照（6） | `card-type` 11:7、`card-options` 11:187、`card-preview` 11:385、`card-change-type` 11:562、`card-visibility` 11:748、`card-remove` 11:933 | `MomentsFlow.vue`、`pages/cards.css` | R17 | 大图 327×480；`d5.spec.ts` 须全过 |
+| **R19** 形象照（6） | `card-type` 11:7、`card-options` 11:187、`card-preview` 11:385、`card-change-type` 11:562、`card-visibility` 11:748、`card-remove` 11:933 | `MomentsFlow.vue`、`pages/cards.css` | R17 | 大图 309×480；`d5.spec.ts` 须全过 |
 | **R20** 动态（12） | `moments-empty` 29:16277、`moments-list` 29:16376、`moments-category-empty` 29:16484、`moment-empty` 29:16583、`moment-draft` 29:16708、`moment-photo` 29:16833、`moment-stickers` 29:16963、`moment-visibility` 29:17196、`moment-leave` 29:17342、`moment-options` 29:17484、`moment-delete` 29:17614、`moment-saved` 29:17758 | `MomentsFlow.vue`、`pages/moments.css` | R19 | 表情选择器与 R11 共用 `components.css` 里的同一套 |
 | **R21** 设置与偏好（11） | `settings-home` 34:1917、`language-en` 34:2053、`language-ko` 34:2093、`privacy` 35:1914、`privacy-visibility` 35:1972、`privacy-only-me` 35:2047、`notifications-on` 35:2105、`notifications-off` 35:2161、`general` 35:2217、`general-font` 35:2300、`cache-confirm` 35:2349 | `SettingsFlow.vue`、`pages/settings.css` | R05 | 分组卡片 327 宽、圆角 16、底 `#1B2A20`、描边 `#FFFFFF@1%`；行 293×56，图标 22，箭头 16×24；Sign out `400 13/15.73 #D9A48E`；`d6*.spec.ts` 须全过 |
 | **R22** 账号、安全与退出（13） | `security` 39:2444、`account-info` 39:2510、`verification` 39:2578、`pin-create` 39:2620、`pin-invalid` 39:2701、`pin-locked` 39:2784、`pin-wrong` 39:2862、`signout-confirm` 39:2942、`signed-out` 39:3091、`delete-disabled` 39:3147、`delete-typed` 39:3201、`delete-ready` 39:3256、`delete-final` 39:3311 | `AccountSecurity.vue`、`pages/account.css` | R21 | 注销、退出逻辑不动；`d7.spec.ts`、`f07.spec.ts` 须全过 |

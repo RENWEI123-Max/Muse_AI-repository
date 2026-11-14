@@ -1,0 +1,289 @@
+[
+  {
+    "kind": "geometry",
+    "selector": ".d5-page",
+    "target": [
+      0,
+      48,
+      375,
+      764
+    ],
+    "actual": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 764
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".d5-page>header",
+    "target": [
+      0,
+      48,
+      375,
+      64
+    ],
+    "actual": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 64
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": "#d5-back",
+    "target": [
+      16,
+      59.5,
+      40,
+      40
+    ],
+    "actual": {
+      "x": 16,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".d5-page h1",
+    "target": [
+      68,
+      67.5,
+      239,
+      24
+    ],
+    "actual": {
+      "x": 68,
+      "y": 67.5,
+      "width": 239,
+      "height": 24
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": "#moment-text",
+    "target": [
+      24,
+      136,
+      327,
+      160
+    ],
+    "actual": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 160
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": "#compose-category",
+    "target": [
+      24,
+      452,
+      327,
+      48
+    ],
+    "actual": {
+      "x": 24,
+      "y": 452,
+      "width": 327,
+      "height": 48
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": "#moment-audience",
+    "target": [
+      24,
+      524,
+      327,
+      56
+    ],
+    "actual": {
+      "x": 24,
+      "y": 524,
+      "width": 327,
+      "height": 56
+    },
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".d5-page",
+    "property": "background-color",
+    "target": "rgb(13, 23, 19)",
+    "actual": "rgb(13, 23, 19)",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".d5-page h1",
+    "property": "font-size",
+    "target": "17px",
+    "actual": "17px",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".d5-page h1",
+    "property": "font-weight",
+    "target": "550",
+    "actual": "550",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": "#moment-text",
+    "property": "font-size",
+    "target": "14px",
+    "actual": "14px",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": "#moment-text",
+    "property": "line-height",
+    "target": "21px",
+    "actual": "21px",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": "#compose-category",
+    "property": "background-color",
+    "target": "rgb(32, 47, 36)",
+    "actual": "rgb(32, 47, 36)",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": "#compose-category",
+    "property": "border-radius",
+    "target": "12px",
+    "actual": "12px",
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".sheet",
+    "target": [
+      12,
+      494,
+      351,
+      294
+    ],
+    "actual": {
+      "x": 12,
+      "y": 494,
+      "width": 351,
+      "height": 294
+    },
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".sheet h2",
+    "target": [
+      33,
+      527,
+      309,
+      24
+    ],
+    "actual": {
+      "x": 33,
+      "y": 527,
+      "width": 309,
+      "height": 24
+    },
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".sheet",
+    "property": "background-color",
+    "target": "rgb(24, 33, 30)",
+    "actual": "rgb(24, 33, 30)",
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".sheet",
+    "property": "border-radius",
+    "target": "24px",
+    "actual": "24px",
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".sheet",
+    "target": [
+      14,
+      336,
+      347,
+      376
+    ],
+    "actual": {
+      "x": 14,
+      "y": 336,
+      "width": 347,
+      "height": 376
+    },
+    "pass": true
+  },
+  {
+    "kind": "style",
+    "selector": ".sheet",
+    "property": "background-color",
+    "target": "rgb(29, 41, 35)",
+    "actual": "rgb(29, 41, 35)",
+    "pass": true
+  },
+  {
+    "kind": "ko-overflow",
+    "selector": ".d5-page",
+    "pass": true
+  },
+  {
+    "kind": "ko-overflow",
+    "selector": ".page-body",
+    "pass": true
+  },
+  {
+    "kind": "ko-overflow",
+    "selector": "#compose-category",
+    "pass": true
+  },
+  {
+    "kind": "ko-overflow",
+    "selector": "#moment-audience",
+    "pass": true
+  },
+  {
+    "kind": "geometry",
+    "selector": ".sheet",
+    "target": [
+      14,
+      300,
+      347,
+      376
+    ],
+    "actual": {
+      "x": 14,
+      "y": 300,
+      "width": 347,
+      "height": 376
+    },
+    "pass": true
+  }
+]

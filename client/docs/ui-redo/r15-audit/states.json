@@ -1,0 +1,253 @@
+{
+  "id": "entry",
+  "title": "01 · 登录与欢迎",
+  "description": "欢迎、协议、表单校验、验证码及找回密码。",
+  "pages": [
+    {
+      "id": "welcome",
+      "title": "欢迎 / 未登录",
+      "task": "auth:welcome",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "terms-unchecked",
+      "title": "协议 / 未勾选",
+      "task": "auth:consent",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "terms-checked",
+      "title": "协议 / 已勾选",
+      "task": "auth:consent",
+      "seed": "standard",
+      "actions": [
+        [
+          "check",
+          "#accept-terms",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "signin-empty",
+      "title": "邮箱登录 / 空表单",
+      "task": "auth:signin",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "signin-filled",
+      "title": "邮箱登录 / 已填写",
+      "task": "auth:signin",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-email",
+          "reader@example.com"
+        ],
+        [
+          "fill",
+          "#auth-password",
+          "SamplePass2026"
+        ]
+      ]
+    },
+    {
+      "id": "signin-invalid",
+      "title": "邮箱登录 / 邮箱错误",
+      "task": "auth:signin",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-email",
+          "invalid"
+        ],
+        [
+          "fill",
+          "#auth-password",
+          "SamplePass2026"
+        ],
+        [
+          "submit",
+          "#auth-form"
+        ]
+      ]
+    },
+    {
+      "id": "signup-empty",
+      "title": "注册 / 空表单",
+      "task": "auth:signup",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "signup-filled",
+      "title": "注册 / 已填写",
+      "task": "auth:signup",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-name",
+          "A little wanderer"
+        ],
+        [
+          "fill",
+          "#auth-email",
+          "reader@example.com"
+        ],
+        [
+          "fill",
+          "#auth-password",
+          "SamplePass2026"
+        ],
+        [
+          "fill",
+          "#auth-confirm",
+          "SamplePass2026"
+        ]
+      ]
+    },
+    {
+      "id": "signup-mismatch",
+      "title": "注册 / 密码不一致",
+      "task": "auth:signup",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-name",
+          "A little wanderer"
+        ],
+        [
+          "fill",
+          "#auth-email",
+          "reader@example.com"
+        ],
+        [
+          "fill",
+          "#auth-password",
+          "SamplePass2026"
+        ],
+        [
+          "fill",
+          "#auth-confirm",
+          "Different2026"
+        ],
+        [
+          "submit",
+          "#auth-form"
+        ]
+      ]
+    },
+    {
+      "id": "verify-empty",
+      "title": "验证码 / 待输入",
+      "task": "auth:verify",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "verify-error",
+      "title": "验证码 / 输入错误",
+      "task": "auth:verify",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-code",
+          "000000"
+        ],
+        [
+          "submit",
+          "#code-form"
+        ]
+      ]
+    },
+    {
+      "id": "verify-resend",
+      "title": "验证码 / 重发倒计时",
+      "task": "auth:verify",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#resend-email"
+        ]
+      ]
+    },
+    {
+      "id": "forgot-empty",
+      "title": "找回密码 / 邮箱",
+      "task": "auth:forgot",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "recovery-code",
+      "title": "找回密码 / 验证码",
+      "task": "auth:recovery",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "new-password",
+      "title": "重设密码 / 待填写",
+      "task": "auth:password",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "new-password-error",
+      "title": "重设密码 / 密码不一致",
+      "task": "auth:password",
+      "seed": "standard",
+      "actions": [
+        [
+          "fill",
+          "#auth-password",
+          "SamplePass2026"
+        ],
+        [
+          "fill",
+          "#auth-confirm",
+          "Different2026"
+        ],
+        [
+          "submit",
+          "#auth-form"
+        ]
+      ]
+    },
+    {
+      "id": "apple-private",
+      "title": "Apple / 隐藏邮箱",
+      "task": "auth:apple",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "apple-share",
+      "title": "Apple / 共享邮箱",
+      "task": "auth:apple",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#apple-share"
+        ]
+      ]
+    },
+    {
+      "id": "auth-privacy",
+      "title": "登录前 / 隐私说明",
+      "task": "auth:policy",
+      "seed": "standard",
+      "actions": []
+    }
+  ]
+}

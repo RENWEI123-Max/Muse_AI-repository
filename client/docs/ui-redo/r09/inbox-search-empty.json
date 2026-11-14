@@ -1,0 +1,482 @@
+[
+  {
+    "element": "inbox-statusbar",
+    "box": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-top ui-header",
+    "box": [
+      0,
+      48,
+      375,
+      64
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(13, 23, 19)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.3px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-heading-tabs",
+    "box": [
+      24,
+      57,
+      186,
+      44
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.3px",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "tab-messages",
+    "box": [
+      24,
+      57,
+      102,
+      44
+    ],
+    "style": {
+      "color": "rgb(237, 246, 231)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "23px",
+      "fontWeight": "550",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "tab-friends",
+    "box": [
+      146,
+      57,
+      64,
+      44
+    ],
+    "style": {
+      "color": "rgb(124, 146, 133)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "19px",
+      "fontWeight": "500",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu",
+    "box": [
+      311,
+      57.5,
+      44,
+      44
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "22px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      71.3125,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      78.5,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-menu-line",
+    "box": [
+      322.5,
+      85.6875,
+      21,
+      2
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgb(232, 243, 222)",
+      "fontFamily": "Fredoka",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "borderRadius": "4px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-body",
+    "box": [
+      0,
+      112,
+      375,
+      604
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-conversations",
+    "box": [
+      24,
+      124,
+      327,
+      568
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "feature-empty",
+    "box": [
+      24,
+      124,
+      327,
+      267
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-empty-image",
+    "box": [
+      131.5,
+      164,
+      112,
+      112
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-empty-title",
+    "box": [
+      32,
+      296,
+      311,
+      22
+    ],
+    "style": {
+      "color": "rgb(186, 201, 179)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "14px",
+      "fontWeight": "550",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-empty-description",
+    "box": [
+      32,
+      330,
+      311,
+      21
+    ],
+    "style": {
+      "color": "rgb(111, 135, 109)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "ui-button ui-button--secondary inbox-clear-search",
+    "box": [
+      24,
+      603,
+      327,
+      48
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "borderRadius": "30px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "inbox-home-indicator",
+    "box": [
+      0,
+      112,
+      375,
+      0
+    ],
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav",
+    "box": [
+      0,
+      716,
+      375,
+      96
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgb(13, 24, 18)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      52.25,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      52.25,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      166.5,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      166.5,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "main-nav__item",
+    "box": [
+      280.75,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "element": "",
+    "box": [
+      280.75,
+      741.5,
+      42,
+      42
+    ],
+    "style": {
+      "color": "rgb(132, 146, 136)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontFamily": "Fredoka",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "lineHeight": "0px",
+      "letterSpacing": "normal",
+      "borderRadius": "0px",
+      "boxShadow": "none"
+    }
+  }
+]

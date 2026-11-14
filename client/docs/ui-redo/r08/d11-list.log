@@ -1,0 +1,6 @@
+Listing tests:
+  d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft
+  d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+  d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits
+  d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue
+Total: 4 tests in 1 file

@@ -1,0 +1,282 @@
+[
+  {
+    "tag": "FORM",
+    "id": "",
+    "class": "d3-report",
+    "box": {
+      "x": 0,
+      "y": 112,
+      "width": 375,
+      "height": 700
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "d3-intro",
+    "box": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 21
+    },
+    "style": {
+      "color": "rgb(155, 178, 147)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(155, 178, 147)",
+      "borderRadius": "0px",
+      "font": "13px / 21px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "LABEL",
+    "id": "",
+    "class": "safety-reason",
+    "box": {
+      "x": 24,
+      "y": 181,
+      "width": 327,
+      "height": 80
+    },
+    "style": {
+      "color": "rgb(186, 205, 178)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(186, 205, 178)",
+      "borderRadius": "0px",
+      "font": "12px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "SELECT",
+    "id": "report-reason",
+    "class": "ui-input ui-input--safety",
+    "box": {
+      "x": 24,
+      "y": 213,
+      "width": 327,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(32, 47, 36) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.043)",
+      "borderRadius": "12px",
+      "font": "13px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "OPTION",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "OPTION",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "OPTION",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "OPTION",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "LABEL",
+    "id": "",
+    "class": "safety-details",
+    "box": {
+      "x": 24,
+      "y": 285,
+      "width": 327,
+      "height": 152
+    },
+    "style": {
+      "color": "rgb(186, 205, 178)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(186, 205, 178)",
+      "borderRadius": "0px",
+      "font": "12px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "TEXTAREA",
+    "id": "report-details",
+    "class": "ui-input ui-input--safety ui-input--safety-area",
+    "box": {
+      "x": 24,
+      "y": 317,
+      "width": 327,
+      "height": 120
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(32, 47, 36) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.043)",
+      "borderRadius": "12px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "LABEL",
+    "id": "",
+    "class": "d3-add-photo ui-button ui-button--appearance-reset",
+    "box": {
+      "x": 24,
+      "y": 477,
+      "width": 327,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(202, 228, 181)",
+      "background": "rgba(181, 250, 112, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(181, 250, 112, 0.23)",
+      "borderRadius": "24px",
+      "font": "600 16px / 22px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "INPUT",
+    "id": "report-photo",
+    "class": "",
+    "box": {
+      "x": 25,
+      "y": 478,
+      "width": 325,
+      "height": 46
+    },
+    "style": {
+      "color": "rgb(202, 228, 181)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(202, 228, 181)",
+      "borderRadius": "0px",
+      "font": "600 16px / 22px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "safety-report-note",
+    "box": {
+      "x": 24,
+      "y": 549,
+      "width": 327,
+      "height": 34
+    },
+    "style": {
+      "color": "rgb(114, 133, 113)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(114, 133, 113)",
+      "borderRadius": "0px",
+      "font": "10px / 17px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "save-report",
+    "class": "ui-button ui-button--reply safety-report-save",
+    "box": {
+      "x": 24,
+      "y": 599,
+      "width": 327,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(10, 20, 6)",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(10, 20, 6)",
+      "borderRadius": "24px",
+      "font": "600 16px / 22px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "rgba(181, 250, 112, 0.043) 0px 0px 20px 0px"
+    }
+  }
+]

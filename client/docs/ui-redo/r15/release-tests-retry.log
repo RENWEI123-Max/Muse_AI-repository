@@ -1,0 +1,14 @@
+[WebServer] (node:1241897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:1241919) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (926ms)
+  ✓  2 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (2.1s)
+  ✓  3 tests/r15-auth.spec.ts:5:1 › R15 safe auth states, geometry and styles (16.1s)
+  ✓  4 tests/r15-auth.spec.ts:43:1 › R15 Korean and short viewport (1.0s)
+  ✓  5 tests/r15-auth.spec.ts:49:1 › R15 seed demo login keeps existing navigation (2.8s)
+
+  5 passed (25.6s)

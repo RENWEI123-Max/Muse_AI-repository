@@ -1,0 +1,47 @@
+[WebServer] (node:57485) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:57487) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures (12.3s)
+
+
+  1) tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ───────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.c6-chat')
+    Expected: "chat-details"
+    Received: "chat-open"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.c6-chat') with timeout 5000ms
+      - waiting for locator('.c6-chat')
+        14 × locator resolved to <section data-state="chat-open" class="c6-chat chat-flow">…</section>
+           - unexpected value "chat-open"
+
+
+      43 |  await page.getByLabel(t('Remark'),{exact:true}).fill('Unsaved draft');await page.locator('.chat-dialog-close').click();await expect(page.locator('#remark-name')).not.toContainText('Unsaved draft');await page.locator('#remark-name').click();await expect(page.getByLabel(t('Remark'),{exact:true})).toHaveValue('')
+      44 |  await page.getByLabel(t('Remark'),{exact:true}).fill(lang==='ko'?'조용한 친구':'Quiet friend');remarkFail=true;await page.getByRole('button',{name:t('Save remark'),exact:true}).click();await expect(root.getByRole('alert')).toBeVisible();await expect(page.locator('.chat-settings-dialog')).toBeVisible();await snap('remark-save-failure');remarkFail=false;await page.getByRole('button',{name:t('Save remark'),exact:true}).click();await expect(page.locator('.chat-settings-dialog')).toHaveCount(0);await expect(page.locator('.chat-person-name')).toHaveText(lang==='ko'?'조용한 친구':'Quiet friend');await snap('remark-saved')
+    > 45 |  await page.getByRole('button',{name:t('Search chat history')}).click();await snap('chat-search-empty','chat-search-empty');await page.locator('#message-search').fill('listening');await expect(page.locator('.chat-search-result')).toHaveCount(24);await snap('chat-search-result','chat-search-result');checks.resultsScroll=await scroll('.c6-results');expect(checks.resultsScroll.top).toBeGreaterThan(0);await snap('search-scrolled');await page.locator('#message-search').fill('unmatched-query');await expect(page.locator('.chat-search-none')).toBeVisible();await snap('chat-search-none','chat-search-none');await back();await expect(root).toHaveAttribute('data-state','chat-details')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+      46 |  await page.getByRole('button',{name:t('Search chat history')}).click();await expect(page.locator('#message-search')).toHaveValue('');searchFail=true;await page.locator('#message-search').fill('failure');await expect(root.getByRole('alert')).toBeVisible();await snap('search-failure');searchFail=false;await page.locator('#message-search').fill('listening');await expect(page.locator('.chat-search-result')).toHaveCount(24);await back()
+      47 |  await page.locator('#clear-chat').click();await snap('chat-clear-confirm','chat-clear-confirm');checks.clearMotion=await page.locator('.chat-settings-dialog').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,easing:getComputedStyle(e).animationTimingFunction,box:e.getBoundingClientRect().toJSON()}));await page.locator('.chat-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#clear-chat').click();await page.locator('.chat-dialog-close').click();await expect(root).toHaveAttribute('data-state','chat-details')
+      48 |  await page.locator('#block-chat').click();await snap('block-boundary','block-confirm');await page.locator('.safety-dialog-cancel').click();await expect(root).toHaveAttribute('data-state','chat-details');await page.locator('#report-person').click();await snap('report-choice-boundary','safety-choice');await page.locator('#safety-report').click();await snap('report-form-boundary','report-empty');await back();await expect(root).toHaveAttribute('data-state','chat-details');await snap('report-return')
+        at /Users/anna/Muse_AI-repository/client/tests/r12-audit.spec.ts:45:638
+
+    Error Context: test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r12-audit/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures ────────────────

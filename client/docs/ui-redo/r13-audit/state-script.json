@@ -1,0 +1,57 @@
+{
+  "id": "appearance",
+  "title": "07 · 聊天背景与气泡",
+  "description": "壁纸列表、预览、应用效果和颜色设置。",
+  "pages": [
+    {
+      "id": "wallpapers",
+      "title": "背景 / 壁纸列表",
+      "task": "background",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "wallpaper-preview",
+      "title": "背景 / 大图预览",
+      "task": "wallpaper-preview",
+      "seed": "standard",
+      "actions": [],
+      "params": {
+        "id": "tea",
+        "wallpaperId": "moon-road"
+      }
+    },
+    {
+      "id": "wallpaper-applied",
+      "title": "对话 / 应用壁纸",
+      "task": "chat",
+      "seed": "wallpaper",
+      "actions": []
+    },
+    {
+      "id": "wallpaper-colors",
+      "title": "背景 / 纯色选择",
+      "task": "background",
+      "seed": "standard",
+      "actions": [],
+      "params": {
+        "id": "tea",
+        "tab": "colors"
+      }
+    },
+    {
+      "id": "chat-bubbles",
+      "title": "气泡 / 默认设置",
+      "task": "bubbles",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "chat-bubbles-custom",
+      "title": "气泡 / 自定义颜色",
+      "task": "bubbles",
+      "seed": "bubbles",
+      "actions": []
+    }
+  ]
+}

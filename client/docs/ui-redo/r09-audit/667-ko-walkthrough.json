@@ -1,0 +1,3073 @@
+{
+  "fixture": true,
+  "steps": [
+    {
+      "step": "inbox-pending",
+      "time": "2026-11-14T11:10:47.391Z"
+    },
+    {
+      "step": "collect-cancelled",
+      "time": "2026-11-14T11:10:48.304Z"
+    },
+    {
+      "step": "inbox-collected-one",
+      "time": "2026-11-14T11:10:49.295Z"
+    },
+    {
+      "step": "inbox-collected-all",
+      "time": "2026-11-14T11:10:50.708Z"
+    },
+    {
+      "step": "inbox-unread",
+      "time": "2026-11-14T11:10:53.655Z"
+    },
+    {
+      "step": "inbox-read",
+      "time": "2026-11-14T11:10:54.288Z"
+    },
+    {
+      "step": "mark-read-failure",
+      "time": "2026-11-14T11:10:55.338Z"
+    },
+    {
+      "step": "inbox-read",
+      "time": "2026-11-14T11:10:56.344Z"
+    },
+    {
+      "step": "inbox-friends-empty",
+      "time": "2026-11-14T11:10:56.937Z"
+    },
+    {
+      "step": "inbox-options",
+      "time": "2026-11-14T11:10:57.556Z"
+    },
+    {
+      "step": "pin-failure",
+      "time": "2026-11-14T11:10:58.521Z"
+    },
+    {
+      "step": "inbox-pinned",
+      "time": "2026-11-14T11:10:59.602Z"
+    },
+    {
+      "step": "inbox-friends",
+      "time": "2026-11-14T11:11:00.611Z"
+    },
+    {
+      "step": "inbox-drawer",
+      "time": "2026-11-14T11:11:01.688Z"
+    },
+    {
+      "step": "inbox-search",
+      "time": "2026-11-14T11:11:02.358Z"
+    },
+    {
+      "step": "inbox-search-empty",
+      "time": "2026-11-14T11:11:02.981Z"
+    },
+    {
+      "step": "inbox-hidden",
+      "time": "2026-11-14T11:11:04.100Z"
+    },
+    {
+      "step": "inbox-hidden-empty",
+      "time": "2026-11-14T11:11:05.069Z"
+    },
+    {
+      "step": "inbox-waiting",
+      "time": "2026-11-14T11:11:05.751Z"
+    },
+    {
+      "step": "waiting-chat",
+      "time": "2026-11-14T11:11:06.336Z"
+    },
+    {
+      "step": "inbox-empty",
+      "time": "2026-11-14T11:11:07.020Z"
+    },
+    {
+      "step": "inbox-notifications-off",
+      "time": "2026-11-14T11:11:07.636Z"
+    },
+    {
+      "step": "list-failure",
+      "time": "2026-11-14T11:11:08.252Z"
+    },
+    {
+      "step": "list-scroll-sticky",
+      "time": "2026-11-14T11:11:09.193Z"
+    },
+    {
+      "step": "collected-row-visible",
+      "time": "2026-11-14T11:11:11.115Z"
+    }
+  ],
+  "records": [
+    {
+      "state": "inbox-pending",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "답장 받기오늘 무료 10개•••3›",
+          "clipped": false
+        },
+        {
+          "text": "오늘 무료 10개",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-collected-one",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "답장 받기오늘 무료 10개•••2›",
+          "clipped": false
+        },
+        {
+          "text": "오늘 무료 10개",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "답장 한 개를 받았어요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-collected-all",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "답장 한 개를 받았어요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-unread",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:001",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-read",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-read",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-friends-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "당신의 인연이 시작되고 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-options",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        },
+        {
+          "text": "대화 옵션",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "읽음으로 표시",
+          "clipped": false
+        },
+        {
+          "text": "대화 알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "대화 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "메모 저장",
+          "clipped": false
+        },
+        {
+          "text": "대화 숨기기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-pinned",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend ⌁A gentle little story.18:00♧",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-friends",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend ⌁A gentle little story.18:00♧",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-drawer",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Window tea ⌁A gentle little story.18:00♧",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 1 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Little bird 2 A gentle little story.18:00",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        },
+        {
+          "text": "메시지 도구",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "검색",
+          "clipped": false
+        },
+        {
+          "text": "차단한 사람 ›",
+          "clipped": false
+        },
+        {
+          "text": "숨긴 대화 ›",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉 ›",
+          "clipped": false
+        },
+        {
+          "text": "✓ 모두 읽음으로 표시",
+          "clipped": false
+        },
+        {
+          "text": "알림 설정 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-search",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Window tea ⌁A gentle little story.18:00♧",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "검색 지우기",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-search-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화가 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "검색 지우기",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-hidden",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "숨긴 대화",
+          "clipped": false
+        },
+        {
+          "text": "Window tea ⌁A gentle little story.18:00♧",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-hidden-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "숨긴 대화",
+          "clipped": false
+        },
+        {
+          "text": "숨긴 대화가 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-waiting",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend 편지가 날아가고 있어요18:00답장 대기",
+          "clipped": false
+        },
+        {
+          "text": "18:00",
+          "clipped": false
+        },
+        {
+          "text": "답장 대기",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화가 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "state": "inbox-notifications-off",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화가 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "새 답장을 놓치지 마세요",
+          "clipped": false
+        },
+        {
+          "text": "설정",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "scroll": {
+    "top": 852,
+    "height": 459,
+    "content": 1748
+  },
+  "drawerScroll": {
+    "top": 11,
+    "height": 493,
+    "content": 504
+  },
+  "document": {
+    "height": 667,
+    "y": 0,
+    "viewport": 667
+  },
+  "effects": [
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.22s",
+      "time": 1326.2999999970198
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.22s",
+      "time": 2160.7999999970198
+    },
+    {
+      "kind": "toast-enter",
+      "time": 2507
+    },
+    {
+      "kind": "animation",
+      "name": "r09-arrive",
+      "duration": "0.45s",
+      "time": 2537.2000000029802
+    },
+    {
+      "kind": "transition",
+      "property": "opacity",
+      "elapsed": 0.2,
+      "time": 2737.7000000029802
+    },
+    {
+      "kind": "transition",
+      "property": "transform",
+      "elapsed": 0.2,
+      "time": 2737.7999999970198
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.22s",
+      "time": 3161.5999999940395
+    },
+    {
+      "kind": "animation",
+      "name": "r09-arrive",
+      "duration": "0.45s",
+      "time": 3537.2999999970198
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.22s",
+      "time": 3626.5
+    },
+    {
+      "kind": "animation",
+      "name": "r09-arrive",
+      "duration": "0.45s",
+      "time": 3906.5999999940395
+    },
+    {
+      "kind": "toast-leave",
+      "time": 6577.5999999940395
+    },
+    {
+      "kind": "toast-leave",
+      "time": 6587.899999991059
+    },
+    {
+      "kind": "transition",
+      "property": "opacity",
+      "elapsed": 0.2,
+      "time": 6791.29999999702
+    },
+    {
+      "kind": "toast-removed",
+      "time": 6791.5999999940395
+    },
+    {
+      "kind": "transition",
+      "property": "transform",
+      "elapsed": 0.2,
+      "time": 6791.5999999940395
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 8220.59999999404
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 10820.59999999404
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 11403.79999999702
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 12487.20000000298
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 13437.29999999702
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 14520.5
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 16887.29999999702
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.3s",
+      "time": 17937.29999999702
+    },
+    {
+      "kind": "animation",
+      "name": "sheet-in",
+      "duration": "0.22s",
+      "time": 23053.79999999702
+    },
+    {
+      "kind": "toast-enter",
+      "time": 23413.09999999404
+    },
+    {
+      "kind": "animation",
+      "name": "r09-arrive",
+      "duration": "0.45s",
+      "time": 23454
+    },
+    {
+      "kind": "transition",
+      "property": "opacity",
+      "elapsed": 0.2,
+      "time": 23637.09999999404
+    },
+    {
+      "kind": "transition",
+      "property": "transform",
+      "elapsed": 0.2,
+      "time": 23637.20000000298
+    },
+    {
+      "kind": "toast-leave",
+      "time": 26119.20000000298
+    },
+    {
+      "kind": "toast-leave",
+      "time": 26138.20000000298
+    },
+    {
+      "kind": "transition",
+      "property": "opacity",
+      "elapsed": 0.2,
+      "time": 26337.59999999404
+    },
+    {
+      "kind": "toast-removed",
+      "time": 26337.89999999106
+    },
+    {
+      "kind": "transition",
+      "property": "transform",
+      "elapsed": 0.2,
+      "time": 26338
+    }
+  ],
+  "press": "matrix(0.99, 0, 0, 0.99, 0, 0)",
+  "errors": [],
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "email": "r09-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/reply-chat-0/collect",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/reply-chat-1/collect",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/reply-chat-2/collect",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=1&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/messages",
+      "query": "?markRead=true&limit=1&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/messages",
+      "query": "?markRead=true&limit=1&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=friends&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "pinned": true
+      }
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "pinned": true
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "muted": true
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": true
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=friends&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "Window tea"
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?search=Window+tea&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/messages",
+      "query": "?search=Window+tea&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/messages",
+      "query": "?search=Window+tea&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?search=unmatched-query&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/messages",
+      "query": "?search=unmatched-query&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/messages",
+      "query": "?search=unmatched-query&markRead=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "hidden": true
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "hidden": false
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=friends&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=friends&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-3/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-4/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-5/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-6/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-7/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-8/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-9/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-10/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-11/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-12/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-13/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-14/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-15/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-16/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-17/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-18/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-19/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-20/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-21/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-22/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-23/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-24/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=20",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-10/replies/reply-chat-10/collect",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-1/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-2/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-3/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-4/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-5/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-6/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-7/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-8/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-9/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-10/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-11/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-12/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-13/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-14/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-15/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-16/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-17/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-18/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-19/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-20/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-21/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-22/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-23/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/conversations/chat-24/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET",
+      "body": null
+    }
+  ]
+}

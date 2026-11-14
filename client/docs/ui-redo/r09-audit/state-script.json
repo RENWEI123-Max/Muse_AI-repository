@@ -1,0 +1,162 @@
+{
+  "id": "inbox",
+  "title": "04 · 消息与回信",
+  "description": "未收到、待收取、收取一条及全部收完分别展开。",
+  "pages": [
+    {
+      "id": "inbox-empty",
+      "title": "消息 / 从未收到消息",
+      "task": "inbox",
+      "seed": "empty",
+      "actions": []
+    },
+    {
+      "id": "inbox-waiting",
+      "title": "消息 / 已寄出，尚无回信",
+      "task": "inbox",
+      "seed": "waiting-only",
+      "actions": []
+    },
+    {
+      "id": "inbox-pending",
+      "title": "消息 / 收到 3 封待收回信",
+      "task": "inbox",
+      "seed": "pending",
+      "actions": []
+    },
+    {
+      "id": "inbox-collected-one",
+      "title": "消息 / 收取 1 封，剩余 2 封",
+      "task": "inbox",
+      "seed": "pending",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ]
+      ]
+    },
+    {
+      "id": "inbox-collected-all",
+      "title": "消息 / 全部收完，横条消失",
+      "task": "inbox",
+      "seed": "pending",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ],
+        [
+          "click",
+          "#collect-replies"
+        ],
+        [
+          "click",
+          "#collect-replies"
+        ]
+      ]
+    },
+    {
+      "id": "inbox-unread",
+      "title": "消息 / 已有未读会话",
+      "task": "inbox",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "inbox-read",
+      "title": "消息 / 所有消息已读",
+      "task": "inbox",
+      "seed": "read",
+      "actions": []
+    },
+    {
+      "id": "inbox-friends-empty",
+      "title": "好友 / 空状态",
+      "task": "inbox",
+      "seed": "empty",
+      "actions": [],
+      "params": {
+        "tab": "friends"
+      }
+    },
+    {
+      "id": "inbox-friends",
+      "title": "好友 / 已关注会话",
+      "task": "inbox",
+      "seed": "following",
+      "actions": [],
+      "params": {
+        "tab": "friends"
+      }
+    },
+    {
+      "id": "inbox-drawer",
+      "title": "消息 / 右侧菜单",
+      "task": "inbox",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#inbox-menu"
+        ]
+      ]
+    },
+    {
+      "id": "inbox-search",
+      "title": "消息 / 搜索匹配",
+      "task": "inbox-search",
+      "seed": "standard",
+      "actions": [],
+      "query": "tea"
+    },
+    {
+      "id": "inbox-search-empty",
+      "title": "消息 / 搜索无结果",
+      "task": "inbox-search",
+      "seed": "standard",
+      "actions": [],
+      "query": "unmatched-query"
+    },
+    {
+      "id": "inbox-options",
+      "title": "会话 / 更多操作",
+      "task": "inbox",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "[data-options=\"tea\"]"
+        ]
+      ]
+    },
+    {
+      "id": "inbox-pinned",
+      "title": "会话 / 已置顶并静音",
+      "task": "inbox",
+      "seed": "pinned",
+      "actions": []
+    },
+    {
+      "id": "inbox-hidden",
+      "title": "隐藏会话 / 有记录",
+      "task": "hidden-chats",
+      "seed": "hidden",
+      "actions": []
+    },
+    {
+      "id": "inbox-hidden-empty",
+      "title": "隐藏会话 / 空状态",
+      "task": "hidden-chats",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "inbox-notifications-off",
+      "title": "消息 / 通知提醒条",
+      "task": "inbox",
+      "seed": "notifications-off",
+      "actions": []
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "moments",
+  "title": "12 · 动态",
+  "description": "空状态、列表、发布、草稿、附件与管理。",
+  "pages": [
+    {
+      "id": "moments-empty",
+      "title": "动态 / 空状态",
+      "task": "moments",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "moments-list",
+      "title": "动态 / 已发布",
+      "task": "moments",
+      "seed": "content",
+      "actions": []
+    },
+    {
+      "id": "moments-category-empty",
+      "title": "动态 / 分类无内容",
+      "task": "moments",
+      "seed": "content",
+      "actions": [],
+      "params": {
+        "category": "Outfit"
+      }
+    },
+    {
+      "id": "moment-empty",
+      "title": "发布动态 / 空白",
+      "task": "moment-compose",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "moment-draft",
+      "title": "发布动态 / 文字草稿",
+      "task": "moment-compose",
+      "seed": "moment-draft",
+      "actions": []
+    },
+    {
+      "id": "moment-photo",
+      "title": "发布动态 / 图片附件",
+      "task": "moment-compose",
+      "seed": "moment-photo",
+      "actions": []
+    },
+    {
+      "id": "moment-stickers",
+      "title": "发布动态 / 表情选择",
+      "task": "moment-compose",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#moment-sticker"
+        ]
+      ]
+    },
+    {
+      "id": "moment-visibility",
+      "title": "发布动态 / 可见范围",
+      "task": "moment-compose",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#moment-audience"
+        ]
+      ]
+    },
+    {
+      "id": "moment-leave",
+      "title": "发布动态 / 离开前保留草稿",
+      "task": "moment-compose",
+      "seed": "moment-draft",
+      "actions": [
+        [
+          "click",
+          "#page-back"
+        ]
+      ]
+    },
+    {
+      "id": "moment-options",
+      "title": "动态 / 操作菜单",
+      "task": "moments",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-more]"
+        ]
+      ]
+    },
+    {
+      "id": "moment-delete",
+      "title": "动态 / 删除确认",
+      "task": "moments",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-more]"
+        ],
+        [
+          "click",
+          "#delete-moment"
+        ]
+      ]
+    },
+    {
+      "id": "moment-saved",
+      "title": "动态 / 保存完成",
+      "task": "moment-compose",
+      "seed": "moment-draft",
+      "actions": [
+        [
+          "click",
+          "#save-moment"
+        ]
+      ]
+    }
+  ]
+}

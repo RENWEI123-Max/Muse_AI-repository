@@ -1,0 +1,24 @@
+[WebServer] (node:1166727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1166744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1166808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:1166829) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send (7.6s)
+  ✓  2 tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission (17.6s)
+  ✓  3 tests/chat.spec.ts:6:1 › C6 photo history rendering and pending photo (read contract) (5.7s)
+(node:1167376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 tests/chat-voice.spec.ts:5:1 › F03 permission, empty, cancel, offline retry, real B8 audio playback and history (8.9s)
+  ✓  5 tests/chat-voice.spec.ts:25:1 › F03 silent microphone is rejected without upload (5.8s)
+  ✓  6 tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard (1.1m)
+(node:1168582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 tests/r11-chat.spec.ts:5:1 › R11 twelve actual chat states, geometry, styles and screenshots (23.4s)
+
+  7 passed (2.4m)

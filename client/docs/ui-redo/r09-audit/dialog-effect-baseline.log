@@ -1,0 +1,48 @@
+[WebServer] (node:53784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:53786) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+  ✘  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (6.3s)
+
+
+  1) tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ─────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.reply-dialog')
+    Expected: "0.22s"
+    Received: "0.3s"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.reply-dialog') with timeout 5000ms
+      - waiting for locator('.reply-dialog')
+        13 × locator resolved to <section role="dialog" aria-modal="true" aria-label="Collect one reply?" class="reply-dialog ui-sheet ui-dialog ui-sheet--reply">…</section>
+           - unexpected value "0.3s"
+
+
+      47 |  await state('inbox-pending');if(lang==='ko')await expect(page.locator('.inbox-tab').first()).toHaveCSS('font-family',/GowunDodum/)
+      48 |  await page.locator('#collect-replies').hover();await page.mouse.down();const press=await page.locator('#collect-replies').evaluate(e=>getComputedStyle(e).transform);await page.mouse.move(5,100);await page.mouse.up();expect(press).toBe('matrix(0.99, 0, 0, 0.99, 0, 0)')
+    > 49 |  await page.locator('#collect-replies').click();await expect(page.locator('.reply-dialog')).toHaveCSS('animation-duration','0.22s');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('3');await shot('collect-cancelled')
+         |                                                                                             ^
+      50 |  for(let n=3;n>0;n--){await page.locator('#collect-replies').click();await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0);if(n===3)await state('inbox-collected-one')}
+      51 |  await state('inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect.soft(page.locator('.reply-receipt')).toHaveCount(0,{timeout:4000})
+      52 |  await reopen();await state('inbox-unread');await menu();await page.getByRole('button',{name:t('✓ Mark all as read')}).click();await settled();await state('inbox-read');rows.forEach(c=>c.unreadCount=1);await reopen();await settled()
+        at /Users/anna/Muse_AI-repository/client/tests/r09-audit.spec.ts:49:93
+
+    Error Context: test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r09-audit/r09-audit-667-en-inbox-real-click-walkthrough-API-fixture-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) ──────────────

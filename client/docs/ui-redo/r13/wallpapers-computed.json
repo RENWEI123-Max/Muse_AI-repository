@@ -1,0 +1,684 @@
+[
+  {
+    "tag": "HEADER",
+    "id": "",
+    "class": "ui-header",
+    "text": "Chat background",
+    "box": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 64
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-header__back ui-icon-button",
+    "text": "",
+    "box": {
+      "x": 16,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "font": "500 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "20px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "H1",
+    "id": "",
+    "class": "",
+    "text": "Chat background",
+    "box": {
+      "x": 68,
+      "y": 68,
+      "width": 239,
+      "height": 24
+    },
+    "style": {
+      "font": "550 17px / 24px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "-0.3px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "wallpaper-tab",
+    "class": "selected",
+    "text": "Wallpapers",
+    "box": {
+      "x": 28,
+      "y": 140,
+      "width": 155.5,
+      "height": 40
+    },
+    "style": {
+      "font": "13px / 16px Fredoka",
+      "color": "rgb(181, 250, 112)",
+      "background": "rgb(44, 59, 40) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(181, 250, 112)",
+      "borderRadius": "10px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "color-tab",
+    "class": "",
+    "text": "Colors",
+    "box": {
+      "x": 191.5,
+      "y": 140,
+      "width": 155.5,
+      "height": 40
+    },
+    "style": {
+      "font": "13px / 16px Fredoka",
+      "color": "rgb(151, 171, 151)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(151, 171, 151)",
+      "borderRadius": "10px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "wallpaper-default",
+    "class": "wallpaper-tile ui-wallpaper-tile wallpaper-default",
+    "text": "Default✓",
+    "box": {
+      "x": 24,
+      "y": 208,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "2px solid rgb(181, 250, 112)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Default",
+    "box": {
+      "x": 26,
+      "y": 337.0625,
+      "width": 97,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Moonlit road",
+    "box": {
+      "x": 137,
+      "y": 208,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 138,
+      "y": 209,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Moonlit road",
+    "box": {
+      "x": 138,
+      "y": 338.0625,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Forest glow",
+    "box": {
+      "x": 250,
+      "y": 208,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 251,
+      "y": 209,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Forest glow",
+    "box": {
+      "x": 251,
+      "y": 338.0625,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Blue cosmos",
+    "box": {
+      "x": 24,
+      "y": 395.0625,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 25,
+      "y": 396.0625,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Blue cosmos",
+    "box": {
+      "x": 25,
+      "y": 525.125,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Little soot",
+    "box": {
+      "x": 137,
+      "y": 395.0625,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 138,
+      "y": 396.0625,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Little soot",
+    "box": {
+      "x": 138,
+      "y": 525.125,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Night glass",
+    "box": {
+      "x": 250,
+      "y": 395.0625,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 251,
+      "y": 396.0625,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Night glass",
+    "box": {
+      "x": 251,
+      "y": 525.125,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Sunset peak",
+    "box": {
+      "x": 24,
+      "y": 582.125,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 25,
+      "y": 583.125,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Sunset peak",
+    "box": {
+      "x": 25,
+      "y": 712.1875,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Silver feather",
+    "box": {
+      "x": 137,
+      "y": 582.125,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 138,
+      "y": 583.125,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Silver feather",
+    "box": {
+      "x": 138,
+      "y": 712.1875,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "wallpaper-tile ui-wallpaper-tile",
+    "text": "Aurora sky",
+    "box": {
+      "x": 250,
+      "y": 582.125,
+      "width": 101,
+      "height": 175.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(255, 255, 255, 0.047)",
+      "borderRadius": "14px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "appearance-tile-image",
+    "text": "",
+    "box": {
+      "x": 251,
+      "y": 583.125,
+      "width": 99,
+      "height": 173.0625
+    },
+    "style": {
+      "font": "13px / 20px Fredoka",
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "wallpaper-name ui-wallpaper-name",
+    "text": "Aurora sky",
+    "box": {
+      "x": 251,
+      "y": 712.1875,
+      "width": 99,
+      "height": 44
+    },
+    "style": {
+      "font": "9px / 14px Fredoka",
+      "color": "rgb(238, 246, 233)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(238, 246, 233)",
+      "borderRadius": "0px",
+      "padding": "20px 6px 10px",
+      "gap": "normal",
+      "letterSpacing": "normal"
+    }
+  }
+]

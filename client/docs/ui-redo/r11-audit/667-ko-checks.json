@@ -1,0 +1,257 @@
+{
+  "initial": {
+    "top": 2070,
+    "content": 2448,
+    "height": 378
+  },
+  "up": 0,
+  "stickerScroll": {
+    "top": 288,
+    "height": 304,
+    "content": 592
+  },
+  "wave": {
+    "name": "r11-wave",
+    "duration": "0.6s"
+  },
+  "errors": [],
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/reply-0/collect",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    }
+  ],
+  "clipped": []
+}

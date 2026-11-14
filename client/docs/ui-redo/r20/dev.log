@@ -1,0 +1,33 @@
+
+> maugo-client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5169
+
+
+  VITE v7.3.8  ready in 492 ms
+
+  ➜  Local:   http://127.0.0.1:5169/
+8:41:13 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+8:41:13 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+      at transformStyle (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+      at TransformPluginContext.handler (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+      at EnvironmentPluginContainer.transform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async loadAndTransform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+8:41:28 AM [vite] (client) hmr update /src/styles/pages/moments.css?vue&type=style&index=1&src=true&lang.css
+8:41:28 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+8:41:28 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+  Plugin: vite:vue
+  File: /root/Muse_AI-repository/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+      at transformStyle (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+      at TransformPluginContext.handler (file:///root/Muse_AI-repository/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+      at EnvironmentPluginContainer.transform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async loadAndTransform (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///root/Muse_AI-repository/client/node_modules/vite/dist/node/chunks/config.js:24790:20)

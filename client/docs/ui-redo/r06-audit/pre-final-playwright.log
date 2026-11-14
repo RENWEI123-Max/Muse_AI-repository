@@ -1,0 +1,105 @@
+[WebServer] (node:48829) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:48831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en 01-response
+667 en 02-letter
+667 en 03-ready-motion
+667 en 04-appearance
+667 en 05-compose-filled
+667 en 06-compose-failure
+667 en 07-wallet
+667 en 08-pass
+667 en 09-refresh-failure
+667 en 10-empty
+  ✓  1 tests/r06-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (15.4s)
+667 ko 01-response
+667 ko 02-letter
+667 ko 03-ready-motion
+  ✘  2 tests/r06-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (19.6s)
+(node:48864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+812 en 01-response
+812 en 02-letter
+812 en 03-ready-motion
+812 en 04-appearance
+812 en 05-compose-filled
+812 en 06-compose-failure
+812 en 07-wallet
+812 en 08-pass
+812 en 09-refresh-failure
+812 en 10-empty
+  ✓  3 tests/r06-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (15.4s)
+812 ko 01-response
+812 ko 02-letter
+812 ko 03-ready-motion
+  ✘  4 tests/r06-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (19.6s)
+
+
+  1) tests/r06-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Filter Woman', exact: true })
+
+
+      44 |  const copy=await page.locator('.scene-hint,#refresh,#compose,.economy-action').evaluateAll(es=>es.map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth})))
+      45 |  expect(copy.every(x=>!x.clipped)).toBeTruthy()
+    > 46 |  await page.locator('#settings').click();await expect(page.locator('.filter-sheet')).toBeVisible();await page.getByRole('button',{name:t('Filter Woman'),exact:true}).click();await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-veil')).toHaveCount(0)
+         |                                                                                                                                                                       ^
+      47 |  await page.locator('#settings').click();await page.keyboard.press('Escape');await expect(page.locator('.home-veil')).toHaveCount(0)
+      48 |  await page.locator('#magic').click();await expect(page.locator('.appearance-sheet')).toBeVisible();await page.getByRole('button',{name:t('Male bird'),exact:true}).click();await page.getByLabel(t('Flight & hover'),{exact:true}).uncheck();await shot('04-appearance')
+      49 |  const sheetScroll=await page.locator('.appearance-sheet').evaluate(e=>{e.scrollTop=999;return {top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}})
+        at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:46:167
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r06-audit-667-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r06-audit-667-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r06-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r06-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r06-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ───────────────────────
+
+    TimeoutError: locator.click: Timeout 12000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Filter Woman', exact: true })
+
+
+      44 |  const copy=await page.locator('.scene-hint,#refresh,#compose,.economy-action').evaluateAll(es=>es.map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth})))
+      45 |  expect(copy.every(x=>!x.clipped)).toBeTruthy()
+    > 46 |  await page.locator('#settings').click();await expect(page.locator('.filter-sheet')).toBeVisible();await page.locator('.filter-gender-choice').nth(1).click();await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-veil')).toHaveCount(0)
+         |                                                                                                                                                                       ^
+      47 |  await page.locator('#settings').click();await page.keyboard.press('Escape');await expect(page.locator('.home-veil')).toHaveCount(0)
+      48 |  await page.locator('#magic').click();await expect(page.locator('.appearance-sheet')).toBeVisible();await page.getByRole('button',{name:t('Male bird'),exact:true}).click();await page.getByLabel(t('Flight & hover'),{exact:true}).uncheck();await shot('04-appearance')
+      49 |  const sheetScroll=await page.locator('.appearance-sheet').evaluate(e=>{e.scrollTop=999;return {top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}})
+        at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:46:167
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/r06-audit-812-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/r06-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r06-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r06-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/r06-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ────────────────────────
+    tests/r06-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ────────────────────────
+  2 passed (1.2m)

@@ -1,0 +1,22 @@
+{
+  "html": "<div class=\"reply-purchase-overlay ui-scrim ui-scrim--dialog\"><section class=\"reply-dialog ui-sheet ui-dialog\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Confirm purchase\"><h2>100 diamonds</h2><p>Unavailable</p><p>Purchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.</p><button id=\"confirm-native-pack\" class=\"ui-button\">Confirm purchase</button><button class=\"ui-button ui-button--text\">Not now</button></section></div>",
+  "style": {
+    "z": "40",
+    "position": "absolute",
+    "display": "flex",
+    "opacity": "1"
+  },
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 375,
+    "h": 667
+  },
+  "button": {
+    "x": 45,
+    "y": 401.90625,
+    "w": 151.265625,
+    "h": 48
+  },
+  "hit": "<button id=\"confirm-native-pack\" class=\"ui-button\">Confirm purchase</button>"
+}

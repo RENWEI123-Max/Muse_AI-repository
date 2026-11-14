@@ -1,0 +1,279 @@
+{
+  "fixture": true,
+  "checks": {
+    "waitingControls": [
+      {
+        "id": "view-public-profile",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "remark-name",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "chat-background",
+        "disabled": false
+      },
+      {
+        "id": "chat-bubbles",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "block-chat",
+        "disabled": false
+      },
+      {
+        "id": "report-person",
+        "disabled": false
+      }
+    ],
+    "waitingScroll": {
+      "top": 351,
+      "height": 527,
+      "content": 878,
+      "bottom": 639
+    },
+    "unlockedDisabled": [
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      }
+    ],
+    "detailsScroll": {
+      "top": 262,
+      "height": 527,
+      "content": 789,
+      "bottom": 639
+    },
+    "remarkMotion": {
+      "animation": "sheet-in",
+      "duration": "0.3s",
+      "easing": "ease-out",
+      "box": {
+        "x": 12,
+        "y": 373,
+        "width": 351,
+        "height": 270,
+        "top": 373,
+        "right": 363,
+        "bottom": 643,
+        "left": 12
+      }
+    },
+    "resultsScroll": {
+      "top": 1887,
+      "height": 431,
+      "content": 2318,
+      "bottom": 639
+    },
+    "clearMotion": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "easing": "ease-out",
+      "box": {
+        "x": 24,
+        "y": 204.5,
+        "width": 327,
+        "height": 258,
+        "top": 204.5,
+        "right": 351,
+        "bottom": 462.5,
+        "left": 24
+      }
+    },
+    "profileReturn": true
+  },
+  "errors": [],
+  "forbidden": [],
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "Quiet friend"
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "Quiet friend"
+      }
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=unmatched-query",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=failure",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    }
+  ],
+  "clipped": []
+}

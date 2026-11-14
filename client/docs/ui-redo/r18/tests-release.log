@@ -1,0 +1,29 @@
+
+Running 1 test using 1 worker
+
+(node:1329819) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session (15.4s)
+
+
+  1) tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session ───────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 1
+    Received:    7.1624603271484375
+
+       8 |  await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#edit-profile')).toContainText('Reader')
+       9 |  const metrics:any[]=[]
+    > 10 |  const box=async(selector:string,target:number[])=>{const b=await page.locator(selector).first().boundingBox();metrics.push({selector,target,actual:b});expect.soft(b).not.toBeNull();if(b)for(const [i,k] of ['x','y','width','height'].entries())expect.soft(Math.abs(b[k as keyof typeof b]-target[i]!)).toBeLessThanOrEqual(1)}
+         |                                                                                                                                                                                                                                                                                                             ^
+      11 |  const shot=async(name:string)=>{await page.waitForTimeout(350);await page.screenshot({animations:'disabled',path:`docs/ui-redo/r18/${name}.png`})}
+      12 |  const open=()=>page.locator('#edit-avatar').click()
+      13 |  const upload=async()=>{const chooser=page.waitForEvent('filechooser');await page.locator('#upload-avatar').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('#avatar-canvas')).toBeVisible()}
+        at box (/root/Muse_AI-repository/client/tests/r18-avatar.spec.ts:10:301)
+        at /root/Muse_AI-repository/client/tests/r18-avatar.spec.ts:14:2
+
+    Error Context: docs/ui-redo/r18/test-results/r18-avatar-six-avatar-states-share-one-real-account-session/error-context.md
+
+  1 failed
+    tests/r18-avatar.spec.ts:3:1 › six avatar states share one real account session ────────────────

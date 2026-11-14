@@ -1,0 +1,1758 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "Quiet friend"
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "Quiet friend"
+      }
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=unmatched-query",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=failure",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "chat-details-waiting",
+      "state": "chat-details-waiting",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Your sent letter",
+          "clipped": false
+        },
+        {
+          "text": "More interactions unlock after they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Following unlocks after they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "waiting-scrolled",
+      "state": "chat-details-waiting",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Your sent letter",
+          "clipped": false
+        },
+        {
+          "text": "More interactions unlock after they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Following unlocks after they reply.",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-details",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "details-scrolled",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-remark",
+      "state": "chat-remark",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Remark name",
+          "clipped": false
+        },
+        {
+          "text": "Only visible to you",
+          "clipped": false
+        },
+        {
+          "text": "Save",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "remark-save-failure",
+      "state": "chat-remark",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name ›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Remark name",
+          "clipped": false
+        },
+        {
+          "text": "Only visible to you",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "Save",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "remark-saved",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Quiet friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name Quiet friend›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-empty",
+      "state": "chat-search-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Search messages",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-result",
+      "state": "chat-search-result",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Search messages",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "search-scrolled",
+      "state": "chat-search-result",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Search messages",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "06:00 PM",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-none",
+      "state": "chat-search-none",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Search messages",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "No messages found.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "search-failure",
+      "state": "chat-search-none",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Search messages",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. Retry",
+          "clipped": false
+        },
+        {
+          "text": "Retry",
+          "clipped": false
+        },
+        {
+          "text": "Searching…",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-clear-confirm",
+      "state": "chat-clear-confirm",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Quiet friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name Quiet friend›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages?",
+          "clipped": false
+        },
+        {
+          "text": "This only clears your chat history. Your connection and unlocked permissions stay the same.",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "block-boundary",
+      "state": "block-confirm",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Quiet friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name Quiet friend›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Block this person?",
+          "clipped": false
+        },
+        {
+          "text": "You will no longer be able to send messages, photos or voice to this person.",
+          "clipped": false
+        },
+        {
+          "text": "Block",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-choice-boundary",
+      "state": "safety-choice",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Quiet friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name Quiet friend›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Report or block",
+          "clipped": false
+        },
+        {
+          "text": "Choose how you would like to manage this person.",
+          "clipped": false
+        },
+        {
+          "text": "ReportTell us about inappropriate content",
+          "clipped": false
+        },
+        {
+          "text": "Tell us about inappropriate content",
+          "clipped": false
+        },
+        {
+          "text": "BlockStop contact from this person",
+          "clipped": false
+        },
+        {
+          "text": "Stop contact from this person",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-form-boundary",
+      "state": "report-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Report",
+          "clipped": false
+        },
+        {
+          "text": "Tell us what happened.",
+          "clipped": false
+        },
+        {
+          "text": "ReasonAbuse or harassmentSpam or advertisingInappropriate contentSomething else",
+          "clipped": false
+        },
+        {
+          "text": "Details",
+          "clipped": false
+        },
+        {
+          "text": "Add a photo",
+          "clipped": false
+        },
+        {
+          "text": "Your report will be sent to the MauGo moderation team.",
+          "clipped": false
+        },
+        {
+          "text": "Save report",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-return",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Chat details",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Quiet friend",
+          "clipped": false
+        },
+        {
+          "text": "You can now chat freely.",
+          "clipped": false
+        },
+        {
+          "text": "Follow",
+          "clipped": false
+        },
+        {
+          "text": "Remark name Quiet friend›",
+          "clipped": false
+        },
+        {
+          "text": "Pin conversation",
+          "clipped": false
+        },
+        {
+          "text": "Chat background ›",
+          "clipped": false
+        },
+        {
+          "text": "Chat bubbles ›",
+          "clipped": false
+        },
+        {
+          "text": "Search messages ›",
+          "clipped": false
+        },
+        {
+          "text": "Mute notifications",
+          "clipped": false
+        },
+        {
+          "text": "Block ›",
+          "clipped": false
+        },
+        {
+          "text": "Report ›",
+          "clipped": false
+        },
+        {
+          "text": "Clear messages ›",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "waitingControls": [
+      {
+        "id": "view-public-profile",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "remark-name",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "chat-background",
+        "disabled": false
+      },
+      {
+        "id": "chat-bubbles",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "block-chat",
+        "disabled": false
+      },
+      {
+        "id": "report-person",
+        "disabled": false
+      }
+    ],
+    "waitingScroll": {
+      "top": 351,
+      "height": 527,
+      "content": 878,
+      "bottom": 639
+    },
+    "unlockedDisabled": [
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      }
+    ],
+    "detailsScroll": {
+      "top": 262,
+      "height": 527,
+      "content": 789,
+      "bottom": 639
+    },
+    "remarkMotion": {
+      "animation": "sheet-in",
+      "duration": "0.3s",
+      "easing": "ease-out",
+      "box": {
+        "x": 12,
+        "y": 373,
+        "width": 351,
+        "height": 270,
+        "top": 373,
+        "right": 363,
+        "bottom": 643,
+        "left": 12
+      }
+    },
+    "resultsScroll": {
+      "top": 1887,
+      "height": 431,
+      "content": 2318,
+      "bottom": 639
+    },
+    "clearMotion": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "easing": "ease-out",
+      "box": {
+        "x": 24,
+        "y": 204.5,
+        "width": 327,
+        "height": 258,
+        "top": 204.5,
+        "right": 351,
+        "bottom": 462.5,
+        "left": 24
+      }
+    }
+  },
+  "errors": [],
+  "forbidden": []
+}

@@ -32,3 +32,196 @@
 .ui-chip{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 10px;border:0;border-radius:var(--radius-14);background:var(--bg-chip);color:var(--text-profile-wallet);font:var(--font-micro);letter-spacing:var(--font-micro-letter-spacing)}
 .ui-empty{text-align:center;color:var(--text-empty);font:var(--font-caption-21);letter-spacing:var(--font-caption-21-letter-spacing)}
 [lang=ko] :is(.ui-button,.ui-header,.ui-row,.ui-input,.ui-chip,.ui-empty){font-family:var(--font-family-ko)}
+
+/* Reply confirmation: 29:7923 and 29:8099. Shared dialog geometry/appearance. */
+.ui-sheet--reply{position:absolute;left:24px;top:calc(50% - 195.75px);width:327px;height:391.5px;margin:0;padding:28px 24px 16px;text-align:center}
+.ui-sheet--reply:has(#reply-topup){top:calc(50% - 170.5px);height:341px;background:var(--grad-card-height-341)}
+.ui-button--text{min-height:52px;padding-top:8px;background:none;color:var(--reply-return);font:var(--reply-font-return)}
+
+/* 29:7947/8118: reply action; 29:7951: compact dialog close. */
+.ui-button--reply{border-radius:var(--radius-24);background:var(--grad-primary-height-48);box-shadow:var(--shadow-glow)}
+.ui-icon-button--reply-close{width:40px;height:40px;background:none;color:var(--reply-close);font:var(--font-symbol-chevron)}
+
+/* R11: shared composer variants and R20 sticker picker. */
+.ui-input--chat{width:291px;height:44px;border-radius:var(--radius-24);background:var(--chat-input);border-color:var(--chat-input-border);font:var(--font-body)}
+.ui-icon-button--chat-send{background:var(--accent);color:var(--text-on-accent)}
+.ui-icon-button--chat-send img{width:22px;height:22px}
+.ui-icon-button--chat-tool{width:36px;height:36px;background:none}
+.ui-icon-button--chat-tool img{width:20px;height:20px}
+.ui-button--chat-hold{width:239px;min-height:36px;height:36px;border-radius:var(--radius-20);background:var(--chat-hold);color:var(--chat-hold-text);font:var(--font-caption);gap:8px;letter-spacing:0}
+.ui-button--chat-hold img{width:20px;height:20px}
+.ui-sticker-picker,.moments-overlay [data-panel=stickers]{width:347px;height:376px;padding:16px;border:1px solid var(--chat-picker-border);border-radius:var(--radius-24);background:var(--chat-picker);color:var(--text-label)}
+.ui-sticker-picker__heading{height:26px;font:var(--font-body-sm);display:flex;align-items:center;justify-content:space-between}
+.ui-sticker-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:52px;gap:8px;margin-top:12px;height:304px;overflow:auto;scrollbar-width:none;align-content:start}
+.ui-sticker-option{display:grid;place-items:center;width:100%;height:52px;border:0;border-radius:var(--radius-12);padding:4px;background:var(--chat-sticker)}
+.ui-sticker-option img{width:44px;height:44px;object-fit:contain}
+.ui-sticker-close{width:22px;height:26px;padding:0;border:0;background:none;color:var(--text-label);font:var(--font-title-page)}
+
+.ui-chat-link{padding:0;border:0;background:none;text-decoration:underline;color:var(--chat-waiting-copy);font:var(--chat-font-notice)}
+.ui-attachment-remove{border:0;padding:0;background:none;color:var(--text-primary);font:var(--font-caption);white-space:nowrap}
+
+/* R12 shared settings primitives, local JSON 29:10302–10374 / 10659 / 11070. */
+.ui-card--chat-settings{border:0;padding:0 16px;overflow:hidden}
+.ui-card--chat-settings .ui-row{border-bottom:1px solid var(--hairline);height:56px;gap:0}
+.ui-card--chat-settings .ui-row:last-child{border-bottom:0}
+.ui-card--chat-settings .ui-row--chat-toggle{height:60px}
+.ui-row--chat-toggle .ui-switch{margin-left:auto;flex:none}
+.ui-chevron{margin-left:auto;color:var(--text-chevron);font:var(--font-symbol-chevron)}
+.ui-row--danger{color:var(--chat-clear-label)}
+.ui-avatar-button{width:70px;height:70px;padding:0;border:0;background:none;border-radius:var(--chat-radius-avatar);overflow:hidden}
+.ui-avatar-button img{width:100%;height:100%;object-fit:cover}
+.ui-input--chat-search{border-radius:var(--radius-14);background:var(--chat-search-input);border-color:var(--chat-search-border)}
+.ui-sheet--chat-remark{position:absolute;left:12px;bottom:24px;width:351px;height:270px;margin:0;padding:0}
+.ui-dialog--chat-clear{position:absolute;left:24px;top:277px;height:258px;background:var(--grad-card-height-258)}
+.ui-button--chat-clear{background:var(--chat-clear-button);color:var(--chat-clear-ink)}
+[lang=ko] :is(.ui-avatar-button,.ui-chevron){font-family:var(--font-family-ko)}
+
+.ui-button--chat-follow{width:77.14px;height:40px;min-height:40px;border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--accent);font:var(--chat-font-follow)}
+.ui-avatar-button--waiting{width:112px;height:112px;border-radius:var(--chat-radius-waiting-avatar)}
+/* R13 controls measured from local JSON. */
+.ui-appearance-tabs{display:flex;gap:8px;padding:4px;background:var(--appearance-tabs);border-radius:var(--radius-14)}
+.ui-appearance-tabs button{height:40px;flex:1;padding:0;border:0;background:none;border-radius:var(--radius-10);font:var(--appearance-font-tab);color:var(--appearance-tab-idle)}
+.ui-appearance-tabs .selected{background:var(--appearance-tab-selected);color:var(--accent)}
+.ui-wallpaper-tile{position:relative;width:101px;height:175.0625px;overflow:hidden;padding:0;border:1px solid var(--appearance-tile-border);border-radius:var(--radius-14);background:var(--appearance-tile)}
+.ui-wallpaper-tile[aria-pressed=true]{border:2px solid var(--accent)}
+.ui-wallpaper-name{position:absolute;left:0;right:0;bottom:0;padding:20px 6px 10px;text-align:center;color:var(--appearance-tile-text);font:var(--appearance-font-tile)}
+.ui-appearance-swatch{height:180px;border:1px solid var(--appearance-swatch-border);border-radius:var(--radius-16);padding:16px;display:flex;align-items:flex-end;justify-content:space-between;color:var(--appearance-swatch-text);font:var(--appearance-font-swatch)}
+.ui-appearance-swatch[aria-pressed=true]{border-color:var(--accent)}
+.ui-appearance-swatch i{font-style:normal;color:var(--accent)}
+.ui-appearance-color-row{display:flex;align-items:center;justify-content:space-between;gap:16px;height:61px;border-bottom:1px solid var(--appearance-row-border);font:var(--appearance-font-label)}
+.ui-appearance-color-row:last-child{height:60px;border:0}
+.ui-appearance-color-row input{width:40px;height:28px;border:0;padding:0;background:none;border-radius:var(--radius-8)}
+.ui-button--appearance-reset{border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--appearance-reset-text)}
+[lang=ko] :is(.ui-appearance-tabs,.ui-appearance-color-row,.ui-appearance-swatch,.ui-wallpaper-name){font-family:var(--font-family-ko)}
+
+.ui-button--appearance-primary{border-radius:var(--radius-24);background:var(--grad-primary-height-48);color:var(--appearance-preview-mine-text)}
+
+/* R14 shared safety controls, measured from 29:11996 / 12069 / 12459 / 12881. */
+.ui-safety-option{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 16px;border:0;border-radius:var(--radius-14);background:var(--r08-safety-option);color:var(--text-primary);font:var(--safety-font-option)}
+.ui-safety-option img{width:22px;height:22px;object-fit:contain;flex:none}
+.ui-icon-button--safety-close{background:none;color:var(--safety-choice-close);font:var(--font-symbol-chevron)}
+.ui-input--safety{display:block;margin-top:12px;font:var(--font-body)}
+.ui-input--safety-area{height:120px;padding:12px 16px;resize:vertical}
+.ui-input--safety-area::placeholder{color:var(--safety-placeholder);opacity:1}
+.ui-dialog--safety{position:absolute;left:24px;top:277px;height:258px;padding:0;text-align:center;background:var(--grad-card-height-258)}
+.ui-dialog--safety:where(.safety-unblock-dialog){top:287px;height:238px;background:var(--grad-card-height-238)}
+.ui-button--safety-unblock{width:67px;min-height:36px;height:36px;border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--appearance-reset-text);font:var(--safety-font-unblock)}
+[lang=ko] :is(.ui-safety-option,.ui-input--safety,.ui-button--safety-unblock){font-family:var(--font-family-ko)}
+
+.ui-chat-link.ui-chat-link--safety{height:28px;padding:8px;border:0;background:none;color:var(--chat-waiting-copy);font:var(--safety-font-blocked-link)}
+[lang=ko] .ui-chat-link--safety{font-family:var(--font-family-ko)}
+
+/* R15 opt-in authentication controls; other flows keep their variants. */
+.ui-button--auth{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--grad-primary-height-48);box-shadow:none}
+.ui-button--auth-apple{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--auth-apple);color:var(--auth-apple-ink)}
+.ui-button--auth-apple svg{width:24px;height:24px}
+.ui-input--auth{display:block;margin-top:12px;font:var(--font-body);outline:none}
+.ui-input--auth:focus{border-color:var(--accent)}
+.ui-auth-checkbox{appearance:none;width:18px;height:18px;flex:none;margin:0;background:url('../assets/12-control-states/checkbox-unchecked.png') center/contain no-repeat;cursor:pointer}
+.ui-auth-checkbox:checked{background-image:url('../assets/12-control-states/checkbox-checked.png')}
+.ui-auth-text{background:none;border:0;padding:4px;color:var(--auth-link);font:var(--appearance-font-swatch);min-height:0}
+.ui-icon-button--auth-back{width:44px;height:40px;background:none;color:var(--text-auth-navigation);font:var(--font-symbol-chevron)}
+.ui-row--auth-option{height:56px;padding:0 16px;border:1px solid var(--hairline);border-radius:var(--radius-14);background:var(--r09-notice-bg);font:var(--auth-font-option)}
+.ui-row--auth-option[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.ui-row--auth-option b{margin-left:auto;color:var(--accent)}
+[lang=ko] :is(.ui-button--auth,.ui-button--auth-apple,.ui-input--auth,.ui-auth-text,.ui-row--auth-option){font-family:var(--font-family-ko)}
+
+/* R16 controls: 29:12929 / 12938 / 12979 / 13633. */
+.ui-icon-button--person-header{width:40px;height:40px;border-radius:var(--radius-20);background:none;color:var(--person-paint-8);font:var(--person-font-options)}
+.ui-icon-button--person-header img{width:22px;height:22px}
+.ui-avatar-button--person{width:92px;height:92px;border-radius:var(--person-radius-avatar);background:var(--person-paint-9)}
+.ui-button--person-follow{border-radius:var(--radius-24);background:var(--person-paint-17);color:var(--appearance-reset-text);font:var(--font-button);letter-spacing:0}
+.ui-button--person-chat{border-radius:var(--radius-24);background:var(--grad-primary-height-48);font:var(--font-button);letter-spacing:0}
+.ui-person-card{position:relative;flex:none;width:139px;height:184px;padding:0;border:0;border-radius:var(--person-radius-card);background:var(--person-paint-12);overflow:hidden}
+.ui-person-card img{display:block;width:100%;height:100%;object-fit:cover}
+.ui-person-moment-photo{display:block;width:327px;height:260px;padding:0;border:0;border-radius:var(--radius-18);background:var(--person-paint-12);overflow:hidden}
+.ui-person-moment-photo img{width:100%;height:100%;object-fit:cover}
+[lang=ko] :is(.ui-button--person-follow,.ui-button--person-chat,.ui-icon-button--person-header){font-family:var(--font-family-ko)}
+.ui-safety-option--person{height:74px;background:var(--person-paint-30);gap:14px;padding:16px}
+.ui-button--person-follow:disabled{opacity:.5}
+
+/* R17 controls, local JSON 29:14017 / 29:14033 / 29:15769. */
+.ui-input--profile{font:var(--profile-font-field)}
+.ui-input--profile-area{height:120px;padding:12px 16px;resize:vertical}
+.ui-profile-tabs{height:48px;padding:4px;display:flex;gap:8px;background:var(--appearance-tabs);border-radius:var(--radius-12)}
+.ui-profile-tabs button{width:155.5px;height:40px;padding:0;border:0;border-radius:var(--radius-10);background:none;color:var(--appearance-tab-idle);font:var(--profile-font-tab)}
+.ui-profile-tabs [aria-pressed=true]{background:var(--appearance-tab-selected);color:var(--accent)}
+[lang=ko] :is(.ui-input--profile,.ui-profile-tabs button){font-family:var(--font-family-ko)}
+
+.ui-dialog--profile-likes{background:var(--grad-card-diagonal-h391-5)}
+
+.ui-icon-button--profile-header{width:40px;height:40px;border-radius:var(--radius-20);background:none}
+.ui-row--profile{min-height:50px;height:50px;font:var(--profile-font-meta)}
+.ui-row--profile-connection{height:85px;border-bottom:1px solid var(--hairline);font:var(--profile-font-list)}
+.ui-row--profile-visitor{height:72px;font:var(--profile-font-field)}
+
+/* Preserve pre-R18 sheet controls while relocating the old module. */
+/* R18 shared avatar sheet and button variants. */
+.ui-sheet--profile-avatar{position:absolute;left:12px;bottom:24px;width:351px;margin:0;padding:0;border:1px solid var(--avatar-border);border-radius:var(--radius-24);background:var(--avatar-surface);box-shadow:none}
+.ui-button--text{background:none;box-shadow:none;border:0;color:var(--avatar-muted);font:var(--avatar-font-copy)}
+.ui-avatar-range{appearance:none;background:none;padding:0;border:0}
+.ui-avatar-range::-webkit-slider-runnable-track{height:4px;margin:0 7px;background:var(--avatar-track);border-radius:var(--r07-radius-track)}
+.ui-avatar-range::-webkit-slider-thumb{appearance:none;width:16px;height:16px;margin-top:-6px;border:0;border-radius:var(--radius-full);background:var(--accent)}
+
+.ui-sheet--profile-avatar .ui-icon-button{width:44px;height:44px}
+.ui-sheet--profile-avatar .ui-sheet__grabber{background:var(--avatar-grabber)}
+
+.ui-dialog--avatar{background:var(--avatar-dialog-gradient)}
+
+/* R19 shared card sheet / options, local JSON 11:162, 172, 357, 919. */
+.ui-sheet--cards,.moments-overlay .sheet:not([data-panel=stickers]){border:1px solid var(--avatar-border);border-radius:var(--radius-24);background:var(--bg-sheet);box-shadow:none;color:var(--text-primary)}
+.ui-sheet--cards .ui-sheet__grabber,.moments-overlay .ui-sheet__grabber{background:var(--avatar-grabber)}
+.ui-icon-button--cards{background:none;color:var(--cards-close);font:var(--font-symbol-chevron)}
+.ui-card-type{display:block;width:309px;height:52px;padding:0;border:0;border-bottom:1px solid var(--cards-option-border);background:var(--cards-option);color:var(--text-primary);font:var(--cards-font-type);text-transform:capitalize}
+.ui-button--cards-secondary{background:var(--cards-option);color:var(--cards-secondary);border-radius:var(--radius-14);font:var(--cards-font-type);letter-spacing:0}
+.ui-row--cards{height:56px;border-bottom:1px solid var(--cards-row-border);font:var(--cards-font-row);letter-spacing:0}
+.ui-row--cards small{margin-left:auto;color:var(--cards-muted);font:var(--cards-font-meta);text-transform:capitalize}
+.ui-row--cards .ui-chevron{margin-left:auto;color:var(--cards-chevron)}
+.ui-row--cards small+.ui-chevron{margin-left:0}
+.ui-row--cards-danger{color:var(--cards-danger);border:0}
+.ui-row--cards-audience{height:56px;padding:0 16px;background:var(--cards-audience-bg);border:1px solid var(--cards-option-border);border-radius:var(--radius-14);font:var(--cards-font-type);letter-spacing:0}
+.ui-row--cards-audience[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.ui-row--cards-audience b{margin-left:auto}
+.ui-dialog--cards,.moments-overlay [data-panel=dialog]{background:var(--grad-card-height-238);border:1px solid var(--dialog-border);border-radius:var(--radius-28);box-shadow:var(--shadow-dialog)}
+[lang=ko] :is(.ui-card-type,.ui-button--cards-secondary,.ui-row--cards,.ui-row--cards-audience){font-family:var(--font-family-ko)}
+
+.ui-button--cards-text{min-height:44px;padding:0;background:none;color:var(--cards-secondary);font:var(--cards-font-caption)}
+[lang=ko] .ui-button--cards-text{font-family:var(--font-family-ko)}
+
+.ui-button--cards-delete{border-radius:var(--radius-24);background:var(--grad-primary-height-48);font:var(--font-button);letter-spacing:0}
+
+/* Shell motion, from the embedded prototype. Pages switch instantly. */
+.app-shell :is(.page-enter-active,.page-leave-active,.tab-page-enter-active,.tab-page-leave-active,.push-enter-active,.push-leave-active,.d11-chat-enter-active,.d11-chat-leave-active){transition:none;animation:none}
+.app-shell :is(.page-enter-from,.page-leave-to,.tab-page-enter-from,.tab-page-leave-to,.push-enter-from,.push-leave-to,.d11-chat-enter-from,.d11-chat-leave-to){opacity:1;transform:none}
+.app-shell button{transition:none}
+.app-shell button:not(:disabled):active{scale:none}
+/* Six prototype press rules; floating compose is a reusable opt-in. */
+.app-shell :is(.round,.ui-icon-button):not(:disabled):active{transform:scale(.94)}
+.app-shell :is(.actions button,.home-actions button,.ui-button):not(:disabled):active{transform:scale(.96)}
+.app-shell :is(.tool-button,.ui-icon-button--chat-tool):not(:disabled):active{color:var(--accent);transform:none}
+.app-shell :is(.hold-button,.ui-button--chat-hold):not(:disabled):active{background:var(--press-hold);transform:none}
+.app-shell .collect-replies:not(:disabled):active{transform:scale(.99)}
+.app-shell .profile-floating-compose:not(:disabled):active{transform:scale(.96)}
+.app-shell .home-actions button{transition:transform .2s,opacity .2s}
+
+@keyframes sheet-in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.app-shell :is(.ui-sheet,.home-sheet,.moments-overlay .sheet){animation:sheet-in .3s ease-out}
+.app-shell :is(.ui-dialog,.ui-sheet--reply,.pass-payment-dialog){animation:sheet-in .22s ease-out}
+.app-shell .ui-dialog.ui-dialog--cards{animation-duration:.22s}
+/* Remove the older 100% travel and .38s sheet animation. */
+.app-shell :is(.sheet-enter-active,.sheet-leave-active,.inbox-sheet-enter-active,.inbox-sheet-leave-active,.d4-sheet-enter-active,.d4-sheet-leave-active,.d5-sheet-enter-active,.d5-sheet-leave-active){transition:none}
+.app-shell :is(.sheet-enter-active,.sheet-leave-active,.sheet-enter-from,.sheet-leave-to) .home-sheet{transition:none;transform:none}
+.app-shell :is(.sheet-enter-from,.sheet-leave-to){opacity:1}
+
+/* Toast supports persistent .show and Vue's existing receipt lifecycle. */
+.app-shell :is(.toast,.ui-toast,.reply-receipt){transition:opacity .2s,transform .2s}
+.app-shell :is(.toast,.ui-toast):not(.show){opacity:0;transform:translateY(8px)}
+.app-shell :is(.toast,.ui-toast).show{opacity:1;transform:translateY(0)}
+.app-shell :is(.reply-receipt-enter-active,.reply-receipt-leave-active){transition:opacity .2s,transform .2s}
+.app-shell :is(.reply-receipt-enter-from,.reply-receipt-leave-to){opacity:0;transform:translateY(8px)}
+.app-shell .ui-switch{transition:background .2s}
+.app-shell .ui-switch::after{transition:transform .2s}
+
+@media(prefers-reduced-motion:reduce){
+ .app-shell.app-shell.app-shell *,.app-shell.app-shell.app-shell *::before,.app-shell.app-shell.app-shell *::after{animation:none;transition:none;scroll-behavior:auto}
+}

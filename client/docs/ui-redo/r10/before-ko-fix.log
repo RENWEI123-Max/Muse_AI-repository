@@ -1,0 +1,15 @@
+[WebServer] (node:1133653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:1133710) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 3 tests using 1 worker
+
+(node:1133733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/3] tests/d1.spec.ts:3:1 › D1: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once
+[2/3] tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once
+[3/3] tests/r10-reply.spec.ts:43:1 › R10 Korean payment, shortage and topup fit; short screen keeps diamond size

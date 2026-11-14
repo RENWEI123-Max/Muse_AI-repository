@@ -1,0 +1,128 @@
+[WebServer] (node:62466) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:62468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough (15.4s)
+(node:62482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough (15.6s)
+(node:62495) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough (15.4s)
+(node:62504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough (15.7s)
+
+
+  1) tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.evaluate: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.person-page').locator('.d4-body')
+
+
+      55 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+      56 |  await person.locator('.d4-body').hover();await page.mouse.wheel(0,700);await page.waitForTimeout(150);checks.body=await person.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.body.top).toBeGreaterThan(0);await snap('moments-scrolled')
+    > 57 |  await person.locator('.ui-person-moment-photo').click();await snap('moment-photo');await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0);expect(await person.locator('.d4-body').evaluate(e=>e.scrollTop)).toBe(checks.body.top)
+         |                                                                                                                                                                                                                         ^
+      58 |  await person.locator('#public-more').click();await snap('person-safety');await person.locator('.person-close').click();await person.locator('#public-more').click();await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0)
+      59 |  await person.locator('#public-more').click();await person.locator('#safety-report').click();await expect(page.locator('.d3-report')).toBeVisible();await page.locator('#report-details').fill('R16 fixture report, cancelled without submission.');await snap('report-boundary');await page.locator('.c6-chat').getByLabel(t('Back to messages')).click()
+      60 |  await page.locator('#view-public-profile').click();await person.locator('#public-more').click();await person.locator('#safety-block').click();await expect(page.locator('.safety-confirm-dialog')).toBeVisible();await snap('block-boundary');await page.locator('.safety-dialog-cancel').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:57:217
+
+    Error Context: test-results/r16-audit/r16-audit-667-en-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r16-audit/r16-audit-667-en-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r16-audit/r16-audit-667-en-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.evaluate: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.person-page').locator('.d4-body')
+
+
+      55 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+      56 |  await person.locator('.d4-body').hover();await page.mouse.wheel(0,700);await page.waitForTimeout(150);checks.body=await person.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.body.top).toBeGreaterThan(0);await snap('moments-scrolled')
+    > 57 |  await person.locator('.ui-person-moment-photo').click();await snap('moment-photo');await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0);expect(await person.locator('.d4-body').evaluate(e=>e.scrollTop)).toBe(checks.body.top)
+         |                                                                                                                                                                                                                         ^
+      58 |  await person.locator('#public-more').click();await snap('person-safety');await person.locator('.person-close').click();await person.locator('#public-more').click();await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0)
+      59 |  await person.locator('#public-more').click();await person.locator('#safety-report').click();await expect(page.locator('.d3-report')).toBeVisible();await page.locator('#report-details').fill('R16 fixture report, cancelled without submission.');await snap('report-boundary');await page.locator('.c6-chat').getByLabel(t('Back to messages')).click()
+      60 |  await page.locator('#view-public-profile').click();await person.locator('#public-more').click();await person.locator('#safety-block').click();await expect(page.locator('.safety-confirm-dialog')).toBeVisible();await snap('block-boundary');await page.locator('.safety-dialog-cancel').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:57:217
+
+    Error Context: test-results/r16-audit/r16-audit-667-ko-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r16-audit/r16-audit-667-ko-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r16-audit/r16-audit-667-ko-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.evaluate: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.person-page').locator('.d4-body')
+
+
+      55 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+      56 |  await person.locator('.d4-body').hover();await page.mouse.wheel(0,700);await page.waitForTimeout(150);checks.body=await person.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.body.top).toBeGreaterThan(0);await snap('moments-scrolled')
+    > 57 |  await person.locator('.ui-person-moment-photo').click();await snap('moment-photo');await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0);expect(await person.locator('.d4-body').evaluate(e=>e.scrollTop)).toBe(checks.body.top)
+         |                                                                                                                                                                                                                         ^
+      58 |  await person.locator('#public-more').click();await snap('person-safety');await person.locator('.person-close').click();await person.locator('#public-more').click();await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0)
+      59 |  await person.locator('#public-more').click();await person.locator('#safety-report').click();await expect(page.locator('.d3-report')).toBeVisible();await page.locator('#report-details').fill('R16 fixture report, cancelled without submission.');await snap('report-boundary');await page.locator('.c6-chat').getByLabel(t('Back to messages')).click()
+      60 |  await page.locator('#view-public-profile').click();await person.locator('#public-more').click();await person.locator('#safety-block').click();await expect(page.locator('.safety-confirm-dialog')).toBeVisible();await snap('block-boundary');await page.locator('.safety-dialog-cancel').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:57:217
+
+    Error Context: test-results/r16-audit/r16-audit-812-en-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r16-audit/r16-audit-812-en-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r16-audit/r16-audit-812-en-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.evaluate: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.person-page').locator('.d4-body')
+
+
+      55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)
+      56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)
+    > 57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+         |                                                                                                                                                                                                                         ^
+      58 |  await person.locator('.d4-body').hover();await page.mouse.wheel(0,700);await page.waitForTimeout(150);checks.body=await person.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.body.top).toBeGreaterThan(0);await snap('moments-scrolled')
+      59 |  await person.locator('.ui-person-moment-photo').click();await snap('moment-photo');await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0);expect(await person.locator('.d4-body').evaluate(e=>e.scrollTop)).toBe(checks.body.top)
+      60 |  await person.locator('#public-more').click();await snap('person-safety');await person.locator('.person-close').click();await person.locator('#public-more').click();await page.keyboard.press('Escape');await expect(person.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:57:217
+
+    Error Context: test-results/r16-audit/r16-audit-812-ko-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r16-audit/r16-audit-812-ko-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r16-audit/r16-audit-812-ko-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough ──────────────────────────────

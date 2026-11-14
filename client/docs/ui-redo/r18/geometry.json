@@ -1,0 +1,197 @@
+[
+  {
+    "selector": "#edit-avatar",
+    "target": [
+      143.5,
+      152,
+      88,
+      88
+    ],
+    "actual": {
+      "x": 143.5,
+      "y": 152,
+      "width": 88,
+      "height": 88
+    }
+  },
+  {
+    "selector": ".avatar-panel",
+    "target": [
+      12,
+      270,
+      351,
+      518
+    ],
+    "actual": {
+      "x": 12,
+      "y": 270,
+      "width": 351,
+      "height": 518
+    }
+  },
+  {
+    "selector": ".avatar-crop-window",
+    "target": [
+      75.5,
+      351,
+      224,
+      224
+    ],
+    "actual": {
+      "x": 75.5,
+      "y": 351,
+      "width": 224,
+      "height": 224
+    }
+  },
+  {
+    "selector": "#avatar-canvas",
+    "target": [
+      76.5,
+      352,
+      320,
+      320
+    ],
+    "actual": {
+      "x": 76.5,
+      "y": 352,
+      "width": 320,
+      "height": 320
+    }
+  },
+  {
+    "selector": "#save-avatar",
+    "target": [
+      33,
+      719,
+      309,
+      48
+    ],
+    "actual": {
+      "x": 33,
+      "y": 719,
+      "width": 309,
+      "height": 48
+    }
+  },
+  {
+    "selector": ".avatar-panel",
+    "target": [
+      12,
+      442.5,
+      351,
+      345.5
+    ],
+    "actual": {
+      "x": 12,
+      "y": 442.5,
+      "width": 351,
+      "height": 345.5
+    }
+  },
+  {
+    "selector": ".avatar-option",
+    "target": [
+      33,
+      527.5,
+      66.75,
+      66.75
+    ],
+    "actual": {
+      "x": 33,
+      "y": 527.5,
+      "width": 66.75,
+      "height": 66.75
+    }
+  },
+  {
+    "selector": ".avatar-confirm",
+    "target": [
+      24,
+      277,
+      327,
+      258
+    ],
+    "actual": {
+      "x": 24,
+      "y": 277,
+      "width": 327,
+      "height": 258
+    }
+  },
+  {
+    "selector": "#confirm-remove-avatar",
+    "target": [
+      49,
+      418,
+      277,
+      48
+    ],
+    "actual": {
+      "x": 49,
+      "y": 418,
+      "width": 277,
+      "height": 48
+    }
+  },
+  {
+    "selector": ".avatar-panel",
+    "target": [
+      12,
+      378.5,
+      351,
+      409.5
+    ],
+    "actual": {
+      "x": 12,
+      "y": 378.5,
+      "width": 351,
+      "height": 409.5
+    }
+  },
+  {
+    "selector": ".avatar-panel",
+    "target": [
+      12,
+      487.25,
+      351,
+      300.75
+    ],
+    "actual": {
+      "x": 12,
+      "y": 487.25,
+      "width": 351,
+      "height": 300.75
+    }
+  },
+  {
+    "selector": "[data-restore-avatar]",
+    "target": [
+      33,
+      608.25,
+      66.75,
+      66.75
+    ],
+    "actual": {
+      "x": 33,
+      "y": 608.25,
+      "width": 66.75,
+      "height": 66.75
+    }
+  },
+  {
+    "selector": ".avatar-panel",
+    "target": [
+      12,
+      442.5,
+      351,
+      345.5
+    ],
+    "actual": {
+      "x": 12,
+      "y": 442.5,
+      "width": 351,
+      "height": 345.5
+    }
+  }
+]

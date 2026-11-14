@@ -1,0 +1,729 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "p": "/auth/login",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "email": "fixture@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "p": "/filter-pass",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/discovery/filters",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/users/me/export",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/letters",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000001/opening",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "content": "A little hello from the fixture."
+      }
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000003/opening",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "content": "Another hello to check the same toast again."
+      }
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/me",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/me",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/users/me/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/me/stats",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0"
+    },
+    {
+      "p": "/profiles/me/followers",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/letters/opening",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/me",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/users/me/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/reply-0/collect",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/reply-0/collect",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "confirmPaid": false
+      }
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/blocks",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/blocks/00000000-0000-4000-8000-000000000001",
+      "method": "DELETE",
+      "query": ""
+    },
+    {
+      "p": "/blocks",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=0"
+    },
+    {
+      "p": "/blocks",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/posts",
+      "method": "GET",
+      "query": "?userId=00000000-0000-4000-8000-000000000001&limit=100&offset=0"
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/posts",
+      "method": "GET",
+      "query": "?userId=00000000-0000-4000-8000-000000000001&limit=100&offset=0"
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/posts",
+      "method": "GET",
+      "query": "?userId=00000000-0000-4000-8000-000000000001&limit=100&offset=0"
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/profiles/00000000-0000-4000-8000-000000000001/image-cards",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/posts",
+      "method": "GET",
+      "query": "?userId=00000000-0000-4000-8000-000000000001&limit=100&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002",
+      "method": "PATCH",
+      "query": "",
+      "body": {
+        "remark": "A new name"
+      }
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002",
+      "method": "PATCH",
+      "query": "",
+      "body": {
+        "remark": "A new name"
+      }
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=false&limit=50&offset=0&search=kind"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=false&limit=50&offset=0&search=kind"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=20"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "GET",
+      "query": "?markRead=true&limit=20&offset=20"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/messages",
+      "method": "POST",
+      "query": "",
+      "body": {
+        "content": "A new message after looking back."
+      }
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002/replies/pending",
+      "method": "GET",
+      "query": "?limit=100&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/payments/apple/products",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/conversations/00000000-0000-4000-8000-000000000002",
+      "method": "PATCH",
+      "query": "",
+      "body": {
+        "hidden": true
+      }
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0"
+    },
+    {
+      "p": "/conversations",
+      "method": "GET",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0"
+    },
+    {
+      "p": "/wallet",
+      "method": "GET",
+      "query": ""
+    }
+  ],
+  "records": [
+    {
+      "name": "purple-default",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "compose-sent-inbox",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "compose-second-toast",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "my-original-letter",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "free-quota-race-shortage",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "free-direct",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "unblock-direct",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "avatar-profile-entry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "safety-cancel-profile",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "safety-block-cancel-profile",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "remark-failure",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "remark-retry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "search-failure",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "history-load-failure",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "search-result-destination",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "search-then-send",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "wallpaper-failure",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "wallpaper-retry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradient-forest",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradient-clouds",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradient-lavender",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradient-sunset",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradient-stars",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "gradients",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "inbox-system-entry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "inbox-interactions-entry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "inbox-help-entry",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "notification-route",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "purchase-confirm",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "native-web-unavailable",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "clear-list-confirm",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    },
+    {
+      "name": "clear-list-hidden",
+      "doc": {
+        "width": 375,
+        "height": 812,
+        "y": 0
+      }
+    }
+  ],
+  "errors": []
+}

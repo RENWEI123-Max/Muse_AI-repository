@@ -1,0 +1,37 @@
+[WebServer] (node:58975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:58977) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures (14.7s)
+
+
+  1) tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "none"
+    Received: "d2-open"
+
+      57 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors},null,2));expect(errors).toEqual([])
+      58 |  // Prototype .page-body contains wheel/touch scroll instead of chaining it to the shell.
+    > 59 |  await page.locator('[data-chat="open"]').click();await background();expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).overscrollBehaviorY)).toBe('contain');expect(await page.locator('.d2-body').evaluate(e=>getComputedStyle(e).animationName)).toBe('none')
+         |                                                                                                                                                                                                                                                                        ^
+      60 | })
+      61 |
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:59:264
+
+    Error Context: test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r13-audit/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ─────────────

@@ -1,0 +1,35 @@
+[WebServer] (node:1132555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 2 tests using 1 worker
+
+(node:1132603) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/2] tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once
+[2/2] tests/r10-reply.spec.ts:43:1 › R10 Korean payment, shortage and topup fit; short screen keeps diamond size
+  1) tests/r10-reply.spec.ts:43:1 › R10 Korean payment, shortage and topup fit; short screen keeps diamond size 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#open-inbox')
+
+
+      51 |   await request.post(`http://127.0.0.1:3001/conversations/${u.conversations[0]}/replies/${q.items.at(-1).id}/collect`,{headers:{...headers,'Idempotency-Key':`r10-ko-${i}`},data:{}})
+      52 |  }
+    > 53 |  await page.reload();await page.locator('#open-inbox').click();await page.locator('#collect-replies').click()
+         |                                                        ^
+      54 |  for(const selector of ['.reply-title','.reply-description','.reply-confirm']){
+      55 |   await expect(page.locator(selector).first()).toHaveCSS('font-family',/GowunDodum/)
+      56 |   expect(await page.locator(selector).first().evaluate(e=>e.scrollWidth<=e.clientWidth+1)).toBeTruthy()
+        at /root/Muse_AI-repository/client/tests/r10-reply.spec.ts:53:56
+
+    Error Context: test-results/r10-reply-R10-Korean-payme-d242a-t-screen-keeps-diamond-size/error-context.md
+
+
+  1 failed
+    tests/r10-reply.spec.ts:43:1 › R10 Korean payment, shortage and topup fit; short screen keeps diamond size 
+  1 passed (47.7s)

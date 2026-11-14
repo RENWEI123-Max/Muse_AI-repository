@@ -1,0 +1,20 @@
+
+Running 2 tests using 1 worker
+
+(node:1314284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence (3.0m)
+(node:1316344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -  2 tests/d4-reverify.spec.ts:31:1 › offline prototype comparison evidence
+
+
+  1) tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ─────────
+
+    Test timeout of 180000ms exceeded.
+
+    Error Context: ../../../root/Muse_AI-repository/client/docs/ui-redo/r17/baseline-reverify-results/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md
+
+  1 failed
+    tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ──────────
+  1 skipped

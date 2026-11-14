@@ -1,0 +1,113 @@
+[WebServer] (node:53880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:53892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en inbox-read
+667 en mark-read-failure
+667 en inbox-read
+667 en inbox-friends-empty
+667 en inbox-options
+667 en pin-failure
+667 en inbox-pinned
+667 en inbox-friends
+667 en inbox-drawer
+667 en inbox-search
+667 en inbox-search-empty
+667 en inbox-hidden
+667 en inbox-hidden-empty
+667 en inbox-waiting
+667 en waiting-chat
+667 en inbox-empty
+667 en inbox-notifications-off
+667 en list-failure
+667 en list-scroll-sticky
+667 en collected-row-visible
+  ✓  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (27.4s)
+667 ko inbox-pending
+667 ko collect-cancelled
+667 ko inbox-collected-one
+667 ko inbox-collected-all
+667 ko inbox-unread
+667 ko inbox-read
+667 ko mark-read-failure
+667 ko inbox-read
+667 ko inbox-friends-empty
+667 ko inbox-options
+667 ko pin-failure
+667 ko inbox-pinned
+667 ko inbox-friends
+667 ko inbox-drawer
+667 ko inbox-search
+667 ko inbox-search-empty
+667 ko inbox-hidden
+667 ko inbox-hidden-empty
+667 ko inbox-waiting
+667 ko waiting-chat
+667 ko inbox-empty
+667 ko inbox-notifications-off
+667 ko list-failure
+667 ko list-scroll-sticky
+667 ko collected-row-visible
+  ✓  2 tests/r09-audit.spec.ts:6:61 › 667 ko: inbox real-click walkthrough (API fixture) (26.8s)
+812 en inbox-pending
+812 en collect-cancelled
+812 en inbox-collected-one
+812 en inbox-collected-all
+812 en inbox-unread
+812 en inbox-read
+812 en mark-read-failure
+812 en inbox-read
+812 en inbox-friends-empty
+812 en inbox-options
+812 en pin-failure
+812 en inbox-pinned
+812 en inbox-friends
+812 en inbox-drawer
+812 en inbox-search
+812 en inbox-search-empty
+812 en inbox-hidden
+812 en inbox-hidden-empty
+812 en inbox-waiting
+812 en waiting-chat
+812 en inbox-empty
+812 en inbox-notifications-off
+812 en list-failure
+812 en list-scroll-sticky
+812 en collected-row-visible
+  ✓  3 tests/r09-audit.spec.ts:6:61 › 812 en: inbox real-click walkthrough (API fixture) (27.5s)
+812 ko inbox-pending
+812 ko collect-cancelled
+812 ko inbox-collected-one
+812 ko inbox-collected-all
+812 ko inbox-unread
+812 ko inbox-read
+812 ko mark-read-failure
+812 ko inbox-read
+812 ko inbox-friends-empty
+812 ko inbox-options
+812 ko pin-failure
+812 ko inbox-pinned
+812 ko inbox-friends
+812 ko inbox-drawer
+812 ko inbox-search
+812 ko inbox-search-empty
+812 ko inbox-hidden
+812 ko inbox-hidden-empty
+812 ko inbox-waiting
+812 ko waiting-chat
+812 ko inbox-empty
+812 ko inbox-notifications-off
+812 ko list-failure
+812 ko list-scroll-sticky
+812 ko collected-row-visible
+  ✓  4 tests/r09-audit.spec.ts:6:61 › 812 ko: inbox real-click walkthrough (API fixture) (27.7s)
+
+  4 passed (1.9m)

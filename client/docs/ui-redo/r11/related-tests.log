@@ -1,0 +1,276 @@
+
+Running 13 tests using 1 worker
+
+(node:1157109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft (394ms)
+(node:1157243) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle (244ms)
+(node:1157326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits (239ms)
+(node:1157453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue (252ms)
+(node:1157543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset (18.6s)
+(node:1157903) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings (13.3s)
+(node:1158150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send (9.6s)
+  ✓   8 tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable (5.1s)
+  ✘   9 tests/f07.spec.ts:11:1 › F07 account switch isolation and revoked token (147ms)
+(node:1158529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 tests/f07.spec.ts:34:1 › F07 sign-out clears this device immediately (#103) (255ms)
+(node:1158625) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/report-attachment.spec.ts:15:1 › B13 image report persists; foreign media rejected; remove and plain reports omit attachment (7.4s)
+  ✓  12 tests/report-attachment.spec.ts:29:1 › invalid and oversized images rejected; upload failure permits plain report (8.5s)
+  ✓  13 tests/report-attachment.spec.ts:37:1 › removing an in-flight photo ignores its eventual upload result (4.7s)
+
+
+  1) tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft ──
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3180
+    Call log:
+      - → POST http://127.0.0.1:3180/__d11/letter
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      14 |
+      15 | test('opening-reply: envelope, close, write, delayed send and saved draft',async({page,request})=>{
+    > 16 |  const f=await(await request.post(backend+'/__d11/letter')).json();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await login(page,f.viewer)
+         |                              ^
+      17 |  // Capture transitions synchronously in the browser so automation does not miss short animations.
+      18 |  await page.locator('.letter-bird').first().click({force:true});const flight=await motion(page,'.d11-flying-letter','opening');expect(flight[0]!.timing.duration).toBe(440)
+      19 |  await shot(page,'opening-flight');await settled(page,'.letters-veil');await shot(page,'letter-open')
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:16:30
+
+    TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+
+      11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+    > 13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+         |                                           ^
+      14 |
+      15 | test('opening-reply: envelope, close, write, delayed send and saved draft',async({page,request})=>{
+      16 |  const f=await(await request.post(backend+'/__d11/letter')).json();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await login(page,f.viewer)
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:13:43
+
+    Error Context: ../../../tmp/r11-playwright-results/d11-opening-reply-envelope-0511d-elayed-send-and-saved-draft/error-context.md
+
+  2) tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3180
+    Call log:
+      - → POST http://127.0.0.1:3180/__c5/seed
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 18
+
+
+      29 |
+      30 | test('collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle',async({page,request})=>{
+    > 31 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'pending'}})).json(),headers={Authorization:`Bearer ${u.token}`}
+         |                              ^
+      32 |  expect((await request.post(backend+'/__c5/exhaust',{data:u})).ok()).toBeTruthy()
+      33 |  await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator(`[data-chat="${u.conversations[0]}"]`).click();await expect(page.locator('.waiting-card')).toContainText('A reply has arrived.')
+      34 |  await settled(page,'.c6-chat');const thread=await page.locator('#chat-thread').boundingBox();await page.locator('#chat-thread').evaluate(el=>el.setAttribute('data-preserved','yes'))
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:31:30
+
+    TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+
+      11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+    > 13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+         |                                           ^
+      14 |
+      15 | test('opening-reply: envelope, close, write, delayed send and saved draft',async({page,request})=>{
+      16 |  const f=await(await request.post(backend+'/__d11/letter')).json();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await login(page,f.viewer)
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:13:43
+
+    Error Context: ../../../tmp/r11-playwright-results/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/error-context.md
+
+  3) tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3180
+    Call log:
+      - → POST http://127.0.0.1:3180/__d11/letter
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      49 |
+      50 | test('reduced-motion: open, send, free collection and unlock without animation waits',async({page,request})=>{
+    > 51 |  await page.emulateMedia({reducedMotion:'reduce'});const f=await(await request.post(backend+'/__d11/letter')).json();await login(page,f.viewer);await page.locator('.letter-bird').first().click({force:true});await expect(page.locator('#reply')).toBeVisible();await expect(page.locator('.d11-flying-letter')).toBeHidden();await page.locator('#reply').fill('A quiet hello.');await page.locator('#reply-send').click();await expect(page.locator('#continue-chat')).toBeVisible();await shot(page,'reduced-reply');await page.getByRole('button',{name:'Close',exact:true}).click()
+         |                                                                                ^
+      52 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'pending'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').first().click();await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();const r=await request.get(backend+'/__d11/evidence/'+u.id);expect(r.ok(),await r.text()).toBeTruthy();const result=await r.json();expect(result.user.diamonds).toBe(100);expect(result.ledger).toHaveLength(0);await shot(page,'reduced-unlock');await writeFile('docs/d11/free-evidence.json',JSON.stringify(result,null,2))
+      53 | })
+      54 |
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:51:80
+
+    TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+
+      11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+    > 13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+         |                                           ^
+      14 |
+      15 | test('opening-reply: envelope, close, write, delayed send and saved draft',async({page,request})=>{
+      16 |  const f=await(await request.post(backend+'/__d11/letter')).json();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await login(page,f.viewer)
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:13:43
+
+    Error Context: ../../../tmp/r11-playwright-results/d11-reduced-motion-open-se-b9b26-ock-without-animation-waits/error-context.md
+
+  4) tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3180
+    Call log:
+      - → POST http://127.0.0.1:3180/__c5/seed
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 18
+
+
+      54 |
+      55 | test('arrival-unlock: reply arriving after entering chat refreshes the collection queue',async({page,request})=>{
+    > 56 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'waiting'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').click();await expect(page.locator('.waiting-card')).toContainText('Waiting for their reply');expect((await request.post(backend+'/__c6/reply',{data:{id:u.conversations[0]}})).ok()).toBeTruthy();await expect(page.getByRole('button',{name:'Collect your reply',exact:true})).toBeVisible({timeout:10000});await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();await settled(page,'.d11-chat-gate');await shot(page,'arrival-unlocked')
+         |                              ^
+      57 | })
+      58 |
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:56:30
+
+    TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+
+      11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+    > 13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+         |                                           ^
+      14 |
+      15 | test('opening-reply: envelope, close, write, delayed send and saved draft',async({page,request})=>{
+      16 |  const f=await(await request.post(backend+'/__d11/letter')).json();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await login(page,f.viewer)
+        at /root/Muse_AI-repository/client/tests/d11.spec.ts:13:43
+
+    Error Context: ../../../tmp/r11-playwright-results/d11-arrival-unlock-reply-a-dc660-reshes-the-collection-queue/error-context.md
+
+  5) tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('.c6-chat')
+    Expected pattern: /moon-road/
+    Received string:  "none"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.c6-chat') with timeout 5000ms
+      - waiting for locator('.c6-chat')
+        14 × locator resolved to <section data-v-acc76d6f="" data-state="chat-open" class="c6-chat chat-flow">…</section>
+           - unexpected value "none"
+
+
+      12 |  await page.locator('#chat-details').click();await page.locator('#chat-bubbles').click();await capture(page,'chat-bubbles');await page.locator('#color-myBubble').evaluate((el:HTMLInputElement)=>{el.value='#d9c6ff';el.dispatchEvent(new Event('input',{bubbles:true}))});await page.locator('#color-theirText').evaluate((el:HTMLInputElement)=>{el.value='#ffffff';el.dispatchEvent(new Event('input',{bubbles:true}))});await capture(page,'chat-bubbles-custom');await expect(page.locator('#my-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)');await expect(page.locator('#their-bubble')).toHaveCSS('color','rgb(255, 255, 255)');await page.getByLabel('Back to messages').click();await page.getByLabel('Back to messages').click();await expect(page.locator('.mine .chat-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)')
+      13 |  await page.getByLabel('Back to messages').click();await page.locator('[data-chat="ocean"]').click();await expect(page.locator('.c6-chat')).not.toHaveCSS('background-image',/moon-road/);await page.getByLabel('Back to messages').click();await page.locator('[data-chat="tea"]').click();await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/)
+    > 14 |  await enter(page);await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/);await expect(page.locator('.mine .chat-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)');await background(page);await page.locator('#color-tab').click();await capture(page,'wallpaper-colors');await expect(page.locator('[data-theme]')).toHaveCount(7);await page.locator('[data-theme="lavender"]').click();await expect(page.locator('[data-theme="lavender"]')).toHaveAttribute('aria-pressed','true');await page.locator('#background-done').click();await expect(page.locator('.c6-chat')).toHaveClass(/theme-lavender/);await enter(page);await expect(page.locator('.c6-chat')).toHaveClass(/theme-lavender/)
+         |                                                           ^
+      15 |  await page.locator('#chat-details').click();await page.locator('#chat-bubbles').click();await page.locator('#reset-bubbles').click();await expect(page.locator('#color-myBubble')).toHaveValue('#aef879');await capture(page,'chat-bubbles');await page.getByLabel('Back to messages').click();await page.getByLabel('Back to messages').click();await background(page);await page.locator('#wallpaper-default').click();await expect(page.locator('.c6-chat')).toHaveClass(/theme-night/)
+      16 | })
+      17 | test('D2 removed wallpaper references fall back to default without losing bubble settings',async({page})=>{
+        at /root/Muse_AI-repository/client/tests/d2.spec.ts:14:59
+
+    Error Context: ../../../tmp/r11-playwright-results/d2-D2-six-states-preview-c-07b5a-ersistence-and-bubble-reset/error-context.md
+
+  6) tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings
+
+    Error: expect(locator).toHaveClass(expected) failed
+
+    Locator: locator('.c6-chat')
+    Expected pattern: /theme-night/
+    Received string:  "c6-chat chat-flow"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveClass" locator('.c6-chat') with timeout 5000ms
+      - waiting for locator('.c6-chat')
+        14 × locator resolved to <section data-v-acc76d6f="" data-state="chat-open" class="c6-chat chat-flow">…</section>
+           - unexpected value "c6-chat chat-flow"
+
+
+      16 | })
+      17 | test('D2 removed wallpaper references fall back to default without losing bubble settings',async({page})=>{
+    > 18 |  await enter(page);for(const wallpaperId of ['starlit-lake','golden-light']){await page.evaluate(id=>localStorage.setItem('maugo-chat-appearance-tea',JSON.stringify({wallpaperId:id,background:'lavender',myBubble:'#d9c6ff'})),wallpaperId);await enter(page);await expect(page.locator('.c6-chat')).toHaveClass(/theme-night/);await expect(page.locator('.c6-chat')).toHaveCSS('background-image','none');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('maugo-chat-appearance-tea')!))).toEqual({background:'night',myBubble:'#d9c6ff'});await background(page);await expect(page.locator('[data-wallpaper]')).toHaveCount(8);await expect(page.locator('#wallpaper-default')).toHaveAttribute('aria-pressed','true')}
+         |                                                                                                                                                                                                                                                                                                        ^
+      19 | })
+      20 |
+        at /root/Muse_AI-repository/client/tests/d2.spec.ts:18:296
+
+    Error Context: ../../../tmp/r11-playwright-results/d2-D2-removed-wallpaper-re-e7c7e-hout-losing-bubble-settings/error-context.md
+
+  7) tests/f07.spec.ts:11:1 › F07 account switch isolation and revoked token ───────────────────────
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3172
+    Call log:
+      - → POST http://127.0.0.1:3172/__c5/seed
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 15
+
+
+      11 | test('F07 account switch isolation and revoked token',async({page,request})=>{
+      12 |  test.setTimeout(120000)
+    > 13 |  const a=await (await request.post(api+'/__c5/seed',{data:{mode:'read'}})).json()
+         |                               ^
+      14 |  // The seeded peer shares A's unlocked conversation, so both accounts open the same conversation id.
+      15 |  const b={email:a.email.replace('Reader','Tea-wanderer-0'),password:a.password},conversation=a.conversations[0]
+      16 |  const tokenA=await login(page,a);await openChat(page);await page.locator('#chat-input').fill('A private draft for F07')
+        at /root/Muse_AI-repository/client/tests/f07.spec.ts:13:31
+
+    Error Context: ../../../tmp/r11-playwright-results/f07-F07-account-switch-isolation-and-revoked-token/error-context.md
+
+  8) tests/f07.spec.ts:34:1 › F07 sign-out clears this device immediately (#103) ───────────────────
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3172
+    Call log:
+      - → POST http://127.0.0.1:3172/__c5/seed
+        - user-agent: Playwright/1.65.0 (x64; ubuntu 24.04) node/22.23
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 15
+
+
+      34 | test('F07 sign-out clears this device immediately (#103)',async({page,request})=>{
+      35 |  test.setTimeout(120000)
+    > 36 |  const a=await (await request.post(api+'/__c5/seed',{data:{mode:'read'}})).json()
+         |                               ^
+      37 |  const b={email:a.email.replace('Reader','Tea-wanderer-0'),password:a.password},conversation=a.conversations[0]
+      38 |  const tokenA=await login(page,a);await openChat(page);await page.locator('#chat-input').fill('A draft cleared on sign-out')
+      39 |  await page.locator('#chat-details').click();await page.locator('#chat-background').click();await page.locator('[data-wallpaper="moon-road"]').click();await page.locator('#apply-wallpaper').click();await page.evaluate(()=>localStorage.setItem('maugo-language','en'))
+        at /root/Muse_AI-repository/client/tests/f07.spec.ts:36:31
+
+    Error Context: ../../../tmp/r11-playwright-results/f07-F07-sign-out-clears-this-device-immediately-103-/error-context.md
+
+  8 failed
+    tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft ───
+    tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+    tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits
+    tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue
+    tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset
+    tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings
+    tests/f07.spec.ts:11:1 › F07 account switch isolation and revoked token ────────────────────────
+    tests/f07.spec.ts:34:1 › F07 sign-out clears this device immediately (#103) ────────────────────
+  5 passed (1.4m)

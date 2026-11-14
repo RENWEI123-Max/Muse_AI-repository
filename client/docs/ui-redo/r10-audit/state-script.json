@@ -1,0 +1,86 @@
+{
+  "id": "reply-cost",
+  "title": "05 · 收取额度与付费",
+  "description": "每天 10 次免费；超出后按次确认，取消不消耗回信。",
+  "pages": [
+    {
+      "id": "reply-last-free",
+      "title": "回信 / 剩余 1 次免费",
+      "task": "inbox",
+      "seed": "last-free",
+      "actions": []
+    },
+    {
+      "id": "reply-payment",
+      "title": "回信 / 10 次用完，付费确认",
+      "task": "inbox",
+      "seed": "paid-replies",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ]
+      ]
+    },
+    {
+      "id": "reply-shortage",
+      "title": "回信 / 钻石不足",
+      "task": "inbox",
+      "seed": "reply-shortage",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ]
+      ]
+    },
+    {
+      "id": "reply-cancelled",
+      "title": "回信 / 取消付费，仍待收取",
+      "task": "inbox",
+      "seed": "paid-replies",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ],
+        [
+          "click",
+          "#reply-payment-cancel"
+        ]
+      ]
+    },
+    {
+      "id": "reply-paid",
+      "title": "回信 / 付费收取完成",
+      "task": "inbox",
+      "seed": "paid-replies",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ],
+        [
+          "click",
+          "#confirm-reply-payment"
+        ]
+      ]
+    },
+    {
+      "id": "reply-topup",
+      "title": "回信 / 进入钻石补充",
+      "task": "inbox",
+      "seed": "reply-shortage",
+      "actions": [
+        [
+          "click",
+          "#collect-replies"
+        ],
+        [
+          "click",
+          "#reply-topup"
+        ]
+      ]
+    }
+  ]
+}

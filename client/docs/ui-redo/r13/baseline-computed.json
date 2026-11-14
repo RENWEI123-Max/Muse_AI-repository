@@ -1,0 +1,130 @@
+{
+  "wallpapers": {
+    ".page-tabs": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 52,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "14px",
+      "background": "rgb(25, 38, 29) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(228, 239, 217)"
+    },
+    "[data-wallpaper=\"moon-road\"]": {
+      "x": 137,
+      "y": 212,
+      "width": 101,
+      "height": 175.0625,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "14px",
+      "background": "rgb(14, 32, 22) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(228, 239, 217)"
+    },
+    "[data-wallpaper=\"moon-road\"] img": {
+      "x": 138,
+      "y": 213,
+      "width": 99,
+      "height": 173.0625,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "0px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(228, 239, 217)"
+    }
+  },
+  "wallpaper-preview": {
+    ".wallpaper-preview": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 488,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "20px",
+      "background": "rgb(16, 32, 23) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(228, 239, 217)"
+    },
+    "#apply-wallpaper": {
+      "x": 24,
+      "y": 640,
+      "width": 327,
+      "height": 48,
+      "font": "500 14px / 20px Fredoka",
+      "borderRadius": "24px",
+      "background": "rgb(181, 250, 112) linear-gradient(110deg, rgb(189, 255, 129), rgb(176, 251, 97)) repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(24, 49, 14)"
+    },
+    ".preview-conversation span": {
+      "x": 41,
+      "y": 161,
+      "width": 251.96875,
+      "height": 44,
+      "font": "12px / 20px Fredoka",
+      "borderRadius": "14px 14px 14px 4px",
+      "background": "rgba(29, 44, 36, 0.93) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(229, 236, 222)"
+    }
+  },
+  "wallpaper-colors": {
+    "[data-theme=\"night\"]": {
+      "x": 24,
+      "y": 212,
+      "width": 155.5,
+      "height": 180,
+      "font": "12px / 20px Fredoka",
+      "borderRadius": "16px",
+      "background": "rgb(16, 32, 23) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(216, 231, 209)"
+    }
+  },
+  "chat-bubbles": {
+    ".bubble-preview": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 144,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "16px",
+      "background": "rgb(12, 26, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(228, 239, 217)"
+    },
+    "#their-bubble": {
+      "x": 44,
+      "y": 156,
+      "width": 243.9375,
+      "height": 44,
+      "font": "12px / 20px Fredoka",
+      "borderRadius": "12px",
+      "background": "rgb(40, 54, 46) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(225, 233, 221)"
+    },
+    "#my-bubble": {
+      "x": 202,
+      "y": 216,
+      "width": 129,
+      "height": 44,
+      "font": "12px / 20px Fredoka",
+      "borderRadius": "12px",
+      "background": "rgb(174, 248, 121) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(21, 48, 17)"
+    },
+    "#color-myBubble": {
+      "x": 295,
+      "y": 320,
+      "width": 40,
+      "height": 28,
+      "font": "13px / 20px Fredoka",
+      "borderRadius": "8px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(255, 255, 255)"
+    },
+    "#reset-bubbles": {
+      "x": 24,
+      "y": 587,
+      "width": 327,
+      "height": 48,
+      "font": "12px / 20px Fredoka",
+      "borderRadius": "24px",
+      "background": "rgba(181, 250, 112, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(202, 228, 181)"
+    }
+  }
+}

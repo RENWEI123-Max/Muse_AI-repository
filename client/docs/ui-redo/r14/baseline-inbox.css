@@ -1,0 +1,72 @@
+.inbox-flow{position:absolute;inset:0;display:flex;flex-direction:column;padding-top:48px;overflow:hidden;background:var(--bg-page);color:var(--text-primary);font:var(--font-body)}
+.inbox-flow .inbox-statusbar{display:none}
+.inbox-flow .inbox-top{justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--hairline)}
+.inbox-flow .inbox-heading-tabs{display:flex;align-items:center;gap:20px;transform:translateY(-.5px)}
+.inbox-flow .inbox-tab{height:44px;padding:8px 0;border:0;background:none;color:var(--r09-tab-idle);font:var(--r09-font-tab)}
+.inbox-flow .inbox-tab[aria-pressed=true]{color:var(--r09-tab-active);font:var(--r09-font-tab-active)}
+.inbox-flow .inbox-menu-button{position:absolute;right:20px;top:9.5px;display:flex;flex-direction:column;justify-content:center;gap:5.195px}
+.inbox-flow .inbox-menu-line{display:block;width:21px;height:2px;border-radius:var(--radius-4);background:var(--r09-menu)}
+.inbox-flow .inbox-body{position:absolute;inset:112px 0 96px;display:flex;flex-direction:column;padding:12px 24px 24px;overflow:auto;scrollbar-width:none}
+.inbox-flow .inbox-conversations{flex:1}
+.inbox-flow .chat-row-wrap{position:relative;height:84px;flex:none}
+.inbox-flow .is-pinned{background:none}
+.inbox-flow .chat-row{display:flex;align-items:center;gap:14px;width:327px;height:84px;padding:12px 28px 12px 0;border:0;background:none;color:var(--text-primary);text-align:left}
+.inbox-flow .inbox-row-avatar{display:block;width:48px;height:48px;flex:none;object-fit:cover;background:var(--bg-media-btn);border-radius:var(--radius-24)}
+.inbox-flow .chat-row-text{display:flex;flex-direction:column;gap:6px;width:165px;min-width:0;flex:1}
+.inbox-flow .inbox-row-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font:var(--font-title-card);letter-spacing:var(--font-title-card-letter-spacing)}
+.inbox-flow .inbox-row-preview{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font:var(--font-body-sm-18);color:var(--text-conversation-preview)}
+.inbox-flow .chat-row-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:7px;width:58px;flex:none}
+.inbox-flow .inbox-row-time{font:var(--font-micro);color:var(--text-time);white-space:nowrap}
+.inbox-flow .pending-dot{font:var(--r09-font-pending);color:var(--text-time);white-space:nowrap}
+.inbox-flow .inbox-row-unread{height:16px;min-width:16px;padding:0 4px;border-radius:var(--radius-8);background:var(--accent);color:var(--r09-unread-ink);font:var(--r09-font-unread);text-align:center}
+.inbox-flow .inbox-muted-icon{font:var(--r09-font-muted);color:var(--text-primary)}
+.inbox-flow .conversation-options{position:absolute;left:307px;top:27px;width:28px;height:32px;margin:0;padding:0;border:0;background:none;color:var(--text-conversation-options);font:var(--r09-font-options);letter-spacing:1px}
+.inbox-flow .feature-empty{position:absolute;left:24px;top:12px;width:327px;padding:40px 8px;text-align:center}
+.inbox-flow .inbox-empty-image{display:block;width:112px;height:112px;margin:0 auto 20px;object-fit:contain;opacity:.85}
+.inbox-flow .inbox-empty-title{margin:0;font:var(--r09-font-empty-title);letter-spacing:var(--font-caption-21-letter-spacing);color:var(--r09-empty-title)}
+.inbox-flow .inbox-empty-description{margin:12px 0 0;font:var(--font-caption-21);color:var(--text-empty)}
+.inbox-flow .inbox-notification-prompt{position:absolute;left:24px;right:24px;bottom:24px;height:46px;display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-12);background:var(--r09-notice-bg)}
+.inbox-flow .inbox-notice-icon{color:var(--accent);font:var(--r09-font-muted)}
+.inbox-flow .inbox-notice-copy{flex:1;margin:0;font:var(--r09-font-notice);color:var(--r09-notice-text)}
+.inbox-flow :is(.inbox-notice-enable,.inbox-notice-dismiss){padding:4px;border:0;background:none;color:var(--r09-enable);font:var(--font-micro)}
+.inbox-flow .inbox-notice-dismiss{color:var(--r09-dismiss);font:var(--r09-font-dismiss)}
+.inbox-flow .inbox-drawer-overlay{position:absolute;inset:48px 0 28px;z-index:40;display:flex;justify-content:flex-end;background:var(--scrim)}
+.inbox-flow .inbox-drawer{width:284px;height:100%;margin:0;display:flex;flex-direction:column;overflow:auto}
+.inbox-flow .drawer-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.inbox-flow .inbox-drawer-title{margin:0;font:var(--r09-font-drawer);letter-spacing:var(--font-body-letter-spacing)}
+.inbox-flow .inbox-drawer-close{flex:none}
+.inbox-flow .drawer-search-button{width:100%;margin:8px 0 16px}
+.inbox-flow .drawer-bottom{margin-top:auto}
+.inbox-flow .inbox-veil{position:absolute;inset:0;z-index:40;background:var(--scrim);display:flex;align-items:flex-end}
+.inbox-flow .inbox-sheet{max-height:90%;overflow:auto}
+.inbox-flow .inbox-sheet-heading{position:relative;display:flex;align-items:center;justify-content:center;min-height:40px;margin-bottom:16px}
+.inbox-flow .inbox-sheet-title{margin:0;font:var(--font-title-sheet-fixed);letter-spacing:var(--font-title-sheet-fixed-letter-spacing)}
+.inbox-flow .inbox-sheet-close{position:absolute;right:-12px;top:-8px}
+.inbox-flow .inbox-action{width:100%;margin-top:12px}
+.inbox-flow .inbox-error{position:relative;z-index:10;margin:0;padding:12px 24px;color:var(--home-error-text);font:var(--font-body-sm)}
+.inbox-flow .inbox-status{position:absolute;top:0;left:24px;right:24px;color:var(--text-label);font:var(--font-body-sm);text-align:center}
+.inbox-flow .inbox-hidden-title{margin:0;font:var(--font-title-page);letter-spacing:var(--font-title-page-letter-spacing)}
+.inbox-flow .d3-blocked{animation:d3-list-in .25s ease-out;position:absolute;inset:48px 0 96px;z-index:12;padding:12px 24px;overflow:auto;background:var(--bg-page)}
+.inbox-flow .d3-blocked-row{display:flex;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--hairline)}
+.inbox-flow .inbox-block-avatar{width:42px;height:42px;border-radius:var(--radius-22)}
+.inbox-flow .inbox-block-name{flex:1}
+.inbox-flow:lang(ko) :is(.inbox-tab,button,strong,small,h1,h2,h3,p,span,b){font-family:var(--font-family-ko)}
+@media(max-height:740px){.inbox-flow .feature-empty{top:0}.inbox-flow .inbox-notification-prompt{bottom:12px}}
+
+.inbox-flow .is-pinned{height:90px}
+.inbox-flow .chat-row:has(.inbox-muted-icon){height:90px}
+.inbox-flow[data-state="inbox-hidden-empty"] .feature-empty{top:24px}
+.inbox-flow .inbox-clear-search{position:absolute;left:24px;bottom:65px;width:327px}
+.inbox-flow .inbox-hidden-title{position:absolute;left:0;top:19.5px;width:375px;text-align:center;pointer-events:none}
+.inbox-flow .inbox-hidden-back{position:absolute;left:16px;top:11.5px}
+.inbox-flow[data-state^="inbox-hidden"] .inbox-menu-button{display:none}
+.inbox-flow .reply-collected{animation:r09-arrive .45s ease-out}
+@keyframes r09-arrive{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.inbox-flow .reply-collected{animation-duration:.01ms}}
+
+.inbox-flow .inbox-heading-tabs:has(.inbox-hidden-title){position:static;transform:none}
+
+@keyframes d3-list-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+
+/* Preserve the blocked subview flow when sharing inbox empty artwork. */
+.inbox-flow .inbox-block-empty{position:static;width:auto;margin:0;padding:70px 8px 40px}

@@ -1,0 +1,157 @@
+[WebServer] (node:65519) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:65521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough (9.2s)
+(node:65526) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough (9.3s)
+(node:65532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough (9.2s)
+(node:65540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough (9.3s)
+
+
+  1) tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d4-close')
+        - locator resolved to <button data-v-b7622d2e="" aria-label="Close" class="d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close">×</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is not stable
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      42 |   records.push({name,...m});save();expect(m.document).toEqual({height,width:375,y:0});expect(m.images.every(Boolean)).toBeTruthy()
+      43 |  }
+    > 44 |  const open=async()=>{await root.locator('#edit-avatar').click();checks.entryVeilTransition=await root.locator('.d4-veil').evaluate(e=>getComputedStyle(e).transitionDuration)},close=()=>root.locator('.d4-close').click()
+         |                                                                                                                                                                                                                     ^
+      45 |  const upload=async(slot=false)=>{const chooser=page.waitForEvent('filechooser');await root.locator(slot?'[data-upload-avatar]':'#upload-avatar').first().click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(root.locator('#avatar-canvas')).toBeVisible()}
+      46 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      47 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+        at close (/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:44:213)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:48:362
+
+    Error Context: test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d4-close')
+        - locator resolved to <button aria-label="닫기" data-v-b7622d2e="" class="d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close">×</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is not stable
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      42 |   records.push({name,...m});save();expect(m.document).toEqual({height,width:375,y:0});expect(m.images.every(Boolean)).toBeTruthy()
+      43 |  }
+    > 44 |  const open=async()=>{await root.locator('#edit-avatar').click();checks.entryVeilTransition=await root.locator('.d4-veil').evaluate(e=>getComputedStyle(e).transitionDuration)},close=()=>root.locator('.d4-close').click()
+         |                                                                                                                                                                                                                     ^
+      45 |  const upload=async(slot=false)=>{const chooser=page.waitForEvent('filechooser');await root.locator(slot?'[data-upload-avatar]':'#upload-avatar').first().click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(root.locator('#avatar-canvas')).toBeVisible()}
+      46 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      47 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+        at close (/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:44:213)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:48:362
+
+    Error Context: test-results/r18-audit/r18-audit-667-ko-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-667-ko-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-667-ko-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d4-close')
+        - locator resolved to <button data-v-b7622d2e="" aria-label="Close" class="d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close">×</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is not stable
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      42 |   records.push({name,...m});save();expect(m.document).toEqual({height,width:375,y:0});expect(m.images.every(Boolean)).toBeTruthy()
+      43 |  }
+    > 44 |  const open=async()=>{await root.locator('#edit-avatar').click();checks.entryVeilTransition=await root.locator('.d4-veil').evaluate(e=>getComputedStyle(e).transitionDuration)},close=()=>root.locator('.d4-close').click()
+         |                                                                                                                                                                                                                     ^
+      45 |  const upload=async(slot=false)=>{const chooser=page.waitForEvent('filechooser');await root.locator(slot?'[data-upload-avatar]':'#upload-avatar').first().click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(root.locator('#avatar-canvas')).toBeVisible()}
+      46 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      47 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+        at close (/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:44:213)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:48:362
+
+    Error Context: test-results/r18-audit/r18-audit-812-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-812-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-812-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('.d4-close')
+        - locator resolved to <button aria-label="닫기" data-v-b7622d2e="" class="d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close">×</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      42 |   records.push({name,...m});save();expect(m.document).toEqual({height,width:375,y:0});expect(m.images.every(Boolean)).toBeTruthy()
+      43 |  }
+    > 44 |  const open=async()=>{await root.locator('#edit-avatar').click();checks.entryVeilTransition=await root.locator('.d4-veil').evaluate(e=>getComputedStyle(e).transitionDuration)},close=()=>root.locator('.d4-close').click()
+         |                                                                                                                                                                                                                     ^
+      45 |  const upload=async(slot=false)=>{const chooser=page.waitForEvent('filechooser');await root.locator(slot?'[data-upload-avatar]':'#upload-avatar').first().click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(root.locator('#avatar-canvas')).toBeVisible()}
+      46 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      47 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+        at close (/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:44:213)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:48:362
+
+    Error Context: test-results/r18-audit/r18-audit-812-ko-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-812-ko-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-812-ko-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough ──────────────────────────────────

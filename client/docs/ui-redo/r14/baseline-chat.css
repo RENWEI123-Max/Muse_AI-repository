@@ -1,0 +1,6 @@
+/* Preserve non-R12 appearance/report header behavior. */
+.c6-chat:where([data-state^="report"]:not(.chat-flow):not(.chat-details-flow)) button{background:transparent;color:inherit;border:0;cursor:pointer}
+.c6-chat:where([data-state^="report"]:not(.chat-flow):not(.chat-details-flow)) header{height:64px;min-height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid #ffffff07;background:#0d1713}
+.c6-chat:where([data-state^="report"]:not(.chat-flow):not(.chat-details-flow)) header button{font-size:24px}
+/* Preserve the report header spacer formerly shared with appearance pages. */
+.c6-chat:where([data-state^="report"]:not(.chat-flow):not(.chat-details-flow)) header>span{width:40px;flex:none}

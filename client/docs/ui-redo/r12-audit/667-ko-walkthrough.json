@@ -1,0 +1,1758 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "조용한 친구"
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "remark": "조용한 친구"
+      }
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=unmatched-query",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=failure",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=false&limit=50&offset=0&search=listening",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "chat-details-waiting",
+      "state": "chat-details-waiting",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "보낸 편지",
+          "clipped": false
+        },
+        {
+          "text": "답장을 받으면 더 많은 기능이 열려요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "답장이 오면 팔로우할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "waiting-scrolled",
+      "state": "chat-details-waiting",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "보낸 편지",
+          "clipped": false
+        },
+        {
+          "text": "답장을 받으면 더 많은 기능이 열려요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "답장이 오면 팔로우할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-details",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "details-scrolled",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-remark",
+      "state": "chat-remark",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "별명",
+          "clipped": false
+        },
+        {
+          "text": "나에게만 표시",
+          "clipped": false
+        },
+        {
+          "text": "저장",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "remark-save-failure",
+      "state": "chat-remark",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "별명",
+          "clipped": false
+        },
+        {
+          "text": "나에게만 표시",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "저장",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "remark-saved",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "조용한 친구",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 조용한 친구›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-empty",
+      "state": "chat-search-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-result",
+      "state": "chat-search-result",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "search-scrolled",
+      "state": "chat-search-result",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "1. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "2. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "3. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "4. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "5. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "6. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "7. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "8. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "9. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "10. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "11. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "12. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "13. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "14. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "15. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "16. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "17. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "18. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "19. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "20. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "21. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "22. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "23. Thank you for listening.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "24. Thank you for listening.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-search-none",
+      "state": "chat-search-none",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "검색된 메시지가 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "search-failure",
+      "state": "chat-search-none",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. 다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "검색 중…",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-clear-confirm",
+      "state": "chat-clear-confirm",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "조용한 친구",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 조용한 친구›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "메시지를 지울까요?",
+          "clipped": false
+        },
+        {
+          "text": "대화 기록만 지워요. 연결과 열린 권한은 유지돼요.",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "block-boundary",
+      "state": "block-confirm",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "조용한 친구",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 조용한 친구›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "이 사람을 차단할까요?",
+          "clipped": false
+        },
+        {
+          "text": "이 사람에게 메시지, 사진 또는 음성을 보낼 수 없게 돼요.",
+          "clipped": false
+        },
+        {
+          "text": "차단",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-choice-boundary",
+      "state": "safety-choice",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "조용한 친구",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 조용한 친구›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 또는 차단",
+          "clipped": false
+        },
+        {
+          "text": "이 사람에 대해 원하는 조치를 선택하세요.",
+          "clipped": false
+        },
+        {
+          "text": "신고부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "차단이 사람의 연락을 차단",
+          "clipped": false
+        },
+        {
+          "text": "이 사람의 연락을 차단",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-form-boundary",
+      "state": "report-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "신고",
+          "clipped": false
+        },
+        {
+          "text": "무슨 일이 있었나요?",
+          "clipped": false
+        },
+        {
+          "text": "이유욕설 또는 괴롭힘스팸 또는 광고부적절한 콘텐츠기타",
+          "clipped": false
+        },
+        {
+          "text": "상세 내용",
+          "clipped": false
+        },
+        {
+          "text": "사진 추가",
+          "clipped": false
+        },
+        {
+          "text": "MauGo 운영팀으로 신고를 전송해요.",
+          "clipped": false
+        },
+        {
+          "text": "신고 저장",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "report-return",
+      "state": "chat-details",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "viewport": 667
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "조용한 친구",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 조용한 친구›",
+          "clipped": false
+        },
+        {
+          "text": "대화 고정",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "알림 끄기",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "waitingControls": [
+      {
+        "id": "view-public-profile",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "remark-name",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "chat-background",
+        "disabled": false
+      },
+      {
+        "id": "chat-bubbles",
+        "disabled": false
+      },
+      {
+        "id": "",
+        "disabled": true
+      },
+      {
+        "id": "block-chat",
+        "disabled": false
+      },
+      {
+        "id": "report-person",
+        "disabled": false
+      }
+    ],
+    "waitingScroll": {
+      "top": 351,
+      "height": 527,
+      "content": 878,
+      "bottom": 639
+    },
+    "unlockedDisabled": [
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      },
+      {
+        "disabled": true
+      }
+    ],
+    "detailsScroll": {
+      "top": 262,
+      "height": 527,
+      "content": 789,
+      "bottom": 639
+    },
+    "remarkMotion": {
+      "animation": "sheet-in",
+      "duration": "0.3s",
+      "easing": "ease-out",
+      "box": {
+        "x": 12,
+        "y": 373,
+        "width": 351,
+        "height": 270,
+        "top": 373,
+        "right": 363,
+        "bottom": 643,
+        "left": 12
+      }
+    },
+    "resultsScroll": {
+      "top": 1887,
+      "height": 431,
+      "content": 2318,
+      "bottom": 639
+    },
+    "clearMotion": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "easing": "ease-out",
+      "box": {
+        "x": 24,
+        "y": 204.5,
+        "width": 327,
+        "height": 258,
+        "top": 204.5,
+        "right": 351,
+        "bottom": 462.5,
+        "left": 24
+      }
+    }
+  },
+  "errors": [],
+  "forbidden": []
+}

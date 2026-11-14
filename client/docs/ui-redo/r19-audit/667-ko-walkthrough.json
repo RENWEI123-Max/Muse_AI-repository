@@ -1,0 +1,1732 @@
+{
+  "fixture": true,
+  "initialCards": 0,
+  "media": "Only browser-uploaded repository portrait-5.png bytes; never seeded cards",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "body": {
+        "email": "r19-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "1",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "2",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "type": "outfit"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "type": "outfit"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "only_me"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "3",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "4",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "5",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "6",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "7",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "8",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "9",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "10",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/10",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/3",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/10",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "list-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "card-type",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "invalid-file",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Choose an image.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "size-boundary",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Use PNG, JPEG, WebP, MP4, WebM, OGG, WAV or MP3 below 10 MB (video below 30 MB).",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "upload-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "create-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-options",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 317,
+          "width": 351,
+          "height": 326
+        },
+        "scroll": {
+          "client": 324,
+          "content": 324,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "이미지 카드",
+            "clipped": false
+          },
+          {
+            "text": "사진 보기\n›",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형\nPortrait\n›",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "공개 범위\nEveryone\n›",
+            "clipped": false
+          },
+          {
+            "text": "Everyone",
+            "clipped": false
+          },
+          {
+            "text": "카드 삭제\n›",
+            "clipped": false
+          },
+          {
+            "text": "Main photo",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-preview",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 72,
+          "width": 351,
+          "height": 571
+        },
+        "scroll": {
+          "client": 569,
+          "content": 576,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": [
+          {
+            "loaded": true,
+            "width": 309,
+            "height": 480
+          }
+        ]
+      }
+    },
+    {
+      "name": "preview-scrolled",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 72,
+          "width": 351,
+          "height": 571
+        },
+        "scroll": {
+          "client": 569,
+          "content": 576,
+          "top": 7,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": [
+          {
+            "loaded": true,
+            "width": 309,
+            "height": 480
+          }
+        ]
+      }
+    },
+    {
+      "name": "card-change-type",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "type-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-visibility",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "scroll": {
+          "client": 292,
+          "content": 292,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "누가 볼 수 있나요?",
+            "clipped": false
+          },
+          {
+            "text": "모두\n✓",
+            "clipped": false
+          },
+          {
+            "text": "친구",
+            "clipped": false
+          },
+          {
+            "text": "나만",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "visibility-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "scroll": {
+          "client": 292,
+          "content": 292,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "누가 볼 수 있나요?",
+            "clipped": false
+          },
+          {
+            "text": "모두\n✓",
+            "clipped": false
+          },
+          {
+            "text": "친구",
+            "clipped": false
+          },
+          {
+            "text": "나만",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-remove",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 220,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 405,
+          "width": 327,
+          "height": 238
+        },
+        "scroll": {
+          "client": 236,
+          "content": 236,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "이 사진을 삭제할까요?",
+            "clipped": false
+          },
+          {
+            "text": "프로필에서 이미지 카드가 삭제됩니다.",
+            "clipped": false
+          },
+          {
+            "text": "삭제",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "delete-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 405,
+          "width": 327,
+          "height": 238
+        },
+        "scroll": {
+          "client": 236,
+          "content": 236,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "이 사진을 삭제할까요?",
+            "clipped": false
+          },
+          {
+            "text": "프로필에서 이미지 카드가 삭제됩니다.",
+            "clipped": false
+          },
+          {
+            "text": "삭제",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "removed-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "full",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "full-scrolled",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    }
+  ],
+  "checks": {
+    "pickerCancelPanelRemains": true,
+    "preview": {
+      "width": 309,
+      "height": 480,
+      "loaded": true
+    },
+    "previewScroll": {
+      "top": 7,
+      "client": 569,
+      "content": 576,
+      "documentY": 0
+    },
+    "deletePress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+    "deleteCancelToProfile": true,
+    "uploadLimit": true,
+    "gridScroll": {
+      "top": 583,
+      "documentY": 0
+    },
+    "card-optionsEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-previewEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-change-typeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-visibilityEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-removeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-typeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "backdropClose": true,
+    "clipped": []
+  },
+  "errors": []
+}

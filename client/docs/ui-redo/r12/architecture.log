@@ -1,0 +1,22 @@
+#[0-9a-fA-F]{3,8}\b: 0
+
+
+\brgba?\(: 0
+
+
+!important: 0
+
+
+\.device\s: 0
+
+
+legacy R12 selectors: 0
+
+
+unchanged script hex: ["#aef879", "#153011", "#28362e", "#e1e9dd", "#aef879", "#153011", "#28362e", "#e1e9dd", "#07100b26", "#07100b26"]
+
+out-of-scope report scoped hex: 20
+
+script unchanged: True
+
+R11 page CSS prefix unchanged: True

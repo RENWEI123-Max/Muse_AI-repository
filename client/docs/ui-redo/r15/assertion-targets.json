@@ -1,0 +1,1334 @@
+{
+  "welcome": {
+    ".wordmark": {
+      "node": "35:2423",
+      "box": {
+        "x": 140.5,
+        "y": 67.72700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".auth-content h1": {
+      "node": "35:2427",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    }
+  },
+  "terms-unchecked": {
+    ".wordmark": {
+      "node": "35:2479",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2483",
+      "box": {
+        "x": 24.0,
+        "y": 128.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".terms-scroll": {
+      "node": "35:2487",
+      "box": {
+        "x": 24.0,
+        "y": 213.0,
+        "width": 327.0,
+        "height": 350.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.0784313753247261,
+            "g": 0.12941177189350128,
+            "b": 0.09803921729326248,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 16.0,
+      "style": null
+    },
+    "#accept-terms": {
+      "node": "35:2537",
+      "box": {
+        "x": 24.0,
+        "y": 583.0,
+        "width": 18.0,
+        "height": 18.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.10980392247438431,
+            "g": 0.16862745583057404,
+            "b": 0.13333334028720856,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 5.0,
+      "style": null
+    },
+    "#terms-continue": {
+      "node": "35:2540",
+      "box": {
+        "x": 24.0,
+        "y": 619.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "GRADIENT_LINEAR",
+          "gradientHandlePositions": [
+            {
+              "x": 0.0,
+              "y": 0.5
+            },
+            {
+              "x": 1.0,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 1.0
+            }
+          ],
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.7411764860153198,
+                "g": 1.0,
+                "b": 0.5058823823928833,
+                "a": 1.0
+              },
+              "position": 0.0
+            },
+            {
+              "color": {
+                "r": 0.6901960968971252,
+                "g": 0.9843137264251709,
+                "b": 0.3803921639919281,
+                "a": 1.0
+              },
+              "position": 1.0
+            }
+          ]
+        }
+      ],
+      "radius": 24.0,
+      "style": null
+    }
+  },
+  "terms-checked": {
+    ".wordmark": {
+      "node": "35:2573",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2577",
+      "box": {
+        "x": 24.0,
+        "y": 128.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".terms-scroll": {
+      "node": "35:2581",
+      "box": {
+        "x": 24.0,
+        "y": 213.0,
+        "width": 327.0,
+        "height": 350.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.0784313753247261,
+            "g": 0.12941177189350128,
+            "b": 0.09803921729326248,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 16.0,
+      "style": null
+    },
+    "#accept-terms": {
+      "node": "35:2631",
+      "box": {
+        "x": 24.0,
+        "y": 583.0,
+        "width": 18.0,
+        "height": 18.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.7098039388656616,
+            "g": 0.9803921580314636,
+            "b": 0.43921568989753723,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 5.0,
+      "style": null
+    },
+    "#terms-continue": {
+      "node": "35:2634",
+      "box": {
+        "x": 24.0,
+        "y": 619.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "GRADIENT_LINEAR",
+          "gradientHandlePositions": [
+            {
+              "x": 0.0,
+              "y": 0.5
+            },
+            {
+              "x": 1.0,
+              "y": 0.5
+            },
+            {
+              "x": 0.0,
+              "y": 1.0
+            }
+          ],
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.7411764860153198,
+                "g": 1.0,
+                "b": 0.5058823823928833,
+                "a": 1.0
+              },
+              "position": 0.0
+            },
+            {
+              "color": {
+                "r": 0.6901960968971252,
+                "g": 0.9843137264251709,
+                "b": 0.3803921639919281,
+                "a": 1.0
+              },
+              "position": 1.0
+            }
+          ]
+        }
+      ],
+      "radius": 24.0,
+      "style": null
+    }
+  },
+  "signin-empty": {
+    ".wordmark": {
+      "node": "35:2667",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2671",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2678",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "signin-filled": {
+    ".wordmark": {
+      "node": "35:2722",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2726",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2733",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "signin-invalid": {
+    ".wordmark": {
+      "node": "35:2778",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2782",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2789",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    },
+    ".auth-error": {
+      "node": "35:2807",
+      "box": {
+        "x": 24.0,
+        "y": 677.0,
+        "width": 327.0,
+        "height": 46.0
+      },
+      "fills": [
+        {
+          "opacity": 0.20000000298023224,
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.38823530077934265,
+            "g": 0.2235294133424759,
+            "b": 0.1764705926179886,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "signup-empty": {
+    ".wordmark": {
+      "node": "35:2836",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2840",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2847",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "signup-filled": {
+    ".wordmark": {
+      "node": "35:2900",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2904",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2911",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "signup-mismatch": {
+    ".wordmark": {
+      "node": "35:2966",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:2970",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:2977",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    },
+    ".auth-error": {
+      "node": "35:3005",
+      "box": {
+        "x": 24.0,
+        "y": 910.0,
+        "width": 327.0,
+        "height": 46.0
+      },
+      "fills": [
+        {
+          "opacity": 0.20000000298023224,
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.38823530077934265,
+            "g": 0.2235294133424759,
+            "b": 0.1764705926179886,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "verify-empty": {
+    ".wordmark": {
+      "node": "35:3034",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3038",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3049",
+      "box": {
+        "x": 24.0,
+        "y": 451.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "verify-error": {
+    ".wordmark": {
+      "node": "35:3085",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3089",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3100",
+      "box": {
+        "x": 24.0,
+        "y": 451.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    },
+    ".auth-error": {
+      "node": "35:3110",
+      "box": {
+        "x": 24.0,
+        "y": 765.0,
+        "width": 327.0,
+        "height": 46.0
+      },
+      "fills": [
+        {
+          "opacity": 0.20000000298023224,
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.38823530077934265,
+            "g": 0.2235294133424759,
+            "b": 0.1764705926179886,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "verify-resend": {
+    ".wordmark": {
+      "node": "35:3139",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3143",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3154",
+      "box": {
+        "x": 24.0,
+        "y": 451.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    },
+    ".auth-error": {
+      "node": "35:3163",
+      "box": {
+        "x": 24.0,
+        "y": 765.0,
+        "width": 327.0,
+        "height": 46.0
+      },
+      "fills": [
+        {
+          "opacity": 0.20000000298023224,
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.38823530077934265,
+            "g": 0.2235294133424759,
+            "b": 0.1764705926179886,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "forgot-empty": {
+    ".wordmark": {
+      "node": "35:3192",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3196",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3203",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "recovery-code": {
+    ".wordmark": {
+      "node": "35:3237",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3241",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3252",
+      "box": {
+        "x": 24.0,
+        "y": 451.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "new-password": {
+    ".wordmark": {
+      "node": "35:3288",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3292",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3299",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "new-password-error": {
+    ".wordmark": {
+      "node": "35:3341",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3345",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    ".field-label input": {
+      "node": "35:3352",
+      "box": {
+        "x": 24.0,
+        "y": 261.0,
+        "width": 327.0,
+        "height": 48.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.125490203499794,
+            "g": 0.18431372940540314,
+            "b": 0.1411764770746231,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    },
+    ".auth-error": {
+      "node": "35:3367",
+      "box": {
+        "x": 24.0,
+        "y": 681.0,
+        "width": 327.0,
+        "height": 46.0
+      },
+      "fills": [
+        {
+          "opacity": 0.20000000298023224,
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.38823530077934265,
+            "g": 0.2235294133424759,
+            "b": 0.1764705926179886,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 12.0,
+      "style": null
+    }
+  },
+  "apple-private": {
+    ".wordmark": {
+      "node": "35:3396",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3400",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    "#apple-hide": {
+      "node": "35:3407",
+      "box": {
+        "x": 24.0,
+        "y": 394.0,
+        "width": 327.0,
+        "height": 56.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.13333334028720856,
+            "g": 0.1882352977991104,
+            "b": 0.14901961386203766,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 14.0,
+      "style": null
+    },
+    "#apple-share": {
+      "node": "35:3412",
+      "box": {
+        "x": 24.0,
+        "y": 462.0,
+        "width": 327.0,
+        "height": 56.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.13333334028720856,
+            "g": 0.1882352977991104,
+            "b": 0.14901961386203766,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 14.0,
+      "style": null
+    }
+  },
+  "apple-share": {
+    ".wordmark": {
+      "node": "35:3448",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3452",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    },
+    "#apple-hide": {
+      "node": "35:3459",
+      "box": {
+        "x": 24.0,
+        "y": 394.0,
+        "width": 327.0,
+        "height": 56.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.13333334028720856,
+            "g": 0.1882352977991104,
+            "b": 0.14901961386203766,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 14.0,
+      "style": null
+    },
+    "#apple-share": {
+      "node": "35:3462",
+      "box": {
+        "x": 24.0,
+        "y": 462.0,
+        "width": 327.0,
+        "height": 56.0
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "SOLID",
+          "color": {
+            "r": 0.13333334028720856,
+            "g": 0.1882352977991104,
+            "b": 0.14901961386203766,
+            "a": 1.0
+          }
+        }
+      ],
+      "radius": 14.0,
+      "style": null
+    }
+  },
+  "auth-privacy": {
+    ".wordmark": {
+      "node": "35:3500",
+      "box": {
+        "x": 140.5,
+        "y": 67.22700500488281,
+        "width": 94.0,
+        "height": 24.538999557495117
+      },
+      "fills": [
+        {
+          "blendMode": "NORMAL",
+          "type": "IMAGE",
+          "scaleMode": "FILL",
+          "imageRef": "a85009c366cf5e578315737cf5beef16e6a1275f"
+        }
+      ],
+      "radius": null,
+      "style": null
+    },
+    ".flow-content h1": {
+      "node": "35:3504",
+      "box": {
+        "x": 24.0,
+        "y": 136.0,
+        "width": 327.0,
+        "height": 32.0
+      },
+      "fills": [],
+      "radius": null,
+      "style": null
+    }
+  }
+}

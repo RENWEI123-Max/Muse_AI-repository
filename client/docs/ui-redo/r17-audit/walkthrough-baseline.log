@@ -1,0 +1,128 @@
+[WebServer] (node:63385) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:63387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough (15.3s)
+(node:63399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough (16.0s)
+(node:63407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough (15.2s)
+(node:63420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough (15.9s)
+
+
+  1) tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('#following')
+
+
+      53 |  await root.locator('#likes').click();await root.locator('.d4-veil').click({position:{x:5,y:5}});await expect(root.getByRole('dialog')).toHaveCount(0)
+      54 |  await root.locator('#likes').click();await page.keyboard.press('Escape');await expect(root.getByRole('dialog')).toHaveCount(0)
+    > 55 |  for(const [id,name] of [['following','following-empty'],['followers','followers-empty'],['profile-visitors','visitors-empty'],['profile-letters','my-letters-empty']]){await root.locator('#'+id).click();await snap(name!);await back()}
+         |                                                                                                                                                                                                    ^
+      56 |  await root.locator('#following').click();await root.locator('.ui-profile-tabs button').nth(1).click();await expect(root.locator('.ui-profile-tabs button').nth(1)).toHaveAttribute('aria-pressed','true');await back()
+      57 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await snap('edit-avatar-boundary');await root.locator('.d4-close').click();await expect(root.locator('#edit-name')).toBeVisible();await back()
+      58 |  await root.locator('#edit-avatar').click();await snap('avatar-boundary');await root.locator('.d4-close').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:55:196
+
+    Error Context: test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('#following')
+
+
+      53 |  await root.locator('#likes').click();await root.locator('.d4-veil').click({position:{x:5,y:5}});await expect(root.getByRole('dialog')).toHaveCount(0)
+      54 |  await root.locator('#likes').click();await page.keyboard.press('Escape');await expect(root.getByRole('dialog')).toHaveCount(0)
+    > 55 |  for(const [id,name] of [['following','following-empty'],['followers','followers-empty'],['profile-visitors','visitors-empty'],['profile-letters','my-letters-empty']]){await root.locator('#'+id).click();await snap(name!);await back()}
+         |                                                                                                                                                                                                    ^
+      56 |  await root.locator('#following').click();await root.locator('.ui-profile-tabs button').nth(1).click();await expect(root.locator('.ui-profile-tabs button').nth(1)).toHaveAttribute('aria-pressed','true');await back()
+      57 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await snap('edit-avatar-boundary');await root.locator('.d4-close').click();await expect(root.locator('#edit-name')).toBeVisible();await back()
+      58 |  await root.locator('#edit-avatar').click();await snap('avatar-boundary');await root.locator('.d4-close').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:55:196
+
+    Error Context: test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('#following')
+
+
+      53 |  await root.locator('#likes').click();await root.locator('.d4-veil').click({position:{x:5,y:5}});await expect(root.getByRole('dialog')).toHaveCount(0)
+      54 |  await root.locator('#likes').click();await page.keyboard.press('Escape');await expect(root.getByRole('dialog')).toHaveCount(0)
+    > 55 |  for(const [id,name] of [['following','following-empty'],['followers','followers-empty'],['profile-visitors','visitors-empty'],['profile-letters','my-letters-empty']]){await root.locator('#'+id).click();await snap(name!);await back()}
+         |                                                                                                                                                                                                    ^
+      56 |  await root.locator('#following').click();await root.locator('.ui-profile-tabs button').nth(1).click();await expect(root.locator('.ui-profile-tabs button').nth(1)).toHaveAttribute('aria-pressed','true');await back()
+      57 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await snap('edit-avatar-boundary');await root.locator('.d4-close').click();await expect(root.locator('#edit-name')).toBeVisible();await back()
+      58 |  await root.locator('#edit-avatar').click();await snap('avatar-boundary');await root.locator('.d4-close').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:55:196
+
+    Error Context: test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-page').first().locator('#following')
+
+
+      53 |  await root.locator('#likes').click();await root.locator('.d4-veil').click({position:{x:5,y:5}});await expect(root.getByRole('dialog')).toHaveCount(0)
+      54 |  await root.locator('#likes').click();await page.keyboard.press('Escape');await expect(root.getByRole('dialog')).toHaveCount(0)
+    > 55 |  for(const [id,name] of [['following','following-empty'],['followers','followers-empty'],['profile-visitors','visitors-empty'],['profile-letters','my-letters-empty']]){await root.locator('#'+id).click();await snap(name!);await back()}
+         |                                                                                                                                                                                                    ^
+      56 |  await root.locator('#following').click();await root.locator('.ui-profile-tabs button').nth(1).click();await expect(root.locator('.ui-profile-tabs button').nth(1)).toHaveAttribute('aria-pressed','true');await back()
+      57 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await snap('edit-avatar-boundary');await root.locator('.d4-close').click();await expect(root.locator('#edit-name')).toBeVisible();await back()
+      58 |  await root.locator('#edit-avatar').click();await snap('avatar-boundary');await root.locator('.d4-close').click()
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:55:196
+
+    Error Context: test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ──────────────────────────────

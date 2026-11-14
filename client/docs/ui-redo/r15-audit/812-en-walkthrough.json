@@ -1,0 +1,2380 @@
+{
+  "fixture": true,
+  "checks": {
+    "welcomeScroll": {
+      "top": 0,
+      "overflow": "hidden"
+    },
+    "mainPress": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "transition": "0s"
+    },
+    "backPress": {
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+      "transition": "0s"
+    }
+  },
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/signup",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/code/send",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/code/verify",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/code/send",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/code/send",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/code/verify",
+      "method": "POST"
+    },
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "welcome",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "welcome",
+      "containers": [
+        {
+          "class": "auth-content",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "hidden",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "Welcome to MauGo",
+          "clipped": false
+        },
+        {
+          "text": "A little bird. A little story.",
+          "clipped": false
+        },
+        {
+          "text": "Read everyday stories. Share your own.",
+          "clipped": false
+        },
+        {
+          "text": "Continue with email",
+          "clipped": false
+        },
+        {
+          "text": "Continue with Apple",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Terms of Service · Privacy Policy",
+          "clipped": false
+        },
+        {
+          "text": "Terms of Service",
+          "clipped": false
+        },
+        {
+          "text": "Privacy Policy",
+          "clipped": false
+        },
+        {
+          "text": "Explore preview",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-button ui-button--auth",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth-apple apple-button",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "terms-unchecked",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "consent",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        },
+        {
+          "class": "terms-scroll terms-document",
+          "height": 348,
+          "content": 2524,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Before you continue",
+          "clipped": false
+        },
+        {
+          "text": "Read the terms before registering or signing in.",
+          "clipped": false
+        },
+        {
+          "text": "Version 1.0 · 13 October 2026 · Review draft",
+          "clipped": false
+        },
+        {
+          "text": "MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.",
+          "clipped": false
+        },
+        {
+          "text": "Use accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo has zero tolerance for objectionable content or abusive users. Do not post or send harassment, bullying, threats, hate speech, sexual exploitation, illegal sexual content, scams, spam, impersonation, or content that infringes rights. Do not publish private information without permission. These rules apply to letters, chats, profiles, images, recordings, stickers and moments.",
+          "clipped": false
+        },
+        {
+          "text": "You retain ownership of your content and must have permission to share it. You grant MauGo only the rights needed to store, display, transmit and moderate it for the service. One opening text message is permitted per new connection; further chat and attachments unlock after the recipient replies. Do not bypass this limit or repeatedly contact someone who declines or blocks you.",
+          "clipped": false
+        },
+        {
+          "text": "Use Report and Block in letter or conversation controls to flag unwanted content and stop contact. In the released service, MauGo may review reports, remove content and restrict or terminate abusive accounts, with notice and review where required by law. This preview saves reports locally; it has no connected moderation team and cannot deliver reports. It is not an emergency service.",
+          "clipped": false
+        },
+        {
+          "text": "In the intended app, diamonds are purchased in USD through the applicable store and used for features at the displayed price. Diamonds are not money, cannot be cashed out or transferred, and have no value outside MauGo. Filter Pass duration and diamond cost are shown before confirmation; extra days extend expiry and there is no automatic renewal. Store rules and mandatory consumer rights govern refunds. This preview uses test balances and makes no real charge.",
+          "clipped": false
+        },
+        {
+          "text": "Read Privacy information to understand the current data use. This preview stores account personas, messages and preferences in browser storage and selected media in IndexedDB. It does not send authentication emails or store passwords. File access follows your selection; microphone permission is requested for recording. Clearing local browser data may remove content. Hosting providers may process access logs.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo may change or discontinue features, subject to applicable law and purchased entitlements. You may stop using it and use account settings to export or delete local data. The preview is provided for evaluation without a promise of uninterrupted availability. Nothing in these terms excludes non-excludable warranties, liability or consumer rights under the laws that apply to you.",
+          "clipped": false
+        },
+        {
+          "text": "For an app distributed by Apple, this agreement is between you and MauGo. Apple is not responsible for app support, app-related claims or intellectual-property disputes; MauGo is responsible as required by law. If the app fails an applicable warranty, Apple may refund its purchase price under its rules. Apple and its subsidiaries may enforce this agreement as third-party beneficiaries. Use Apple devices you own or control and follow store usage rules, including permitted family access. Comply with applicable export and sanctions restrictions.",
+          "clipped": false
+        },
+        {
+          "text": "Material changes will be shown before requesting renewed agreement. Contact MauGo at maugo.support@example.com. This is a reserved example address for the design preview, not an active support inbox; replace it with the actual MauGo support address before release. Version 1.0 · 13 October 2026. This document is a review draft for the prototype and does not create a real service contract.",
+          "clipped": false
+        },
+        {
+          "text": "I have read and agree to the Terms of Use and EULA.",
+          "clipped": false
+        },
+        {
+          "text": "Agree & continue",
+          "clipped": false
+        },
+        {
+          "text": "Not now",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "terms-scrolled",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "consent",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        },
+        {
+          "class": "terms-scroll terms-document",
+          "height": 348,
+          "content": 2524,
+          "top": 1000,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Before you continue",
+          "clipped": false
+        },
+        {
+          "text": "Read the terms before registering or signing in.",
+          "clipped": false
+        },
+        {
+          "text": "Version 1.0 · 13 October 2026 · Review draft",
+          "clipped": false
+        },
+        {
+          "text": "MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.",
+          "clipped": false
+        },
+        {
+          "text": "Use accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo has zero tolerance for objectionable content or abusive users. Do not post or send harassment, bullying, threats, hate speech, sexual exploitation, illegal sexual content, scams, spam, impersonation, or content that infringes rights. Do not publish private information without permission. These rules apply to letters, chats, profiles, images, recordings, stickers and moments.",
+          "clipped": false
+        },
+        {
+          "text": "You retain ownership of your content and must have permission to share it. You grant MauGo only the rights needed to store, display, transmit and moderate it for the service. One opening text message is permitted per new connection; further chat and attachments unlock after the recipient replies. Do not bypass this limit or repeatedly contact someone who declines or blocks you.",
+          "clipped": false
+        },
+        {
+          "text": "Use Report and Block in letter or conversation controls to flag unwanted content and stop contact. In the released service, MauGo may review reports, remove content and restrict or terminate abusive accounts, with notice and review where required by law. This preview saves reports locally; it has no connected moderation team and cannot deliver reports. It is not an emergency service.",
+          "clipped": false
+        },
+        {
+          "text": "In the intended app, diamonds are purchased in USD through the applicable store and used for features at the displayed price. Diamonds are not money, cannot be cashed out or transferred, and have no value outside MauGo. Filter Pass duration and diamond cost are shown before confirmation; extra days extend expiry and there is no automatic renewal. Store rules and mandatory consumer rights govern refunds. This preview uses test balances and makes no real charge.",
+          "clipped": false
+        },
+        {
+          "text": "Read Privacy information to understand the current data use. This preview stores account personas, messages and preferences in browser storage and selected media in IndexedDB. It does not send authentication emails or store passwords. File access follows your selection; microphone permission is requested for recording. Clearing local browser data may remove content. Hosting providers may process access logs.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo may change or discontinue features, subject to applicable law and purchased entitlements. You may stop using it and use account settings to export or delete local data. The preview is provided for evaluation without a promise of uninterrupted availability. Nothing in these terms excludes non-excludable warranties, liability or consumer rights under the laws that apply to you.",
+          "clipped": false
+        },
+        {
+          "text": "For an app distributed by Apple, this agreement is between you and MauGo. Apple is not responsible for app support, app-related claims or intellectual-property disputes; MauGo is responsible as required by law. If the app fails an applicable warranty, Apple may refund its purchase price under its rules. Apple and its subsidiaries may enforce this agreement as third-party beneficiaries. Use Apple devices you own or control and follow store usage rules, including permitted family access. Comply with applicable export and sanctions restrictions.",
+          "clipped": false
+        },
+        {
+          "text": "Material changes will be shown before requesting renewed agreement. Contact MauGo at maugo.support@example.com. This is a reserved example address for the design preview, not an active support inbox; replace it with the actual MauGo support address before release. Version 1.0 · 13 October 2026. This document is a review draft for the prototype and does not create a real service contract.",
+          "clipped": false
+        },
+        {
+          "text": "I have read and agree to the Terms of Use and EULA.",
+          "clipped": false
+        },
+        {
+          "text": "Agree & continue",
+          "clipped": false
+        },
+        {
+          "text": "Not now",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "terms-checked",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "consent",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        },
+        {
+          "class": "terms-scroll terms-document",
+          "height": 348,
+          "content": 2524,
+          "top": 1000,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Before you continue",
+          "clipped": false
+        },
+        {
+          "text": "Read the terms before registering or signing in.",
+          "clipped": false
+        },
+        {
+          "text": "Version 1.0 · 13 October 2026 · Review draft",
+          "clipped": false
+        },
+        {
+          "text": "MauGo provides a space to share letters, messages and moments. These Terms of Use and End User License Agreement govern your use of MauGo. You must be at least 18 and legally able to accept these terms. If you do not agree, do not register, sign in or use account features.",
+          "clipped": false
+        },
+        {
+          "text": "Use accurate information, keep your sign-in details secure and do not impersonate others or share access without permission. You are responsible for activity you authorize. Email and Apple are supported sign-in methods in the intended app; this preview only demonstrates their screens.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo grants a personal, limited, non-exclusive and non-transferable license to use the app under these terms and applicable store rules. Do not resell, unlawfully copy, bypass security, disrupt the service or reverse engineer it except where law permits. MauGo retains rights in its app and brand.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo has zero tolerance for objectionable content or abusive users. Do not post or send harassment, bullying, threats, hate speech, sexual exploitation, illegal sexual content, scams, spam, impersonation, or content that infringes rights. Do not publish private information without permission. These rules apply to letters, chats, profiles, images, recordings, stickers and moments.",
+          "clipped": false
+        },
+        {
+          "text": "You retain ownership of your content and must have permission to share it. You grant MauGo only the rights needed to store, display, transmit and moderate it for the service. One opening text message is permitted per new connection; further chat and attachments unlock after the recipient replies. Do not bypass this limit or repeatedly contact someone who declines or blocks you.",
+          "clipped": false
+        },
+        {
+          "text": "Use Report and Block in letter or conversation controls to flag unwanted content and stop contact. In the released service, MauGo may review reports, remove content and restrict or terminate abusive accounts, with notice and review where required by law. This preview saves reports locally; it has no connected moderation team and cannot deliver reports. It is not an emergency service.",
+          "clipped": false
+        },
+        {
+          "text": "In the intended app, diamonds are purchased in USD through the applicable store and used for features at the displayed price. Diamonds are not money, cannot be cashed out or transferred, and have no value outside MauGo. Filter Pass duration and diamond cost are shown before confirmation; extra days extend expiry and there is no automatic renewal. Store rules and mandatory consumer rights govern refunds. This preview uses test balances and makes no real charge.",
+          "clipped": false
+        },
+        {
+          "text": "Read Privacy information to understand the current data use. This preview stores account personas, messages and preferences in browser storage and selected media in IndexedDB. It does not send authentication emails or store passwords. File access follows your selection; microphone permission is requested for recording. Clearing local browser data may remove content. Hosting providers may process access logs.",
+          "clipped": false
+        },
+        {
+          "text": "MauGo may change or discontinue features, subject to applicable law and purchased entitlements. You may stop using it and use account settings to export or delete local data. The preview is provided for evaluation without a promise of uninterrupted availability. Nothing in these terms excludes non-excludable warranties, liability or consumer rights under the laws that apply to you.",
+          "clipped": false
+        },
+        {
+          "text": "For an app distributed by Apple, this agreement is between you and MauGo. Apple is not responsible for app support, app-related claims or intellectual-property disputes; MauGo is responsible as required by law. If the app fails an applicable warranty, Apple may refund its purchase price under its rules. Apple and its subsidiaries may enforce this agreement as third-party beneficiaries. Use Apple devices you own or control and follow store usage rules, including permitted family access. Comply with applicable export and sanctions restrictions.",
+          "clipped": false
+        },
+        {
+          "text": "Material changes will be shown before requesting renewed agreement. Contact MauGo at maugo.support@example.com. This is a reserved example address for the design preview, not an active support inbox; replace it with the actual MauGo support address before release. Version 1.0 · 13 October 2026. This document is a review draft for the prototype and does not create a real service contract.",
+          "clipped": false
+        },
+        {
+          "text": "I have read and agree to the Terms of Use and EULA.",
+          "clipped": false
+        },
+        {
+          "text": "Agree & continue",
+          "clipped": false
+        },
+        {
+          "text": "Not now",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "consent-privacy",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "privacy",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        },
+        {
+          "text": "How MauGo handles your information.",
+          "clipped": false
+        },
+        {
+          "text": "Official privacy policy pending Smith (E2). This is not a privacy policy. Not ready for release.",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-privacy-back",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signin-empty",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signin",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome back",
+          "clipped": false
+        },
+        {
+          "text": "Your little corner is waiting for you.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "Forgot password?",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signin-filled",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signin",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome back",
+          "clipped": false
+        },
+        {
+          "text": "Your little corner is waiting for you.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "Forgot password?",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signin-invalid",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signin",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome back",
+          "clipped": false
+        },
+        {
+          "text": "Your little corner is waiting for you.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "Forgot password?",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Enter a valid email address.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signin-api-failure",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signin",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome back",
+          "clipped": false
+        },
+        {
+          "text": "Your little corner is waiting for you.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "Forgot password?",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Invalid email or password.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signup-empty",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signup",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 758,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Create your account",
+          "clipped": false
+        },
+        {
+          "text": "A kind space starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Nickname",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Create account",
+          "clipped": false
+        },
+        {
+          "text": "Already have an account? Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signup-filled",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signup",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 758,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Create your account",
+          "clipped": false
+        },
+        {
+          "text": "A kind space starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Nickname",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Create account",
+          "clipped": false
+        },
+        {
+          "text": "Already have an account? Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signup-mismatch",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signup",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 892,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Create your account",
+          "clipped": false
+        },
+        {
+          "text": "A kind space starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Nickname",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Create account",
+          "clipped": false
+        },
+        {
+          "text": "Already have an account? Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        },
+        {
+          "text": "Passwords do not match.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signup-mismatch-scrolled",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signup",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 892,
+          "top": 192,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Create your account",
+          "clipped": false
+        },
+        {
+          "text": "A kind space starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Nickname",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Create account",
+          "clipped": false
+        },
+        {
+          "text": "Already have an account? Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        },
+        {
+          "text": "Passwords do not match.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "auth-privacy",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "privacy",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        },
+        {
+          "text": "How MauGo handles your information.",
+          "clipped": false
+        },
+        {
+          "text": "Official privacy policy pending Smith (E2). This is not a privacy policy. Not ready for release.",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-privacy-back",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "verify-empty",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "verify",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 701,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Verify your email",
+          "clipped": false
+        },
+        {
+          "text": "Email verification for:",
+          "clipped": false
+        },
+        {
+          "text": "reader@example.com",
+          "clipped": false
+        },
+        {
+          "text": "6-digit code",
+          "clipped": false
+        },
+        {
+          "text": "Verify & continue",
+          "clipped": false
+        },
+        {
+          "text": "Resend code",
+          "clipped": false
+        },
+        {
+          "text": "Use a different email",
+          "clipped": false
+        },
+        {
+          "text": "Sign out",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "verify-error",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "verify",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 795,
+          "top": 95,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Verify your email",
+          "clipped": false
+        },
+        {
+          "text": "Email verification for:",
+          "clipped": false
+        },
+        {
+          "text": "reader@example.com",
+          "clipped": false
+        },
+        {
+          "text": "6-digit code",
+          "clipped": false
+        },
+        {
+          "text": "Verify & continue",
+          "clipped": false
+        },
+        {
+          "text": "Resend code",
+          "clipped": false
+        },
+        {
+          "text": "Use a different email",
+          "clipped": false
+        },
+        {
+          "text": "Sign out",
+          "clipped": false
+        },
+        {
+          "text": "Incorrect verification code. Please try again.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "verify-back-signup",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signup",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 758,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Create your account",
+          "clipped": false
+        },
+        {
+          "text": "A kind space starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "Nickname",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Create account",
+          "clipped": false
+        },
+        {
+          "text": "Already have an account? Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "Privacy information",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "forgot-empty",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "forgot",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Forgot your password?",
+          "clipped": false
+        },
+        {
+          "text": "Enter your email to recover your password.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Continue",
+          "clipped": false
+        },
+        {
+          "text": "Back to sign in",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "forgot-validation",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "forgot",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Forgot your password?",
+          "clipped": false
+        },
+        {
+          "text": "Enter your email to recover your password.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Continue",
+          "clipped": false
+        },
+        {
+          "text": "Back to sign in",
+          "clipped": false
+        },
+        {
+          "text": "Enter a valid email address.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "recovery-code",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "verify",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 701,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Password recovery",
+          "clipped": false
+        },
+        {
+          "text": "Email verification for:",
+          "clipped": false
+        },
+        {
+          "text": "reader@example.com",
+          "clipped": false
+        },
+        {
+          "text": "6-digit code",
+          "clipped": false
+        },
+        {
+          "text": "Verify & continue",
+          "clipped": false
+        },
+        {
+          "text": "Resend code",
+          "clipped": false
+        },
+        {
+          "text": "Use a different email",
+          "clipped": false
+        },
+        {
+          "text": "Sign out",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "new-password",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "password",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Choose a new password",
+          "clipped": false
+        },
+        {
+          "text": "Use a new password you have not used before.",
+          "clipped": false
+        },
+        {
+          "text": "New password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Update password",
+          "clipped": false
+        },
+        {
+          "text": "Back to sign in",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "new-password-error",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "password",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Choose a new password",
+          "clipped": false
+        },
+        {
+          "text": "Use a new password you have not used before.",
+          "clipped": false
+        },
+        {
+          "text": "New password",
+          "clipped": false
+        },
+        {
+          "text": "Confirm password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "At least 8 characters, with a letter and a number or symbol.",
+          "clipped": false
+        },
+        {
+          "text": "Update password",
+          "clipped": false
+        },
+        {
+          "text": "Back to sign in",
+          "clipped": false
+        },
+        {
+          "text": "Passwords do not match.",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "password-back-signin",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "signin",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome back",
+          "clipped": false
+        },
+        {
+          "text": "Your little corner is waiting for you.",
+          "clipped": false
+        },
+        {
+          "text": "Email address",
+          "clipped": false
+        },
+        {
+          "text": "Password",
+          "clipped": false
+        },
+        {
+          "text": "Show password",
+          "clipped": false
+        },
+        {
+          "text": "Forgot password?",
+          "clipped": false
+        },
+        {
+          "text": "Sign in",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "apple-private",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "apple",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Apple sign-in",
+          "clipped": false
+        },
+        {
+          "text": "Apple sign-in requires native authorization and server configuration. The full flow is not connected yet.",
+          "clipped": false
+        },
+        {
+          "text": "Hide my email ✓",
+          "clipped": false
+        },
+        {
+          "text": "Share my email",
+          "clipped": false
+        },
+        {
+          "text": "Hide my email · Awaiting Apple authorization",
+          "clipped": false
+        },
+        {
+          "text": "Continue with Apple",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "apple-share",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "apple",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Apple sign-in",
+          "clipped": false
+        },
+        {
+          "text": "Apple sign-in requires native authorization and server configuration. The full flow is not connected yet.",
+          "clipped": false
+        },
+        {
+          "text": "Hide my email",
+          "clipped": false
+        },
+        {
+          "text": "Share my email ✓",
+          "clipped": false
+        },
+        {
+          "text": "Share my email · Awaiting Apple authorization",
+          "clipped": false
+        },
+        {
+          "text": "Continue with Apple",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth auth-main",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "apple-cancel",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "welcome",
+      "containers": [
+        {
+          "class": "auth-content",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "hidden",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "Welcome to MauGo",
+          "clipped": false
+        },
+        {
+          "text": "A little bird. A little story.",
+          "clipped": false
+        },
+        {
+          "text": "Read everyday stories. Share your own.",
+          "clipped": false
+        },
+        {
+          "text": "Continue with email",
+          "clipped": false
+        },
+        {
+          "text": "Continue with Apple",
+          "clipped": false
+        },
+        {
+          "text": "New here? Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Create an account",
+          "clipped": false
+        },
+        {
+          "text": "Terms of Service · Privacy Policy",
+          "clipped": false
+        },
+        {
+          "text": "Terms of Service",
+          "clipped": false
+        },
+        {
+          "text": "Privacy Policy",
+          "clipped": false
+        },
+        {
+          "text": "Explore preview",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-button ui-button--auth",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth-apple apple-button",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    },
+    {
+      "name": "signin-session",
+      "document": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "mode": "session",
+      "containers": [
+        {
+          "class": "auth-flow",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "overflow": "auto",
+          "overscroll": "contain"
+        }
+      ],
+      "copy": [
+        {
+          "text": "한국어",
+          "clipped": false
+        },
+        {
+          "text": "‹ Back",
+          "clipped": false
+        },
+        {
+          "text": "Welcome to MauGo",
+          "clipped": false
+        },
+        {
+          "text": "You are signed in.",
+          "clipped": false
+        },
+        {
+          "text": "reader@example.com",
+          "clipped": false
+        },
+        {
+          "text": "Meet your letters",
+          "clipped": false
+        },
+        {
+          "text": "Sign out",
+          "clipped": false
+        }
+      ],
+      "motion": [
+        {
+          "class": "ui-icon-button ui-icon-button--auth-back back",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "flow-content",
+          "animation": "none",
+          "transition": "0s"
+        },
+        {
+          "class": "ui-button ui-button--auth",
+          "animation": "none",
+          "transition": "0s"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "forbidden": [],
+  "completed": true
+}

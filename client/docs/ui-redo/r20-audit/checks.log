@@ -1,0 +1,151 @@
+{
+  "baseline": "f3a9ccd",
+  "client/src/components/MomentsFlow.vue": {
+    "scriptUnchanged": true,
+    "scriptSHA256": "eae6f8336a58007bb789db8ba7e2d750f700aef32529280fc8d9d69889afa46e",
+    "wholeFileUnchanged": false
+  },
+  "client/src/components/ProfileFlow.vue": {
+    "scriptUnchanged": true,
+    "scriptSHA256": "e01cf7bbb4af263c1175b25e6a08eb1c911701c7677705e8cc75596ed1ccd6c1",
+    "wholeFileUnchanged": true
+  },
+  "escapeProtectionMatchesBase": true,
+  "A5CurrentScan": {
+    "hex": 0,
+    "rgb": 0,
+    "important": 0,
+    "device": 0
+  },
+  "legacySelectors": {
+    "client/src/styles.css": 0,
+    "client/src/fidelity.css": 0
+  },
+  "productionChanged": [
+    "client/src/components/MomentsFlow.vue",
+    "client/src/styles/pages/moments.css"
+  ]
+}
+{
+  "screenshots": 100,
+  "primaryScreenshots": 48,
+  "groups": [
+    {
+      "group": "667-en",
+      "records": 25,
+      "screenshots": 25,
+      "composeScroll": {
+        "top": 255,
+        "client": 555,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 235,
+        "client": 555,
+        "content": 790,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "667-ko",
+      "records": 25,
+      "screenshots": 25,
+      "composeScroll": {
+        "top": 255,
+        "client": 555,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 193,
+        "client": 555,
+        "content": 748,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-en",
+      "records": 25,
+      "screenshots": 25,
+      "composeScroll": {
+        "top": 110,
+        "client": 700,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 90,
+        "client": 700,
+        "content": 790,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    },
+    {
+      "group": "812-ko",
+      "records": 25,
+      "screenshots": 25,
+      "composeScroll": {
+        "top": 110,
+        "client": 700,
+        "content": 810,
+        "documentY": 0
+      },
+      "listScroll": {
+        "top": 48,
+        "client": 700,
+        "content": 748,
+        "documentY": 0
+      },
+      "stickerScroll": {
+        "top": 0,
+        "client": 304,
+        "content": 304,
+        "documentY": 0
+      },
+      "escape": true,
+      "categoryEntryClipped": true,
+      "imagesDecoded": true,
+      "animationsCaptured": 4,
+      "apiCalls": 59,
+      "realBackendVerified": false
+    }
+  ],
+  "overallAcceptance": "未通过／待 Smith"
+}

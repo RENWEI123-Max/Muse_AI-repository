@@ -1,0 +1,130 @@
+{
+  "fixtureOnly": true,
+  "pngCount": 64,
+  "mainStateScreenshots": 24,
+  "mainStatesMissing": [],
+  "pngCrcAndDimensionsVerified": true,
+  "documentSamples": 60,
+  "groups": [
+    {
+      "group": "667-en",
+      "records": 15,
+      "checks": {
+        "entryVeilTransition": "0s",
+        "buttonPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+        "pickerCancel": true,
+        "zoomRedraw": true,
+        "zoom": "1.5",
+        "cropCancel": true,
+        "failureAlertOutsideDialog": true,
+        "removeEscape": true,
+        "archiveEscape": true,
+        "backdropClose": true,
+        "archiveLayout": {
+          "gridBottom": 703.5,
+          "backTop": 747.5
+        },
+        "archiveScroll": {
+          "top": 161,
+          "documentY": 0
+        },
+        "escape": {
+          "profileVisible": true,
+          "dialogs": 0
+        },
+        "clipped": []
+      }
+    },
+    {
+      "group": "667-ko",
+      "records": 15,
+      "checks": {
+        "entryVeilTransition": "0s",
+        "buttonPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+        "pickerCancel": true,
+        "zoomRedraw": true,
+        "zoom": "1.5",
+        "cropCancel": true,
+        "failureAlertOutsideDialog": true,
+        "removeEscape": true,
+        "archiveEscape": true,
+        "backdropClose": true,
+        "archiveLayout": {
+          "gridBottom": 703.5,
+          "backTop": 747.5
+        },
+        "archiveScroll": {
+          "top": 161,
+          "documentY": 0
+        },
+        "escape": {
+          "profileVisible": true,
+          "dialogs": 0
+        },
+        "clipped": []
+      }
+    },
+    {
+      "group": "812-en",
+      "records": 15,
+      "checks": {
+        "entryVeilTransition": "0s",
+        "buttonPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+        "pickerCancel": true,
+        "zoomRedraw": true,
+        "zoom": "1.5",
+        "cropCancel": true,
+        "failureAlertOutsideDialog": true,
+        "removeEscape": true,
+        "archiveEscape": true,
+        "backdropClose": true,
+        "archiveLayout": {
+          "gridBottom": 836.5,
+          "backTop": 880.5
+        },
+        "archiveScroll": {
+          "top": 161,
+          "documentY": 0
+        },
+        "escape": {
+          "profileVisible": true,
+          "dialogs": 0
+        },
+        "clipped": []
+      }
+    },
+    {
+      "group": "812-ko",
+      "records": 15,
+      "checks": {
+        "entryVeilTransition": "0s",
+        "buttonPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+        "pickerCancel": true,
+        "zoomRedraw": true,
+        "zoom": "1.5",
+        "cropCancel": true,
+        "failureAlertOutsideDialog": true,
+        "removeEscape": true,
+        "archiveEscape": true,
+        "backdropClose": true,
+        "archiveLayout": {
+          "gridBottom": 836.5,
+          "backTop": 880.5
+        },
+        "archiveScroll": {
+          "top": 161,
+          "documentY": 0
+        },
+        "escape": {
+          "profileVisible": true,
+          "dialogs": 0
+        },
+        "clipped": []
+      }
+    }
+  ],
+  "buildExitCode": 0,
+  "playwrightExitCode": 0,
+  "playwrightResult": "4 passed (1.4m)",
+  "realBackendRegression": "not run; no test database"
+}

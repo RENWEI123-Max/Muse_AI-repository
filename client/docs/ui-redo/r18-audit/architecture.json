@@ -1,0 +1,19 @@
+{
+  "base": "f04abf1",
+  "branch": "codex/r18-audit",
+  "scriptSetupByteIdentical": true,
+  "r16PersonEscapePreserved": true,
+  "r17LikesCapturePreserved": true,
+  "productionFiles": {
+    "client/src/components/ProfileFlow.vue": {
+      "hexLiterals": 0,
+      "important": 0,
+      "devicePrefix": 0
+    },
+    "client/src/styles/pages/profile.css": {
+      "hexLiterals": 0,
+      "important": 0,
+      "devicePrefix": 0
+    }
+  }
+}

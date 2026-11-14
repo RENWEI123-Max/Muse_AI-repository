@@ -1,0 +1,653 @@
+{
+  "fixture": true,
+  "initialPosts": 0,
+  "contentOrigin": "Only browser typed content and UI uploads/publish; no seeded posts/likes/comments or Vue state injection",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "email": "r20-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "content": "테스트 순간",
+        "mediaIds": [],
+        "category": "Life",
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/posts",
+      "query": "",
+      "method": "POST",
+      "body": {
+        "content": "게시한 순간",
+        "mediaIds": [],
+        "category": "Life",
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/posts/post-1",
+      "query": "",
+      "method": "DELETE"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r20-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "moments-empty",
+      "primary": true,
+      "decoded": [],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "나의 순간",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "전체",
+          "clipped": false
+        },
+        {
+          "text": "인물",
+          "clipped": false
+        },
+        {
+          "text": "스타일",
+          "clipped": false
+        },
+        {
+          "text": "패션",
+          "clipped": false
+        },
+        {
+          "text": "일상",
+          "clipped": false
+        },
+        {
+          "text": "작은 순간을 여기에 간직하세요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "list-failure",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        }
+      ],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "나의 순간",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "전체",
+          "clipped": false
+        },
+        {
+          "text": "인물",
+          "clipped": false
+        },
+        {
+          "text": "스타일",
+          "clipped": false
+        },
+        {
+          "text": "패션",
+          "clipped": false
+        },
+        {
+          "text": "일상",
+          "clipped": false
+        },
+        {
+          "text": "작은 순간을 여기에 간직하세요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "compose-translated",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "작은 순간",
+          "clipped": false
+        },
+        {
+          "text": "무슨 생각을 하고 있나요?",
+          "clipped": false
+        },
+        {
+          "text": "6 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ 미디어",
+          "clipped": false
+        },
+        {
+          "text": "☺ 스티커",
+          "clipped": false
+        },
+        {
+          "text": "카테고리\n일상 ›",
+          "clipped": false
+        },
+        {
+          "text": "일상 ›",
+          "clipped": false
+        },
+        {
+          "text": "공개 범위\n전체 공개 ›",
+          "clipped": false
+        },
+        {
+          "text": "전체 공개 ›",
+          "clipped": false
+        },
+        {
+          "text": "첨부 파일은 최대 6개입니다. 공유 시 공개 범위가 적용돼요.",
+          "clipped": false
+        },
+        {
+          "text": "순간 게시",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "visibility-translated",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-visibility",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "overflow": "auto",
+        "scrollHeight": 304,
+        "clientHeight": 292,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "누가 볼 수 있나요?",
+          "clipped": false
+        },
+        {
+          "text": "전체 공개\n✓",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "친구",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나만 보기",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "답장을 받은 사람들이 친구예요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "publish-error",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-draft",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "작은 순간",
+          "clipped": false
+        },
+        {
+          "text": "무슨 생각을 하고 있나요?",
+          "clipped": false
+        },
+        {
+          "text": "6 / 1000",
+          "clipped": false
+        },
+        {
+          "text": "▧ 미디어",
+          "clipped": false
+        },
+        {
+          "text": "☺ 스티커",
+          "clipped": false
+        },
+        {
+          "text": "카테고리\n일상 ›",
+          "clipped": false
+        },
+        {
+          "text": "일상 ›",
+          "clipped": false
+        },
+        {
+          "text": "공개 범위\n전체 공개 ›",
+          "clipped": false
+        },
+        {
+          "text": "전체 공개 ›",
+          "clipped": false
+        },
+        {
+          "text": "첨부 파일은 최대 6개입니다. 공유 시 공개 범위가 적용돼요.",
+          "clipped": false
+        },
+        {
+          "text": "순간 게시",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "published-toast",
+      "primary": false,
+      "decoded": [],
+      "state": "moments-list",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "나의 순간",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "전체",
+          "clipped": false
+        },
+        {
+          "text": "인물",
+          "clipped": false
+        },
+        {
+          "text": "스타일",
+          "clipped": false
+        },
+        {
+          "text": "패션",
+          "clipped": false
+        },
+        {
+          "text": "일상",
+          "clipped": false
+        },
+        {
+          "text": "11/15/2026 · 전체 공개 · 일상",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "게시한 순간",
+          "clipped": false
+        },
+        {
+          "text": "순간 보기 ›",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "delete-translated",
+      "primary": false,
+      "decoded": [],
+      "state": "moment-delete",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "transition": "0s",
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 405,
+          "width": 327,
+          "height": 238
+        },
+        "overflow": "auto",
+        "scrollHeight": 236,
+        "clientHeight": 236,
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out"
+        },
+        "transition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "이 게시물을 삭제할까요?",
+          "clipped": false
+        },
+        {
+          "text": "게시한 순간이 삭제됩니다.",
+          "clipped": false
+        },
+        {
+          "text": "삭제",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "deleted-toast",
+      "primary": false,
+      "decoded": [
+        {
+          "loaded": true,
+          "src": "repository asset"
+        }
+      ],
+      "state": "moments-empty",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null,
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "나의 순간",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "전체",
+          "clipped": false
+        },
+        {
+          "text": "인물",
+          "clipped": false
+        },
+        {
+          "text": "스타일",
+          "clipped": false
+        },
+        {
+          "text": "패션",
+          "clipped": false
+        },
+        {
+          "text": "일상",
+          "clipped": false
+        },
+        {
+          "text": "작은 순간을 여기에 간직하세요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "checks": {},
+  "errors": []
+}

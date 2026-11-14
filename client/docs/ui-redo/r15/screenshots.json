@@ -1,0 +1,150 @@
+[
+  {
+    "state": "welcome",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "terms-unchecked",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "terms-checked",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signin-empty",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signin-filled",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signin-invalid",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signup-empty",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signup-filled",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "signup-mismatch",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "verify-empty",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "verify-error",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "verify-resend",
+    "exists": false
+  },
+  {
+    "state": "forgot-empty",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "recovery-code",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "new-password",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "new-password-error",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "apple-private",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "apple-share",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  },
+  {
+    "state": "auth-privacy",
+    "exists": true,
+    "dimensions": [
+      375,
+      812
+    ]
+  }
+]

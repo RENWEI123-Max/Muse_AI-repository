@@ -1,0 +1,13 @@
+
+> maugo-client@0.1.0 build
+> npm run verify:assets && vue-tsc --noEmit && vite build
+
+
+> maugo-client@0.1.0 verify:assets
+> node scripts/verify-assets.mjs
+
+PASS: 343 PNGs; manifest paths, SHA256, dimensions, fonts and OFL licenses
+tests/r13-wallpapers.spec.ts(12,206): error TS7006: Parameter 'imgs' implicitly has an 'any' type.
+tests/r13-wallpapers.spec.ts(12,233): error TS7006: Parameter 'img' implicitly has an 'any' type.
+tests/r13-wallpapers.spec.ts(12,456): error TS7006: Parameter 'els' implicitly has an 'any' type.
+tests/r13-wallpapers.spec.ts(12,469): error TS7006: Parameter 'e' implicitly has an 'any' type.

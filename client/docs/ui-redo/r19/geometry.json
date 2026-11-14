@@ -1,0 +1,302 @@
+[
+  {
+    "selector": ".cards-panel",
+    "target": [
+      12,
+      418,
+      351,
+      370
+    ],
+    "actual": {
+      "x": 12,
+      "y": 418,
+      "width": 351,
+      "height": 370
+    }
+  },
+  {
+    "selector": ".cards-title",
+    "target": [
+      33,
+      451,
+      309,
+      24
+    ],
+    "actual": {
+      "x": 33,
+      "y": 451,
+      "width": 309,
+      "height": 24
+    }
+  },
+  {
+    "selector": "[data-card-type=portrait]",
+    "target": [
+      33,
+      499,
+      309,
+      52
+    ],
+    "actual": {
+      "x": 33,
+      "y": 499,
+      "width": 309,
+      "height": 52
+    }
+  },
+  {
+    "selector": ".cards-cancel",
+    "target": [
+      33,
+      719,
+      309,
+      48
+    ],
+    "actual": {
+      "x": 33,
+      "y": 719,
+      "width": 309,
+      "height": 48
+    }
+  },
+  {
+    "selector": ".cards-panel",
+    "target": [
+      12,
+      462,
+      351,
+      326
+    ],
+    "actual": {
+      "x": 12,
+      "y": 462,
+      "width": 351,
+      "height": 326
+    }
+  },
+  {
+    "selector": "#card-view",
+    "target": [
+      33,
+      543,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 543,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": "#card-type",
+    "target": [
+      33,
+      599,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 599,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": "#card-visibility",
+    "target": [
+      33,
+      655,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 655,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": "#card-remove",
+    "target": [
+      33,
+      711,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 711,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": ".cards-panel",
+    "target": [
+      12,
+      179.5,
+      351,
+      608.5
+    ],
+    "actual": {
+      "x": 12,
+      "y": 179.5,
+      "width": 351,
+      "height": 608.5
+    }
+  },
+  {
+    "selector": ".preview",
+    "target": [
+      33,
+      260.5,
+      309,
+      480
+    ],
+    "actual": {
+      "x": 33,
+      "y": 260.5,
+      "width": 309,
+      "height": 480
+    }
+  },
+  {
+    "selector": ".cards-panel",
+    "target": [
+      12,
+      418,
+      351,
+      370
+    ],
+    "actual": {
+      "x": 12,
+      "y": 418,
+      "width": 351,
+      "height": 370
+    }
+  },
+  {
+    "selector": "[data-card-type=life]",
+    "target": [
+      33,
+      655,
+      309,
+      52
+    ],
+    "actual": {
+      "x": 33,
+      "y": 655,
+      "width": 309,
+      "height": 52
+    }
+  },
+  {
+    "selector": ".cards-panel",
+    "target": [
+      12,
+      494,
+      351,
+      294
+    ],
+    "actual": {
+      "x": 12,
+      "y": 494,
+      "width": 351,
+      "height": 294
+    }
+  },
+  {
+    "selector": "[data-visibility=everyone]",
+    "target": [
+      33,
+      575,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 575,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": "[data-visibility=friends]",
+    "target": [
+      33,
+      643,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 643,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": "[data-visibility=only_me]",
+    "target": [
+      33,
+      711,
+      309,
+      56
+    ],
+    "actual": {
+      "x": 33,
+      "y": 711,
+      "width": 309,
+      "height": 56
+    }
+  },
+  {
+    "selector": ".cards-panel",
+    "target": [
+      24,
+      287,
+      327,
+      238
+    ],
+    "actual": {
+      "x": 24,
+      "y": 287,
+      "width": 327,
+      "height": 238
+    }
+  },
+  {
+    "selector": "#d5-confirm-delete",
+    "target": [
+      49,
+      408,
+      277,
+      48
+    ],
+    "actual": {
+      "x": 49,
+      "y": 408,
+      "width": 277,
+      "height": 48
+    }
+  },
+  {
+    "selector": ".cards-cancel",
+    "target": [
+      49,
+      464,
+      277,
+      44
+    ],
+    "actual": {
+      "x": 49,
+      "y": 464,
+      "width": 277,
+      "height": 44
+    }
+  }
+]

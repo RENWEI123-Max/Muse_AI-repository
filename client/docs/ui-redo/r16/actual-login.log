@@ -1,0 +1,27 @@
+Actual backend login status 401
+file:///root/Muse_AI-repository/client/r16-connect.mjs:6
+console.log('Actual backend login status',response.status());if(!response.ok())throw Error('No more login attempts')
+                                                                                     ^
+
+Error: No more login attempts
+    at file:///root/Muse_AI-repository/client/r16-connect.mjs:6:86
+
+Node.js v22.23.4
+node:internal/modules/cjs/loader:1433
+  throw err;
+  ^
+
+Error: Cannot find module '/root/Muse_AI-repository/client/r16-read-session.mjs'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+    at Function._load (node:internal/modules/cjs/loader:1216:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.23.4
+Retained login alert: [ 'Invalid email or password' ]

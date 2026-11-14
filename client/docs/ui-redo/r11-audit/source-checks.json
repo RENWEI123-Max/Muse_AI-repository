@@ -1,0 +1,54 @@
+{
+  "client/src/components/ChatFlow.vue": {
+    "full_file": {
+      "hex": 10,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "baseline": {
+      "hex": 10,
+      "important": 0,
+      "device_prefix": 0
+    }
+  },
+  "client/src/styles/pages/chat.css": {
+    "full_file": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "baseline": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    }
+  },
+  "client/src/lib/i18n.ts": {
+    "full_file": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "baseline": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    }
+  },
+  "added_lines": {
+    "hex": 0,
+    "important": 0,
+    "device_prefix": 0
+  },
+  "business_functions_unchanged": {
+    "send": true,
+    "sendVoice": true,
+    "hold": true,
+    "finishVoice": true,
+    "cancelVoice": true,
+    "load": true,
+    "request": true,
+    "gate": true,
+    "changeBlock": true
+  }
+}

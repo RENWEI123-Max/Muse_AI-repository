@@ -1,0 +1,38 @@
+[WebServer] (node:65392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:65394) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough (20.8s)
+
+
+  1) tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 703.5
+    Received:    586
+
+      62 |  // Archive entries arise only from actual uploads/removals through the UI.
+      63 |  for(let i=0;i<9;i++){await open();await root.locator('[data-remove-avatar]').first().click();await root.locator('#confirm-remove-avatar').click();await upload();await commit()}
+    > 64 |  await open();await root.locator('#removed-avatars').click();await snap('archive-overflow');checks.archiveLayout=await panel.evaluate(e=>({gridBottom:e.querySelector('.avatar-gallery')!.getBoundingClientRect().bottom,backTop:e.querySelector('#avatar-gallery-back')!.getBoundingClientRect().top}));expect.soft(checks.archiveLayout.backTop).toBeGreaterThanOrEqual(checks.archiveLayout.gridBottom);await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(350);checks.archiveScroll=await panel.evaluate(e=>({top:e.scrollTop,documentY:scrollY}));await snap('archive-scrolled');await close();await close()
+         |                                                                                                                                                                                                                                                                                                                                                    ^
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+      67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:64:340
+
+    Error Context: test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ──────────────────────────────────

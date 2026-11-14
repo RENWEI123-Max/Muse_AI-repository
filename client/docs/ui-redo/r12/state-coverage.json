@@ -1,0 +1,42 @@
+[
+  {
+    "state": "chat-details",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-details-waiting",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-remark",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-search-empty",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-search-result",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-search-none",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-clear-confirm",
+    "exists": true,
+    "reason": null
+  },
+  {
+    "state": "chat-cleared",
+    "exists": false,
+    "reason": "Destructive clear not executed; pending Smith"
+  }
+]

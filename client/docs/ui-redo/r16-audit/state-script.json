@@ -1,0 +1,65 @@
+{
+  "id": "public-profile",
+  "title": "09 · 用户资料",
+  "description": "未回应与已回应的资料、关注和照片查看。",
+  "pages": [
+    {
+      "id": "person-profile",
+      "title": "用户资料 / 内容完整",
+      "task": "public-profile",
+      "seed": "standard",
+      "actions": []
+    },
+    {
+      "id": "person-waiting",
+      "title": "用户资料 / 尚未回复",
+      "task": "public-profile",
+      "seed": "waiting-only",
+      "actions": [],
+      "params": {
+        "id": "waiting"
+      }
+    },
+    {
+      "id": "person-followed",
+      "title": "用户资料 / 已关注",
+      "task": "public-profile",
+      "seed": "following",
+      "actions": []
+    },
+    {
+      "id": "person-no-content",
+      "title": "用户资料 / 无动态",
+      "task": "public-profile",
+      "seed": "person-empty",
+      "actions": [],
+      "params": {
+        "id": "reader"
+      }
+    },
+    {
+      "id": "person-photo",
+      "title": "用户资料 / 头像大图",
+      "task": "public-profile",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#public-avatar"
+        ]
+      ]
+    },
+    {
+      "id": "person-safety",
+      "title": "用户资料 / 举报或屏蔽",
+      "task": "public-profile",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#public-more"
+        ]
+      ]
+    }
+  ]
+}

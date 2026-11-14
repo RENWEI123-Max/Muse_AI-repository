@@ -1,0 +1,22 @@
+Listing tests:
+  client.spec.ts:2:1 › welcome, language entry, preview and circular avatar
+  client.spec.ts:21:1 › all 343 manifest images load and decode without 404
+  d4.spec.ts:9:1 › D4 editing, avatar gallery, remove, restore, crop, persistence and full slots
+  d4.spec.ts:15:40 › D4 public profile and chat gate open
+  d4.spec.ts:15:40 › D4 public profile and chat gate waiting
+  d4.spec.ts:18:1 › D4 profile cannot bypass block
+  d4.spec.ts:19:1 › D4 public full content, photo previews, own image cards and outgoing visits
+  d4.spec.ts:22:1 › D4 following empty, my letters empty and no public moments
+  letters.spec.ts:3:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database
+  r06-discover.spec.ts:8:64 › R06 home-ready: geometry, exact styles and capture
+  r06-discover.spec.ts:8:64 › R06 home-empty: geometry, exact styles and capture
+  r06-discover.spec.ts:8:64 › R06 home-response: geometry, exact styles and capture
+  r07-filter.spec.ts:8:117 › R07 filters-free
+  r07-filter.spec.ts:8:117 › R07 filters-active
+  r07-filter.spec.ts:8:117 › R07 filters-selected
+  r07-filter.spec.ts:8:117 › R07 bird-female
+  r07-filter.spec.ts:8:117 › R07 bird-male
+  r07-filter.spec.ts:8:117 › R07 bird-motion-off
+  r07-filter.spec.ts:70:45 › R07 Korean filters: no overflow and small-screen artwork
+  r07-filter.spec.ts:70:45 › R07 Korean appearance: no overflow and small-screen artwork
+Total: 20 tests in 5 files

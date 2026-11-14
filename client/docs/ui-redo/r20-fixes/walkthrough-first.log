@@ -1,0 +1,127 @@
+[WebServer] (node:70150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:70152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/r20-fixes-avatar.spec.ts:6:61 › 667 en R20 fixes avatar walkthrough (552ms)
+(node:70164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 tests/r20-fixes-avatar.spec.ts:6:61 › 667 ko R20 fixes avatar walkthrough (689ms)
+(node:70172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 tests/r20-fixes-avatar.spec.ts:6:61 › 812 en R20 fixes avatar walkthrough (543ms)
+(node:70182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 tests/r20-fixes-avatar.spec.ts:6:61 › 812 ko R20 fixes avatar walkthrough (689ms)
+(node:70187) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/r20-fixes-moments.spec.ts:4:61 › 667 en R20 fixes moments walkthrough (11.7s)
+  ✓   6 tests/r20-fixes-moments.spec.ts:4:61 › 667 ko R20 fixes moments walkthrough (11.8s)
+  ✓   7 tests/r20-fixes-moments.spec.ts:4:61 › 812 en R20 fixes moments walkthrough (11.9s)
+  ✓   8 tests/r20-fixes-moments.spec.ts:4:61 › 812 ko R20 fixes moments walkthrough (11.9s)
+  ✓   9 tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough (12.4s)
+  ✓  10 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (11.9s)
+  ✓  11 tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough (12.2s)
+  ✓  12 tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough (11.8s)
+
+
+  1) tests/r20-fixes-avatar.spec.ts:6:61 › 667 en R20 fixes avatar walkthrough ─────────────────────
+
+    ReferenceError: choose is not defined
+
+      41 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      42 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 43 |  await open();await choose();await close();await expect(panel).toHaveCount(0);await expect(root.locator('#edit-avatar')).toBeFocused();await snap('crop-close-source')
+         |               ^
+      44 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await choose();await close();await expect(root.locator('#edit-name')).toBeVisible();await expect(root.locator('#change-avatar')).toBeFocused();await snap('crop-close-edit')
+      45 |  await root.locator('#change-avatar').click();const large=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(root.locator('.ui-toast')).toContainText('20 MB');await snap('avatar-size-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000});expect(calls.filter(c=>c.path==='/media/uploads')).toHaveLength(0);await close()
+      46 |  await root.locator('#page-back').click();await open();await choose();await commit();await expect(root.locator('.ui-toast')).toContainText(t('Avatar saved.'));await snap('avatar-saved-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-avatar.spec.ts:43:15
+
+    Error Context: test-results/r20-fixes/r20-fixes-avatar-667-en-R20-fixes-avatar-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-avatar-667-en-R20-fixes-avatar-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-avatar-667-en-R20-fixes-avatar-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-fixes-avatar.spec.ts:6:61 › 667 ko R20 fixes avatar walkthrough ─────────────────────
+
+    ReferenceError: choose is not defined
+
+      41 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      42 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 43 |  await open();await choose();await close();await expect(panel).toHaveCount(0);await expect(root.locator('#edit-avatar')).toBeFocused();await snap('crop-close-source')
+         |               ^
+      44 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await choose();await close();await expect(root.locator('#edit-name')).toBeVisible();await expect(root.locator('#change-avatar')).toBeFocused();await snap('crop-close-edit')
+      45 |  await root.locator('#change-avatar').click();const large=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(root.locator('.ui-toast')).toContainText('20 MB');await snap('avatar-size-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000});expect(calls.filter(c=>c.path==='/media/uploads')).toHaveLength(0);await close()
+      46 |  await root.locator('#page-back').click();await open();await choose();await commit();await expect(root.locator('.ui-toast')).toContainText(t('Avatar saved.'));await snap('avatar-saved-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-avatar.spec.ts:43:15
+
+    Error Context: test-results/r20-fixes/r20-fixes-avatar-667-ko-R20-fixes-avatar-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-avatar-667-ko-R20-fixes-avatar-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-avatar-667-ko-R20-fixes-avatar-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-fixes-avatar.spec.ts:6:61 › 812 en R20 fixes avatar walkthrough ─────────────────────
+
+    ReferenceError: choose is not defined
+
+      41 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      42 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 43 |  await open();await choose();await close();await expect(panel).toHaveCount(0);await expect(root.locator('#edit-avatar')).toBeFocused();await snap('crop-close-source')
+         |               ^
+      44 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await choose();await close();await expect(root.locator('#edit-name')).toBeVisible();await expect(root.locator('#change-avatar')).toBeFocused();await snap('crop-close-edit')
+      45 |  await root.locator('#change-avatar').click();const large=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(root.locator('.ui-toast')).toContainText('20 MB');await snap('avatar-size-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000});expect(calls.filter(c=>c.path==='/media/uploads')).toHaveLength(0);await close()
+      46 |  await root.locator('#page-back').click();await open();await choose();await commit();await expect(root.locator('.ui-toast')).toContainText(t('Avatar saved.'));await snap('avatar-saved-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-avatar.spec.ts:43:15
+
+    Error Context: test-results/r20-fixes/r20-fixes-avatar-812-en-R20-fixes-avatar-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-avatar-812-en-R20-fixes-avatar-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-avatar-812-en-R20-fixes-avatar-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-fixes-avatar.spec.ts:6:61 › 812 ko R20 fixes avatar walkthrough ─────────────────────
+
+    ReferenceError: choose is not defined
+
+      41 |  const commit=async()=>{await root.locator('#save-avatar').click();await expect(panel).toHaveCount(0)}
+      42 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r18-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 43 |  await open();await choose();await close();await expect(panel).toHaveCount(0);await expect(root.locator('#edit-avatar')).toBeFocused();await snap('crop-close-source')
+         |               ^
+      44 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await choose();await close();await expect(root.locator('#edit-name')).toBeVisible();await expect(root.locator('#change-avatar')).toBeFocused();await snap('crop-close-edit')
+      45 |  await root.locator('#change-avatar').click();const large=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(root.locator('.ui-toast')).toContainText('20 MB');await snap('avatar-size-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000});expect(calls.filter(c=>c.path==='/media/uploads')).toHaveLength(0);await close()
+      46 |  await root.locator('#page-back').click();await open();await choose();await commit();await expect(root.locator('.ui-toast')).toContainText(t('Avatar saved.'));await snap('avatar-saved-toast');await expect(root.locator('.ui-toast')).toHaveCount(0,{timeout:4000})
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-avatar.spec.ts:43:15
+
+    Error Context: test-results/r20-fixes/r20-fixes-avatar-812-ko-R20-fixes-avatar-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-avatar-812-ko-R20-fixes-avatar-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-avatar-812-ko-R20-fixes-avatar-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-fixes-avatar.spec.ts:6:61 › 667 en R20 fixes avatar walkthrough ──────────────────────
+    tests/r20-fixes-avatar.spec.ts:6:61 › 667 ko R20 fixes avatar walkthrough ──────────────────────
+    tests/r20-fixes-avatar.spec.ts:6:61 › 812 en R20 fixes avatar walkthrough ──────────────────────
+    tests/r20-fixes-avatar.spec.ts:6:61 › 812 ko R20 fixes avatar walkthrough ──────────────────────
+  8 passed (1.7m)

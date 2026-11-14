@@ -1,0 +1,29 @@
+
+Running 1 test using 1 worker
+
+(node:1345718) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access (31.3s)
+
+
+  1) tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 0
+    Received length: 2
+    Received array:  [{"attachments": [{"id": "27eb4900-a30d-4245-9f1a-537ac0a63207", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/27eb4900-a30d-4245-9f1a-537ac0a63207"}, {"id": "35613b76-e700-40ee-a910-19cbe591df53", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/35613b76-e700-40ee-a910-19cbe591df53"}, {"id": "4f5195e7-e818-40fa-abdc-8c73a1b5e39e", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/4f5195e7-e818-40fa-abdc-8c73a1b5e39e"}, {"id": "6cdd9a7f-a3d9-4aa6-bb7f-0f6302f761e9", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/6cdd9a7f-a3d9-4aa6-bb7f-0f6302f761e9"}, {"id": "da51d666-0cee-42d0-af4e-4a50a942c2a7", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/da51d666-0cee-42d0-af4e-4a50a942c2a7"}, {"id": "7241883a-9147-4d15-8578-e3405f270f11", "kind": "image", "mimeType": "image/png", "size": 170825, "url": "/media/uploads/7241883a-9147-4d15-8578-e3405f270f11"}], "category": "Life", "content": "Six photos", "createdAt": "2026-11-14T08:23:50.611Z", "id": "2ba9edee-0447-43c1-b4c6-b49abc79b350", "userId": "fb11ab7b-d7d2-4a39-b0ea-2067aaa1c448", "visibility": "everyone"}, {"attachments": [], "category": "Life", "content": "Everyone can see this", "createdAt": "2026-11-14T08:23:46.163Z", "id": "0118d81f-005d-4769-9ef6-2460e643079c", "userId": "fb11ab7b-d7d2-4a39-b0ea-2067aaa1c448", "visibility": "everyone"}]
+
+      57 |  const viewerContext=await browser.newContext({viewport:{width:375,height:812}}),viewer=await viewerContext.newPage();await login(viewer,fixture.viewer)
+      58 |  const checks=await viewer.evaluate(async({postId,mediaUrl,postMediaUrl,token}:any)=>{const get=async(path:string)=>{const r=await fetch('/api'+path,{headers:{Authorization:'Bearer '+token}});return {status:r.status,body:await r.json()}};return {list:await get('/posts'),detail:await get('/posts/'+postId),cardMedia:await get(mediaUrl),postMedia:await get(postMediaUrl)}},{postId:post.id,mediaUrl,postMediaUrl:post.attachments[0].url,token:fixture.viewer.token})
+    > 59 |  expect(checks.list.body.items).toHaveLength(0);expect(checks.detail.status).toBe(403);expect(checks.cardMedia.status).toBe(403);expect(checks.postMedia.status).toBe(403);expect((await request.delete('http://127.0.0.1:3069/posts/'+post.id,{headers:viewerHeaders})).status()).toBe(403)
+         |                                 ^
+      60 |  await viewerContext.setExtraHTTPHeaders(viewerHeaders);await viewer.goto('/api/posts/'+post.id);await viewer.screenshot({path:`${evidence}/visibility-post-denied.png`});await viewer.goto('/api'+mediaUrl);await viewer.screenshot({path:`${evidence}/visibility-card-denied.png`})
+      61 |  // Change card to friends then everyone; restrictions are checked by server, never client filtering.
+      62 |  for(const [visibility,status] of [['friends',403],['everyone',200]] as const){expect((await request.patch(`http://127.0.0.1:3069/users/me/image-cards/${cardId}`,{headers:authorHeaders,data:{visibility}})).status()).toBe(200);expect((await request.get('http://127.0.0.1:3069'+mediaUrl,{headers:viewerHeaders})).status()).toBe(status)}
+        at /root/Muse_AI-repository/client/tests/d5.spec.ts:59:33
+
+    Error Context: docs/ui-redo/r19/d5-results/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md
+
+  1 failed
+    tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 

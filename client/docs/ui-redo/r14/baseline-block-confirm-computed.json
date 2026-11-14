@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "c6-veil d3-safety",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "SECTION",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 16.171875,
+      "width": 375,
+      "height": 159.171875
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "H2",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 16.171875,
+      "width": 375,
+      "height": 20
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "700 19.5px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 52.34375,
+      "width": 375,
+      "height": 40
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "confirm-block",
+    "class": "primary",
+    "box": {
+      "x": 0,
+      "y": 105.34375,
+      "width": 375,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(23, 48, 32)",
+      "background": "rgb(181, 250, 112) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(23, 48, 32)",
+      "borderRadius": "24px",
+      "font": "500 14px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 0,
+      "y": 153.34375,
+      "width": 53,
+      "height": 22
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(107, 107, 107) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  }
+]

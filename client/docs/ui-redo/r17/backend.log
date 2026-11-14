@@ -1,0 +1,16 @@
+/root/Muse_AI-repository/maugo/node_modules/pg-pool/index.js:45
+    Error.captureStackTrace(err)
+          ^
+
+Error: connect EPERM 127.0.0.1:5432 - Local (undefined:undefined)
+    at /root/Muse_AI-repository/maugo/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///root/Muse_AI-repository/client/tests/auth-server.mjs:13:1 {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 5432
+}
+
+Node.js v22.23.4

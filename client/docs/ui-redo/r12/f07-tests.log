@@ -1,0 +1,13 @@
+[WebServer] (node:1183275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1183358) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1183467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/f07.spec.ts:11:1 › F07 account switch isolation and revoked token (22.1s)
+  ✓  2 tests/f07.spec.ts:34:1 › F07 sign-out clears this device immediately (#103) (20.2s)
+
+  2 passed (48.9s)

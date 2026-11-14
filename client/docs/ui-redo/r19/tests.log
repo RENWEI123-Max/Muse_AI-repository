@@ -1,0 +1,51 @@
+
+Running 1 test using 1 worker
+
+(node:1342370) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r19-cards.spec.ts:3:1 › six card states use one real registered session (2.0m)
+
+
+  1) tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ─────────────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('.cards-title')
+    Expected: "18px"
+    Received: "16px"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "soft toHaveCSS" locator('.cards-title') with timeout 5000ms
+      - waiting for locator('.cards-title')
+        14 × locator resolved to <h2 data-v-b4728cab="" class="cards-title">…</h2>
+           - unexpected value "16px"
+
+
+      11 |  const shot=async(name:string)=>{await page.waitForTimeout(400);await page.screenshot({path:`docs/ui-redo/r19/${name}.png`,animations:'disabled'})}
+      12 |  await page.locator('#upload-image-card').click();await shot('card-type');await box('.cards-panel',[12,418,351,370]);await box('.cards-title',[33,451,309,24]);await box('[data-card-type=portrait]',[33,499,309,52]);await box('.cards-cancel',[33,719,309,48])
+    > 13 |  await expect.soft(page.locator('.cards-panel')).toHaveCSS('background-color','rgb(24, 33, 30)');await expect.soft(page.locator('.cards-title')).toHaveCSS('font-size','18px');await expect.soft(page.locator('.cards-panel')).toHaveCSS('border-radius','24px')
+         |                                                                                                                                                  ^
+      14 |  const chooser=page.waitForEvent('filechooser');await page.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('.image-card')).toHaveCount(1)
+      15 |  const open=()=>page.locator('.image-card').click(),close=()=>page.getByRole('button',{name:'Close D5 dialog'}).click()
+      16 |  await open();await shot('card-options');await box('.cards-panel',[12,462,351,326]);await box('#card-view',[33,543,309,56]);await box('#card-type',[33,599,309,56]);await box('#card-visibility',[33,655,309,56]);await box('#card-remove',[33,711,309,56])
+        at /root/Muse_AI-repository/client/tests/r19-cards.spec.ts:13:146
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.waitForTimeout: Test ended.
+
+       9 |  const metrics:any[]=[]
+      10 |  const box=async(selector:string,target:number[])=>{const b=await page.locator(selector).first().boundingBox();metrics.push({selector,target,actual:b});expect.soft(b).not.toBeNull();if(b)for(const [i,k] of ['x','y','width','height'].entries())expect.soft(Math.abs(b[k as keyof typeof b]-target[i]!)).toBeLessThanOrEqual(1)}
+    > 11 |  const shot=async(name:string)=>{await page.waitForTimeout(400);await page.screenshot({path:`docs/ui-redo/r19/${name}.png`,animations:'disabled'})}
+         |                                             ^
+      12 |  await page.locator('#upload-image-card').click();await shot('card-type');await box('.cards-panel',[12,418,351,370]);await box('.cards-title',[33,451,309,24]);await box('[data-card-type=portrait]',[33,499,309,52]);await box('.cards-cancel',[33,719,309,48])
+      13 |  await expect.soft(page.locator('.cards-panel')).toHaveCSS('background-color','rgb(24, 33, 30)');await expect.soft(page.locator('.cards-title')).toHaveCSS('font-size','18px');await expect.soft(page.locator('.cards-panel')).toHaveCSS('border-radius','24px')
+      14 |  const chooser=page.waitForEvent('filechooser');await page.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('.image-card')).toHaveCount(1)
+        at shot (/root/Muse_AI-repository/client/tests/r19-cards.spec.ts:11:45)
+        at /root/Muse_AI-repository/client/tests/r19-cards.spec.ts:20:64
+
+    Error Context: docs/ui-redo/r19/test-results/r19-cards-six-card-states-use-one-real-registered-session/error-context.md
+
+  1 failed
+    tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ──────────────────

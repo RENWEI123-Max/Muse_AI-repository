@@ -1,0 +1,40 @@
+
+Running 2 tests using 1 worker
+
+(node:1332592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence (10.7s)
+(node:1332822) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -  2 tests/d4-reverify.spec.ts:31:1 › offline prototype comparison evidence
+
+
+  1) tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ─────────
+
+    Error: expect(locator).toHaveJSProperty(expected) failed
+
+    Locator: locator('#edit-avatar img')
+    Expected: 320
+    Error: strict mode violation: locator('#edit-avatar img') resolved to 2 elements:
+        1) <img alt="Your avatar" data-v-e838ed77="" class="profile-avatar-image" src="blob:http://127.0.0.1:5174/5c1abf57-d87b-45ad-9172-53c64feeb870"/> aka getByRole('button', { name: 'Change avatar' })
+        2) <img alt="" data-v-e838ed77="" class="profile-camera-icon" src="/src/assets/08-interface-icons/icon-camera-dark-15.png"/> aka getByRole('button', { name: 'Change avatar' })
+
+    Call log:
+      - Expect "toHaveJSProperty" locator('#edit-avatar img') with timeout 5000ms
+      - waiting for locator('#edit-avatar img')
+
+
+      14 |  async function upload(){const chooser=page.waitForEvent('filechooser');await page.locator('#upload-avatar').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('#avatar-canvas')).toBeVisible();await page.locator('#avatar-zoom').fill('1.5');await shot('avatar-crop');await page.locator('#save-avatar').click();await expect(page.locator('#save-avatar')).toHaveCount(0)}
+      15 |  await upload();const cardUpload=await request.post(root+'/media/uploads?purpose=post&filename=card.png',{headers:{...headers,'Content-Type':'image/png'},data:await readFile('src/assets/05-avatars/portrait-5.png')});expect(cardUpload.ok()).toBeTruthy();const cardMedia=await cardUpload.json();expect((await request.post(root+'/users/me/image-cards',{headers,data:{mediaId:cardMedia.id,type:'portrait'}})).ok()).toBeTruthy();await page.locator('#page-back').click();await page.locator('#open-profile').click();await expect(page.locator('.image-card img')).toBeVisible();await expect.poll(()=>page.locator('.image-card img').evaluate((el:HTMLImageElement)=>el.naturalWidth)).toBeGreaterThan(0);await shot('profile-content');await page.locator('#edit-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(7);await shot('avatar-gallery');await page.locator('[data-remove-avatar="0"]').click();await shot('avatar-remove');await page.locator('#confirm-remove-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(8);await shot('avatar-removed');await page.locator('#removed-avatars').click();await shot('avatar-restore');await page.locator('[data-restore-avatar="0"]').click();await expect(page.locator('.avatar-empty')).toHaveCount(7);await page.getByRole('button',{name:'Close',exact:true}).click()
+    > 16 |  await page.reload();await login('Reader revised');await expect(page.locator('#edit-profile')).toContainText('Reader revised');await expect(page.locator('.profile-hero')).toContainText('Libra');await expect(page.locator('#edit-avatar img')).toHaveJSProperty('naturalWidth',320)
+         |                                                                                                                                                                                                                                                  ^
+      17 |  await page.locator('#edit-avatar').click();for(let i=1;i<8;i++)await upload().then(()=>page.locator('#edit-avatar').click());await expect(page.locator('#upload-avatar')).toBeDisabled();await shot('avatar-full');await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#likes').click();await shot('profile-likes');await page.getByRole('button',{name:'Got it'}).click()
+      18 |  const b=await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json()
+      19 |  const peerHeaders={Authorization:`Bearer ${b.token}`}
+        at /root/Muse_AI-repository/client/tests/d4-reverify.spec.ts:16:242
+
+    Error Context: docs/ui-redo/r18/baseline-r18-reverify-results/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md
+
+  1 failed
+    tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ──────────
+  1 skipped

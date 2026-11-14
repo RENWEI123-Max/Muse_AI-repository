@@ -1,0 +1,355 @@
+{
+  "walkthroughs": {
+    "667-en-walkthrough.json": {
+      "steps": 14,
+      "document": [
+        [
+          667,
+          0
+        ]
+      ],
+      "horizontal_clipped": 0,
+      "scroll": {
+        "top": 233,
+        "height": 569,
+        "content": 802,
+        "bottom": 579
+      },
+      "dialogScroll": {
+        "top": 66,
+        "height": 390,
+        "content": 456
+      },
+      "animation": {
+        "name": "sheet-in",
+        "duration": "0.22s"
+      },
+      "topupAnimation": {
+        "name": "sheet-in",
+        "duration": "0.3s"
+      },
+      "press": "matrix(0.99, 0, 0, 0.99, 0, 0)",
+      "errors": []
+    },
+    "667-ko-walkthrough.json": {
+      "steps": 14,
+      "document": [
+        [
+          667,
+          0
+        ]
+      ],
+      "horizontal_clipped": 0,
+      "scroll": {
+        "top": 217,
+        "height": 569,
+        "content": 786,
+        "bottom": 579
+      },
+      "dialogScroll": {
+        "top": 46,
+        "height": 390,
+        "content": 436
+      },
+      "animation": {
+        "name": "sheet-in",
+        "duration": "0.22s"
+      },
+      "topupAnimation": {
+        "name": "sheet-in",
+        "duration": "0.3s"
+      },
+      "press": "matrix(0.99, 0, 0, 0.99, 0, 0)",
+      "errors": []
+    },
+    "812-en-walkthrough.json": {
+      "steps": 14,
+      "document": [
+        [
+          812,
+          0
+        ]
+      ],
+      "horizontal_clipped": 0,
+      "scroll": {
+        "top": 120,
+        "height": 682,
+        "content": 802,
+        "bottom": 788
+      },
+      "dialogScroll": {
+        "top": 66,
+        "height": 390,
+        "content": 456
+      },
+      "animation": {
+        "name": "sheet-in",
+        "duration": "0.22s"
+      },
+      "topupAnimation": {
+        "name": "sheet-in",
+        "duration": "0.3s"
+      },
+      "press": "matrix(0.99, 0, 0, 0.99, 0, 0)",
+      "errors": []
+    },
+    "812-ko-walkthrough.json": {
+      "steps": 14,
+      "document": [
+        [
+          812,
+          0
+        ]
+      ],
+      "horizontal_clipped": 0,
+      "scroll": {
+        "top": 104,
+        "height": 682,
+        "content": 786,
+        "bottom": 788
+      },
+      "dialogScroll": {
+        "top": 46,
+        "height": 390,
+        "content": 436
+      },
+      "animation": {
+        "name": "sheet-in",
+        "duration": "0.22s"
+      },
+      "topupAnimation": {
+        "name": "sheet-in",
+        "duration": "0.3s"
+      },
+      "press": "matrix(0.99, 0, 0, 0.99, 0, 0)",
+      "errors": []
+    }
+  },
+  "png_count": 56,
+  "png_dimensions": {
+    "667-en-collect-failure.png": [
+      375,
+      667
+    ],
+    "667-en-collected-chat.png": [
+      375,
+      667
+    ],
+    "667-en-free-confirmation-difference.png": [
+      375,
+      667
+    ],
+    "667-en-funded-return-scroll.png": [
+      375,
+      667
+    ],
+    "667-en-funded-return.png": [
+      375,
+      667
+    ],
+    "667-en-reply-cancelled.png": [
+      375,
+      667
+    ],
+    "667-en-reply-last-free.png": [
+      375,
+      667
+    ],
+    "667-en-reply-paid.png": [
+      375,
+      667
+    ],
+    "667-en-reply-payment.png": [
+      375,
+      667
+    ],
+    "667-en-reply-shortage.png": [
+      375,
+      667
+    ],
+    "667-en-reply-topup.png": [
+      375,
+      667
+    ],
+    "667-en-topup-return.png": [
+      375,
+      667
+    ],
+    "667-en-topup-scroll.png": [
+      375,
+      667
+    ],
+    "667-en-web-purchase-unavailable.png": [
+      375,
+      667
+    ],
+    "667-ko-collect-failure.png": [
+      375,
+      667
+    ],
+    "667-ko-collected-chat.png": [
+      375,
+      667
+    ],
+    "667-ko-free-confirmation-difference.png": [
+      375,
+      667
+    ],
+    "667-ko-funded-return-scroll.png": [
+      375,
+      667
+    ],
+    "667-ko-funded-return.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-cancelled.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-last-free.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-paid.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-payment.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-shortage.png": [
+      375,
+      667
+    ],
+    "667-ko-reply-topup.png": [
+      375,
+      667
+    ],
+    "667-ko-topup-return.png": [
+      375,
+      667
+    ],
+    "667-ko-topup-scroll.png": [
+      375,
+      667
+    ],
+    "667-ko-web-purchase-unavailable.png": [
+      375,
+      667
+    ],
+    "812-en-collect-failure.png": [
+      375,
+      812
+    ],
+    "812-en-collected-chat.png": [
+      375,
+      812
+    ],
+    "812-en-free-confirmation-difference.png": [
+      375,
+      812
+    ],
+    "812-en-funded-return-scroll.png": [
+      375,
+      812
+    ],
+    "812-en-funded-return.png": [
+      375,
+      812
+    ],
+    "812-en-reply-cancelled.png": [
+      375,
+      812
+    ],
+    "812-en-reply-last-free.png": [
+      375,
+      812
+    ],
+    "812-en-reply-paid.png": [
+      375,
+      812
+    ],
+    "812-en-reply-payment.png": [
+      375,
+      812
+    ],
+    "812-en-reply-shortage.png": [
+      375,
+      812
+    ],
+    "812-en-reply-topup.png": [
+      375,
+      812
+    ],
+    "812-en-topup-return.png": [
+      375,
+      812
+    ],
+    "812-en-topup-scroll.png": [
+      375,
+      812
+    ],
+    "812-en-web-purchase-unavailable.png": [
+      375,
+      812
+    ],
+    "812-ko-collect-failure.png": [
+      375,
+      812
+    ],
+    "812-ko-collected-chat.png": [
+      375,
+      812
+    ],
+    "812-ko-free-confirmation-difference.png": [
+      375,
+      812
+    ],
+    "812-ko-funded-return-scroll.png": [
+      375,
+      812
+    ],
+    "812-ko-funded-return.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-cancelled.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-last-free.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-paid.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-payment.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-shortage.png": [
+      375,
+      812
+    ],
+    "812-ko-reply-topup.png": [
+      375,
+      812
+    ],
+    "812-ko-topup-return.png": [
+      375,
+      812
+    ],
+    "812-ko-topup-scroll.png": [
+      375,
+      812
+    ],
+    "812-ko-web-purchase-unavailable.png": [
+      375,
+      812
+    ]
+  }
+}

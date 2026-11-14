@@ -1,0 +1,13 @@
+
+> maugo-client@0.1.0 build
+> npm run verify:assets && vue-tsc --noEmit && vite build
+
+
+> maugo-client@0.1.0 verify:assets
+> node scripts/verify-assets.mjs
+
+PASS: 343 PNGs; manifest paths, SHA256, dimensions, fonts and OFL licenses
+tests/r09-audit.spec.ts(60,115): error TS2339: Property 'inert' does not exist on type 'HTMLElement | SVGElement'.
+  Property 'inert' does not exist on type 'SVGElement'.
+tests/r09-audit.spec.ts(60,195): error TS2339: Property 'inert' does not exist on type 'HTMLElement | SVGElement'.
+  Property 'inert' does not exist on type 'SVGElement'.

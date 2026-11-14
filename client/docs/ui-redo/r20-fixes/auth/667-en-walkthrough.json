@@ -1,0 +1,34 @@
+{
+  "fixture": true,
+  "emailSent": false,
+  "calls": [
+    {
+      "p": "/auth/signup",
+      "method": "POST"
+    },
+    {
+      "p": "/auth/code/send",
+      "method": "POST"
+    },
+    {
+      "p": "/auth/code/verify",
+      "method": "POST"
+    },
+    {
+      "p": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "p": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "p": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "p": "/letters",
+      "method": "GET"
+    }
+  ]
+}

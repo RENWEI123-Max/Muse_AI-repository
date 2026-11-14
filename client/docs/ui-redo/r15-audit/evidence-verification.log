@@ -1,0 +1,299 @@
+{
+  "png": 112,
+  "groups": [
+    {
+      "height": 667,
+      "lang": "en",
+      "records": 27,
+      "screenshots": 28,
+      "clipped_width": 0,
+      "checks": {
+        "welcomeScroll": {
+          "top": 0,
+          "overflow": "hidden"
+        },
+        "mainPress": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "transition": "0s"
+        },
+        "backPress": {
+          "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+          "transition": "0s"
+        }
+      },
+      "scroll": {
+        "welcome": [
+          {
+            "class": "auth-content",
+            "height": 555,
+            "content": 572,
+            "top": 0,
+            "overflow": "hidden",
+            "overscroll": "contain"
+          }
+        ],
+        "terms-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 555,
+            "content": 662,
+            "top": 0,
+            "overflow": "auto",
+            "overscroll": "contain"
+          },
+          {
+            "class": "terms-scroll terms-document",
+            "height": 348,
+            "content": 2524,
+            "top": 1000,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ],
+        "signup-mismatch-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 555,
+            "content": 892,
+            "top": 337,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ]
+      },
+      "all_document_locked": true,
+      "auth_motion": [
+        [
+          "none",
+          "0s"
+        ]
+      ]
+    },
+    {
+      "height": 667,
+      "lang": "ko",
+      "records": 27,
+      "screenshots": 28,
+      "clipped_width": 0,
+      "checks": {
+        "welcomeScroll": {
+          "top": 0,
+          "overflow": "hidden"
+        },
+        "mainPress": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "transition": "0s"
+        },
+        "backPress": {
+          "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+          "transition": "0s"
+        }
+      },
+      "scroll": {
+        "welcome": [
+          {
+            "class": "auth-content",
+            "height": 555,
+            "content": 572,
+            "top": 0,
+            "overflow": "hidden",
+            "overscroll": "contain"
+          }
+        ],
+        "terms-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 555,
+            "content": 662,
+            "top": 0,
+            "overflow": "auto",
+            "overscroll": "contain"
+          },
+          {
+            "class": "terms-scroll terms-document",
+            "height": 348,
+            "content": 2146,
+            "top": 1000,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ],
+        "signup-mismatch-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 555,
+            "content": 892,
+            "top": 337,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ]
+      },
+      "all_document_locked": true,
+      "auth_motion": [
+        [
+          "none",
+          "0s"
+        ]
+      ]
+    },
+    {
+      "height": 812,
+      "lang": "en",
+      "records": 27,
+      "screenshots": 28,
+      "clipped_width": 0,
+      "checks": {
+        "welcomeScroll": {
+          "top": 0,
+          "overflow": "hidden"
+        },
+        "mainPress": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "transition": "0s"
+        },
+        "backPress": {
+          "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+          "transition": "0s"
+        }
+      },
+      "scroll": {
+        "welcome": [
+          {
+            "class": "auth-content",
+            "height": 700,
+            "content": 700,
+            "top": 0,
+            "overflow": "hidden",
+            "overscroll": "contain"
+          }
+        ],
+        "terms-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 700,
+            "content": 700,
+            "top": 0,
+            "overflow": "auto",
+            "overscroll": "contain"
+          },
+          {
+            "class": "terms-scroll terms-document",
+            "height": 348,
+            "content": 2524,
+            "top": 1000,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ],
+        "signup-mismatch-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 700,
+            "content": 892,
+            "top": 192,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ]
+      },
+      "all_document_locked": true,
+      "auth_motion": [
+        [
+          "none",
+          "0s"
+        ]
+      ]
+    },
+    {
+      "height": 812,
+      "lang": "ko",
+      "records": 27,
+      "screenshots": 28,
+      "clipped_width": 0,
+      "checks": {
+        "welcomeScroll": {
+          "top": 0,
+          "overflow": "hidden"
+        },
+        "mainPress": {
+          "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+          "transition": "0s"
+        },
+        "backPress": {
+          "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)",
+          "transition": "0s"
+        }
+      },
+      "scroll": {
+        "welcome": [
+          {
+            "class": "auth-content",
+            "height": 700,
+            "content": 700,
+            "top": 0,
+            "overflow": "hidden",
+            "overscroll": "contain"
+          }
+        ],
+        "terms-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 700,
+            "content": 700,
+            "top": 0,
+            "overflow": "auto",
+            "overscroll": "contain"
+          },
+          {
+            "class": "terms-scroll terms-document",
+            "height": 348,
+            "content": 2146,
+            "top": 1000,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ],
+        "signup-mismatch-scrolled": [
+          {
+            "class": "auth-flow",
+            "height": 700,
+            "content": 892,
+            "top": 192,
+            "overflow": "auto",
+            "overscroll": "contain"
+          }
+        ]
+      },
+      "all_document_locked": true,
+      "auth_motion": [
+        [
+          "none",
+          "0s"
+        ]
+      ]
+    }
+  ],
+  "source_checks": {
+    "client/src/components/AuthFlow.vue": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/src/styles/pages/auth.css": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/tests/r15-audit.spec.ts": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/tests/r15-audit.config.ts": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    }
+  }
+}

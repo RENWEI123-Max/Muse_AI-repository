@@ -1,0 +1,2858 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit reader",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit saved",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r17-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "profile-empty",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit reader",
+          "clipped": false
+        },
+        {
+          "text": "24 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-edit",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 700,
+          "content": 800,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Edit profile",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Change avatar",
+          "clipped": false
+        },
+        {
+          "text": "Save changes",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-invalid",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 700,
+          "content": 800,
+          "top": 44,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Edit profile",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Enter a name and an age between 18 and 100.",
+          "clipped": false
+        },
+        {
+          "text": "Change avatar",
+          "clipped": false
+        },
+        {
+          "text": "Save changes",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "save-failure",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 700,
+          "content": 800,
+          "top": 44,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Edit profile",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "Change avatar",
+          "clipped": false
+        },
+        {
+          "text": "Save changes",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "save-success",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-likes",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet profile-likes ui-dialog ui-dialog--profile-likes",
+          "height": 292,
+          "content": 292,
+          "top": 0,
+          "width": 325,
+          "scrollWidth": 325,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.22s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "Moments 0",
+          "clipped": false
+        },
+        {
+          "text": "Image cards 0",
+          "clipped": false
+        },
+        {
+          "text": "Got it",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-empty",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Connections",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "Your circle is just beginning.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "No following yet.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "followers-empty",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Connections",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "Your circle is just beginning.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "No followers yet.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "visitors-empty",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-visitors",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Visitors",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "Visited me",
+          "clipped": false
+        },
+        {
+          "text": "I visited",
+          "clipped": false
+        },
+        {
+          "text": "No visits yet.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "No visitors yet.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "my-letters-empty",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My letters",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "Nothing here yet.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.",
+          "clipped": false
+        },
+        {
+          "text": "No letters yet.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "edit-avatar-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 700,
+          "content": 800,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Edit profile",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "Change avatar",
+          "clipped": false
+        },
+        {
+          "text": "Save changes",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "avatar-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "cards-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 813,
+          "top": 113,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Photo type사진 유형",
+          "clipped": false
+        },
+        {
+          "text": "portrait인물",
+          "clipped": false
+        },
+        {
+          "text": "physique체형",
+          "clipped": false
+        },
+        {
+          "text": "outfit옷차림",
+          "clipped": false
+        },
+        {
+          "text": "life일상",
+          "clipped": false
+        },
+        {
+          "text": "Cancel취소",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "moments-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.작은 순간을 여기에 간직하세요.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-content",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 784,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "1Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "portraitMain · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "Main · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-list",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Connections",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "Audit connection›",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-person-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "visitors-outgoing",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-visitors",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Visitors",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Visited me",
+          "clipped": false
+        },
+        {
+          "text": "I visited",
+          "clipped": false
+        },
+        {
+          "text": "Audit connection›",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "my-letters",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My letters",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "A letter I sent",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "letter-click-gap",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 700,
+          "content": 700,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My letters",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "A letter I sent",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "edit-scrolled",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 700,
+          "content": 800,
+          "top": 100,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Edit profile",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Change avatar",
+          "clipped": false
+        },
+        {
+          "text": "Save changes",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "load-failure",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 859,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "·",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. Retry",
+          "clipped": false
+        },
+        {
+          "text": "Retry",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "load-recovered",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 700,
+          "content": 784,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "My little corner",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "1Following",
+          "clipped": false
+        },
+        {
+          "text": "Following",
+          "clipped": false
+        },
+        {
+          "text": "0Followers",
+          "clipped": false
+        },
+        {
+          "text": "Followers",
+          "clipped": false
+        },
+        {
+          "text": "0Likes",
+          "clipped": false
+        },
+        {
+          "text": "Likes",
+          "clipped": false
+        },
+        {
+          "text": "◷Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Visitors ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "portraitMain · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "Main · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "My letters ›",
+          "clipped": false
+        },
+        {
+          "text": "Home",
+          "clipped": false
+        },
+        {
+          "text": "Messages",
+          "clipped": false
+        },
+        {
+          "text": "Profile",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "likes": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "focusInside": false,
+      "underlayInert": false
+    },
+    "letterClickStays": true,
+    "scroll": {
+      "top": 100,
+      "height": 700,
+      "content": 800
+    },
+    "press": {
+      "transform": "none",
+      "transition": "0s"
+    }
+  },
+  "errors": []
+}

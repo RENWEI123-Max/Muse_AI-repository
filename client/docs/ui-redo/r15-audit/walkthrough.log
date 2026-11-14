@@ -1,0 +1,132 @@
+[WebServer] (node:61387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:61389) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough (11.0s)
+(node:61400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r15-audit.spec.ts:6:61 › 667 ko auth click walkthrough (8.3s)
+(node:61412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r15-audit.spec.ts:6:61 › 812 en auth click walkthrough (11.2s)
+(node:61422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r15-audit.spec.ts:6:61 › 812 ko auth click walkthrough (8.3s)
+
+
+  1) tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough ──────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Privacy information', exact: true })
+
+
+      24 |  })
+      25 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+    > 26 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+         |                                                                                     ^
+      27 |  const snap=async(name:string)=>{
+      28 |   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));(document.activeElement as HTMLElement)?.blur()})
+      29 |   await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`})
+        at click (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:26:85)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:50:8
+
+    Error Context: test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r15-audit.spec.ts:6:61 › 667 ko auth click walkthrough ──────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Continue with email', exact: true })
+
+
+      24 |  })
+      25 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+    > 26 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+         |                                                                                     ^
+      27 |  const snap=async(name:string)=>{
+      28 |   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));(document.activeElement as HTMLElement)?.blur()})
+      29 |   await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`})
+        at click (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:26:85)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:37:46
+
+    Error Context: test-results/r15-audit/r15-audit-667-ko-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r15-audit/r15-audit-667-ko-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r15-audit/r15-audit-667-ko-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r15-audit.spec.ts:6:61 › 812 en auth click walkthrough ──────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Privacy information', exact: true })
+
+
+      24 |  })
+      25 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+    > 26 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+         |                                                                                     ^
+      27 |  const snap=async(name:string)=>{
+      28 |   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));(document.activeElement as HTMLElement)?.blur()})
+      29 |   await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`})
+        at click (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:26:85)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:50:8
+
+    Error Context: test-results/r15-audit/r15-audit-812-en-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r15-audit/r15-audit-812-en-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r15-audit/r15-audit-812-en-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r15-audit.spec.ts:6:61 › 812 ko auth click walkthrough ──────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Continue with email', exact: true })
+
+
+      24 |  })
+      25 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+    > 26 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+         |                                                                                     ^
+      27 |  const snap=async(name:string)=>{
+      28 |   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));(document.activeElement as HTMLElement)?.blur()})
+      29 |   await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`})
+        at click (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:26:85)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:37:46
+
+    Error Context: test-results/r15-audit/r15-audit-812-ko-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r15-audit/r15-audit-812-ko-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r15-audit/r15-audit-812-ko-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:6:61 › 667 ko auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:6:61 › 812 en auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:6:61 › 812 ko auth click walkthrough ───────────────────────────────────

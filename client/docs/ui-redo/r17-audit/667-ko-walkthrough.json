@@ -1,0 +1,2858 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit reader",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "displayName": "Audit saved",
+        "age": 25,
+        "city": "Seoul",
+        "zodiac": "Libra",
+        "bio": ""
+      }
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=r17-reader&category=All&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=audit-peer&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/audit-card",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/audit-peer/summary",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "profile-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit reader",
+          "clipped": false
+        },
+        {
+          "text": "24 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-edit",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 555,
+          "content": 800,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 수정",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 사진 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "변경사항 저장",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-invalid",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 555,
+          "content": 800,
+          "top": 245,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 수정",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이름과 18~100세의 나이를 입력하세요.",
+          "clipped": false
+        },
+        {
+          "text": "프로필 사진 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "변경사항 저장",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "save-failure",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 555,
+          "content": 800,
+          "top": 189,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 수정",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "프로필 사진 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "변경사항 저장",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "save-success",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-likes",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet profile-likes ui-dialog ui-dialog--profile-likes",
+          "height": 292,
+          "content": 292,
+          "top": 0,
+          "width": 325,
+          "scrollWidth": 325,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.22s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "순간 0",
+          "clipped": false
+        },
+        {
+          "text": "이미지 카드 0",
+          "clipped": false
+        },
+        {
+          "text": "확인",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "인연",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "당신의 인연이 시작되고 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "아직 팔로우한 사람이 없어요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "followers-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "인연",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "당신의 인연이 시작되고 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "아직 팔로워가 없어요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "visitors-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-visitors",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "방문자",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "나를 방문한 사람",
+          "clipped": false
+        },
+        {
+          "text": "내가 방문한 사람",
+          "clipped": false
+        },
+        {
+          "text": "아직 방문 기록이 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "아직 방문 기록이 없어요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "my-letters-empty",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "아직 아무것도 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "아직 편지가 없어요.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "edit-avatar-boundary",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 555,
+          "content": 800,
+          "top": 245,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 수정",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "프로필 사진 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "변경사항 저장",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "아바타 선택",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "사진 업로드",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "avatar-boundary",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 813,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "아바타 선택",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "미등록",
+          "clipped": false
+        },
+        {
+          "text": "사진 업로드",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "cards-boundary",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 813,
+          "top": 258,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Photo type사진 유형",
+          "clipped": false
+        },
+        {
+          "text": "portrait인물",
+          "clipped": false
+        },
+        {
+          "text": "physique체형",
+          "clipped": false
+        },
+        {
+          "text": "outfit옷차림",
+          "clipped": false
+        },
+        {
+          "text": "life일상",
+          "clipped": false
+        },
+        {
+          "text": "Cancel취소",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "moments-boundary",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Profile saved.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "My moments",
+          "clipped": false
+        },
+        {
+          "text": "＋",
+          "clipped": false
+        },
+        {
+          "text": "All",
+          "clipped": false
+        },
+        {
+          "text": "Portrait",
+          "clipped": false
+        },
+        {
+          "text": "Style",
+          "clipped": false
+        },
+        {
+          "text": "Outfit",
+          "clipped": false
+        },
+        {
+          "text": "Life",
+          "clipped": false
+        },
+        {
+          "text": "Keep a little moment here.작은 순간을 여기에 간직하세요.",
+          "clipped": false
+        },
+        {
+          "text": "Every connection starts with a little hello.모든 인연은 작은 인사로 시작돼요.",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-content",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 784,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "1팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "portraitMain · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "Main · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-list",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-connections",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "인연",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "Audit connection›",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "following-person-boundary",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "visitors-outgoing",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-visitors",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "방문자",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나를 방문한 사람",
+          "clipped": false
+        },
+        {
+          "text": "내가 방문한 사람",
+          "clipped": false
+        },
+        {
+          "text": "Audit connection›",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "my-letters",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내가 보낸 편지",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "letter-click-gap",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-letters",
+          "height": 555,
+          "content": 555,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "내가 보낸 편지",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "edit-scrolled",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-edit",
+          "height": 555,
+          "content": 800,
+          "top": 245,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 수정",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "프로필 사진 바꾸기",
+          "clipped": false
+        },
+        {
+          "text": "변경사항 저장",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "load-failure",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 859,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "·",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "0팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. Retry",
+          "clipped": false
+        },
+        {
+          "text": "Retry",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "No photos uploaded yet.",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "load-recovered",
+      "document": {
+        "height": 667,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-profile",
+          "height": 555,
+          "content": 784,
+          "top": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "나의 작은 공간",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": true
+        },
+        {
+          "text": "Audit saved",
+          "clipped": false
+        },
+        {
+          "text": "25 · Libra · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "1팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "팔로잉",
+          "clipped": false
+        },
+        {
+          "text": "0팔로워",
+          "clipped": false
+        },
+        {
+          "text": "팔로워",
+          "clipped": false
+        },
+        {
+          "text": "0좋아요",
+          "clipped": false
+        },
+        {
+          "text": "좋아요",
+          "clipped": false
+        },
+        {
+          "text": "◷방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "방문자 ›",
+          "clipped": false
+        },
+        {
+          "text": "Image cards",
+          "clipped": false
+        },
+        {
+          "text": "Profile visibility ›",
+          "clipped": false
+        },
+        {
+          "text": "portraitMain · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "Main · Everyone",
+          "clipped": false
+        },
+        {
+          "text": "＋Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "My moments ›",
+          "clipped": false
+        },
+        {
+          "text": "＋ A little moment",
+          "clipped": false
+        },
+        {
+          "text": "나의 편지 ›",
+          "clipped": false
+        },
+        {
+          "text": "홈",
+          "clipped": false
+        },
+        {
+          "text": "대화",
+          "clipped": false
+        },
+        {
+          "text": "프로필",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "likes": {
+      "animation": "sheet-in",
+      "duration": "0.22s",
+      "focusInside": false,
+      "underlayInert": false
+    },
+    "letterClickStays": true,
+    "scroll": {
+      "top": 245,
+      "height": 555,
+      "content": 800
+    },
+    "press": {
+      "transform": "none",
+      "transition": "0s"
+    }
+  },
+  "errors": []
+}

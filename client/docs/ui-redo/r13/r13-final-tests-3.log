@@ -1,0 +1,112 @@
+[WebServer] (node:1200985) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1201010) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 5:43:38 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer] 5:43:39 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer]       at transformStyle (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+[WebServer]       at TransformPluginContext.handler (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+[WebServer]       at EnvironmentPluginContainer.transform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+[WebServer]       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[WebServer]       at async loadAndTransform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+[WebServer]       at async viteTransformMiddleware (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+[WebServer] 5:44:03 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer] 5:44:04 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer]       at transformStyle (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+[WebServer]       at TransformPluginContext.handler (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+[WebServer]       at EnvironmentPluginContainer.transform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+[WebServer]       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[WebServer]       at async loadAndTransform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+[WebServer]       at async viteTransformMiddleware (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+  ✘  1 tests/r13-wallpapers.spec.ts:13:1 › R13 six appearance states, measured geometry and style (30.0s)
+(node:1201523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 5:44:10 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer]       at transformStyle (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+[WebServer]       at TransformPluginContext.handler (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+[WebServer]       at EnvironmentPluginContainer.transform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+[WebServer]       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[WebServer]       at async loadAndTransform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+[WebServer]       at async viteTransformMiddleware (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+[WebServer] 5:44:11 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer]       at transformStyle (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+[WebServer]       at TransformPluginContext.handler (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+[WebServer]       at EnvironmentPluginContainer.transform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+[WebServer]       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[WebServer]       at async loadAndTransform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+[WebServer]       at async viteTransformMiddleware (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+[WebServer] 5:44:30 AM [vite] (client) Pre-transform error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer] 5:44:31 AM [vite] Internal server error: Cannot read properties of undefined (reading 'scoped')
+[WebServer]   Plugin: vite:vue
+[WebServer]   File: /tmp/maugo-r13/client/src/styles/pages/reply.css?vue&type=style&index=1&src=true&lang.css
+[WebServer]       at transformStyle (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1585:17)
+[WebServer]       at TransformPluginContext.handler (file:///tmp/maugo-r13/client/node_modules/@vitejs/plugin-vue/dist/index.mjs:1766:45)
+[WebServer]       at EnvironmentPluginContainer.transform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:29048:51)
+[WebServer]       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[WebServer]       at async loadAndTransform (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:22914:26)
+[WebServer]       at async viteTransformMiddleware (file:///tmp/maugo-r13/client/node_modules/vite/dist/node/chunks/config.js:24790:20)
+  ✘  2 tests/r13-wallpapers.spec.ts:27:1 › R13 Korean and small viewport retain layout without scaling images (30.1s)
+
+
+  1) tests/r13-wallpapers.spec.ts:13:1 › R13 six appearance states, measured geometry and style ────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.check: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#accept-terms')
+
+
+      4 | async function enter(page:any,ko=false){
+      5 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d2-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status:'open',unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 6 |  await page.goto('/?auth=consent');if(ko){await page.evaluate(()=>localStorage.setItem('maugo-language','ko'));await page.reload()}await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d2@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .primary').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await expect(page.locator('.c6-chat')).toBeVisible()
+        |                                                                                                                                                                        ^
+      7 | }
+      8 | async function oldCapture(page:any,state:string){await expect(page.locator('.c6-chat')).toHaveAttribute('data-state',state);await page.waitForTimeout(400);await page.screenshot({path:`test-results/d2-${state}.png`})}
+      9 | async function background(page:any){await page.locator('#chat-details').click();await page.locator('#chat-background').click()}
+        at enter (/tmp/maugo-r13/client/tests/r13-wallpapers.spec.ts:6:168)
+        at /tmp/maugo-r13/client/tests/r13-wallpapers.spec.ts:14:2
+
+    Error Context: test-results/r13-wallpapers-R13-six-app-eea26-measured-geometry-and-style/error-context.md
+
+  2) tests/r13-wallpapers.spec.ts:27:1 › R13 Korean and small viewport retain layout without scaling images 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.check: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#accept-terms')
+
+
+      4 | async function enter(page:any,ko=false){
+      5 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d2-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status:'open',unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 6 |  await page.goto('/?auth=consent');if(ko){await page.evaluate(()=>localStorage.setItem('maugo-language','ko'));await page.reload()}await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d2@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .primary').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await expect(page.locator('.c6-chat')).toBeVisible()
+        |                                                                                                                                                                        ^
+      7 | }
+      8 | async function oldCapture(page:any,state:string){await expect(page.locator('.c6-chat')).toHaveAttribute('data-state',state);await page.waitForTimeout(400);await page.screenshot({path:`test-results/d2-${state}.png`})}
+      9 | async function background(page:any){await page.locator('#chat-details').click();await page.locator('#chat-background').click()}
+        at enter (/tmp/maugo-r13/client/tests/r13-wallpapers.spec.ts:6:168)
+        at /tmp/maugo-r13/client/tests/r13-wallpapers.spec.ts:28:2
+
+    Error Context: test-results/r13-wallpapers-R13-Korean--40bc9-yout-without-scaling-images/error-context.md
+
+  2 failed
+    tests/r13-wallpapers.spec.ts:13:1 › R13 six appearance states, measured geometry and style ─────
+    tests/r13-wallpapers.spec.ts:27:1 › R13 Korean and small viewport retain layout without scaling images 

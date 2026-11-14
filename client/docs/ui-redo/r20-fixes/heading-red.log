@@ -1,0 +1,38 @@
+[WebServer] (node:72573) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:72575) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (1.6s)
+
+
+  1) tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ─────────────────────────────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 21
+    Received:    40
+
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles({name:'large-test-pattern.png',mimeType:'image/png',buffer:Buffer.from(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=3200;c.height=2000;const ctx=c.getContext('2d')!;ctx.fillStyle='rgb(90 120 100)';ctx.fillRect(0,0,c.width,c.height);return c.toDataURL().split(',')[1]!}),'base64')});await expect(panel).toHaveCount(0)}
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false);const heading=await d5.locator('.section-heading h2').evaluate(e=>({height:e.getBoundingClientRect().height,line:parseFloat(getComputedStyle(e).lineHeight),width:e.getBoundingClientRect().width,scroll:e.scrollWidth}));expect(heading.height).toBeLessThanOrEqual(heading.line+1);expect(heading.scroll).toBeLessThanOrEqual(heading.width+1)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+      41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+      43 |  await open();await panel.locator('#card-view').click();await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await expect(panel).toHaveCount(0);await expect(root).toBeVisible();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await panel.locator('.cards-close').focus();await page.keyboard.press('Escape');await expect(panel).toHaveCount(0);await expect(root).toBeVisible();
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:40:556
+
+    Error Context: test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ──────────────────────────────

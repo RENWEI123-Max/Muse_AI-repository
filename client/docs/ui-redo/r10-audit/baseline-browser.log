@@ -1,0 +1,180 @@
+[WebServer] (node:54976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:54978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture (13.3s)
+(node:54997) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture (13.1s)
+(node:55042) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture (13.3s)
+(node:55059) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture (13.4s)
+
+
+  1) tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture ──────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#collect-replies')
+        - locator resolved to <button disabled id="collect-replies" class="collect-replies">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is inert
+         - retrying click action
+           - waiting 500ms
+
+
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+    > 32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+         |                                         ^
+      33 |  await page.locator('[data-chat]').first().click();await expect(page.locator('.c6-thread')).toBeVisible();await shot('collected-chat');await page.getByLabel(t('Back to messages')).click();await settled()
+      34 |  diamonds=0;await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-shortage');await shot('reply-shortage');await page.locator('#reply-topup').click();await expect(page.locator('.reply-pack')).toHaveCount(4);await shot('reply-topup')
+      35 |  const topupAnimation=await page.locator('.reply-topup').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:32:41
+
+    Error Context: test-results/r10-audit/r10-audit-667-en-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r10-audit/r10-audit-667-en-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r10-audit/r10-audit-667-en-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture ──────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#collect-replies')
+        - locator resolved to <button disabled id="collect-replies" class="collect-replies">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is inert
+         - retrying click action
+           - waiting 500ms
+
+
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+    > 32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+         |                                         ^
+      33 |  await page.locator('[data-chat]').first().click();await expect(page.locator('.c6-thread')).toBeVisible();await shot('collected-chat');await page.getByLabel(t('Back to messages')).click();await settled()
+      34 |  diamonds=0;await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-shortage');await shot('reply-shortage');await page.locator('#reply-topup').click();await expect(page.locator('.reply-pack')).toHaveCount(4);await shot('reply-topup')
+      35 |  const topupAnimation=await page.locator('.reply-topup').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:32:41
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/Users/anna/Muse_AI-repository/client/test-results/r10-audit/.playwright-artifacts-1/traces/4777bc897a7dcbcae0fd-2d96212869fbca69bd23-recording1.network' -> '/Users/anna/Muse_AI-repository/client/test-results/r10-audit/.playwright-artifacts-1/traces/4777bc897a7dcbcae0fd-2d96212869fbca69bd23-recording1-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/Users/anna/Muse_AI-repository/client/test-results/r10-audit/.playwright-artifacts-1/traces/4777bc897a7dcbcae0fd-2d96212869fbca69bd23.trace'
+
+    Error: ENOENT: no such file or directory, open '/Users/anna/Muse_AI-repository/client/test-results/r10-audit/.playwright-artifacts-1/bccb57f34204fb93867674d6ad327ec9.zip'
+
+  3) tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture ──────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#collect-replies')
+        - locator resolved to <button disabled id="collect-replies" class="collect-replies">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is inert
+         - retrying click action
+           - waiting 500ms
+
+
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+    > 32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+         |                                         ^
+      33 |  await page.locator('[data-chat]').first().click();await expect(page.locator('.c6-thread')).toBeVisible();await shot('collected-chat');await page.getByLabel(t('Back to messages')).click();await settled()
+      34 |  diamonds=0;await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-shortage');await shot('reply-shortage');await page.locator('#reply-topup').click();await expect(page.locator('.reply-pack')).toHaveCount(4);await shot('reply-topup')
+      35 |  const topupAnimation=await page.locator('.reply-topup').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:32:41
+
+    Error Context: test-results/r10-audit/r10-audit-812-en-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r10-audit/r10-audit-812-en-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r10-audit/r10-audit-812-en-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture ──────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#collect-replies')
+        - locator resolved to <button disabled id="collect-replies" class="collect-replies">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is inert
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is inert
+         - retrying click action
+           - waiting 500ms
+
+
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+    > 32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+         |                                         ^
+      33 |  await page.locator('[data-chat]').first().click();await expect(page.locator('.c6-thread')).toBeVisible();await shot('collected-chat');await page.getByLabel(t('Back to messages')).click();await settled()
+      34 |  diamonds=0;await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-shortage');await shot('reply-shortage');await page.locator('#reply-topup').click();await expect(page.locator('.reply-pack')).toHaveCount(4);await shot('reply-topup')
+      35 |  const topupAnimation=await page.locator('.reply-topup').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:32:41
+
+    Error Context: test-results/r10-audit/r10-audit-812-ko-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r10-audit/r10-audit-812-ko-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r10-audit/r10-audit-812-ko-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture ───────────────────────

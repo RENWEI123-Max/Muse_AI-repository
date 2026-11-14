@@ -1,0 +1,48 @@
+[WebServer] (node:61276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:61278) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough (5.7s)
+
+
+  1) tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.auth-flow')
+    Expected: "consent"
+    Received: "signin"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.auth-flow') with timeout 5000ms
+      - waiting for locator('.auth-flow')
+        14 × locator resolved to <div class="auth-flow" data-auth-mode="signin">…</div>
+           - unexpected value "signin"
+
+
+      23 |   return ok({items:[],responses:[],cities:[]})
+      24 |  })
+    > 25 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+         |                                                                           ^
+      26 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+      27 |  const snap=async(name:string)=>{
+      28 |   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>i.getClientRects().length).map(i=>i.decode().catch(()=>{})));(document.activeElement as HTMLElement)?.blur()})
+        at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:25:75)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:39:194
+
+    Error Context: test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r15-audit/r15-audit-667-en-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r15-audit.spec.ts:6:61 › 667 en auth click walkthrough ───────────────────────────────────

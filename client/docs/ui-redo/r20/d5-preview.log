@@ -1,0 +1,39 @@
+
+Running 1 test using 1 worker
+
+(node:1359587) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access (21.2s)
+
+
+  1) tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.d5-page h1')
+    Expected: "Moment"
+    Received: "Moment순간"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.d5-page h1') with timeout 5000ms
+      - waiting for locator('.d5-page h1')
+        - locator resolved to <h1>…</h1>
+        - unexpected value "My moments나의 순간"
+        13 × locator resolved to <h1>…</h1>
+           - unexpected value "Moment순간"
+
+
+      35 |  await page.getByRole('button',{name:'Outfit',exact:true}).click();await expect(page.locator('.empty:not(.d5-item-leave-active)').last()).toBeVisible();await snap('moments-category-empty');await page.getByRole('button',{name:'All',exact:true}).click()
+      36 |  const rows=await(await request.get('http://127.0.0.1:3069/posts',{headers:authorHeaders})).json(),post=rows.items[0];expect(post.attachments).toHaveLength(2)
+    > 37 |  await page.locator('.detail-link').click();await expect(page.locator('.d5-page h1')).toHaveText('Moment');await snap('moment-detail')
+         |                                                                                       ^
+      38 |  await page.locator('[data-more]').click();await snap('moment-options');
+      39 |  await page.locator('#moment-category').click();await snap('post-category');await page.locator('[data-post-category="Portrait"]').click();await expect(page.locator('.moment-card header')).toContainText('Portrait');
+      40 |  await page.locator('[data-more]').click();await page.locator('#moment-visibility').click();await snap('post-visibility');await page.locator('[data-visibility="everyone"]').click();await expect(page.locator('.moment-card header')).toContainText('Everyone');
+        at /root/Muse_AI-repository/client/tests/d5.spec.ts:37:87
+
+    Error Context: docs/ui-redo/r20/test-results/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md
+
+  1 failed
+    tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access 

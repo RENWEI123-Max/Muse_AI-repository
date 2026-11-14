@@ -1,0 +1,159 @@
+[WebServer] (node:70919) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:70921) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/r20-fixes-auth.spec.ts:4:61 › 667 en registration destination (628ms)
+  ✓   2 tests/r20-fixes-auth.spec.ts:4:61 › 667 ko registration destination (657ms)
+  ✓   3 tests/r20-fixes-auth.spec.ts:4:61 › 812 en registration destination (612ms)
+  ✓   4 tests/r20-fixes-auth.spec.ts:4:61 › 812 ko registration destination (660ms)
+  ✓   5 tests/r20-fixes-avatar.spec.ts:6:61 › 667 en R20 fixes avatar walkthrough (16.4s)
+  ✓   6 tests/r20-fixes-avatar.spec.ts:6:61 › 667 ko R20 fixes avatar walkthrough (16.5s)
+  ✓   7 tests/r20-fixes-avatar.spec.ts:6:61 › 812 en R20 fixes avatar walkthrough (16.3s)
+  ✓   8 tests/r20-fixes-avatar.spec.ts:6:61 › 812 ko R20 fixes avatar walkthrough (16.5s)
+  ✘   9 tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap (242ms)
+(node:70981) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 tests/r20-fixes-guest.spec.ts:4:61 › 667 ko guest appearance overlap (375ms)
+(node:70987) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 tests/r20-fixes-guest.spec.ts:4:61 › 812 en guest appearance overlap (234ms)
+(node:70993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 tests/r20-fixes-guest.spec.ts:4:61 › 812 ko guest appearance overlap (406ms)
+(node:70998) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 tests/r20-fixes-moments.spec.ts:4:61 › 667 en R20 fixes moments walkthrough (11.8s)
+  ✓  14 tests/r20-fixes-moments.spec.ts:4:61 › 667 ko R20 fixes moments walkthrough (11.8s)
+  ✓  15 tests/r20-fixes-moments.spec.ts:4:61 › 812 en R20 fixes moments walkthrough (11.7s)
+  ✓  16 tests/r20-fixes-moments.spec.ts:4:61 › 812 ko R20 fixes moments walkthrough (11.8s)
+  ✓  17 tests/r20-fixes-navigation.spec.ts:5:61 › 667 en R06-R17 navigation fixes (15.6s)
+  ✓  18 tests/r20-fixes-navigation.spec.ts:5:61 › 667 ko R06-R17 navigation fixes (15.6s)
+  ✓  19 tests/r20-fixes-navigation.spec.ts:5:61 › 812 en R06-R17 navigation fixes (15.3s)
+  ✓  20 tests/r20-fixes-navigation.spec.ts:5:61 › 812 ko R06-R17 navigation fixes (15.3s)
+  ✓  21 tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough (13.6s)
+  ✓  22 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (13.0s)
+  ✓  23 tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough (13.3s)
+  ✓  24 tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough (13.3s)
+
+
+  1) tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap ──────────────────────────
+
+    Error: locator.boundingBox: Error: strict mode violation: locator('.home-error') resolved to 2 elements:
+        1) <div role="alert" data-v-24db8e29="" class="home-error">…</div> aka getByText('Sign in to meet your letters. Sign in')
+        2) <p role="alert" data-v-24db8e29="" class="home-error">Sign in to meet your letters.</p> aka getByText('Sign in to meet your letters.', { exact: true })
+
+    Call log:
+      - waiting for locator('.home-error')
+
+
+      3 | const out='docs/ui-redo/r20-fixes/guest';mkdirSync(out,{recursive:true})
+      4 | for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} guest appearance overlap`,async({page})=>{
+    > 5 |  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang);await page.goto('/');await page.locator('.auth-actions .auth-preview').click();await page.locator('#magic').click();const notice=await page.locator('.home-error').boundingBox(),heading=await page.locator('.r07-header').boundingBox();expect(notice).not.toBeNull();expect(heading).not.toBeNull();const overlap=!(notice!.y+notice!.height<=heading!.y||heading!.y+heading!.height<=notice!.y||notice!.x+notice!.width<=heading!.x||heading!.x+heading!.width<=notice!.x);expect(overlap).toBe(false);await page.screenshot({path:`${out}/${height}-${lang}-appearance.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2))
+        |                                                                                                                                                                                                                                                                                                     ^
+      6 | })
+      7 |
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-guest.spec.ts:5:293
+
+    Error Context: test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-fixes-guest.spec.ts:4:61 › 667 ko guest appearance overlap ──────────────────────────
+
+    Error: locator.boundingBox: Error: strict mode violation: locator('.home-error') resolved to 2 elements:
+        1) <div role="alert" data-v-24db8e29="" class="home-error">…</div> aka getByText('로그인하고 편지를 만나 보세요. 로그인')
+        2) <p role="alert" data-v-24db8e29="" class="home-error">로그인하고 편지를 만나 보세요.</p> aka getByText('로그인하고 편지를 만나 보세요.', { exact: true })
+
+    Call log:
+      - waiting for locator('.home-error')
+
+
+      3 | const out='docs/ui-redo/r20-fixes/guest';mkdirSync(out,{recursive:true})
+      4 | for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} guest appearance overlap`,async({page})=>{
+    > 5 |  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang);await page.goto('/');await page.locator('.auth-actions .auth-preview').click();await page.locator('#magic').click();const notice=await page.locator('.home-error').boundingBox(),heading=await page.locator('.r07-header').boundingBox();expect(notice).not.toBeNull();expect(heading).not.toBeNull();const overlap=!(notice!.y+notice!.height<=heading!.y||heading!.y+heading!.height<=notice!.y||notice!.x+notice!.width<=heading!.x||heading!.x+heading!.width<=notice!.x);expect(overlap).toBe(false);await page.screenshot({path:`${out}/${height}-${lang}-appearance.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2))
+        |                                                                                                                                                                                                                                                                                                     ^
+      6 | })
+      7 |
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-guest.spec.ts:5:293
+
+    Error Context: test-results/r20-fixes/r20-fixes-guest-667-ko-guest-appearance-overlap/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-guest-667-ko-guest-appearance-overlap/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-guest-667-ko-guest-appearance-overlap/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-fixes-guest.spec.ts:4:61 › 812 en guest appearance overlap ──────────────────────────
+
+    Error: locator.boundingBox: Error: strict mode violation: locator('.home-error') resolved to 2 elements:
+        1) <div role="alert" data-v-24db8e29="" class="home-error">…</div> aka getByText('Sign in to meet your letters. Sign in')
+        2) <p role="alert" data-v-24db8e29="" class="home-error">Sign in to meet your letters.</p> aka getByText('Sign in to meet your letters.', { exact: true })
+
+    Call log:
+      - waiting for locator('.home-error')
+
+
+      3 | const out='docs/ui-redo/r20-fixes/guest';mkdirSync(out,{recursive:true})
+      4 | for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} guest appearance overlap`,async({page})=>{
+    > 5 |  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang);await page.goto('/');await page.locator('.auth-actions .auth-preview').click();await page.locator('#magic').click();const notice=await page.locator('.home-error').boundingBox(),heading=await page.locator('.r07-header').boundingBox();expect(notice).not.toBeNull();expect(heading).not.toBeNull();const overlap=!(notice!.y+notice!.height<=heading!.y||heading!.y+heading!.height<=notice!.y||notice!.x+notice!.width<=heading!.x||heading!.x+heading!.width<=notice!.x);expect(overlap).toBe(false);await page.screenshot({path:`${out}/${height}-${lang}-appearance.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2))
+        |                                                                                                                                                                                                                                                                                                     ^
+      6 | })
+      7 |
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-guest.spec.ts:5:293
+
+    Error Context: test-results/r20-fixes/r20-fixes-guest-812-en-guest-appearance-overlap/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-guest-812-en-guest-appearance-overlap/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-guest-812-en-guest-appearance-overlap/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-fixes-guest.spec.ts:4:61 › 812 ko guest appearance overlap ──────────────────────────
+
+    Error: locator.boundingBox: Error: strict mode violation: locator('.home-error') resolved to 2 elements:
+        1) <div role="alert" data-v-24db8e29="" class="home-error">…</div> aka getByText('로그인하고 편지를 만나 보세요. 로그인')
+        2) <p role="alert" data-v-24db8e29="" class="home-error">로그인하고 편지를 만나 보세요.</p> aka getByText('로그인하고 편지를 만나 보세요.', { exact: true })
+
+    Call log:
+      - waiting for locator('.home-error')
+
+
+      3 | const out='docs/ui-redo/r20-fixes/guest';mkdirSync(out,{recursive:true})
+      4 | for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} guest appearance overlap`,async({page})=>{
+    > 5 |  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang);await page.goto('/');await page.locator('.auth-actions .auth-preview').click();await page.locator('#magic').click();const notice=await page.locator('.home-error').boundingBox(),heading=await page.locator('.r07-header').boundingBox();expect(notice).not.toBeNull();expect(heading).not.toBeNull();const overlap=!(notice!.y+notice!.height<=heading!.y||heading!.y+heading!.height<=notice!.y||notice!.x+notice!.width<=heading!.x||heading!.x+heading!.width<=notice!.x);expect(overlap).toBe(false);await page.screenshot({path:`${out}/${height}-${lang}-appearance.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2))
+        |                                                                                                                                                                                                                                                                                                     ^
+      6 | })
+      7 |
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-guest.spec.ts:5:293
+
+    Error Context: test-results/r20-fixes/r20-fixes-guest-812-ko-guest-appearance-overlap/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-guest-812-ko-guest-appearance-overlap/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-guest-812-ko-guest-appearance-overlap/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap ───────────────────────────
+    tests/r20-fixes-guest.spec.ts:4:61 › 667 ko guest appearance overlap ───────────────────────────
+    tests/r20-fixes-guest.spec.ts:4:61 › 812 en guest appearance overlap ───────────────────────────
+    tests/r20-fixes-guest.spec.ts:4:61 › 812 ko guest appearance overlap ───────────────────────────
+  20 passed (3.9m)

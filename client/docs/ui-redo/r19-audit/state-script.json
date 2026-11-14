@@ -1,0 +1,95 @@
+{
+  "id": "image-cards",
+  "title": "11 · 形象照",
+  "description": "直接上传照片，再按照片类型与可见范围管理。",
+  "pages": [
+    {
+      "id": "card-type",
+      "title": "上传形象照 / 选择照片类型",
+      "task": "profile",
+      "seed": "standard",
+      "actions": [
+        [
+          "click",
+          "#upload-image-card"
+        ]
+      ]
+    },
+    {
+      "id": "card-options",
+      "title": "已上传照片 / 操作菜单",
+      "task": "profile",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-profile-moment=\"card-1\"]"
+        ]
+      ]
+    },
+    {
+      "id": "card-preview",
+      "title": "已上传照片 / 大图查看",
+      "task": "profile",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-profile-moment=\"card-1\"]"
+        ],
+        [
+          "click",
+          "#card-view"
+        ]
+      ]
+    },
+    {
+      "id": "card-change-type",
+      "title": "已上传照片 / 更换类型",
+      "task": "profile",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-profile-moment=\"card-1\"]"
+        ],
+        [
+          "click",
+          "#card-type"
+        ]
+      ]
+    },
+    {
+      "id": "card-visibility",
+      "title": "已上传照片 / 可见范围",
+      "task": "profile",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-profile-moment=\"card-1\"]"
+        ],
+        [
+          "click",
+          "#card-visibility"
+        ]
+      ]
+    },
+    {
+      "id": "card-remove",
+      "title": "已上传照片 / 移除确认",
+      "task": "profile",
+      "seed": "content",
+      "actions": [
+        [
+          "click",
+          "[data-profile-moment=\"card-1\"]"
+        ],
+        [
+          "click",
+          "#card-remove"
+        ]
+      ]
+    }
+  ]
+}

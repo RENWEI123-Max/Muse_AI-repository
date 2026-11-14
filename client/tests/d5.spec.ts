@@ -1,10 +1,11 @@
 import {test,expect} from '@playwright/test'
-import {mkdir,writeFile} from 'node:fs/promises'
-const evidence='docs/d5'
-async function login(page:any,user:any){await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await expect(page.locator('#upload-image-card')).toBeEnabled()}
+import {mkdir,writeFile,readFile} from 'node:fs/promises'
+const evidence=process.env.D5_EVIDENCE||'docs/d5'
+// Reuse tokens returned by the real isolated fixture signup; never repeat login requests.
+async function login(page:any,user:any){await page.addInitScript((token:string)=>localStorage.setItem('maugo-token',token),user.token);await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#upload-image-card')).toBeEnabled()}
 test('D5 real B17: supported states, limits, persistence and second-account access',async({page,request,browser})=>{
  test.setTimeout(180000);await mkdir(evidence,{recursive:true})
- const fixture=await(await request.post('http://127.0.0.1:3069/__d5/seed')).json()
+ const fixture=process.env.D5_SHARED_FIXTURE?JSON.parse(await readFile(process.env.D5_SHARED_FIXTURE,'utf8')):await(await request.post('http://127.0.0.1:3069/__d5/seed')).json()
  const motionEvents:any[]=[];await page.exposeFunction('__recordD5Motion',(event:any)=>motionEvents.push(event));
  await page.addInitScript(()=>{(window as any).__d5Motion=[];document.addEventListener('transitionrun',event=>{const target=event.target as HTMLElement;if(target.matches('.sheet,.d5-page,.moment-card,.empty,.categories button'))(window as any).__recordD5Motion({target:target.className,property:(event as TransitionEvent).propertyName})})})
  const receipts:any[]=[]
@@ -84,5 +85,5 @@ test('D5 real B17: supported states, limits, persistence and second-account acce
  await snap('limits-six-attachments');expect(await page.locator('[data-comment],.comment-bubble').count()).toBe(0)
  const motion=motionEvents;expect(motion.some((e:any)=>e.target==='sheet')).toBe(true);expect(motion.some((e:any)=>e.target.split(' ').includes('d5-page'))).toBe(true)
  expect(motion.some((e:any)=>e.target.split(' ').includes('empty'))).toBe(true);
- await writeFile(`${evidence}/verification.json`,JSON.stringify({database:fixture.database,stateScreenshots:18,prototypePassed:18,prototypeGaps:[],postUpdate:{category:updated.category,visibility:updated.visibility,nonAuthorOptions:0,nonAuthorPatch:403},checks,receipts,motion,friendUnlock:{friendsPost:200,friendsCardMedia:200,privatePost:403},pendingEveryoneStatus:403,deletedPostStatus:404,sixAttachments:final.items[0].attachments.length},null,2));await viewerContext.close()
+ await writeFile(`${evidence}/verification.json`,JSON.stringify({database:fixture.database,evidenceKind:'implementation screenshots; no Figma comparison',postUpdate:{category:updated.category,visibility:updated.visibility,nonAuthorOptions:0,nonAuthorPatch:403},checks,receipts,motion,friendUnlock:{friendsPost:200,friendsCardMedia:200,privatePost:403},pendingEveryoneStatus:403,deletedPostStatus:404,sixAttachments:final.items[0].attachments.length},null,2));await viewerContext.close()
 })

@@ -1,0 +1,142 @@
+[WebServer] (node:53122) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:53124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+667 en inbox-pending
+667 en collect-cancelled
+667 en inbox-collected-one
+667 en inbox-collected-all
+667 en inbox-unread
+667 en mark-read-failure
+667 en inbox-read
+667 en inbox-friends-empty
+667 en inbox-options
+667 en pin-failure
+667 en inbox-pinned
+667 en inbox-friends
+667 en inbox-drawer
+667 en inbox-search
+667 en inbox-search-empty
+667 en inbox-hidden
+667 en inbox-hidden-empty
+667 en inbox-waiting
+667 en waiting-chat
+667 en inbox-empty
+667 en inbox-notifications-off
+667 en list-failure
+667 en list-scroll-sticky
+collected geometry 667 en { x: 24, y: -321.0360107421875, width: 327, height: 84 } [
+  {
+    name: 'inbox-body',
+    top: 112,
+    scroll: 1278,
+    height: 459,
+    content: 1748
+  },
+  {
+    name: 'inbox-flow inbox-page reply-flow',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 0, content: 0 },
+  {
+    name: 'device app-shell',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 }
+]
+collected geometry 667 en { x: 24, y: 19.908447265625, width: 327, height: 84 } [
+  {
+    name: 'inbox-body',
+    top: 112,
+    scroll: 940,
+    height: 459,
+    content: 1748
+  },
+  {
+    name: 'inbox-flow inbox-page reply-flow',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 0, content: 0 },
+  {
+    name: 'device app-shell',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 }
+]
+collected geometry 667 en { x: 24, y: 111.833984375, width: 327, height: 84 } [
+  {
+    name: 'inbox-body',
+    top: 112,
+    scroll: 852,
+    height: 459,
+    content: 1748
+  },
+  {
+    name: 'inbox-flow inbox-page reply-flow',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 0, content: 0 },
+  {
+    name: 'device app-shell',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 }
+]
+collected geometry 667 en { x: 24, y: 112, width: 327, height: 84 } [
+  {
+    name: 'inbox-body',
+    top: 112,
+    scroll: 852,
+    height: 459,
+    content: 1748
+  },
+  {
+    name: 'inbox-flow inbox-page reply-flow',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 0, content: 0 },
+  {
+    name: 'device app-shell',
+    top: 0,
+    scroll: 0,
+    height: 667,
+    content: 667
+  },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 },
+  { name: '', top: 0, scroll: 0, height: 667, content: 667 }
+]
+667 en collected-row-visible
+  ✓  1 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (26.0s)
+
+  1 passed (27.0s)

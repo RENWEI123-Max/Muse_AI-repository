@@ -1,0 +1,1732 @@
+{
+  "fixture": true,
+  "initialCards": 0,
+  "media": "Only browser-uploaded repository portrait-5.png bytes; never seeded cards",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "body": {
+        "email": "r19-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "1",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "2",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "type": "outfit"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "type": "outfit"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "only_me"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "everyone"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "3",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "4",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "5",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "6",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "7",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "8",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "9",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 170825
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "10",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/3",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/10",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/3",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/4",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/5",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/6",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/7",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/8",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/9",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/10",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "empty",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "list-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "card-type",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "invalid-file",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Choose an image.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "size-boundary",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Use PNG, JPEG, WebP, MP4, WebM, OGG, WAV or MP3 below 10 MB (video below 30 MB).",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "upload-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "create-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-options",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 462,
+          "width": 351,
+          "height": 326
+        },
+        "scroll": {
+          "client": 324,
+          "content": 324,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Image card",
+            "clipped": false
+          },
+          {
+            "text": "View photo\n›",
+            "clipped": false
+          },
+          {
+            "text": "Photo type\nPortrait\n›",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Visibility\nEveryone\n›",
+            "clipped": false
+          },
+          {
+            "text": "Everyone",
+            "clipped": false
+          },
+          {
+            "text": "Remove card\n›",
+            "clipped": false
+          },
+          {
+            "text": "Main photo",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-preview",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 179.5,
+          "width": 351,
+          "height": 608.5
+        },
+        "scroll": {
+          "client": 607,
+          "content": 607,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo",
+            "clipped": false
+          },
+          {
+            "text": "portrait",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": [
+          {
+            "loaded": true,
+            "width": 309,
+            "height": 480
+          }
+        ]
+      }
+    },
+    {
+      "name": "preview-scrolled",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 179.5,
+          "width": 351,
+          "height": 608.5
+        },
+        "scroll": {
+          "client": 607,
+          "content": 607,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo",
+            "clipped": false
+          },
+          {
+            "text": "portrait",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": [
+          {
+            "loaded": true,
+            "width": 309,
+            "height": 480
+          }
+        ]
+      }
+    },
+    {
+      "name": "card-change-type",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "type-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 418,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Photo type",
+            "clipped": false
+          },
+          {
+            "text": "Portrait",
+            "clipped": false
+          },
+          {
+            "text": "Physique",
+            "clipped": false
+          },
+          {
+            "text": "Outfit",
+            "clipped": false
+          },
+          {
+            "text": "Life",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-visibility",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 494,
+          "width": 351,
+          "height": 294
+        },
+        "scroll": {
+          "client": 292,
+          "content": 292,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Who can see this?",
+            "clipped": false
+          },
+          {
+            "text": "Everyone\n✓",
+            "clipped": false
+          },
+          {
+            "text": "Friends",
+            "clipped": false
+          },
+          {
+            "text": "Only me",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "visibility-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 494,
+          "width": 351,
+          "height": 294
+        },
+        "scroll": {
+          "client": 292,
+          "content": 292,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Who can see this?",
+            "clipped": false
+          },
+          {
+            "text": "Everyone\n✓",
+            "clipped": false
+          },
+          {
+            "text": "Friends",
+            "clipped": false
+          },
+          {
+            "text": "Only me",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "card-remove",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 220,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 550,
+          "width": 327,
+          "height": 238
+        },
+        "scroll": {
+          "client": 236,
+          "content": 236,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Remove this photo?",
+            "clipped": false
+          },
+          {
+            "text": "This removes the image card from your profile.",
+            "clipped": false
+          },
+          {
+            "text": "Delete",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "delete-failure",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 24,
+          "y": 550,
+          "width": 327,
+          "height": 238
+        },
+        "scroll": {
+          "client": 236,
+          "content": 236,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.22s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "Remove this photo?",
+            "clipped": false
+          },
+          {
+            "text": "This removes the image card from your profile.",
+            "clipped": false
+          },
+          {
+            "text": "Delete",
+            "clipped": false
+          },
+          {
+            "text": "Cancel",
+            "clipped": false
+          },
+          {
+            "text": "Please try again.",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "removed-empty",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "full",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "full-scrolled",
+      "doc": {
+        "height": 812,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    }
+  ],
+  "checks": {
+    "pickerCancelPanelRemains": true,
+    "preview": {
+      "width": 309,
+      "height": 480,
+      "loaded": true
+    },
+    "previewScroll": {
+      "top": 0,
+      "client": 607,
+      "content": 607,
+      "documentY": 0
+    },
+    "deletePress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+    "deleteCancelToProfile": true,
+    "uploadLimit": true,
+    "gridScroll": {
+      "top": 438,
+      "documentY": 0
+    },
+    "card-optionsEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-previewEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-change-typeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-visibilityEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-removeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "card-typeEscape": {
+      "profile": true,
+      "dialogs": 0
+    },
+    "backdropClose": true,
+    "clipped": []
+  },
+  "errors": []
+}

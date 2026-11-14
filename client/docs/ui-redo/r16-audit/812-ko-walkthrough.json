@@ -1,0 +1,2290 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": true
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": false
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": true
+      }
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-waiting",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-waiting/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-waiting&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-empty",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-empty/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-empty&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "person-profile",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "person-followed",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "✓ 팔로우 중",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "unfollowed",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "follow-failure",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "person-photo",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet person-sheet ui-sheet person-photo-sheet",
+          "height": 436,
+          "content": 436,
+          "top": 0,
+          "left": 0,
+          "width": 349,
+          "scrollWidth": 349,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.3s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "사진",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "card-photo",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet person-sheet ui-sheet person-photo-sheet",
+          "height": 436,
+          "content": 436,
+          "top": 0,
+          "left": 0,
+          "width": 349,
+          "scrollWidth": 349,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.3s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "사진",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "cards-scrolled",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 265,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "moments-scrolled",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 233,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 265,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "moment-photo",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 233,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 265,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet person-sheet ui-sheet person-photo-sheet",
+          "height": 436,
+          "content": 436,
+          "top": 0,
+          "left": 0,
+          "width": 349,
+          "scrollWidth": 349,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.3s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "사진",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "person-safety",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 233,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 265,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "d4-sheet person-sheet ui-sheet person-safety-sheet",
+          "height": 296,
+          "content": 296,
+          "top": 0,
+          "left": 0,
+          "width": 349,
+          "scrollWidth": 349,
+          "overscroll": "contain",
+          "animation": "sheet-in",
+          "duration": "0.3s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "신고 또는 차단",
+          "clipped": false
+        },
+        {
+          "text": "이 사람에 대해 원하는 조치를 선택하세요.",
+          "clipped": false
+        },
+        {
+          "text": "신고부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "부적절한 콘텐츠를 알려 주세요",
+          "clipped": false
+        },
+        {
+          "text": "⊘차단이 사람의 연락을 차단",
+          "clipped": false
+        },
+        {
+          "text": "이 사람의 연락을 차단",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "report-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "block-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "chat-boundary",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "person-waiting",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 672,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 327,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "아직 순간이 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "답장이 오면 팔로우할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "waiting-chat",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [],
+      "copy": [],
+      "images": []
+    },
+    {
+      "name": "person-no-content",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 672,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 327,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "아직 순간이 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "답장이 오면 팔로우할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-failure",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 672,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 327,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Please try again.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "아직 순간이 없어요.",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "name": "profile-recovered",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "width": 375
+      },
+      "regions": [
+        {
+          "selector": "d4-body profile-view-public",
+          "height": 672,
+          "content": 905,
+          "top": 0,
+          "left": 0,
+          "width": 375,
+          "scrollWidth": 375,
+          "overscroll": "contain",
+          "animation": "none",
+          "duration": "0s"
+        },
+        {
+          "selector": "person-cards d4-cards",
+          "height": 190,
+          "content": 190,
+          "top": 0,
+          "left": 0,
+          "width": 327,
+          "scrollWidth": 592,
+          "overscroll": "contain auto",
+          "animation": "none",
+          "duration": "0s"
+        }
+      ],
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "25 · Seoul",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "순간",
+          "clipped": false
+        },
+        {
+          "text": "A small moment worth keeping.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "＋ 팔로우",
+          "clipped": false
+        },
+        {
+          "text": "채팅",
+          "clipped": false
+        }
+      ],
+      "images": [
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        },
+        {
+          "decoded": true
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "press": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "transition": "0s"
+    },
+    "motion": {
+      "animation": "none",
+      "transition": "0s"
+    },
+    "cards": {
+      "left": 265,
+      "width": 327,
+      "content": 592
+    },
+    "body": {
+      "top": 233,
+      "height": 672,
+      "content": 905
+    }
+  },
+  "errors": []
+}

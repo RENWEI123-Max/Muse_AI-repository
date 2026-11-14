@@ -1,0 +1,10 @@
+[WebServer] (node:57535) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:57537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures (11.1s)
+
+  1 passed (11.8s)

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "avatar-gallery",
+    "title": "头像 / 已上传与空槽位",
+    "task": "profile",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#edit-avatar"
+      ]
+    ]
+  },
+  {
+    "id": "avatar-remove",
+    "title": "头像 / 移除确认",
+    "task": "profile",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#edit-avatar"
+      ],
+      [
+        "click",
+        "[data-remove-avatar=\"0\"]"
+      ]
+    ]
+  },
+  {
+    "id": "avatar-removed",
+    "title": "头像 / 移除后的槽位",
+    "task": "profile",
+    "seed": "avatar-removed",
+    "actions": [
+      [
+        "click",
+        "#edit-avatar"
+      ]
+    ]
+  },
+  {
+    "id": "avatar-restore",
+    "title": "头像 / 最近移除",
+    "task": "profile",
+    "seed": "avatar-removed",
+    "actions": [
+      [
+        "click",
+        "#edit-avatar"
+      ],
+      [
+        "click",
+        "#removed-avatars"
+      ]
+    ]
+  },
+  {
+    "id": "avatar-full",
+    "title": "头像 / 槽位已满",
+    "task": "profile",
+    "seed": "avatar-full",
+    "actions": [
+      [
+        "click",
+        "#edit-avatar"
+      ]
+    ]
+  },
+  {
+    "id": "avatar-crop",
+    "title": "头像 / 上传裁切",
+    "task": "avatar-crop",
+    "seed": "standard",
+    "actions": []
+  }
+]
