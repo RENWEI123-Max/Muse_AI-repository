@@ -1,0 +1,18 @@
+[WebServer] (node:1221239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1221251) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1221286) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:1221327) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (965ms)
+  ✓  2 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (2.0s)
+  ✓  3 tests/r14-safety.spec.ts:8:1 › R14 safe form and block/unblock paths, zero report submissions (8.7s)
+  ✓  4 tests/r14-safety.spec.ts:15:1 › R14 Korean and small screen safety layouts (4.2s)
+  ✓  5 tests/r14-safety.spec.ts:19:1 › R14 waiting conversation remains gated after block and unblock (3.8s)
+
+  5 passed (24.2s)

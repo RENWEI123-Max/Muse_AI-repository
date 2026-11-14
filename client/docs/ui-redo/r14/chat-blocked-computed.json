@@ -1,0 +1,82 @@
+[
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "waiting-card",
+    "box": {
+      "x": 0,
+      "y": 660.5,
+      "width": 375,
+      "height": 123.5
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(27, 43, 33) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "STRONG",
+    "id": "",
+    "class": "chat-waiting-title",
+    "box": {
+      "x": 24,
+      "y": 683.5,
+      "width": 327,
+      "height": 16.9375
+    },
+    "style": {
+      "color": "rgb(205, 227, 190)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(205, 227, 190)",
+      "borderRadius": "0px",
+      "font": "550 14px / 16.94px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "chat-waiting-copy",
+    "box": {
+      "x": 24,
+      "y": 708.4375,
+      "width": 327,
+      "height": 19
+    },
+    "style": {
+      "color": "rgb(139, 167, 129)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(139, 167, 129)",
+      "borderRadius": "0px",
+      "font": "11px / 19px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-chat-link ui-chat-link--safety",
+    "box": {
+      "x": 140,
+      "y": 739.4375,
+      "width": 95,
+      "height": 28
+    },
+    "style": {
+      "color": "rgb(139, 167, 129)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(139, 167, 129)",
+      "borderRadius": "0px",
+      "font": "10px / 12.1px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  }
+]

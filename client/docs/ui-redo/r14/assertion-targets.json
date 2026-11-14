@@ -1,0 +1,322 @@
+{
+  "#safety-report": {
+    "nodeId": "29:12008",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.12941177189350128,
+          "g": 0.1882352977991104,
+          "b": 0.14509804546833038,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 14.0
+  },
+  "#safety-block": {
+    "nodeId": "29:12016",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.12941177189350128,
+          "g": 0.1882352977991104,
+          "b": 0.14509804546833038,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 14.0
+  },
+  ".safety-choice-sheet": {
+    "nodeId": "29:11996",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.0941176488995552,
+          "g": 0.12941177189350128,
+          "b": 0.11764705926179886,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 24.0
+  },
+  "#report-reason": {
+    "nodeId": "29:12069",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.125490203499794,
+          "g": 0.18431372940540314,
+          "b": 0.1411764770746231,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 12.0
+  },
+  "#report-details": {
+    "nodeId": "29:12077",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.125490203499794,
+          "g": 0.18431372940540314,
+          "b": 0.1411764770746231,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 12.0
+  },
+  ".d3-add-photo": {
+    "nodeId": "29:12080",
+    "fills": [
+      {
+        "opacity": 0.03500000014901161,
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.7098039388656616,
+          "g": 0.9803921580314636,
+          "b": 0.43921568989753723,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 24.0
+  },
+  "#save-report": {
+    "nodeId": "29:12085",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "GRADIENT_LINEAR",
+        "gradientHandlePositions": [
+          {
+            "x": 6.534001562030767e-09,
+            "y": 0.2668461526004954
+          },
+          {
+            "x": 1.0000000222642116,
+            "y": 0.7331538245457078
+          },
+          {
+            "x": -0.4663076654112108,
+            "y": 1.2668461683307055
+          }
+        ],
+        "gradientStops": [
+          {
+            "color": {
+              "r": 0.7411764860153198,
+              "g": 1.0,
+              "b": 0.5058823823928833,
+              "a": 1.0
+            },
+            "position": 0.0
+          },
+          {
+            "color": {
+              "r": 0.6901960968971252,
+              "g": 0.9843137264251709,
+              "b": 0.3803921639919281,
+              "a": 1.0
+            },
+            "position": 1.0
+          }
+        ]
+      }
+    ],
+    "style": null,
+    "radius": 24.0
+  },
+  ".safety-dialog-title": {
+    "nodeId": "29:12462",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.8941176533699036,
+          "g": 0.9372549057006836,
+          "b": 0.8509804010391235,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": {
+      "fontFamily": "Fredoka",
+      "fontPostScriptName": null,
+      "fontStyle": "Medium",
+      "fontWeight": 550,
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "fontSize": 22.0,
+      "textAlignHorizontal": "CENTER",
+      "textAlignVertical": "TOP",
+      "letterSpacing": -0.30000001192092896,
+      "lineHeightPx": 28.0,
+      "lineHeightPercent": 105.18406677246094,
+      "lineHeightPercentFontSize": 127.2727279663086,
+      "lineHeightUnit": "PIXELS"
+    },
+    "radius": null
+  },
+  ".safety-dialog-copy": {
+    "nodeId": "29:12464",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.6313725709915161,
+          "g": 0.6980392336845398,
+          "b": 0.6235294342041016,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": {
+      "fontFamily": "Fredoka",
+      "fontPostScriptName": null,
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "textAutoResize": "HEIGHT",
+      "fontSize": 12.0,
+      "textAlignHorizontal": "CENTER",
+      "textAlignVertical": "TOP",
+      "letterSpacing": 0.0,
+      "lineHeightPx": 20.0,
+      "lineHeightPercent": 137.7410430908203,
+      "lineHeightPercentFontSize": 166.6666717529297,
+      "lineHeightUnit": "PIXELS"
+    },
+    "radius": null
+  },
+  ".safety-empty-title": {
+    "nodeId": "29:12701",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.729411780834198,
+          "g": 0.7882353067398071,
+          "b": 0.7019608020782471,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": {
+      "fontFamily": "Fredoka",
+      "fontPostScriptName": null,
+      "fontStyle": "Medium",
+      "fontWeight": 550,
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "fontSize": 14.0,
+      "textAlignHorizontal": "CENTER",
+      "textAlignVertical": "TOP",
+      "letterSpacing": -0.30000001192092896,
+      "lineHeightPx": 22.0,
+      "lineHeightPercent": 129.87013244628906,
+      "lineHeightPercentFontSize": 157.14285278320312,
+      "lineHeightUnit": "PIXELS"
+    },
+    "radius": null
+  },
+  ".safety-empty-copy": {
+    "nodeId": "29:12703",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.43529412150382996,
+          "g": 0.529411792755127,
+          "b": 0.4274509847164154,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": {
+      "fontFamily": "Fredoka",
+      "fontPostScriptName": null,
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "fontSize": 11.0,
+      "textAlignHorizontal": "CENTER",
+      "textAlignVertical": "TOP",
+      "letterSpacing": 0.0,
+      "lineHeightPx": 21.0,
+      "lineHeightPercent": 157.77610778808594,
+      "lineHeightPercentFontSize": 190.90908813476562,
+      "lineHeightUnit": "PIXELS"
+    },
+    "radius": null
+  },
+  ".inbox-block-name": {
+    "nodeId": "29:12616",
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.8941176533699036,
+          "g": 0.9372549057006836,
+          "b": 0.8509804010391235,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": {
+      "fontFamily": "Fredoka",
+      "fontPostScriptName": null,
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "fontSize": 12.0,
+      "textAlignHorizontal": "LEFT",
+      "textAlignVertical": "TOP",
+      "letterSpacing": 0.0,
+      "lineHeightPx": 14.520000457763672,
+      "lineHeightPercent": 100.0,
+      "lineHeightUnit": "INTRINSIC_%"
+    },
+    "radius": null
+  },
+  "[data-unblock]": {
+    "nodeId": "29:12617",
+    "fills": [
+      {
+        "opacity": 0.03500000014901161,
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.7098039388656616,
+          "g": 0.9803921580314636,
+          "b": 0.43921568989753723,
+          "a": 1.0
+        }
+      }
+    ],
+    "style": null,
+    "radius": 24.0
+  }
+}

@@ -1,0 +1,39 @@
+[WebServer] (node:1219493) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1219504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1219550) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1219593) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r14-safety.spec.ts:8:1 › R14 safe form and block/unblock paths, zero report submissions (9.0s)
+  ✘  2 tests/r14-safety.spec.ts:15:1 › R14 Korean and small screen safety layouts (41.0s)
+
+
+  1) tests/r14-safety.spec.ts:15:1 › R14 Korean and small screen safety layouts ────────────────────
+
+    Test was interrupted.
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for getByRole('button', { name: 'Sign in', exact: true })
+
+
+      4 | async function capture(page:any,state:string){await expect(page.locator(`[data-state="${state}"]`).last()).toBeVisible();await page.evaluate(()=>document.fonts.ready);await page.locator('img').evaluateAll((xs:HTMLImageElement[])=>Promise.all(xs.map(x=>x.decode().catch(()=>{}))));await page.waitForTimeout(400);await page.evaluate(()=>{(document.activeElement as HTMLElement)?.blur()});if(!baseline)await page.screenshot({path:`${dir}/${state}.png`});writeFileSync(`${dir}/${baseline?'baseline-':''}${state}-computed.json`,JSON.stringify(await page.locator('.d3-report,.d3-report *, .d3-safety,.d3-safety *, .d3-blocked,.d3-blocked *, .safety-flow .waiting-card,.safety-flow .waiting-card *').evaluateAll((xs:Element[])=>xs.map(x=>{const b=x.getBoundingClientRect(),s=getComputedStyle(x);return {tag:x.tagName,id:x.id,class:x.className,box:{x:b.x,y:b.y,width:b.width,height:b.height},style:{color:s.color,background:s.background,border:s.border,borderRadius:s.borderRadius,font:s.font,letterSpacing:s.letterSpacing,boxShadow:s.boxShadow}}})),null,2))}
+      5 | async function box(page:any,sel:string,x:number,y:number,width:number,height:number){if(baseline)return;const b=await page.locator(sel).first().boundingBox();for(const [k,v] of Object.entries({x,y,width,height}))expect(Math.abs(b[k]-v),sel+' '+k).toBeLessThanOrEqual(1)}
+    > 6 | async function enter(page:any,request:any,ko=false){const u=await(await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'read'}})).json();await page.goto('/?auth=consent');if(ko){await page.evaluate(()=>localStorage.setItem('maugo-language','ko'));await page.reload()}await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .primary').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click();}
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+      7 |
+      8 | test('R14 safe form and block/unblock paths, zero report submissions',async({page,request})=>{
+      9 |  test.setTimeout(90000);let reports=0;await page.route('**/api/reports',r=>{reports++;return r.abort()});await enter(page,request);await page.locator('#chat-details').click();await page.locator('#report-person').click();await capture(page,'safety-choice');await box(page,'.safety-choice-sheet',12,490,351,298);await box(page,'#safety-report',33,607,309,74);await box(page,'#safety-block',33,693,309,74);if(!baseline){await expect(page.locator('#safety-report')).toHaveCSS('background-color','rgb(33, 48, 37)');await expect(page.locator('#safety-report')).toHaveCSS('border-radius','14px');await expect(page.locator('.safety-choice-title')).toHaveCSS('font-weight','550');await expect(page.locator('.safety-choice-copy')).toHaveCSS('color','rgb(130, 147, 130)');await expect(page.locator('.safety-option-detail').first()).toHaveCSS('line-height','18px')}
+        at enter (/root/Muse_AI-repository/client/tests/r14-safety.spec.ts:6:531)
+        at /root/Muse_AI-repository/client/tests/r14-safety.spec.ts:16:25
+
+    Error Context: test-results/r14-safety-R14-Korean-and-small-screen-safety-layouts/error-context.md
+
+  1 interrupted
+    tests/r14-safety.spec.ts:15:1 › R14 Korean and small screen safety layouts ─────────────────────
+  1 passed (55.3s)

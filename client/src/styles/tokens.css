@@ -645,3 +645,24 @@
 }
 
 :root { --appearance-moon: rgb(181 250 112 / .3330000042915344); /* 29:11243 */ --appearance-row-border: rgb(255 255 255 / .027000000700354576); /* 29:11695 */ }
+
+/* R14 exact local JSON values. Existing gradient names retained pending R02. */
+:root{
+ --safety-font-option:400 14px/20px Fredoka;
+ --safety-font-unblock:500 11px/13.3100004196167px Fredoka;
+ --safety-font-intro:400 13px/21px Fredoka;
+ --safety-font-note:400 10px/17px Fredoka;
+ --safety-font-list-name:400 12px/14.520000457763672px Fredoka;
+ --safety-choice-close:#8E9696;
+ --safety-placeholder:rgb(228 239 217 / 0.46000000834465027);
+ --safety-report-intro:#9BB293;
+ --safety-report-label:#BACDB2;
+ --safety-report-note:#728571;
+ --safety-blocked-bg:#1B2B21;
+ --safety-saved-bg:rgb(32 41 41 / 0.9300000071525574);
+ --safety-saved-text:#E6ECDF;
+ --safety-empty-title:#BAC9B3;
+ --safety-font-blocked-title:550 14px/16.940000534057617px Fredoka;
+ --safety-font-blocked-link:400 10px/12.100000381469727px Fredoka;
+ --safety-font-saved:400 12px/18px Fredoka;
+}

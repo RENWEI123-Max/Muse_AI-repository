@@ -1,0 +1,142 @@
+[
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "d3-safety safety-flow ui-scrim ui-scrim--dialog",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(3, 8, 5, 0.79) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "SECTION",
+    "id": "",
+    "class": "safety-unblock-dialog ui-dialog ui-dialog--safety safety-confirm-dialog",
+    "box": {
+      "x": 24,
+      "y": 287,
+      "width": 327,
+      "height": 238
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(152.995deg, rgb(37, 50, 41) 6.17327%, rgb(23, 34, 28) 93.8267%) repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(213, 234, 197, 0.1)",
+      "borderRadius": "28px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "rgba(0, 0, 0, 0.6) 0px 28px 80px 0px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-icon-button ui-icon-button--reply-close safety-dialog-close",
+    "box": {
+      "x": 302,
+      "y": 296,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "color": "rgb(172, 188, 170)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(172, 188, 170)",
+      "borderRadius": "22px",
+      "font": "24px / 29.04px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "H2",
+    "id": "",
+    "class": "safety-dialog-title",
+    "box": {
+      "x": 49,
+      "y": 324,
+      "width": 277,
+      "height": 28
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "550 22px / 28px Fredoka",
+      "letterSpacing": "-0.3px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "",
+    "class": "safety-dialog-copy",
+    "box": {
+      "x": 49,
+      "y": 364,
+      "width": 277,
+      "height": 20
+    },
+    "style": {
+      "color": "rgb(161, 178, 159)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(161, 178, 159)",
+      "borderRadius": "0px",
+      "font": "12px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "confirm-block",
+    "class": "ui-button ui-button--reply safety-confirm-action",
+    "box": {
+      "x": 49,
+      "y": 408,
+      "width": 277,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(10, 20, 6)",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%) repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(10, 20, 6)",
+      "borderRadius": "24px",
+      "font": "600 16px / 22px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "rgba(181, 250, 112, 0.043) 0px 0px 20px 0px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-button ui-button--text safety-dialog-cancel",
+    "box": {
+      "x": 49,
+      "y": 456,
+      "width": 277,
+      "height": 52
+    },
+    "style": {
+      "color": "rgb(153, 176, 134)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(153, 176, 134)",
+      "borderRadius": "30px",
+      "font": "12px / 14.52px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  }
+]

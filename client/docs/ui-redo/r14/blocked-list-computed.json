@@ -1,0 +1,202 @@
+[
+  {
+    "tag": "SECTION",
+    "id": "",
+    "class": "d3-blocked safety-flow",
+    "box": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 764
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "HEADER",
+    "id": "",
+    "class": "ui-header",
+    "box": {
+      "x": 0,
+      "y": 48,
+      "width": 375,
+      "height": 64
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgb(13, 23, 19) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "500 17px / 24px Fredoka",
+      "letterSpacing": "-0.3px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-icon-button ui-header__back",
+    "box": {
+      "x": 16,
+      "y": 59.5,
+      "width": 40,
+      "height": 40
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "20px",
+      "font": "500 17px / 24px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 25,
+      "y": 68.5,
+      "width": 22,
+      "height": 22
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "500 17px / 24px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "H1",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 131.09375,
+      "y": 68,
+      "width": 112.8125,
+      "height": 24
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "550 17px / 24px Fredoka",
+      "letterSpacing": "-0.3px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 243.90625,
+      "y": 80,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "500 17px / 24px Fredoka",
+      "letterSpacing": "-0.3px",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "d3-blocked-row",
+    "box": {
+      "x": 24,
+      "y": 136,
+      "width": 327,
+      "height": 80
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "inbox-block-avatar",
+    "box": {
+      "x": 24,
+      "y": 152,
+      "width": 48,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "24px",
+      "font": "13px / 20px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "inbox-block-name",
+    "box": {
+      "x": 84,
+      "y": 168.734375,
+      "width": 188,
+      "height": 14.515625
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "0px none rgb(228, 239, 217)",
+      "borderRadius": "0px",
+      "font": "12px / 14.52px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-button ui-button--safety-unblock",
+    "box": {
+      "x": 284,
+      "y": 158,
+      "width": 67,
+      "height": 36
+    },
+    "style": {
+      "color": "rgb(202, 228, 181)",
+      "background": "rgba(181, 250, 112, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+      "border": "1px solid rgba(181, 250, 112, 0.23)",
+      "borderRadius": "24px",
+      "font": "500 11px / 13.31px Fredoka",
+      "letterSpacing": "normal",
+      "boxShadow": "none"
+    }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "safety-choice": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/safety-choice.png",
+    "width": 375,
+    "height": 812
+  },
+  "report-empty": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/report-empty.png",
+    "width": 375,
+    "height": 812
+  },
+  "report-filled": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/report-filled.png",
+    "width": 375,
+    "height": 812
+  },
+  "report-saved": {
+    "exists": false,
+    "path": "client/docs/ui-redo/r14/report-saved.png"
+  },
+  "block-confirm": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/block-confirm.png",
+    "width": 375,
+    "height": 812
+  },
+  "chat-blocked": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/chat-blocked.png",
+    "width": 375,
+    "height": 812
+  },
+  "blocked-list": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/blocked-list.png",
+    "width": 375,
+    "height": 812
+  },
+  "blocked-empty": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/blocked-empty.png",
+    "width": 375,
+    "height": 812
+  },
+  "unblock-confirm": {
+    "exists": true,
+    "path": "client/docs/ui-redo/r14/unblock-confirm.png",
+    "width": 375,
+    "height": 812
+  }
+}

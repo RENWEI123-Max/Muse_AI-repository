@@ -95,3 +95,18 @@
 [lang=ko] :is(.ui-appearance-tabs,.ui-appearance-color-row,.ui-appearance-swatch,.ui-wallpaper-name){font-family:var(--font-family-ko)}
 
 .ui-button--appearance-primary{border-radius:var(--radius-24);background:var(--grad-primary-height-48);color:var(--appearance-preview-mine-text)}
+
+/* R14 shared safety controls, measured from 29:11996 / 12069 / 12459 / 12881. */
+.ui-safety-option{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 16px;border:0;border-radius:var(--radius-14);background:var(--r08-safety-option);color:var(--text-primary);font:var(--safety-font-option)}
+.ui-safety-option img{width:22px;height:22px;object-fit:contain;flex:none}
+.ui-icon-button--safety-close{background:none;color:var(--safety-choice-close);font:var(--font-symbol-chevron)}
+.ui-input--safety{display:block;margin-top:12px;font:var(--font-body)}
+.ui-input--safety-area{height:120px;padding:12px 16px;resize:vertical}
+.ui-input--safety-area::placeholder{color:var(--safety-placeholder);opacity:1}
+.ui-dialog--safety{position:absolute;left:24px;top:277px;height:258px;padding:0;text-align:center;background:var(--grad-card-height-258)}
+.ui-dialog--safety:where(.safety-unblock-dialog){top:287px;height:238px;background:var(--grad-card-height-238)}
+.ui-button--safety-unblock{width:67px;min-height:36px;height:36px;border:1px solid var(--chat-follow-border);border-radius:var(--radius-24);background:var(--chat-follow-bg);color:var(--appearance-reset-text);font:var(--safety-font-unblock)}
+[lang=ko] :is(.ui-safety-option,.ui-input--safety,.ui-button--safety-unblock){font-family:var(--font-family-ko)}
+
+.ui-chat-link.ui-chat-link--safety{height:28px;padding:8px;border:0;background:none;color:var(--chat-waiting-copy);font:var(--safety-font-blocked-link)}
+[lang=ko] .ui-chat-link--safety{font-family:var(--font-family-ko)}
