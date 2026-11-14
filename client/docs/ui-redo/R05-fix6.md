@@ -8,7 +8,7 @@
 | 1 变基 | 分叉点 `281b4bc` → `origin/main` `be44f5e5b3e6b5bb3c8e98e1c1ded96ae242e349` | fetch 后 checkout/rebase 成功，无冲突；保留 R05 改动 |
 | 2 确认框 | `var(--grad-card)`（当前 main 横向）→ `var(--grad-card-diagonal-h391-5)` | token 为 `linear-gradient(140.03deg, #253229 6.17%, #17221C 93.83%)`，匹配 29:7923 / 327×391.5 |
 | 3 胶囊文字 | `var(--text-primary)` → `var(--text-profile-wallet)` | token 为 `#B2DA9C`，匹配本地 JSON 29:13688；其他属性未改；图标按钮默认135°未改 |
-| 4 验收文档 | 水平图标按钮、虚报 diff 检查、声称去掉插画缩放、inbox 来源不明等 → 按复核事实修正 | 同步基线、token 名单与正文；首页页头横向按钮和小屏缩放留 R06；inbox 为 main 基线既有稳定失败 |
+| 4 验收文档 | 水平图标按钮、虚报 diff 检查、声称去掉插画缩放、inbox 来源不明等 → 按复核事实修正 | 同步基线、token 名单与正文；首页页头横向按钮留 R06；小屏缩放本轮已删除并验证，见 r05/fix6.md；inbox 为历史 main 基线既有失败，本轮两边均通过 |
 | 5 截图入库 | `test-results/r05-nav-${active}.png` → `docs/ui-redo/r05/r05-nav-${active}.png` | 本次真实 Playwright 页面截图，代码与图片同次提交；A4 引用新路径 |
 | 6 legacy EOF | 四文件末尾两个换行 → 一个换行 | 字节对比确认仅删除末尾一个换行；旧 hex 与其他内容未改 |
 
@@ -32,4 +32,4 @@ Smith 2026-11-14 豁免：有未读的 `43:1945 / 43:2012 / 43:2079` 不实现�
 
 截图原样保留：“我的”页内容区显示 `Internal server error`；本次导航几何、样式、当前页和横条断言通过，不声称个人页业务或全页通过。没有替换、拼接或伪造截图。
 
-整组 A6 本次未重跑；沿用 R05-review.md §2.2：d4三败与inbox一败均为main既有，与R05无关。A4像素差异仍待R01/R04，本文不声称已完成。
+此前整组 A6 未重跑；本轮已重跑，结果更新为分支13过/3败/3跳过、main12过/3败，见 r05/fix6.md。A4像素差异仍待R01/R04，本文不声称已完成。

@@ -1,0 +1,22 @@
+import { test, expect } from '@playwright/test'
+
+test('R05 small screen layout', async ({page, request}) => {
+ const response=await request.post('http://127.0.0.1:3107/__c5/seed',{data:{mode:'empty'}})
+ expect(response.ok()).toBeTruthy();const user=await response.json()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+ await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+ await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+
+ for(const height of [667,740]){
+  await page.setViewportSize({width:375,height});await page.waitForTimeout(700)
+  const scene=page.locator('.magic-scene');await expect(scene).toBeVisible()
+  const matrix=await scene.evaluate(el=>{const m=new DOMMatrix(getComputedStyle(el).transform);return [m.a,m.d]})
+  expect(matrix).toEqual([1,1])
+  const nav=await page.locator('.main-nav:visible').boundingBox(),actions=await page.locator('.home-actions').boundingBox()
+  expect(nav!.y+nav!.height).toBeLessThanOrEqual(height+1)
+  expect(actions!.y).toBeGreaterThanOrEqual(0);expect(actions!.y+actions!.height).toBeLessThanOrEqual(nav!.y)
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(375)
+  await page.screenshot({path:`/tmp/r05-small-${height}.png`})
+  console.log(JSON.stringify({height,matrix,nav,actions}))
+ }
+})

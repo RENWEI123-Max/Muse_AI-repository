@@ -1,0 +1,9 @@
+> maugo-client@0.1.0 build
+> npm run verify:assets && vue-tsc --noEmit && vite build
+> maugo-client@0.1.0 verify:assets
+> node scripts/verify-assets.mjs
+PASS: 343 PNGs; manifest paths, SHA256, dimensions, fonts and OFL licenses
+vite v7.3.8 building client environment for production...
+✓ 399 modules transformed.
+✓ built in 5.24s
+exit code: 0

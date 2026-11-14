@@ -110,7 +110,7 @@
 .device .inbox-menu-button{gap:5px;width:36px;height:40px}
 .device .inbox-menu-button i,.device .inbox-menu-button i:nth-child(2),.device .inbox-menu-button i:last-child{width:21px;height:2px;margin:0}
 /* Keep small viewports usable without scaling text or distorting artwork. */
-@media(max-height:740px){.device{min-height:100svh}.device .magic-scene{transform:translateY(-30px);transform-origin:50% 40%}.device .scene-hint{top:auto;bottom:176px}.device .home-actions{top:auto;bottom:120px}.device .economy-actions{top:auto;bottom:98px}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
+@media(max-height:740px){.device{min-height:100svh}.device .magic-scene{transform:translateY(calc(-30px - max(0px, 740px - 100svh)));transform-origin:50% 40%}.device .scene-hint{top:auto;bottom:176px}.device .home-actions{top:auto;bottom:120px}.device .economy-actions{top:auto;bottom:98px}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
 @media(prefers-reduced-motion:reduce){.device .magic-hat{animation:none}.magic-trails{opacity:.45}}
 /* Profile keeps the actual account data, with the prototype's spacing. */
 .device .d4-profile>header{height:64px;padding:0 24px;border-bottom:1px solid #ffffff07}
@@ -235,7 +235,6 @@
 .device .home-sheet:has(#appearance-genders)>.primary{height:48px;min-height:48px;margin-top:16px}
 .device #publish:disabled{background:#252e29;color:#849288;opacity:1}
 @media(max-height:740px){.device{min-height:100svh}
- .device .magic-scene{transform:translateY(-88px) scale(.72);transform-origin:50% 40%}
  .device .letters-panel.composer-panel{top:112px;height:calc(100% - 220px);max-height:none;overflow:auto}
  .device .composer-panel .opening-form textarea{min-height:48px}
  .device .opening-form footer{position:static;flex:none;margin-top:12px;min-height:48px}
