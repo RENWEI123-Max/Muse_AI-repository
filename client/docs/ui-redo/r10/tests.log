@@ -1,0 +1,46 @@
+[WebServer] (node:1129876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 11 tests using 1 worker
+
+(node:1129914) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/11] tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+[2/11] tests/inbox.spec.ts:20:39 › C5: empty and notification reminder
+[3/11] tests/inbox.spec.ts:20:39 › C5: waiting and notification reminder
+[4/11] tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge
+[5/11] tests/inbox.spec.ts:27:1 › C5: pagination and API failure are recoverable
+[6/11] tests/inbox.spec.ts:29:1 › C5: insufficient balance and modal keyboard focus
+[7/11] tests/r09-inbox.spec.ts:33:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+[8/11] tests/r09-inbox.spec.ts:49:39 › R09: empty and notification reminder
+[9/11] tests/r09-inbox.spec.ts:49:39 › R09: waiting and notification reminder
+[10/11] tests/r09-inbox.spec.ts:51:1 › R09 Korean labels and short viewport keep artwork size
+[11/11] tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once
+  1) tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once 
+
+    Error: .reply-topup x
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 1
+    Received:    12
+
+      3 | async function box(page:any,selector:string,expected:number[]){
+      4 |  const b=await page.locator(selector).boundingBox();expect(b,selector).toBeTruthy()
+    > 5 |  for(const [i,k] of ['x','y','width','height'].entries())expect(Math.abs(b![k]-expected[i]),selector+' '+k).toBeLessThanOrEqual(1)
+        |                                                                                                             ^
+      6 | }
+      7 | async function verify(page:any,state:string){
+      8 |  await page.evaluate(()=>document.fonts.ready)
+        at box (/root/Muse_AI-repository/client/tests/r10-reply.spec.ts:5:109)
+        at verify (/root/Muse_AI-repository/client/tests/r10-reply.spec.ts:24:3)
+        at /root/Muse_AI-repository/client/tests/r10-reply.spec.ts:39:482
+
+    Error Context: test-results/r10-reply-R10-six-states-f-09505--→-resume-→-paid-retry-once/error-context.md
+
+
+  1 failed
+    tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once 
+  10 passed (1.7m)

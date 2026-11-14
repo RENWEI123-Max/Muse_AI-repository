@@ -504,3 +504,35 @@
 
 /* 29:7263, 29:7586 and 29:7590. */
 :root { --r09-font-muted: 400 16px/19.360000610351562px "Fredoka"; --r09-enable: #D3E6C6; }
+
+/* R10 exact local Figma values: 29:7928,7930,7933,7935,8424–8425,8585,8587. */
+:root {
+ --reply-description: #A1B29F;
+ --reply-summary: rgb(14 24 21 / .4);
+ --reply-label: #95A792;
+ --reply-value: #E2EADC;
+ --reply-toast: rgb(32 41 41 / .93);
+ --reply-toast-text: #E6ECDF;
+ --reply-topup-description: #829382;
+ --reply-balance: #253025;
+ --reply-balance-text: #CDDCBE;
+ --reply-note: #8A9381;
+ --reply-return: #99B086;
+ --reply-pack-label: var(--text-diamond-pack-description);
+ --reply-pack-price: #D0F3A9;
+ --reply-font-title: 550 22px/28px Fredoka;
+ --reply-font-value: 550 12px/14.5px Fredoka;
+ --reply-font-label: 400 11px/13.31px Fredoka;
+ --reply-font-return: 400 12px/14.52px Fredoka;
+ --reply-font-amount: 600 22px/28px Fredoka;
+ --reply-font-price: 500 14px/18px Fredoka;
+ --reply-font-note: 400 10px/16px Fredoka;
+}
+
+:root { /* R10: 29:8596 stroke; 56:1958 label; 56:1960 price fill. */
+ --reply-pack-border: rgb(173 130 202 / .133);
+ --reply-pack-bonus: #BDA4CE;
+ --reply-price-bg: #30452D;
+}
+
+:root { /* R10 29:7930 stroke / 29:7952 close */ --reply-summary-border: rgb(255 255 255 / .03); --reply-close: #ACBCAA; }

@@ -102,26 +102,6 @@
 .device .chat-tools #chat-hold{flex:1;justify-content:center;margin-left:0;padding:8px 12px;border:0;background:#243b2c;height:36px;font-size:11px}
 .device .chat-tools img{width:20px;height:20px}
 /* Wallet stays a real balance/selection flow; no simulated purchase success. */
-.device .d1-topup{inset:104px 12px 24px;max-height:684px;border-radius:24px;padding:28px 20px 16px;background:#18211e;border:1px solid #ffffff0b;box-shadow:0 0 0 999px #0009;text-align:center;scrollbar-width:none}
-.device .d1-topup::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
-.device .d1-topup header{height:32px;position:relative;margin-bottom:12px}
-.device .d1-topup header h2{font-size:18px;line-height:24px;font-weight:550;text-align:center;margin:0}
-.device .d1-topup header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;font-size:0;padding:0;color:#8a9290}
-.device .d1-topup header button::before{content:'×';font-size:22px}
-.device .d1-diamond{width:80px;height:70px;object-fit:contain;margin:8px auto 12px}
-.device .d1-topup h3{font-size:12px;font-weight:400;line-height:20px;color:#99a795;margin:0 0 20px}
-.device .d1-topup>p:not(.d1-topup-note){display:flex;justify-content:center;gap:6px;background:#253025;padding:12px 16px;border-radius:12px;min-height:48px;line-height:24px;font-size:12px;margin:0 0 20px;color:#cddcbe}
-.device .d1-packs{gap:12px;margin:0 0 16px}
-.device .d1-topup .diamond-pack{min-height:136px;padding:16px 12px;border-radius:16px;background:radial-gradient(ellipse at 50% 0,#82619925,transparent 75%),#222d25;border:1px solid #ad82ca22;gap:8px}
-.device .d1-topup .diamond-pack[aria-pressed=true]{border-color:#c493ef77;box-shadow:none;transform:none}
-.device .d1-topup .pack-amount{display:flex;align-items:center;justify-content:center;gap:8px}
-.device .d1-topup .pack-amount img{width:26px;height:24px;object-fit:contain}
-.device .d1-topup .pack-amount strong{font-size:22px;line-height:28px;font-weight:550;color:#e0d2f0}
-.device .d1-topup .diamond-pack small{font-size:10px;line-height:16px;color:#a1b294}
-.device .d1-topup .diamond-pack b{font-size:14px;line-height:20px;width:100%;border-radius:20px;background:#b5fa701a;color:#c3f390;padding:8px}
-.device .d1-topup>.primary{font-size:12px;min-height:40px;padding:8px 12px}
-.device .d1-topup-note{font-size:9px;line-height:15px;color:#8a9381;margin:12px 0 0}
-.device .d1-topup>.text-button{font-size:10px;min-height:28px}
 .device .d5{position:relative}
 .device .d5 #profile-global-visibility{font-size:9px;width:auto;padding:0 0 0 12px;margin:0 0 0 auto;min-height:20px;border:0}
 .device .profile-card-actions .compose-link>span:first-child{font-size:30px;line-height:44px}

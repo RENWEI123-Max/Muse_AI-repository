@@ -32,3 +32,12 @@
 .ui-chip{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 10px;border:0;border-radius:var(--radius-14);background:var(--bg-chip);color:var(--text-primary);font:var(--font-micro);letter-spacing:var(--font-micro-letter-spacing)}
 .ui-empty{text-align:center;color:var(--text-empty);font:var(--font-caption-21);letter-spacing:var(--font-caption-21-letter-spacing)}
 [lang=ko] :is(.ui-button,.ui-header,.ui-row,.ui-input,.ui-chip,.ui-empty){font-family:var(--font-family-ko)}
+
+/* Reply confirmation: 29:7923 and 29:8099. Shared dialog geometry/appearance. */
+.ui-sheet--reply{position:absolute;left:24px;top:calc(50% - 195.75px);width:327px;height:391.5px;margin:0;padding:28px 24px 16px;text-align:center}
+.ui-sheet--reply:has(#reply-topup){top:calc(50% - 170.5px);height:341px;background:var(--grad-card-height-341)}
+.ui-button--text{min-height:52px;padding-top:8px;background:none;color:var(--reply-return);font:var(--reply-font-return)}
+
+/* 29:7947/8118: reply action; 29:7951: compact dialog close. */
+.ui-button--reply{border-radius:var(--radius-24);background:var(--grad-primary-height-48);box-shadow:var(--shadow-glow)}
+.ui-icon-button--reply-close{width:40px;height:40px;background:none;color:var(--reply-close);font:var(--font-symbol-chevron)}
