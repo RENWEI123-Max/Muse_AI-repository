@@ -139,3 +139,27 @@
 [lang=ko] :is(.ui-button--person-follow,.ui-button--person-chat,.ui-icon-button--person-header){font-family:var(--font-family-ko)}
 .ui-safety-option--person{height:74px;background:var(--person-paint-30);gap:14px;padding:16px}
 .ui-button--person-follow:disabled{opacity:.5}
+
+/* R17 controls, local JSON 29:14017 / 29:14033 / 29:15769. */
+.ui-input--profile{font:var(--profile-font-field)}
+.ui-input--profile-area{height:120px;padding:12px 16px;resize:vertical}
+.ui-profile-tabs{height:48px;padding:4px;display:flex;gap:8px;background:var(--appearance-tabs);border-radius:var(--radius-12)}
+.ui-profile-tabs button{width:155.5px;height:40px;padding:0;border:0;border-radius:var(--radius-10);background:none;color:var(--appearance-tab-idle);font:var(--profile-font-tab)}
+.ui-profile-tabs [aria-pressed=true]{background:var(--appearance-tab-selected);color:var(--accent)}
+[lang=ko] :is(.ui-input--profile,.ui-profile-tabs button){font-family:var(--font-family-ko)}
+
+.ui-sheet--profile-avatar{width:100%;margin:0;padding:26px 22px 36px;background:var(--avatar-legacy-sheet);border:1px solid var(--avatar-legacy-sheet-border);border-radius:var(--avatar-legacy-sheet-radius);box-shadow:none}
+.ui-dialog--profile-likes{background:var(--grad-card)}
+
+.ui-icon-button--profile-header{width:40px;height:40px;border-radius:var(--radius-20);background:none}
+.ui-row--profile{min-height:50px;height:50px;font:var(--profile-font-meta)}
+.ui-row--profile-connection{height:85px;border-bottom:1px solid var(--hairline);font:var(--profile-font-list)}
+.ui-row--profile-visitor{height:72px;font:var(--profile-font-field)}
+
+/* Preserve pre-R18 sheet controls while relocating the old module. */
+.ui-sheet--profile-avatar h2{font:var(--avatar-legacy-font-title)}
+.ui-sheet--profile-avatar p{font:var(--avatar-legacy-font-copy);color:var(--avatar-legacy-2)}
+.ui-sheet--profile-avatar label{display:block;margin:16px 0;font:var(--avatar-legacy-font-label);color:var(--avatar-legacy-2)}
+.ui-sheet--profile-avatar .primary{margin-top:16px;border:0;border-radius:var(--radius-24)}
+.ui-sheet--profile-avatar .d4-row{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--avatar-legacy-row-border);padding:18px 4px;color:var(--avatar-legacy-row-text);background:none;font:var(--avatar-legacy-font-row)}
+.ui-sheet--profile-avatar .d4-close{padding:0;border:0;background:none;color:var(--avatar-legacy-2);font:var(--avatar-legacy-font-close)}

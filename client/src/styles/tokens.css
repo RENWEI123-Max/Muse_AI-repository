@@ -752,3 +752,41 @@
   --person-font-gender: 400 19px/28px "Fredoka";
 }
 :root{--person-font-options: 400 20px/24.2px "Fredoka";}
+
+:root{
+ --profile-font-name:550 18px/22px Fredoka;
+ --profile-font-meta:400 11px/21px Fredoka;
+ --profile-font-bio:400 10px/16px Fredoka;
+ --profile-font-label:400 12px/20px Fredoka;
+ --profile-font-field:400 13px/20px Fredoka;
+ --profile-font-tab:500 13px/16px Fredoka;
+ --profile-font-list:550 16px/19px Fredoka;
+ --profile-font-empty:550 14px/22px Fredoka;
+}
+
+:root{--avatar-legacy-0:#1a2a20;--avatar-legacy-1:#ffffff11;--avatar-legacy-2:#a2b797;--avatar-legacy-3:#b5fa70;--avatar-legacy-4:#19362b;--avatar-legacy-5:#52684e;--avatar-legacy-6:#e4efd9;}
+
+/* R17 circular media mask: 29:13700 and 29:15776. */
+:root{--radius-full:50%;}
+
+:root{--profile-font-title:550 17px/24px Fredoka;}
+
+/* R17 paints absent from baseline, used by this module. */
+:root{
+ /* #263228; 3 occurrences; node 29:13885. */
+ --profile-paint-27:#263228;
+ /* #203024; 1 occurrences; node 29:16229. */
+ --profile-paint-64:#203024;
+ /* #8DAE7E; 1 occurrences; node 29:16231. */
+ --profile-paint-66:#8DAE7E;
+ /* #D3E5C9; 1 occurrences; node 29:16233. */
+ --profile-paint-67:#D3E5C9;
+}
+
+/* 29:16233 */
+:root{--profile-font-letter:400 14px/22px Fredoka;}
+
+/* Unchanged pre-R18 avatar sheet, relocated with its gallery rules. */
+:root{--avatar-legacy-sheet:#1c2c22;--avatar-legacy-sheet-border:#b8ccb018;--avatar-legacy-sheet-radius:26px 26px 0 0;}
+
+:root{--avatar-legacy-font-title:500 17px/normal Fredoka;--avatar-legacy-font-copy:400 13px/1.8 Fredoka;--avatar-legacy-font-label:400 12px/normal Fredoka;--avatar-legacy-font-row:400 14px/normal Fredoka;--avatar-legacy-font-close:400 26px/normal Fredoka;--avatar-legacy-row-border:#b8ccb015;--avatar-legacy-row-text:#d0e2c4;}

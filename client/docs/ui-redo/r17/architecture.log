@@ -1,0 +1,18 @@
+Final R17 architecture audit
+script setup byte identical: true
+#[0-9a-fA-F]{3,8}: 0 files []
+\brgba?\(: 0 files []
+!important: 0 files []
+\.device\s: 0 files []
+styles.css old R17 selector hits: 0
+fidelity.css old R17 selector hits: 0
+HomeFlow.vue byte identical: True
+LettersFlow.vue byte identical: True
+InboxFlow.vue byte identical: True
+ChatFlow.vue byte identical: True
+AuthFlow.vue byte identical: True
+R16 CSS unchanged except import removal: True
+12 screenshots: all 375x812
+Protected ChatFlow baseline hex:
+23: const bubbleFields=[['myBubble','My bubble','#aef879'],['myText','My text','#153011'],['theirBubble','Their bubble','#28362e'],['theirText','Their text','#e1e9dd']]
+30: const appearanceStyle=computed(()=>({'--my-bubble':appearance.value.myBubble||'#aef879','--my-text':appearance.value.myText||'#153011','--their-bubble':appearance.value.theirBubble||'#28362e','--their-text':appearance.value.theirText||'#e1e9dd',...(screen.value==='chat'&&appearance.value.wallpaperId?{backgroundImage:`linear-gradient(#07100b26,#07100b26),url("${asset('04-chat-backgrounds/'+appearance.value.wallpaperId)}")`}:{})}))

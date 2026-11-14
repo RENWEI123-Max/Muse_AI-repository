@@ -1,4 +1,3 @@
-@import "../../ProfileFlow.legacy-1.css";
 /* R16: 375 × 812; local JSON version 2421258509127695554. */
 .person-page{position:absolute;inset:0;z-index:30;background:var(--bg-page);color:var(--text-primary);font:var(--font-body);padding:0;display:block}
 .person-page .person-header{position:absolute;left:0;top:48px;width:375px;height:64px;background:var(--bg-page)}

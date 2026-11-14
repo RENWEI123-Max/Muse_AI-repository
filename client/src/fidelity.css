@@ -23,23 +23,6 @@
 @media(max-height:740px){.device{min-height:100svh}}
 
 /* Profile keeps the actual account data, with the prototype's spacing. */
-.device .d4-profile:not(.person-page) >header{height:64px;padding:0 24px;border-bottom:1px solid #ffffff07}
-.device .d4-profile:not(.person-page) >header h1{font-size:17px;line-height:24px;margin:0;font-weight:550}
-.device .d4-profile:not(.person-page) >header button{width:32px;height:40px}
-.device .d4-profile:not(.person-page) .d4-body{padding:24px 24px 40px;scrollbar-width:none}
-.device .d4-profile:not(.person-page) .profile-hero{padding:16px 0 24px}
-.device .d4-profile:not(.person-page) .profile-hero img{width:88px;height:88px}
-.device .d4-profile:not(.person-page) .profile-hero span{width:28px;height:28px}
-.device .d4-profile:not(.person-page) .profile-hero span img{width:14px;height:14px}
-.device .d4-profile:not(.person-page) .profile-hero strong{margin-top:14px;font-size:18px;line-height:24px;font-weight:550}
-.device .d4-profile:not(.person-page) .profile-hero p{font-size:11px;line-height:18px;margin:8px 0 0}
-.device .d4-profile:not(.person-page) .profile-hero p:last-child{font-size:10px;line-height:16px;margin-top:16px}
-.device .profile-counters{padding:24px 0 28px;border:0;align-items:center;gap:16px}
-.device .profile-counters button{font-size:18px;color:#f1f4ed;padding:0}
-.device .profile-counters small{font-size:9px;line-height:14px;margin-top:6px}
-.device #profile-visitors{font-size:12px;border-radius:14px;background:#263228;padding:6px 8px;color:#a8b89a;display:flex;gap:5px;align-items:center}
-.device #profile-visitors small{margin:0;font-size:9px}
-.device #profile-global-visibility{font-size:10px;min-height:28px;padding:4px 0;margin:0 0 12px;border:0;color:#859d80}
 .device .d5>.section-heading h2{font-size:14px;line-height:20px;margin:0}
 .device .d5>.section-heading{margin:0 0 12px;align-items:center}
 .device .d5>.section-heading button{font-size:9px;color:#859d80}

@@ -1,0 +1,27 @@
+
+Running 1 test using 1 worker
+
+(node:1309706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session (265ms)
+
+
+  1) tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ───────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+       6 |  // Creates a real account in the dedicated test database before the single login.
+       7 |  const a=JSON.parse(await readFile('/tmp/r17-account.json','utf8')),headers={Authorization:`Bearer ${a.token}`}
+    >  8 |  expect((await request.get(root+'/profiles/me',{headers})).ok()).toBeTruthy()
+         |                                                                  ^
+       9 |  await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token)
+      10 |  const metrics:any[]=[]
+      11 |  const box=async(selector:string,target:number[])=>{const el=page.locator(selector).first();const b=await el.boundingBox();metrics.push({selector,target,actual:b});expect.soft(b).not.toBeNull();if(b)for(const [i,k] of ['x','y','width','height'].entries())expect.soft(Math.abs(b[k as keyof typeof b]-target[i]!)).toBeLessThanOrEqual(1)}
+        at /root/Muse_AI-repository/client/tests/r17-profile.spec.ts:8:66
+
+    Error Context: docs/ui-redo/r17/test-results/r17-profile-R17-twelve-rea-645ab-states-in-one-login-session/error-context.md
+
+  1 failed
+    tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ────────────
