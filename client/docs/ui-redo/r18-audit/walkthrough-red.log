@@ -1,0 +1,267 @@
+[WebServer] (node:65014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:65016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough (36.3s)
+
+
+  1) tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "0s"
+    Received: "0.25s"
+
+      64 |  await open();await root.locator('#removed-avatars').click();await snap('archive-overflow');await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(350);checks.archiveScroll=await panel.evaluate(e=>({top:e.scrollTop,documentY:scrollY}));await snap('archive-scrolled');await close();await close()
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+    > 66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+         |                                                                                                                                                         ^
+      67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:66:153
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      64 |  await open();await root.locator('#removed-avatars').click();await snap('archive-overflow');await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(350);checks.archiveScroll=await panel.evaluate(e=>({top:e.scrollTop,documentY:scrollY}));await snap('archive-scrolled');await close();await close()
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+    > 66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+         |                                                                                                                                                                                                          ^
+      67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:66:202
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "dialogs": 0,
+    -   "profileVisible": true,
+    +   "profileVisible": false,
+      }
+
+      64 |  await open();await root.locator('#removed-avatars').click();await snap('archive-overflow');await panel.hover();await page.mouse.wheel(0,500);await page.waitForTimeout(350);checks.archiveScroll=await panel.evaluate(e=>({top:e.scrollTop,documentY:scrollY}));await snap('archive-scrolled');await close();await close()
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+    > 66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+         |                                                                                                                                                                                                                                                                                                            ^
+      67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:66:300
+
+    Error: empty-gallery panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: decode-failure panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: avatar-crop panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: upload-failure panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: avatar-gallery panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: select-failure panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: avatar-removed panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: avatar-restore panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: restore-failure panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: avatar-full panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: restore-full-failure panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: archive-overflow panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error: archive-scrolled panel scroll
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "auto"
+    Received: "visible"
+
+      65 |  await open();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await page.waitForTimeout(350);checks.escape={profileVisible:await root.isVisible(),dialogs:await panel.count()};await page.screenshot({path:`${out}/${height}-${lang}-escape.png`})
+      66 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));save();expect.soft(checks.entryVeilTransition).toBe('0s');expect.soft(checks.archiveScroll.top).toBeGreaterThan(0);expect.soft(checks.archiveScroll.documentY).toBe(0);expect.soft(checks.escape).toEqual({profileVisible:true,dialogs:0});expect(errors).toEqual([])
+    > 67 |  for(const r of records){expect.soft(r.panel.overflow,`${r.name} panel scroll`).toBe('auto');expect.soft(r.panel.veilTransition,`${r.name} no extra veil fade`).toBe('0s')}
+         |                                                                                 ^
+      68 | })
+      69 |
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:67:81
+
+    Error Context: test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r18-audit/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ──────────────────────────────────

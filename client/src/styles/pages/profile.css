@@ -62,7 +62,7 @@
 @media(prefers-reduced-motion:reduce){.profile-page .d4-body{animation:none}.profile-page .d4-sheet-enter-active,.profile-page .d4-sheet-leave-active{transition:none}}
 @media(max-height:740px){.profile-page .d4-error{top:calc(100% - 120px)}.profile-page .profile-likes{top:calc(50% - 147px)}}
 /* R18 local JSON: 29:14185–29:15451. */
-.profile-page .avatar-panel{height:345.5px;max-height:none;overflow:visible}
+.profile-page .avatar-panel{height:345.5px;max-height:calc(100% - 48px);overflow:auto;overscroll-behavior:contain}
 .profile-page .avatar-panel-removed{height:409.5px}
 .profile-page .avatar-panel-archive{height:300.75px}
 .profile-page .avatar-panel-crop{height:518px}
@@ -105,3 +105,8 @@
 .profile-page .d4-body{animation:none;overscroll-behavior:contain}
 .profile-page .d4-veil:has(.profile-likes){transition:none}
 .profile-page .profile-likes{overscroll-behavior:contain}
+/* R18 audit: avatar sheets use their own entry motion and contain long archives. */
+.profile-page .d4-veil:has(:is(.avatar-panel,.avatar-confirm)){transition:none}
+/* Keep Back after long archive grids so every photo remains reachable by scrolling. */
+.profile-page .avatar-panel-archive:has([data-restore-avatar]:nth-child(5)) .avatar-archive-grid{position:relative;top:auto;margin-top:120px}
+.profile-page .avatar-panel-archive:has([data-restore-avatar]:nth-child(5)) #avatar-gallery-back{position:relative;bottom:auto;margin-top:44px;margin-bottom:20px}

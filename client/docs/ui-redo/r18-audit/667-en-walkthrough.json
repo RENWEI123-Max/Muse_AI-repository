@@ -1,0 +1,2959 @@
+{
+  "fixture": true,
+  "uploads": "Only browser-uploaded bytes; no seeded avatar slots",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000001",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000001",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "restore",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "restore",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000004"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000004"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000005"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000005"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000007"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000007"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000008"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000008"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000001",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000009"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000009"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "restore",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000009",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000010"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000010"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000010",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000011"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000011"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000011",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000012"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000012"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000012",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000013"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000013"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000013",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000014"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000014"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000014",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000015"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000015"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000015",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000016"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000016"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000016",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000016",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000016",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000017"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000017"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000017",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000016",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000017",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000016",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000017",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 24032
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000018"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000018"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000002",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000003",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000004",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000005",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000006",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000007",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000008",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000018",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000009",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000010",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000011",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000012",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000013",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000014",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000015",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000016",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000017",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "empty-gallery",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 309.5,
+        "width": 351,
+        "height": 345.5,
+        "client": 344,
+        "content": 344,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "decode-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 309.5,
+        "width": 351,
+        "height": 345.5,
+        "client": 344,
+        "content": 344,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "avatar-crop",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 137,
+        "width": 351,
+        "height": 518,
+        "client": 516,
+        "content": 516,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Crop avatar",
+          "clipped": false
+        },
+        {
+          "text": "Zoom",
+          "clipped": false
+        },
+        {
+          "text": "Use photo",
+          "clipped": false
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "upload-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 137,
+        "width": 351,
+        "height": 518,
+        "client": 516,
+        "content": 516,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Crop avatar",
+          "clipped": false
+        },
+        {
+          "text": "Zoom",
+          "clipped": false
+        },
+        {
+          "text": "Use photo",
+          "clipped": false
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "avatar-gallery",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 309.5,
+        "width": 351,
+        "height": 345.5,
+        "client": 344,
+        "content": 344,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "select-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 309.5,
+        "width": 351,
+        "height": 345.5,
+        "client": 344,
+        "content": 344,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "avatar-remove",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 24,
+        "y": 204.5,
+        "width": 327,
+        "height": 258,
+        "client": 256,
+        "content": 256,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.22s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Remove this photo?",
+          "clipped": false
+        },
+        {
+          "text": "You can restore removed photos from Recently removed.",
+          "clipped": false
+        },
+        {
+          "text": "Remove photo",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "remove-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 24,
+        "y": 204.5,
+        "width": 327,
+        "height": 258,
+        "client": 256,
+        "content": 256,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.22s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Remove this photo?",
+          "clipped": false
+        },
+        {
+          "text": "You can restore removed photos from Recently removed.",
+          "clipped": false
+        },
+        {
+          "text": "Remove photo",
+          "clipped": false
+        },
+        {
+          "text": "Cancel",
+          "clipped": false
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "avatar-removed",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 245.5,
+        "width": 351,
+        "height": 409.5,
+        "client": 408,
+        "content": 408,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Not uploaded",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed (1)",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "avatar-restore",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 354.25,
+        "width": 351,
+        "height": 300.75,
+        "client": 299,
+        "content": 299,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed",
+          "clipped": false
+        },
+        {
+          "text": "Restore a photo to an empty position.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true
+      ]
+    },
+    {
+      "name": "restore-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 354.25,
+        "width": 351,
+        "height": 300.75,
+        "client": 299,
+        "content": 299,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed",
+          "clipped": false
+        },
+        {
+          "text": "Restore a photo to an empty position.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true
+      ]
+    },
+    {
+      "name": "avatar-full",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 309.5,
+        "width": 351,
+        "height": 345.5,
+        "client": 344,
+        "content": 344,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Choose an avatar",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "✓",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Upload a photo",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "restore-full-failure",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 354.25,
+        "width": 351,
+        "height": 300.75,
+        "client": 299,
+        "content": 299,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed",
+          "clipped": false
+        },
+        {
+          "text": "Restore a photo to an empty position.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true
+      ]
+    },
+    {
+      "name": "archive-overflow",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 354.25,
+        "width": 351,
+        "height": 300.75,
+        "client": 299,
+        "content": 460,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed",
+          "clipped": false
+        },
+        {
+          "text": "Restore a photo to an empty position.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "archive-scrolled",
+      "document": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "panel": {
+        "x": 12,
+        "y": 354.25,
+        "width": 351,
+        "height": 300.75,
+        "client": 299,
+        "content": 460,
+        "overflow": "auto",
+        "overscroll": "contain",
+        "animation": "sheet-in",
+        "duration": "0.3s",
+        "veilTransition": "0s"
+      },
+      "copy": [
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "Recently removed",
+          "clipped": false
+        },
+        {
+          "text": "Restore a photo to an empty position.",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "Back",
+          "clipped": false
+        }
+      ],
+      "images": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "checks": {
+    "entryVeilTransition": "0s",
+    "buttonPress": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+    "pickerCancel": true,
+    "zoomRedraw": true,
+    "zoom": "1.5",
+    "cropCancel": true,
+    "failureAlertOutsideDialog": true,
+    "removeEscape": true,
+    "archiveEscape": true,
+    "backdropClose": true,
+    "archiveLayout": {
+      "gridBottom": 703.5,
+      "backTop": 747.5
+    },
+    "archiveScroll": {
+      "top": 161,
+      "documentY": 0
+    },
+    "escape": {
+      "profileVisible": true,
+      "dialogs": 0
+    },
+    "clipped": []
+  },
+  "errors": []
+}
