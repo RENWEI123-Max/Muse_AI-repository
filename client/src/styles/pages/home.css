@@ -55,11 +55,16 @@
  .home-flow .magic-trails{opacity:0}
  .home-flow .home-trail{animation:none;opacity:0}
 }
-@media(max-height:740px){
- .home-flow .magic-scene{transform:translateY(-30px)}
+/* Keep the lower artwork and controls tied to the shell bottom below 812px.
+   Move artwork only: its dimensions and the bird flight coordinates stay intact. */
+@media(max-height:811px){
+ .home-flow .magic-scene > :not(.bird-layer){translate:0 calc(100svh - 812px)}
  .home-flow .scene-hint{top:auto;bottom:176px}
  .home-flow .home-actions{top:auto;bottom:120px}
  .home-flow .economy-actions{top:auto;bottom:98px}
+}
+@media(max-height:740px){
+ .home-flow .bird-layer{transform:translateY(-30px)}
 }
 
 .home-flow .birds-enter-active{transition:transform .7s,opacity .7s}
