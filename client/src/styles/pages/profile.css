@@ -99,3 +99,9 @@
 .profile-page .avatar-cancel{position:absolute;left:24px;top:188px;width:277px;height:52px}
 .profile-page .avatar-confirm-close{right:8px;top:8px}
 @media(max-height:740px){.profile-page .avatar-panel{bottom:12px}.profile-page .avatar-confirm{top:calc(50% - 129px)}}
+
+/* R17 audit: prototype subpages have no entry motion; likes uses the shared .22s dialog. */
+.profile-page{overflow:hidden}
+.profile-page .d4-body{animation:none;overscroll-behavior:contain}
+.profile-page .d4-veil:has(.profile-likes){transition:none}
+.profile-page .profile-likes{overscroll-behavior:contain}

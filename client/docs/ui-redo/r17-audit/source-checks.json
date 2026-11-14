@@ -1,0 +1,27 @@
+{
+  "scriptUnchanged": true,
+  "scriptSha256": "f1f3cf39d8e25cefdda225b676faeb1709cd391229f866dd74c7106fcd76ac97",
+  "r16EscapePreserved": true,
+  "productionFiles": [
+    "client/src/components/ProfileFlow.vue",
+    "client/src/styles/pages/profile.css"
+  ],
+  "grep": {
+    "client/src/components/ProfileFlow.vue": {
+      "hex": 0,
+      "important": 0,
+      "devicePrefix": 0
+    },
+    "client/src/styles/pages/profile.css": {
+      "hex": 0,
+      "important": 0,
+      "devicePrefix": 0
+    }
+  },
+  "trackedProductionDiff": [
+    "client/src/components/ProfileFlow.vue",
+    "client/src/styles/pages/profile.css"
+  ],
+  "diffCheck": "git diff --check exit 0",
+  "oldR17PngCount": 12
+}

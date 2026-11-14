@@ -1,0 +1,160 @@
+[WebServer] (node:63525) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:63527) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough (13.0s)
+(node:63543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough (13.1s)
+(node:63571) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough (12.9s)
+(node:63582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough (13.0s)
+
+
+  1) tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: visible
+    Error: strict mode violation: locator('.profile-page').first().getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="d4-error" data-v-8a71628e="">Please try again.</p> aka getByText('Please try again.', { exact: true })
+        2) <p role="alert">…</p> aka getByText('Please try again. Retry')
+
+    Call log:
+      - Expect "toBeVisible" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      65 |  await root.locator('#edit-profile').click();await root.locator('.d4-body').hover();await page.mouse.wheel(0,1800);await page.waitForTimeout(150);checks.scroll=await root.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.scroll.top).toBeGreaterThan(0);await snap('edit-scrolled');await back()
+      66 |  const press=root.locator('#likes');await press.hover();await page.mouse.down();checks.press=await press.evaluate(e=>({transform:getComputedStyle(e).transform,transition:getComputedStyle(e).transitionDuration}));await page.mouse.move(1,1);await page.mouse.up()
+    > 67 |  await back();failLoad=true;await page.locator('#open-profile').click();await expect(root.getByRole('alert')).toBeVisible();await snap('load-failure');await back();failLoad=false;await enter();await snap('load-recovered')
+         |                                                                                                               ^
+      68 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));expect(errors).toEqual([])
+      69 |  checks.motion=await root.locator('.d4-body').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+      70 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors},null,2))
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:67:111
+
+    Error Context: test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: visible
+    Error: strict mode violation: locator('.profile-page').first().getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="d4-error" data-v-8a71628e="">Please try again.</p> aka getByText('Please try again.', { exact: true })
+        2) <p role="alert">…</p> aka getByText('Please try again. Retry')
+
+    Call log:
+      - Expect "toBeVisible" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      65 |  await root.locator('#edit-profile').click();await root.locator('.d4-body').hover();await page.mouse.wheel(0,1800);await page.waitForTimeout(150);checks.scroll=await root.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.scroll.top).toBeGreaterThan(0);await snap('edit-scrolled');await back()
+      66 |  const press=root.locator('#likes');await press.hover();await page.mouse.down();checks.press=await press.evaluate(e=>({transform:getComputedStyle(e).transform,transition:getComputedStyle(e).transitionDuration}));await page.mouse.move(1,1);await page.mouse.up()
+    > 67 |  await back();failLoad=true;await page.locator('#open-profile').click();await expect(root.getByRole('alert')).toBeVisible();await snap('load-failure');await back();failLoad=false;await enter();await snap('load-recovered')
+         |                                                                                                               ^
+      68 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));expect(errors).toEqual([])
+      69 |  checks.motion=await root.locator('.d4-body').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+      70 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors},null,2))
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:67:111
+
+    Error Context: test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: visible
+    Error: strict mode violation: locator('.profile-page').first().getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="d4-error" data-v-8a71628e="">Please try again.</p> aka getByText('Please try again.', { exact: true })
+        2) <p role="alert">…</p> aka getByText('Please try again. Retry')
+
+    Call log:
+      - Expect "toBeVisible" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      65 |  await root.locator('#edit-profile').click();await root.locator('.d4-body').hover();await page.mouse.wheel(0,1800);await page.waitForTimeout(150);checks.scroll=await root.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.scroll.top).toBeGreaterThan(0);await snap('edit-scrolled');await back()
+      66 |  const press=root.locator('#likes');await press.hover();await page.mouse.down();checks.press=await press.evaluate(e=>({transform:getComputedStyle(e).transform,transition:getComputedStyle(e).transitionDuration}));await page.mouse.move(1,1);await page.mouse.up()
+    > 67 |  await back();failLoad=true;await page.locator('#open-profile').click();await expect(root.locator(':scope > .d4-error')).toBeVisible();await snap('load-failure');await back();failLoad=false;await enter();await snap('load-recovered')
+         |                                                                                                               ^
+      68 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));expect(errors).toEqual([])
+      69 |  checks.motion=await root.locator('.d4-body').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+      70 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors},null,2))
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:67:111
+
+    Error Context: test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: visible
+    Error: strict mode violation: locator('.profile-page').first().getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" class="d4-error" data-v-8a71628e="">Please try again.</p> aka getByText('Please try again.', { exact: true })
+        2) <p role="alert">…</p> aka getByText('Please try again. Retry')
+
+    Call log:
+      - Expect "toBeVisible" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      65 |  await root.locator('#edit-profile').click();await root.locator('.d4-body').hover();await page.mouse.wheel(0,1800);await page.waitForTimeout(150);checks.scroll=await root.locator('.d4-body').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight}));expect(checks.scroll.top).toBeGreaterThan(0);await snap('edit-scrolled');await back()
+      66 |  const press=root.locator('#likes');await press.hover();await page.mouse.down();checks.press=await press.evaluate(e=>({transform:getComputedStyle(e).transform,transition:getComputedStyle(e).transitionDuration}));await page.mouse.move(1,1);await page.mouse.up()
+    > 67 |  await back();failLoad=true;await page.locator('#open-profile').click();await expect(root.locator(':scope > .d4-error')).toBeVisible();await snap('load-failure');await back();failLoad=false;await enter();await snap('load-recovered')
+         |                                                                                                               ^
+      68 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})));expect(errors).toEqual([])
+      69 |  checks.motion=await root.locator('.d4-body').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}))
+      70 |  writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({fixture:true,checks,calls,errors},null,2))
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:67:111
+
+    Error Context: test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r17-audit/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ──────────────────────────────

@@ -1,0 +1,113 @@
+[
+  {
+    "id": "profile-empty",
+    "title": "个人页 / 尚未上传照片",
+    "task": "profile",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "profile-content",
+    "title": "个人页 / 已有形象照",
+    "task": "profile",
+    "seed": "content",
+    "actions": []
+  },
+  {
+    "id": "profile-edit",
+    "title": "编辑资料 / 当前信息",
+    "task": "edit-profile",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "profile-invalid",
+    "title": "编辑资料 / 年龄校验",
+    "task": "edit-profile",
+    "seed": "standard",
+    "actions": [
+      [
+        "fill",
+        "#edit-age",
+        "17"
+      ],
+      [
+        "click",
+        "#save-profile"
+      ]
+    ]
+  },
+  {
+    "id": "profile-likes",
+    "title": "个人页 / 获赞汇总",
+    "task": "profile",
+    "seed": "content",
+    "actions": [
+      [
+        "click",
+        "#likes"
+      ]
+    ]
+  },
+  {
+    "id": "following-empty",
+    "title": "关注列表 / 空状态",
+    "task": "connections",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "following-list",
+    "title": "关注列表 / 有记录",
+    "task": "connections",
+    "seed": "following",
+    "actions": []
+  },
+  {
+    "id": "followers-empty",
+    "title": "粉丝列表 / 空状态",
+    "task": "connections",
+    "seed": "standard",
+    "actions": [],
+    "params": {
+      "kind": "Followers"
+    }
+  },
+  {
+    "id": "visitors-empty",
+    "title": "访客 / 尚无访问",
+    "task": "visitors",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "visitors-outgoing",
+    "title": "访客 / 我访问过的人",
+    "task": "visitors",
+    "seed": "visited",
+    "actions": [],
+    "params": {
+      "outgoing": true
+    }
+  },
+  {
+    "id": "my-letters-empty",
+    "title": "我的信件 / 空状态",
+    "task": "activity",
+    "seed": "empty",
+    "actions": [],
+    "params": {
+      "kind": "My letters"
+    }
+  },
+  {
+    "id": "my-letters",
+    "title": "我的信件 / 已寄出",
+    "task": "activity",
+    "seed": "content",
+    "actions": [],
+    "params": {
+      "kind": "My letters"
+    }
+  }
+]
