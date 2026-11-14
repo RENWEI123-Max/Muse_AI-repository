@@ -2,7 +2,7 @@
 .home-flow{position:absolute;inset:0;overflow:hidden;background-color:var(--bg-scene);background-image:var(--bg-scene-glow);color:var(--text-primary)}
 .home-flow .home-header{position:absolute;inset:0;z-index:4;pointer-events:none}
 .home-flow .home-wordmark{position:absolute;left:24px;top:63.203px;width:144px;height:37.594px;object-fit:contain}
-.home-flow .ui-icon-button{position:absolute;top:60px;pointer-events:auto}
+.home-flow #magic,.home-flow #settings{position:absolute;top:60px;pointer-events:auto}
 .home-flow #magic{left:251px}
 .home-flow #settings{left:307px}
 .home-flow .magic-scene{position:absolute;inset:0;pointer-events:none}

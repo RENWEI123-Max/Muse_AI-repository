@@ -42,23 +42,6 @@
 .device .home-sheet:not(.r07-sheet) header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
 .device .home-sheet:not(.r07-sheet) header button img{width:18px;height:18px}
 .device .home-sheet:not(.r07-sheet) p{font-size:12px;line-height:20px;margin:0 0 12px}
-/* Reading retains D11's flight and delayed unfold, with prototype geometry. */
-.device .letters-veil{background:#030a0a70;backdrop-filter:none}
-.device .letters-panel{left:12px;right:12px;top:144px;height:560px;min-height:0;max-height:calc(100% - 172px);padding:0 20px 16px;border-radius:24px;background:linear-gradient(135deg,#11191ae6,#0c1313f2);color:#f3f4f4}
-.device .letters-panel header{height:56px}
-.device .letters-panel h2{font-size:16px;font-weight:550}
-.device .letters-panel header button{right:14px;font-size:20px}
-.device .note-meta{margin:16px 0;font-size:10px}
-.device .message-row{gap:12px}
-.device .letter-avatar{width:40px;height:40px;padding:0;object-fit:cover;border-radius:12px}
-.device .message-bubble{padding:12px;border-radius:12px;background:linear-gradient(125deg,#1c2425,#192021);font-size:14px;line-height:1.55}
-.device .message-bubble .note-signature{font-size:10px}
-.device .reply-bar{min-height:48px;margin:12px 0 0;padding:8px 12px;gap:8px}
-.device .reply-bar textarea{font-size:12px}
-.device .letters-panel.composer-panel{top:144px;height:496px;min-height:0}
-.device .composer-panel .opening-form textarea{min-height:100px;font-size:13px}
-.device .sender-preview{height:56px}
-.device .opening-rule,.device .letter-validation{font-size:10px;line-height:16px}
 /* Inbox typography and navigation match the reference without decoration. */
 .device .inbox-top{padding:0 24px;border-bottom:1px solid #ffffff07}
 .device .inbox-heading-tabs{gap:20px}
@@ -69,7 +52,7 @@
 .device .inbox-menu-button{gap:5px;width:36px;height:40px}
 .device .inbox-menu-button i,.device .inbox-menu-button i:nth-child(2),.device .inbox-menu-button i:last-child{width:21px;height:2px;margin:0}
 /* Keep small viewports usable without scaling text or distorting artwork. */
-@media(max-height:740px){.device{min-height:100svh}.device .letters-panel,.device .letters-panel.composer-panel{top:112px;max-height:calc(100% - 144px)}.device .welcome-screen>.auth-content{padding-bottom:28px}}
+@media(max-height:740px){.device{min-height:100svh}.device .welcome-screen>.auth-content{padding-bottom:28px}}
 
 /* Profile keeps the actual account data, with the prototype's spacing. */
 .device .d4-profile>header{height:64px;padding:0 24px;border-bottom:1px solid #ffffff07}
@@ -128,9 +111,6 @@
 .device .chat-tools #chat-hold{flex:1;justify-content:center;margin-left:0;padding:8px 12px;border:0;background:#243b2c;height:36px;font-size:11px}
 .device .chat-tools img{width:20px;height:20px}
 .device .inbox-statusbar{visibility:hidden}
-.device .letter-content{font-size:14px!important;line-height:1.55!important;white-space:pre-wrap}
-.device .note-meta>span{flex:1;text-align:center}
-.device .letter-reply-area{min-height:104px}
 /* Wallet stays a real balance/selection flow; no simulated purchase success. */
 .device .d1-topup{inset:104px 12px 24px;max-height:684px;border-radius:24px;padding:28px 20px 16px;background:#18211e;border:1px solid #ffffff0b;box-shadow:0 0 0 999px #0009;text-align:center;scrollbar-width:none}
 .device .d1-topup::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
@@ -156,12 +136,6 @@
 .device .d5 #profile-global-visibility{font-size:9px;width:auto;padding:0 0 0 12px;margin:0 0 0 auto;min-height:20px;border:0}
 .device .profile-card-actions .compose-link>span:first-child{font-size:30px;line-height:44px}
 .device .profile-card-actions .compose-link>.compose-caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
-.device .letters-panel.composer-panel{overflow:visible}
-.device .composer-panel header>img{display:none}
-.device .opening-form{min-height:0}
-.device .opening-form footer{position:absolute;left:8px;right:8px;top:calc(100% + 16px);height:48px;margin:0}
-.device .opening-form footer .secondary{flex:0 0 96px;background:#ffffff12;border:0;color:#f3f4f4}
-.device .opening-form textarea:placeholder-shown~.letter-validation{visibility:hidden;height:0;min-height:0;margin:0}
 
 
 /* #119: actions follow any number of image-card rows. */
@@ -171,14 +145,8 @@
 .device .settings-row>b{font-weight:400}.device .settings-row>b img{width:16px;height:24px;object-fit:contain}
 .device #publish:disabled{background:#252e29;color:#849288;opacity:1}
 @media(max-height:740px){.device{min-height:100svh}
- .device .letters-panel.composer-panel{top:112px;height:calc(100% - 220px);max-height:none;overflow:auto}
- .device .composer-panel .opening-form textarea{min-height:48px}
- .device .opening-form footer{position:static;flex:none;margin-top:12px;min-height:48px}
- .device .opening-form .letter-validation{min-height:16px}
 }
 
 .device #publish{display:flex;align-items:center;justify-content:center;gap:8px}
 .device #publish svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5}
 .device #profile-global-visibility span{margin-left:4px}
-
-.device .sender-preview .change-bird{margin-left:auto;border:1px solid #b5fa70;border-radius:15px;padding:4px 10px;background:transparent;color:#b5fa70;font-size:10px}

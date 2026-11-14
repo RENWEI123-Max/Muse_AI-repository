@@ -1,0 +1,485 @@
+[
+  {
+    "tag": "SECTION",
+    "id": "",
+    "class": "letters-panel composer-panel",
+    "box": {
+      "x": 12,
+      "y": 144,
+      "width": 351,
+      "height": 496
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "linear-gradient(to right, rgb(19, 28, 28) 0%, rgb(15, 21, 21) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "27px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "HEADER",
+    "id": "",
+    "class": "letter-heading compose-heading",
+    "box": {
+      "x": 33,
+      "y": 145,
+      "width": 309,
+      "height": 56
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "H2",
+    "id": "",
+    "class": "letter-title compose-title",
+    "box": {
+      "x": 130.484375,
+      "y": 163,
+      "width": 114.015625,
+      "height": 20
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "14px",
+      "weight": "500",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.3px",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-icon-button letter-close",
+    "box": {
+      "x": 314,
+      "y": 149,
+      "width": 44,
+      "height": 44
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "linear-gradient(to right, rgb(27, 33, 33) 0%, rgb(19, 24, 24) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "22px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "",
+    "box": {
+      "x": 323.5,
+      "y": 158.5,
+      "width": 25,
+      "height": 25
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "sender-preview",
+    "box": {
+      "x": 33,
+      "y": 201,
+      "width": 309,
+      "height": 56
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "IMG",
+    "id": "",
+    "class": "sender-avatar",
+    "box": {
+      "x": 33,
+      "y": 210.5,
+      "width": 37,
+      "height": 37
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "id": "",
+    "class": "sender-label",
+    "box": {
+      "x": 78,
+      "y": 222.34375,
+      "width": 102,
+      "height": 13.3125
+    },
+    "style": {
+      "color": "rgb(151, 162, 142)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "11px",
+      "weight": "400",
+      "lineHeight": "13.31px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "change-bird",
+    "box": {
+      "x": 268,
+      "y": 218,
+      "width": 74,
+      "height": 22
+    },
+    "style": {
+      "color": "rgb(181, 250, 112)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "14px",
+      "font": "Fredoka",
+      "size": "10px",
+      "weight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "LABEL",
+    "id": "",
+    "class": "recipient-label",
+    "box": {
+      "x": 33,
+      "y": 107,
+      "width": 309,
+      "height": 28
+    },
+    "style": {
+      "color": "rgb(151, 162, 142)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "10px",
+      "weight": "400",
+      "lineHeight": "12.1px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "INPUT",
+    "id": "",
+    "class": "ui-input recipient-input",
+    "box": {
+      "x": 94,
+      "y": 107,
+      "width": 240,
+      "height": 28
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgb(32, 47, 36)",
+      "radius": "12px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "FORM",
+    "id": "",
+    "class": "opening-form",
+    "box": {
+      "x": 13,
+      "y": 145,
+      "width": 349,
+      "height": 0
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "TEXTAREA",
+    "id": "letter-text",
+    "class": "compose-text",
+    "box": {
+      "x": 33,
+      "y": 257,
+      "width": 309,
+      "height": 321
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "14px",
+      "weight": "400",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "class": "letter-count",
+    "box": {
+      "x": 33,
+      "y": 578,
+      "width": 309,
+      "height": 32
+    },
+    "style": {
+      "color": "rgb(118, 130, 124)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "10px",
+      "weight": "400",
+      "lineHeight": "16px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "opening-rule",
+    "class": "opening-rule",
+    "box": {
+      "x": 33,
+      "y": 622,
+      "width": 309,
+      "height": 17
+    },
+    "style": {
+      "color": "rgb(151, 162, 142)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "10px",
+      "weight": "400",
+      "lineHeight": "17px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "P",
+    "id": "letter-validation",
+    "class": "letter-validation",
+    "box": {
+      "x": 33,
+      "y": 715,
+      "width": 309,
+      "height": 17
+    },
+    "style": {
+      "color": "rgb(217, 164, 142)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "10px",
+      "weight": "400",
+      "lineHeight": "17px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "FOOTER",
+    "id": "",
+    "class": "compose-actions",
+    "box": {
+      "x": 21,
+      "y": 657,
+      "width": 333,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "13px",
+      "weight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "class": "ui-button ui-button--secondary compose-cancel",
+    "box": {
+      "x": 21,
+      "y": 657,
+      "width": 96,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(228, 239, 217)",
+      "background": "linear-gradient(to right, rgb(28, 34, 35) 0%, rgb(23, 29, 30) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "30px",
+      "font": "Fredoka",
+      "size": "16px",
+      "weight": "600",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "id": "publish",
+    "class": "ui-button",
+    "box": {
+      "x": 129,
+      "y": 657,
+      "width": 225,
+      "height": 48
+    },
+    "style": {
+      "color": "rgb(10, 20, 6)",
+      "background": "linear-gradient(to right, rgb(189, 255, 129) 0%, rgb(176, 251, 97) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "30px",
+      "font": "Fredoka",
+      "size": "16px",
+      "weight": "600",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "svg",
+    "id": "",
+    "class": {},
+    "box": {
+      "x": 196.5,
+      "y": 671.5,
+      "width": 19,
+      "height": 19
+    },
+    "style": {
+      "color": "rgb(10, 20, 6)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "16px",
+      "weight": "600",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  },
+  {
+    "tag": "path",
+    "id": "",
+    "class": {},
+    "box": {
+      "x": 198.875,
+      "y": 673.875,
+      "width": 14.25,
+      "height": 14.25
+    },
+    "style": {
+      "color": "rgb(10, 20, 6)",
+      "background": "none",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "font": "Fredoka",
+      "size": "16px",
+      "weight": "600",
+      "lineHeight": "22px",
+      "letterSpacing": "normal",
+      "shadow": "none"
+    }
+  }
+]
