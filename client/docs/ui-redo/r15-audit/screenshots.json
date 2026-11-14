@@ -1,0 +1,786 @@
+[
+  {
+    "file": "667-en-apple-cancel.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 190737,
+    "sha256": "9f65a506aebf2e94b5af75f04bea61e121ad4df80c87a56ad2b7b4c0c728c940"
+  },
+  {
+    "file": "667-en-apple-private.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 85329,
+    "sha256": "c55207ab144596861307745076ab001bb073fdede5f4818371d86c553bf8bcf9"
+  },
+  {
+    "file": "667-en-apple-share.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 85563,
+    "sha256": "290cbc31ba4f96899e3bd595f09668e879b7ca26588fea85547cdfaed43d137a"
+  },
+  {
+    "file": "667-en-auth-privacy.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 67247,
+    "sha256": "cd75cef81ecd691fdb04ef69b1b3e0534a9d4d60672a3db6de2cd488cf118295"
+  },
+  {
+    "file": "667-en-consent-privacy.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 67247,
+    "sha256": "cd75cef81ecd691fdb04ef69b1b3e0534a9d4d60672a3db6de2cd488cf118295"
+  },
+  {
+    "file": "667-en-forgot-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 59481,
+    "sha256": "8ed737eb0ffead4607e8667ee80b09a890c7c5889afadf2dfe94fb1e1f410d1f"
+  },
+  {
+    "file": "667-en-forgot-validation.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62244,
+    "sha256": "a211a6654f0214c5b4cbd16b34e981c3061c7d5e8df2b80399cc1fd3c4bfd6f3"
+  },
+  {
+    "file": "667-en-new-password-error.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62724,
+    "sha256": "8e97a97623ed82fbc036db936ee32ef56a3452f5017c199031dcc2f6fbff8090"
+  },
+  {
+    "file": "667-en-new-password.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 66591,
+    "sha256": "531818787de39fee372d04cce34ef70db8d5ac46f47d4c610e06387cdb001024"
+  },
+  {
+    "file": "667-en-password-back-signin.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62679,
+    "sha256": "e40b8741f6c86428830f63c5889c0bdca0038939b1406b5f2b4b20bf71667b90"
+  },
+  {
+    "file": "667-en-r06-boundary.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 115227,
+    "sha256": "045968c65e674ebe17a12e655d2233461b3092b21144756e666f0c40cd4e0fee"
+  },
+  {
+    "file": "667-en-recovery-code.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 81312,
+    "sha256": "64127f322603f4400f1d2adba452debf4de191f667003144998ff525cacd649b"
+  },
+  {
+    "file": "667-en-signin-api-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62905,
+    "sha256": "d4fb1d0572a53c8173d208884bd0e1e31319185692ec7bf5859dac1a989b2055"
+  },
+  {
+    "file": "667-en-signin-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 60683,
+    "sha256": "c7571e290db7551c18bac855c1ebe33bd43dc7500943721bc8980a345ec1e8f3"
+  },
+  {
+    "file": "667-en-signin-filled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62905,
+    "sha256": "d4fb1d0572a53c8173d208884bd0e1e31319185692ec7bf5859dac1a989b2055"
+  },
+  {
+    "file": "667-en-signin-invalid.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 61656,
+    "sha256": "249a006232f18a9a07b0abf9638211d18442ca3e62770e2cb2be866eef5e7ab9"
+  },
+  {
+    "file": "667-en-signin-session.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 78328,
+    "sha256": "00d477c131709efa2dc679e3e8d67c6a980e75ac9cbef9ea698253891df14910"
+  },
+  {
+    "file": "667-en-signup-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 51296,
+    "sha256": "77cfb9a11c02b1d91af38e4ba030f6d585e6217b3d45c5153cbe6b2bd08d88a1"
+  },
+  {
+    "file": "667-en-signup-filled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 55273,
+    "sha256": "b999f72b2e8268268a8fcaea90ee97e685d2300e08f93d62220fbbcdd2190e22"
+  },
+  {
+    "file": "667-en-signup-mismatch-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 65623,
+    "sha256": "f61fea1ecb212e49348573633b8024af265c570fed3af8fcbd878f5378d246b8"
+  },
+  {
+    "file": "667-en-signup-mismatch.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 55273,
+    "sha256": "2605e4b5d7841dc664e98d0834f87dabb778031b954d2fb311f0082e5008450e"
+  },
+  {
+    "file": "667-en-terms-checked.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 77051,
+    "sha256": "3fcdb5f65eb98681efee065d574ef197194625ffd8b9c612d6b46721aa2fbdbd"
+  },
+  {
+    "file": "667-en-terms-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 75122,
+    "sha256": "4c1eeee61f9d939838e6a2b3201711abd8f65847686c3901d258d43f301f95a3"
+  },
+  {
+    "file": "667-en-terms-unchecked.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 72340,
+    "sha256": "f1f9aec710e2b0facb36b8c74409ab7af19ee2a532dba1916b14110cdcc8adce"
+  },
+  {
+    "file": "667-en-verify-back-signup.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 54827,
+    "sha256": "ac91922b18e26d97d7e5fad5b1e2ede57f3e514f525491d58813caaf25673f27"
+  },
+  {
+    "file": "667-en-verify-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 80646,
+    "sha256": "6144aa54f5ed96275d3203303d0a00eed2f28e9d8cb79104db681d65b9461b7f"
+  },
+  {
+    "file": "667-en-verify-error.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 63512,
+    "sha256": "7113bc0bb43573b0c9753888efe9f47bca2e7d6d7e78a40605b2da78a884ece0"
+  },
+  {
+    "file": "667-en-welcome.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 190737,
+    "sha256": "9f65a506aebf2e94b5af75f04bea61e121ad4df80c87a56ad2b7b4c0c728c940"
+  },
+  {
+    "file": "667-ko-apple-cancel.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 194282,
+    "sha256": "eea100f375390b8298c59a94d3d5ee1279e6e38d3582bc92a08ae7c25b5fdff0"
+  },
+  {
+    "file": "667-ko-apple-private.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 83087,
+    "sha256": "70799102e2e878f1ef3d297f40e8cd058ff86de5661463e0e6184d53c5ed35d1"
+  },
+  {
+    "file": "667-ko-apple-share.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 83003,
+    "sha256": "f5bd38d3d48d92a84723279e460bf348e29b2d5a237046c32ec9f910c146dd69"
+  },
+  {
+    "file": "667-ko-auth-privacy.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 67527,
+    "sha256": "e69a309110d51fbcef54ef6fc48411a929c4bf7ce923071596f629f9633c6003"
+  },
+  {
+    "file": "667-ko-consent-privacy.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 67527,
+    "sha256": "e69a309110d51fbcef54ef6fc48411a929c4bf7ce923071596f629f9633c6003"
+  },
+  {
+    "file": "667-ko-forgot-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 60935,
+    "sha256": "ce421859a7b7972cce795bb67f0b9bd7ef00b64297f1a60a3b91d9835ff57c10"
+  },
+  {
+    "file": "667-ko-forgot-validation.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 64942,
+    "sha256": "0596f3ea401e3aa90815799808377ef73859c5a3ac52ad8833281fe54f2727f6"
+  },
+  {
+    "file": "667-ko-new-password-error.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 61492,
+    "sha256": "f0cac1849e462a506eaccd0d2b6d2b09199f854b3b1f6fb63b383973fc44ed54"
+  },
+  {
+    "file": "667-ko-new-password.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 64698,
+    "sha256": "5024488d06f7e026d27dde39671d046f59758100e99ede569e89bc4725a324c3"
+  },
+  {
+    "file": "667-ko-password-back-signin.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62082,
+    "sha256": "475829db5bcea53c68bf199e44667c456c302a49d2811253d6bff35abfd6cc8f"
+  },
+  {
+    "file": "667-ko-r06-boundary.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 115985,
+    "sha256": "2762f78228530b51fec76aeafb5b67075d8b82e64b819cb11689c24e45a1b99b"
+  },
+  {
+    "file": "667-ko-recovery-code.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 79298,
+    "sha256": "5f4055b3bbf3a9aadc76a79d51dd70ef4ecc057dcec28afcee898c11476a15fe"
+  },
+  {
+    "file": "667-ko-signin-api-failure.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62179,
+    "sha256": "a8e6dbf4e31f546870d6dc6af0e9062945785aba362475fff2df5bb767c80d72"
+  },
+  {
+    "file": "667-ko-signin-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 60160,
+    "sha256": "310595f8edf5ee76cef50ed91cfeb386eecf3cfb74186ece2ffcf9ed9a152541"
+  },
+  {
+    "file": "667-ko-signin-filled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62179,
+    "sha256": "a8e6dbf4e31f546870d6dc6af0e9062945785aba362475fff2df5bb767c80d72"
+  },
+  {
+    "file": "667-ko-signin-invalid.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 60869,
+    "sha256": "1766572012ef780dd6651746f97715f317c4b16238524189178e40648f0ce93f"
+  },
+  {
+    "file": "667-ko-signin-session.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 79616,
+    "sha256": "22cc0c61cda2b4b89c2a9850e75031be46dec9a5172d008c9feba396992af50e"
+  },
+  {
+    "file": "667-ko-signup-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 50152,
+    "sha256": "12fd29650af21e0bad19ba1a14d75f82ae59175094008a51664a55f6228e70a3"
+  },
+  {
+    "file": "667-ko-signup-filled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 53744,
+    "sha256": "8326ee59ed27eadfce9d50277778ab981c4ff1daf2468b95e8e812a10193cc03"
+  },
+  {
+    "file": "667-ko-signup-mismatch-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 63207,
+    "sha256": "403c92346ede29acca34045437ae57098c64759898d6e18af7577e891c50358b"
+  },
+  {
+    "file": "667-ko-signup-mismatch.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 53743,
+    "sha256": "4ae7f59ff84c8496f5cfc68e1aed1ea9fa89991e3ab941257c3d2bceca916de0"
+  },
+  {
+    "file": "667-ko-terms-checked.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 96022,
+    "sha256": "7a81ee1701760b60db7618a2cce114c61af1e2f34b93c7f1c4b8d53f55c35fb2"
+  },
+  {
+    "file": "667-ko-terms-scrolled.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 94126,
+    "sha256": "7379b13bc95b64f433c12f7b17114ffa3576e0b8822d6fa229756458f5f43ca3"
+  },
+  {
+    "file": "667-ko-terms-unchecked.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 84492,
+    "sha256": "4107cf04d9f11e0c592b8b9895fda81436b747f1f0cd0a0872c0e70caeb7663e"
+  },
+  {
+    "file": "667-ko-verify-back-signup.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 53550,
+    "sha256": "f1b3440e2e4f0c82cc0ac3f6f618f62af1bffebb5c46ceb92997b3b854d9a137"
+  },
+  {
+    "file": "667-ko-verify-empty.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 78782,
+    "sha256": "10f62780115029d1ab991ead7eb005df48d73896814233486826f3f9ff864505"
+  },
+  {
+    "file": "667-ko-verify-error.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 62570,
+    "sha256": "0e2b3f6bfe5c9ddb8e84bfd9c182934e2ef5f938b997fb9565d9fcccb6d3aaa1"
+  },
+  {
+    "file": "667-ko-welcome.png",
+    "width": 375,
+    "height": 667,
+    "bytes": 194282,
+    "sha256": "eea100f375390b8298c59a94d3d5ee1279e6e38d3582bc92a08ae7c25b5fdff0"
+  },
+  {
+    "file": "812-en-apple-cancel.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 218874,
+    "sha256": "ef385ed7bee49540ecbacaea5896f91ef16172624c321d0a43a3a786ce90b546"
+  },
+  {
+    "file": "812-en-apple-private.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 85568,
+    "sha256": "9573353d72d1216e127e4c2dde076337e743b79f565c68cd3aff7a536733485b"
+  },
+  {
+    "file": "812-en-apple-share.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 85777,
+    "sha256": "81753c14cf0208f918545cb2f1c8047f3db7161b929992822f05ad6d8812637f"
+  },
+  {
+    "file": "812-en-auth-privacy.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68084,
+    "sha256": "f5cff0fd5373b277b6a5d59c7bc5fdc398945e11159a252e92701377cc89ced5"
+  },
+  {
+    "file": "812-en-consent-privacy.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68084,
+    "sha256": "f5cff0fd5373b277b6a5d59c7bc5fdc398945e11159a252e92701377cc89ced5"
+  },
+  {
+    "file": "812-en-forgot-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 61445,
+    "sha256": "18b93a130d49eedc312aee28a284332b905568d88e483bc9d0abaa358c3bbebd"
+  },
+  {
+    "file": "812-en-forgot-validation.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 64534,
+    "sha256": "5dcf6aa968087f7ee59d3a24c82319564d37226aaf372ea7ae150bfca27fcc5b"
+  },
+  {
+    "file": "812-en-new-password-error.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 71475,
+    "sha256": "0ec49f042004467673b660f5c6da4ba199cbbf0b20cfefde86331933b1a0ca15"
+  },
+  {
+    "file": "812-en-new-password.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68028,
+    "sha256": "c1be9be78af0110581d2698f8973a884ba4415ca91d36cc107709657ddffc2e1"
+  },
+  {
+    "file": "812-en-password-back-signin.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 64852,
+    "sha256": "5c24f03ae3cc3cdc34af56eda475deb81628ecd5dd06c4c01193ae81c66ceca7"
+  },
+  {
+    "file": "812-en-r06-boundary.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 111227,
+    "sha256": "bafa2a4540da727852028396bd358d2d40c10b89379f8a01c4f8ff727e6e312f"
+  },
+  {
+    "file": "812-en-recovery-code.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 83434,
+    "sha256": "e7b7cd186877a19b08f58869e564a467eb5c4db5cec505a35a29b264945ff226"
+  },
+  {
+    "file": "812-en-signin-api-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 68047,
+    "sha256": "45dbd915e5f831bc02acb2ae23d36ecc68cdf0e8b9615e33a198f2b1c6c4440d"
+  },
+  {
+    "file": "812-en-signin-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 62820,
+    "sha256": "c4b4b0709b46a413b85dd1f151707193a22731611ef7d732e96afb47307d1613"
+  },
+  {
+    "file": "812-en-signin-filled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 65100,
+    "sha256": "d8f3aa5d3c2b41a43f7177a290593414397b3ff32a5254a3471ca77cafd50cd4"
+  },
+  {
+    "file": "812-en-signin-invalid.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 66561,
+    "sha256": "6f2745970a35dc66145a562557ad1ca01ef768f51bc4c8364581deb0ad91981c"
+  },
+  {
+    "file": "812-en-signin-session.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 79306,
+    "sha256": "65feaf336089dbe4c0ec7215cee5c20fdf097b3bcbe9cc82c731cea4b4d1ab91"
+  },
+  {
+    "file": "812-en-signup-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 66176,
+    "sha256": "4a0e211c86c9cf33e6a9319de0111de47a86a1c1525957b0f971bf85416cc4b5"
+  },
+  {
+    "file": "812-en-signup-filled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 70240,
+    "sha256": "e2a032baac8fb8cba0483d84b2272fe141ebc502b97fc29e87fad69d3950351f"
+  },
+  {
+    "file": "812-en-signup-mismatch-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 69677,
+    "sha256": "7c383bbff12bd210860c5c43689415b2228799392e135da84df055ad0c012b4d"
+  },
+  {
+    "file": "812-en-signup-mismatch.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 70240,
+    "sha256": "91bf3691cd14ccae2523a4e6f654129c167a85c4a0a74a9add87ec50a84faaa2"
+  },
+  {
+    "file": "812-en-terms-checked.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 81724,
+    "sha256": "6de233efb2380d5b2889975626e0ae3e6c98ec6206ffc35ba7731e1c8d5dd700"
+  },
+  {
+    "file": "812-en-terms-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 79947,
+    "sha256": "e8a702188df2c6d69ac835711c0c59b18a25defb0652d0194a6c561b91f479d2"
+  },
+  {
+    "file": "812-en-terms-unchecked.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 77274,
+    "sha256": "37b37f546cc3247f68929c4a02d08a638221196276ea50c641934fa040711574"
+  },
+  {
+    "file": "812-en-verify-back-signup.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 69731,
+    "sha256": "a106abf634f5d4ac86c31812daa55339f5d0b865f3dba731c56241516de482f7"
+  },
+  {
+    "file": "812-en-verify-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 82899,
+    "sha256": "00d6edf1253e661a351763cbcb989bba108db7b6b01cdb24b938470d31d33990"
+  },
+  {
+    "file": "812-en-verify-error.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 81471,
+    "sha256": "df5630fadca80e41f406a51dfa37fcdae89c948c2a4c17fb9f1c9f232a8e73ec"
+  },
+  {
+    "file": "812-en-welcome.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 218874,
+    "sha256": "ef385ed7bee49540ecbacaea5896f91ef16172624c321d0a43a3a786ce90b546"
+  },
+  {
+    "file": "812-ko-apple-cancel.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 222558,
+    "sha256": "6e9417af6be07a18424a1a81c9dae3cf474a9f20ae3e0e1997f6ed79a51fd745"
+  },
+  {
+    "file": "812-ko-apple-private.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 82978,
+    "sha256": "5f9e707c3ae999d84b713591d3250b4c46e23dbf60b65c5b58e8f030ffadfbec"
+  },
+  {
+    "file": "812-ko-apple-share.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 82957,
+    "sha256": "cb241e859502ce682ebf2d78fc5c6fa357a9cab1d92d238ef0787489e7f4f850"
+  },
+  {
+    "file": "812-ko-auth-privacy.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 69012,
+    "sha256": "287794abcaa95caaa26a5268a8a6c88f3c56b69de7d6c50d230ac7e9c8d542d4"
+  },
+  {
+    "file": "812-ko-consent-privacy.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 69012,
+    "sha256": "287794abcaa95caaa26a5268a8a6c88f3c56b69de7d6c50d230ac7e9c8d542d4"
+  },
+  {
+    "file": "812-ko-forgot-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 63358,
+    "sha256": "acffbf2413d75c1727667853ab4e068907b14736c6f99678c6010b7c97dab7cb"
+  },
+  {
+    "file": "812-ko-forgot-validation.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 67497,
+    "sha256": "6fa3b37289b4ab51fa744e7166bca060de1ed1f5adc0b987bb6fbbacc0e7e2df"
+  },
+  {
+    "file": "812-ko-new-password-error.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 70202,
+    "sha256": "c031756460796e8ee3fd6816dede764b8992ef1a80798dd427e3fda3bc2e8d4a"
+  },
+  {
+    "file": "812-ko-new-password.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 66467,
+    "sha256": "f1a336bbcc26cd4966a974280b810c6d5bb3d7e635a48ce52b42469e5a521828"
+  },
+  {
+    "file": "812-ko-password-back-signin.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 64147,
+    "sha256": "a623c0baffb4765bb30c253cfa7e0c60d3b12747050dfbc469b73c04e2230725"
+  },
+  {
+    "file": "812-ko-r06-boundary.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 136808,
+    "sha256": "546069d55feda87fa6be810f1ad70cc08420ba644c624ed8428416cf1bad09dd"
+  },
+  {
+    "file": "812-ko-recovery-code.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 81367,
+    "sha256": "01fea0ffe6d60086a1913d3f302a878cb9d80744662d9d2d6b0f603910cb86df"
+  },
+  {
+    "file": "812-ko-signin-api-failure.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 66906,
+    "sha256": "ac926cfcb4b6796d16604e2dfd32dd16a2ba1991703946635d71a430e1865f38"
+  },
+  {
+    "file": "812-ko-signin-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 62212,
+    "sha256": "bda4841986ce850350c6c4e9d77b66605f1cf02b50e692221bc9de17eed36b8a"
+  },
+  {
+    "file": "812-ko-signin-filled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 64251,
+    "sha256": "11f5711d606b6a1cb3ebc949325763f4b6a2572029a2f2423292b7cd5337a224"
+  },
+  {
+    "file": "812-ko-signin-invalid.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 66876,
+    "sha256": "8d9a13e1b354692ef4d3fc65218cb8b95a3c2cf4fc561c4e68181bf348b93d6f"
+  },
+  {
+    "file": "812-ko-signin-session.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 80684,
+    "sha256": "414e8490072700395f33681e54913467c6c9a517d2d4e10dd3e9318355d0e7af"
+  },
+  {
+    "file": "812-ko-signup-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 63702,
+    "sha256": "5b9645524f19dc7d6b7f7e3da866303a7b249ce497ce67798d60792779a2077b"
+  },
+  {
+    "file": "812-ko-signup-filled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 67296,
+    "sha256": "009391102d5f9b3405880cf70a1455d4ed98b20e67d313776a42e39f4e2e59f5"
+  },
+  {
+    "file": "812-ko-signup-mismatch-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 67069,
+    "sha256": "42faa93117efcbf4c37985f321edd4c71b4756d4c212186ad613d4fe87fe4f37"
+  },
+  {
+    "file": "812-ko-signup-mismatch.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 67296,
+    "sha256": "3536dae8606c58185fb66a3a383d6db4e45fcbc77023a4f2a0b1ca92a519f08f"
+  },
+  {
+    "file": "812-ko-terms-checked.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 100508,
+    "sha256": "8822a11cee40e0feea8ab70c5b0a288a3b981e6354f6492cd80cf9f630505a47"
+  },
+  {
+    "file": "812-ko-terms-scrolled.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 98668,
+    "sha256": "aba136556a5aad911577f35f2999127fe6fe40c6f04253abcfc2ff71a621ad7b"
+  },
+  {
+    "file": "812-ko-terms-unchecked.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 88949,
+    "sha256": "a0c11e42608f83622f367f1a1e857677ca3f44bf8e174383cb8e6c9feb790f82"
+  },
+  {
+    "file": "812-ko-verify-back-signup.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 67090,
+    "sha256": "2809b6c654a951e3e61258e859c0e9d1075cb650d215f019b9cbc5d036e889a5"
+  },
+  {
+    "file": "812-ko-verify-empty.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 80821,
+    "sha256": "a983a104fcb944a0835c8e4050eaa12296b1946a912e431e3e338b20c5027d5f"
+  },
+  {
+    "file": "812-ko-verify-error.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 80089,
+    "sha256": "e045cc8f6e5509d7cd8b7727001897b6e56573d510e8cf01d0a306617b289537"
+  },
+  {
+    "file": "812-ko-welcome.png",
+    "width": 375,
+    "height": 812,
+    "bytes": 222558,
+    "sha256": "6e9417af6be07a18424a1a81c9dae3cf474a9f20ae3e0e1997f6ed79a51fd745"
+  }
+]

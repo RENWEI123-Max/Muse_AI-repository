@@ -1,0 +1,43 @@
+{
+  "grep": {
+    "client/src/components/AuthFlow.vue": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/src/styles/pages/auth.css": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/tests/r15-audit.spec.ts": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/tests/r15-audit.config.ts": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    }
+  },
+  "unchanged": {
+    "client/src/App.vue": true,
+    "client/src/lib/api.ts": true,
+    "client/src/lib/i18n.ts": true,
+    "client/src/lib/support-content.ts": true,
+    "client/src/styles/tokens.css": true,
+    "client/src/styles/base.css": true,
+    "client/src/styles/components.css": true,
+    "client/src/components/HomeFlow.vue": true
+  },
+  "business_methods_unchanged": {
+    "validEmail": true,
+    "request": true,
+    "sendCode": true,
+    "submit": true,
+    "verify": true,
+    "apple": true,
+    "logout": true
+  }
+}

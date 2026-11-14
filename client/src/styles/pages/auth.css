@@ -57,3 +57,5 @@
  .welcome-screen .auth-actions{top:323px}
  .auth-screen .auth-content{overflow:auto}
 }
+/* The prototype locks the welcome panel; form scrolling remains in auth-flow. */
+.auth-screen.welcome-screen .auth-content{overflow:hidden}
