@@ -2,7 +2,8 @@
 
 ## 执行摘要
 
-- 分支：`codex/shell-fix`；基线：`04326fa`。未合入 main。
+- 分支：`codex/shell-fix`；基线：`04326fa`；实现提交：`c97aaee307429b67654b9f7746a52c8a1df93452`。未合入 main。
+- **推送未完成**：自动审批拒绝 `git push -u origin codex/shell-fix`，原因是无法验证具体 GitHub 远端 `RENWEI123-Max/Muse_AI-repository` 的用户/组织归属，认为有源码外发风险；已请求用户明确批准该目的地，未绕过拒绝。
 - **总体：部分完成，验收未全通过／待 Smith。** 构建退出 0；生产预览浏览器检查 8/8 通过；12 张真实 PNG。测试通过数不代表全部验收通过。
 - 四项：静态 **未通过**；流程 **部分通过／待 Smith**；效果 **未通过／待 Smith**；滑动与文案 **部分通过／待 Smith**。
 - 9 关键帧：新增 1（sheet-in），原有 1（sprite-loop），缺 7；sprite-loop 的实现与原型坐标写法不同，未验证等价。
