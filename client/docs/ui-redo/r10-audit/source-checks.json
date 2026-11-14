@@ -1,0 +1,21 @@
+{
+  "client/src/lib/i18n.ts": {
+    "hex": 0,
+    "important": 0,
+    "device_prefix": 0
+  },
+  "client/src/styles/pages/reply.css": {
+    "hex": 0,
+    "important": 0,
+    "device_prefix": 0
+  },
+  "scope": {
+    "production_modified": [
+      "client/src/lib/i18n.ts",
+      "client/src/styles/pages/reply.css"
+    ],
+    "App.vue_unchanged": true,
+    "ReplyTopup.vue_unchanged": true,
+    "InboxFlow.vue_unchanged": true
+  }
+}

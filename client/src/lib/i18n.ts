@@ -554,6 +554,7 @@ const businessKo: Record<string,string> = {
   "Choose an image smaller than 10 MB.": "10MB 미만의 이미지를 선택하세요.",
   "Conversation API is unavailable. Please try again later.": "대화 서비스를 사용할 수 없어요. 나중에 다시 시도하세요.",
   "Could not check balance. Return and try again.": "잔액을 확인하지 못했어요. 돌아가서 다시 시도하세요.",
+  "Diamonds added. Confirm collection to continue.": "다이아몬드가 충전됐어요. 답장 받기를 확인하세요.",
   "Diamonds added. Confirm your selected Pass to continue.": "다이아몬드가 충전됐어요. 선택한 패스를 확인하세요.",
   "Enter a valid recipient ID.": "올바른 받는 사람 ID를 입력하세요.",
   "Keep your hello within 200 characters.": "인사는 200자 이내로 작성하세요.",

@@ -44,3 +44,6 @@
 .reply-topup .reply-back{width:309px}
 .reply-topup:lang(ko) :is(h2,h3,p,button,strong,small,b){font-family:var(--font-family-ko)}
 @media(max-height:740px){.reply-topup.ui-sheet{top:8px}.reply-flow .reply-receipt{bottom:105px}}
+
+/* Keep return/failure feedback and cancellation reachable inside the fixed dialog. */
+.reply-flow .reply-dialog{overflow:auto;overscroll-behavior:contain;scrollbar-width:none}
