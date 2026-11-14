@@ -5,7 +5,7 @@ import { api, ApiError } from '../lib/api'
 import { asset, assets } from '../lib/assets'
 export type Letter = {openingMessageId:string;conversationId:string;content:string;sender:{id:string;displayName:string;city:string;age:number};state:string;canReply:boolean;canChat:boolean}
 const props=defineProps<{token:string;letter?:Letter;compose?:boolean;messenger?:string;suspended?:boolean}>()
-const emit=defineEmits<{close:[];changeBird:[];blocked:[id:string]}>()
+const emit=defineEmits<{close:[];sent:[];changeBird:[];blocked:[id:string]}>()
 const detail=ref(props.letter),view=ref(props.compose?'compose':'letter'),draft=ref(''),recipient=ref(new URLSearchParams(location.search).get('recipient')||''),reply=ref(''),sent=ref(''),error=ref(''),notice=ref(''),busy=ref(false),safety=ref(''),confirmation=ref(false)
 // Presentation only: the server must accept the opening before the messenger flies.
 const flying=ref(false),flightProgress=ref(0)
@@ -49,7 +49,7 @@ async function send(opening:boolean){
  try{
   await api(opening?`/conversations/${recipient.value}/opening`:`/conversations/${detail.value!.conversationId}/messages`,{method:'POST',headers:headers(),body:JSON.stringify({content:text})})
   sent.value=text;error.value=''
-  if(opening){sessionStorage.removeItem(draftKey.value);sessionStorage.setItem(sentKey.value,text);await fly();view.value='sent'}else{sessionStorage.removeItem(replyKey.value);reply.value='';detail.value={...detail.value!,state:'letter-waiting',canReply:false}}
+  if(opening){sessionStorage.removeItem(draftKey.value);sessionStorage.setItem(sentKey.value,text);await fly();emit('sent')}else{sessionStorage.removeItem(replyKey.value);reply.value='';detail.value={...detail.value!,state:'letter-waiting',canReply:false}}
  }catch(e){if(opening&&e instanceof ApiError&&e.status===409){view.value='sent';notice.value='You already sent an opening message to this person. Wait for their reply.';sent.value='';}else error.value='Could not send. Your draft is saved. Please try again.'}finally{busy.value=false}
 }
 async function report(category:string,reason:string){if(busy.value)return;busy.value=true;error.value='';try{await api('/reports',{method:'POST',headers:headers(),body:JSON.stringify({reportedUserId:detail.value!.sender.id,messageId:detail.value!.openingMessageId,category,reason})});notice.value='Report received. Thank you for helping keep MauGo safe.';safety.value=''}catch{error.value='Could not submit your report. Please try again.'}finally{busy.value=false}}
@@ -58,7 +58,7 @@ function close(){if(flying.value)return;if(safety.value){safety.value='';confirm
 const returnFocus=document.activeElement instanceof HTMLElement?document.activeElement:null
 function key(e:KeyboardEvent){
  if(props.suspended)return
- if(e.key==='Escape')close()
+ if(e.key==='Escape'){e.stopPropagation();close()}
  if(e.key==='Tab'){
   const root=document.querySelector(safety.value?'.letter-safety':'.letters-panel')
   const controls=Array.from(root?.querySelectorAll<HTMLElement>('button,input,textarea,select')||[]).filter(e=>!e.hasAttribute('disabled')&&e.getClientRects().length)
@@ -68,8 +68,8 @@ function key(e:KeyboardEvent){
  }
 }
 let timer:ReturnType<typeof setInterval>
-onMounted(()=>{restore();try{reply.value=sessionStorage.getItem(replyKey.value)||''}catch{};timer=setInterval(refresh,4000);document.addEventListener('keydown',key);setTimeout(()=>document.querySelector<HTMLTextAreaElement>('#letter-text')?.focus(),300)})
-onUnmounted(()=>{finishFlight?.();if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});clearInterval(timer);document.removeEventListener('keydown',key)})
+onMounted(()=>{restore();try{reply.value=sessionStorage.getItem(replyKey.value)||''}catch{};timer=setInterval(refresh,4000);document.addEventListener('keydown',key,true);setTimeout(()=>document.querySelector<HTMLTextAreaElement>('#letter-text')?.focus(),300)})
+onUnmounted(()=>{finishFlight?.();if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});clearInterval(timer);document.removeEventListener('keydown',key,true)})
 </script>
 <template>
 <div class="letters-flow letters-veil" :class="{'is-composing':compose,'is-flying':flying}" :data-phase="flying?'sending':undefined" @click.self="close">

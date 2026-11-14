@@ -1,5 +1,7 @@
 # R17 我的资料补查
 
+后续决定（R20 fixes）：访客“本设备保存”脚注已决定不加，避免虚假文案。其余本文件内容保留当轮历史审计结论；修复与新证据见 [R20-fixes-result.md](R20-fixes-result.md)。
+
 基线 cc31826，分支 codex/r17-audit。Mac mini 唯一一轮 codex exec --approve-for-me；进程62995为本轮，未另启动、开Issue、发Telegram、调用Figma API/token或合main。
 
 ## 原型摘录（实现前）
@@ -64,7 +66,7 @@
 
 1. `activity-card` 原型打开home/openNote；当前仅article，API只保留content，既无信件ID也无点击路由。四组点击后均仍在My letters。需业务/数据契约决策，本轮禁止修改。
 2. 访客时间/次数/性别/年龄/城市、Recent visits计数仍缺。当前load丢弃visitedAt、summary只保留id/displayName；无头像时显示已有占位图。未伪造产品字段或用样例照片补空。
-3. 访客“本设备保存”脚注仍未添加：实际为服务器访问记录，原型本地语义冲突，待Smith。
+3. **已决定：不加**访客“本设备保存”脚注。实际为服务器访问记录，不能加入虚假的本设备保存文案（Smith 2026-11-14 22:50 授权）。
 4. 点赞原型showPaymentDialog有焦点转移/恢复和底层inert；当前实测focusInside=false、underlayInert=false。Escape退出主页问题已修，完整模态键盘管理仍缺。
 5. 原型编辑Zodiac (optional)为自由输入；产品固定select且空选项禁用，无法清空已有星座。原型空城市替换Somewhere，产品服务端保存空值；不移植demo逻辑，待Smith。
 6. 文案差异：Visited me/Who visited me、Zodiac/Zodiac (optional)、额外空态兼容说明；Profile saved.未翻韩文，星座选项未翻韩文；嵌入R19英文文案与R20入口另归邻接模块。静态保持，未顺手改其他模块。

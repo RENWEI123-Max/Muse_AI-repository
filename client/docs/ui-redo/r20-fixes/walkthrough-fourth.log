@@ -1,0 +1,46 @@
+[WebServer] (node:71772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:71774) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/r20-fixes-auth.spec.ts:4:61 › 667 en registration destination (628ms)
+  ✓   2 tests/r20-fixes-auth.spec.ts:4:61 › 667 ko registration destination (659ms)
+  ✓   3 tests/r20-fixes-auth.spec.ts:4:61 › 812 en registration destination (595ms)
+  ✓   4 tests/r20-fixes-auth.spec.ts:4:61 › 812 ko registration destination (660ms)
+  ✓   5 tests/r20-fixes-avatar.spec.ts:6:61 › 667 en R20 fixes avatar walkthrough (16.4s)
+  ✓   6 tests/r20-fixes-avatar.spec.ts:6:61 › 667 ko R20 fixes avatar walkthrough (16.4s)
+  ✓   7 tests/r20-fixes-avatar.spec.ts:6:61 › 812 en R20 fixes avatar walkthrough (16.4s)
+  ✓   8 tests/r20-fixes-avatar.spec.ts:6:61 › 812 ko R20 fixes avatar walkthrough (16.4s)
+  ✓   9 tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap (587ms)
+  ✓  10 tests/r20-fixes-guest.spec.ts:4:61 › 667 ko guest appearance overlap (632ms)
+  ✓  11 tests/r20-fixes-guest.spec.ts:4:61 › 812 en guest appearance overlap (586ms)
+  ✓  12 tests/r20-fixes-guest.spec.ts:4:61 › 812 ko guest appearance overlap (636ms)
+  ✓  13 tests/r20-fixes-moments.spec.ts:4:61 › 667 en R20 fixes moments walkthrough (11.7s)
+  ✓  14 tests/r20-fixes-moments.spec.ts:4:61 › 667 ko R20 fixes moments walkthrough (11.8s)
+  ✓  15 tests/r20-fixes-moments.spec.ts:4:61 › 812 en R20 fixes moments walkthrough (11.8s)
+  ✓  16 tests/r20-fixes-moments.spec.ts:4:61 › 812 ko R20 fixes moments walkthrough (11.9s)
+  ✓  17 tests/r20-fixes-navigation.spec.ts:5:61 › 667 en R06-R17 navigation fixes (25.4s)
+  ✓  18 tests/r20-fixes-navigation.spec.ts:5:61 › 667 ko R06-R17 navigation fixes (25.7s)
+  ✓  19 tests/r20-fixes-navigation.spec.ts:5:61 › 812 en R06-R17 navigation fixes (25.6s)
+  ✘  20 tests/r20-fixes-navigation.spec.ts:5:61 › 812 ko R06-R17 navigation fixes (25.2s)
+(node:71881) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough (12.9s)
+  ✓  22 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (13.0s)
+  ✓  23 tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough (13.4s)
+  ✓  24 tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough (13.4s)
+
+
+  1) tests/r20-fixes-navigation.spec.ts:5:61 › 812 ko R06-R17 navigation fixes ─────────────────────
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/Users/anna/Muse_AI-repository/client/test-results/r20-fixes/.playwright-artifacts-0/traces/559f9d6515f1cdf7d095-da0f0cffd93c65620cf1-recording38.trace'
+
+    Error: ENOENT: no such file or directory, open '/Users/anna/Muse_AI-repository/client/test-results/r20-fixes/.playwright-artifacts-0/a79862031194c34aac24890bbb3a0a8e.zip'
+
+    Error Context: test-results/r20-fixes/r20-fixes-navigation-812-ko-R06-R17-navigation-fixes/error-context.md
+
+  1 failed
+    tests/r20-fixes-navigation.spec.ts:5:61 › 812 ko R06-R17 navigation fixes ──────────────────────
+  23 passed (4.6m)

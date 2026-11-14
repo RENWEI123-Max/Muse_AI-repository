@@ -161,3 +161,5 @@
 @media(prefers-reduced-motion:reduce){
  .home-flow:not(.motion-off) :is(.hat-glow,.scene-mist,.magic-spark){animation:none}
 }
+
+.home-flow .r07-sheet>.home-error{position:absolute;left:20px;right:20px;top:66px;margin:0;color:var(--home-error-text);font:var(--font-caption)}

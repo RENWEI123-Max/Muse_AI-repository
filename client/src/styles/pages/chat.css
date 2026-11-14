@@ -119,3 +119,5 @@
 @media(max-height:740px){
  .chat-flow .chat-cancel-target{top:auto;bottom:147px}
 }
+
+.chat-flow .chat-message--search-target .chat-bubble{outline:1px solid var(--accent);outline-offset:2px}

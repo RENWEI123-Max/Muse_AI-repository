@@ -1,0 +1,128 @@
+[WebServer] (node:69654) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:69656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough (8.4s)
+(node:69673) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough (8.5s)
+(node:69695) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough (8.4s)
+(node:69700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough (8.5s)
+
+
+  1) tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |  const open=()=>d5.locator('.image-card').first().click(),close=()=>panel.locator('.cards-close').click()
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+      41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:39:351
+
+    Error Context: test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-667-en-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |  const open=()=>d5.locator('.image-card').first().click(),close=()=>panel.locator('.cards-close').click()
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+      41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:39:351
+
+    Error Context: test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-667-ko-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |  const open=()=>d5.locator('.image-card').first().click(),close=()=>panel.locator('.cards-close').click()
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+      41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:39:351
+
+    Error Context: test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-812-en-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough ─────────────────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |  const open=()=>d5.locator('.image-card').first().click(),close=()=>panel.locator('.cards-close').click()
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |  await d5.locator('#upload-image-card').click();const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);await expect(panel).toHaveCount(0);await expect(d5.locator('#upload-image-card')).toBeFocused();await shot('upload-cancel',false)
+      41 |  await upload();await open();await panel.locator('#card-remove').click();await panel.locator('.cards-cancel').click();await expect(d5.locator('.cards-overlay')).toHaveClass(/cards-card-options/);await expect(panel.locator('#card-remove')).toBeFocused();await shot('remove-cancel');await close();await expect(d5.locator('.image-card').first()).toBeFocused()
+      42 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(20*1024*1024+1)});await expect(d5.locator('.ui-toast')).toContainText('20 MB');await shot('size-toast');await expect(d5.locator('.ui-toast')).toHaveCount(0,{timeout:4000});await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes.spec.ts:39:351
+
+    Error Context: test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-812-ko-R20-fixes-cards-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-fixes.spec.ts:4:61 › 667 en R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 667 ko R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 812 en R20 fixes cards walkthrough ──────────────────────────────
+    tests/r20-fixes.spec.ts:4:61 › 812 ko R20 fixes cards walkthrough ──────────────────────────────

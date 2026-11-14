@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {tr} from '../lib/i18n'
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { api } from '../lib/api'
 import { asset } from '../lib/assets'
 import { Capacitor, registerPlugin } from '@capacitor/core'
@@ -15,6 +15,7 @@ const StoreKit=registerPlugin<{
 const store=Capacitor.isPluginAvailable('StoreKit')
 const props=defineProps<{balance:number;token:string;userId:string;required?:number;context?:string}>()
 const emit=defineEmits<{back:[];funded:[]}>()
+const confirmation=ref(false)
 const selected=ref(0),notice=ref(''),panel=ref<HTMLElement>(),buying=ref(false)
 const packs=ref<{id:string;diamonds:number;label:string;price?:string}[]>([])
 const currentBalance=ref(props.balance)
@@ -50,7 +51,8 @@ async function buy(){
  }catch(e){notice.value=charged?`Payment received but not yet confirmed: ${(e as Error).message}. No diamonds were added yet; it will be retried next time you open Diamonds.`:`Purchase failed: ${(e as Error).message}. No charge has been made.`}
  finally{buying.value=false}
 }
-function leave(){if(paid)emit('funded');else emit('back')}
+function leave(){if(confirmation.value){confirmation.value=false;return}if(paid)emit('funded');else emit('back')}
+watch(confirmation,async value=>{await nextTick();if(value)document.querySelector<HTMLElement>('.reply-purchase-overlay button')?.focus();else panel.value?.querySelectorAll<HTMLElement>('.reply-pack')[selected.value]?.focus()})
 const restore=document.activeElement as HTMLElement
 let checking=false,closed=false,paid=false
 async function checkBalance(){
@@ -62,16 +64,17 @@ async function checkBalance(){
  }catch{if(!closed)notice.value='Could not check balance. Return and try again.'}finally{checking=false}
 }
 const timer=setInterval(checkBalance,1500)
-function keyboard(e:KeyboardEvent){if(e.key==='Escape'){e.stopImmediatePropagation();leave()}if(e.key==='Tab'){const a=Array.from(panel.value?.querySelectorAll<HTMLButtonElement>('button')||[]);if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1)?.focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0]?.focus()}}}
+function keyboard(e:KeyboardEvent){if(e.key==='Escape'){e.stopImmediatePropagation();leave()}if(e.key==='Tab'){const root=confirmation.value?document.querySelector('.reply-purchase-overlay'):panel.value;const a=Array.from(root?.querySelectorAll<HTMLButtonElement>('button')||[]).filter(e=>!e.disabled&&e.getClientRects().length);if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1)?.focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0]?.focus()}}}
 onMounted(async()=>{void loadWallet();void loadProducts().then(retryUnfinished).catch(()=>{});document.addEventListener('keydown',keyboard,true);await nextTick();panel.value?.querySelector('button')?.focus()})
 onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('keydown',keyboard,true);restore?.focus()})
 </script>
 <template>
-<Transition name="d1-topup" appear><div class="reply-topup ui-sheet" ref="panel" role="dialog" aria-modal="true" :aria-label="tr('Diamonds')">
+<div v-if="confirmation" class="reply-purchase-overlay ui-scrim ui-scrim--dialog" @click.self="confirmation=false"><section class="reply-dialog ui-sheet ui-dialog" role="dialog" aria-modal="true" :aria-label="tr('Confirm purchase')"><h2>{{packs[selected]?.diamonds}} {{tr('diamonds')}}</h2><p>{{packs[selected]?.price||tr('Unavailable')}}</p><p>{{tr('Purchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.')}}</p><button id="confirm-native-pack" class="ui-button" :disabled="buying" @click="confirmation=false;buy()">{{tr('Confirm purchase')}}</button><button class="ui-button ui-button--text" :disabled="buying" @click="confirmation=false">{{tr('Not now')}}</button></section></div>
+<Transition name="d1-topup" appear><div class="reply-topup ui-sheet" :inert="confirmation" ref="panel" role="dialog" aria-modal="true" :aria-label="tr('Diamonds')">
 <span class="ui-sheet__grabber" aria-hidden="true"></span><header class="reply-topup-heading"><button class="ui-icon-button reply-topup-close" @click="leave">{{tr("‹ Back to")}} {{tr(context||'replies')}}</button><h2>{{tr("Diamonds")}}</h2></header>
 <img class="reply-diamond" :src="asset('01-brand-scenes/diamond')" alt=""><h3 class="reply-topup-description">{{tr("Diamonds for filters and extra replies.")}}</h3><p class="reply-balance">{{tr("Your balance ·")}} <strong>{{currentBalance}} {{tr("diamonds")}}</strong></p>
-<div class="reply-packs"><button v-for="(pack,i) in packs" :key="pack.id" class="reply-pack" :aria-pressed="selected===i" @click="selected=i;notice='' "><span class="reply-pack-amount"><img class="reply-pack-icon" :src="asset('01-brand-scenes/diamond')" alt=""><strong class="reply-pack-value">{{pack.diamonds.toLocaleString('en-US')}}</strong></span><span class="reply-pack-bonus">{{tr(['Starter pack','+10% bonus','+20% bonus','+30% bonus'][i]||'')}}</span><small class="reply-pack-description">{{tr(pack.label)}}</small><b class="reply-pack-price">{{pack.price??tr('Unavailable')}}</b></button></div>
-<button v-if="packs[selected]" id="confirm-pack" class="ui-button reply-buy" :disabled="buying" @click="buy">{{tr(buying?'Processing…':'Get')}} {{tr(packs[selected]!.diamonds)}} {{tr("diamonds")}}{{packs[selected]!.price?' · '+packs[selected]!.price:''}}</button>
+<div class="reply-packs"><button v-for="(pack,i) in packs" :key="pack.id" class="reply-pack" :aria-pressed="selected===i" @click="selected=i;notice='';confirmation=true"><span class="reply-pack-amount"><img class="reply-pack-icon" :src="asset('01-brand-scenes/diamond')" alt=""><strong class="reply-pack-value">{{pack.diamonds.toLocaleString('en-US')}}</strong></span><span class="reply-pack-bonus">{{tr(['Starter pack','+10% bonus','+20% bonus','+30% bonus'][i]||'')}}</span><small class="reply-pack-description">{{tr(pack.label)}}</small><b class="reply-pack-price">{{pack.price??tr('Unavailable')}}</b></button></div>
+<button v-if="packs[selected]" id="confirm-pack" class="ui-button reply-buy" :disabled="buying" @click="confirmation=true">{{tr(buying?'Processing…':'Get')}} {{tr(packs[selected]!.diamonds)}} {{tr("diamonds")}}{{packs[selected]!.price?' · '+packs[selected]!.price:''}}</button>
 <p v-if="notice" role="status">{{tr(notice)}}</p><p class="reply-topup-note">{{tr("Purchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.")}}</p><button class="ui-button ui-button--text reply-back" @click="leave">{{tr("Back to")}} {{tr(context||'replies')}}</button>
 </div></Transition>
 </template>

@@ -48,7 +48,7 @@ async function submit() {
  await request(async()=>{const signup=mode.value==='signup';const r=await post<{id:string;token:string}>('/auth/'+(signup?'signup':'login'),{email:email.value.trim(),password:password.value,...(signup?{confirmPassword:confirm.value}:{}),termsVersion:'1.0',privacyVersion:'1.0'});token.value=r.token;account.value=r.id;password.value='';confirm.value='';if(signup){recovery.value=false;go('verify');}else go('session')})
  if(mode.value==='verify')await sendCode()
 }
-async function verify() {error.value='';if(!/^\d{6}$/.test(code.value)){error.value='Enter a 6-digit code.';return}if(!validEmail())return;await request(async()=>{const r=await post<{verified:boolean}>('/auth/code/verify',{email:email.value.trim(),code:code.value});if(r.verified)go(recovery.value?'password':'session')})}
+async function verify() {error.value='';if(!/^\d{6}$/.test(code.value)){error.value='Enter a 6-digit code.';return}if(!validEmail())return;await request(async()=>{const r=await post<{verified:boolean}>('/auth/code/verify',{email:email.value.trim(),code:code.value});if(r.verified){if(recovery.value)go('password');else if(token.value)emit('authenticated',token.value,account.value);else go('session')}})}
 async function apple(cancelled=false) {await request(async()=>{const result=await post<{cancelled?:boolean}>('/auth/apple',cancelled?{cancelled:true}:{});if(result.cancelled)emit('back');else error.value='Apple sign-in did not complete. No session was issued.'})}
 async function logout(){await request(async()=>{await post('/auth/logout',{},token.value);token.value='';emit('signedout')})}
 </script>

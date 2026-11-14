@@ -1,5 +1,7 @@
 # R18 avatar audit
 
+后续决定（R20 fixes）：29:15057 是8槽已满，已决定不做大图查看。其余本文件内容保留当轮历史审计结论；修复与新证据见 [R20-fixes-result.md](R20-fixes-result.md)。
+
 Base `f04abf1`; branch `codex/r18-audit`. Overall: **未通过／待 Smith**。流程、效果与韩文文案仍有下述缺口；专项脚本通过不等于模块验收全部通过。
 
 ## Prototype extraction (before implementation)
@@ -15,7 +17,7 @@ Local source: `~/maugo-design/MauGo.html`; decoded source and exact lines in
 | avatar-remove | Remove × → `confirm`, title Remove this photo?, copy You can restore removed photos from Recently removed.; Cancel/close leaves underlying gallery intact. Remove photo archives photo and reopens gallery. |
 | avatar-removed | Successful removal → empty slot plus Recently removed (n). |
 | avatar-restore | Recently removed → `removedAvatars`; Back → gallery. Click photo restores former empty position or first free position → gallery. Full gallery reports Remove a photo first to make space. |
-| avatar-full | Eight occupied positions → Upload a photo disabled. Node 29:15057 is full slots, not enlarged photo. Enlarged photo specification remains pending Smith. |
+| avatar-full | Eight occupied positions → Upload a photo disabled. Node 29:15057 is full slots, not enlarged photo. 已决定：不做大图查看（R20 fixes 决定）。 |
 
 Failure copy: Choose a photo smaller than 20 MB.; This photo could not be opened.;
 This photo could not be opened or saved. Try another one. Save failure keeps crop
@@ -63,7 +65,7 @@ border/check and canvas redraw are immediate. Prototype errors use toast(text), 
 
 ## 流程与文案缺口
 
-1. **规格待 Smith**：29:15057 本地 JSON 名为 avatar-full · 头像 / 槽位已满，实际8槽图库；本轮只验满槽，不凭空补309×309大图，不生成假大图截图。
+1. **已决定：不做**：29:15057 本地 JSON 名为 avatar-full · 头像 / 槽位已满，实际8槽图库；Smith 2026-11-14 22:50 授权决定：此节点就是8槽已满，不做大图查看，不补代码或假截图。
 2. **取消目标差异**：原型 crop sheet 的关闭结束 sheet，回原入口；产品 back 将 crop 转回 gallery。图库及 Edit profile 来源保留，未改 script 自行取舍。
 3. **文件/存储失败差异**：原型选择文件前拒绝 >20 MB，产品 upload 没有该判断；保存错误显示接口文案，非原型 This photo could not be opened or saved. Try another one.。本轮测试损坏图片解码失败、503上传/选择/删除/恢复及409满槽恢复；未实际上传20 MB文件，大小校验结论来自源码。
 4. **服务端优先**：实际后端为首个空槽分配 add/restore，满槽错误为 All 8 avatar slots are occupied；与原型 formerSlot/Remove a photo first to make space. 不同。fixture已按服务端错误和分配规则，不将演示数据逻辑搬进产品。没有数据库可验证真实持久化、权限、并发或重进。

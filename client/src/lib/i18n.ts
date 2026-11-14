@@ -68,6 +68,87 @@ export function t(key: keyof typeof en): string { return locale.value === 'ko' ?
 
 // Business copy reuses the Korean wording supplied in the offline handover.
 const businessKo: Record<string,string> = {
+  "A little expression": "작은 감정 표현",
+  "Continue editing": "계속 작성",
+  "Discard draft": "초안 삭제",
+  "Friends are people with a collected reply.": "답장을 받은 사람들이 친구예요.",
+  "Leave this draft?": "이 초안을 나갈까요?",
+  "Load more": "더 보기",
+  "Photo type": "사진 유형",
+  "Remove card": "카드 삭제",
+  "This removes the image card from your profile.": "프로필에서 이미지 카드가 삭제됩니다.",
+  "Up to 6 attachments. Visibility is enforced when shared.": "첨부 파일은 최대 6개입니다. 공유 시 공개 범위가 적용돼요.",
+  "View moment ›": "순간 보기 ›",
+  "View photo": "사진 보기",
+  "Main navigation": "기본 탐색",
+  "Aries": "양자리",
+  "Taurus": "황소자리",
+  "Gemini": "쌍둥이자리",
+  "Cancer": "게자리",
+  "Leo": "사자자리",
+  "Virgo": "처녀자리",
+  "Libra": "천칭자리",
+  "Scorpio": "전갈자리",
+  "Sagittarius": "사수자리",
+  "Capricorn": "염소자리",
+  "Aquarius": "물병자리",
+  "Pisces": "물고기자리",
+
+  "This message is no longer available.": "이 메시지는 더 이상 볼 수 없어요.",
+  "portrait": "인물",
+  "physique": "체형",
+  "outfit": "옷차림",
+  "life": "일상",
+  "Moment": "순간",
+  "This photo could not be opened or saved. Try another one.": "이 사진을 열거나 저장할 수 없어요. 다른 사진으로 시도하세요.",
+  "Confirm purchase": "구매 확인",
+  "Clear conversations?": "대화 목록을 비울까요?",
+  "Clear conversation list": "대화 목록 비우기",
+  "Conversations will be hidden from Inbox. Their messages are kept and can be restored from Hidden conversations.": "받은 편지함에서 대화를 숨깁니다. 메시지는 보관되며 숨긴 대화에서 복원할 수 있어요.",
+  "System messages": "시스템 메시지",
+  "Interactions": "소식",
+
+  "Account": "계정",
+  "Only me": "나만 보기",
+  "Attachment": "첨부 파일",
+  "My moments": "나의 순간",
+  "Profile visibility": "프로필 공개 범위",
+  "Who can see this?": "공개 범위",
+  "Portrait": "인물",
+  "Outfit": "패션",
+  "Life": "일상",
+  "New moment": "새 순간",
+  "Keep a little moment here.": "소중한 순간을 남겨 보세요.",
+  "Moment options": "게시물 옵션",
+  "Delete moment": "게시물 삭제",
+  "Delete this moment?": "이 게시물을 삭제할까요?",
+  "A little moment": "작은 순간",
+  "What is on your mind?": "무슨 생각을 하고 있나요?",
+  "Category": "카테고리",
+  "You can add up to 6 attachments.": "첨부 파일은 최대 6개까지 추가할 수 있어요.",
+  "Keep draft": "초안 유지",
+  "Avatar saved.": "아바타를 저장했어요.",
+  "All 8 avatar slots are occupied": "아바타 슬롯 8개가 모두 찼어요.",
+  "Please try again.": "다시 시도해 주세요.",
+  "Main photo": "대표 사진",
+  "Set as main photo": "대표 사진으로 설정",
+  "Image card published.": "이미지 카드를 게시했어요.",
+  "Moment published.": "순간을 게시했어요.",
+  "Deleted.": "삭제했어요.",
+  "Choose an image.": "이미지를 선택하세요.",
+  "Choose a photo smaller than 20 MB.": "20 MB보다 작은 사진을 선택하세요.",
+  "Image card slots are full": "이미지 카드 슬롯이 모두 찼어요.",
+  "Main · ": "대표 · ",
+  "Back from moments": "순간에서 돌아가기",
+  "Moment text": "순간 내용",
+  "Close D5 dialog": "대화상자 닫기",
+  "Image card preview": "이미지 카드 미리보기",
+  "Add sticker": "스티커 추가",
+  "My moments ›": "내 순간 ›",
+  "This removes the published moment.": "게시한 순간이 삭제됩니다.",
+  "Use PNG, JPEG, WebP, MP4, WebM, OGG, WAV or MP3 below 10 MB (video below 30 MB).": "10 MB 미만의 PNG, JPEG, WebP, MP4, WebM, OGG, WAV 또는 MP3 파일을 사용하세요(동영상은 30 MB 미만).",
+  "Profile saved.": "프로필을 저장했어요.",
+
   'A little bird. A little story.':'작은 새 한 마리. 작은 이야기 하나.',
   'Send a letter':'편지 보내기',
   'Diamonds for filters and extra replies.':'필터와 추가 답장을 위한 다이아몬드.',
@@ -614,6 +695,14 @@ export function tr(value: unknown): string {
   const text=String(value??'')
   if(locale.value==='en')return text
   return businessKo[text] ?? text
+     .replace(/^Remove photo (\d+)$/, '사진 $1 삭제')
+    .replace(/^Upload a photo (\d+)$/, '사진 $1 업로드')
+    .replace(/^Remove attachment (\d+)$/, '첨부 파일 $1 삭제')
+    .replace(/^Photo unavailable \((\d+)\)$/, '사진을 불러올 수 없어요. ($1)')
+    .replace(/^Added (\d+) diamonds\. Your balance is (\d+) diamonds\.$/, '다이아몬드 $1개를 추가했어요. 잔액은 $2개예요.')
+    .replace(/^Added (\d+) diamonds\. Could not refresh your balance\. Return and check again\.$/, '다이아몬드 $1개를 추가했어요. 잔액을 새로고침하지 못했어요. 돌아가서 다시 확인하세요.')
+    .replace(/^Payment received but not yet confirmed: (.+)\. No diamonds were added yet; it will be retried next time you open Diamonds\.$/, (_, message:string) => '결제를 받았지만 아직 확인되지 않았어요: '+tr(message)+'. 다이아몬드는 아직 추가되지 않았어요. 다음에 다이아몬드 화면을 열면 다시 시도해요.')
+    .replace(/^Purchase failed: (.+)\. No charge has been made\.$/, (_, message:string) => '구매에 실패했어요: '+tr(message)+'. 결제되지 않았어요.')
     .replace(/^Pay (\d+) diamonds$/, '다이아몬드 $1개 결제')
     .replace(/^Filter Pass · (\d+) days remaining$/, '필터 패스 · $1일 남음')
     .replace(/^Filter Pass unlocked for (\d+) days\.$/, '$1일 필터 패스가 활성화됐어요.')

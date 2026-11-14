@@ -1,0 +1,34 @@
+{
+  "base": "06d02b3",
+  "protected": {
+    "client/src/styles/tokens.css": true,
+    "client/src/App.vue": true,
+    "client/src/lib/api.ts": true
+  },
+  "A5_changed_page_styles_and_toast": {
+    "hex": 0,
+    "important": 0,
+    "device": 0
+  },
+  "guards": {
+    "person Escape": true,
+    "own capture Escape": true,
+    "cards esc.stop": true,
+    "moments esc.stop": true,
+    "list Retry": true,
+    "toast timer": true,
+    "JPEG preparation": true
+  },
+  "backendChanged": false,
+  "bundles": [
+    {
+      "file": "dist/assets/index-CWpGRCWd.css",
+      "sha256": "2bb5e7fa4ae878587c4be055aec5310ba602b85aadb21d82216a423367f120cc"
+    },
+    {
+      "file": "dist/assets/index-DnFjgs5N.js",
+      "sha256": "436940e09d1aedb510e46c64d8e7fe26b9a9bf4651414aaf7985a50a77ec7079"
+    }
+  ],
+  "pngCount": 219
+}

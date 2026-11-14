@@ -1,0 +1,352 @@
+{
+  "fixture": true,
+  "initialCards": 0,
+  "media": "Browser-created 3200x2000 test-pattern PNG selected through file picker; never seeded cards",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "body": {
+        "email": "r19-audit@example.com",
+        "password": "SamplePass2026",
+        "termsVersion": "1.0",
+        "privacyVersion": "1.0"
+      }
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 10211
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "POST",
+      "body": {
+        "mediaId": "1",
+        "type": "portrait"
+      }
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads/1",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "PATCH",
+      "body": {
+        "visibility": "friends"
+      }
+    },
+    {
+      "path": "/users/me/image-cards/1",
+      "method": "DELETE"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "upload-cancel",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    },
+    {
+      "name": "remove-cancel",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [
+          {
+            "keyframes": [
+              {
+                "offset": 0,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "translateY(30px)",
+                "opacity": "0",
+                "computedOffset": 0
+              },
+              {
+                "offset": 1,
+                "easing": "ease-out",
+                "composite": "auto",
+                "transform": "none",
+                "opacity": "1",
+                "computedOffset": 1
+              }
+            ],
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 300,
+              "easing": "linear",
+              "endDelay": 0,
+              "fill": "none",
+              "iterationStart": 0,
+              "iterations": 1
+            }
+          }
+        ],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 317,
+          "width": 351,
+          "height": 326
+        },
+        "scroll": {
+          "client": 324,
+          "content": 324,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "이미지 카드",
+            "clipped": false
+          },
+          {
+            "text": "사진 보기\n›",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형\n인물\n›",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "공개 범위\n전체 공개\n›",
+            "clipped": false
+          },
+          {
+            "text": "전체 공개",
+            "clipped": false
+          },
+          {
+            "text": "카드 삭제\n›",
+            "clipped": false
+          },
+          {
+            "text": "대표 사진",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "size-toast",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 273,
+          "width": 351,
+          "height": 370
+        },
+        "scroll": {
+          "client": 368,
+          "content": 368,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "사진 유형",
+            "clipped": false
+          },
+          {
+            "text": "인물",
+            "clipped": false
+          },
+          {
+            "text": "체형",
+            "clipped": false
+          },
+          {
+            "text": "옷차림",
+            "clipped": false
+          },
+          {
+            "text": "일상",
+            "clipped": false
+          },
+          {
+            "text": "취소",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "patch-failure",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": {
+        "animations": [],
+        "veilTransition": "0s"
+      },
+      "metric": {
+        "box": {
+          "x": 12,
+          "y": 349,
+          "width": 351,
+          "height": 294
+        },
+        "scroll": {
+          "client": 292,
+          "content": 292,
+          "top": 0,
+          "overflow": "auto"
+        },
+        "animation": {
+          "name": "sheet-in",
+          "duration": "0.3s",
+          "timing": "ease-out",
+          "keyframes": [],
+          "veilTransition": "0s"
+        },
+        "copy": [
+          {
+            "text": "×",
+            "clipped": false
+          },
+          {
+            "text": "누가 볼 수 있나요?",
+            "clipped": false
+          },
+          {
+            "text": "모두\n✓",
+            "clipped": false
+          },
+          {
+            "text": "친구",
+            "clipped": false
+          },
+          {
+            "text": "나만",
+            "clipped": false
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "name": "deleted-toast",
+      "doc": {
+        "height": 667,
+        "width": 375,
+        "y": 0
+      },
+      "entry": null,
+      "metric": null
+    }
+  ],
+  "checks": {
+    "uploadImage": {
+      "width": 1600,
+      "height": 1000
+    },
+    "uploadBytes": [
+      {
+        "path": "/media/uploads",
+        "method": "POST",
+        "bytes": 10211
+      }
+    ]
+  },
+  "errors": []
+}

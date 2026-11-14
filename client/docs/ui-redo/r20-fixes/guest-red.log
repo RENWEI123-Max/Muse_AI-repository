@@ -1,0 +1,39 @@
+[WebServer] (node:71399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:71401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap (286ms)
+
+
+  1) tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap ──────────────────────────
+
+    Error: {"notice":{"x":20,"y":112,"width":181.078125,"height":15.296875},"heading":{"x":33,"y":127,"width":309,"height":40}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      3 | const out='docs/ui-redo/r20-fixes/guest';mkdirSync(out,{recursive:true})
+      4 | for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} guest appearance overlap`,async({page})=>{
+    > 5 |  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang);await page.goto('/');await page.locator('.auth-actions .auth-preview').click();await page.locator('#magic').click();const notice=await page.locator('.home-flow>.home-error').boundingBox(),heading=await page.locator('.r07-header').boundingBox();expect(notice).not.toBeNull();expect(heading).not.toBeNull();const overlap=!(notice!.y+notice!.height<=heading!.y||heading!.y+heading!.height<=notice!.y||notice!.x+notice!.width<=heading!.x||heading!.x+heading!.width<=notice!.x);await page.screenshot({path:`${out}/${height}-${lang}-before-assert.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2));expect(overlap,JSON.stringify({notice,heading})).toBe(false);await page.screenshot({path:`${out}/${height}-${lang}-appearance.png`});writeFileSync(`${out}/${height}-${lang}-checks.json`,JSON.stringify({notice,heading,overlap},null,2))
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+      6 | })
+      7 |
+        at /Users/anna/Muse_AI-repository/client/tests/r20-fixes-guest.spec.ts:5:829
+
+    Error Context: test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r20-fixes/r20-fixes-guest-667-en-guest-appearance-overlap/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r20-fixes-guest.spec.ts:4:61 › 667 en guest appearance overlap ───────────────────────────

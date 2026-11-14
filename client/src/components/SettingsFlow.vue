@@ -4,9 +4,9 @@ import {supportEmail,legalText,termsVersion,termsSections,faqs,guides} from '../
 import {locale,t,tr} from '../lib/i18n'
 import {asset} from '../lib/assets'
 import {api,post,ApiError} from '../lib/api'
-const props=defineProps<{token:string;privacy?:boolean}>()
+const props=defineProps<{token:string;privacy?:boolean;initial?:'notifications'|'system'|'interactions'|'help'}>()
 const emit=defineEmits<{close:[];security:[]}>()
-const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>('settings')
+const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>(props.initial||'settings')
 const confirm=ref(false),notice=ref(''),error=ref(''),busy=ref(false)
 type Card={id:string;position:number;visibility:'everyone'|'friends'|'only_me'}
 const cards=ref<Card[]>([]),selected=ref<Card>(),choice=ref<Card['visibility']>('everyone')
@@ -42,7 +42,7 @@ async function saveFeedback(){
  }catch(e){error.value=tr(e instanceof ApiError&&e.status===429?'Feedback limit reached. Try again in an hour.':'Feedback could not be sent. Please try again.')}finally{busy.value=false}
 }
 const title=computed(()=>view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
-function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';notice.value='';error.value=''}}
+function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(props.initial&&view.value===props.initial)emit('close');else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';notice.value='';error.value=''}}
 async function cleared(){busy.value=true;error.value='';try{const keys='caches' in window?await caches.keys():[];const temporary=keys.filter(k=>k.startsWith('maugo-temp-'));await Promise.all(temporary.map(k=>caches.delete(k)));confirm.value=false;notice.value=t(temporary.length?'cacheDeleted':'cacheCleared')}catch{error.value=t('cacheFailed')}finally{busy.value=false}}
 </script>
 <template>

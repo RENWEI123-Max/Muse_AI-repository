@@ -1,0 +1,142 @@
+{
+  "fixture": true,
+  "uploads": "Only browser-uploaded bytes; no seeded avatar slots",
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/stats",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/followers",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/image-cards",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST",
+      "bytes": 25835
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "add",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "select",
+        "mediaId": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/me/avatars",
+      "method": "POST",
+      "body": {
+        "action": "remove",
+        "mediaId": "00000000-0000-4000-8000-000000000001",
+        "confirm": true
+      }
+    },
+    {
+      "path": "/media/uploads/00000000-0000-4000-8000-000000000001",
+      "method": "GET"
+    }
+  ],
+  "records": [
+    {
+      "name": "crop-close-source",
+      "doc": {
+        "width": 375,
+        "height": 667,
+        "y": 0
+      }
+    },
+    {
+      "name": "crop-close-edit",
+      "doc": {
+        "width": 375,
+        "height": 667,
+        "y": 0
+      }
+    },
+    {
+      "name": "avatar-size-toast",
+      "doc": {
+        "width": 375,
+        "height": 667,
+        "y": 0
+      }
+    },
+    {
+      "name": "avatar-saved-toast",
+      "doc": {
+        "width": 375,
+        "height": 667,
+        "y": 0
+      }
+    },
+    {
+      "name": "likes-focus",
+      "doc": {
+        "width": 375,
+        "height": 667,
+        "y": 0
+      }
+    }
+  ],
+  "checks": {
+    "entryVeilTransition": "0s"
+  },
+  "errors": []
+}

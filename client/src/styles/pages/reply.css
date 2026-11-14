@@ -47,3 +47,7 @@
 
 /* Keep return/failure feedback and cancellation reachable inside the fixed dialog. */
 .reply-flow .reply-dialog{overflow:auto;overscroll-behavior:contain;scrollbar-width:none}
+
+.app-shell .reply-purchase-overlay.ui-scrim{z-index:80}
+.reply-purchase-overlay .reply-dialog{max-height:calc(100% - 48px);overflow:auto;text-align:center}
+.reply-purchase-overlay .ui-button{width:100%}

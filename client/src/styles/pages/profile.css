@@ -110,3 +110,6 @@
 /* Keep Back after long archive grids so every photo remains reachable by scrolling. */
 .profile-page .avatar-panel-archive:has([data-restore-avatar]:nth-child(5)) .avatar-archive-grid{position:relative;top:auto;margin-top:120px}
 .profile-page .avatar-panel-archive:has([data-restore-avatar]:nth-child(5)) #avatar-gallery-back{position:relative;bottom:auto;margin-top:44px;margin-bottom:20px}
+
+.profile-page :deep(.section-heading h2){white-space:nowrap}
+.profile-page #profile-global-visibility{width:auto}
