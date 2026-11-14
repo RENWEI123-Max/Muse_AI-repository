@@ -1,0 +1,10 @@
+[WebServer] (node:1238593) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:1238614) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r15-auth.spec.ts:5:1 › R15 safe auth states, geometry and styles (18.4s)
+
+  1 passed (20.6s)

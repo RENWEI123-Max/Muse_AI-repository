@@ -666,3 +666,30 @@
  --safety-font-blocked-link:400 10px/12.100000381469727px Fredoka;
  --safety-font-saved:400 12px/18px Fredoka;
 }
+
+/* R15 exact missing paints/type from local JSON 35:2430–35:3412. */
+:root{
+ --auth-copy:#98B08E;
+ --auth-tagline:#D3E8C5;
+ --auth-welcome-copy:#A6BD9A;
+ --auth-switch:#78936E;
+ --auth-link:#C1E0A7;
+ --auth-preview:#8BA77D;
+ --auth-show:#95AF88;
+ --auth-hint:#738C68;
+ --auth-address:#CBDCBE;
+ --auth-apple:#F3F6EF;
+ --auth-apple-ink:#172015;
+ --auth-orbit-text:#DCEAD3;
+  --auth-terms:#142119;
+ --auth-terms-border:rgb(255 255 255 / .07000000029802322);
+ --auth-header-border:rgb(255 255 255 / .019999999552965164);
+ --auth-error-bg:rgb(99 57 45 / .20000000298023224);
+ --auth-error-border:rgb(233 179 159 / .13300000131130219);
+ --auth-error:#E9B39F;
+ --auth-orbit:radial-gradient(ellipse closest-side at 50% 50%,rgb(181 250 112 / .0860000029206276),rgb(0 0 0 / 0));
+ --auth-font-welcome:500 26px/32px Fredoka;
+ --auth-font-tagline:400 14px/24px Fredoka;
+  --auth-font-address:400 13px/22px Fredoka;
+ --auth-font-option:400 14px/16.940000534057617px Fredoka;
+ }

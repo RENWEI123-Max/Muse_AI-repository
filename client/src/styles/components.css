@@ -110,3 +110,18 @@
 
 .ui-chat-link.ui-chat-link--safety{height:28px;padding:8px;border:0;background:none;color:var(--chat-waiting-copy);font:var(--safety-font-blocked-link)}
 [lang=ko] .ui-chat-link--safety{font-family:var(--font-family-ko)}
+
+/* R15 opt-in authentication controls; other flows keep their variants. */
+.ui-button--auth{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--grad-primary-height-48);box-shadow:none}
+.ui-button--auth-apple{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--auth-apple);color:var(--auth-apple-ink)}
+.ui-button--auth-apple svg{width:24px;height:24px}
+.ui-input--auth{display:block;margin-top:12px;font:var(--font-body);outline:none}
+.ui-input--auth:focus{border-color:var(--accent)}
+.ui-auth-checkbox{appearance:none;width:18px;height:18px;flex:none;margin:0;background:url('../assets/12-control-states/checkbox-unchecked.png') center/contain no-repeat;cursor:pointer}
+.ui-auth-checkbox:checked{background-image:url('../assets/12-control-states/checkbox-checked.png')}
+.ui-auth-text{background:none;border:0;padding:4px;color:var(--auth-link);font:var(--appearance-font-swatch);min-height:0}
+.ui-icon-button--auth-back{width:44px;height:40px;background:none;color:var(--text-auth-navigation);font:var(--font-symbol-chevron)}
+.ui-row--auth-option{height:56px;padding:0 16px;border:1px solid var(--hairline);border-radius:var(--radius-14);background:var(--r09-notice-bg);font:var(--auth-font-option)}
+.ui-row--auth-option[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.ui-row--auth-option b{margin-left:auto;color:var(--accent)}
+[lang=ko] :is(.ui-button--auth,.ui-button--auth-apple,.ui-input--auth,.ui-auth-text,.ui-row--auth-option){font-family:var(--font-family-ko)}

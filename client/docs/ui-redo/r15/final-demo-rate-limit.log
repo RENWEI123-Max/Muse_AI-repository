@@ -1,0 +1,42 @@
+[WebServer] (node:1245994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:1246016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (882ms)
+  ✓  2 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (2.0s)
+  ✓  3 tests/r15-auth.spec.ts:7:1 › R15 safe auth states, geometry and styles (16.3s)
+  ✓  4 tests/r15-auth.spec.ts:48:1 › R15 Korean and short viewport (882ms)
+  ✘  5 tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation (6.8s)
+
+
+  1) tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation ───────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('You are signed in.', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('You are signed in.', { exact: true }) with timeout 5000ms
+      - waiting for getByText('You are signed in.', { exact: true })
+
+
+      57 |  await page.locator('#auth-email').fill('mina@maugo.demo');await page.locator('#auth-password').fill('Test2026!')
+      58 |  await page.getByRole('button',{name:'Sign in',exact:true}).click()
+    > 59 |  await expect(page.getByText('You are signed in.',{exact:true})).toBeVisible()
+         |                                                                  ^
+      60 |  await page.getByRole('button',{name:'Meet your letters',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
+      61 | })
+      62 |
+        at /root/Muse_AI-repository/client/tests/r15-auth.spec.ts:59:66
+
+    Error Context: test-results/r15-auth-R15-seed-demo-login-keeps-existing-navigation/error-context.md
+
+  1 failed
+    tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation ────────────────────
+  4 passed (29.5s)

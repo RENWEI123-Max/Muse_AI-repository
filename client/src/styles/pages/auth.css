@@ -1,0 +1,59 @@
+/* R15 — local Figma v2421258509127695554. Canvas coordinates 375 × 812. */
+.auth-screen{padding-top:48px;color:var(--text-primary)}
+.auth-screen:has(.auth-flow)::before{content:'';position:absolute;inset:48px 0 0;background:var(--bg-auth-overlay);backdrop-filter:blur(4px);z-index:-1}
+.auth-screen .auth-top{position:relative;display:flex;align-items:center;justify-content:center;flex:none;height:64px;border-bottom:1px solid var(--auth-header-border)}
+.auth-screen .wordmark{width:94px;height:24.54px;object-fit:contain}
+.auth-screen .language{position:absolute;left:311px;top:11.5px;width:44px;height:40px;color:var(--text-auth-navigation);font:var(--font-caption)}
+.auth-screen .auth-content{position:relative;flex:1;padding:24px;text-align:center}
+.auth-screen h1{margin:0 0 16px;text-align:center;font:var(--font-h1);letter-spacing:var(--font-h1-letter-spacing);color:var(--text-primary)}
+.auth-screen .auth-copy{margin:0 0 24px;text-align:center;color:var(--auth-copy);font:var(--font-body-sm-21)}
+.welcome-screen h1{font:var(--auth-font-welcome)}
+.welcome-screen .auth-tagline{margin:0 0 8px;color:var(--auth-tagline);font:var(--auth-font-tagline)}
+.welcome-screen .auth-copy{margin:0;color:var(--auth-welcome-copy)}
+.welcome-screen .auth-actions{position:absolute;left:24px;right:24px;top:435px}
+.welcome-screen .apple-button{margin-top:12px}
+.welcome-screen .auth-switch{margin:12px 0 0}
+.welcome-screen .auth-legal{display:flex;align-items:center;justify-content:center;gap:4px;margin:8px 0 0;font:var(--font-micro);color:var(--auth-switch)}
+.welcome-screen .auth-preview{margin-top:4px;height:28px}
+.auth-flow{flex:1;min-height:0;overflow:auto;scrollbar-width:none;padding:0 24px 32px;font:var(--font-body-sm-21)}
+.auth-flow .back{position:absolute;left:20px;top:59.5px;margin:0;z-index:3;font-size:0}
+.auth-flow .back::before{content:'‹';font:var(--font-symbol-chevron)}
+.auth-flow .flow-content{padding:24px 0 0}
+.auth-flow .field-label{display:block;margin:0 0 20px;font:var(--font-body-sm);color:var(--text-label)}
+.auth-flow .show-password{display:flex;align-items:center;gap:8px;height:19px;margin:0 0 12px;font:var(--font-caption);color:var(--auth-show)}
+.auth-flow .auth-link{display:block;margin-left:auto;height:22.5px}
+.auth-flow .auth-main{display:flex;margin-top:16px}
+.auth-flow .password-hint{margin:0 0 28px;color:var(--auth-hint);font:var(--font-micro-17)}
+.auth-flow[data-auth-mode=signup] .auth-main,.auth-flow[data-auth-mode=password] .auth-main{margin-top:0}
+.auth-flow[data-auth-mode=forgot] .auth-main{margin-top:36px}
+.auth-screen .auth-switch{color:var(--auth-switch);font:var(--appearance-font-swatch);text-align:center}
+.auth-flow .auth-switch{margin:24px 0 0}
+.auth-screen .auth-preview{display:block;width:100%;height:40px;color:var(--auth-preview);text-align:center}
+.auth-flow .auth-preview{margin-top:8px}
+.auth-flow .auth-error{margin:84px 0 16px;padding:12px 16px;border:1px solid var(--auth-error-border);border-radius:var(--radius-12);background:var(--auth-error-bg);color:var(--auth-error);font:var(--font-body-sm);text-align:center}
+.auth-flow .terms-scroll{height:350px;overflow:auto;padding:16px;border:1px solid var(--auth-terms-border);border-radius:var(--radius-16);background:var(--auth-terms);scrollbar-width:thin}
+.auth-flow[data-auth-mode=consent] .flow-content,.auth-flow[data-auth-mode=terms] .flow-content{padding-top:16px}
+.auth-flow[data-auth-mode=consent] .auth-copy,.auth-flow[data-auth-mode=terms] .auth-copy{margin-bottom:16px}
+.auth-flow .terms-check{display:flex;align-items:flex-start;gap:14px;margin-top:20px;font:var(--font-body-sm);color:var(--text-primary)}
+.auth-flow h2{margin:24px 0 8px;color:var(--text-legal-heading);font:var(--safety-font-option)}
+.auth-flow .policy-copy{margin:0 0 16px;color:var(--text-legal-body);font:var(--font-body-sm-21)}
+.auth-flow[data-auth-mode=consent] .auth-preview{margin-top:12px}
+.auth-flow[data-auth-mode=consent] .auth-link{margin:0 auto}
+.auth-flow .mail-orbit,.auth-flow .apple-orbit{display:grid;place-items:center;height:128px;margin-bottom:16px;background:var(--auth-orbit)}
+.auth-flow .auth-mail-icon{width:56px;height:56px;object-fit:contain}
+.auth-flow .apple-orbit{font:var(--appearance-font-moon);color:var(--auth-orbit-text)}
+.auth-flow .auth-address{margin:0 0 24px;text-align:center;color:var(--auth-address);font:var(--auth-font-address);overflow-wrap:anywhere}
+.auth-flow[data-auth-mode=verify] .auth-main{margin-top:90px}
+.auth-flow[data-auth-mode=verify] .auth-error{margin-top:32px}
+.auth-flow[data-auth-mode=password] .auth-error{margin-top:80px}
+.auth-flow[data-auth-mode=signup] .auth-error{margin-top:72px}
+.auth-flow .auth-policy{display:block;height:22.5px;margin:16px auto 0}
+.auth-flow .auth-options{display:grid;gap:12px;margin-bottom:0}
+.auth-flow[data-auth-mode=apple] .auth-main{margin-top:40px}
+.auth-flow .privacy-copy{margin:66px 0 40px;color:var(--auth-copy);font:var(--font-body-sm-21)}
+.auth-flow .auth-privacy-back{position:absolute;left:24px;top:353px}
+.auth-screen:lang(ko),.auth-flow:lang(ko),.auth-screen:lang(ko) h1,.auth-screen:lang(ko) p,.auth-flow:lang(ko) label{font-family:var(--font-family-ko)}
+@media(max-height:740px){
+ .welcome-screen .auth-actions{top:323px}
+ .auth-screen .auth-content{overflow:auto}
+}
