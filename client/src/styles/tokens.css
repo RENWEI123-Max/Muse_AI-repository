@@ -358,3 +358,19 @@
   /* 53:2102 On thumb within 35:1930, 16 × 16 at track x + 19. */
   --switch-on-thumb: #16321B;
 }
+
+/* R06: exact local Figma 35:3535/3536/3538, 35:3676, 35:3793 and Smith's retained economy row. */
+:root {
+  --home-aura: radial-gradient(ellipse closest-side at 50% 50%, rgb(152 250 72 / .12) 0%, rgb(104 167 52 / .04) 50%, transparent 100%);
+  --home-hat-glow: radial-gradient(ellipse closest-side at 50% 50%, rgb(173 249 89 / .44) 0%, rgb(117 177 64 / .18) 50%, transparent 100%);
+  --home-hat-highlight: #D3FF80;
+  --home-trail: #D6FF9C;
+  --home-trail-glow: #AAFF68;
+  --home-filter-text: #A9B5A5;
+  --home-response-hint: #778680;
+  --home-response-bg: rgb(32 40 39 / .5);
+  --home-economy-text: #91A786;
+  --home-error-text: #EDB39F;
+  --font-home-response: 500 10px/1.21 "Fredoka";
+  --font-home-economy: 400 9px/1.21 "Fredoka";
+}

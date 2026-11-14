@@ -17,5 +17,5 @@ test('C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL
  await page.getByLabel('Flight & hover').uncheck();await expect(page.locator('.home-flow')).toHaveClass(/motion-off/);await expect(page.locator('.flight-preview img')).toBeVisible();await expect(page.locator('.home-sheet')).toHaveCSS('transform','none');await page.screenshot({path:'test-results/c3-motion-off.png'});await page.getByRole('button',{name:'Done',exact:true}).click()
  await page.getByRole('button',{name:'Refresh',exact:true}).click();await expect(page.locator('.home-flow')).not.toHaveClass(/refreshing/);await expect(page.locator('.home-veil')).toHaveCount(0);await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-ready');await page.screenshot({path:'test-results/c3-home.png'})
  for(let i=0;i<7;i++){await page.getByRole('button',{name:'Refresh',exact:true}).click();await expect(page.locator('.home-flow')).not.toHaveClass(/refreshing/)}
- await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-empty');await expect(page.locator('.scene-hint')).toContainText('No letters match');expect(errors).toEqual([])
+ await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-empty');await expect(page.locator('.scene-hint')).toContainText('No letters yet');expect(errors).toEqual([])
 })

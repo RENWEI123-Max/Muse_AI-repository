@@ -1,0 +1,67 @@
+/* R06: 375 × 812 scene. Shared controls retain components.css appearance. */
+.home-flow{position:absolute;inset:0;overflow:hidden;background-color:var(--bg-scene);background-image:var(--bg-scene-glow);color:var(--text-primary)}
+.home-flow .home-header{position:absolute;inset:0;z-index:4;pointer-events:none}
+.home-flow .home-wordmark{position:absolute;left:24px;top:63.203px;width:144px;height:37.594px;object-fit:contain}
+.home-flow .ui-icon-button{position:absolute;top:60px;pointer-events:auto}
+.home-flow #magic{left:251px}
+.home-flow #settings{left:307px}
+.home-flow .magic-scene{position:absolute;inset:0;pointer-events:none}
+.home-flow .aura{position:absolute;left:69px;top:354px;width:240px;height:271px;background:var(--home-aura)}
+.home-flow .hat-glow{position:absolute;left:75px;top:536px;width:234px;height:52px;border-radius:var(--radius-26);background:var(--home-hat-glow)}
+.home-flow .hat-highlight{position:absolute;left:147px;top:454px;width:85px;height:21px;border-radius:var(--radius-10-5);background:var(--home-hat-highlight);opacity:.4}
+.home-flow .scene-mist{position:absolute;left:70px;top:319px;width:242px;height:244px;object-fit:contain;opacity:.4}
+.home-flow .scene-particles{position:absolute;inset:0;width:375px;height:812px;pointer-events:none}
+.home-flow .magic-trails{position:absolute;inset:0;width:375px;height:812px;fill:none;stroke:var(--home-trail);stroke-width:.85;opacity:1}
+.home-flow .home-trail{opacity:0;stroke-dasharray:0 1}
+.home-flow .trail-blur{stroke:var(--home-trail-glow);stroke-width:5;filter:blur(var(--blur-trail))}
+.home-flow .magic-spark{position:absolute;color:var(--sparkle);font:var(--font-symbol-star);letter-spacing:var(--font-symbol-star-letter-spacing)}
+.home-flow .spark-one{left:96px;top:409px;width:15.07px;height:23px}
+.home-flow .spark-two{left:246px;top:379px;width:15.07px;height:23px}
+.home-flow .spark-three{left:240.5705px;top:441px;width:8px;height:11px;font:var(--font-tiny)}
+.home-flow .letter-bird{position:absolute;padding:0;border:0;background:none;pointer-events:auto;left:51.8px;top:296.8px;width:92.4px;height:92.4px}
+.home-flow .letter-bird:nth-child(2){left:142.6px;top:182.6px;width:118.8px;height:118.8px}
+.home-flow .letter-bird:nth-child(3){left:231.48px;top:296.48px;width:95.04px;height:95.04px}
+.home-flow .home-flight-sprite{display:block;width:100%;height:100%;background-size:600% 100%;background-repeat:no-repeat;background-position:0 0;animation:sprite-loop .65s steps(6) infinite}
+.home-flow .bird-label{display:none}
+.home-flow .magic-hat{position:absolute;left:99px;top:435px;width:178px;height:143px;padding:0;border:0;background:none;pointer-events:auto}
+.home-flow .home-hat-image{display:block;width:100%;height:100%;object-fit:contain;filter:none}
+.home-flow .scene-hint{position:absolute;left:20px;top:608px;width:335px;height:16px;padding:0;margin:0;text-align:center;color:var(--text-hint);font:var(--font-hint);letter-spacing:.4px;opacity:.8;white-space:nowrap}
+.home-flow .filter-summary{position:absolute;left:24px;top:156px;width:327px;height:12px;margin:0;text-align:center;color:var(--home-filter-text);font:var(--font-micro);letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-flow .home-actions{position:absolute;left:24.113px;top:644px;display:flex;gap:12px;height:48px}
+.home-flow #refresh{width:150px;flex:none}
+.home-flow #compose{width:165px;flex:none}
+.home-flow .economy-actions{position:absolute;left:24px;right:24px;top:695px;height:20px;display:flex;justify-content:space-between;padding:0;margin:0;z-index:3}
+.home-flow .economy-action{display:flex;align-items:center;gap:6px;padding:0;background:none;color:var(--home-economy-text);font:var(--font-home-economy)}
+.home-flow .economy-icon{width:12px;height:12px;object-fit:contain}
+.home-flow .response-strip{position:absolute;left:24px;top:120px;max-width:327px;display:flex;gap:9px;overflow:auto;scrollbar-width:none;z-index:3}
+.home-flow .response-capsule{display:flex;align-items:center;justify-content:center;gap:4px;flex:0 0 157.656px;width:157.656px;height:28px;border-radius:var(--radius-18);padding:0 8px;background:var(--home-response-bg);color:var(--text-primary);font:var(--font-micro);white-space:nowrap}
+.home-flow .response-icon{width:24px;height:22px;flex:none;object-fit:contain;border-radius:var(--radius-11)}
+.home-flow .response-title{color:var(--accent);font:var(--font-home-response)}
+.home-flow .response-hint{display:inline;color:var(--home-response-hint);font:var(--font-tiny)}
+.home-flow>.home-error{position:absolute;left:20px;top:170px;z-index:4;color:var(--home-error-text);font:var(--font-caption)}
+.home-flow .home-retry{background:none;color:var(--accent)}
+.home-flow.refreshing .magic-hat{animation:home-hat-refresh .25s infinite alternate}
+.home-flow.refreshing .letter-bird{opacity:.3}
+.home-flow.motion-off .home-flight-sprite{animation:none;background-position:0 0}
+.home-flow.motion-off .magic-trails{opacity:0}
+.home-flow.motion-off .home-trail{animation:none;opacity:0}
+.home-flow:has(.letters-veil) :is(.magic-scene,.scene-hint,.economy-actions,.home-actions){visibility:hidden}
+.home-flow:lang(ko) :is(.scene-hint,.filter-summary,.economy-action,.response-capsule,.response-title,.response-hint){font-family:var(--font-family-ko)}
+@keyframes sprite-loop{to{background-position:120% 0}}
+@keyframes home-hat-refresh{to{transform:rotate(3deg) translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){
+ .home-flow .home-flight-sprite{animation:none;background-position:0 0}
+ .home-flow.refreshing .magic-hat{animation:none}
+ .home-flow .magic-trails{opacity:0}
+ .home-flow .home-trail{animation:none;opacity:0}
+}
+@media(max-height:740px){
+ .home-flow .magic-scene{transform:translateY(-30px)}
+ .home-flow .scene-hint{top:auto;bottom:176px}
+ .home-flow .home-actions{top:auto;bottom:120px}
+ .home-flow .economy-actions{top:auto;bottom:98px}
+}
+
+.home-flow .birds-enter-active{transition:transform .7s,opacity .7s}
+.home-flow .birds-leave-active{transition:transform .3s,opacity .3s}
+.home-flow :is(.birds-enter-from,.birds-leave-to){opacity:0;transform:translateY(120px) scale(.2)}
