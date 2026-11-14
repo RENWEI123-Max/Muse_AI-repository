@@ -1,0 +1,26 @@
+{
+  "baseline": "3c91161",
+  "ProfileFlow_script_identical": true,
+  "script_sha256": "40e96fca30777194781dc14882a6f097aed856bd7b3f4dcaeafe876e325f9999",
+  "person_css": {
+    "hex": 0,
+    "important": 0,
+    "device_prefix": 0
+  },
+  "production_diff": [
+    "client/src/components/ProfileFlow.vue",
+    "client/src/styles/pages/person.css"
+  ],
+  "changed_production_files": {
+    "client/src/styles/pages/person.css": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    },
+    "client/src/components/ProfileFlow.vue": {
+      "hex": 0,
+      "important": 0,
+      "device_prefix": 0
+    }
+  }
+}

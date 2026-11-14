@@ -39,3 +39,10 @@
 [lang=ko] .person-page{font-family:var(--font-family-ko)}
 [lang=ko] .person-page :is(h2,p,small,span){font-family:var(--font-family-ko)}
 @media(max-height:740px){.person-page .person-actions{bottom:12px}.person-page .person-sheet{bottom:12px}}
+
+/* R16 follow-up: contain gestures within the prototype's scroll regions. */
+.person-page{overflow:hidden}
+.person-page .d4-body,.person-page .person-sheet{overscroll-behavior:contain}
+.person-page .person-cards{overscroll-behavior-x:contain;touch-action:pan-x}
+/* Public moment text preserves the author's line breaks, as in the prototype. */
+.person-page .person-moment-text{white-space:pre-wrap}

@@ -1,0 +1,13 @@
+[WebServer] (node:62705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:62707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough (11.2s)
+  ✓  2 tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough (11.1s)
+  ✓  3 tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough (11.2s)
+  ✓  4 tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough (11.3s)
+
+  4 passed (45.5s)

@@ -1,0 +1,611 @@
+{
+  "fixture": true,
+  "checks": {
+    "press": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "transition": "0s"
+    },
+    "motion": {
+      "animation": "none",
+      "transition": "0s"
+    },
+    "cards": {
+      "left": 265,
+      "width": 327,
+      "content": 592
+    },
+    "body": {
+      "top": 378,
+      "height": 527,
+      "content": 905
+    },
+    "clipped": []
+  },
+  "calls": [
+    {
+      "path": "/auth/login",
+      "query": "",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": true
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": false
+      }
+    },
+    {
+      "path": "/conversations/open",
+      "query": "",
+      "method": "PATCH",
+      "body": {
+        "following": true
+      }
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-waiting",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-waiting/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-waiting&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-empty",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-empty/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-empty&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=50&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/waiting/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/empty/replies/pending",
+      "query": "?limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/messages",
+      "query": "?markRead=true&limit=20&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/open/replies/pending",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/avatar",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/profiles/peer-open/image-cards",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-0",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-1",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-2",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/media/card-3",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/posts",
+      "query": "?userId=peer-open&limit=100&offset=0",
+      "method": "GET"
+    },
+    {
+      "path": "/media/life",
+      "query": "",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "query": "?tab=messages&hidden=false&limit=20&offset=0",
+      "method": "GET"
+    }
+  ],
+  "errors": []
+}

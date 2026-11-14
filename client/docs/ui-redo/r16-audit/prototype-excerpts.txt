@@ -1,0 +1,88 @@
+ function activateNav(id){for(const key of ['home','inbox','profile']){$('#'+key).classList.toggle('active',key===id);if(key===id)$('#'+key).setAttribute('aria-current','page');else $('#'+key).removeAttribute('aria-current');}}
+ function open(name,params={},replace=false){if(name!==route.name&&guardMomentLeave(()=>open(name,params,replace)))return;if(!replace&&view.hidden===false)history.push(route);route={name,...params};if(name==='public-profile')recordVisit(chatFor(params.id)??params.person,params.sourceNote);C.hideHome();screen.classList.add('page-open');screen.classList.toggle('subpage',!['inbox','profile'].includes(name));view.hidden=false;if(['inbox','profile','chat'].includes(name))activateNav(name==='profile'?'profile':'inbox');render();view.scrollTop=0;}
+ function guardMomentLeave(next){if(allowMomentLeave||view.hidden||route.name!=='moment-compose'||!momentDraft.text.trim()&&!momentDraft.media.length)return false;const close=showPaymentDialog(`<h2 id="payment-title">${T('Leave this draft?')}</h2><p>${T('Keep your draft on this device, or discard it before leaving.')}</p><button id="keep-moment-draft" class="primary">${T('Keep draft')}</button><button id="discard-moment-draft" class="outline-button full-width">${T('Discard draft')}</button><button id="continue-moment-draft" class="text-button">${T('Continue editing')}</button>`);const leave=discard=>{const before=momentDraft;if(discard)momentDraft={text:'',media:[],visibility:'Everyone',category:'Life'};if(!persist()){momentDraft=before;return;}close();allowMomentLeave=true;try{next();}finally{allowMomentLeave=false;}};$('#keep-moment-draft').onclick=()=>leave(false);$('#discard-moment-draft').onclick=()=>leave(true);$('#continue-moment-draft').onclick=close;return true;}
+ function back(){if(guardMomentLeave(back))return;closeSheet();if(route.name==='public-profile'&&route.sourceNote&&!history.length){const note=route.sourceNote;home();C.openNote(note);return;}if(history.length){route=history.pop();open(route.name,route,true);}else home();}
+ function home(){if(guardMomentLeave(home))return;closeInboxMenu();view.hidden=true;view.replaceChildren();screen.classList.remove('page-open','subpage','wallpaper-chat');screen.style.removeProperty('--chat-wallpaper');activateNav('home');history=[];C.home();}
+ function page(title,body,action=''){attachmentHandler=null;closeInboxMenu();screen.classList.remove('wallpaper-chat');screen.style.removeProperty('--chat-wallpaper');view.classList.remove('chat-page','inbox-page','profile-reference','settings-reference','feedback-reference','help-reference','public-profile-reference');view.innerHTML=`<header class="page-header"><button id="page-back" class="page-back" aria-label="Back">${icon('back')}</button><h1>${T(title)}</h1>${action||'<span class="header-space"></span>'}</header><div class="page-body">${body}</div>`;$('#page-back').onclick=back;window.MauGoI18n?.translate(view);refreshOwnAvatar();}
+ function row(label,id,value='',cls=''){return `<button class="menu-row ${cls}" id="${id}"><span>${T(label)}</span><small>${escape(value)}</small><span aria-hidden="true">›</span></button>`;}
+ function publicProfile(){
+  const c=chatFor(route.id)??route.person;if(!c){back();return;}
+  const sourceNote=route.sourceNote,photo=c.profileAvatar??avatar(c),sample=['tea','ocean','sea'].includes(c.id),scene=asset('assets/wallpapers/'+(c.id==='ocean'?'moon-road':c.id==='sea'?'sunset-peak':'glowing-deer')+'.webp');
+  const cards=c.profileCards??[{id:'portrait',type:'Portrait',src:photo},...(sample?[{id:'life',type:'Life',src:scene}]:[])];
+  const moments=c.profileMoments??(sample?[{id:'little-day',text:T('A small moment worth keeping.'),src:scene}]:[]);
+  const likes=state.profile.profileLikes??={},liked=id=>!!likes[c.id+':'+id];
+  const canFollow=!!chatFor(c.id)&&rules.canContinue(c);
+  const enterChat=()=>{if(sourceNote&&!chatFor(c.id)){home();C.openNote(sourceNote);}else open('chat',{id:c.id});};
+  page('Profile',`<section class="public-profile-hero"><button id="public-avatar" aria-label="View profile photo"><img src="${photo}" alt="${escape(c.name)}"></button><h2><span data-user-content>${escape(c.name)}</span><span class="public-profile-gender ${c.gender==='female'?'female':''}">${c.gender==='female'?'♀':'♂'}</span></h2><p>${[c.age,c.zodiac?T(c.zodiac):'',c.city].filter(Boolean).map(v=>escape(v)).join(' · ')}</p></section><section class="public-profile-cards" aria-label="Image cards">${cards.map(card=>`<button class="public-photo-card" data-public-card="${escape(card.id)}"><img src="${card.src}" alt="${T(cardTypeName(card.type))}"><span>${T(cardTypeName(card.type))}</span><small>${liked(card.id)?'♥':'♡'} ${Number(liked(card.id))}</small></button>`).join('')}</section><section class="public-profile-moments"><h3>${T('Moments')}</h3>${moments.length?moments.map(moment=>`<article class="public-profile-moment"><small>${T('Sample moment')}</small><p data-user-content>${escape(moment.text)}</p><button class="public-moment-photo" data-public-moment="${escape(moment.id)}" aria-label="View photo"><img src="${moment.src}" alt="${T('Life')}"></button><footer><button class="public-like" data-public-like="${escape(moment.id)}" aria-label="Like moment" aria-pressed="${liked(moment.id)}">${liked(moment.id)?'♥':'♡'} <span>${Number(liked(moment.id))}</span></button></footer></article>`).join(''):`<p class="public-person-empty">${T('No moments yet.')}</p>`}</section>${!canFollow?`<p class="public-follow-hint">${T('Following unlocks after they reply.')}</p>`:''}<p class="public-preview-caption">${T('Sample profile')}</p><div class="public-person-actions"><button class="outline-button" id="public-follow" ${!canFollow?'disabled':''}>${state.following.includes(c.id)?'✓ '+T('Following'):'＋ '+T('Follow')}</button><button class="primary" id="public-chat">${T('Chat')}</button></div>`,`<button id="public-more" class="header-action" aria-label="Profile options">•••</button>`);
+  view.classList.add('public-profile-reference');view.querySelector('.page-header h1').classList.add('sr-only');
+  const toggleLike=id=>{state.profile.profileLikes??={};const key=c.id+':'+id,previous=state.profile.profileLikes[key];state.profile.profileLikes[key]=!previous;if(!persist()){state.profile.profileLikes[key]=previous;return false;}return true;};
+  const showPhoto=(card,canLike=true)=>{showSheet('Photo',`<figure class="image-card-preview"><img src="${card.src}" alt="${T(cardTypeName(card.type??'Life'))}"><figcaption>${T(cardTypeName(card.type??'Life'))}</figcaption></figure>${canLike?`<button id="like-profile-photo" class="outline-button full-width profile-photo-like" aria-pressed="${!!state.profile.profileLikes?.[c.id+':'+card.id]}">${state.profile.profileLikes?.[c.id+':'+card.id]?'♥':'♡'} ${T('Like')} · ${Number(!!state.profile.profileLikes?.[c.id+':'+card.id])}</button>`:''}`);if(canLike)$('#like-profile-photo').onclick=()=>{if(toggleLike(card.id)){render();showPhoto(card);}};};
+  $('#public-avatar').onclick=()=>showPhoto({src:photo,type:'Portrait'},false);
+  view.querySelectorAll('[data-public-card]').forEach(b=>b.onclick=()=>showPhoto(cards.find(card=>card.id===b.dataset.publicCard)));
+  view.querySelectorAll('[data-public-moment]').forEach(b=>b.onclick=()=>showPhoto(moments.find(moment=>moment.id===b.dataset.publicMoment),false));
+  view.querySelectorAll('[data-public-like]').forEach(b=>b.onclick=()=>{if(toggleLike(b.dataset.publicLike)){const yes=!!state.profile.profileLikes[c.id+':'+b.dataset.publicLike];b.setAttribute('aria-pressed',String(yes));b.innerHTML=(yes?'♥':'♡')+' <span>'+Number(yes)+'</span>';}});
+  $('#public-follow').onclick=()=>{if(!canFollow)return;const previous=state.following;state.following=previous.includes(c.id)?previous.filter(id=>id!==c.id):[...previous,c.id];if(!persist()){state.following=previous;return;}const followed=state.following.includes(c.id);$('#public-follow').textContent=followed?'✓ '+T('Following'):'＋ '+T('Follow');};
+  $('#public-chat').onclick=enterChat;
+  $('#public-more').onclick=()=>C.showSafetyMenu(()=>open('report',{id:c.id}),()=>confirm(c.blocked?'Unblock this person?':'Block this person?',c.blocked?'You can continue this conversation.':'Their letters and conversations will be hidden. You can unblock them in Privacy settings.',()=>{if(!chatFor(c.id))chats.push({...c,messages:[],hiddenFromInbox:true});changeBlock(chatFor(c.id),!c.blocked);home();},c.blocked?'Unblock':'Block'),c.blocked);
+ }
+ function openLetterProfile(note){const c=chats.find(c=>c.noteId===note.id||c.contactId===rules.contactKey(note));const person=c??{id:'letter-'+note.id,name:note.name,gender:note.gender,age:note.age,city:note.city,zodiac:note.zodiac,profileAvatar:C.avatarFor(note),status:'waiting'};C.closeLetter();open('public-profile',{id:person.id,person,sourceNote:note});}
+
+ function connections(){const followers=route.kind==='Followers',list=!followers?chats.filter(c=>state.following.includes(c.id)&&!c.blocked):[];page('Connections',`<div class="page-tabs"><button id="connections-following" class="${!followers?'selected':''}">${T('Following')}</button><button id="connections-followers" class="${followers?'selected':''}">${T('Followers')}</button></div>${list.length?list.map(c=>`<button class="chat-row" data-person="${c.id}"><img src="${avatar(c)}" alt=""><strong data-user-content>${escape(c.name)}</strong><span>›</span></button>`).join(''):empty('Your circle is just beginning.')}`);$('#connections-following').onclick=()=>open('connections',{kind:'Following'},true);$('#connections-followers').onclick=()=>open('connections',{kind:'Followers'},true);view.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>open('public-profile',{id:b.dataset.person}));}
+
+CSS
+.round:active{transform:scale(.94)}
+.actions button:active{transform:scale(.96)}
+.sheet{position:absolute;left:10px;right:10px;bottom:25px;z-index:50;border:1px solid #ffffff16;border-radius:26px;background:#141d1d;padding:10px 22px 23px;box-shadow:0 -50px 100px #0008;max-height:620px;overflow:auto;animation:sheet-in .3s ease-out}
+.tool-button:active{color:var(--lime)}
+.hold-button:active{background:#314332}
+.composer-panel{position:absolute;top:145px;left:12px;right:12px;height:499px;border:1px solid #6d7868;border-radius:27px;background:linear-gradient(130deg,#131c1c,#0f1515);z-index:24;padding:0 18px;display:flex;flex-direction:column;animation:sheet-in .3s ease-out}
+.payment-dialog{position:relative;width:100%;max-height:704px;overflow:auto;background:linear-gradient(145deg,#253229,#17221c);border:1px solid #d5eac51a;border-radius:28px;padding:28px 24px 16px;box-shadow:0 28px 80px #0009;text-align:center;animation:sheet-in .22s ease-out}
+.page-body{height:calc(100% - 64px);overflow:auto;scrollbar-width:none;padding:24px;overscroll-behavior:contain}
+.page-body p{line-height:21px}
+.page-body .primary{min-height:48px;font-size:14px;border-radius:24px}
+.chat-page .page-body{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.subpage .page-body{height:calc(100% - 64px)}
+.inbox-page>.page-body{display:flex;flex-direction:column;padding-top:12px;gap:0}
+.collect-replies:active{transform:scale(.99)}
+.public-person-hero{text-align:center;padding:24px 0}
+.public-person-hero>img{width:80px;height:80px;border-radius:50%;object-fit:cover}
+.public-person-hero h2{font-size:18px;margin:14px 0 8px}
+.public-person-hero p{font-size:11px;color:#86a279}
+.public-person-empty{text-align:center;font-size:11px;color:#55734d;margin-top:40px}
+.public-person-actions{position:absolute;bottom:32px;left:24px;right:24px;display:flex;gap:16px}
+.public-person-actions button{flex:1;height:44px;border-radius:24px}
+
+
+/* Public profiles: centered identity, horizontal photo cards, moments, fixed actions. */
+.public-profile-reference>.page-header{border:0;background:#0d1713}
+.public-profile-reference>.page-body{display:block;overflow:auto;padding:4px 24px 120px}
+.public-profile-hero{text-align:center;padding:18px 0 30px}
+.public-profile-hero>button{width:92px;height:92px;border-radius:50%;padding:0;background:#213126;margin:0 auto 16px;overflow:hidden}
+.public-profile-hero img{width:100%;height:100%;object-fit:cover}
+.public-profile-hero h2{font-size:20px;line-height:28px;margin:0 0 9px;display:flex;justify-content:center;align-items:center;gap:8px}
+.public-profile-gender{font-family:Arial,sans-serif;font-size:19px;color:#7bd3f2}
+.public-profile-gender.female{color:#dd8abb}
+.public-profile-hero p{font-size:12px;line-height:18px;color:#899d91;margin:0}
+.public-profile-cards{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding:0 0 6px}
+.public-photo-card{position:relative;flex:0 0 139px;height:184px;padding:0;background:#1e2a23;border-radius:15px;overflow:hidden;text-align:left}
+.public-photo-card>img{width:100%;height:100%;object-fit:cover}
+.public-photo-card>span{position:absolute;top:9px;left:9px;background:#06110baa;border-radius:6px;padding:5px 7px;font-size:10px}
+.public-photo-card>small{position:absolute;bottom:0;left:0;right:0;padding:22px 10px 10px;background:linear-gradient(transparent,#07100baa);font-size:11px}
+.public-profile-moments{margin-top:26px}
+.public-profile-moments h3{font-size:14px;margin:0 0 17px}
+.public-profile-moment>small{color:#819387;font-size:10px}
+.public-profile-moment>p{font-size:14px;line-height:23px;margin:9px 0 14px;white-space:pre-wrap}
+.public-moment-photo{display:block;width:100%;padding:0;border-radius:18px;overflow:hidden;background:#1e2a23}
+.public-moment-photo>img{display:block;width:100%;height:260px;object-fit:cover}
+.public-profile-moment>footer{display:flex;justify-content:flex-end;align-items:center;gap:18px;padding:13px 0}
+.public-profile-moment>footer button{background:none;display:flex;align-items:center;gap:6px;font-size:22px;color:#a9b8ae;padding:0;min-height:32px}
+.public-profile-moment>footer button span{font-size:12px}
+.public-like[aria-pressed=true]{color:var(--lime)}
+.public-profile-reference .public-person-actions{position:absolute;bottom:26px;left:0;right:0;z-index:3;gap:12px;padding:18px 24px 8px;background:linear-gradient(transparent,#0d1713 25%)}
+.public-profile-reference .public-person-actions button{height:48px;font-size:15px}
+.public-profile-reference .public-person-actions .outline-button{background:#26312b;border:0}
+.public-profile-reference .public-person-actions button:disabled{opacity:.5}
+.public-follow-hint,.public-preview-caption{color:#7f9284;text-align:center;font-size:10px;line-height:18px;margin:18px 0 0}
+.profile-photo-like{margin-top:16px}
+
+.profile-floating-compose:active{transform:scale(.96)}
