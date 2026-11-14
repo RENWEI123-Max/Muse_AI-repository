@@ -1,0 +1,128 @@
+[WebServer] (node:56026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:56028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture (15.9s)
+(node:56041) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture (15.9s)
+(node:56049) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture (15.7s)
+(node:56058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture (16.0s)
+
+
+  1) tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-chat]')
+
+
+      36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+      37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')
+    > 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await page.locator('[data-chat]').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();
+         |                                                                                                                                                                                                                                                                                                                                       ^
+      39 |  // Collection returns to inbox; enter through its real row.
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:327
+
+    Error Context: test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-chat]')
+
+
+      36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+      37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')
+    > 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await page.locator('[data-chat]').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();
+         |                                                                                                                                                                                                                                                                                                                                       ^
+      39 |  // Collection returns to inbox; enter through its real row.
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:327
+
+    Error Context: test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-chat]')
+
+
+      36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+      37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')
+    > 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();
+         |                                                                                                                                                                                                                                                                                                                                       ^
+      39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:327
+
+    Error Context: test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-812-en-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ───────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-chat]')
+
+
+      36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+      37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')
+    > 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();
+         |                                                                                                                                                                                                                                                                                                                                       ^
+      39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:327
+
+    Error Context: test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture ────────────────────────────
+    tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture ────────────────────────────

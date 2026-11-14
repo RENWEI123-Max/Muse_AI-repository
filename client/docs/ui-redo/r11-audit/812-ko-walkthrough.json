@@ -1,0 +1,3198 @@
+{
+  "fixture": true,
+  "calls": [
+    {
+      "path": "/auth/login",
+      "method": "POST"
+    },
+    {
+      "path": "/filter-pass",
+      "method": "GET"
+    },
+    {
+      "path": "/discovery/filters",
+      "method": "GET"
+    },
+    {
+      "path": "/users/me/export",
+      "method": "GET"
+    },
+    {
+      "path": "/letters",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/reply-0/collect",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/wallet",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/blocks",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "GET"
+    },
+    {
+      "path": "/conversations/chat-0/replies/pending",
+      "method": "GET"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/media/uploads",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/media",
+      "method": "POST"
+    },
+    {
+      "path": "/conversations/chat-0/messages",
+      "method": "POST"
+    }
+  ],
+  "records": [
+    {
+      "name": "chat-waiting",
+      "state": "chat-waiting",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "답장을 기다리는 중",
+          "clipped": false
+        },
+        {
+          "text": "첫 메시지를 보냈어요. 답장이 오면 대화와 다른 상호작용이 열려요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-receipt-waiting",
+      "state": "chat-receipt-waiting",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "답장이 도착했어요.",
+          "clipped": false
+        },
+        {
+          "text": "메시지에서 답장을 받아 대화를 이어가세요.",
+          "clipped": false
+        },
+        {
+          "text": "답장 받기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-open",
+      "state": "chat-open",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-draft",
+      "state": "chat-draft",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "send-failure",
+      "state": "chat-draft",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "Please try again. 다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-sent",
+      "state": "chat-sent",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-attachment",
+      "state": "chat-attachment",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "사진 ×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-photo",
+      "state": "chat-photo",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-stickers",
+      "state": "chat-stickers",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "sticker-scroll",
+      "state": "chat-stickers",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-sticker-selected",
+      "state": "chat-sticker-selected",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "스티커 ×",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-recording",
+      "state": "chat-recording",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "위로 밀어 취소",
+          "clipped": false
+        },
+        {
+          "text": "0:00 / 1:00",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-record-cancel",
+      "state": "chat-record-cancel",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "손을 떼면 취소",
+          "clipped": false
+        },
+        {
+          "text": "0:01 / 1:00",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "voice-preview",
+      "state": "chat-sent",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "음성 미리 듣기 · 0:01",
+          "clipped": false
+        },
+        {
+          "text": "다시 녹음",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "음성 보내기",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "voice-upload-failure",
+      "state": "chat-sent",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "음성 미리 듣기 · 0:01",
+          "clipped": false
+        },
+        {
+          "text": "다시 녹음",
+          "clipped": false
+        },
+        {
+          "text": "취소",
+          "clipped": false
+        },
+        {
+          "text": "음성 다시 시도",
+          "clipped": false
+        },
+        {
+          "text": "음성 업로드 또는 전송에 실패했어요. Please try again. 녹음은 유지되며 다시 시도할 수 있어요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "voice-sent",
+      "state": "chat-sent",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "음성 메시지를 보냈어요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "chat-mic-denied",
+      "state": "chat-mic-denied",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "‹",
+          "clipped": false
+        },
+        {
+          "text": "Tea friend",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "작은 대화를 나누는 다정한 공간이에요.",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 06:00",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "오후 07:48",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "누르고 말하기",
+          "clipped": false
+        },
+        {
+          "text": "마이크가 꺼져 있어요. 글로 대화할 수 있어요.마이크 권한이 거부됐어요. 브라우저 설정에서 마이크를 허용한 뒤 다시 시도하세요.",
+          "clipped": false
+        }
+      ]
+    },
+    {
+      "name": "details-boundary",
+      "state": "chat-details",
+      "document": {
+        "height": 812,
+        "y": 0,
+        "viewport": 812
+      },
+      "copy": [
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "대화 상세",
+          "clipped": false
+        },
+        {
+          "text": "•••",
+          "clipped": false
+        },
+        {
+          "text": "",
+          "clipped": false
+        },
+        {
+          "text": "이제 자유롭게 대화할 수 있어요.",
+          "clipped": false
+        },
+        {
+          "text": "팔로우",
+          "clipped": false
+        },
+        {
+          "text": "별명 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 배경 ›",
+          "clipped": false
+        },
+        {
+          "text": "대화 말풍선 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 검색 ›",
+          "clipped": false
+        },
+        {
+          "text": "차단 ›",
+          "clipped": false
+        },
+        {
+          "text": "신고 ›",
+          "clipped": false
+        },
+        {
+          "text": "메시지 지우기 ›",
+          "clipped": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

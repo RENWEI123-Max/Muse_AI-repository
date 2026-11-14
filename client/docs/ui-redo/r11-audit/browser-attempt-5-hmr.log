@@ -1,0 +1,53 @@
+[WebServer] (node:56474) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:56476) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/r11-audit.spec.ts:7:61 › 667 en R11 actual clicks API fixture (24.0s)
+  ✘  2 tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture (8.6s)
+(node:56508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/r11-audit.spec.ts:7:61 › 812 en R11 actual clicks API fixture (25.5s)
+  ✓  4 tests/r11-audit.spec.ts:7:61 › 812 ko R11 actual clicks API fixture (24.1s)
+
+
+  1) tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ───────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.c6-chat')
+    Expected: "chat-receipt-waiting"
+    Timeout: 7000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.c6-chat') with timeout 7000ms
+      - waiting for locator('.c6-chat')
+        8 × locator resolved to <section class="c6-chat chat-flow" data-state="chat-waiting">…</section>
+          - unexpected value "chat-waiting"
+
+
+      36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+      37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')
+    > 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();
+         |                                  ^
+      39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.
+      40 |  if(!await root.count())await page.locator('[data-chat]').click()
+      41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:34
+
+    Error Context: test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/r11-audit/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/r11-audit.spec.ts:7:61 › 667 ko R11 actual clicks API fixture ────────────────────────────
+  3 passed (1.4m)

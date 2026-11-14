@@ -47,7 +47,7 @@
 .chat-flow:lang(ko) :is(input,button,strong,p,small,.chat-bubble){font-family:var(--font-family-ko)}
 @media(max-height:740px){.chat-flow .c6-stickers{bottom:72px}
 .chat-flow .c6-record{padding-top:210px}
-.chat-flow{bottom:calc(812px - 100svh)}
+.chat-flow{bottom:0}
 }
 .chat-flow .chat-wave-bar{display:block;flex:1;height:7px;border-radius:var(--radius-3);background:var(--accent)}
 .chat-flow .chat-cancel-target{position:absolute;left:105.71px;top:513.5px;width:163.58px;height:46.5px;display:grid;place-items:center;border-radius:var(--radius-30);background:var(--chat-cancel-target);color:var(--chat-cancel-label);font:var(--font-body-sm-18)}
@@ -111,3 +111,11 @@
 .chat-details-flow:has(.chat-settings-body--waiting) .chat-follow{top:190.5px}
 .chat-details-flow .chat-follow-note{position:absolute;top:243.5px;left:0;right:0;margin:0;text-align:center;color:var(--text-profile-bio);font:var(--font-caption-21)}
 @media(max-height:740px){.chat-details-flow{bottom:calc(812px - 100svh)}}
+
+/* R11 prototype waveform; preserve the verified resting geometry. */
+.chat-flow .chat-wave-bar{animation:r11-wave .6s ease-in-out infinite alternate}
+.chat-flow .c6-thread{overscroll-behavior:contain}
+@keyframes r11-wave{from{height:7px}to{height:35px}}
+@media(max-height:740px){
+ .chat-flow .chat-cancel-target{top:auto;bottom:147px}
+}

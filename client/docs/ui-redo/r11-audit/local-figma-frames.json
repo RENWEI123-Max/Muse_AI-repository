@@ -1,0 +1,266 @@
+[
+  {
+    "id": "29:8643",
+    "name": "chat-waiting · 对话 / 等待对方回复",
+    "absoluteBoundingBox": {
+      "x": 40.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:8737",
+    "name": "chat-receipt-waiting · 对话 / 回信已到，尚未收取",
+    "absoluteBoundingBox": {
+      "x": 455.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:8830",
+    "name": "chat-open · 对话 / 已回复，可继续交流",
+    "absoluteBoundingBox": {
+      "x": 870.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:8952",
+    "name": "chat-draft · 对话 / 正在编辑",
+    "absoluteBoundingBox": {
+      "x": 1285.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9074",
+    "name": "chat-sent · 对话 / 消息已发送",
+    "absoluteBoundingBox": {
+      "x": 1700.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9202",
+    "name": "chat-photo · 对话 / 图片消息",
+    "absoluteBoundingBox": {
+      "x": 2115.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9333",
+    "name": "chat-attachment · 对话 / 待发送图片",
+    "absoluteBoundingBox": {
+      "x": 2530.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9459",
+    "name": "chat-stickers · 对话 / 表情选择",
+    "absoluteBoundingBox": {
+      "x": 2945.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9689",
+    "name": "chat-sticker-selected · 对话 / 表情待发送",
+    "absoluteBoundingBox": {
+      "x": 3360.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9815",
+    "name": "chat-recording · 对话 / 录音中（演示）",
+    "absoluteBoundingBox": {
+      "x": 3775.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:9971",
+    "name": "chat-record-cancel · 对话 / 上滑取消录音",
+    "absoluteBoundingBox": {
+      "x": 4190.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "29:10127",
+    "name": "chat-mic-denied · 对话 / 麦克风不可用",
+    "absoluteBoundingBox": {
+      "x": 4605.0,
+      "y": 5228.0,
+      "width": 375.0,
+      "height": 812.0
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.05098039284348488,
+          "g": 0.09019608050584793,
+          "b": 0.07450980693101883,
+          "a": 1.0
+        }
+      }
+    ]
+  }
+]

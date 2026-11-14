@@ -1,0 +1,122 @@
+[
+  {
+    "id": "chat-waiting",
+    "title": "对话 / 等待对方回复",
+    "task": "chat",
+    "seed": "waiting-only",
+    "actions": [],
+    "params": {
+      "id": "waiting"
+    }
+  },
+  {
+    "id": "chat-receipt-waiting",
+    "title": "对话 / 回信已到，尚未收取",
+    "task": "chat",
+    "seed": "pending",
+    "actions": [],
+    "params": {
+      "id": "incoming-1"
+    }
+  },
+  {
+    "id": "chat-open",
+    "title": "对话 / 已回复，可继续交流",
+    "task": "chat",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "chat-draft",
+    "title": "对话 / 正在编辑",
+    "task": "chat",
+    "seed": "chat-draft",
+    "actions": []
+  },
+  {
+    "id": "chat-sent",
+    "title": "对话 / 消息已发送",
+    "task": "chat",
+    "seed": "standard",
+    "actions": [
+      [
+        "fill",
+        "#chat-input",
+        "I would love to hear more about that book."
+      ],
+      [
+        "submit",
+        "#chat-form"
+      ]
+    ]
+  },
+  {
+    "id": "chat-photo",
+    "title": "对话 / 图片消息",
+    "task": "chat",
+    "seed": "chat-photo",
+    "actions": []
+  },
+  {
+    "id": "chat-attachment",
+    "title": "对话 / 待发送图片",
+    "task": "chat",
+    "seed": "chat-attachment",
+    "actions": []
+  },
+  {
+    "id": "chat-stickers",
+    "title": "对话 / 表情选择",
+    "task": "chat",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#chat-stickers"
+      ]
+    ]
+  },
+  {
+    "id": "chat-sticker-selected",
+    "title": "对话 / 表情待发送",
+    "task": "chat",
+    "seed": "standard",
+    "actions": [
+      [
+        "click",
+        "#chat-stickers"
+      ],
+      [
+        "click",
+        ".sticker-option:first-child"
+      ]
+    ]
+  },
+  {
+    "id": "chat-recording",
+    "title": "对话 / 录音中（演示）",
+    "task": "recording",
+    "seed": "standard",
+    "actions": [],
+    "note": "展示录音手势状态；不会自动申请麦克风权限。"
+  },
+  {
+    "id": "chat-record-cancel",
+    "title": "对话 / 上滑取消录音",
+    "task": "recording-cancel",
+    "seed": "standard",
+    "actions": []
+  },
+  {
+    "id": "chat-mic-denied",
+    "title": "对话 / 麦克风不可用",
+    "task": "chat",
+    "seed": "standard",
+    "actions": [
+      [
+        "toast",
+        "Microphone access is off. You can still use text."
+      ]
+    ]
+  }
+]
