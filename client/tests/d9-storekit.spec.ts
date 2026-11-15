@@ -24,7 +24,7 @@ async function setup(page:Page,mode?:Mode){
   if(path==='/discovery/filters')return json({cities:[]})
   return json({items:[],responses:[]})
  })
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('a@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('a@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await page.locator('#open-wallet').click()
  return log
 }

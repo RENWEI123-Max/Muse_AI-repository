@@ -41,7 +41,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  }
  const back=()=>root.locator('#page-back').click()
  const enter=async()=>{await page.locator('#open-profile').click();await expect(root.locator('#edit-profile')).toHaveText(profile.displayName)}
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r17-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await enter()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r17-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await enter()
  await snap('profile-empty')
  await root.locator('#edit-profile').click();await snap('profile-edit')
  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')

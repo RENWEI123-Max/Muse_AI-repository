@@ -29,7 +29,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  })
  const steps:any[]=[]
  const shot=async(name:string)=>{await page.waitForTimeout(650);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await expect(page.locator('.home-flow')).toBeVisible()
 
  const panel=page.locator('.letters-panel'),records:any[]=[]
  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){

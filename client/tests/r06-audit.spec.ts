@@ -26,7 +26,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  })
  const steps:any[]=[]
  const shot=async(name:string)=>{await page.waitForTimeout(650);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});steps.push({step:name,time:new Date().toISOString()});console.log(height,lang,name)}
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await expect(page.locator('.home-flow')).toBeVisible()
  await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-response');await shot('01-response')
  await page.locator('.response-strip').hover();await page.mouse.wheel(500,0);await expect.poll(()=>page.locator('.response-strip').evaluate(e=>e.scrollLeft)).toBeGreaterThan(0);await page.locator('.response-capsule').first().click();await expect(page.locator('.letter-content')).toContainText('A little story');await shot('02-letter');await page.locator('.letter-close').click()
  await expect(page.locator('.response-capsule')).toHaveCount(2)

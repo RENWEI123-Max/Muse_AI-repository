@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 async function enter(page:any,request:any,mode='read'){
  const u=await(await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode}})).json()
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
  const c=await(await request.get('http://127.0.0.1:3001/conversations',{headers:{Authorization:`Bearer ${u.token}`}})).json()
  return {...u,peer:c.items[0].peerId}
 }

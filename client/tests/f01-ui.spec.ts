@@ -17,7 +17,7 @@ for(const flow of ['reply','pass'])test(`F01 simulated wallet: ${flow} cancellat
   else if(path==='/filter-pass/purchase'){charges++;diamonds-=100;body={active:true,expiresAt:new Date(Date.now()+7*86400000).toISOString(),remainingDays:7}}
   await route.fulfill({json:body})
  })
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('test@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('test@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
  if(flow==='reply'){await page.locator('#open-inbox').click();await page.locator('#collect-replies').click()}
  else{await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click();await page.locator('.pass-plan').click()}
  const confirm=page.locator(flow==='reply'?'#confirm-reply-payment':'#confirm-pass-payment'),topup=page.locator(flow==='reply'?'#reply-topup':'#pass-topup')

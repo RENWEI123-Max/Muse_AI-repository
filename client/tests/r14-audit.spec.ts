@@ -36,7 +36,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
   records.push({name,...measure});writeFileSync(`${out}/${height}-${lang}-walkthrough.json`,JSON.stringify({fixture:true,calls,records,checks,errors},null,2))
   expect(measure.document.height).toBe(height);expect(measure.document.y).toBe(0);expect(measure.document.width).toBe(375)
  }
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
 
  const backChat=()=>root.getByLabel(t('Back to messages')).click()
  await page.locator('#chat-details').click();await page.locator('#report-person').click();await snap('safety-choice');checks.sheet=await page.locator('.safety-choice-sheet').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await page.locator('.safety-choice-close').click();await expect(page.getByRole('dialog')).toHaveCount(0)

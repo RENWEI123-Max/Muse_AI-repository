@@ -9,9 +9,9 @@ test('recommendations use saved B4 filters and survive logout',async({page,reque
  expect(purchased.ok()).toBeTruthy()
  const login=async()=>{
   await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
-  await page.locator('#auth-form button.primary').click()
   const result=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters')&&r.request().method()==='GET')
-  await page.getByRole('button',{name:'Meet your letters'}).click()
+  await page.locator('#auth-form button.primary').click()
+  await expect(page.locator('.home-flow')).toBeVisible()
   const response=await result;expect(response.ok()).toBeTruthy();return new URL(response.url())
  }
  const settings=async()=>{await page.locator('#open-profile').click();await page.locator('#open-settings').click();await page.locator('#general-settings').click()}

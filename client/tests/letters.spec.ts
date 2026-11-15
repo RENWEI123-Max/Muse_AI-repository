@@ -5,7 +5,7 @@ test('C4 module03: ten states, B3/B4/B7 and safe retries on isolated database',a
  const fixture=await (await request.post('http://127.0.0.1:3001/__c4/seed')).json()
  const {viewer,author,target,letter}=fixture
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(viewer.email);await page.locator('#auth-password').fill(viewer.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(viewer.email);await page.locator('#auth-password').fill(viewer.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await page.locator('.letter-bird').first().click({force:true})
  mkdirSync('docs/ui-redo/r08',{recursive:true})
  const panel=page.locator('.letters-panel');const state=async(s:string)=>{

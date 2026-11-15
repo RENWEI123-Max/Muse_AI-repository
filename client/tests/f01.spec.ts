@@ -6,7 +6,7 @@ test('F01 Pass: shortage, cancellation, automatic return, retry once and renewal
  const balance=async(n:number)=>{expect((await request.post('http://127.0.0.1:3001/__c5/balance',{data:{id:u.id,diamonds:n}})).ok()).toBeTruthy()}
  const wallet=async()=>await(await request.get('http://127.0.0.1:3001/wallet',{headers})).json()
  await balance(0)
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
  await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click()
  const plan=page.locator('.pass-plan').last();const label=await plan.innerText();const cost=Number(label.split('◆')[1].trim());await plan.click()
  await expect(page.locator('#confirm-pass-payment')).toBeDisabled();await page.locator('#pass-topup').click();await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await page.keyboard.press('Escape')

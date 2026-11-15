@@ -7,7 +7,7 @@ test('Korean help and FAQ translate and switch back to English',async({page,requ
  await page.goto('/?auth=consent')
  await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.locator('#auth-form button.primary').click();
  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
  await page.locator('#language-settings').click();await page.locator('[data-language="ko"]').click()
  await page.locator('#settings-back').click();await page.locator('#help-settings').click()

@@ -7,7 +7,7 @@ test('B19 feedback is sent, visible to moderation, and rate limit preserves inpu
  expect((await request.post(root+'/__d6/setup',{data:{id:user.id}})).ok()).toBeTruthy()
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.locator('#auth-form button.primary').click();
  await page.locator('#open-profile').click();await page.locator('#open-settings').click();await page.locator('#feedback-settings').click()
  await expect(page.locator('#save-feedback')).toBeDisabled()
  await page.locator('#feedback-text').fill('D6 round three: real B19 browser submission')

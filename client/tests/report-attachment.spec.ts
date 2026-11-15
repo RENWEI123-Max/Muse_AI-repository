@@ -5,7 +5,7 @@ const png=readFileSync('src/assets/05-avatars/portrait-1.png')
 const photo={name:'proof.png',mimeType:'image/png',buffer:png}
 async function enter(page:any,request:any){
  const u=await(await request.post(base+'/__c5/seed',{data:{mode:'read'}})).json()
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click();await page.locator('#chat-details').click();await page.locator('#report-person').click();await page.locator('#safety-report').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click();await page.locator('#chat-details').click();await page.locator('#report-person').click();await page.locator('#safety-report').click()
  const c=await(await request.get(base+'/conversations',{headers:{Authorization:`Bearer ${u.token}`}})).json()
  return {...u,peer:c.items[0].peerId,headers:{Authorization:`Bearer ${u.token}`}}
 }

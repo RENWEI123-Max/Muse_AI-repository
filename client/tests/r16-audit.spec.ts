@@ -43,7 +43,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
   records.push({name,...measure});writeFileSync(`${out}/${height}-${lang}-walkthrough.json`,JSON.stringify({fixture:true,calls,records,checks,errors},null,2))
   expect(measure.document).toEqual({height,y:0,width:375})
  }
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r16-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r16-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('#open-inbox').click()
  const enter=async(id:string)=>{await page.locator(`[data-chat="${id}"]`).click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(person).toBeVisible();if(!profileFailure)await expect(person.locator('.person-name')).toHaveText('Tea friend')}
  const returnInbox=async()=>{await person.locator('#page-back').click();await page.locator('.c6-chat').getByLabel(t('Back to messages')).click();await page.locator('.c6-chat').getByLabel(t('Back to messages')).click()}
  await enter('open');await expect(person.locator('.person-cards img')).toHaveCount(4);await snap('person-profile')

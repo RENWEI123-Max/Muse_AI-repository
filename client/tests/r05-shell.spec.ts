@@ -5,7 +5,7 @@ test('R05: real home, inbox and profile navigation share geometry and computed s
  expect(response.ok()).toBeTruthy();const user=await response.json()
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
  await page.evaluate(()=>document.fonts.ready)
  await expect(page.locator('.device')).toHaveCSS('width','375px')
  await expect(page.locator('.device')).toHaveCSS('height','812px')

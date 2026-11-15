@@ -2,7 +2,7 @@ import { test, expect, type Page, type APIRequestContext } from '@playwright/tes
 
 async function enter(page:Page,request:APIRequestContext){
  const response=await request.post('http://127.0.0.1:3001/__c3/seed');expect(response.ok()).toBeTruthy();const user=await response.json()
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await expect(page.locator('.letter-bird')).toHaveCount(3)
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.letter-bird')).toHaveCount(3)
  const headers={Authorization:`Bearer ${user.token}`}
  const wallet=async()=>{const r=await request.get('http://127.0.0.1:3001/wallet',{headers});expect(r.ok()).toBeTruthy();return (await r.json()).diamonds as number}
  const status=async()=>{const r=await request.get('http://127.0.0.1:3001/filter-pass',{headers});expect(r.ok()).toBeTruthy();return r.json()}

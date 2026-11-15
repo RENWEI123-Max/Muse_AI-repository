@@ -10,7 +10,7 @@ for(const state of ['filters-free','filters-active','filters-selected','bird-fem
  await page.addInitScript(id=>{localStorage.setItem('maugo-account',id);localStorage.setItem('maugo-bird',JSON.stringify({motion:true,variant:4}));localStorage.removeItem('maugo-discovery-filters')},user.id)
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
 
  if(state.startsWith('filters')){
   if(state!=='filters-free')await page.route('**/api/filter-pass',r=>r.fulfill({json:{active:true,expiresAt:new Date(Date.now()+86400000*7).toISOString(),remainingDays:7,plans:[]}}))

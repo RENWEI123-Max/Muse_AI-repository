@@ -6,7 +6,7 @@ const root=process.env.D6_API_ROOT||'http://127.0.0.1:3001'
 async function signIn(page:Page,user:{email:string;password:string}){
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:/Meet your letters|편지 만나기/}).click()
+ await page.locator('#auth-form button.primary').click();
  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
  await expect(page.locator('.settings-flow')).toBeVisible()
 }

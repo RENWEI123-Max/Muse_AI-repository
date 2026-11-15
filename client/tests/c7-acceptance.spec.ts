@@ -15,7 +15,7 @@ test('C7 offline deliverables open, local images decode',async({page})=>{
 })
 test('C7 chat network failure and upload failure preserve retry intent; empty send disabled',async({page,request})=>{
  const u=await(await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'read'}})).json()
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()
  await expect(page.locator('#chat-send')).toBeDisabled()
  await page.locator('#chat-input').fill('C7 network retry')
  await page.route('**/api/conversations/*/messages',route=>route.abort('internetdisconnected'))

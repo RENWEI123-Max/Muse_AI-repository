@@ -14,7 +14,7 @@ for(const state of ['home-ready','home-empty','home-response'])test(`R06 ${state
  })
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
- await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await expect(page.locator('.home-flow')).toHaveAttribute('data-state',state)
  await page.evaluate(()=>document.fonts.ready)
  await expect(page.locator('.home-flow')).toHaveClass(/motion-off/)

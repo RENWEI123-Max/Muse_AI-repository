@@ -32,7 +32,6 @@ async function enter(page: Page, id: string) {
     await page.locator('#auth-email').fill('reader@example.com')
     await page.locator('#auth-password').fill('SamplePass2026')
     await page.getByRole('button', { name: 'Sign in', exact: true }).click()
-    await page.getByRole('button', { name: 'Meet your letters' }).click()
     await expect(page.locator('.letter-bird')).toHaveCount(3)
   } else await expect(page.locator(id === 'terms-unchecked' ? '#accept-terms' : '#auth-email')).toBeVisible()
   await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(img => img.decode().catch(() => {}))) })

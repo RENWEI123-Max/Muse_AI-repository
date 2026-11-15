@@ -56,8 +56,7 @@ test('R15 seed demo login keeps existing navigation',async({page})=>{
  await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
  await page.locator('#auth-email').fill('mina@maugo.demo');await page.locator('#auth-password').fill('Test2026!')
  await page.getByRole('button',{name:'Sign in',exact:true}).click()
- await expect(page.getByText('You are signed in.',{exact:true})).toBeVisible()
- await page.getByRole('button',{name:'Meet your letters',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
+ await expect(page.locator('.home-flow')).toBeVisible()
 })
 
 test('R15 verification and recovery cancel paths stay local',async({page})=>{

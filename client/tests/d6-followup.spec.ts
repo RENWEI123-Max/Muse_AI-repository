@@ -16,7 +16,7 @@ test('real global visibility and account logout',async({page,request})=>{
  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')
  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()
- await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
+ await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')
  await page.screenshot({path:'docs/d6-round3/profile-visibility.png'})
  expect((await other()).status()).toBe(200)

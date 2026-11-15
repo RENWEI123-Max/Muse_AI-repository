@@ -3,7 +3,7 @@ test('C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL
  test.setTimeout(60000);page.setDefaultTimeout(10000)
  const seeded=await request.post('http://127.0.0.1:3001/__c3/seed');expect(seeded.ok(),await seeded.text()).toBeTruthy();const user=await seeded.json()
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();
  await expect(page.locator('.letter-bird')).toHaveCount(3)
  await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-response')
  await page.locator('.response-strip button').click();await expect(page.locator('.letter-content')).toContainText('A little story');await page.getByRole('button',{name:'Close',exact:true}).click();await expect(page.locator('.response-strip')).toHaveCount(0)
