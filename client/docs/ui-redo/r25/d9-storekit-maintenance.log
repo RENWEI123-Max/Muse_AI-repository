@@ -1,0 +1,15 @@
+[WebServer] (node:81805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:81807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD (600ms)
+  ✓  2 tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back (1.4s)
+  ✓  3 tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change (2.2s)
+  ✓  4 tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown (1.3s)
+  ✓  5 tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open (554ms)
+  ✓  6 tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge (1.3s)
+
+  6 passed (8.0s)

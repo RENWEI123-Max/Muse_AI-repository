@@ -1,0 +1,276 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r12-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r12-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r12-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r12-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r12-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r12-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r12-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5322",
+          "trace": "on"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5322 --strictPort",
+      "url": "http://127.0.0.1:5322",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r12-audit.spec.ts",
+      "file": "r12-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R12 safe UI walkthrough with API fixtures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11090,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:59:11.331Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r12-audit.config.ts/r12-audit-667-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "148f291cea8e8e03fe57-03770946ec9c5eada5dc",
+          "file": "r12-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko R12 safe UI walkthrough with API fixtures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:59:22.610Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r12-audit.config.ts/r12-audit-667-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "148f291cea8e8e03fe57-93fc28f9b85ef8009f72",
+          "file": "r12-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en R12 safe UI walkthrough with API fixtures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11045,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:59:34.000Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r12-audit.config.ts/r12-audit-812-en-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "148f291cea8e8e03fe57-3f5e7c2699ad0c6298a0",
+          "file": "r12-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko R12 safe UI walkthrough with API fixtures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11181,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:59:45.162Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r12-audit.config.ts/r12-audit-812-ko-R12-safe-UI-walkthrough-with-API-fixtures/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "148f291cea8e8e03fe57-08bdbd5a602f4af544f6",
+          "file": "r12-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:59:10.751Z",
+    "duration": 45841.61,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

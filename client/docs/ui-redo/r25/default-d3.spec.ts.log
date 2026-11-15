@@ -1,0 +1,43 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send (6.6s)
+  ✘  2 tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable (1.0m)
+
+
+  1) tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send ──────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('.d3-report')
+    Expected pattern: /^d3-in/
+    Received string:  "none"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('.d3-report') with timeout 5000ms
+      - waiting for locator('.d3-report')
+        14 × locator resolved to <form class="d3-report">…</form>
+           - unexpected value "none"
+
+
+       9 | test('D3 nine states: real report → block → list → unblock and send',async({page,request})=>{
+      10 |  test.setTimeout(90000);const u=await enter(page,request);const headers={Authorization:`Bearer ${u.token}`}
+    > 11 |  await expect(page.locator('#chat-form')).toBeVisible();await page.locator('#chat-details').click();await page.locator('#report-person').click();await capture(page,'safety-choice');await page.locator('#safety-report').click();await capture(page,'report-empty');await expect(page.locator('.d3-report')).toHaveCSS('animation-name',/^d3-in/);await expect(page.locator('#save-report')).toHaveCSS('background-color','rgb(181, 250, 112)');await page.locator('#report-details').fill('Repeated unwanted messages after I asked to stop.');await capture(page,'report-filled')
+         |                                                                                                                                                                                                                                                                                                               ^
+      12 |  const report=page.waitForResponse(r=>r.url().endsWith('/reports')&&r.request().method()==='POST');await page.locator('#save-report').click();const saved=await(await report).json();expect(saved.status).toBe('pending');expect(saved.reportedUserId).toBe(u.peer);expect((await(await request.get(`http://127.0.0.1:3001/reports/${saved.id}`,{headers})).json()).reason).toContain('Repeated unwanted');await capture(page,'report-saved')
+      13 |  await page.locator('#block-chat').click();await capture(page,'block-confirm');await page.getByRole('button',{name:'Cancel',exact:true}).click();expect((await(await request.get('http://127.0.0.1:3001/blocks',{headers})).json()).items).toHaveLength(0)
+      14 |  await page.locator('#block-chat').click();await page.locator('#confirm-block').click();await capture(page,'chat-blocked');await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('#chat-hold')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/d3.spec.ts:11:303
+
+    Error Context: ../../../../tmp/maugo-r25-default-d3.spec.ts/d3-D3-nine-states-real-rep-8f0bc-k-→-list-→-unblock-and-send/error-context.md
+
+  2) tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable
+
+    Test timeout of 60000ms exceeded.
+
+    Error Context: ../../../../tmp/maugo-r25-default-d3.spec.ts/d3-D3-unblocking-waiting-c-7bdee-led-report-remains-editable/error-context.md
+
+  2 failed
+    tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send ───────────
+    tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable

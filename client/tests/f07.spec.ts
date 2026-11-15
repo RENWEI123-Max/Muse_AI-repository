@@ -1,6 +1,6 @@
 import {test,expect,type Page} from '@playwright/test'
 // F07: account switch must not expose the previous account's drafts/preferences/messages; signed-out tokens are rejected.
-const api='http://127.0.0.1:3172'
+const api='http://127.0.0.1:3001'
 async function login(page:Page,u:{email:string;password:string}){
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST');await page.getByRole('button',{name:'Sign in',exact:true}).click();const session=await (await signed).json();await page.getByRole('button',{name:'Meet your letters'}).click();return session.token as string
 }

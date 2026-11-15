@@ -1,0 +1,179 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-followup.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-followup.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/d6-followup.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_d6-followup.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d6-followup.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_d6-followup.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d6-followup.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5279",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d6-followup.spec.ts",
+      "file": "d6-followup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real global visibility and account logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 120021,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts",
+                        "column": 20,
+                        "line": 17
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 120000ms exceeded.\n\n  15 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()\n  16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)\n> 17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')\n     |                    ^\n  18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()\n  19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()\n  20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')\n    at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:17:20"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts",
+                        "column": 50,
+                        "line": 18
+                      },
+                      "message": "Error: locator.click: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#auth-form button.primary')\u001b[22m\n\n\n  16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)\n  17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')\n> 18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()\n     |                                                  ^\n  19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()\n  20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')\n  21 |  await page.screenshot({path:'docs/d6-round3/profile-visibility.png'})\n    at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:18:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:43:23.093Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d6-followup.config.ts/d6-followup-real-global-visibility-and-account-logout/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "899fa128d10ca4413a07-4100737be3d3e5dc57f2",
+          "file": "d6-followup.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:43:22.155Z",
+    "duration": 121056.252,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

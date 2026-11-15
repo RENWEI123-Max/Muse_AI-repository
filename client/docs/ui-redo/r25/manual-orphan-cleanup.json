@@ -1,0 +1,10 @@
+{
+  "cause": "Initial d6-round3 orchestration timeout left detached Playwright web servers",
+  "observedOwnedProcesses": [
+    {"pid": 85440, "ppid": 1, "port": 3001, "command": "node --import ../maugo/node_modules/tsx/dist/loader.mjs tests/d6-followup-server.mjs"},
+    {"pid": 85457, "ppid": 85443, "port": 5279, "command": "node /Users/anna/Muse_AI-repository/client/node_modules/.bin/vite --host 127.0.0.1 --port 5279 --strictPort"}
+  ],
+  "action": "SIGTERM both verified owned PIDs; subsequent lsof found neither listener",
+  "affectedStartupAttempts": ["tests/d7.config.ts", "tests/d8.config.ts", "tests/f06.config.ts", "tests/f07.config.ts"],
+  "resolution": "Retain initial logs and queue completion attempts after initial suite sweep; no reuseExistingServer workaround"
+}

@@ -1,0 +1,384 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d11.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d11.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/d11.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_d11.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d11.spec.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_d11.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d11.spec.ts",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5280",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "video": "on"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d11.spec.ts",
+      "file": "d11.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "opening-reply: envelope, close, write, delayed send and saved draft",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5623,
+                  "error": {
+                    "message": "Error: Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: Timeout 5000ms exceeded while waiting on the predicate\n    at motion (/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:7:88)\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:18:84",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                      "column": 88,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m shot(page\u001b[33m:\u001b[39m\u001b[33mPage\u001b[39m\u001b[33m,\u001b[39mname\u001b[33m:\u001b[39mstring){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m`docs/d11/${name}.png`\u001b[39m})}\n \u001b[90m  6 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m motion(page\u001b[33m:\u001b[39m\u001b[33mPage\u001b[39m\u001b[33m,\u001b[39mselector\u001b[33m:\u001b[39mstring\u001b[33m,\u001b[39mname\u001b[33m:\u001b[39mstring){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m  \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(()\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mlocator(selector)\u001b[33m.\u001b[39mevaluate(el\u001b[33m=>\u001b[39mel\u001b[33m.\u001b[39mgetAnimations()\u001b[33m.\u001b[39mlength))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m  \u001b[36mconst\u001b[39m data\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(selector)\u001b[33m.\u001b[39mevaluate(el\u001b[33m=>\u001b[39mel\u001b[33m.\u001b[39mgetAnimations()\u001b[33m.\u001b[39mmap(a\u001b[33m=>\u001b[39m({timing\u001b[33m:\u001b[39ma\u001b[33m.\u001b[39meffect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mgetTiming()\u001b[33m,\u001b[39mframes\u001b[33m:\u001b[39m(a\u001b[33m.\u001b[39meffect \u001b[36mas\u001b[39m \u001b[33mKeyframeEffect\u001b[39m)\u001b[33m.\u001b[39mgetKeyframes()})))\n \u001b[90m  9 |\u001b[39m  \u001b[36mawait\u001b[39m writeFile(\u001b[32m`docs/d11/${name}-motion.json`\u001b[39m\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(data\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m data\n \u001b[90m 10 |\u001b[39m }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                        "column": 88,
+                        "line": 7
+                      },
+                      "message": "Error: Timeout 5000ms exceeded while waiting on the predicate\n\n   5 | async function shot(page:Page,name:string){await page.screenshot({path:`docs/d11/${name}.png`})}\n   6 | async function motion(page:Page,selector:string,name:string){\n>  7 |  await expect.poll(()=>page.locator(selector).evaluate(el=>el.getAnimations().length)).toBeGreaterThan(0)\n     |                                                                                        ^\n   8 |  const data=await page.locator(selector).evaluate(el=>el.getAnimations().map(a=>({timing:a.effect!.getTiming(),frames:(a.effect as KeyframeEffect).getKeyframes()})))\n   9 |  await writeFile(`docs/d11/${name}-motion.json`,JSON.stringify(data,null,2));return data\n  10 | }\n    at motion (/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:7:88)\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:18:84"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:37:09.003Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-opening-reply-envelope-0511d-elayed-send-and-saved-draft/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-opening-reply-envelope-0511d-elayed-send-and-saved-draft/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                    "column": 88,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b18515a0b8a10b0f46b-593f82af80bdec0bf0bb",
+          "file": "d11.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 124009,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                        "column": 80,
+                        "line": 11
+                      },
+                      "message": "Error: locator.evaluate: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('.inbox-veil')\u001b[22m\n\n\n   9 |  await writeFile(`docs/d11/${name}-motion.json`,JSON.stringify(data,null,2));return data\n  10 | }\n> 11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}\n     |                                                                                ^\n  12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})\n  13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})\n  14 |\n    at settled (/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:11:80)\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:35:153"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:37:14.872Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b18515a0b8a10b0f46b-eb50af7d15f046920844",
+          "file": "d11.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "reduced-motion: open, send, free collection and unlock without animation waits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6584,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:52:411",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                      "column": 411,
+                      "line": 52
+                    },
+                    "snippet": " \u001b[90m 50 |\u001b[39m test(\u001b[32m'reduced-motion: open, send, free collection and unlock without animation waits'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n \u001b[90m 51 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39memulateMedia({reducedMotion\u001b[33m:\u001b[39m\u001b[32m'reduce'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m f\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(backend\u001b[33m+\u001b[39m\u001b[32m'/__d11/letter'\u001b[39m))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m login(page\u001b[33m,\u001b[39mf\u001b[33m.\u001b[39mviewer)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-bird'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick({force\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d11-flying-letter'\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'A quiet hello.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-send'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#continue-chat'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(page\u001b[33m,\u001b[39m\u001b[32m'reduced-reply'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m  \u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(backend\u001b[33m+\u001b[39m\u001b[32m'/__c5/seed'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{mode\u001b[33m:\u001b[39m\u001b[32m'pending'\u001b[39m}}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m login(page\u001b[33m,\u001b[39mu)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.inbox-flow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-busy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'false'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Collect your reply'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'0 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-input'\u001b[39m))\u001b[33m.\u001b[39mtoBeEditable()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m r\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(backend\u001b[33m+\u001b[39m\u001b[32m'/__d11/evidence/'\u001b[39m\u001b[33m+\u001b[39mu\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39mexpect(r\u001b[33m.\u001b[39mok()\u001b[33m,\u001b[39m\u001b[36mawait\u001b[39m r\u001b[33m.\u001b[39mtext())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m r\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39muser\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m100\u001b[39m)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mledger)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(page\u001b[33m,\u001b[39m\u001b[32m'reduced-unlock'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m writeFile(\u001b[32m'docs/d11/free-evidence.json'\u001b[39m\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(result\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m })\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m test(\u001b[32m'arrival-unlock: reply arriving after entering chat refreshes the collection queue'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                        "column": 411,
+                        "line": 52
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n\n\n  50 | test('reduced-motion: open, send, free collection and unlock without animation waits',async({page,request})=>{\n  51 |  await page.emulateMedia({reducedMotion:'reduce'});const f=await(await request.post(backend+'/__d11/letter')).json();await login(page,f.viewer);await page.locator('.letter-bird').first().click({force:true});await expect(page.locator('#reply')).toBeVisible();await expect(page.locator('.d11-flying-letter')).toBeHidden();await page.locator('#reply').fill('A quiet hello.');await page.locator('#reply-send').click();await expect(page.locator('#continue-chat')).toBeVisible();await shot(page,'reduced-reply');await page.getByRole('button',{name:'Close',exact:true}).click()\n> 52 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'pending'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').first().click();await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();const r=await request.get(backend+'/__d11/evidence/'+u.id);expect(r.ok(),await r.text()).toBeTruthy();const result=await r.json();expect(result.user.diamonds).toBe(100);expect(result.ledger).toHaveLength(0);await shot(page,'reduced-unlock');await writeFile('docs/d11/free-evidence.json',JSON.stringify(result,null,2))\n     |                                                                                                                                                                                                                                                                                                                                                                                                                           ^\n  53 | })\n  54 |\n  55 | test('arrival-unlock: reply arriving after entering chat refreshes the collection queue',async({page,request})=>{\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:52:411"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:39:19.124Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-reduced-motion-open-se-b9b26-ock-without-animation-waits/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-reduced-motion-open-se-b9b26-ock-without-animation-waits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                    "column": 411,
+                    "line": 52
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b18515a0b8a10b0f46b-4a1e2881bc848a8e8918",
+          "file": "d11.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "arrival-unlock: reply arriving after entering chat refreshes the collection queue",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10078,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected: enabled\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected: enabled\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:56:696",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                      "column": 696,
+                      "line": 56
+                    },
+                    "snippet": " \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m test(\u001b[32m'arrival-unlock: reply arriving after entering chat refreshes the collection queue'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m  \u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(backend\u001b[33m+\u001b[39m\u001b[32m'/__c5/seed'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{mode\u001b[33m:\u001b[39m\u001b[32m'waiting'\u001b[39m}}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m login(page\u001b[33m,\u001b[39mu)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.inbox-flow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-busy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'false'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Waiting for their reply'\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(backend\u001b[33m+\u001b[39m\u001b[32m'/__c6/reply'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{id\u001b[33m:\u001b[39mu\u001b[33m.\u001b[39mconversations[\u001b[35m0\u001b[39m]}}))\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Collect your reply'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeVisible({timeout\u001b[33m:\u001b[39m\u001b[35m10000\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Collect your reply'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-input'\u001b[39m))\u001b[33m.\u001b[39mtoBeEditable()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m settled(page\u001b[33m,\u001b[39m\u001b[32m'.d11-chat-gate'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(page\u001b[33m,\u001b[39m\u001b[32m'arrival-unlocked'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m })\n \u001b[90m 58 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                        "column": 696,
+                        "line": 56
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#confirm-reply-payment')\nExpected: enabled\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" locator('#confirm-reply-payment') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#confirm-reply-payment')\u001b[22m\n\n\n  54 |\n  55 | test('arrival-unlock: reply arriving after entering chat refreshes the collection queue',async({page,request})=>{\n> 56 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'waiting'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').click();await expect(page.locator('.waiting-card')).toContainText('Waiting for their reply');expect((await request.post(backend+'/__c6/reply',{data:{id:u.conversations[0]}})).ok()).toBeTruthy();await expect(page.getByRole('button',{name:'Collect your reply',exact:true})).toBeVisible({timeout:10000});await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();await settled(page,'.d11-chat-gate');await shot(page,'arrival-unlocked')\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^\n  57 | })\n  58 |\n    at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:56:696"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:39:25.945Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-arrival-unlock-reply-a-dc660-reshes-the-collection-queue/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d11.config.ts/d11-arrival-unlock-reply-a-dc660-reshes-the-collection-queue/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts",
+                    "column": 696,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b18515a0b8a10b0f46b-339e0e302ad54a4e3dea",
+          "file": "d11.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:37:08.049Z",
+    "duration": 148052.215,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

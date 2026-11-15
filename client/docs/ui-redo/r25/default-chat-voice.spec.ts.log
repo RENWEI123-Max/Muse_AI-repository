@@ -1,0 +1,8 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 tests/chat-voice.spec.ts:5:1 › F03 permission, empty, cancel, offline retry, real B8 audio playback and history (4.9s)
+  ✓  2 tests/chat-voice.spec.ts:25:1 › F03 silent microphone is rejected without upload (2.0s)
+  ✓  3 tests/chat-voice.spec.ts:31:1 › F03 real 60 second limit stops capture and permits discard (1.0m)
+
+  3 passed (1.2m)

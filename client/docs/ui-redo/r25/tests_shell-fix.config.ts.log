@@ -1,0 +1,13 @@
+
+Running 8 tests using 1 worker
+
+  ✓  1 tests/shell-fix.spec.ts:2:35 › viewport 667 (154ms)
+  ✓  2 tests/shell-fix.spec.ts:2:35 › viewport 760 (140ms)
+  ✓  3 tests/shell-fix.spec.ts:2:35 › viewport 812 (124ms)
+  ✓  4 tests/shell-fix.spec.ts:12:1 › shared sheet, switch and press use prototype timing (639ms)
+  ✓  5 tests/shell-fix.spec.ts:23:61 › capture and scroll 667 en (424ms)
+  ✓  6 tests/shell-fix.spec.ts:23:61 › capture and scroll 667 ko (404ms)
+  ✓  7 tests/shell-fix.spec.ts:23:61 › capture and scroll 812 en (410ms)
+  ✓  8 tests/shell-fix.spec.ts:23:61 › capture and scroll 812 ko (427ms)
+
+  8 passed (3.4s)

@@ -1,0 +1,26 @@
+[
+  {
+    "port": 3001,
+    "pid": 89413,
+    "command": "node --import ../maugo/node_modules/tsx/dist/loader.mjs tests/auth-server.mjs",
+    "reason": "owned R25 timed-out suite residual listener"
+  },
+  {
+    "port": 5174,
+    "pid": 89430,
+    "command": "node /Users/anna/Muse_AI-repository/client/node_modules/.bin/vite --host 127.0.0.1 --port 5174 --strictPort",
+    "reason": "owned R25 timed-out suite residual listener"
+  },
+  {
+    "port": 5176,
+    "pid": 89926,
+    "command": "node /Users/anna/Muse_AI-repository/client/node_modules/.bin/vite preview --host 127.0.0.1 --port 5176 --strictPort",
+    "reason": "owned R25 timed-out suite residual listener"
+  },
+  {
+    "port": 5295,
+    "pid": 87157,
+    "command": "node /Users/anna/Muse_AI-repository/client/node_modules/.bin/vite preview --host 127.0.0.1 --port 5295 --strictPort",
+    "reason": "owned R25 timed-out suite residual listener"
+  }
+]

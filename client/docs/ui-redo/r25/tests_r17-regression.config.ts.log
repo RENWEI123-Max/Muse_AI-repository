@@ -1,0 +1,132 @@
+
+Running 6 tests using 1 worker
+
+  ✘  1 tests/d4.spec.ts:9:1 › D4 editing, avatar gallery, remove, restore, crop, persistence and full slots (1.1s)
+  ✘  2 tests/d4.spec.ts:15:40 › D4 public profile and chat gate open (1.1s)
+  ✘  3 tests/d4.spec.ts:15:40 › D4 public profile and chat gate waiting (1.1s)
+  ✘  4 tests/d4.spec.ts:18:1 › D4 profile cannot bypass block (1.1s)
+  ✘  5 tests/d4.spec.ts:19:1 › D4 public full content, photo previews, own image cards and outgoing visits (1.1s)
+  ✘  6 tests/d4.spec.ts:22:1 › D4 following empty, my letters empty and no public moments (1.1s)
+
+
+  1) tests/d4.spec.ts:9:1 › D4 editing, avatar gallery, remove, restore, crop, persistence and full slots
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:10:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-editing-avatar-galle-12552--persistence-and-full-slots/error-context.md
+
+  2) tests/d4.spec.ts:15:40 › D4 public profile and chat gate open ─────────────────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-public-profile-and-chat-gate-open/error-context.md
+
+  3) tests/d4.spec.ts:15:40 › D4 public profile and chat gate waiting ──────────────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-public-profile-and-chat-gate-waiting/error-context.md
+
+  4) tests/d4.spec.ts:18:1 › D4 profile cannot bypass block ────────────────────────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:18:55
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-profile-cannot-bypass-block/error-context.md
+
+  5) tests/d4.spec.ts:19:1 › D4 public full content, photo previews, own image cards and outgoing visits
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:20:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-public-full-content--269e4-e-cards-and-outgoing-visits/error-context.md
+
+  6) tests/d4.spec.ts:22:1 › D4 following empty, my letters empty and no public moments ────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent
+    Call log:
+      - navigating to "http://127.0.0.1:5173/?auth=consent", waiting until "load"
+
+
+      3 | async function enter(page:any,status='open',blocked=false){
+      4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})
+    > 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+        |             ^
+      6 | }
+      7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}
+      8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat="tea"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}
+        at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)
+        at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:23:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-regression.config.ts/d4-D4-following-empty-my-letters-empty-and-no-public-moments/error-context.md
+
+  6 failed
+    tests/d4.spec.ts:9:1 › D4 editing, avatar gallery, remove, restore, crop, persistence and full slots
+    tests/d4.spec.ts:15:40 › D4 public profile and chat gate open ──────────────────────────────────
+    tests/d4.spec.ts:15:40 › D4 public profile and chat gate waiting ───────────────────────────────
+    tests/d4.spec.ts:18:1 › D4 profile cannot bypass block ─────────────────────────────────────────
+    tests/d4.spec.ts:19:1 › D4 public full content, photo previews, own image cards and outgoing visits
+    tests/d4.spec.ts:22:1 › D4 following empty, my letters empty and no public moments ─────────────

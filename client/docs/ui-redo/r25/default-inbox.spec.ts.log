@@ -1,0 +1,116 @@
+
+Running 10 tests using 1 worker
+
+  ✘   1 tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore (6.1s)
+  ✓   2 tests/inbox.spec.ts:20:39 › C5: empty and notification reminder (1.4s)
+  ✓   3 tests/inbox.spec.ts:20:39 › C5: waiting and notification reminder (1.4s)
+  ✘   4 tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge (5.7s)
+  ✓   5 tests/inbox.spec.ts:27:1 › C5: pagination and API failure are recoverable (1.8s)
+  ✓   6 tests/inbox.spec.ts:29:1 › C5: insufficient balance and modal keyboard focus (1.0s)
+  ✘   7 tests/r09-inbox.spec.ts:33:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore (6.1s)
+  ✓   8 tests/r09-inbox.spec.ts:49:39 › R09: empty and notification reminder (1.6s)
+  ✓   9 tests/r09-inbox.spec.ts:49:39 › R09: waiting and notification reminder (1.5s)
+  ✘  10 tests/r09-inbox.spec.ts:51:1 › R09 Korean labels and short viewport keep artwork size (30.0s)
+
+
+  1) tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog')
+    Expected substring: "0 diamonds"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('dialog') with timeout 5000ms
+      - waiting for getByRole('dialog')
+
+
+      4 | test('C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore',async({page,request})=>{
+      5 |  test.setTimeout(90000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));const u=await enter(page,request,'pending');await state(page,'inbox-pending');
+    > 6 |  for(let n=3;n>0;n--){await expect(page.locator('#collect-replies>b')).toHaveText(String(n));await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');if(n===3)await state(page,'inbox-collected-one')}
+        |                                                                                                                                                                                    ^
+      7 |  await state(page,'inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect(page.getByLabel('Unread',{exact:true})).toHaveCount(3);
+      8 |  // Re-enter resets transient collection state, preserving server unread counts.
+      9 |  await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-unread');
+        at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:6:180
+
+    Error Context: ../../../../tmp/maugo-r25-default-inbox.spec.ts/inbox-C5-pending-3-→-2-→-0-463f1-ons-search-hide-and-restore/error-context.md
+
+  2) tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog')
+    Expected substring: "0 diamonds"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('dialog') with timeout 5000ms
+      - waiting for getByRole('dialog')
+
+
+      20 | for(const mode of ['empty','waiting'])test(`C5: ${mode} and notification reminder`,async({page,request})=>{await enter(page,request,mode);await state(page,`inbox-${mode}`);await page.evaluate(()=>sessionStorage.removeItem('maugo-inbox-prompt'));await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-notifications-off');await expect(page.locator('.inbox-notification-prompt')).toBeVisible()})
+      21 | test('C5: paid cancellation, server fee race, retry idempotency, atomic charge',async({page,request})=>{
+    > 22 |  test.setTimeout(90000);const u=await enter(page,request,'pending');await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await request.post('http://127.0.0.1:3001/__c5/exhaust',{data:u});await page.locator('#confirm-reply-payment').click();await expect(page.locator('#confirm-reply-payment')).toContainText('10 diamonds');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('3');
+         |                                                                                                                                                           ^
+      23 |  const wallet=async()=>await(await request.get('http://127.0.0.1:3001/wallet',{headers:{Authorization:`Bearer ${u.token}`}})).json();expect((await wallet()).diamonds).toBe(100);
+      24 |  let keys:string[]=[],calls=0;await page.route('**/replies/*/collect',async route=>{keys.push(route.request().headers()['idempotency-key']!);calls++;if(calls===1){await route.fetch();await route.abort()}else await route.continue()});
+      25 |  await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('10 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(keys.length).toBe(2);expect(keys[0]).toBe(keys[1]);expect((await wallet()).diamonds).toBe(90);const ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers:{Authorization:`Bearer ${u.token}`}})).json();expect(ledger.items).toHaveLength(1);expect(ledger.items[0].amount).toBe(-10);await expect(page.locator('#collect-replies>b')).toHaveText('2')
+        at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:22:155
+
+    Error Context: ../../../../tmp/maugo-r25-default-inbox.spec.ts/inbox-C5-paid-cancellation-80dde-y-idempotency-atomic-charge/error-context.md
+
+  3) tests/r09-inbox.spec.ts:33:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog')
+    Expected substring: "0 diamonds"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('dialog') with timeout 5000ms
+      - waiting for getByRole('dialog')
+
+
+      33 | test('R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore',async({page,request})=>{
+      34 |  test.setTimeout(90000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));const u=await enter(page,request,'pending');await state(page,'inbox-pending');
+    > 35 |  for(let n=3;n>0;n--){await expect(page.locator('#collect-replies>b')).toHaveText(String(n));await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');if(n===3)await state(page,'inbox-collected-one')}
+         |                                                                                                                                                                                    ^
+      36 |  await state(page,'inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect(page.getByLabel('Unread',{exact:true})).toHaveCount(3);
+      37 |  // Re-enter resets transient collection state, preserving server unread counts.
+      38 |  await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-unread');
+        at /Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts:35:180
+
+    Error Context: ../../../../tmp/maugo-r25-default-inbox.spec.ts/r09-inbox-R09-pending-3-→--35b09-ons-search-hide-and-restore/error-context.md
+
+  4) tests/r09-inbox.spec.ts:51:1 › R09 Korean labels and short viewport keep artwork size ─────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .primary')
+
+
+      54 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+      55 |  await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password)
+    > 56 |  await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .primary').click();await page.locator('#open-inbox').click()
+         |                                                                                                     ^
+      57 |  await expect(page.locator('.inbox-empty-image')).toBeVisible();await page.evaluate(()=>document.fonts.ready)
+      58 |  for(const selector of ['.inbox-tab','.inbox-empty-title','.inbox-empty-description','.inbox-notice-copy'])for(const el of await page.locator(selector).all()){
+      59 |   await expect(el).toHaveCSS('font-family',/GowunDodum/)
+        at /Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts:56:101
+
+    Error Context: ../../../../tmp/maugo-r25-default-inbox.spec.ts/r09-inbox-R09-Korean-label-047d1--viewport-keep-artwork-size/error-context.md
+
+  4 failed
+    tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+    tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge
+    tests/r09-inbox.spec.ts:33:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore
+    tests/r09-inbox.spec.ts:51:1 › R09 Korean labels and short viewport keep artwork size ──────────
+  6 passed (58.7s)

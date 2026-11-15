@@ -3,7 +3,7 @@ import {readFile,writeFile} from 'node:fs/promises'
 test('six card states use one real registered session',async({page,request})=>{
  test.setTimeout(120000)
  const fixture=JSON.parse(await readFile('/tmp/r19-account.json','utf8')),a=fixture.author
- expect((await request.get('http://127.0.0.1:3069/profiles/me',{headers:{Authorization:`Bearer ${a.token}`}})).ok()).toBeTruthy()
+ expect((await request.get('http://127.0.0.1:3001/profiles/me',{headers:{Authorization:`Bearer ${a.token}`}})).ok()).toBeTruthy()
  await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token)
  await page.goto('/');await page.locator('#open-profile').click();await expect(page.locator('#upload-image-card')).toBeEnabled()
  const metrics:any[]=[]

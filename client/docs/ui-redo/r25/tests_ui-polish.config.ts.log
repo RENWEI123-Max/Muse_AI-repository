@@ -1,0 +1,8 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 tests/ui-polish.spec.ts:44:1 › main-flow screenshots (13.2s)
+  ✓  2 tests/ui-polish.spec.ts:76:1 › profile and settings screenshots (2.5s)
+  ✓  3 tests/ui-polish.spec.ts:89:1 › tab, sheet, push and list motion recording (10.7s)
+
+  3 passed (27.1s)

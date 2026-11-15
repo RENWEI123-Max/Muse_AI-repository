@@ -915,3 +915,43 @@
 --wallet-font-eyebrow:400 10px/12px Fredoka;
 }
 :root{--wallet-transparent:transparent;--wallet-button-ink:#0a1406;--wallet-button-shadow:0 6px 24px rgb(7 14 10 / .5);}
+
+/* R25: exact legacy CSS color values, centralized without visual changes. */
+:root {
+  --legacy-color-0008: #0008;
+  --legacy-color-0009: #0009;
+  --legacy-color-060909: #060909;
+  --legacy-color-070e0a80: #070e0a80;
+  --legacy-color-080e0e: #080e0e;
+  --legacy-color-090e0e: #090e0e;
+  --legacy-color-0a1406: #0a1406;
+  --legacy-color-0c1612eb: #0c1612eb;
+  --legacy-color-101a15: #101a15;
+  --legacy-color-18211e: #18211e;
+  --legacy-color-1b2b21: #1b2b21;
+  --legacy-color-223326: #223326;
+  --legacy-color-252e29: #252e29;
+  --legacy-color-777c81: #777c81;
+  --legacy-color-849288: #849288;
+  --legacy-color-8ba781: #8ba781;
+  --legacy-color-8fa580: #8fa580;
+  --legacy-color-8fae85: #8fae85;
+  --legacy-color-91a580: #91a580;
+  --legacy-color-93a58a: #93a58a;
+  --legacy-color-9bb88d: #9bb88d;
+  --legacy-color-b0fb61: #b0fb61;
+  --legacy-color-b5fa70: #b5fa70;
+  --legacy-color-b5fa7012: #b5fa7012;
+  --legacy-color-b5fa7015: #b5fa7015;
+  --legacy-color-b5fa701b: #b5fa701b;
+  --legacy-color-bdff81: #bdff81;
+  --legacy-color-c1e0a7: #c1e0a7;
+  --legacy-color-c2d1b9: #c2d1b9;
+  --legacy-color-cbfca5: #cbfca5;
+  --legacy-color-cde3be: #cde3be;
+  --legacy-color-edb39f: #edb39f;
+  --legacy-color-f3f4f4: #f3f4f4;
+  --legacy-color-ffffff08: #ffffff08;
+  --legacy-color-ffffff0b: #ffffff0b;
+  --legacy-color-ffffff29: #ffffff29;
+}

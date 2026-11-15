@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough (6.5s)
+  ✘  2 tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough (6.6s)
+  ✘  3 tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough (6.5s)
+  ✘  4 tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough (6.7s)
+
+
+  1) tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "Enter a name and an age between 18 and 100."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      46 |  await root.locator('#edit-profile').click();await snap('profile-edit')
+      47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)
+         |                                                                                                                                                                           ^
+      49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false
+      50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')
+      51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "이름과 18~100세의 나이를 입력하세요."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      46 |  await root.locator('#edit-profile').click();await snap('profile-edit')
+      47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)
+         |                                                                                                                                                                           ^
+      49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false
+      50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')
+      51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "Enter a name and an age between 18 and 100."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      46 |  await root.locator('#edit-profile').click();await snap('profile-edit')
+      47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)
+         |                                                                                                                                                                           ^
+      49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false
+      50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')
+      51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-en-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "이름과 18~100세의 나이를 입력하세요."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      46 |  await root.locator('#edit-profile').click();await snap('profile-edit')
+      47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')
+    > 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)
+         |                                                                                                                                                                           ^
+      49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false
+      50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')
+      51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-ko-R17-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r17-audit.spec.ts:6:61 › 667 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 667 ko R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 en R17 API fixture walkthrough ──────────────────────────────
+    tests/r17-audit.spec.ts:6:61 › 812 ko R17 API fixture walkthrough ──────────────────────────────

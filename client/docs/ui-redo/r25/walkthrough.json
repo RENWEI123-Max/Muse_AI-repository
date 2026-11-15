@@ -1,0 +1,4542 @@
+[
+  {
+    "module": "entry",
+    "state": "welcome",
+    "lang": "en",
+    "file": "667-en-welcome.png",
+    "documentScroll": false,
+    "note": "independent unauthenticated browser context; no session mutation"
+  },
+  {
+    "module": "home",
+    "state": "home-empty",
+    "lang": "en",
+    "file": "667-en-home-empty.png",
+    "text": "✦\n✦\n✦\n\nEveryone\n\nNo letters yet. Try a wider search.\n\nDiamonds\nFilter Pass ›\nEdit filters\nSend a letter\nHome\nMessages\nProfile",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [
+      {
+        "name": "home-floor-breathe",
+        "state": "running",
+        "duration": 4000
+      },
+      {
+        "name": "home-mist-breathe",
+        "state": "running",
+        "duration": 5400
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      }
+    ],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "home",
+    "state": "filters-free",
+    "lang": "en",
+    "file": "667-en-filters-free.png",
+    "text": "Find your letters\nGender\nMan\nWoman\nEveryone\nAge range\nPass\n18–50+\nMinimum age\n18\nMaximum age\n50+\nCity\nPass\nAny city\nAny city\nSeoul\nShanghai\nBeijing\nTokyo\nLondon\nNew York\n\nChoose a day pass to unlock age and city filters.\n\nDone",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "client": 526,
+        "scroll": 526,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button r07-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "letters",
+    "state": "compose-empty",
+    "lang": "en",
+    "file": "667-en-compose-empty.png",
+    "text": "Share a little story\nYour little messenger\nChange bird\nRecipient ID\n0 / 200\n\nOne opening message. Chat starts when they reply.\n\nWrite a little hello first.\n\nCancel\nLet it fly",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "TEXTAREA",
+        "class": "compose-text",
+        "client": 228,
+        "scroll": 228,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button letter-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.3,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.3,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "inbox",
+    "state": "inbox-messages",
+    "lang": "en",
+    "file": "667-en-inbox-messages.png",
+    "text": "Messages\nFriends\nReader\nYour letter is on its way\n08:23\nAwaiting reply\n•••\n♧\n\nKeep up with replies\n\nEnable\n×\nHome\nMessages\nProfile",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "inbox-body",
+        "client": 459,
+        "scroll": 459,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "inbox-tab",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "chat",
+    "state": "chat-waiting",
+    "lang": "en",
+    "file": "667-en-chat-waiting.png",
+    "text": "‹\nReader\n•••\n\nA kind space for a little conversation.\n\nHello, I enjoyed a quiet walk today. What small moment made you smile?\n08:23 AM\nWaiting for their reply\n\nYour one opening message is sent. More messages and interactions unlock after they reply.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "c6-thread",
+        "client": 378,
+        "scroll": 378,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "chat",
+    "state": "chat-details-waiting",
+    "lang": "en",
+    "file": "667-en-chat-details-waiting.png",
+    "text": "Chat details\nYour sent letter\n\nMore interactions unlock after they reply.\n\nFollow\n\nFollowing unlocks after they reply.\n\nRemark name\n›\nPin conversation\nChat background\n›\nChat bubbles\n›\nSearch messages\n›\nMute notifications\nBlock\n›\nReport\n›\nClear messages\n›",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "chat-settings-body chat-settings-body--waiting",
+        "client": 527,
+        "scroll": 878,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "chat-settings-body chat-settings-body--waiting",
+        "before": 0,
+        "after": 351,
+        "max": 351
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "appearance",
+    "state": "wallpapers",
+    "lang": "en",
+    "file": "667-en-wallpapers.png",
+    "text": "Chat background\nWallpapers\nColors\nDefault\n✓\nMoonlit road\nForest glow\nBlue cosmos\nLittle soot\nNight glass\nSunset peak\nSilver feather\nAurora sky\n\nTap a wallpaper to preview it. Saved for this conversation.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d2-body",
+        "client": 555,
+        "scroll": 726,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d2-body",
+        "before": 0,
+        "after": 171,
+        "max": 171
+      }
+    ],
+    "press": {
+      "class": "ui-header__back ui-icon-button",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "safety",
+    "state": "blocked-list-empty",
+    "lang": "en",
+    "file": "667-en-blocked-list-empty.png",
+    "text": "Blocked people\nNo one is blocked.\n\nEvery connection starts with a little hello.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "d3-blocked safety-flow",
+        "client": 619,
+        "scroll": 619,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button ui-header__back",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "public-profile",
+    "state": "person-waiting",
+    "lang": "en",
+    "file": "667-en-person-waiting.png",
+    "text": "•••\nReader\nMoments\n\nNo moments yet.\n\nFollowing unlocks after they reply.\n\n＋ Follow\nChat",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d4-body profile-view-public",
+        "client": 527,
+        "scroll": 630,
+        "scrollable": true
+      },
+      {
+        "tag": "DIV",
+        "class": "person-cards d4-cards",
+        "client": 190,
+        "scroll": 190,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d4-body profile-view-public",
+        "before": 0,
+        "after": 103,
+        "max": 103
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button ui-icon-button--person-header",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "profile",
+    "state": "profile-content",
+    "lang": "en",
+    "file": "667-en-profile-content.png",
+    "text": "My little corner\nReader\n\n·\n\n0\nFollowing\n0\nFollowers\n0\nLikes\n◷\nVisitors ›\nImage cards\nProfile visibility\n›\n＋\nUpload a photo\n\nNo photos uploaded yet.\n\nMy moments ›\n＋\nA little moment\nMy letters\n›\nHome\nMessages\nProfile",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d4-body profile-view-profile",
+        "client": 555,
+        "scroll": 813,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [
+      {
+        "tag": "BUTTON",
+        "class": "",
+        "text": "",
+        "client": 88,
+        "scroll": 93
+      }
+    ],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d4-body profile-view-profile",
+        "before": 0,
+        "after": 258,
+        "max": 258
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button ui-icon-button--profile-header",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "profile",
+    "state": "avatar-gallery",
+    "lang": "en",
+    "file": "667-en-avatar-gallery.png",
+    "text": "×\nChoose an avatar\nNot uploaded\nNot uploaded\nNot uploaded\nNot uploaded\nNot uploaded\nNot uploaded\nNot uploaded\nNot uploaded\nUpload a photo",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "client": 344,
+        "scroll": 344,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "image-cards",
+    "state": "card-type",
+    "lang": "en",
+    "file": "667-en-card-type.png",
+    "text": "×\nPhoto type\nPortrait\nPhysique\nOutfit\nLife\nCancel",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "client": 368,
+        "scroll": 368,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "cards-close ui-icon-button ui-icon-button--cards",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "moments",
+    "state": "moments-empty",
+    "lang": "en",
+    "file": "667-en-moments-empty.png",
+    "text": "‹\nMy moments\n＋\nAll\nPortrait\nStyle\nOutfit\nLife\nKeep a little moment here.\n\nEvery connection starts with a little hello.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "page-body",
+        "client": 555,
+        "scroll": 555,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "d5-page d5-page-enter-active d5-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "d5-page d5-page-enter-active d5-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "d5-page",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "d5-page",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "empty",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "settings",
+    "state": "settings-home",
+    "lang": "en",
+    "file": "667-en-settings-home.png",
+    "text": "Settings\nAccount & security\nPrivacy\nNotifications\nGeneral\nLanguage\nEnglish\nFeedback\nHelp & support\nAbout MauGo",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "settings-body",
+        "client": 555,
+        "scroll": 578,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "settings-body",
+        "before": 0,
+        "after": 23,
+        "max": 23
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.16,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "account",
+    "state": "security",
+    "lang": "en",
+    "file": "667-en-security.png",
+    "text": "Account & security\nAccount\nEmail\n›\nApp lock\nOff\n›\nIdentity verification\n›\nExport my data\n›\nDelete account\n›\n\nYour account is connected securely. App lock protects this device session and is not account authentication.\n\nSign out",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "account-body",
+        "client": 555,
+        "scroll": 555,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.15s, 0.15s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.15,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.15s, 0.15s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "support",
+    "state": "help",
+    "lang": "en",
+    "file": "667-en-help.png",
+    "text": "Help & support\nSelf service\nHelp centre\nGuidelines\nSafety guide\nDelete account\nHello, from MauGo.\n\nFind quick answers in Help centre, or leave your suggestions in Feedback.\n\nSend feedback directly to the MauGo team.\n\nHow do letters work?\nHow many replies can I collect?\nAre all birds free?\nHow does Filter Pass work?\nFeedback\nPrivacy information\n\nSupport email: [SUPPORT_EMAIL_PENDING_SMITH] · Pending Smith",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "settings-body",
+        "client": 555,
+        "scroll": 588,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "settings-body",
+        "before": 0,
+        "after": 33,
+        "max": 33
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.18,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.18,
+        "class": "settings-body",
+        "animationDuration": "",
+        "transitionDuration": ""
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-body settings-page-enter-active settings-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "settings-body settings-page-enter-active settings-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.18,
+        "class": "settings-body settings-page-enter-active settings-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.18,
+        "class": "settings-body",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.16,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "diamonds",
+    "state": "wallet-empty",
+    "lang": "en",
+    "file": "667-en-wallet-empty.png",
+    "text": "‹ Back to Home\nDiamonds\nDiamonds for filters and extra replies.\n\nYour balance · 0 diamonds\n\n100\nStarter pack\nA little boost\nUnavailable\n550\n+10% bonus\nMost popular\nUnavailable\n1,200\n+20% bonus\nMore possibilities\nUnavailable\n2,600\n+30% bonus\nBest value\nUnavailable\nGet 100 diamonds\n\nPurchases are processed by the App Store. Diamonds are added after MauGo verifies the transaction; confirm your original operation after returning.\n\nBack to Home",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "wallet-body",
+        "client": 489,
+        "scroll": 722,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "wallet-body",
+        "before": 0,
+        "after": 233,
+        "max": 233
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button reply-topup-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "reply-topup ui-sheet d1-topup-enter-from d1-topup-enter-active",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "reply-topup ui-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "diamonds",
+    "state": "pass-default",
+    "lang": "en",
+    "file": "667-en-pass-default.png",
+    "text": "Filter Pass\nMore ways to browse letters.\n\nSet age and city filters for the letters you read.\n\nAge range\n\nFilter letters by author age.\n\nCity\n\nBrowse letters from a selected city.\n\nChoose your duration\n\n1\nday\n30\n7\ndays\n150\n30\ndays\n480\n\nOne-time payment. No automatic renewal.\n\nYour balance ·\n0 diamonds\n\nUnlock Filter Pass · 150 diamondsBack to filters",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "wallet-pass-body",
+        "client": 527,
+        "scroll": 738,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "wallet-pass-body",
+        "before": 0,
+        "after": 211,
+        "max": 211
+      }
+    ],
+    "press": {
+      "class": "",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "home-sheet pass-page wallet-pass",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "home-sheet pass-page wallet-pass",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "reply-cost",
+    "state": "reply-payment",
+    "lang": "en",
+    "status": "待 Smith",
+    "reason": "fresh ordinary accounts have no paid reply requirement; no wallet seeds or diamond deductions executed"
+  },
+  {
+    "module": "entry",
+    "state": "welcome",
+    "lang": "ko",
+    "file": "667-ko-welcome.png",
+    "documentScroll": false,
+    "note": "independent unauthenticated browser context; no session mutation"
+  },
+  {
+    "module": "home",
+    "state": "home-empty",
+    "lang": "ko",
+    "file": "667-ko-home-empty.png",
+    "text": "✦\n✦\n✦\n\n전체 공개\n\n아직 편지가 없어요. 검색 조건을 넓혀 보세요.\n\n다이아몬드\n필터 패스 ›\n필터 변경\n편지 보내기\n홈\n대화\n프로필",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [
+      {
+        "name": "home-floor-breathe",
+        "state": "running",
+        "duration": 4000
+      },
+      {
+        "name": "home-mist-breathe",
+        "state": "running",
+        "duration": 5400
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      },
+      {
+        "name": "home-twinkle",
+        "state": "running",
+        "duration": 3300
+      }
+    ],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "home",
+    "state": "filters-free",
+    "lang": "ko",
+    "file": "667-ko-filters-free.png",
+    "text": "나에게 맞는 편지\n성별\n남성\n여성\n전체 공개\n나이 범위\n패스\n18–50+\n최소 나이\n18\n최대 나이\n50+\n도시\n패스\n모든 도시\n모든 도시\nSeoul\nShanghai\nBeijing\nTokyo\nLondon\nNew York\n\n일 단위 패스로 나이와 도시 필터를 이용하세요.\n\n완료",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "client": 526,
+        "scroll": 526,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button r07-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "home-sheet ui-sheet r07-sheet filter-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "letters",
+    "state": "compose-empty",
+    "lang": "ko",
+    "file": "667-ko-compose-empty.png",
+    "text": "작은 이야기를 나눠 보세요\n나의 작은 전령\n새 바꾸기\n받는 사람 ID\n0 / 200\n\n첫 메시지는 한 번만 보내요. 답장이 오면 대화를 시작해요.\n\n먼저 작은 인사를 써 주세요.\n\n취소\n날려 보내기",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "TEXTAREA",
+        "class": "compose-text",
+        "client": 228,
+        "scroll": 228,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button letter-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-button",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0.3s, 0.3s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.3,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.3,
+        "class": "letters-panel composer-panel",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "inbox",
+    "state": "inbox-messages",
+    "lang": "ko",
+    "file": "667-ko-inbox-messages.png",
+    "text": "대화\n친구\nReader\n편지가 날아가고 있어요\n08:23\n답장 대기\n•••\n♧\n\n새 답장을 놓치지 마세요\n\n설정\n×\n홈\n대화\n프로필",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "inbox-body",
+        "client": 459,
+        "scroll": 459,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "inbox-tab",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "chat",
+    "state": "chat-waiting",
+    "lang": "ko",
+    "file": "667-ko-chat-waiting.png",
+    "text": "‹\nReader\n•••\n\n작은 대화를 나누는 다정한 공간이에요.\n\nHello, I enjoyed a quiet walk today. What small moment made you smile?\n오전 08:23\n답장을 기다리는 중\n\n첫 메시지를 보냈어요. 답장이 오면 대화와 다른 상호작용이 열려요.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "c6-thread",
+        "client": 378,
+        "scroll": 378,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "chat",
+    "state": "chat-details-waiting",
+    "lang": "ko",
+    "file": "667-ko-chat-details-waiting.png",
+    "text": "대화 상세\n보낸 편지\n\n답장을 받으면 더 많은 기능이 열려요.\n\n팔로우\n\n답장이 오면 팔로우할 수 있어요.\n\n별명\n›\n대화 고정\n대화 배경\n›\n대화 말풍선\n›\n메시지 검색\n›\n알림 끄기\n차단\n›\n신고\n›\n메시지 지우기\n›",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "chat-settings-body chat-settings-body--waiting",
+        "client": 527,
+        "scroll": 878,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "chat-settings-body chat-settings-body--waiting",
+        "before": 0,
+        "after": 351,
+        "max": 351
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "appearance",
+    "state": "wallpapers",
+    "lang": "ko",
+    "file": "667-ko-wallpapers.png",
+    "text": "대화 배경\n배경화면\n색상\n기본\n✓\n달빛 길\n빛나는 숲\n푸른 우주\n작은 먼지 친구\n밤의 유리\n노을 봉우리\n은빛 깃털\n오로라 하늘\n\n배경화면을 눌러 미리 보세요. 이 대화에 저장돼요.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d2-body",
+        "client": 555,
+        "scroll": 726,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d2-body",
+        "before": 0,
+        "after": 171,
+        "max": 171
+      }
+    ],
+    "press": {
+      "class": "ui-header__back ui-icon-button",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "safety",
+    "state": "blocked-list-empty",
+    "lang": "ko",
+    "file": "667-ko-blocked-list-empty.png",
+    "text": "차단한 사람\n차단한 사람이 없어요.\n\n모든 인연은 작은 인사로 시작돼요.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "d3-blocked safety-flow",
+        "client": 619,
+        "scroll": 619,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-icon-button ui-header__back",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "public-profile",
+    "state": "person-waiting",
+    "lang": "ko",
+    "file": "667-ko-person-waiting.png",
+    "text": "•••\nReader\n순간\n\n아직 순간이 없어요.\n\n답장이 오면 팔로우할 수 있어요.\n\n＋ 팔로우\n채팅",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d4-body profile-view-public",
+        "client": 527,
+        "scroll": 630,
+        "scrollable": true
+      },
+      {
+        "tag": "DIV",
+        "class": "person-cards d4-cards",
+        "client": 190,
+        "scroll": 190,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d4-body profile-view-public",
+        "before": 0,
+        "after": 103,
+        "max": 103
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button ui-icon-button--person-header",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "chat-message mine c6-message-enter-active c6-message-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "chat-message mine",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "profile",
+    "state": "profile-content",
+    "lang": "ko",
+    "file": "667-ko-profile-content.png",
+    "text": "나의 작은 공간\nReader\n\n·\n\n0\n팔로잉\n0\n팔로워\n0\n좋아요\n◷\n방문자 ›\n이미지 카드\n프로필 공개 범위\n›\n＋\n사진 업로드\n\n아직 올린 사진이 없어요.\n\n내 순간 ›\n＋\n작은 순간\n나의 편지\n›\n홈\n대화\n프로필",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "d4-body profile-view-profile",
+        "client": 555,
+        "scroll": 813,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [
+      {
+        "tag": "BUTTON",
+        "class": "",
+        "text": "",
+        "client": 88,
+        "scroll": 93
+      }
+    ],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "d4-body profile-view-profile",
+        "before": 0,
+        "after": 258,
+        "max": 258
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button ui-icon-button--profile-header",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "profile",
+    "state": "avatar-gallery",
+    "lang": "ko",
+    "file": "667-ko-avatar-gallery.png",
+    "text": "×\n아바타 선택\n미등록\n미등록\n미등록\n미등록\n미등록\n미등록\n미등록\n미등록\n사진 업로드",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "client": 344,
+        "scroll": 344,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "d4-close ui-icon-button ui-icon-button--reply-close avatar-panel-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "d4-sheet ui-sheet ui-sheet--profile-avatar avatar-panel avatar-panel-gallery",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "image-cards",
+    "state": "card-type",
+    "lang": "ko",
+    "file": "667-ko-card-type.png",
+    "text": "×\n사진 유형\n인물\n체형\n옷차림\n일상\n취소",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "SECTION",
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "client": 368,
+        "scroll": 368,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "cards-close ui-icon-button ui-icon-button--cards",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "cards-panel ui-sheet ui-sheet--cards",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "moments",
+    "state": "moments-empty",
+    "lang": "ko",
+    "file": "667-ko-moments-empty.png",
+    "text": "‹\n나의 순간\n＋\n전체\n인물\n스타일\n패션\n일상\n작은 순간을 여기에 간직하세요.\n\n모든 인연은 작은 인사로 시작돼요.",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "page-body",
+        "client": 555,
+        "scroll": 555,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "",
+      "scale": "none",
+      "transform": "none"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "d5-page d5-page-enter-active d5-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "d5-page d5-page-enter-active d5-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "d5-page",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "d5-page",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.25,
+        "class": "empty d5-item-enter-active d5-item-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.25s, 0.25s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.25,
+        "class": "empty",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "settings",
+    "state": "settings-home",
+    "lang": "ko",
+    "file": "667-ko-settings-home.png",
+    "text": "설정\n계정 및 보안\n개인정보 보호\n알림\n일반\n언어\n한국어\n피드백\n도움말 및 지원\nMauGo 정보",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "settings-body",
+        "client": 555,
+        "scroll": 578,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "settings-body",
+        "before": 0,
+        "after": 23,
+        "max": 23
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.16,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "account",
+    "state": "security",
+    "lang": "ko",
+    "file": "667-ko-security.png",
+    "text": "계정 및 보안\n계정\n이메일\n›\n앱 잠금\n꺼짐\n›\n본인 인증\n›\n내 데이터 내보내기\n›\n계정 삭제\n›\n\n계정이 안전하게 연결되어 있어요. 앱 잠금은 이 기기의 세션을 보호하며 계정 인증이 아니에요.\n\n로그아웃",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "account-body",
+        "client": 555,
+        "scroll": 555,
+        "scrollable": false
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.15s, 0.15s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.15,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.15s, 0.15s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "support",
+    "state": "help",
+    "lang": "ko",
+    "file": "667-ko-help.png",
+    "text": "도움말 및 지원\n셀프 서비스\n도움말 센터\n커뮤니티 가이드라인\n안전 가이드\n계정 삭제\nMauGo에서 인사드려요.\n\n도움말 센터에서 답을 찾거나 피드백으로 의견을 남겨 주세요.\n\nMauGo 팀에 피드백을 직접 보내 주세요.\n\n편지는 어떻게 보내나요?\n답장을 몇 개 받을 수 있나요?\n모든 새를 무료로 이용할 수 있나요?\n필터 패스는 어떻게 이용하나요?\n피드백\n개인정보 안내\n\n지원 이메일: [SUPPORT_EMAIL_PENDING_SMITH] · Smith 확인 대기 중",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "settings-body",
+        "client": 555,
+        "scroll": 599,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "settings-body",
+        "before": 0,
+        "after": 44,
+        "max": 44
+      }
+    ],
+    "press": {
+      "class": "ui-header__back",
+      "scale": "1",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-row ui-row",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.18,
+        "class": "settings-body settings-page-leave-active settings-page-leave-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.18,
+        "class": "settings-body",
+        "animationDuration": "",
+        "transitionDuration": ""
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "settings-body settings-page-enter-active settings-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "settings-body settings-page-enter-active settings-page-enter-to",
+        "animationDuration": "0s",
+        "transitionDuration": "0.18s, 0.18s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.18,
+        "class": "settings-body",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.18,
+        "class": "settings-body",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "transform",
+        "elapsed": 0,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "transform",
+        "elapsed": 0.16,
+        "class": "ui-header__back",
+        "animationDuration": "0s",
+        "transitionDuration": "0.16s, 0.2s, 0.2s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "diamonds",
+    "state": "wallet-empty",
+    "lang": "ko",
+    "file": "667-ko-wallet-empty.png",
+    "text": "‹ 돌아가기: 홈\n다이아몬드\n필터와 추가 답장을 위한 다이아몬드.\n\n내 잔액 · 0 다이아몬드\n\n100\n스타터 팩\n작은 응원\n구매 불가\n550\n+10% 보너스\n인기 패키지\n구매 불가\n1,200\n+20% 보너스\n더 많은 가능성\n구매 불가\n2,600\n+30% 보너스\n가장 큰 혜택\n구매 불가\n받기 100 다이아몬드\n\n결제는 App Store에서 처리돼요. MauGo가 거래를 확인한 뒤 다이아몬드가 추가돼요. 돌아온 뒤 원래 작업을 확인하세요.\n\n돌아가기: 홈",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "wallet-body",
+        "client": 489,
+        "scroll": 706,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "wallet-body",
+        "before": 0,
+        "after": 217,
+        "max": 217
+      }
+    ],
+    "press": {
+      "class": "ui-icon-button reply-topup-close",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-hat-refresh",
+        "elapsed": 0,
+        "class": "magic-hat",
+        "animationDuration": "0s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "reply-topup ui-sheet d1-topup-enter-from d1-topup-enter-active",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "reply-topup ui-sheet",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "diamonds",
+    "state": "pass-default",
+    "lang": "ko",
+    "file": "667-ko-pass-default.png",
+    "text": "필터 패스\n더 다양한 방법으로 편지를 만나 보세요.\n\n읽을 편지의 나이와 도시 필터를 설정해요.\n\n나이 범위\n\n작성자의 나이로 편지를 찾아요.\n\n도시\n\n선택한 도시에서 온 편지를 찾아요.\n\n이용 기간을 선택하세요\n\n1\n일\n30\n7\n일\n150\n30\n일\n480\n\n일회성 결제예요. 자동 갱신은 없어요.\n\n내 잔액 ·\n0 다이아몬드\n\n잠금 해제 필터 패스 · 150 다이아몬드필터로 돌아가기",
+    "documentScroll": false,
+    "documentHorizontalOverflow": false,
+    "containers": [
+      {
+        "tag": "DIV",
+        "class": "wallet-pass-body",
+        "client": 527,
+        "scroll": 765,
+        "scrollable": true
+      }
+    ],
+    "horizontalOverflowCandidates": [],
+    "verticalClipCandidates": [],
+    "viewportOverflowCandidates": [],
+    "animations": [],
+    "scrollProof": [
+      {
+        "class": "wallet-pass-body",
+        "before": 0,
+        "after": 238,
+        "max": 238
+      }
+    ],
+    "press": {
+      "class": "",
+      "scale": "none",
+      "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+    },
+    "motionEvents": [
+      {
+        "type": "transitionrun",
+        "name": "opacity",
+        "elapsed": 0,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-floor-breathe",
+        "elapsed": 0,
+        "class": "hat-glow",
+        "animationDuration": "4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-mist-breathe",
+        "elapsed": 0,
+        "class": "scene-mist",
+        "animationDuration": "5.4s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 0,
+        "class": "magic-spark spark-one",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 1.1,
+        "class": "magic-spark spark-two",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationstart",
+        "name": "home-twinkle",
+        "elapsed": 2,
+        "class": "magic-spark spark-three",
+        "animationDuration": "3.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "transitionend",
+        "name": "opacity",
+        "elapsed": 0.2,
+        "class": "ui-button ui-button--secondary",
+        "animationDuration": "0s",
+        "transitionDuration": "0.2s, 0.2s"
+      },
+      {
+        "type": "animationstart",
+        "name": "sheet-in",
+        "elapsed": 0,
+        "class": "home-sheet pass-page wallet-pass",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      },
+      {
+        "type": "animationend",
+        "name": "sheet-in",
+        "elapsed": 0.3,
+        "class": "home-sheet pass-page wallet-pass",
+        "animationDuration": "0.3s",
+        "transitionDuration": "0s"
+      }
+    ],
+    "clipping": "candidate metrics only; no complete glyph or touch-device audit"
+  },
+  {
+    "module": "reply-cost",
+    "state": "reply-payment",
+    "lang": "ko",
+    "status": "待 Smith",
+    "reason": "fresh ordinary accounts have no paid reply requirement; no wallet seeds or diamond deductions executed"
+  }
+]

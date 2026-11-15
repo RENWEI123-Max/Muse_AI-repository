@@ -1,0 +1,180 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "letters.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-letters.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-letters.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-letters.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "letters.spec.ts",
+      "file": "letters.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "C4 module03: ten states, B3/B4/B7 and safe retries on isolated database",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5585,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"letter-open\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"letter-open\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\n    at state (/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:12:23)\n    at /Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:30:8",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts",
+                      "column": 23,
+                      "line": 12
+                    },
+                    "snippet": " \u001b[90m 10 |\u001b[39m  mkdirSync(\u001b[32m'docs/ui-redo/r08'\u001b[39m\u001b[33m,\u001b[39m{recursive\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\n \u001b[90m 11 |\u001b[39m  \u001b[36mconst\u001b[39m panel\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-panel'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m state\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'transform'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m geometry\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(selector\u001b[33m:\u001b[39mstring\u001b[33m,\u001b[39mvalues\u001b[33m:\u001b[39mnumber[])\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m b\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(selector)\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m b\u001b[33m?\u001b[39m\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mmax(\u001b[33m...\u001b[39m[\u001b[32m'x'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'y'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'width'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'height'\u001b[39m]\u001b[33m.\u001b[39mmap((k\u001b[33m,\u001b[39mi)\u001b[33m=>\u001b[39m\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(b[k \u001b[36mas\u001b[39m keyof \u001b[36mtypeof\u001b[39m b]\u001b[33m-\u001b[39mvalues[i]\u001b[33m!\u001b[39m)))\u001b[33m:\u001b[39m\u001b[33mInfinity\u001b[39m}\u001b[33m,\u001b[39m{message\u001b[33m:\u001b[39mselector\u001b[33m+\u001b[39m\u001b[32m' Figma geometry'\u001b[39m})\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m1\u001b[39m)}\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m geometry(\u001b[32m'.letters-panel'\u001b[39m\u001b[33m,\u001b[39m[\u001b[35m12\u001b[39m\u001b[33m,\u001b[39m\u001b[35m144\u001b[39m\u001b[33m,\u001b[39m\u001b[35m351\u001b[39m\u001b[33m,\u001b[39ms\u001b[33m.\u001b[39mstartsWith(\u001b[32m'compose-'\u001b[39m)\u001b[33m&&\u001b[39ms\u001b[33m!==\u001b[39m\u001b[32m'compose-sent'\u001b[39m\u001b[33m?\u001b[39m\u001b[35m496\u001b[39m\u001b[33m:\u001b[39m\u001b[35m560\u001b[39m])\n \u001b[90m 15 |\u001b[39m   \u001b[36mif\u001b[39m(s\u001b[33m.\u001b[39mstartsWith(\u001b[32m'compose-'\u001b[39m)\u001b[33m&&\u001b[39ms\u001b[33m!==\u001b[39m\u001b[32m'compose-sent'\u001b[39m){"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts",
+                        "column": 23,
+                        "line": 12
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"letter-open\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\n\n  10 |  mkdirSync('docs/ui-redo/r08',{recursive:true})\n  11 |  const panel=page.locator('.letters-panel');const state=async(s:string)=>{\n> 12 |   await expect(panel).toHaveAttribute('data-state',s);await expect(panel).toHaveCSS('transform','none')\n     |                       ^\n  13 |   const geometry=async(selector:string,values:number[])=>{await expect.poll(async()=>{const b=await page.locator(selector).boundingBox();return b?Math.max(...['x','y','width','height'].map((k,i)=>Math.abs(b[k as keyof typeof b]-values[i]!))):Infinity},{message:selector+' Figma geometry'}).toBeLessThanOrEqual(1)}\n  14 |   await geometry('.letters-panel',[12,144,351,s.startsWith('compose-')&&s!=='compose-sent'?496:560])\n  15 |   if(s.startsWith('compose-')&&s!=='compose-sent'){\n    at state (/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:12:23)\n    at /Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:30:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:36:44.800Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-letters.spec.ts/letters-C4-module03-ten-st-84a3a-etries-on-isolated-database/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts",
+                    "column": 23,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8a9453be6e307e4d02d3-9829a4f500305d383263",
+          "file": "letters.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:36:43.828Z",
+    "duration": 6656.1720000000005,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

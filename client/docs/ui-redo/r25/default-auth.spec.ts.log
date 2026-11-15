@@ -1,0 +1,70 @@
+
+Running 11 tests using 1 worker
+
+  ✓   1 tests/auth.spec.ts:4:1 › 19 prototype states (4.3s)
+  ✓   2 tests/auth.spec.ts:31:1 › real database signup, SMTP failure, wrong code, logout and login (1.1s)
+  ✓   3 tests/auth.spec.ts:58:1 › empty validation and honest Apple error (296ms)
+  ✓   4 tests/r15-auth.spec.ts:7:1 › R15 safe auth states, geometry and styles (9.3s)
+  ✓   5 tests/r15-auth.spec.ts:48:1 › R15 Korean and short viewport (269ms)
+  ✘   6 tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation (5.4s)
+  ✘   7 tests/r15-auth.spec.ts:63:1 › R15 verification and recovery cancel paths stay local (5.2s)
+  ✓   8 tests/r20-fixes-auth.spec.ts:4:61 › 667 en registration destination (700ms)
+  ✓   9 tests/r20-fixes-auth.spec.ts:4:61 › 667 ko registration destination (688ms)
+  ✓  10 tests/r20-fixes-auth.spec.ts:4:61 › 812 en registration destination (693ms)
+  ✓  11 tests/r20-fixes-auth.spec.ts:4:61 › 812 ko registration destination (693ms)
+
+
+  1) tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation ───────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('You are signed in.', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('You are signed in.', { exact: true }) with timeout 5000ms
+      - waiting for getByText('You are signed in.', { exact: true })
+
+
+      57 |  await page.locator('#auth-email').fill('mina@maugo.demo');await page.locator('#auth-password').fill('Test2026!')
+      58 |  await page.getByRole('button',{name:'Sign in',exact:true}).click()
+    > 59 |  await expect(page.getByText('You are signed in.',{exact:true})).toBeVisible()
+         |                                                                  ^
+      60 |  await page.getByRole('button',{name:'Meet your letters',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
+      61 | })
+      62 |
+        at /Users/anna/Muse_AI-repository/client/tests/r15-auth.spec.ts:59:66
+
+    Error Context: ../../../../tmp/maugo-r25-default-auth.spec.ts/r15-auth-R15-seed-demo-login-keeps-existing-navigation/error-context.md
+
+  2) tests/r15-auth.spec.ts:63:1 › R15 verification and recovery cancel paths stay local ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Welcome to MauGo', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Welcome to MauGo', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Welcome to MauGo', exact: true })
+
+
+      63 | test('R15 verification and recovery cancel paths stay local',async({page})=>{
+      64 |  let calls=0;await page.route('**/api/auth/**',r=>{calls++;return r.abort()})
+    > 65 |  for(const mode of ['verify','recovery','password','forgot','apple']){await page.goto(`/?auth=${mode}&email=reader@example.com`);await page.locator('.back').click();await expect(page.getByRole('heading',{name:'Welcome to MauGo',exact:true})).toBeVisible()}
+         |                                                                                                                                                                                                                                                   ^
+      66 |  await page.goto('/?auth=privacy');await page.locator('.auth-privacy-back').click();await expect(page.getByRole('heading',{name:'Before you continue',exact:true})).toBeVisible();expect(calls).toBe(0)
+      67 | })
+      68 |
+        at /Users/anna/Muse_AI-repository/client/tests/r15-auth.spec.ts:65:243
+
+    Error Context: ../../../../tmp/maugo-r25-default-auth.spec.ts/r15-auth-R15-verification--902ee-ery-cancel-paths-stay-local/error-context.md
+
+  2 failed
+    tests/r15-auth.spec.ts:54:1 › R15 seed demo login keeps existing navigation ────────────────────
+    tests/r15-auth.spec.ts:63:1 › R15 verification and recovery cancel paths stay local ────────────
+  9 passed (30.3s)

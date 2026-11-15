@@ -1,0 +1,489 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r06-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r06-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r06-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r06-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r06-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r06-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5317",
+          "video": "on",
+          "trace": "on"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5317 --strictPort",
+      "url": "http://127.0.0.1:5317",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r06-audit.spec.ts",
+      "file": "r06-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16500,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                      "column": 416,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mif\u001b[39m(height\u001b[33m===\u001b[39m\u001b[35m667\u001b[39m)expect(sheetScroll\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Done'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-flight-sprite'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m650\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'05-compose-filled'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'06-compose-failure'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.compose-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-veil'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-wallet'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-topup'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'07-wallet'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-pass'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-state=\"pass-page\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'08-pass'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Close'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                        "column": 416,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n\n  52 |  if(height===667)expect(sheetScroll.top).toBeGreaterThan(0)\n  53 |  await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-flight-sprite').first()).toHaveCSS('animation-name','none')\n> 54 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await page.locator('#letter-text').fill('A kind hello from the home audit.');await expect(page.locator('#publish')).toBeEnabled();await page.waitForTimeout(650);await shot('05-compose-filled');await page.locator('#publish').click();await expect(page.locator('.letter-error')).toBeVisible();await shot('06-compose-failure');await page.locator('.compose-cancel').click();await expect(page.locator('.letters-veil')).toHaveCount(0)\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  55 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await expect(page.locator('#letter-text')).toHaveValue('A kind hello from the home audit.');await page.locator('.letter-close').click()\n  56 |  await page.locator('#open-wallet').click();await expect(page.locator('.reply-topup')).toBeVisible();await shot('07-wallet');await page.locator('.reply-back').click()\n  57 |  await page.locator('#open-pass').click();await expect(page.locator('[data-state=\"pass-page\"]')).toBeVisible();await shot('08-pass');await page.getByRole('button',{name:t('Close'),exact:true}).click()\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 01-response\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 02-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 03-ready-motion\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 03b-bird-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 04-appearance\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en 05-compose-filled\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:48:13.695Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-en-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-en-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-en-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                    "column": 416,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0129fadcc01d54ea01e3-0f4d84276279693d45af",
+          "file": "r06-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16663,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                      "column": 416,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mif\u001b[39m(height\u001b[33m===\u001b[39m\u001b[35m667\u001b[39m)expect(sheetScroll\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Done'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-flight-sprite'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m650\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'05-compose-filled'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'06-compose-failure'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.compose-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-veil'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-wallet'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-topup'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'07-wallet'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-pass'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-state=\"pass-page\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'08-pass'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Close'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                        "column": 416,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n\n  52 |  if(height===667)expect(sheetScroll.top).toBeGreaterThan(0)\n  53 |  await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-flight-sprite').first()).toHaveCSS('animation-name','none')\n> 54 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await page.locator('#letter-text').fill('A kind hello from the home audit.');await expect(page.locator('#publish')).toBeEnabled();await page.waitForTimeout(650);await shot('05-compose-filled');await page.locator('#publish').click();await expect(page.locator('.letter-error')).toBeVisible();await shot('06-compose-failure');await page.locator('.compose-cancel').click();await expect(page.locator('.letters-veil')).toHaveCount(0)\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  55 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await expect(page.locator('#letter-text')).toHaveValue('A kind hello from the home audit.');await page.locator('.letter-close').click()\n  56 |  await page.locator('#open-wallet').click();await expect(page.locator('.reply-topup')).toBeVisible();await shot('07-wallet');await page.locator('.reply-back').click()\n  57 |  await page.locator('#open-pass').click();await expect(page.locator('[data-state=\"pass-page\"]')).toBeVisible();await shot('08-pass');await page.getByRole('button',{name:t('Close'),exact:true}).click()\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 01-response\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 02-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 03-ready-motion\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 03b-bird-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 04-appearance\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko 05-compose-filled\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:48:30.635Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-ko-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-ko-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                    "column": 416,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0129fadcc01d54ea01e3-f17d808399e90252e620",
+          "file": "r06-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16543,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                      "column": 416,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mif\u001b[39m(height\u001b[33m===\u001b[39m\u001b[35m667\u001b[39m)expect(sheetScroll\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Done'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-flight-sprite'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m650\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'05-compose-filled'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'06-compose-failure'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.compose-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-veil'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-wallet'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-topup'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'07-wallet'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-pass'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-state=\"pass-page\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'08-pass'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Close'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                        "column": 416,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n\n  52 |  if(height===667)expect(sheetScroll.top).toBeGreaterThan(0)\n  53 |  await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-flight-sprite').first()).toHaveCSS('animation-name','none')\n> 54 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await page.locator('#letter-text').fill('A kind hello from the home audit.');await expect(page.locator('#publish')).toBeEnabled();await page.waitForTimeout(650);await shot('05-compose-filled');await page.locator('#publish').click();await expect(page.locator('.letter-error')).toBeVisible();await shot('06-compose-failure');await page.locator('.compose-cancel').click();await expect(page.locator('.letters-veil')).toHaveCount(0)\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  55 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await expect(page.locator('#letter-text')).toHaveValue('A kind hello from the home audit.');await page.locator('.letter-close').click()\n  56 |  await page.locator('#open-wallet').click();await expect(page.locator('.reply-topup')).toBeVisible();await shot('07-wallet');await page.locator('.reply-back').click()\n  57 |  await page.locator('#open-pass').click();await expect(page.locator('[data-state=\"pass-page\"]')).toBeVisible();await shot('08-pass');await page.getByRole('button',{name:t('Close'),exact:true}).click()\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 01-response\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 02-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 03-ready-motion\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 03b-bird-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 04-appearance\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en 05-compose-filled\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:48:47.823Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-en-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-en-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-en-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                    "column": 416,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0129fadcc01d54ea01e3-c395cccbc04de83c1cb5",
+          "file": "r06-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16659,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                      "column": 416,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mif\u001b[39m(height\u001b[33m===\u001b[39m\u001b[35m667\u001b[39m)expect(sheetScroll\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Done'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-flight-sprite'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m650\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'05-compose-filled'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#publish'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'06-compose-failure'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.compose-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-veil'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#compose'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(t(\u001b[32m'Recipient ID'\u001b[39m)\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'11111111-1111-4111-8111-111111111111'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#letter-text'\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m'A kind hello from the home audit.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-wallet'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-topup'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'07-wallet'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.reply-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-pass'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-state=\"pass-page\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'08-pass'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Close'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                        "column": 416,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letter-error')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.letter-error') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letter-error')\u001b[22m\n\n\n  52 |  if(height===667)expect(sheetScroll.top).toBeGreaterThan(0)\n  53 |  await page.getByRole('button',{name:t('Done'),exact:true}).click();await expect(page.locator('.home-flight-sprite').first()).toHaveCSS('animation-name','none')\n> 54 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await page.locator('#letter-text').fill('A kind hello from the home audit.');await expect(page.locator('#publish')).toBeEnabled();await page.waitForTimeout(650);await shot('05-compose-filled');await page.locator('#publish').click();await expect(page.locator('.letter-error')).toBeVisible();await shot('06-compose-failure');await page.locator('.compose-cancel').click();await expect(page.locator('.letters-veil')).toHaveCount(0)\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  55 |  await page.locator('#compose').click();await page.getByLabel(t('Recipient ID'),{exact:true}).fill('11111111-1111-4111-8111-111111111111');await expect(page.locator('#letter-text')).toHaveValue('A kind hello from the home audit.');await page.locator('.letter-close').click()\n  56 |  await page.locator('#open-wallet').click();await expect(page.locator('.reply-topup')).toBeVisible();await shot('07-wallet');await page.locator('.reply-back').click()\n  57 |  await page.locator('#open-pass').click();await expect(page.locator('[data-state=\"pass-page\"]')).toBeVisible();await shot('08-pass');await page.getByRole('button',{name:t('Close'),exact:true}).click()\n    at /Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts:54:416"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 01-response\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 02-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 03-ready-motion\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 03b-bird-letter\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 04-appearance\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko 05-compose-filled\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:49:04.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-ko-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r06-audit.config.ts/r06-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r06-audit.spec.ts",
+                    "column": 416,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0129fadcc01d54ea01e3-86e7517d312a4d7bd047",
+          "file": "r06-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:48:13.116Z",
+    "duration": 68691.275,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

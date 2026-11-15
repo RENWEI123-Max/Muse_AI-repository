@@ -1,0 +1,31 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session (58ms)
+
+
+  1) tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ───────────
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001
+    Call log:
+      - → POST http://127.0.0.1:3001/__c5/seed
+        - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 16
+
+
+       5 |  const root='http://127.0.0.1:3001'
+       6 |  // Register in the dedicated DB, or reuse the task session; no login loop.
+    >  7 |  const a=process.env.R17_SHARED_ACCOUNT?JSON.parse(await readFile(process.env.R17_SHARED_ACCOUNT,'utf8')):await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json(),headers={Authorization:`Bearer ${a.token}`}
+         |                                                                                                                               ^
+       8 |  expect((await request.get(root+'/profiles/me',{headers})).ok()).toBeTruthy()
+       9 |  await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token)
+      10 |  const metrics:any[]=[]
+        at /Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts:7:127
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r17.config.ts/r17-profile-R17-twelve-rea-645ab-states-in-one-login-session/error-context.md
+
+  1 failed
+    tests/r17-profile.spec.ts:3:1 › R17 twelve real profile states in one login session ────────────

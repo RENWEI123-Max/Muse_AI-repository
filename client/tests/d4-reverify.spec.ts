@@ -1,6 +1,6 @@
 import {readFile} from 'node:fs/promises'
 import {test,expect} from '@playwright/test'
-const root=process.env.D4_API_ROOT||'http://127.0.0.1:3195'
+const root=process.env.D4_API_ROOT||'http://127.0.0.1:3001'
 test('D4 real backend profile, stats and avatar persistence',async({page,request})=>{
  test.setTimeout(180000)
  const a=process.env.D4_SHARED_ACCOUNT?JSON.parse(await readFile(process.env.D4_SHARED_ACCOUNT,'utf8')):await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json()

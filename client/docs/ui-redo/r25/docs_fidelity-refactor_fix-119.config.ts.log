@@ -1,0 +1,28 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 docs/fidelity-refactor/fix-119.spec.ts:48:1 › fix 119 visual evidence (1.0m)
+
+
+  1) docs/fidelity-refactor/fix-119.spec.ts:48:1 › fix 119 visual evidence ─────────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('.profile-nav button').first()
+
+
+      69 |  }
+      70 |
+    > 71 |  await page.setViewportSize({width:375,height:667});await page.locator('.profile-nav button').first().click();await shot(page,'home-short');await page.locator('#compose').click();await shot(page,'compose-short');
+         |                                                                                                       ^
+      72 |  if(prefix.endsWith('/after')){const footer=await page.locator('.opening-form footer').boundingBox(),nav=await page.locator('.home-nav').boundingBox();expect(footer!.y+footer!.height).toBeLessThanOrEqual(nav!.y);}
+      73 |
+      74 | })
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/fix-119.spec.ts:71:103
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts/fix-119-fix-119-visual-evidence/error-context.md
+
+  1 failed
+    docs/fidelity-refactor/fix-119.spec.ts:48:1 › fix 119 visual evidence ──────────────────────────

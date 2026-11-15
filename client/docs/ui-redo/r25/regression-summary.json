@@ -1,0 +1,16 @@
+{
+  "playwrightConfigs": 54,
+  "finalBatches": 68,
+  "attempts": 87,
+  "batchPassed": 14,
+  "batchFailed": 54,
+  "reportedTests": {
+    "expected": 311,
+    "unexpected": 542,
+    "skipped": 16
+  },
+  "uncollectedFinalBatches": [],
+  "configPassed": 11,
+  "configFailed": 43,
+  "configNotExecuted": 0
+}

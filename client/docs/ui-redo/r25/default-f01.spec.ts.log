@@ -1,0 +1,23 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/f01.spec.ts:2:1 › F01 Pass: shortage, cancellation, automatic return, retry once and renewal (1.3s)
+
+
+  1) tests/f01.spec.ts:2:1 › F01 Pass: shortage, cancellation, automatic return, retry once and renewal
+
+    TypeError: Cannot read properties of undefined (reading 'trim')
+
+       9 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()
+      10 |  await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click()
+    > 11 |  const plan=page.locator('.pass-plan').last();const label=await plan.innerText();const cost=Number(label.split('◆')[1].trim());await plan.click()
+         |                                                                                                                       ^
+      12 |  await expect(page.locator('#confirm-pass-payment')).toBeDisabled();await page.locator('#pass-topup').click();await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await page.keyboard.press('Escape')
+      13 |  await expect(page.getByRole('status')).toContainText('selection saved');expect((await wallet()).diamonds).toBe(0)
+      14 |  await page.locator('#pass-topup').click();await balance(5000);await expect(page.getByRole('dialog',{name:'Diamonds',exact:true})).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/f01.spec.ts:11:119
+
+    Error Context: ../../../../tmp/maugo-r25-default-f01.spec.ts/f01-F01-Pass-shortage-canc-88418-turn-retry-once-and-renewal/error-context.md
+
+  1 failed
+    tests/f01.spec.ts:2:1 › F01 Pass: shortage, cancellation, automatic return, retry once and renewal

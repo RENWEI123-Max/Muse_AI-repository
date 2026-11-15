@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough (6.1s)
+  ✘  2 tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough (6.3s)
+  ✘  3 tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough (6.1s)
+  ✘  4 tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough (6.3s)
+
+
+  1) tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+
+
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                                     ^
+      41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()
+      43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+
+
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                                     ^
+      41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()
+      43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+
+
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                                     ^
+      41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()
+      43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-en-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-en-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()
+
+
+      38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}
+      39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()
+    > 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                                     ^
+      41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()
+      42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()
+      43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-ko-R19-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r19-audit.spec.ts:4:61 › 667 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 667 ko R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 en R19 fixture walkthrough ──────────────────────────────────
+    tests/r19-audit.spec.ts:4:61 › 812 ko R19 fixture walkthrough ──────────────────────────────────

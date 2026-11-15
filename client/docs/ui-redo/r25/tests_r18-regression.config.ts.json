@@ -1,0 +1,499 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18-regression.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r18-regression.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r18-regression.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d4.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r18-regression.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d4.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d4.spec.ts",
+      "file": "d4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D4 editing, avatar gallery, remove, restore, crop, persistence and full slots",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1084,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:10:2",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:10:2"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:33.714Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-editing-avatar-galle-12552--persistence-and-full-slots/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-661dd8c7d2c7bf78f7bd",
+          "file": "d4.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "D4 public profile and chat gate open",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1081,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:35.055Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-public-profile-and-chat-gate-open/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-139706d707878b26bcb8",
+          "file": "d4.spec.ts",
+          "line": 15,
+          "column": 40
+        },
+        {
+          "title": "D4 public profile and chat gate waiting",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1083,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:2"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:36.389Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-public-profile-and-chat-gate-waiting/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-fb30e045db4968ef91a6",
+          "file": "d4.spec.ts",
+          "line": 15,
+          "column": 40
+        },
+        {
+          "title": "D4 profile cannot bypass block",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1081,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:18:55",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:18:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:37.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-profile-cannot-bypass-block/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-34948e66e76d5d7b909e",
+          "file": "d4.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "D4 public full content, photo previews, own image cards and outgoing visits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1084,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:20:2",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:20:2"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:39.064Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-public-full-content--269e4-e-cards-and-outgoing-visits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-19d1421dbf7f848e96d7",
+          "file": "d4.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "D4 following empty, my letters empty and no public moments",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1080,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:23:2",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 13,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m enter(page\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mstatus\u001b[33m=\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mblocked\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m){\n \u001b[90m 4 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/api/**'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m(route\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m p\u001b[33m=\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m data\u001b[33m:\u001b[39mobject\u001b[33m=\u001b[39m{}\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/auth/login'\u001b[39m))data\u001b[33m=\u001b[39m{token\u001b[33m:\u001b[39m\u001b[32m'd4-test'\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/filter-pass'\u001b[39m))data\u001b[33m=\u001b[39m{active\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mexpiresAt\u001b[33m:\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39mremainingDays\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mplans\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/discovery/filters'\u001b[39m))data\u001b[33m=\u001b[39m{cities\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/wallet'\u001b[39m))data\u001b[33m=\u001b[39m{diamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39mfreeRemaining\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m\u001b[33m,\u001b[39mpaidCost\u001b[33m:\u001b[39m\u001b[35m10\u001b[39m}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'ocean'\u001b[39m]\u001b[33m.\u001b[39mmap(id\u001b[33m=>\u001b[39m({id\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mstatus\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39munreadCount\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39mupdatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}))}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mendsWith(\u001b[32m'/blocks'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39mblocked\u001b[33m?\u001b[39m[{userId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m}]\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m \u001b[36mif\u001b[39m(p\u001b[33m.\u001b[39mincludes(\u001b[32m'/messages'\u001b[39m))data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'hello'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'A little hello for you.'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}\u001b[33m,\u001b[39m{id\u001b[33m:\u001b[39m\u001b[32m'reply'\u001b[39m\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39m\u001b[32m'Lovely to meet you!'\u001b[39m\u001b[33m,\u001b[39mmine\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mkind\u001b[33m:\u001b[39m\u001b[32m'opening'\u001b[39m\u001b[33m,\u001b[39mcreatedAt\u001b[33m:\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m()\u001b[33m.\u001b[39mtoISOString()}]}\u001b[33m;\u001b[39m\u001b[36melse\u001b[39m data\u001b[33m=\u001b[39m{items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]}\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39mdata})})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'd4@test.local'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Sign in'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m   |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m }\n \u001b[90m 7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m mine(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-profile'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m 8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 13,
+                        "line": 5
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/?auth=consent\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/?auth=consent\", waiting until \"load\"\u001b[22m\n\n\n  3 | async function enter(page:any,status='open',blocked=false){\n  4 |  await page.route('**/api/**',async(route:any)=>{const p=new URL(route.request().url()).pathname;let data:object={};if(p.endsWith('/auth/login'))data={token:'d4-test'};else if(p.endsWith('/filter-pass'))data={active:false,expiresAt:null,remainingDays:0,plans:[]};else if(p.endsWith('/discovery/filters'))data={cities:[]};else if(p.endsWith('/wallet'))data={diamonds:100,freeRemaining:10,paidCost:10};else if(p.endsWith('/conversations'))data={items:['tea','ocean'].map(id=>({id,displayName:id,status,peerId:'peer',following:true,unreadCount:0,updatedAt:new Date().toISOString()}))};else if(p.endsWith('/blocks'))data={items:blocked?[{userId:'peer'}]:[]};else if(p.includes('/messages'))data={items:[{id:'hello',content:'A little hello for you.',mine:false,createdAt:new Date().toISOString()},{id:'reply',content:'Lovely to meet you!',mine:true,kind:'opening',createdAt:new Date().toISOString()}]};else data={items:[],responses:[]};await route.fulfill({json:data})})\n> 5 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('d4@test.local');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await page.getByRole('button',{name:'Meet your letters'}).click()\n    |             ^\n  6 | }\n  7 | async function mine(page:any){await page.locator('#open-profile').click();await expect(page.locator('.d4-profile')).toBeVisible()}\n  8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n    at enter (/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:5:13)\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:23:2"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:40.404Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-regression.config.ts/d4-D4-following-empty-my-letters-empty-and-no-public-moments/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 13,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-d26c2cbb816be929be6a",
+          "file": "d4.spec.ts",
+          "line": 22,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:11:33.536Z",
+    "duration": 8041.236999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

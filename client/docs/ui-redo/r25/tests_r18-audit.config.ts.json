@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r18-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r18-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r18-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r18-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5338",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5338 --strictPort",
+      "url": "http://127.0.0.1:5338",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r18-audit.spec.ts",
+      "file": "r18-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R18 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7285,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                      "column": 232,
+                      "line": 51
+                    },
+                    "snippet": " \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#change-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m  \u001b[36mconst\u001b[39m bad\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m bad)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'broken.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'invalid image'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'This photo could not be opened.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'decode-failure'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m upload(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-crop'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m beforeZoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'1.5'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoomRedraw\u001b[33m=\u001b[39mbeforeZoom\u001b[33m!==\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-close'\u001b[39m)\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcropCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m upload()\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'upload'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'upload-failure'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mfailureAlertOutsideDialog\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'[role=dialog]'\u001b[39m))\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m commit()\n \u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-gallery'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'select'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'select-failure'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                        "column": 232,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()\n  50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true\n> 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')\n     |                                                                                                                                                                                                                                        ^\n  52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true\n  53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()\n  54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:02.495Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-en-R18-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-en-R18-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                    "column": 232,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bffb1f8790d9099f1055-36c313b8abe2e7ba0142",
+          "file": "r18-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko R18 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7446,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                      "column": 232,
+                      "line": 51
+                    },
+                    "snippet": " \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#change-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m  \u001b[36mconst\u001b[39m bad\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m bad)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'broken.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'invalid image'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'This photo could not be opened.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'decode-failure'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m upload(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-crop'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m beforeZoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'1.5'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoomRedraw\u001b[33m=\u001b[39mbeforeZoom\u001b[33m!==\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-close'\u001b[39m)\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcropCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m upload()\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'upload'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'upload-failure'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mfailureAlertOutsideDialog\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'[role=dialog]'\u001b[39m))\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m commit()\n \u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-gallery'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'select'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'select-failure'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                        "column": 232,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()\n  50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true\n> 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')\n     |                                                                                                                                                                                                                                        ^\n  52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true\n  53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()\n  54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:10.101Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-ko-R18-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-ko-R18-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                    "column": 232,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bffb1f8790d9099f1055-afff31865abfc68ed3c5",
+          "file": "r18-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en R18 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7272,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                      "column": 232,
+                      "line": 51
+                    },
+                    "snippet": " \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#change-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m  \u001b[36mconst\u001b[39m bad\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m bad)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'broken.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'invalid image'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'This photo could not be opened.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'decode-failure'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m upload(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-crop'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m beforeZoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'1.5'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoomRedraw\u001b[33m=\u001b[39mbeforeZoom\u001b[33m!==\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-close'\u001b[39m)\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcropCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m upload()\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'upload'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'upload-failure'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mfailureAlertOutsideDialog\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'[role=dialog]'\u001b[39m))\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m commit()\n \u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-gallery'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'select'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'select-failure'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                        "column": 232,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"This photo could not be opened.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()\n  50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true\n> 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')\n     |                                                                                                                                                                                                                                        ^\n  52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true\n  53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()\n  54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:17.950Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-en-R18-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-en-R18-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                    "column": 232,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bffb1f8790d9099f1055-5afbefa405cdf9013082",
+          "file": "r18-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko R18 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7427,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                      "column": 232,
+                      "line": 51
+                    },
+                    "snippet": " \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#change-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m  \u001b[36mconst\u001b[39m bad\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m bad)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'broken.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'invalid image'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'This photo could not be opened.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'decode-failure'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m upload(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-crop'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m beforeZoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'1.5'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoomRedraw\u001b[33m=\u001b[39mbeforeZoom\u001b[33m!==\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m(e \u001b[36mas\u001b[39m \u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mzoom\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-close'\u001b[39m)\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcropCancel\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m upload()\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'upload'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'upload-failure'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mfailureAlertOutsideDialog\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'[role=dialog]'\u001b[39m))\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m commit()\n \u001b[90m 54 |\u001b[39m  \u001b[36mawait\u001b[39m open()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'avatar-gallery'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'select'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'select-failure'\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                        "column": 232,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이 사진을 열 수 없어요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()\n  50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true\n> 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')\n     |                                                                                                                                                                                                                                        ^\n  52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true\n  53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()\n  54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:25.543Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-ko-R18-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-ko-R18-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts",
+                    "column": 232,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bffb1f8790d9099f1055-05d890eb62bed237443a",
+          "file": "r18-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:11:01.924Z",
+    "duration": 31293.811999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

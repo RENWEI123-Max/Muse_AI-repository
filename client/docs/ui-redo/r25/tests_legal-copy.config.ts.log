@@ -1,0 +1,114 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/legal-copy.spec.ts:6:61 › 667 en: full copy, scroll and navigation (5.5s)
+  ✘  2 tests/legal-copy.spec.ts:6:61 › 667 ko: full copy, scroll and navigation (5.5s)
+  ✘  3 tests/legal-copy.spec.ts:6:61 › 812 en: full copy, scroll and navigation (5.5s)
+  ✘  4 tests/legal-copy.spec.ts:6:61 › 812 ko: full copy, scroll and navigation (5.5s)
+
+
+  1) tests/legal-copy.spec.ts:6:61 › 667 en: full copy, scroll and navigation ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#accept-terms')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#accept-terms') with timeout 5000ms
+      - waiting for locator('#accept-terms')
+
+
+      36 |  }
+      37 |  await capture('auth',auth,auth)
+    > 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()
+         |                                                                                             ^
+      39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()
+      40 |  // Guest preview opens the real settings UI; no backend or account fixture.
+      41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()
+        at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93
+
+    Error Context: ../../../../tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-667-en-full-copy-scroll-and-navigation/error-context.md
+
+  2) tests/legal-copy.spec.ts:6:61 › 667 ko: full copy, scroll and navigation ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#accept-terms')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#accept-terms') with timeout 5000ms
+      - waiting for locator('#accept-terms')
+
+
+      36 |  }
+      37 |  await capture('auth',auth,auth)
+    > 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()
+         |                                                                                             ^
+      39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()
+      40 |  // Guest preview opens the real settings UI; no backend or account fixture.
+      41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()
+        at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93
+
+    Error Context: ../../../../tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-667-ko-full-copy-scroll-and-navigation/error-context.md
+
+  3) tests/legal-copy.spec.ts:6:61 › 812 en: full copy, scroll and navigation ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#accept-terms')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#accept-terms') with timeout 5000ms
+      - waiting for locator('#accept-terms')
+
+
+      36 |  }
+      37 |  await capture('auth',auth,auth)
+    > 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()
+         |                                                                                             ^
+      39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()
+      40 |  // Guest preview opens the real settings UI; no backend or account fixture.
+      41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()
+        at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93
+
+    Error Context: ../../../../tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-812-en-full-copy-scroll-and-navigation/error-context.md
+
+  4) tests/legal-copy.spec.ts:6:61 › 812 ko: full copy, scroll and navigation ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#accept-terms')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#accept-terms') with timeout 5000ms
+      - waiting for locator('#accept-terms')
+
+
+      36 |  }
+      37 |  await capture('auth',auth,auth)
+    > 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()
+         |                                                                                             ^
+      39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()
+      40 |  // Guest preview opens the real settings UI; no backend or account fixture.
+      41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()
+        at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93
+
+    Error Context: ../../../../tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-812-ko-full-copy-scroll-and-navigation/error-context.md
+
+  4 failed
+    tests/legal-copy.spec.ts:6:61 › 667 en: full copy, scroll and navigation ───────────────────────
+    tests/legal-copy.spec.ts:6:61 › 667 ko: full copy, scroll and navigation ───────────────────────
+    tests/legal-copy.spec.ts:6:61 › 812 en: full copy, scroll and navigation ───────────────────────
+    tests/legal-copy.spec.ts:6:61 › 812 ko: full copy, scroll and navigation ───────────────────────

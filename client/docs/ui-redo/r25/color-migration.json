@@ -1,0 +1,12 @@
+{
+  "occurrences": {
+    "client/src/InboxFlow.legacy-1.css": 5,
+    "client/src/home.css": 10,
+    "client/src/styles.css": 22,
+    "client/src/fidelity.css": 12,
+    "client/src/ProfileFlow.legacy-1.css": 39
+  },
+  "initialDiscoveredTokens": 60,
+  "retainedTokens": 36,
+  "note": "Discovery included four unused legacy files removed in this round; retained tokens serve remaining live CSS only."
+}

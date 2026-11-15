@@ -1,19 +1,19 @@
 /* Measurements from the rendered offline prototype; canvas 375 × 812.
    Keep these shared overrides together so the older flow styles cannot diverge. */
-:root{--white:#f3f4f4;--control-height:48px;--page-gutter:24px}
+:root{--white:var(--legacy-color-f3f4f4);--control-height:48px;--page-gutter:24px}
 
 
 
 .device .home-indicator{visibility:hidden}
-.device .primary{background:#b5fa70 linear-gradient(110deg,#bdff81,#b0fb61);font-weight:500;box-shadow:none}
+.device .primary{background:var(--legacy-color-b5fa70) linear-gradient(110deg,var(--legacy-color-bdff81),var(--legacy-color-b0fb61));font-weight:500;box-shadow:none}
 /* Authentication shares the same 48px status area and centered brand. */
 .device>.screen{padding-top:48px}
 /* The hat and birds use the full canvas, independently of list/action height. */
 /* Retain the existing wallet/Pass shortcuts while keeping them secondary. */
 /* Floating panels have a 12px canvas inset and a visible drag handle. */
-.device .home-veil:not(.r07-veil){background:#0009;backdrop-filter:none;padding:0 12px 24px}
-.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass){position:relative;max-height:684px;border-radius:24px;background:#18211e;border:1px solid #ffffff0b;padding:28px 20px 20px;box-shadow:0 -50px 100px #0008;scrollbar-width:none}
-.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:#ffffff29}
+.device .home-veil:not(.r07-veil){background:var(--legacy-color-0009);backdrop-filter:none;padding:0 12px 24px}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass){position:relative;max-height:684px;border-radius:24px;background:var(--legacy-color-18211e);border:1px solid var(--legacy-color-ffffff0b);padding:28px 20px 20px;box-shadow:0 -50px 100px var(--legacy-color-0008);scrollbar-width:none}
+.device .home-sheet:not(.r07-sheet):not(.pass-payment-dialog):not(.pass-page):not(.wallet-pass)::before{content:'';position:absolute;top:12px;left:calc(50% - 18px);width:36px;height:4px;border-radius:4px;background:var(--legacy-color-ffffff29)}
 .device .home-sheet:not(.r07-sheet):not(.wallet-pass) header{position:relative;justify-content:center;margin:0 0 24px;min-height:32px}
 .device .home-sheet:not(.r07-sheet):not(.wallet-pass) header h2{font-size:18px;font-weight:550;line-height:24px}
 .device .home-sheet:not(.r07-sheet):not(.wallet-pass) header button{position:absolute;right:-8px;top:-4px;width:36px;height:36px;padding:8px;margin:0}
@@ -28,8 +28,8 @@
 /* Wallet stays a real balance/selection flow; no simulated purchase success. */
 
 
-/* #119: actions follow any number of image-card rows. */
-.device #publish:disabled{background:#252e29;color:#849288;opacity:1}
+/* Issue 119: actions follow any number of image-card rows. */
+.device #publish:disabled{background:var(--legacy-color-252e29);color:var(--legacy-color-849288);opacity:1}
 @media(max-height:740px){.device{min-height:100svh}
 }
 

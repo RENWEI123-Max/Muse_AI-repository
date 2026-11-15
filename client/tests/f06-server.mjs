@@ -20,7 +20,7 @@ const app=buildApp(db,false,{sendMail:async(email,code)=>{inbox.set(email,code)}
 app.get('/__f06/mail',async req=>({code:inbox.get(req.query.email)}))
 app.post('/__f06/expire',async req=>{await db.query("UPDATE auth_codes SET expires_at=NOW()-interval '1 second' WHERE email=$1",[req.body.email]);return {ok:true}})
 app.post('/__f06/cooldown',async req=>{await db.query("UPDATE auth_codes SET sent_at=NOW()-interval '61 seconds' WHERE email=$1",[req.body.email]);return {ok:true}})
-await app.listen({host:'127.0.0.1',port:3196})
+await app.listen({host:'127.0.0.1',port:3001})
 console.log('F06 isolated test backend ready: '+database)
 async function stop(){await app.close();await db.end();await admin.end();process.exit(0)}
 process.on('SIGTERM',stop);process.on('SIGINT',stop)

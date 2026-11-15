@@ -1,0 +1,597 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r08-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r08-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r08-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r08-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r08-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r08-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5318",
+          "video": "on",
+          "trace": "on"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5318 --strictPort",
+      "url": "http://127.0.0.1:5318",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r08-audit.spec.ts",
+      "file": "r08-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20449,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                      "column": 52,
+                      "line": 35
+                    },
+                    "snippet": " \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m  \u001b[36mconst\u001b[39m panel\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-panel'\u001b[39m)\u001b[33m,\u001b[39mrecords\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m  \u001b[36mconst\u001b[39m state\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(s\u001b[33m===\u001b[39m\u001b[32m'letter-safety'\u001b[39m\u001b[33m||\u001b[39ms\u001b[33m===\u001b[39m\u001b[32m'letter-report'\u001b[39m){\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[36mconst\u001b[39m sheet\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-safety'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m b\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m b\u001b[33m?\u001b[39mb\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mb\u001b[33m.\u001b[39mheight\u001b[33m:\u001b[39m\u001b[33mInfinity\u001b[39m})\u001b[33m.\u001b[39mtoBeLessThanOrEqual(height)\n \u001b[90m 37 |\u001b[39m   \u001b[36mconst\u001b[39m copy\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mlocator(\u001b[32m'button,p,h2,small'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(es\u001b[33m=>\u001b[39mes\u001b[33m.\u001b[39mfilter(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mgetClientRects()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mmap(e\u001b[33m=>\u001b[39m({text\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mtextContent\u001b[33m,\u001b[39mclipped\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth\u001b[33m>\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m})))\u001b[33m;\u001b[39mexpect(copy\u001b[33m.\u001b[39mevery(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclipped))\u001b[33m.\u001b[39mtoBeTruthy()\n \u001b[90m 38 |\u001b[39m  }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                        "column": 52,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n\n  33 |\n  34 |  const panel=page.locator('.letters-panel'),records:any[]=[]\n> 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){\n     |                                                    ^\n  36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)\n  37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()\n  38 |  }\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-open\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-typed\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-safety\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en block-confirmation\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en block-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-report\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en report-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-waiting\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en letter-replied\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en compose-empty\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en compose-draft\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en compose-invalid\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en compose-text-scroll\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en compose-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m en draft-restored\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:49:22.925Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                    "column": 52,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ca6f8b8cf4f88f214530-0a5ac22bb5bbe0439720",
+          "file": "r08-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20641,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                      "column": 52,
+                      "line": 35
+                    },
+                    "snippet": " \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m  \u001b[36mconst\u001b[39m panel\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-panel'\u001b[39m)\u001b[33m,\u001b[39mrecords\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m  \u001b[36mconst\u001b[39m state\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(s\u001b[33m===\u001b[39m\u001b[32m'letter-safety'\u001b[39m\u001b[33m||\u001b[39ms\u001b[33m===\u001b[39m\u001b[32m'letter-report'\u001b[39m){\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[36mconst\u001b[39m sheet\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-safety'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m b\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m b\u001b[33m?\u001b[39mb\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mb\u001b[33m.\u001b[39mheight\u001b[33m:\u001b[39m\u001b[33mInfinity\u001b[39m})\u001b[33m.\u001b[39mtoBeLessThanOrEqual(height)\n \u001b[90m 37 |\u001b[39m   \u001b[36mconst\u001b[39m copy\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mlocator(\u001b[32m'button,p,h2,small'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(es\u001b[33m=>\u001b[39mes\u001b[33m.\u001b[39mfilter(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mgetClientRects()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mmap(e\u001b[33m=>\u001b[39m({text\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mtextContent\u001b[33m,\u001b[39mclipped\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth\u001b[33m>\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m})))\u001b[33m;\u001b[39mexpect(copy\u001b[33m.\u001b[39mevery(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclipped))\u001b[33m.\u001b[39mtoBeTruthy()\n \u001b[90m 38 |\u001b[39m  }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                        "column": 52,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n\n  33 |\n  34 |  const panel=page.locator('.letters-panel'),records:any[]=[]\n> 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){\n     |                                                    ^\n  36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)\n  37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()\n  38 |  }\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-open\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-typed\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-safety\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko block-confirmation\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko block-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-report\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko report-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-waiting\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko letter-replied\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko compose-empty\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko compose-draft\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko compose-invalid\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko compose-text-scroll\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko compose-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m667\u001b[39m ko draft-restored\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:49:43.913Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                    "column": 52,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ca6f8b8cf4f88f214530-939e6ab11803a60aa66c",
+          "file": "r08-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20470,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                      "column": 52,
+                      "line": 35
+                    },
+                    "snippet": " \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m  \u001b[36mconst\u001b[39m panel\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-panel'\u001b[39m)\u001b[33m,\u001b[39mrecords\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m  \u001b[36mconst\u001b[39m state\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(s\u001b[33m===\u001b[39m\u001b[32m'letter-safety'\u001b[39m\u001b[33m||\u001b[39ms\u001b[33m===\u001b[39m\u001b[32m'letter-report'\u001b[39m){\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[36mconst\u001b[39m sheet\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-safety'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m b\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m b\u001b[33m?\u001b[39mb\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mb\u001b[33m.\u001b[39mheight\u001b[33m:\u001b[39m\u001b[33mInfinity\u001b[39m})\u001b[33m.\u001b[39mtoBeLessThanOrEqual(height)\n \u001b[90m 37 |\u001b[39m   \u001b[36mconst\u001b[39m copy\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mlocator(\u001b[32m'button,p,h2,small'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(es\u001b[33m=>\u001b[39mes\u001b[33m.\u001b[39mfilter(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mgetClientRects()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mmap(e\u001b[33m=>\u001b[39m({text\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mtextContent\u001b[33m,\u001b[39mclipped\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth\u001b[33m>\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m})))\u001b[33m;\u001b[39mexpect(copy\u001b[33m.\u001b[39mevery(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclipped))\u001b[33m.\u001b[39mtoBeTruthy()\n \u001b[90m 38 |\u001b[39m  }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                        "column": 52,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"Share a little story\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n\n  33 |\n  34 |  const panel=page.locator('.letters-panel'),records:any[]=[]\n> 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){\n     |                                                    ^\n  36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)\n  37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()\n  38 |  }\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-open\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-typed\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-safety\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en block-confirmation\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en block-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-report\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en report-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-waiting\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en letter-replied\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en compose-empty\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en compose-draft\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en compose-invalid\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en compose-text-scroll\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en compose-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m en draft-restored\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:50:05.172Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                    "column": 52,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ca6f8b8cf4f88f214530-60c12106a72ce9b3cfde",
+          "file": "r08-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko: click walkthrough (API fixtures)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20579,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                      "column": 52,
+                      "line": 35
+                    },
+                    "snippet": " \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m  \u001b[36mconst\u001b[39m panel\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letters-panel'\u001b[39m)\u001b[33m,\u001b[39mrecords\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m  \u001b[36mconst\u001b[39m state\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(s\u001b[33m===\u001b[39m\u001b[32m'letter-safety'\u001b[39m\u001b[33m||\u001b[39ms\u001b[33m===\u001b[39m\u001b[32m'letter-report'\u001b[39m){\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m   \u001b[36mconst\u001b[39m sheet\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.letter-safety'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m b\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m b\u001b[33m?\u001b[39mb\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mb\u001b[33m.\u001b[39mheight\u001b[33m:\u001b[39m\u001b[33mInfinity\u001b[39m})\u001b[33m.\u001b[39mtoBeLessThanOrEqual(height)\n \u001b[90m 37 |\u001b[39m   \u001b[36mconst\u001b[39m copy\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m sheet\u001b[33m.\u001b[39mlocator(\u001b[32m'button,p,h2,small'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(es\u001b[33m=>\u001b[39mes\u001b[33m.\u001b[39mfilter(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mgetClientRects()\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mmap(e\u001b[33m=>\u001b[39m({text\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mtextContent\u001b[33m,\u001b[39mclipped\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth\u001b[33m>\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m})))\u001b[33m;\u001b[39mexpect(copy\u001b[33m.\u001b[39mevery(e\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclipped))\u001b[33m.\u001b[39mtoBeTruthy()\n \u001b[90m 38 |\u001b[39m  }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                        "column": 52,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.letters-panel')\nExpected: \u001b[32m\"compose-sent\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.letters-panel') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.letters-panel')\u001b[22m\n\u001b[2m    7 × locator resolved to <section role=\"dialog\" aria-busy=\"true\" aria-modal=\"true\" data-state=\"compose-draft\" aria-label=\"작은 이야기를 나눠 보세요\" class=\"letters-panel composer-panel is-sending\">…</section>\u001b[22m\n\u001b[2m      - unexpected value \"compose-draft\"\u001b[22m\n\n\n  33 |\n  34 |  const panel=page.locator('.letters-panel'),records:any[]=[]\n> 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){\n     |                                                    ^\n  36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)\n  37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()\n  38 |  }\n    at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)\n    at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-open\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-typed\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-safety\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko block-confirmation\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko block-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-report\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko report-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-waiting\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko letter-replied\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko compose-empty\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko compose-draft\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko compose-invalid\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko compose-text-scroll\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko compose-failure\n"
+                    },
+                    {
+                      "text": "\u001b[33m812\u001b[39m ko draft-restored\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:50:26.156Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts",
+                    "column": 52,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ca6f8b8cf4f88f214530-202073b724bf1a4a532a",
+          "file": "r08-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:49:22.340Z",
+    "duration": 84828.683,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

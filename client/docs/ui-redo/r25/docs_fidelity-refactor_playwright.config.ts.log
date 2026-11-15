@@ -1,0 +1,148 @@
+
+Running 12 tests using 1 worker
+
+  ✓   1 docs/fidelity-refactor/capture-client.spec.ts:45:1 › main-flow screenshots (12.6s)
+  ✘   2 docs/fidelity-refactor/capture-client.spec.ts:77:1 › profile and settings screenshots (5.4s)
+  ✓   3 docs/fidelity-refactor/capture-client.spec.ts:94:1 › authentication state catalogue (11.0s)
+  ✘   4 docs/fidelity-refactor/capture-client.spec.ts:101:1 › home loading, empty and error (8.2s)
+  ✘   5 docs/fidelity-refactor/capture-client.spec.ts:108:1 › letter editing, safety and appearance (45.0s)
+  ✓   6 docs/fidelity-refactor/capture-client.spec.ts:113:1 › inbox empty, search and locked conversation (4.4s)
+  ✓   7 docs/fidelity-refactor/capture-client.spec.ts:116:1 › empty inbox (2.3s)
+  ✓   8 docs/fidelity-refactor/capture-client.spec.ts:119:1 › profile and settings detail states (9.4s)
+  ✘   9 docs/fidelity-refactor/capture-client.spec.ts:122:1 › wallet selection and unavailable payment (5.9s)
+  ✘  10 docs/fidelity-refactor/capture-client.spec.ts:126:1 › D11 opening, sending, collection and unlock motion (5.4s)
+  ✓  11 docs/fidelity-refactor/capture-client.spec.ts:137:1 › Filter Pass and shortage states (2.8s)
+  ✓  12 docs/fidelity-refactor/capture-client.spec.ts:140:1 › unlocked chat tools and wallpaper (5.5s)
+
+
+  1) docs/fidelity-refactor/capture-client.spec.ts:77:1 › profile and settings screenshots ─────────
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('#new-profile-moment')
+    Expected: "rgb(25, 54, 43)"
+    Received: "rgb(10, 20, 6)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('#new-profile-moment') with timeout 5000ms
+      - waiting for locator('#new-profile-moment')
+        - locator resolved to <button disabled class="compose-link" id="new-profile-moment">…</button>
+        13 × unexpected value "rgb(10, 20, 6)"
+           - locator resolved to <button class="compose-link" id="new-profile-moment">…</button>
+        - unexpected value "rgb(10, 20, 6)"
+
+
+      84 |  await page.locator('#open-profile').click()
+      85 |  await expect(page.locator('.d4-profile')).toBeVisible()
+    > 86 |  if(prefix==='after') await expect(page.locator('#new-profile-moment')).toHaveCSS('color','rgb(25, 54, 43)')
+         |                                                                         ^
+      87 |  await shot(page,'11-profile')
+      88 |  await page.locator('#open-settings').click()
+      89 |  await shot(page,'12-settings')
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/capture-client.spec.ts:86:73
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts/capture-client-profile-and-settings-screenshots/error-context.md
+
+  2) docs/fidelity-refactor/capture-client.spec.ts:101:1 › home loading, empty and error ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('alert')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      104 |  await page.route(/\/letters\/refresh$/,async r=>{await gate;await r.fulfill({json:{items:[],responses:[]}})})
+      105 |  await page.locator('#refresh').click();await expect(page.locator('.magic-scene')).toHaveAttribute('aria-busy','true');await shot(page,'home-loading');release();await expect(page.locator('.magic-scene')).toHaveAttribute('aria-busy','false');await expect(page.locator('.letter-bird')).toHaveCount(0);await shot(page,'home-empty')
+    > 106 |  await page.route(/\/letters\/refresh$/,r=>r.fulfill({status:503,json:{message:'Could not load letters. Please try again.'}}));await page.locator('#refresh').click();await expect(page.getByRole('alert')).toBeVisible();await shot(page,'home-error')
+          |                                                                                                                                                                                                             ^
+      107 | })
+      108 | test('letter editing, safety and appearance',async({page})=>{
+      109 |  await enter(page);await page.locator('.letter-bird').first().click({force:true});await page.locator('#reply').fill('Thank you for sharing your little story.');await shot(page,'letter-typed');await page.locator('#report-note').click();await shot(page,'letter-safety');await page.locator('#safety-report').click();await shot(page,'letter-report')
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/capture-client.spec.ts:106:205
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts/capture-client-home-loading-empty-and-error/error-context.md
+
+  3) docs/fidelity-refactor/capture-client.spec.ts:108:1 › letter editing, safety and appearance ───
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.fill: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for locator('#reply')
+
+
+      107 | })
+      108 | test('letter editing, safety and appearance',async({page})=>{
+    > 109 |  await enter(page);await page.locator('.letter-bird').first().click({force:true});await page.locator('#reply').fill('Thank you for sharing your little story.');await shot(page,'letter-typed');await page.locator('#report-note').click();await shot(page,'letter-safety');await page.locator('#safety-report').click();await shot(page,'letter-report')
+          |                                                                                                                ^
+      110 |  await page.getByRole('button',{name:'Close safety menu'}).click();await page.getByRole('button',{name:'Close',exact:true}).first().click();await page.locator('#compose').click();await page.getByLabel('Recipient ID',{exact:true}).fill('sample-recipient');await page.locator('#letter-text').fill('Today I found a quiet little bookshop.');await shot(page,'compose-draft');await page.locator('#letter-text').fill('First line\nSecond line');await expect(page.locator('#publish')).toBeDisabled();await shot(page,'compose-invalid');await page.getByRole('button',{name:'Close',exact:true}).first().click()
+      111 |  await page.locator('#magic').click();await shot(page,'bird-female');await page.locator('#appearance-genders button').first().click();await shot(page,'bird-male');await page.getByLabel('Flight & hover').uncheck();await shot(page,'bird-motion-off')
+      112 | })
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/capture-client.spec.ts:109:112
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts/capture-client-letter-editing-safety-and-appearance/error-context.md
+
+  4) docs/fidelity-refactor/capture-client.spec.ts:122:1 › wallet selection and unavailable payment
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.d1-topup')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.d1-topup') with timeout 5000ms
+      - waiting for locator('.d1-topup')
+
+
+      122 | test('wallet selection and unavailable payment',async({page})=>{
+      123 |  // Load the Home balance first: the top-up closes itself as funded when /wallet exceeds the balance it was opened with.
+    > 124 |  await enter(page);await Promise.all([page.waitForResponse(r=>r.url().endsWith('/wallet')),page.locator('#settings').click()]);await page.getByRole('button',{name:'Close'}).click();await page.locator('#open-wallet').click();await expect(page.locator('.d1-topup')).toBeVisible();await page.locator('.diamond-pack').nth(1).click();await shot(page,'topup-confirm');await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');await shot(page,'wallet-payment-unavailable')
+          |                                                                                                                                                                                                                                                                         ^
+      125 | })
+      126 | test('D11 opening, sending, collection and unlock motion',async({browser,baseURL})=>{
+      127 |  const context=await browser.newContext({baseURL,viewport:{width:375,height:812},recordVideo:{dir:'/tmp/maugo-fidelity-video',size:{width:375,height:812}}})
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/capture-client.spec.ts:124:265
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts/capture-client-wallet-selection-and-unavailable-payment/error-context.md
+
+  5) docs/fidelity-refactor/capture-client.spec.ts:126:1 › D11 opening, sending, collection and unlock motion
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#reply')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#reply') with timeout 5000ms
+      - waiting for locator('#reply')
+
+
+      128 |  await context.addInitScript(()=>{(window as any).__motion=[];for(const event of ['animationstart','transitionrun'])document.addEventListener(event,e=>{const el=e.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const c=getComputedStyle(el);(window as any).__motion.push({event,classes:el.className,animation:c.animationName,duration:c.animationDuration,transition:c.transitionProperty,transitionDuration:c.transitionDuration,easing:c.transitionTimingFunction,delay:c.transitionDelay})})})
+      129 |  const page=await context.newPage();await enter(page)
+    > 130 |  await page.locator('.letter-bird').first().click({force:true});await expect(page.locator('#reply')).toBeVisible();await page.locator('#reply').fill('Your little story made me smile.');await page.locator('#reply-send').click();await expect(page.locator('#continue-chat')).toBeVisible();await shot(page,'letter-waiting');await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#compose').click();await page.getByLabel('Recipient ID',{exact:true}).fill('11111111-1111-4111-8111-111111111111');await page.locator('#letter-text').fill('Hello from a quiet little bookshop.');await page.locator('#publish').click();await expect(page.getByRole('button',{name:'Back to home'})).toBeVisible();await shot(page,'compose-sent');await page.getByRole('button',{name:'Back to home'}).click()
+          |                                                                                                      ^
+      131 |  let collected=false
+      132 |  await page.route(/\/conversations(?:\?.*)?$/,r=>r.fulfill({json:{items:conversations.map(c=>c.id==='c3'&&collected?{...c,status:'open'}:c),hasMore:false}}))
+      133 |  await page.route(/\/conversations\/c3\//,async r=>{const path=new URL(r.request().url()).pathname;let body:unknown={};if(path.endsWith('/pending'))body={items:collected?[]:[{id:'r1'}],hasMore:false};else if(path.endsWith('/collect')){collected=true;body={state:'collected',cost:0}}else if(path.endsWith('/messages'))body={items:collected?[{id:'unlock-reply',kind:'reply',content:'Thank you for your letter.',createdAt:now,senderId:'p3'}]:[],hasMore:false};await r.fulfill({json:body})})
+        at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/capture-client.spec.ts:130:102
+
+    Error Context: ../../../../tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts/capture-client-D11-opening-b2c08-ollection-and-unlock-motion/error-context.md
+
+  5 failed
+    docs/fidelity-refactor/capture-client.spec.ts:77:1 › profile and settings screenshots ──────────
+    docs/fidelity-refactor/capture-client.spec.ts:101:1 › home loading, empty and error ────────────
+    docs/fidelity-refactor/capture-client.spec.ts:108:1 › letter editing, safety and appearance ────
+    docs/fidelity-refactor/capture-client.spec.ts:122:1 › wallet selection and unavailable payment ─
+    docs/fidelity-refactor/capture-client.spec.ts:126:1 › D11 opening, sending, collection and unlock motion
+  7 passed (2.0m)

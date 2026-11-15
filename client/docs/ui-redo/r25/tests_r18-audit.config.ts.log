@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough (7.3s)
+  ✘  2 tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough (7.4s)
+  ✘  3 tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough (7.3s)
+  ✘  4 tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough (7.4s)
+
+
+  1) tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "This photo could not be opened."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()
+      50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true
+    > 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')
+         |                                                                                                                                                                                                                                        ^
+      52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true
+      53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()
+      54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "이 사진을 열 수 없어요."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()
+      50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true
+    > 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')
+         |                                                                                                                                                                                                                                        ^
+      52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true
+      53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()
+      54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-ko-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-ko-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-667-ko-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "This photo could not be opened."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()
+      50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true
+    > 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')
+         |                                                                                                                                                                                                                                        ^
+      52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true
+      53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()
+      54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-en-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-en-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-en-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.profile-page').first().getByRole('alert')
+    Expected: "이 사진을 열 수 없어요."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.profile-page').first().getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().getByRole('alert')
+
+
+      49 |  await root.locator('#edit-profile').click();await root.locator('#change-avatar').click();await close();await expect(root.locator('#edit-name')).toBeVisible();await root.locator('#page-back').click()
+      50 |  await open();const picker=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await picker).setFiles([]);await expect(root.locator('#upload-avatar')).toBeVisible();checks.pickerCancel=true
+    > 51 |  const bad=page.waitForEvent('filechooser');await root.locator('#upload-avatar').click();await(await bad).setFiles({name:'broken.png',mimeType:'image/png',buffer:Buffer.from('invalid image')});await expect(root.getByRole('alert')).toHaveText(t('This photo could not be opened.'));await snap('decode-failure')
+         |                                                                                                                                                                                                                                        ^
+      52 |  await upload(true);await snap('avatar-crop');const beforeZoom=await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());await root.locator('#avatar-zoom').fill('1.5');checks.zoomRedraw=beforeZoom!==await root.locator('#avatar-canvas').evaluate(e=>(e as HTMLCanvasElement).toDataURL());checks.zoom=await root.locator('#avatar-zoom').inputValue();await root.locator('.d4-close').focus();await page.keyboard.press('Escape');await expect(root.locator('#upload-avatar')).toBeVisible();checks.cropCancel=true
+      53 |  await upload();fail='upload';await root.locator('#save-avatar').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await expect(root.locator('#save-avatar')).toBeEnabled();await snap('upload-failure');checks.failureAlertOutsideDialog=await root.getByRole('alert').evaluate(e=>!e.closest('[role=dialog]'));fail='';await commit()
+      54 |  await open();await snap('avatar-gallery');fail='select';await root.locator('[data-avatar-slot]').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('select-failure');fail='';await root.locator('[data-avatar-slot]').click();await expect(panel).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r18-audit.spec.ts:51:232
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-ko-R18-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-ko-R18-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r18-audit.config.ts/r18-audit-812-ko-R18-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r18-audit.spec.ts:6:61 › 667 en R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 667 ko R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 812 en R18 fixture walkthrough ──────────────────────────────────
+    tests/r18-audit.spec.ts:6:61 › 812 ko R18 fixture walkthrough ──────────────────────────────────

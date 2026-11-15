@@ -28,32 +28,32 @@ async function setup(page:Page,mode?:Mode){
  await page.locator('#open-wallet').click()
  return log
 }
-const status=(page:Page)=>page.locator('.d1-topup [role=status]')
+const status=(page:Page)=>page.locator('.reply-topup [role=status]')
 test('topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD',async({page})=>{
  const log=await setup(page,{purchase:'cancelled',verify:200})
- await expect(page.locator('.diamond-pack b')).toHaveText(['₩100','₩550','₩1200','₩2600'])
- await expect(page.locator('.d1-topup')).not.toContainText('$')
+ await expect(page.locator('.reply-pack-price')).toHaveText(['₩100','₩550','₩1200','₩2600'])
+ await expect(page.locator('.reply-topup')).not.toContainText('$')
  expect(log.calls[0]).toEqual(['getProducts',{ids:products.map(p=>p.id)}])
 })
 test('topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back',async({page})=>{
  const log=await setup(page,{purchase:'purchased',verify:200})
- await page.locator('.diamond-pack').nth(1).click();await expect(page.locator('#confirm-pack')).toHaveText('Get 550 diamonds · ₩550');await page.locator('#confirm-pack').click()
- await expect(status(page)).toHaveText('Added 550 diamonds. Your balance is 550 diamonds.');await expect(page.locator('.d1-topup p strong')).toHaveText('550 diamonds')
+ await page.locator('.reply-pack').nth(1).click();await expect(page.locator('#confirm-pack')).toHaveText('Get 550 diamonds · ₩550');await page.locator('#confirm-native-pack').click()
+ await expect(status(page)).toHaveText('Added 550 diamonds. Your balance is 550 diamonds.');await expect(page.locator('.reply-balance strong')).toHaveText('550 diamonds')
  expect(log.calls.find(c=>c[0]==='purchase')![1]).toEqual({productId:'maugo.diamonds.550',appAccountToken:user})
  expect(log.verify).toEqual([{body:{signedTransaction:'jws.maugo.diamonds.550'},auth:'Bearer t',finishedBefore:false}])
  expect(log.calls.find(c=>c[0]==='finish')![1]).toEqual({transactionId:'2000000123'})
 })
 test('cancel and store errors: no verify, no balance change',async({page})=>{
  const mode={purchase:'cancelled',verify:200},log=await setup(page,mode)
- await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('Purchase cancelled. No charge has been made.')
- mode.purchase='pending';await page.locator('#confirm-pack').click();await expect(status(page)).toContainText('pending approval')
- mode.purchase='error';await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('Purchase failed: Cannot connect to iTunes Store. No charge has been made.')
- expect(log.verify).toEqual([]);await expect(page.locator('.d1-topup p strong')).toHaveText('0 diamonds')
+ await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toHaveText('Purchase cancelled. No charge has been made.')
+ mode.purchase='pending';await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toContainText('pending approval')
+ mode.purchase='error';await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toHaveText('Purchase failed: Cannot connect to iTunes Store. No charge has been made.')
+ expect(log.verify).toEqual([]);await expect(page.locator('.reply-balance strong')).toHaveText('0 diamonds')
 })
 test('verify failure: transaction left unfinished, no diamonds shown',async({page})=>{
  const log=await setup(page,{purchase:'purchased',verify:503})
- await page.locator('#confirm-pack').click();await expect(status(page)).toContainText('Payment received but not yet confirmed: Missing Apple configuration');await expect(status(page)).toContainText('No diamonds were added yet')
- expect(log.calls.some(c=>c[0]==='finish')).toBe(false);await expect(page.locator('.d1-topup p strong')).toHaveText('0 diamonds')
+ await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toContainText('Payment received but not yet confirmed: Missing Apple configuration');await expect(status(page)).toContainText('No diamonds were added yet')
+ expect(log.calls.some(c=>c[0]==='finish')).toBe(false);await expect(page.locator('.reply-balance strong')).toHaveText('0 diamonds')
 })
 test('unfinished transactions of this account are resubmitted on open',async({page})=>{
  const log=await setup(page,{purchase:'cancelled',verify:200,unfinished:[{signedTransaction:'jws.maugo.diamonds.100',transactionId:'1',appAccountToken:user.toLowerCase()},{signedTransaction:'jws.maugo.diamonds.2600',transactionId:'2',appAccountToken:'00000000-0000-0000-0000-000000000000'}]})
@@ -62,6 +62,6 @@ test('unfinished transactions of this account are resubmitted on open',async({pa
 })
 test('browser without StoreKit: no price, no charge',async({page})=>{
  const log=await setup(page)
- await expect(page.locator('.diamond-pack b')).toHaveText(Array(4).fill('Unavailable'))
- await page.locator('#confirm-pack').click();await expect(status(page)).toHaveText('In-app purchases are only available in the MauGo iOS app. No charge has been made.');expect(log.verify).toEqual([])
+ await expect(page.locator('.reply-pack-price')).toHaveText(Array(4).fill('Unavailable'))
+ await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toHaveText('In-app purchases are only available in the MauGo iOS app. No charge has been made.');expect(log.verify).toEqual([])
 })

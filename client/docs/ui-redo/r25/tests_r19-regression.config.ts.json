@@ -1,0 +1,179 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r19-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r19-regression.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r19-regression.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r19-regression.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d5.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r19-regression.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d5.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5169",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d5.spec.ts",
+      "file": "d5.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D5 real B17: supported states, limits, persistence and second-account access",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 69,
+                  "error": {
+                    "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__d5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__d5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d5.spec.ts:8:131",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d5.spec.ts",
+                      "column": 131,
+                      "line": 8
+                    },
+                    "snippet": " \u001b[90m  6 |\u001b[39m test(\u001b[32m'D5 real B17: supported states, limits, persistence and second-account access'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest\u001b[33m,\u001b[39mbrowser})\u001b[33m=>\u001b[39m{\n \u001b[90m  7 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mkdir(evidence\u001b[33m,\u001b[39m{recursive\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m  \u001b[36mconst\u001b[39m fixture\u001b[33m=\u001b[39mprocess\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mD5_SHARED_FIXTURE\u001b[39m\u001b[33m?\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mD5_SHARED_FIXTURE\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:3001/__d5/seed'\u001b[39m))\u001b[33m.\u001b[39mjson()\n \u001b[90m    |\u001b[39m                                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m  \u001b[36mconst\u001b[39m motionEvents\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mexposeFunction(\u001b[32m'__recordD5Motion'\u001b[39m\u001b[33m,\u001b[39m(event\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mmotionEvents\u001b[33m.\u001b[39mpush(event))\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(()\u001b[33m=>\u001b[39m{(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__d5Motion\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mdocument\u001b[33m.\u001b[39maddEventListener(\u001b[32m'transitionrun'\u001b[39m\u001b[33m,\u001b[39mevent\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m target\u001b[33m=\u001b[39mevent\u001b[33m.\u001b[39mtarget \u001b[36mas\u001b[39m \u001b[33mHTMLElement\u001b[39m\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(target\u001b[33m.\u001b[39mmatches(\u001b[32m'.sheet,.d5-page,.moment-card,.empty,.categories button'\u001b[39m))(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__recordD5Motion({target\u001b[33m:\u001b[39mtarget\u001b[33m.\u001b[39mclassName\u001b[33m,\u001b[39mproperty\u001b[33m:\u001b[39m(event \u001b[36mas\u001b[39m \u001b[33mTransitionEvent\u001b[39m)\u001b[33m.\u001b[39mpropertyName})})})\n \u001b[90m 11 |\u001b[39m  \u001b[36mconst\u001b[39m receipts\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d5.spec.ts",
+                        "column": 131,
+                        "line": 8
+                      },
+                      "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__d5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n   6 | test('D5 real B17: supported states, limits, persistence and second-account access',async({page,request,browser})=>{\n   7 |  test.setTimeout(180000);await mkdir(evidence,{recursive:true})\n>  8 |  const fixture=process.env.D5_SHARED_FIXTURE?JSON.parse(await readFile(process.env.D5_SHARED_FIXTURE,'utf8')):await(await request.post('http://127.0.0.1:3001/__d5/seed')).json()\n     |                                                                                                                                   ^\n   9 |  const motionEvents:any[]=[];await page.exposeFunction('__recordD5Motion',(event:any)=>motionEvents.push(event));\n  10 |  await page.addInitScript(()=>{(window as any).__d5Motion=[];document.addEventListener('transitionrun',event=>{const target=event.target as HTMLElement;if(target.matches('.sheet,.d5-page,.moment-card,.empty,.categories button'))(window as any).__recordD5Motion({target:target.className,property:(event as TransitionEvent).propertyName})})})\n  11 |  const receipts:any[]=[]\n    at /Users/anna/Muse_AI-repository/client/tests/d5.spec.ts:8:131"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:12:10.355Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r19-regression.config.ts/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d5.spec.ts",
+                    "column": 131,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ddce37b44ded91e972d0-822ac61c28612b15c799",
+          "file": "d5.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:12:10.169Z",
+    "duration": 344.28499999999997,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

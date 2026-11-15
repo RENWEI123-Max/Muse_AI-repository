@@ -79,7 +79,7 @@ border/check and canvas redraw are immediate. Prototype errors use toast(text), 
 
 所有头像初始为空，照片只来自仓库 portrait-5.png 的浏览器文件选择、canvas JPEG 编码、API上传字节；服务端存储由内存fixture模拟，不伪装真实账户或真实上传服务。满槽通过8次产品上传操作获得，没有直接设 Vue 状态或注入满槽 profile。重复同一照片是明确的测试输入，非8名真实用户照片。
 
-- 前轮空 [walkthrough-baseline.log](r18-audit/walkthrough-baseline.log) 无可推断错误，保留原状。重新复现发现 localhost listener 被沙箱拒绝 EPERM：[walkthrough-diagnosis.log](r18-audit/walkthrough-diagnosis.log)。申请本机执行后才可启动 preview；未修改测试断言掩盖启动失败。
+- 前轮空日志无可推断错误；R25收尾已移除该空占位，保留后续真实错误诊断。重新复现发现 localhost listener 被沙箱拒绝 EPERM：[walkthrough-diagnosis.log](r18-audit/walkthrough-diagnosis.log)。申请本机执行后才可启动 preview；未修改测试断言掩盖启动失败。
 - 修复前四组均因 avatar-panel overflow:visible 失败：[walkthrough-baseline-local.log](r18-audit/walkthrough-baseline-local.log)。增强断言再复现 .25s veil、archive wheel top=0 与 Escape 关闭整页：[walkthrough-red.log](r18-audit/walkthrough-red.log)。
 - 首次修复后，人工看长归档真实PNG发现 Back 覆盖照片。几何断言确认失败：[archive-layout-red.log](r18-audit/archive-layout-red.log)。随后只为长归档补正常流布局；不将“可滚动”冒充“无重叠”。
 - 新增按压采样第一次释放鼠标到背景，触发正确的背景关闭行为而使后续关闭定位超时：[press-harness-failure.log](r18-audit/press-harness-failure.log)。改成在原按钮释放并取消文件选择器，未修改生产行为或降低断言。

@@ -1,0 +1,180 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d1.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d1.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-d1.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-d1.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d1.spec.ts",
+      "file": "d1.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D1: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6352,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d1.spec.ts:9:88",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d1.spec.ts",
+                      "column": 88,
+                      "line": 9
+                    },
+                    "snippet": " \u001b[90m  7 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m i\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m<\u001b[39m\u001b[35m9\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m++\u001b[39m){\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:3001/__c6/reply'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{id\u001b[33m:\u001b[39mu\u001b[33m.\u001b[39mconversations[\u001b[35m0\u001b[39m]}})\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m pending\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m`http://127.0.0.1:3001/conversations/${u.conversations[0]}/replies/pending`\u001b[39m\u001b[33m,\u001b[39m{headers}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m r\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m`http://127.0.0.1:3001/conversations/${u.conversations[0]}/replies/${pending.items.at(-1).id}/collect`\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33m...\u001b[39mheaders\u001b[33m,\u001b[39m\u001b[32m'Idempotency-Key'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`d1-free-${i}`\u001b[39m}\u001b[33m,\u001b[39mdata\u001b[33m:\u001b[39m{}})\u001b[33m;\u001b[39mexpect(r\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()}\n \u001b[90m  8 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-nav button'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'1 free today'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-last-free.png'\u001b[39m})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'0 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mfreeRemaining)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m100\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'10 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-payment.png'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'2'\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m100\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-cancelled.png'\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m  \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:3001/__c5/balance'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{id\u001b[33m:\u001b[39mu\u001b[33m.\u001b[39mid\u001b[33m,\u001b[39mdiamonds\u001b[33m:\u001b[39m\u001b[35m0\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-topup'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-shortage.png'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-topup'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Diamonds'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-topup.png'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-pack'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'status'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'No charge'\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'status'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'selection saved'\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'2'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-topup'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:3001/__c5/balance'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{id\u001b[33m:\u001b[39mu\u001b[33m.\u001b[39mid\u001b[33m,\u001b[39mdiamonds\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Diamonds'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'status'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Diamonds added'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mlet\u001b[39m keys\u001b[33m:\u001b[39mstring[]\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/replies/*/collect'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m route\u001b[33m=>\u001b[39m{keys\u001b[33m.\u001b[39mpush(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39mheaders()[\u001b[32m'idempotency-key'\u001b[39m]\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(keys\u001b[33m.\u001b[39mlength\u001b[33m===\u001b[39m\u001b[35m1\u001b[39m){\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfetch()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mabort()}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mcontinue()})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(keys)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39mexpect(keys[\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoBe(keys[\u001b[35m1\u001b[39m])\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m90\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'1'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m ledger\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m'http://127.0.0.1:3001/wallet/ledger'\u001b[39m\u001b[33m,\u001b[39m{headers}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39mexpect(ledger\u001b[33m.\u001b[39mitems)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39mexpect(ledger\u001b[33m.\u001b[39mitems[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mamount)\u001b[33m.\u001b[39mtoBe(\u001b[33m-\u001b[39m\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m450\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'docs/c7-evidence/d1-reply-paid.png'\u001b[39m})\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d1.spec.ts",
+                        "column": 88,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n\n   7 |  for(let i=0;i<9;i++){await request.post('http://127.0.0.1:3001/__c6/reply',{data:{id:u.conversations[0]}});const pending=await(await request.get(`http://127.0.0.1:3001/conversations/${u.conversations[0]}/replies/pending`,{headers})).json();const r=await request.post(`http://127.0.0.1:3001/conversations/${u.conversations[0]}/replies/${pending.items.at(-1).id}/collect`,{headers:{...headers,'Idempotency-Key':`d1-free-${i}`},data:{}});expect(r.ok()).toBeTruthy()}\n   8 |  await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await expect(page.locator('#collect-replies')).toContainText('1 free today');await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-last-free.png'});\n>  9 |  await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect((await wallet()).freeRemaining).toBe(0);expect((await wallet()).diamonds).toBe(100);\n     |                                                                                        ^\n  10 |  await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('10 diamonds');await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-payment.png'});await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');expect((await wallet()).diamonds).toBe(100);await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-cancelled.png'});\n  11 |  await request.post('http://127.0.0.1:3001/__c5/balance',{data:{id:u.id,diamonds:0}});await page.locator('#collect-replies').click();await expect(page.locator('#reply-topup')).toBeVisible();await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-shortage.png'});await page.locator('#reply-topup').click();await expect(page.getByRole('dialog',{name:'Diamonds',exact:true})).toBeVisible();await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-topup.png'});await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');expect((await wallet()).diamonds).toBe(0);\n  12 |  await page.keyboard.press('Escape');await expect(page.getByRole('status')).toContainText('selection saved');expect((await wallet()).diamonds).toBe(0);await expect(page.locator('#collect-replies>b')).toHaveText('2');await page.locator('#reply-topup').click();await request.post('http://127.0.0.1:3001/__c5/balance',{data:{id:u.id,diamonds:100}});await expect(page.getByRole('dialog',{name:'Diamonds',exact:true})).toHaveCount(0);await expect(page.getByRole('status')).toContainText('Diamonds added');await expect(page.locator('#confirm-reply-payment')).toBeEnabled();let keys:string[]=[];await page.route('**/replies/*/collect',async route=>{keys.push(route.request().headers()['idempotency-key']!);if(keys.length===1){await route.fetch();await route.abort()}else await route.continue()});await page.locator('#confirm-reply-payment').click();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(keys).toHaveLength(2);expect(keys[0]).toBe(keys[1]);expect((await wallet()).diamonds).toBe(90);await expect(page.locator('#collect-replies>b')).toHaveText('1');const ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers})).json();expect(ledger.items).toHaveLength(1);expect(ledger.items[0].amount).toBe(-10);await page.waitForTimeout(450);await page.screenshot({path:'docs/c7-evidence/d1-reply-paid.png'});\n    at /Users/anna/Muse_AI-repository/client/tests/d1.spec.ts:9:88"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:33:22.089Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-d1.spec.ts/d1-D1-free-collection-→-pa-c6c91--→-resume-→-paid-retry-once/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d1.spec.ts",
+                    "column": 88,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bbb8683511dd7eb9d0ff-b6463fbd025c4f445bf6",
+          "file": "d1.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:33:21.117Z",
+    "duration": 7422.147,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

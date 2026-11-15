@@ -17,7 +17,7 @@ for(const file of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql'
 process.env.MEDIA_DIRECTORY="/tmp/"+database+"-media"
 const app=buildApp(db)
 await registerInboxContract(app,db)
-await app.listen({host:'127.0.0.1',port:3178})
+await app.listen({host:'127.0.0.1',port:3001})
 console.log('D8 isolated test backend ready: '+database)
 async function stop(){await app.close();await db.end();await admin.end();process.exit(0)}
 process.on('SIGTERM',stop);process.on('SIGINT',stop)

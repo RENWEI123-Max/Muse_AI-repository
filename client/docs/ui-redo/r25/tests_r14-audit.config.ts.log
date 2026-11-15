@@ -1,0 +1,118 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures (8.4s)
+  ✘  2 tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures (8.5s)
+  ✘  3 tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures (8.4s)
+  ✘  4 tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures (8.5s)
+
+
+  1) tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |   expect(measure.document.height).toBe(height);expect(measure.document.y).toBe(0);expect(measure.document.width).toBe(375)
+      38 |  }
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |
+      41 |  const backChat=()=>root.getByLabel(t('Back to messages')).click()
+      42 |  await page.locator('#chat-details').click();await page.locator('#report-person').click();await snap('safety-choice');checks.sheet=await page.locator('.safety-choice-sheet').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await page.locator('.safety-choice-close').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:39:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |   expect(measure.document.height).toBe(height);expect(measure.document.y).toBe(0);expect(measure.document.width).toBe(375)
+      38 |  }
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |
+      41 |  const backChat=()=>root.getByLabel(t('Back to messages')).click()
+      42 |  await page.locator('#chat-details').click();await page.locator('#report-person').click();await snap('safety-choice');checks.sheet=await page.locator('.safety-choice-sheet').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await page.locator('.safety-choice-close').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:39:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |   expect(measure.document.height).toBe(height);expect(measure.document.y).toBe(0);expect(measure.document.width).toBe(375)
+      38 |  }
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |
+      41 |  const backChat=()=>root.getByLabel(t('Back to messages')).click()
+      42 |  await page.locator('#chat-details').click();await page.locator('#report-person').click();await snap('safety-choice');checks.sheet=await page.locator('.safety-choice-sheet').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await page.locator('.safety-choice-close').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:39:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      37 |   expect(measure.document.height).toBe(height);expect(measure.document.y).toBe(0);expect(measure.document.width).toBe(375)
+      38 |  }
+    > 39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r14-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      40 |
+      41 |  const backChat=()=>root.getByLabel(t('Back to messages')).click()
+      42 |  await page.locator('#chat-details').click();await page.locator('#report-person').click();await snap('safety-choice');checks.sheet=await page.locator('.safety-choice-sheet').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await page.locator('.safety-choice-close').click();await expect(page.getByRole('dialog')).toHaveCount(0)
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:39:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures ─────────────────

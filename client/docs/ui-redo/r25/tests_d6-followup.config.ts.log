@@ -1,0 +1,39 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/d6-followup.spec.ts:2:1 › real global visibility and account logout (2.0m)
+
+
+  1) tests/d6-followup.spec.ts:2:1 › real global visibility and account logout ─────────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.waitForResponse: Test timeout of 120000ms exceeded.
+
+      15 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+      16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
+    > 17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')
+         |                    ^
+      18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()
+      19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
+      20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')
+        at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:17:20
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+      16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
+      17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')
+    > 18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()
+         |                                                  ^
+      19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
+      20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')
+      21 |  await page.screenshot({path:'docs/d6-round3/profile-visibility.png'})
+        at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:18:50
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-followup.config.ts/d6-followup-real-global-visibility-and-account-logout/error-context.md
+
+  1 failed
+    tests/d6-followup.spec.ts:2:1 › real global visibility and account logout ──────────────────────

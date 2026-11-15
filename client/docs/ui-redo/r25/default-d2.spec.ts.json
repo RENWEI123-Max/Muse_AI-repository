@@ -1,0 +1,244 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d2.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d2.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-d2.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-d2.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d2.spec.ts",
+      "file": "d2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D2 six states, preview cancel, apply, per-conversation persistence and bubble reset",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6192,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.d2-body')\nExpected: \u001b[32m\"d2-open\"\u001b[39m\nReceived: \u001b[31m\"none\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d2-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d2-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"d2-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.d2-body')\nExpected: \u001b[32m\"d2-open\"\u001b[39m\nReceived: \u001b[31m\"none\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d2-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d2-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"d2-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d2.spec.ts:10:115",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                      "column": 115,
+                      "line": 10
+                    },
+                    "snippet": " \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m background(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-background'\u001b[39m)\u001b[33m.\u001b[39mclick()}\n \u001b[90m  9 |\u001b[39m test(\u001b[32m'D2 six states, preview cancel, apply, per-conversation persistence and bubble reset'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m background(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'wallpapers'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d2-body'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'd2-open'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-wallpaper]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m8\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-wallpaper]'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(es\u001b[33m=>\u001b[39mes\u001b[33m.\u001b[39mmap(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'data-wallpaper'\u001b[39m))))\u001b[33m.\u001b[39mtoEqual(wallpapers)\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-wallpaper=\"moon-road\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'wallpaper-preview'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.wallpaper-preview img'\u001b[39m))\u001b[33m.\u001b[39mtoHaveJSProperty(\u001b[32m'complete'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Back to messages'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mlocalStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'maugo-chat-appearance-tea'\u001b[39m)))\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-wallpaper=\"moon-road\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#apply-wallpaper'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'wallpaper-applied'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.c6-chat'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-image'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/moon-road/\u001b[39m)\n \u001b[90m 12 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-bubbles'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'chat-bubbles'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#color-myBubble'\u001b[39m)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m\u001b[33mHTMLInputElement\u001b[39m)\u001b[33m=>\u001b[39m{el\u001b[33m.\u001b[39mvalue\u001b[33m=\u001b[39m\u001b[32m'#d9c6ff'\u001b[39m\u001b[33m;\u001b[39mel\u001b[33m.\u001b[39mdispatchEvent(\u001b[36mnew\u001b[39m \u001b[33mEvent\u001b[39m(\u001b[32m'input'\u001b[39m\u001b[33m,\u001b[39m{bubbles\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#color-theirText'\u001b[39m)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m\u001b[33mHTMLInputElement\u001b[39m)\u001b[33m=>\u001b[39m{el\u001b[33m.\u001b[39mvalue\u001b[33m=\u001b[39m\u001b[32m'#ffffff'\u001b[39m\u001b[33m;\u001b[39mel\u001b[33m.\u001b[39mdispatchEvent(\u001b[36mnew\u001b[39m \u001b[33mEvent\u001b[39m(\u001b[32m'input'\u001b[39m\u001b[33m,\u001b[39m{bubbles\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'chat-bubbles-custom'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#my-bubble'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-color'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'rgb(217, 198, 255)'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#their-bubble'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'color'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'rgb(255, 255, 255)'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Back to messages'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Back to messages'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.mine .chat-bubble'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-color'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'rgb(217, 198, 255)'\u001b[39m)\n \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Back to messages'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"ocean\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.c6-chat'\u001b[39m))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-image'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/moon-road/\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Back to messages'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.c6-chat'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-image'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/moon-road/\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                        "column": 115,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.d2-body')\nExpected: \u001b[32m\"d2-open\"\u001b[39m\nReceived: \u001b[31m\"none\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d2-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d2-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"d2-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n\n   8 | async function background(page:any){await page.locator('#chat-details').click();await page.locator('#chat-background').click()}\n   9 | test('D2 six states, preview cancel, apply, per-conversation persistence and bubble reset',async({page})=>{\n> 10 |  await enter(page);await background(page);await capture(page,'wallpapers');await expect(page.locator('.d2-body')).toHaveCSS('animation-name','d2-open');await expect(page.locator('[data-wallpaper]')).toHaveCount(8);expect(await page.locator('[data-wallpaper]').evaluateAll(es=>es.map(e=>e.getAttribute('data-wallpaper')))).toEqual(wallpapers)\n     |                                                                                                                   ^\n  11 |  await page.locator('[data-wallpaper=\"moon-road\"]').click();await capture(page,'wallpaper-preview');await expect(page.locator('.wallpaper-preview img')).toHaveJSProperty('complete',true);await page.getByLabel('Back to messages').click();expect(await page.evaluate(()=>localStorage.getItem('maugo-chat-appearance-tea'))).toBeNull();await page.locator('[data-wallpaper=\"moon-road\"]').click();await page.locator('#apply-wallpaper').click();await capture(page,'wallpaper-applied');await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/)\n  12 |  await page.locator('#chat-details').click();await page.locator('#chat-bubbles').click();await capture(page,'chat-bubbles');await page.locator('#color-myBubble').evaluate((el:HTMLInputElement)=>{el.value='#d9c6ff';el.dispatchEvent(new Event('input',{bubbles:true}))});await page.locator('#color-theirText').evaluate((el:HTMLInputElement)=>{el.value='#ffffff';el.dispatchEvent(new Event('input',{bubbles:true}))});await capture(page,'chat-bubbles-custom');await expect(page.locator('#my-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)');await expect(page.locator('#their-bubble')).toHaveCSS('color','rgb(255, 255, 255)');await page.getByLabel('Back to messages').click();await page.getByLabel('Back to messages').click();await expect(page.locator('.mine .chat-bubble')).toHaveCSS('background-color','rgb(217, 198, 255)')\n  13 |  await page.getByLabel('Back to messages').click();await page.locator('[data-chat=\"ocean\"]').click();await expect(page.locator('.c6-chat')).not.toHaveCSS('background-image',/moon-road/);await page.getByLabel('Back to messages').click();await page.locator('[data-chat=\"tea\"]').click();await expect(page.locator('.c6-chat')).toHaveCSS('background-image',/moon-road/)\n    at /Users/anna/Muse_AI-repository/client/tests/d2.spec.ts:10:115"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:33:29.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-d2.spec.ts/d2-D2-six-states-preview-c-07b5a-ersistence-and-bubble-reset/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                    "column": 115,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "243d914605fe1b28095d-8ce009f10d92d462fee8",
+          "file": "d2.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "D2 removed wallpaper references fall back to default without losing bubble settings",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6149,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.c6-chat')\nExpected pattern: \u001b[32m/theme-night/\u001b[39m\nReceived string:  \u001b[31m\"c6-chat chat-flow\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('.c6-chat') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.c6-chat')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-state=\"chat-open\" class=\"c6-chat chat-flow\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"c6-chat chat-flow\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.c6-chat')\nExpected pattern: \u001b[32m/theme-night/\u001b[39m\nReceived string:  \u001b[31m\"c6-chat chat-flow\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('.c6-chat') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.c6-chat')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-state=\"chat-open\" class=\"c6-chat chat-flow\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"c6-chat chat-flow\"\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d2.spec.ts:18:296",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                      "column": 296,
+                      "line": 18
+                    },
+                    "snippet": " \u001b[90m 16 |\u001b[39m })\n \u001b[90m 17 |\u001b[39m test(\u001b[32m'D2 removed wallpaper references fall back to default without losing bubble settings'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m wallpaperId \u001b[36mof\u001b[39m [\u001b[32m'starlit-lake'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'golden-light'\u001b[39m]){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(id\u001b[33m=>\u001b[39mlocalStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'maugo-chat-appearance-tea'\u001b[39m\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({wallpaperId\u001b[33m:\u001b[39mid\u001b[33m,\u001b[39mbackground\u001b[33m:\u001b[39m\u001b[32m'lavender'\u001b[39m\u001b[33m,\u001b[39mmyBubble\u001b[33m:\u001b[39m\u001b[32m'#d9c6ff'\u001b[39m}))\u001b[33m,\u001b[39mwallpaperId)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.c6-chat'\u001b[39m))\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/theme-night/\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.c6-chat'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-image'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'none'\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(localStorage\u001b[33m.\u001b[39mgetItem(\u001b[32m'maugo-chat-appearance-tea'\u001b[39m)\u001b[33m!\u001b[39m)))\u001b[33m.\u001b[39mtoEqual({background\u001b[33m:\u001b[39m\u001b[32m'night'\u001b[39m\u001b[33m,\u001b[39mmyBubble\u001b[33m:\u001b[39m\u001b[32m'#d9c6ff'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m background(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-wallpaper]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m8\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#wallpaper-default'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-pressed'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)}\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m })\n \u001b[90m 20 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                        "column": 296,
+                        "line": 18
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.c6-chat')\nExpected pattern: \u001b[32m/theme-night/\u001b[39m\nReceived string:  \u001b[31m\"c6-chat chat-flow\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('.c6-chat') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.c6-chat')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-state=\"chat-open\" class=\"c6-chat chat-flow\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"c6-chat chat-flow\"\u001b[22m\n\n\n  16 | })\n  17 | test('D2 removed wallpaper references fall back to default without losing bubble settings',async({page})=>{\n> 18 |  await enter(page);for(const wallpaperId of ['starlit-lake','golden-light']){await page.evaluate(id=>localStorage.setItem('maugo-chat-appearance-tea',JSON.stringify({wallpaperId:id,background:'lavender',myBubble:'#d9c6ff'})),wallpaperId);await enter(page);await expect(page.locator('.c6-chat')).toHaveClass(/theme-night/);await expect(page.locator('.c6-chat')).toHaveCSS('background-image','none');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('maugo-chat-appearance-tea')!))).toEqual({background:'night',myBubble:'#d9c6ff'});await background(page);await expect(page.locator('[data-wallpaper]')).toHaveCount(8);await expect(page.locator('#wallpaper-default')).toHaveAttribute('aria-pressed','true')}\n     |                                                                                                                                                                                                                                                                                                        ^\n  19 | })\n  20 |\n    at /Users/anna/Muse_AI-repository/client/tests/d2.spec.ts:18:296"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:33:36.245Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-d2.spec.ts/d2-D2-removed-wallpaper-re-e7c7e-hout-losing-bubble-settings/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d2.spec.ts",
+                    "column": 296,
+                    "line": 18
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "243d914605fe1b28095d-aa48e3bbd4bf808406f3",
+          "file": "d2.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:33:28.825Z",
+    "duration": 13664.951,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

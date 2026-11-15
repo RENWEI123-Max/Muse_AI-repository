@@ -21,6 +21,6 @@ app.post('/__d5/seed',async()=>{
  async function user(name){const email=name+'-'+stamp+'@test.local';const r=await app.inject({method:'POST',url:'/auth/signup',payload:{email,password,termsVersion:'1.0',privacyVersion:'1.0'}});if(r.statusCode!==201)throw Error(r.body);return {...r.json(),email,password}}
  return {author:await user('Author'),viewer:await user('Viewer'),database:name}
 })
-await app.listen({host:'127.0.0.1',port:3069})
+await app.listen({host:'127.0.0.1',port:3001})
 console.log('D5 isolated database: '+name)
 for(const signal of ['SIGTERM','SIGINT'])process.on(signal,async()=>{await app.close();await db.end();process.exit(0)})

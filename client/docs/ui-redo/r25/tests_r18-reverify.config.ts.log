@@ -1,0 +1,33 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence (59ms)
+  -  2 tests/d4-reverify.spec.ts:31:1 › offline prototype comparison evidence
+
+
+  1) tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ─────────
+
+    Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001
+    Call log:
+      - → POST http://127.0.0.1:3001/__c5/seed
+        - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 16
+
+
+      4 | test('D4 real backend profile, stats and avatar persistence',async({page,request})=>{
+      5 |  test.setTimeout(180000)
+    > 6 |  const a=process.env.D4_SHARED_ACCOUNT?JSON.parse(await readFile(process.env.D4_SHARED_ACCOUNT,'utf8')):await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json()
+        |                                                                                                                             ^
+      7 |  const headers={Authorization:`Bearer ${a.token}`}
+      8 |  const shot=async(name:string)=>{await page.screenshot({animations:'disabled',path:`test-results/d4-round2/${name}.png`})}
+      9 |  async function login(name='Reader'){if(process.env.D4_SHARED_ACCOUNT){await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token);await page.goto('/')}else{await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password);await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click();}await page.locator('#open-profile').click();await expect(page.locator('#edit-profile')).toContainText(name)}
+        at /Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts:6:125
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r18-reverify.config.ts/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md
+
+  1 failed
+    tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence ──────────
+  1 skipped

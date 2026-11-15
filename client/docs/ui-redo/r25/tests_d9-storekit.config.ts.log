@@ -1,0 +1,11 @@
+
+Running 6 tests using 1 worker
+
+  ✓  1 tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD (566ms)
+  ✓  2 tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back (1.4s)
+  ✓  3 tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change (2.1s)
+  ✓  4 tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown (1.4s)
+  ✓  5 tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open (553ms)
+  ✓  6 tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge (1.3s)
+
+  6 passed (8.0s)

@@ -1,0 +1,25 @@
+{
+  "baseline": "27c74f5",
+  "branch": "codex/r25-wrapup",
+  "finalBuild": "VITE_API_BASE_URL=/api MAUGO_API_TARGET=http://127.0.0.1:3001 npm run build: exit 0",
+  "cachedDiffCheck": "PASS",
+  "productVueAndBackendFilesChanged": false,
+  "previewLogStaged": false,
+  "runtimeImportantCount": 0,
+  "repositoryImportantCount": 130,
+  "emptyFiles": 0,
+  "cssHexOutsideTokens": 0,
+  "remainingJsSvgColors": "not cleared; static acceptance NOT PASSED",
+  "livePngCount": 54,
+  "liveStateCaptures": 38,
+  "liveScriptErrors": 0,
+  "totalStates": 189,
+  "historicalComparisonCount": 179,
+  "missingComparisons": 10,
+  "acceptance": {
+    "static": "未通过／待 Smith",
+    "flow": "未通过／待 Smith",
+    "effects": "未通过／待 Smith",
+    "scrollAndCopy": "未通过／待 Smith"
+  }
+}

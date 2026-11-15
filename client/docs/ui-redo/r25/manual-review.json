@@ -1,0 +1,11 @@
+{
+  "inspected": [
+    "667-ko-wallet-empty.png",
+    "667-en-home-empty.png",
+    "667-ko-profile-content.png"
+  ],
+  "profileHorizontalCandidate": "Avatar button: scrollWidth93 vs clientWidth88; screenshot shows camera badge overlapping avatar by design. No text in candidate. Not a full glyph/cropping acceptance.",
+  "allDocumentScrollFalse": true,
+  "noObservedApi500": true,
+  "missingModule": "reply-cost: ordinary fresh accounts lack paid-reply condition; no wallet seed or deduction performed"
+}

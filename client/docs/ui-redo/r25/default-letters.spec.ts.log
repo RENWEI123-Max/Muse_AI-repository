@@ -1,0 +1,34 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/letters.spec.ts:3:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database (5.6s)
+
+
+  1) tests/letters.spec.ts:3:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.letters-panel')
+    Expected: "letter-open"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.letters-panel') with timeout 5000ms
+      - waiting for locator('.letters-panel')
+
+
+      10 |  mkdirSync('docs/ui-redo/r08',{recursive:true})
+      11 |  const panel=page.locator('.letters-panel');const state=async(s:string)=>{
+    > 12 |   await expect(panel).toHaveAttribute('data-state',s);await expect(panel).toHaveCSS('transform','none')
+         |                       ^
+      13 |   const geometry=async(selector:string,values:number[])=>{await expect.poll(async()=>{const b=await page.locator(selector).boundingBox();return b?Math.max(...['x','y','width','height'].map((k,i)=>Math.abs(b[k as keyof typeof b]-values[i]!))):Infinity},{message:selector+' Figma geometry'}).toBeLessThanOrEqual(1)}
+      14 |   await geometry('.letters-panel',[12,144,351,s.startsWith('compose-')&&s!=='compose-sent'?496:560])
+      15 |   if(s.startsWith('compose-')&&s!=='compose-sent'){
+        at state (/Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:12:23)
+        at /Users/anna/Muse_AI-repository/client/tests/letters.spec.ts:30:8
+
+    Error Context: ../../../../tmp/maugo-r25-default-letters.spec.ts/letters-C4-module03-ten-st-84a3a-etries-on-isolated-database/error-context.md
+
+  1 failed
+    tests/letters.spec.ts:3:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database

@@ -1,0 +1,176 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/fidelity-refactor/fix-119.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/fix-119.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor",
+        "testIgnore": [],
+        "testMatch": [
+          "fix-119.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor",
+        "testIgnore": [],
+        "testMatch": "fix-119.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "deviceScaleFactor": 1
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5173 --strictPort",
+      "cwd": "/Users/anna/Muse_AI-repository/client/",
+      "url": "http://127.0.0.1:5173"
+    }
+  },
+  "suites": [
+    {
+      "title": "fix-119.spec.ts",
+      "file": "fix-119.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fix 119 visual evidence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60027,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/fix-119.spec.ts",
+                        "column": 103,
+                        "line": 71
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.profile-nav button').first()\u001b[22m\n\n\n  69 |  }\n  70 |\n> 71 |  await page.setViewportSize({width:375,height:667});await page.locator('.profile-nav button').first().click();await shot(page,'home-short');await page.locator('#compose').click();await shot(page,'compose-short');\n     |                                                                                                       ^\n  72 |  if(prefix.endsWith('/after')){const footer=await page.locator('.opening-form footer').boundingBox(),nav=await page.locator('.home-nav').boundingBox();expect(footer!.y+footer!.height).toBeLessThanOrEqual(nav!.y);}\n  73 |\n  74 | })\n    at /Users/anna/Muse_AI-repository/client/docs/fidelity-refactor/fix-119.spec.ts:71:103"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:34:11.761Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts/fix-119-fix-119-visual-evidence/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0268d0ae2dcefa79608e-b1c9e1c5d423de2b03d1",
+          "file": "fix-119.spec.ts",
+          "line": 48,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:34:11.170Z",
+    "duration": 60714.925,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

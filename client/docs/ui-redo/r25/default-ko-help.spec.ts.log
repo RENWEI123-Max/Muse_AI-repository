@@ -1,0 +1,28 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/ko-help.spec.ts:3:1 › Korean help and FAQ translate and switch back to English (30.0s)
+
+
+  1) tests/ko-help.spec.ts:3:1 › Korean help and FAQ translate and switch back to English ──────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+       8 |  await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+       9 |  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    > 10 |  await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click()
+         |                                                  ^
+      11 |  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
+      12 |  await page.locator('#language-settings').click();await page.locator('[data-language="ko"]').click()
+      13 |  await page.locator('#settings-back').click();await page.locator('#help-settings').click()
+        at /Users/anna/Muse_AI-repository/client/tests/ko-help.spec.ts:10:50
+
+    Error Context: ../../../../tmp/maugo-r25-default-ko-help.spec.ts/ko-help-Korean-help-and-FA-ecf75--and-switch-back-to-English/error-context.md
+
+  1 failed
+    tests/ko-help.spec.ts:3:1 › Korean help and FAQ translate and switch back to English ───────────

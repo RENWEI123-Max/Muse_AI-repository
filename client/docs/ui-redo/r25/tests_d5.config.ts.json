@@ -1,0 +1,171 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d5.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d5.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/d5.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_d5.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d5.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_d5.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d5.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5169",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d5.spec.ts",
+      "file": "d5.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D5 real B17: supported states, limits, persistence and second-account access",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 180027,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d5.spec.ts",
+                        "column": 41,
+                        "line": 27
+                      },
+                      "message": "Error: locator.click: Test timeout of 180000ms exceeded.\nBrowser logs:\n\n<launching> /Users/anna/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/l2/tympb61s507_rfbhdcps9tr40000gn/T/playwright_chromiumdev_profile-JGJzYf --remote-debugging-pipe --no-startup-window\n<launched> pid=84178\n[pid=84178][err] [1115/054021.729394:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=84178][err] [1115/054021.820398:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=84178][err] [1115/054021.830909:INFO:CONSOLE:733] \"[vite] connecting...\", source: http://127.0.0.1:5169/@vite/client (733)\n[pid=84178][err] [1115/054021.851035:INFO:CONSOLE:827] \"[vite] connected.\", source: http://127.0.0.1:5169/@vite/client (827)\n[pid=84178][err] [1115/054021.978968:INFO:CONSOLE:2306] \"[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated. \n[pid=84178][err]   at <ProfileFlow key=1 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" onClose=fn  ... > \n[pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... > \n[pid=84178][err]   at <Transition name=\"tab-page\" > \n[pid=84178][err]   at <HomeFlow key=0 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" user-id=\"\"  ... > \n[pid=84178][err]   at <App>\", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)\n[pid=84178][err] [1115/054021.998817:INFO:CONSOLE:2306] \"[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated. \n[pid=84178][err]   at <ProfileFlow key=1 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" onClose=fn  ... > \n[pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... > \n[pid=84178][err]   at <Transition name=\"tab-page\" > \n[pid=84178][err]   at <HomeFlow key=0 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" user-id=\"\"  ... > \n[pid=84178][err]   at <App>\", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)\n[pid=84178][err] [1115/054022.007289:INFO:CONSOLE:2306] \"[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated. \n[pid=84178][err]   at <ProfileFlow key=1 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" onClose=fn  ... > \n[pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... > \n[pid=84178][err]   at <Transition name=\"tab-page\" > \n[pid=84178][err]   at <HomeFlow key=0 token=\"6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8\" user-id=\"\"  ... > \n[pid=84178][err]   at <App>\", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)\n[pid=84178] <gracefully close start>\nCall log:\n\u001b[2m  - waiting for locator('#profile-moments')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"profile-moments\">My moments ›</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button id=\"card-visibility\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button id=\"card-type\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    84 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <button id=\"card-type\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <button id=\"card-visibility\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <button id=\"card-type\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <button id=\"card-type\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button id=\"card-type\" class=\"ui-row ui-row--cards\">…</button> from <div class=\"cards-overlay cards-card-options\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n  25 |  expect((await request.get('http://127.0.0.1:3001'+mediaUrl,{headers:viewerHeaders})).status()).toBe(403)\n  26 |  await openCard();await page.locator('#card-remove').click();await snap('card-remove');await page.getByRole('button',{name:'Cancel',exact:true}).click()\n> 27 |  await page.locator('#profile-moments').click();await expect(page.locator('.empty:not(.d5-item-leave-active)').last()).toBeVisible();await snap('moments-empty')\n     |                                         ^\n  28 |  await page.locator('#new-moment').click();await expect(page.locator('#save-moment')).toBeDisabled();await snap('moment-empty')\n  29 |  await page.locator('#moment-text').fill('A quiet afternoon, a little story worth sharing.');await snap('moment-draft')\n  30 |  await page.locator('#d5-back').click();await snap('moment-leave');await page.locator('#keep-moment-draft').click();await login(page,fixture.author);await page.locator('#profile-moments').click();await page.locator('#new-moment').click();await expect(page.locator('#moment-text')).toHaveValue('A quiet afternoon, a little story worth sharing.')\n    at /Users/anna/Muse_AI-repository/client/tests/d5.spec.ts:27:41"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:40:21.647Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d5.config.ts/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ddce37b44ded91e972d0-822ac61c28612b15c799",
+          "file": "d5.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:40:20.181Z",
+    "duration": 181633.941,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

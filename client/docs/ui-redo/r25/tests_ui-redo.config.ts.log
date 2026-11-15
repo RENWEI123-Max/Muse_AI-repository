@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+{"id":"home-ready","differentPixels":2074,"totalPixels":304500,"maskedPixels":16500,"ratio":0.006811165845648604,"percent":0.6811165845648605}
+  ✓  1 tests/ui-redo.spec.ts:41:29 › home-ready (1.7s)
+{"id":"terms-unchecked","differentPixels":26951,"totalPixels":304500,"maskedPixels":16500,"ratio":0.08850903119868637,"percent":8.850903119868638}
+  ✓  2 tests/ui-redo.spec.ts:41:29 › terms-unchecked (1.3s)
+{"id":"signin-empty","differentPixels":15982,"totalPixels":304500,"maskedPixels":16500,"ratio":0.052486042692939244,"percent":5.248604269293924}
+  ✓  3 tests/ui-redo.spec.ts:41:29 › signin-empty (1.3s)
+{"id":"signup-empty","differentPixels":17367,"totalPixels":304500,"maskedPixels":16500,"ratio":0.05703448275862069,"percent":5.703448275862069}
+  ✓  4 tests/ui-redo.spec.ts:41:29 › signup-empty (1.3s)
+
+  4 passed (6.2s)

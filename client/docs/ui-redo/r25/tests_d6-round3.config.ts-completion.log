@@ -1,0 +1,128 @@
+
+Running 5 tests using 1 worker
+
+  ✘  1 tests/d6-feedback.spec.ts:2:1 › B19 feedback is sent, visible to moderation, and rate limit preserves input (2.0m)
+  ✘  2 tests/d6-followup.spec.ts:2:1 › real global visibility and account logout (2.0m)
+  ✘  3 tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout (10.4s)
+  ✘  4 tests/d6.spec.ts:15:1 › D6 local settings persistence, states and cache confirmation preserve real account and ledgers (2.0m)
+  ✘  5 tests/d6.spec.ts:73:1 › D6 Korean business screens keep user content intact (2.0m)
+
+
+  1) tests/d6-feedback.spec.ts:2:1 › B19 feedback is sent, visible to moderation, and rate limit preserves input
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+       8 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+       9 |  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    > 10 |  await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click()
+         |                                                  ^
+      11 |  await page.locator('#open-profile').click();await page.locator('#open-settings').click();await page.locator('#feedback-settings').click()
+      12 |  await expect(page.locator('#save-feedback')).toBeDisabled()
+      13 |  await page.locator('#feedback-text').fill('D6 round three: real B19 browser submission')
+        at /Users/anna/Muse_AI-repository/client/tests/d6-feedback.spec.ts:10:50
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-round3.config.ts/d6-feedback-B19-feedback-i-6fe8d--rate-limit-preserves-input/error-context.md
+
+  2) tests/d6-followup.spec.ts:2:1 › real global visibility and account logout ─────────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.waitForResponse: Test timeout of 120000ms exceeded.
+
+      15 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+      16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
+    > 17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')
+         |                    ^
+      18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()
+      19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
+      20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')
+        at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:17:20
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+      16 |  await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password)
+      17 |  const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST')
+    > 18 |  await page.locator('#auth-form button.primary').click();const session=await (await signed).json()
+         |                                                  ^
+      19 |  await page.getByRole('button',{name:'Meet your letters'}).click();await page.locator('#open-profile').click();await page.locator('#profile-global-visibility').click()
+      20 |  await expect(page.locator('#global-profile-visibility small')).toHaveText('Everyone')
+      21 |  await page.screenshot({path:'docs/d6-round3/profile-visibility.png'})
+        at /Users/anna/Muse_AI-repository/client/tests/d6-followup.spec.ts:18:50
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-round3.config.ts/d6-followup-real-global-visibility-and-account-logout/error-context.md
+
+  3) tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout ─
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+      10 |  const login=async()=>{
+      11 |   await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    > 12 |   await page.locator('#auth-form button.primary').click()
+         |                                                   ^
+      13 |   const result=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters')&&r.request().method()==='GET')
+      14 |   await page.getByRole('button',{name:'Meet your letters'}).click()
+      15 |   const response=await result;expect(response.ok()).toBeTruthy();return new URL(response.url())
+        at login (/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:12:51)
+        at /Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:26:10
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-round3.config.ts/d6-recommendation-recommen-28b53--filters-and-survive-logout/error-context.md
+
+  4) tests/d6.spec.ts:15:1 › D6 local settings persistence, states and cache confirmation preserve real account and ledgers
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+       7 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+       8 |  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    >  9 |  await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:/Meet your letters|편지 만나기/}).click()
+         |                                                  ^
+      10 |  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
+      11 |  await expect(page.locator('.settings-flow')).toBeVisible()
+      12 | }
+        at signIn (/Users/anna/Muse_AI-repository/client/tests/d6.spec.ts:9:50)
+        at /Users/anna/Muse_AI-repository/client/tests/d6.spec.ts:31:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-round3.config.ts/d6-D6-local-settings-persi-4aad1-ve-real-account-and-ledgers/error-context.md
+
+  5) tests/d6.spec.ts:73:1 › D6 Korean business screens keep user content intact ───────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+       7 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+       8 |  await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    >  9 |  await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:/Meet your letters|편지 만나기/}).click()
+         |                                                  ^
+      10 |  await page.locator('#open-profile').click();await page.locator('#open-settings').click()
+      11 |  await expect(page.locator('.settings-flow')).toBeVisible()
+      12 | }
+        at signIn (/Users/anna/Muse_AI-repository/client/tests/d6.spec.ts:9:50)
+        at /Users/anna/Muse_AI-repository/client/tests/d6.spec.ts:76:2
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-round3.config.ts/d6-D6-Korean-business-screens-keep-user-content-intact/error-context.md
+
+  5 failed
+    tests/d6-feedback.spec.ts:2:1 › B19 feedback is sent, visible to moderation, and rate limit preserves input
+    tests/d6-followup.spec.ts:2:1 › real global visibility and account logout ──────────────────────
+    tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout ──
+    tests/d6.spec.ts:15:1 › D6 local settings persistence, states and cache confirmation preserve real account and ledgers
+    tests/d6.spec.ts:73:1 › D6 Korean business screens keep user content intact ────────────────────

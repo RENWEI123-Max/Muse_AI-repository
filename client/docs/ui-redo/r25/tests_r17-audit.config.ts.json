@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r17-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r17-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r17-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r17-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5337",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5337 --strictPort",
+      "url": "http://127.0.0.1:5337",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r17-audit.spec.ts",
+      "file": "r17-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R17 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6498,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                      "column": 171,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-edit'\u001b[39m)\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Cancelled draft'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit reader'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'17'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Enter a name and an age between 18 and 100.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-invalid'\u001b[39m)\u001b[33m;\u001b[39mexpect(calls\u001b[33m.\u001b[39mfilter(c\u001b[33m=>\u001b[39mc\u001b[33m.\u001b[39mmethod\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'25'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-failure'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-success'\u001b[39m)\n \u001b[90m 51 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#likes'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-likes'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mlikes\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.profile-likes'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({animation\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationName\u001b[33m,\u001b[39mduration\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationDuration\u001b[33m,\u001b[39mfocusInside\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mcontains(document\u001b[33m.\u001b[39mactiveElement)\u001b[33m,\u001b[39munderlayInert\u001b[33m:\u001b[39m\u001b[33m!\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'.profile-page'\u001b[39m)\u001b[33m?.\u001b[39mquerySelector(\u001b[32m'.d4-body[inert]'\u001b[39m)}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Got it'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                        "column": 171,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  46 |  await root.locator('#edit-profile').click();await snap('profile-edit')\n  47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')\n> 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)\n     |                                                                                                                                                                           ^\n  49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false\n  50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')\n  51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:24.312Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-en-R17-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-en-R17-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                    "column": 171,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "850f6da81b2eab139ab9-2a0b2c671f4dc20b1c87",
+          "file": "r17-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko R17 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6645,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                      "column": 171,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-edit'\u001b[39m)\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Cancelled draft'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit reader'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'17'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Enter a name and an age between 18 and 100.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-invalid'\u001b[39m)\u001b[33m;\u001b[39mexpect(calls\u001b[33m.\u001b[39mfilter(c\u001b[33m=>\u001b[39mc\u001b[33m.\u001b[39mmethod\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'25'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-failure'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-success'\u001b[39m)\n \u001b[90m 51 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#likes'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-likes'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mlikes\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.profile-likes'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({animation\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationName\u001b[33m,\u001b[39mduration\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationDuration\u001b[33m,\u001b[39mfocusInside\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mcontains(document\u001b[33m.\u001b[39mactiveElement)\u001b[33m,\u001b[39munderlayInert\u001b[33m:\u001b[39m\u001b[33m!\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'.profile-page'\u001b[39m)\u001b[33m?.\u001b[39mquerySelector(\u001b[32m'.d4-body[inert]'\u001b[39m)}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Got it'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                        "column": 171,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  46 |  await root.locator('#edit-profile').click();await snap('profile-edit')\n  47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')\n> 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)\n     |                                                                                                                                                                           ^\n  49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false\n  50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')\n  51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:31.112Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-ko-R17-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-667-ko-R17-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                    "column": 171,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "850f6da81b2eab139ab9-637a64c7feec99ff9511",
+          "file": "r17-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en R17 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6517,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                      "column": 171,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-edit'\u001b[39m)\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Cancelled draft'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit reader'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'17'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Enter a name and an age between 18 and 100.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-invalid'\u001b[39m)\u001b[33m;\u001b[39mexpect(calls\u001b[33m.\u001b[39mfilter(c\u001b[33m=>\u001b[39mc\u001b[33m.\u001b[39mmethod\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'25'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-failure'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-success'\u001b[39m)\n \u001b[90m 51 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#likes'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-likes'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mlikes\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.profile-likes'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({animation\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationName\u001b[33m,\u001b[39mduration\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationDuration\u001b[33m,\u001b[39mfocusInside\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mcontains(document\u001b[33m.\u001b[39mactiveElement)\u001b[33m,\u001b[39munderlayInert\u001b[33m:\u001b[39m\u001b[33m!\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'.profile-page'\u001b[39m)\u001b[33m?.\u001b[39mquerySelector(\u001b[32m'.d4-body[inert]'\u001b[39m)}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Got it'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                        "column": 171,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"Enter a name and an age between 18 and 100.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  46 |  await root.locator('#edit-profile').click();await snap('profile-edit')\n  47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')\n> 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)\n     |                                                                                                                                                                           ^\n  49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false\n  50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')\n  51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:38.152Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-en-R17-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-en-R17-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                    "column": 171,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "850f6da81b2eab139ab9-03473d74003fba0cf021",
+          "file": "r17-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko R17 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6663,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                      "column": 171,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-edit'\u001b[39m)\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Cancelled draft'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit reader'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'17'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Enter a name and an age between 18 and 100.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-invalid'\u001b[39m)\u001b[33m;\u001b[39mexpect(calls\u001b[33m.\u001b[39mfilter(c\u001b[33m=>\u001b[39mc\u001b[33m.\u001b[39mmethod\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m))\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'25'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'Please try again.'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-failure'\u001b[39m)\u001b[33m;\u001b[39mfailSave\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\n \u001b[90m 50 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Audit saved'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'save-success'\u001b[39m)\n \u001b[90m 51 |\u001b[39m  \u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'#likes'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'profile-likes'\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mlikes\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mlocator(\u001b[32m'.profile-likes'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({animation\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationName\u001b[33m,\u001b[39mduration\u001b[33m:\u001b[39mgetComputedStyle(e)\u001b[33m.\u001b[39manimationDuration\u001b[33m,\u001b[39mfocusInside\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mcontains(document\u001b[33m.\u001b[39mactiveElement)\u001b[33m,\u001b[39munderlayInert\u001b[33m:\u001b[39m\u001b[33m!\u001b[39m\u001b[33m!\u001b[39me\u001b[33m.\u001b[39mclosest(\u001b[32m'.profile-page'\u001b[39m)\u001b[33m?.\u001b[39mquerySelector(\u001b[32m'.d4-body[inert]'\u001b[39m)}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Got it'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                        "column": 171,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().getByRole('alert')\nExpected: \u001b[32m\"이름과 18~100세의 나이를 입력하세요.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.profile-page').first().getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().getByRole('alert')\u001b[22m\n\n\n  46 |  await root.locator('#edit-profile').click();await snap('profile-edit')\n  47 |  await root.locator('#edit-name').fill('Cancelled draft');await back();await expect(root.locator('#edit-profile')).toHaveText('Audit reader')\n> 48 |  await root.locator('#edit-profile').click();await root.locator('#edit-age').fill('17');await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Enter a name and an age between 18 and 100.'));await snap('profile-invalid');expect(calls.filter(c=>c.method==='PATCH')).toHaveLength(0)\n     |                                                                                                                                                                           ^\n  49 |  await root.locator('#edit-age').fill('25');failSave=true;await root.locator('#save-profile').click();await expect(root.getByRole('alert')).toHaveText(t('Please try again.'));await snap('save-failure');failSave=false\n  50 |  await root.locator('#edit-name').fill('Audit saved');await root.locator('#save-profile').click();await expect(root.locator('#edit-profile')).toHaveText('Audit saved');await snap('save-success')\n  51 |  await root.locator('#likes').click();await snap('profile-likes');checks.likes=await root.locator('.profile-likes').evaluate(e=>({animation:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration,focusInside:e.contains(document.activeElement),underlayInert:!!e.closest('.profile-page')?.querySelector('.d4-body[inert]')}));await root.getByRole('button',{name:t('Got it'),exact:true}).click();await expect(root.getByRole('dialog')).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts:48:171"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:44.968Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-ko-R17-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r17-audit.config.ts/r17-audit-812-ko-R17-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r17-audit.spec.ts",
+                    "column": 171,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "850f6da81b2eab139ab9-89ab5d26a3f87d85d037",
+          "file": "r17-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:10:23.747Z",
+    "duration": 28117.122,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

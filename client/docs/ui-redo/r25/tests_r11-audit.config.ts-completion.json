@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r11-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r11-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r11-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r11-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r11-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r11-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5321",
+          "trace": "on"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5321 --strictPort",
+      "url": "http://127.0.0.1:5321",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r11-audit.spec.ts",
+      "file": "r11-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R11 actual clicks API fixture",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15624,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                      "column": 285,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r11-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-details-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  pending\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m7000\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[90m// Collection preserves the originating chat; only enter a row if returned to inbox.\u001b[39m\n \u001b[90m 40 |\u001b[39m  \u001b[36mif\u001b[39m(\u001b[33m!\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mcount())\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-open'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m initial\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-thread'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({top\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollTop\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollHeight\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientHeight}))\u001b[33m;\u001b[39mexpect(initial\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                        "column": 285,
+                        "line": 38
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n\n  36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()\n  37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')\n> 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();\n     |                                                                                                                                                                                                                                                                                             ^\n  39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.\n  40 |  if(!await root.count())await page.locator('[data-chat]').click()\n  41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:51:44.330Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-667-en-R11-actual-clicks-API-fixture/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-667-en-R11-actual-clicks-API-fixture/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                    "column": 285,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "de14e8d9631dcc731281-f8dd32d9c63551664cd2",
+          "file": "r11-audit.spec.ts",
+          "line": 7,
+          "column": 61
+        },
+        {
+          "title": "667 ko R11 actual clicks API fixture",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15810,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                      "column": 285,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r11-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-details-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  pending\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m7000\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[90m// Collection preserves the originating chat; only enter a row if returned to inbox.\u001b[39m\n \u001b[90m 40 |\u001b[39m  \u001b[36mif\u001b[39m(\u001b[33m!\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mcount())\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-open'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m initial\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-thread'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({top\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollTop\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollHeight\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientHeight}))\u001b[33m;\u001b[39mexpect(initial\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                        "column": 285,
+                        "line": 38
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n\n  36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()\n  37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')\n> 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();\n     |                                                                                                                                                                                                                                                                                             ^\n  39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.\n  40 |  if(!await root.count())await page.locator('[data-chat]').click()\n  41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:52:00.306Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-667-ko-R11-actual-clicks-API-fixture/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-667-ko-R11-actual-clicks-API-fixture/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                    "column": 285,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "de14e8d9631dcc731281-97bdef8340ad8d9d638e",
+          "file": "r11-audit.spec.ts",
+          "line": 7,
+          "column": 61
+        },
+        {
+          "title": "812 en R11 actual clicks API fixture",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15600,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                      "column": 285,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r11-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-details-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  pending\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m7000\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[90m// Collection preserves the originating chat; only enter a row if returned to inbox.\u001b[39m\n \u001b[90m 40 |\u001b[39m  \u001b[36mif\u001b[39m(\u001b[33m!\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mcount())\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-open'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m initial\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-thread'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({top\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollTop\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollHeight\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientHeight}))\u001b[33m;\u001b[39mexpect(initial\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                        "column": 285,
+                        "line": 38
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n\n  36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()\n  37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')\n> 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();\n     |                                                                                                                                                                                                                                                                                             ^\n  39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.\n  40 |  if(!await root.count())await page.locator('[data-chat]').click()\n  41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:52:16.548Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-812-en-R11-actual-clicks-API-fixture/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-812-en-R11-actual-clicks-API-fixture/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                    "column": 285,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "de14e8d9631dcc731281-69d64c696e8f2eb06832",
+          "file": "r11-audit.spec.ts",
+          "line": 7,
+          "column": 61
+        },
+        {
+          "title": "812 ko R11 actual clicks API fixture",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15758,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                      "column": 285,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r11-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-details-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m back()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-waiting'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  pending\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m7000\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'chat-receipt-waiting'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(root)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-state'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-receipt-waiting'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(\u001b[32m'Collect your reply'\u001b[39m)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[90m// Collection preserves the originating chat; only enter a row if returned to inbox.\u001b[39m\n \u001b[90m 40 |\u001b[39m  \u001b[36mif\u001b[39m(\u001b[33m!\u001b[39m\u001b[36mawait\u001b[39m root\u001b[33m.\u001b[39mcount())\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat]'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'chat-open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chat-open'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m initial\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-thread'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({top\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollTop\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollHeight\u001b[33m,\u001b[39mheight\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientHeight}))\u001b[33m;\u001b[39mexpect(initial\u001b[33m.\u001b[39mtop)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                        "column": 285,
+                        "line": 38
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reply-payment-cancel')\u001b[22m\n\n\n  36 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r11-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat]').click()\n  37 |  await shot('chat-waiting','chat-waiting');await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details-waiting');await back();await expect(root).toHaveAttribute('data-state','chat-waiting')\n> 38 |  pending=true;await expect(root).toHaveAttribute('data-state','chat-receipt-waiting',{timeout:7000});await shot('chat-receipt-waiting','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#reply-payment-cancel').click();await expect(root).toHaveAttribute('data-state','chat-receipt-waiting');await page.getByRole('button',{name:t('Collect your reply'),exact:true}).click();await page.locator('#confirm-reply-payment').click();\n     |                                                                                                                                                                                                                                                                                             ^\n  39 |  // Collection preserves the originating chat; only enter a row if returned to inbox.\n  40 |  if(!await root.count())await page.locator('[data-chat]').click()\n  41 |  await shot('chat-open','chat-open');const initial=await page.locator('#chat-thread').evaluate(e=>({top:e.scrollTop,content:e.scrollHeight,height:e.clientHeight}));expect(initial.top).toBeGreaterThan(0)\n    at /Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts:38:285"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:52:32.487Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-812-ko-R11-actual-clicks-API-fixture/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r11-audit.config.ts/r11-audit-812-ko-R11-actual-clicks-API-fixture/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r11-audit.spec.ts",
+                    "column": 285,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "de14e8d9631dcc731281-084495da1d0a77b0091e",
+          "file": "r11-audit.spec.ts",
+          "line": 7,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:51:43.745Z",
+    "duration": 64773.752,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

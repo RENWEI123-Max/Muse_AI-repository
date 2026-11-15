@@ -1,0 +1,176 @@
+[
+  {
+    "file": "default-chat.spec.ts.log",
+    "rawSha256": "7ea28af9002548308e31ce19f3115f75bde944a3952203815d56a9d45dc2e70b",
+    "displaySha256": "4fce4b68b2a04fa8ece80f97dd7159de4584f12312f11d3f527a7f142ef30519",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-d1.spec.ts.log",
+    "rawSha256": "35de63d1c58dfaf6b23d77477cceaf5faf52f9cd2db13a396ccb90f4f81bdbe2",
+    "displaySha256": "a36c7221bffc3a48e97787a2f91fdcac3d52bfe3964dc89842da78c38ebbd9e2",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-d2.spec.ts.log",
+    "rawSha256": "b9e83405399b35bff35ae4660e19dc7278988d3c23089c6214b3ba12d22e2669",
+    "displaySha256": "8409263ba863b32c90d4bb4f07ac5ad8347930d4bc65a7cf70f7b9394d852774",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-d3.spec.ts.log",
+    "rawSha256": "67c7fc2e5d7110041ec9ad9e8f01d1cee7606d6440c9a9d156b8470481fafef0",
+    "displaySha256": "729786d233d1200c4dfb384e7f2eae3f882c4573b94c59004afa1c7e66ad5a34",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-f01.spec.ts.log",
+    "rawSha256": "60af69ef663d5af98df61442490a320caa9be731832a3c9883f5f45a976f6e55",
+    "displaySha256": "ce195107f0f3ccbb91d5e2f6246ffad135d7d7b4c7eca948f163dacd336f8f36",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-home.spec.ts.log",
+    "rawSha256": "8d7d83fe19ca9e3fd1513ed021cd9d26124801152abe477242a38d06366cd160",
+    "displaySha256": "6b4f111576f8fda5feaab6b937b02b30d4c05866abe0c93b6597e183dea500f6",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-inbox.spec.ts.log",
+    "rawSha256": "27bcbd3ea0e914b377a1ac53120c27230ed05f6ec37b5b3f19b6cae7d21df346",
+    "displaySha256": "276a8cb15f5cb0635a29b3639aec98397ed99df0a41732e5e3114144ee154990",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-letters.spec.ts.log",
+    "rawSha256": "a657a0423a3448cb2406dc154b4eae95f2e82ef54a71d07e9de7e4c6c9868939",
+    "displaySha256": "56a57a12893dbf79235c826498b62809eb17d4b8465ffbd1b9a73c2a2c1a7993",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "default-pass-confirmation.spec.ts.log",
+    "rawSha256": "2576c016a3a720da782883eee419036f76f7c4b6725ea897b73425f3256da2d0",
+    "displaySha256": "6205914031a725babaff1d5d981622afb7f44b0c44de464c790292a11cd32920",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "docs_fidelity-refactor_existing-ui.config.ts.log",
+    "rawSha256": "f59557eb091e2d038f8b94897f38268fc8d326f18cc0a04b4dc60154ac63f82c",
+    "displaySha256": "d795bbdbcf37d84871f480be9ee1b62176eb9fcea50bad1b556348d1dc35d851",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "docs_fidelity-refactor_playwright.config.ts.log",
+    "rawSha256": "96035e0a1e8b22e693287ef7f75f1f49aad5e8cf2d44a50af1b296def84642bc",
+    "displaySha256": "34244952cc530bcf354e05213e1c9cd8503677592e3661c0eb8e03a86ea85acb",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "playwright.r10.config.ts-completion.log",
+    "rawSha256": "66264e3c169c6c0f734bcb6d44ba0153c38c2440731d5efa257083f89a0a017f",
+    "displaySha256": "44dc709f2b1b901f4d95710dc62350ac789777b578d0bd7411518d2948ab9a89",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "playwright.r13.config.ts-completion.log",
+    "rawSha256": "5e51bae2de4c0c3607a5858f6c728e4b7566f1613b2acafd0839911cffef0b0a",
+    "displaySha256": "703ef7d489196e80e40666cd685eb89b8fffbd88039ef8f8c71c9fec5beb8cc3",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_baseline-r18-regression.config.ts.log",
+    "rawSha256": "b3366a10ba4616f8f01a0a6039365ea813849075267287987cba54486eab2458",
+    "displaySha256": "bf1bb88c8747544a2ec2b3d4a62072931779e968e7919226a14974fb0b09fc8f",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d11.config.ts.log",
+    "rawSha256": "472f314ad65805a6a0031ae8a5655b39f53b2cbf1c42f423aa262c4bcb5aadee",
+    "displaySha256": "56c72d63f6f056cda93069b10871de7a0a8b4d8ee8888fa3d495302813cb1fc9",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d4.config.ts.log",
+    "rawSha256": "14f0879e4daabec31a1e5d5fb815d2082e9d07ccaaff7c2629496c6be7b68a86",
+    "displaySha256": "511f1b78539bd4d61d79ead166cab9491623e4aee99b89e4967e659b20be6e79",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d5.config.ts.log",
+    "rawSha256": "45d0e37e9fd33bff7fa33af2bcfcd5b16c514c02a65aded87e754df618f4fe37",
+    "displaySha256": "747288ce0833eb05f525318841aa8f0f5d6f493ebb0534c55d6eadf13fbadd4f",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d6-round3.config.ts-completion.log",
+    "rawSha256": "11f4d991851cc567b3aae4289857cfcd2b305df6720a18927bb9e2b9a9e8a5d8",
+    "displaySha256": "9b5ffc988ee1da5ac74b7bc077465b8af95d9821036f49bab0c321a59d8604d5",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d7.config.ts.log",
+    "rawSha256": "6b8c4ca00f2e81bed531e778982ba88e0c6f5047cbae4b4fb4672e6522a84cb9",
+    "displaySha256": "dded96ad5b317ea9859486b1ad267ee018d4f967eb101aa68263f322b744bd57",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_d8.config.ts.log",
+    "rawSha256": "6b8c4ca00f2e81bed531e778982ba88e0c6f5047cbae4b4fb4672e6522a84cb9",
+    "displaySha256": "dded96ad5b317ea9859486b1ad267ee018d4f967eb101aa68263f322b744bd57",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_f06.config.ts.log",
+    "rawSha256": "6b8c4ca00f2e81bed531e778982ba88e0c6f5047cbae4b4fb4672e6522a84cb9",
+    "displaySha256": "dded96ad5b317ea9859486b1ad267ee018d4f967eb101aa68263f322b744bd57",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_f07.config.ts.log",
+    "rawSha256": "6b8c4ca00f2e81bed531e778982ba88e0c6f5047cbae4b4fb4672e6522a84cb9",
+    "displaySha256": "dded96ad5b317ea9859486b1ad267ee018d4f967eb101aa68263f322b744bd57",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r15.config.ts-completion.log",
+    "rawSha256": "dc7c16ca6bdb1036fafb9f74837401d5f7df8a4b77a87d69068b3aaca3c3a301",
+    "displaySha256": "a4318822b4e33e6a0441e3ac12e21a744ad871a8a528997b9405cb4c4330a067",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r16-regression.config.ts.log",
+    "rawSha256": "077c7fb27d8b5c079eb5108df6c2bab630f3370447eba02bc02888aedff6158b",
+    "displaySha256": "feccc7250ff173f965151baef27a95253e695b31e9ceaebffb1d9348797c7258",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r17-regression.config.ts.log",
+    "rawSha256": "090b2b07e998a427f85e5cc970f6805a48eeb1af6f8eb0a812971bb91fa25770",
+    "displaySha256": "1f733cdd2942d7b3b67841ec6d91b72f211bff88a847200e808d0a1e6276467e",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r18-regression.config.ts.log",
+    "rawSha256": "761c3af24b0ce40be11ab5145e10fc306497c926176d4c6cb36aa65989941ce0",
+    "displaySha256": "55c3c734be15866522c2d9d962b3d135221295ec8009a7f0c5febf905ebad831",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r19-regression.config.ts.log",
+    "rawSha256": "808add6c95fd5136dc702b15c979ec6cae42cd9eb795942e32ecd07e50614bdd",
+    "displaySha256": "a53175943805cd7153bd14aaadbb0aa9ad793daadb6696c09d1c52366a8859bf",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r20-regression.config.ts.log",
+    "rawSha256": "17106f0a4d78f61c0ae7b308c2e86b4fc989e83880bc9b440c4e4aa991b3bc11",
+    "displaySha256": "0b8da692245b239a5750b83075a8922b6226d12d76fe2c2757e83df91ad1f563",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  },
+  {
+    "file": "tests_r20.config.ts.log",
+    "rawSha256": "646f0e59bc94c1e3ae78b4917e8150714a48edf2fd307d1aa4751c28f75f4123",
+    "displaySha256": "4d1bf8a53c416d6706bad224b8711a95f0046210b5a9b0455d04e88bc33fe8ea",
+    "change": "trailing line spaces/tabs and EOF blank lines only; exact raw bytes retained in raw-logs.zip"
+  }
+]

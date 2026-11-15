@@ -1,0 +1,7 @@
+
+Running 5 tests using 1 worker
+
+  ✘  1 tests/d6-feedback.spec.ts:2:1 › B19 feedback is sent, visible to moderation, and rate limit preserves input (2.0m)
+  ✘  2 tests/d6-followup.spec.ts:2:1 › real global visibility and account logout (2.0m)
+  ✘  3 tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout (10.4s)
+  ✘  4 tests/d6.spec.ts:15:1 › D6 local settings persistence, states and cache confirmation preserve real account and ledgers (2.0m)

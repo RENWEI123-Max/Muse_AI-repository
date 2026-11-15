@@ -1,0 +1,46 @@
+{
+  "client/src/home.css": {
+    "onlyExactColorCentralization": true
+  },
+  "client/src/styles.css": {
+    "onlyExactColorCentralization": true
+  },
+  "client/src/fidelity.css": {
+    "onlyExactColorCentralization": true
+  },
+  "vueScriptsUnchanged": true,
+  "undefinedCentralizedColors": [],
+  "centralizedColorsUsed": 36,
+  "testPortOnlyChanges": {
+    "client/tests/d11-server.mjs": true,
+    "client/tests/d11.config.ts": true,
+    "client/tests/d11.spec.ts": true,
+    "client/tests/d4-reverify-server.mjs": true,
+    "client/tests/d4-reverify.config.ts": true,
+    "client/tests/d4-reverify.spec.ts": true,
+    "client/tests/d5-server.mjs": true,
+    "client/tests/d5.config.ts": true,
+    "client/tests/d5.spec.ts": true,
+    "client/tests/d6-feedback.spec.ts": true,
+    "client/tests/d6-followup-server.mjs": true,
+    "client/tests/d6-followup.config.ts": true,
+    "client/tests/d6-followup.spec.ts": true,
+    "client/tests/d6-recommendation.config.ts": true,
+    "client/tests/d6-recommendation.spec.ts": true,
+    "client/tests/d6-round3.config.ts": true,
+    "client/tests/d7.config.ts": true,
+    "client/tests/d8-server.mjs": true,
+    "client/tests/d8.config.ts": true,
+    "client/tests/d8.spec.ts": true,
+    "client/tests/f06-server.mjs": true,
+    "client/tests/f06.config.ts": true,
+    "client/tests/f06.spec.ts": true,
+    "client/tests/f07.config.ts": true,
+    "client/tests/f07.spec.ts": true,
+    "client/tests/r15.config.ts": true,
+    "client/tests/r19-cards.spec.ts": true
+  },
+  "d7OriginalAssertionsPreserved": true,
+  "d9OnlyWalletSelectorsChanged": true,
+  "backendProductFilesChanged": []
+}

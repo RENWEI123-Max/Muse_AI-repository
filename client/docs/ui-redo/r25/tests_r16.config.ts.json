@@ -1,0 +1,499 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r16.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r16.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r16.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r16.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r16-person.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r16.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r16-person.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5296",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "r16-person.spec.ts",
+      "file": "r16-person.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "R16 isolated person-profile geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 51,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:21.876Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-694f4-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-b0779b4fe27fa77e85fa",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        },
+        {
+          "title": "R16 isolated person-waiting geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 50,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:22.176Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-22936-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-c854becbf5af35b80048",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        },
+        {
+          "title": "R16 isolated person-followed geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 50,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:22.471Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-6f9ba-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-0d951aeadb42d5168f3b",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        },
+        {
+          "title": "R16 isolated person-no-content geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 51,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:22.765Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-9921c-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-359bdbefa66affcd0786",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        },
+        {
+          "title": "R16 isolated person-photo geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 49,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:23.057Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-1ba98-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-cd76fb2a70551196065d",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        },
+        {
+          "title": "R16 isolated person-safety geometry and computed styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 50,
+                  "error": {
+                    "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                      "column": 47,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Unexpected isolated request '\u001b[39m\u001b[33m+\u001b[39mpath)\n \u001b[90m 18 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m moduleSource\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m'/src/components/ProfileFlow.vue'\u001b[39m))\u001b[33m.\u001b[39mtext()\n \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[36mconst\u001b[39m vueUrl\u001b[33m=\u001b[39mmoduleSource\u001b[33m.\u001b[39mmatch(\u001b[35m/from \"([^\"]*vue\\.js[^\"]*)\"/\u001b[39m)\u001b[33m!\u001b[39m[\u001b[35m1\u001b[39m]\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/__r16-fixture'\u001b[39m\u001b[33m,\u001b[39mr\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mfulfill({contentType\u001b[33m:\u001b[39m\u001b[32m'text/html'\u001b[39m\u001b[33m,\u001b[39mbody\u001b[33m:\u001b[39m\u001b[32m`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`\u001b[39m}))\n \u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/__r16-fixture'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-name'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mdocument\u001b[33m.\u001b[39mfonts\u001b[33m.\u001b[39mready)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                        "column": 47,
+                        "line": 19
+                      },
+                      "message": "Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\n  17 |   throw Error('Unexpected isolated request '+path)\n  18 |  })\n> 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()\n     |                                               ^\n  20 |  const vueUrl=moduleSource.match(/from \"([^\"]*vue\\.js[^\"]*)\"/)![1]\n  21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang=\"en\"><body><div class=\"device\" id=\"fixture\"></div><script type=\"module\">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))\n  22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)\n    at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:23.349Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-b1771-eometry-and-computed-styles/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts",
+                    "column": 47,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "00a2353677409df523ce-5dde4d0360ad156a7f3c",
+          "file": "r16-person.spec.ts",
+          "line": 7,
+          "column": 27
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:10:21.698Z",
+    "duration": 1779.59,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

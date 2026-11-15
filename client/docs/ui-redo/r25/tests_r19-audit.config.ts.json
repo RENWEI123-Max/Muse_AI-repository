@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r19-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r19-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r19-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r19-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r19-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r19-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5339",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5339 --strictPort",
+      "url": "http://127.0.0.1:5339",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r19-audit.spec.ts",
+      "file": "r19-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R19 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6067,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                      "column": 149,
+                      "line": 40
+                    },
+                    "snippet": " \u001b[90m 38 |\u001b[39m  \u001b[36mconst\u001b[39m upload\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m chooser\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m chooser)\u001b[33m.\u001b[39msetFiles(\u001b[32m'src/assets/05-avatars/portrait-5.png'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)}\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r19-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'empty'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'list'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Please try again.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'list-failure'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Retry'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'card-type'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancelPanelRemains\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 42 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m invalid\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m invalid)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'bad.txt'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'text/plain'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'not a photo'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Choose an image.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'invalid-file'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 43 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m large\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m large)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'large.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39malloc(\u001b[35m10\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'below 10 MB'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'size-boundary'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                        "column": 149,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n\n  38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}\n  39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()\n> 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)\n     |                                                                                                                                                     ^\n  41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()\n  42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()\n  43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:43.886Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-en-R19-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-en-R19-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                    "column": 149,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cab8ca4b4c1e4c4fda3e-37a7ddfc23892c51ffd7",
+          "file": "r19-audit.spec.ts",
+          "line": 4,
+          "column": 61
+        },
+        {
+          "title": "667 ko R19 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6289,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                      "column": 149,
+                      "line": 40
+                    },
+                    "snippet": " \u001b[90m 38 |\u001b[39m  \u001b[36mconst\u001b[39m upload\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m chooser\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m chooser)\u001b[33m.\u001b[39msetFiles(\u001b[32m'src/assets/05-avatars/portrait-5.png'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)}\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r19-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'empty'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'list'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Please try again.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'list-failure'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Retry'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'card-type'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancelPanelRemains\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 42 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m invalid\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m invalid)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'bad.txt'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'text/plain'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'not a photo'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Choose an image.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'invalid-file'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 43 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m large\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m large)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'large.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39malloc(\u001b[35m10\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'below 10 MB'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'size-boundary'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                        "column": 149,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n\n  38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}\n  39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()\n> 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)\n     |                                                                                                                                                     ^\n  41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()\n  42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()\n  43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:50.257Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-ko-R19-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-667-ko-R19-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                    "column": 149,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cab8ca4b4c1e4c4fda3e-dbab1aa09e8f1232a54d",
+          "file": "r19-audit.spec.ts",
+          "line": 4,
+          "column": 61
+        },
+        {
+          "title": "812 en R19 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6059,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                      "column": 149,
+                      "line": 40
+                    },
+                    "snippet": " \u001b[90m 38 |\u001b[39m  \u001b[36mconst\u001b[39m upload\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m chooser\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m chooser)\u001b[33m.\u001b[39msetFiles(\u001b[32m'src/assets/05-avatars/portrait-5.png'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)}\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r19-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'empty'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'list'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Please try again.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'list-failure'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Retry'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'card-type'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancelPanelRemains\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 42 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m invalid\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m invalid)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'bad.txt'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'text/plain'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'not a photo'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Choose an image.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'invalid-file'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 43 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m large\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m large)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'large.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39malloc(\u001b[35m10\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'below 10 MB'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'size-boundary'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                        "column": 149,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n\n  38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}\n  39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()\n> 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)\n     |                                                                                                                                                     ^\n  41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()\n  42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()\n  43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:56.939Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-en-R19-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-en-R19-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                    "column": 149,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cab8ca4b4c1e4c4fda3e-54bfba565ba448e7307f",
+          "file": "r19-audit.spec.ts",
+          "line": 4,
+          "column": 61
+        },
+        {
+          "title": "812 ko R19 fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6292,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                      "column": 149,
+                      "line": 40
+                    },
+                    "snippet": " \u001b[90m 38 |\u001b[39m  \u001b[36mconst\u001b[39m upload\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m chooser\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m chooser)\u001b[33m.\u001b[39msetFiles(\u001b[32m'src/assets/05-avatars/portrait-5.png'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)}\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'r19-audit@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SamplePass2026'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form .auth-main'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.flow-content > .ui-button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m  \u001b[36mawait\u001b[39m shot(\u001b[32m'empty'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m'list'\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Please try again.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'list-failure'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mfail\u001b[33m=\u001b[39m\u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Retry'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(d5\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'card-type'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m picker\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m picker)\u001b[33m.\u001b[39msetFiles([])\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mpickerCancelPanelRemains\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 42 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m invalid\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m invalid)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'bad.txt'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'text/plain'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(\u001b[32m'not a photo'\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Choose an image.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'invalid-file'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()\n \u001b[90m 43 |\u001b[39m  \u001b[36mawait\u001b[39m d5\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-image-card'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m large\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m panel\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-card-type=portrait]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m large)\u001b[33m.\u001b[39msetFiles({name\u001b[33m:\u001b[39m\u001b[32m'large.png'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'image/png'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39malloc(\u001b[35m10\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m\u001b[33m*\u001b[39m\u001b[35m1024\u001b[39m)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(panel\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'below 10 MB'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m shot(\u001b[32m'size-boundary'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m close()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                        "column": 149,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-page').first().locator('.d5').getByRole('alert').first()\nExpected substring: \u001b[32m\"Please try again.\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-page').first().locator('.d5').getByRole('alert').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-page').first().locator('.d5').getByRole('alert').first()\u001b[22m\n\n\n  38 |  const upload=async()=>{await d5.locator('#upload-image-card').click();const chooser=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(panel).toHaveCount(0)}\n  39 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r19-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#upload-image-card')).toBeEnabled()\n> 40 |  await shot('empty',false);fail='list';await page.goto('/');await page.locator('#open-profile').click();await expect(d5.getByRole('alert').first()).toContainText('Please try again.');await shot('list-failure',false);fail='';await d5.getByRole('button',{name:'Retry',exact:true}).click();await expect(d5.getByRole('alert')).toHaveCount(0)\n     |                                                                                                                                                     ^\n  41 |  await d5.locator('#upload-image-card').click();await shot('card-type');const picker=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await picker).setFiles([]);checks.pickerCancelPanelRemains=await panel.isVisible();await close()\n  42 |  await d5.locator('#upload-image-card').click();const invalid=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await invalid).setFiles({name:'bad.txt',mimeType:'text/plain',buffer:Buffer.from('not a photo')});await expect(panel.getByRole('alert')).toHaveText('Choose an image.');await shot('invalid-file');await close()\n  43 |  await d5.locator('#upload-image-card').click();const large=page.waitForEvent('filechooser');await panel.locator('[data-card-type=portrait]').click();await(await large).setFiles({name:'large.png',mimeType:'image/png',buffer:Buffer.alloc(10*1024*1024)});await expect(panel.getByRole('alert')).toContainText('below 10 MB');await shot('size-boundary');await close()\n    at /Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts:40:149"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:12:03.299Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-ko-R19-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r19-audit.config.ts/r19-audit-812-ko-R19-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r19-audit.spec.ts",
+                    "column": 149,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cab8ca4b4c1e4c4fda3e-265a3be8d85c7c49dc42",
+          "file": "r19-audit.spec.ts",
+          "line": 4,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:11:43.324Z",
+    "duration": 26501.556,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

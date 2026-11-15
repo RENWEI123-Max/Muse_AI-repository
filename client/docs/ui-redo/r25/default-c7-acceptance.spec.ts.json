@@ -1,0 +1,214 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "c7-acceptance.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-c7-acceptance.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-c7-acceptance.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-c7-acceptance.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "c7-acceptance.spec.ts",
+      "file": "c7-acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "C7 offline deliverables open, local images decode",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 45,
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, scandir '/root/MauGo-handover/extracted/MauGo完整项目交接-2026-10-27/03-成品UI/离线预览'",
+                    "stack": "Error: ENOENT: no such file or directory, scandir '/root/MauGo-handover/extracted/MauGo完整项目交接-2026-10-27/03-成品UI/离线预览'\n    at /Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts:7:20",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts",
+                      "column": 20,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m test(\u001b[32m'C7 offline deliverables open, local images decode'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  6 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m120000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m file \u001b[36mof\u001b[39m readdirSync(root\u001b[33m+\u001b[39m\u001b[32m'/03-成品UI/离线预览'\u001b[39m)\u001b[33m.\u001b[39mfilter(f\u001b[33m=>\u001b[39mf\u001b[33m.\u001b[39mendsWith(\u001b[32m'.html'\u001b[39m))){\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m errors\u001b[33m:\u001b[39mstring[]\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mpage\u001b[33m.\u001b[39mon(\u001b[32m'pageerror'\u001b[39m\u001b[33m,\u001b[39me\u001b[33m=>\u001b[39merrors\u001b[33m.\u001b[39mpush(e\u001b[33m.\u001b[39mmessage))\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(pathToFileURL(root\u001b[33m+\u001b[39m\u001b[32m'/03-成品UI/离线预览/'\u001b[39m\u001b[33m+\u001b[39mfile)\u001b[33m.\u001b[39mhref\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'body'\u001b[39m))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeEmpty()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts",
+                        "column": 20,
+                        "line": 7
+                      },
+                      "message": "Error: ENOENT: no such file or directory, scandir '/root/MauGo-handover/extracted/MauGo完整项目交接-2026-10-27/03-成品UI/离线预览'\n\n   5 | test('C7 offline deliverables open, local images decode',async({page})=>{\n   6 |  test.setTimeout(120000)\n>  7 |  for(const file of readdirSync(root+'/03-成品UI/离线预览').filter(f=>f.endsWith('.html'))){\n     |                    ^\n   8 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))\n   9 |   await page.goto(pathToFileURL(root+'/03-成品UI/离线预览/'+file).href,{waitUntil:'domcontentloaded'})\n  10 |   await expect(page.locator('body')).not.toBeEmpty()\n    at /Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts:7:20"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:29:19.850Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-c7-acceptance.spec.ts/c7-acceptance-C7-offline-d-90922-es-open-local-images-decode/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts",
+                    "column": 20,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6f54579aed8e6da4261a-51d94fed9eda4040a3f5",
+          "file": "c7-acceptance.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "C7 chat network failure and upload failure preserve retry intent; empty send disabled",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:29:20.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6f54579aed8e6da4261a-e228c3a7982e14172bd5",
+          "file": "c7-acceptance.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:29:18.375Z",
+    "duration": 3621.526,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

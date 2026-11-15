@@ -1,0 +1,25 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode (45ms)
+  ✓  2 tests/c7-acceptance.spec.ts:16:1 › C7 chat network failure and upload failure preserve retry intent; empty send disabled (1.8s)
+
+
+  1) tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode ───────────
+
+    Error: ENOENT: no such file or directory, scandir '/root/MauGo-handover/extracted/MauGo完整项目交接-2026-10-27/03-成品UI/离线预览'
+
+       5 | test('C7 offline deliverables open, local images decode',async({page})=>{
+       6 |  test.setTimeout(120000)
+    >  7 |  for(const file of readdirSync(root+'/03-成品UI/离线预览').filter(f=>f.endsWith('.html'))){
+         |                    ^
+       8 |   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
+       9 |   await page.goto(pathToFileURL(root+'/03-成品UI/离线预览/'+file).href,{waitUntil:'domcontentloaded'})
+      10 |   await expect(page.locator('body')).not.toBeEmpty()
+        at /Users/anna/Muse_AI-repository/client/tests/c7-acceptance.spec.ts:7:20
+
+    Error Context: ../../../../tmp/maugo-r25-default-c7-acceptance.spec.ts/c7-acceptance-C7-offline-d-90922-es-open-local-images-decode/error-context.md
+
+  1 failed
+    tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode ────────────
+  1 passed (3.6s)

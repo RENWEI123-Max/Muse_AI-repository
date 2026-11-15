@@ -1,0 +1,116 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft (5.6s)
+  ✘  2 tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle (2.1m)
+  ✘  3 tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits (6.6s)
+  ✘  4 tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue (10.1s)
+
+
+  1) tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft ──
+
+    Error: Timeout 5000ms exceeded while waiting on the predicate
+
+       5 | async function shot(page:Page,name:string){await page.screenshot({path:`docs/d11/${name}.png`})}
+       6 | async function motion(page:Page,selector:string,name:string){
+    >  7 |  await expect.poll(()=>page.locator(selector).evaluate(el=>el.getAnimations().length)).toBeGreaterThan(0)
+         |                                                                                        ^
+       8 |  const data=await page.locator(selector).evaluate(el=>el.getAnimations().map(a=>({timing:a.effect!.getTiming(),frames:(a.effect as KeyframeEffect).getKeyframes()})))
+       9 |  await writeFile(`docs/d11/${name}-motion.json`,JSON.stringify(data,null,2));return data
+      10 | }
+        at motion (/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:7:88)
+        at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:18:84
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-opening-reply-envelope-0511d-elayed-send-and-saved-draft/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-opening-reply-envelope-0511d-elayed-send-and-saved-draft/error-context.md
+
+  2) tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.evaluate: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('.inbox-veil')
+
+
+       9 |  await writeFile(`docs/d11/${name}-motion.json`,JSON.stringify(data,null,2));return data
+      10 | }
+    > 11 | async function settled(page:Page,selector:string){await page.locator(selector).evaluate(async el=>{await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));await Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))})}
+         |                                                                                ^
+      12 | test.beforeEach(async({page})=>{await page.addInitScript(()=>{(window as any).__d11Motion=[];for(const type of ['animationstart','transitionrun'])document.addEventListener(type,event=>{const el=event.target as HTMLElement;if(!el.closest('.letters-veil,.inbox-flow')&&!el.matches('.d11-flying-letter'))return;const s=getComputedStyle(el);(window as any).__d11Motion.push({type,classes:el.className,animation:s.animationName,animationDuration:s.animationDuration,transition:s.transitionProperty,duration:s.transitionDuration,easing:s.transitionTimingFunction,delay:s.transitionDelay})})})})
+      13 | test.afterEach(async({page},info)=>{await writeFile(`docs/d11/${info.title.split(':')[0]}-transitions.json`,JSON.stringify(await page.evaluate(()=>(window as any).__d11Motion),null,2));const video=page.video();await page.close();await video?.saveAs(`docs/d11/${info.title.split(':')[0]}.webm`)})
+      14 |
+        at settled (/Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:11:80)
+        at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:35:153
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-collection-unlock-real-2ed01-e-unlock-under-CPU-throttle/error-context.md
+
+  3) tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected substring: "0 diamonds"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      50 | test('reduced-motion: open, send, free collection and unlock without animation waits',async({page,request})=>{
+      51 |  await page.emulateMedia({reducedMotion:'reduce'});const f=await(await request.post(backend+'/__d11/letter')).json();await login(page,f.viewer);await page.locator('.letter-bird').first().click({force:true});await expect(page.locator('#reply')).toBeVisible();await expect(page.locator('.d11-flying-letter')).toBeHidden();await page.locator('#reply').fill('A quiet hello.');await page.locator('#reply-send').click();await expect(page.locator('#continue-chat')).toBeVisible();await shot(page,'reduced-reply');await page.getByRole('button',{name:'Close',exact:true}).click()
+    > 52 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'pending'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').first().click();await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();const r=await request.get(backend+'/__d11/evidence/'+u.id);expect(r.ok(),await r.text()).toBeTruthy();const result=await r.json();expect(result.user.diamonds).toBe(100);expect(result.ledger).toHaveLength(0);await shot(page,'reduced-unlock');await writeFile('docs/d11/free-evidence.json',JSON.stringify(result,null,2))
+         |                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+      53 | })
+      54 |
+      55 | test('arrival-unlock: reply arriving after entering chat refreshes the collection queue',async({page,request})=>{
+        at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:52:411
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-reduced-motion-open-se-b9b26-ock-without-animation-waits/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-reduced-motion-open-se-b9b26-ock-without-animation-waits/error-context.md
+
+  4) tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      54 |
+      55 | test('arrival-unlock: reply arriving after entering chat refreshes the collection queue',async({page,request})=>{
+    > 56 |  const u=await(await request.post(backend+'/__c5/seed',{data:{mode:'waiting'}})).json();await login(page,u);await page.locator('#open-inbox').click();await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');await page.locator('[data-chat]').click();await expect(page.locator('.waiting-card')).toContainText('Waiting for their reply');expect((await request.post(backend+'/__c6/reply',{data:{id:u.conversations[0]}})).ok()).toBeTruthy();await expect(page.getByRole('button',{name:'Collect your reply',exact:true})).toBeVisible({timeout:10000});await page.getByRole('button',{name:'Collect your reply',exact:true}).click();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.locator('#chat-input')).toBeEditable();await settled(page,'.d11-chat-gate');await shot(page,'arrival-unlocked')
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+      57 | })
+      58 |
+        at /Users/anna/Muse_AI-repository/client/tests/d11.spec.ts:56:696
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-arrival-unlock-reply-a-dc660-reshes-the-collection-queue/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d11.config.ts/d11-arrival-unlock-reply-a-dc660-reshes-the-collection-queue/error-context.md
+
+  4 failed
+    tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft ───
+    tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle
+    tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits
+    tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue

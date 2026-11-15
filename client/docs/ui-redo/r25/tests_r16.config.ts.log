@@ -1,0 +1,144 @@
+
+Running 6 tests using 1 worker
+
+  ✘  1 tests/r16-person.spec.ts:7:27 › R16 isolated person-profile geometry and computed styles (51ms)
+  ✘  2 tests/r16-person.spec.ts:7:27 › R16 isolated person-waiting geometry and computed styles (50ms)
+  ✘  3 tests/r16-person.spec.ts:7:27 › R16 isolated person-followed geometry and computed styles (50ms)
+  ✘  4 tests/r16-person.spec.ts:7:27 › R16 isolated person-no-content geometry and computed styles (51ms)
+  ✘  5 tests/r16-person.spec.ts:7:27 › R16 isolated person-photo geometry and computed styles (49ms)
+  ✘  6 tests/r16-person.spec.ts:7:27 › R16 isolated person-safety geometry and computed styles (50ms)
+
+
+  1) tests/r16-person.spec.ts:7:27 › R16 isolated person-profile geometry and computed styles ──────
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-694f4-eometry-and-computed-styles/error-context.md
+
+  2) tests/r16-person.spec.ts:7:27 › R16 isolated person-waiting geometry and computed styles ──────
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-22936-eometry-and-computed-styles/error-context.md
+
+  3) tests/r16-person.spec.ts:7:27 › R16 isolated person-followed geometry and computed styles ─────
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-6f9ba-eometry-and-computed-styles/error-context.md
+
+  4) tests/r16-person.spec.ts:7:27 › R16 isolated person-no-content geometry and computed styles ───
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-9921c-eometry-and-computed-styles/error-context.md
+
+  5) tests/r16-person.spec.ts:7:27 › R16 isolated person-photo geometry and computed styles ────────
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-1ba98-eometry-and-computed-styles/error-context.md
+
+  6) tests/r16-person.spec.ts:7:27 › R16 isolated person-safety geometry and computed styles ───────
+
+    Error: apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5296
+    Call log:
+      - → GET http://127.0.0.1:5296/src/components/ProfileFlow.vue
+        - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      17 |   throw Error('Unexpected isolated request '+path)
+      18 |  })
+    > 19 |  const moduleSource=await (await page.request.get('/src/components/ProfileFlow.vue')).text()
+         |                                               ^
+      20 |  const vueUrl=moduleSource.match(/from "([^"]*vue\.js[^"]*)"/)![1]
+      21 |  await page.route('**/__r16-fixture',r=>r.fulfill({contentType:'text/html',body:`<html lang="en"><body><div class="device" id="fixture"></div><script type="module">import {createApp} from '${vueUrl}';import ProfileFlow from '/src/components/ProfileFlow.vue';import '/src/styles/base.css';import '/src/styles/components.css';import '/src/styles/tokens.css';import '/src/fidelity.css';createApp(ProfileFlow,{token:'isolated-d4-fixture',person:{id:'tea',peerId:'peer',displayName:'Tea friend',status:'${empty?'waiting':'open'}',following:${following}}}).mount('#fixture')</script></body></html>`}))
+      22 |  await page.goto('/__r16-fixture');await expect(page.locator('.person-name')).toHaveText('Tea friend');await page.evaluate(()=>document.fonts.ready)
+        at /Users/anna/Muse_AI-repository/client/tests/r16-person.spec.ts:19:47
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16.config.ts/r16-person-R16-isolated-pe-b1771-eometry-and-computed-styles/error-context.md
+
+  6 failed
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-profile geometry and computed styles ───────
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-waiting geometry and computed styles ───────
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-followed geometry and computed styles ──────
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-no-content geometry and computed styles ────
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-photo geometry and computed styles ─────────
+    tests/r16-person.spec.ts:7:27 › R16 isolated person-safety geometry and computed styles ────────

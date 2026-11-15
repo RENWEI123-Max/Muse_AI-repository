@@ -1,0 +1,37 @@
+[WebServer] (node:81716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81717) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81739) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:81741) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/d7.spec.ts:6:1 › D7 thirteen states, real logout/deletion and account isolation (2.0m)
+
+
+  1) tests/d7.spec.ts:6:1 › D7 thirteen states, real logout/deletion and account isolation ─────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.fill: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('#unlock-pin')
+
+
+      1 | import {test,expect,type Page} from '@playwright/test'
+      2 | async function login(page:Page,u:{email:string;password:string},pin?:string){
+    > 3 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST');await page.getByRole('button',{name:'Sign in',exact:true}).click();const session=await (await signed).json();await page.getByRole('button',{name:'Meet your letters'}).click();if(pin){await page.locator('#unlock-pin').fill(pin);await page.locator('#unlock-session').click()}await page.locator('#open-profile').click();await page.locator('#open-settings').click();await page.locator('#security-settings').click();await expect(page.locator('#account-signin')).toBeVisible();return session.token
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      4 | }
+      5 | async function shot(page:Page,id:string){await page.waitForTimeout(300);await page.screenshot({path:`docs/d7-${id}.png`})}
+      6 | test('D7 thirteen states, real logout/deletion and account isolation',async({page,request})=>{
+        at login (/Users/anna/Muse_AI-repository/client/tests/d7.spec.ts:3:546)
+        at /Users/anna/Muse_AI-repository/client/tests/d7.spec.ts:22:204
+
+    Error Context: test-results/d7-D7-thirteen-states-real-ae75e-etion-and-account-isolation/error-context.md
+
+  1 failed
+    tests/d7.spec.ts:6:1 › D7 thirteen states, real logout/deletion and account isolation ──────────

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "client/src/HomeFlow.legacy-1.css",
+    "runtimeReferences": [],
+    "reason": "no import/style src/reference in runtime source; migrated page styles remain imported"
+  },
+  {
+    "path": "client/src/HomeFlow.legacy-2.css",
+    "runtimeReferences": [],
+    "reason": "no import/style src/reference in runtime source; migrated page styles remain imported"
+  },
+  {
+    "path": "client/src/InboxFlow.legacy-1.css",
+    "runtimeReferences": [],
+    "reason": "no import/style src/reference in runtime source; migrated page styles remain imported"
+  },
+  {
+    "path": "client/src/ProfileFlow.legacy-1.css",
+    "runtimeReferences": [],
+    "reason": "no import/style src/reference in runtime source; migrated page styles remain imported"
+  },
+  {
+    "path": "client/docs/ui-redo/r21/comparison.log",
+    "reason": "empty UI-redo log placeholder; no active reference remains",
+    "referenceUpdate": null
+  },
+  {
+    "path": "client/docs/ui-redo/r21/walkthrough.log",
+    "reason": "empty UI-redo log placeholder; no active reference remains",
+    "referenceUpdate": null
+  },
+  {
+    "path": "client/docs/ui-redo/r23/walkthrough.log",
+    "reason": "empty UI-redo log placeholder; no active reference remains",
+    "referenceUpdate": null
+  },
+  {
+    "path": "client/docs/ui-redo/r18-audit/walkthrough-baseline.log",
+    "reason": "empty UI-redo log placeholder; no active reference remains",
+    "referenceUpdate": "R18-audit-result.md"
+  }
+]

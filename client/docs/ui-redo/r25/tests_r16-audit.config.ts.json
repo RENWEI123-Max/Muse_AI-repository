@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r16-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r16-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r16-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r16-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r16-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r16-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5336",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5336 --strictPort",
+      "url": "http://127.0.0.1:5336",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r16-audit.spec.ts",
+      "file": "r16-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en R16 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7223,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                      "column": 108,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'✓ Following'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-followed'\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'unfollowed'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  followFailure\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'follow-failure'\u001b[39m)\u001b[33m;\u001b[39mfollowFailure\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.ui-person-card'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'card-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-veil'\u001b[39m)\u001b[33m.\u001b[39mclick({position\u001b[33m:\u001b[39m{x\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m\u001b[33m,\u001b[39my\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mhover()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mwheel(\u001b[35m600\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m150\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcards\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({left\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollLeft\u001b[33m,\u001b[39mwidth\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth}))\u001b[33m;\u001b[39mexpect(checks\u001b[33m.\u001b[39mcards\u001b[33m.\u001b[39mleft)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'cards-scrolled'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                        "column": 108,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n\n  52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')\n  53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')\n> 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))\n     |                                                                                                            ^\n  55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)\n  56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)\n  57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:09:42.045Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-en-R16-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-en-R16-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                    "column": 108,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37f2e7cd3261125bdd7a-79bd28ecdf5196a05ff8",
+          "file": "r16-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko R16 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7367,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                      "column": 108,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'✓ Following'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-followed'\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'unfollowed'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  followFailure\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'follow-failure'\u001b[39m)\u001b[33m;\u001b[39mfollowFailure\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.ui-person-card'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'card-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-veil'\u001b[39m)\u001b[33m.\u001b[39mclick({position\u001b[33m:\u001b[39m{x\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m\u001b[33m,\u001b[39my\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mhover()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mwheel(\u001b[35m600\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m150\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcards\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({left\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollLeft\u001b[33m,\u001b[39mwidth\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth}))\u001b[33m;\u001b[39mexpect(checks\u001b[33m.\u001b[39mcards\u001b[33m.\u001b[39mleft)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'cards-scrolled'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                        "column": 108,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n\n  52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')\n  53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')\n> 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))\n     |                                                                                                            ^\n  55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)\n  56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)\n  57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:09:49.663Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-ko-R16-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-ko-R16-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                    "column": 108,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37f2e7cd3261125bdd7a-2d0bfdfc7f06d4fc378e",
+          "file": "r16-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en R16 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7313,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                      "column": 108,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'✓ Following'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-followed'\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'unfollowed'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  followFailure\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'follow-failure'\u001b[39m)\u001b[33m;\u001b[39mfollowFailure\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.ui-person-card'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'card-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-veil'\u001b[39m)\u001b[33m.\u001b[39mclick({position\u001b[33m:\u001b[39m{x\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m\u001b[33m,\u001b[39my\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mhover()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mwheel(\u001b[35m600\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m150\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcards\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({left\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollLeft\u001b[33m,\u001b[39mwidth\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth}))\u001b[33m;\u001b[39mexpect(checks\u001b[33m.\u001b[39mcards\u001b[33m.\u001b[39mleft)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'cards-scrolled'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                        "column": 108,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n\n  52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')\n  53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')\n> 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))\n     |                                                                                                            ^\n  55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)\n  56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)\n  57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:09:57.499Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-en-R16-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-en-R16-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                    "column": 108,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37f2e7cd3261125bdd7a-db7ef8ab713796a4cc9d",
+          "file": "r16-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko R16 API fixture walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7387,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                      "column": 108,
+                      "line": 54
+                    },
+                    "snippet": " \u001b[90m 52 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'✓ Following'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-followed'\u001b[39m)\n \u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'unfollowed'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 54 |\u001b[39m  followFailure\u001b[33m=\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'follow-failure'\u001b[39m)\u001b[33m;\u001b[39mfollowFailure\u001b[33m=\u001b[39m\u001b[36mfalse\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(t(\u001b[32m'＋ Follow'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 55 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'person-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-close'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 56 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.ui-person-card'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'card-photo'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-veil'\u001b[39m)\u001b[33m.\u001b[39mclick({position\u001b[33m:\u001b[39m{x\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m\u001b[33m,\u001b[39my\u001b[33m:\u001b[39m\u001b[35m5\u001b[39m}})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(person\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 57 |\u001b[39m  \u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mhover()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mwheel(\u001b[35m600\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m150\u001b[39m)\u001b[33m;\u001b[39mchecks\u001b[33m.\u001b[39mcards\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m person\u001b[33m.\u001b[39mlocator(\u001b[32m'.person-cards'\u001b[39m)\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39m({left\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollLeft\u001b[33m,\u001b[39mwidth\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mclientWidth\u001b[33m,\u001b[39mcontent\u001b[33m:\u001b[39me\u001b[33m.\u001b[39mscrollWidth}))\u001b[33m;\u001b[39mexpect(checks\u001b[33m.\u001b[39mcards\u001b[33m.\u001b[39mleft)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m snap(\u001b[32m'cards-scrolled'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                        "column": 108,
+                        "line": 54
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.person-page').getByRole('alert')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.person-page').getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.person-page').getByRole('alert')\u001b[22m\n\n\n  52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')\n  53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')\n> 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))\n     |                                                                                                            ^\n  55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)\n  56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)\n  57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')\n    at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:10:05.195Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-ko-R16-API-fixture-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-ko-R16-API-fixture-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts",
+                    "column": 108,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37f2e7cd3261125bdd7a-7a26b2e4ece007dbc63c",
+          "file": "r16-audit.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:09:41.479Z",
+    "duration": 31420.514,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

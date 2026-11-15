@@ -1,0 +1,196 @@
+
+Running 210 tests using 1 worker
+
+  ✓    1 tests/auth.spec.ts:4:1 › 19 prototype states (2.0s)
+  ✘    2 tests/auth.spec.ts:31:1 › real database signup, SMTP failure, wrong code, logout and login (5.4s)
+  ✘    3 tests/auth.spec.ts:58:1 › empty validation and honest Apple error (5.2s)
+  ✘    4 tests/c7-acceptance.spec.ts:5:1 › C7 offline deliverables open, local images decode (44ms)
+  ✘    5 tests/c7-acceptance.spec.ts:16:1 › C7 chat network failure and upload failure preserve retry intent; empty send disabled (57ms)
+  ✘    6 tests/chat-media.spec.ts:3:1 › C6 B8 real upload, image attachment, authenticated history, sticker send (57ms)
+  ✘    7 tests/chat.spec.ts:4:1 › C6 waiting → reply → collect → send, settings, search, clear preserves permission (58ms)
+  ✘    8 tests/chat.spec.ts:6:1 › C6 photo history rendering and pending photo (read contract) (56ms)
+  ✓    9 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (270ms)
+  ✓   10 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (264ms)
+  ✘   11 tests/d1.spec.ts:3:1 › D1: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once (47ms)
+  ✘   12 tests/d11.spec.ts:15:1 › opening-reply: envelope, close, write, delayed send and saved draft (60ms)
+  ✘   13 tests/d11.spec.ts:30:1 › collection-unlock: real paid collection, cancellation, shortage, lost response retry and in-place unlock under CPU throttle (59ms)
+  ✘   14 tests/d11.spec.ts:50:1 › reduced-motion: open, send, free collection and unlock without animation waits (60ms)
+  ✘   15 tests/d11.spec.ts:55:1 › arrival-unlock: reply arriving after entering chat refreshes the collection queue (59ms)
+  ✘   16 tests/d2.spec.ts:9:1 › D2 six states, preview cancel, apply, per-conversation persistence and bubble reset (30.0s)
+  ✘   17 tests/d2.spec.ts:17:1 › D2 removed wallpaper references fall back to default without losing bubble settings (30.0s)
+  ✘   18 tests/d3.spec.ts:9:1 › D3 nine states: real report → block → list → unblock and send (57ms)
+  ✘   19 tests/d3.spec.ts:21:1 › D3 unblocking waiting conversation recalculates permissions; failed report remains editable (56ms)
+  ✘   20 tests/d4-reverify.spec.ts:4:1 › D4 real backend profile, stats and avatar persistence (57ms)
+  -   21 tests/d4-reverify.spec.ts:31:1 › offline prototype comparison evidence
+  ✘   22 tests/d4.spec.ts:9:1 › D4 editing, avatar gallery, remove, restore, crop, persistence and full slots (30.0s)
+  ✘   23 tests/d4.spec.ts:15:40 › D4 public profile and chat gate open (30.0s)
+  ✘   24 tests/d4.spec.ts:15:40 › D4 public profile and chat gate waiting (30.0s)
+  ✘   25 tests/d4.spec.ts:18:1 › D4 profile cannot bypass block (30.0s)
+  ✘   26 tests/d4.spec.ts:19:1 › D4 public full content, photo previews, own image cards and outgoing visits (5.6s)
+  ✘   27 tests/d4.spec.ts:22:1 › D4 following empty, my letters empty and no public moments (5.6s)
+  ✘   28 tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access (57ms)
+  ✘   29 tests/d6-feedback.spec.ts:2:1 › B19 feedback is sent, visible to moderation, and rate limit preserves input (57ms)
+  ✘   30 tests/d6-followup.spec.ts:2:1 › real global visibility and account logout (57ms)
+  ✘   31 tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout (57ms)
+  ✘   32 tests/d6.spec.ts:15:1 › D6 local settings persistence, states and cache confirmation preserve real account and ledgers (57ms)
+  ✘   33 tests/d6.spec.ts:73:1 › D6 Korean business screens keep user content intact (57ms)
+  ✘   34 tests/d7.spec.ts:6:1 › D7 thirteen states, real logout/deletion and account isolation (57ms)
+  ✘   35 tests/d7.spec.ts:34:1 › D7 full migration schema serves profile and letters without 500 (15ms)
+  ✘   36 tests/d8.spec.ts:4:1 › D8: fourteen support states with real backend and isolated database (57ms)
+  ✓   37 tests/d9-storekit.spec.ts:32:1 › topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD (444ms)
+  ✓   38 tests/d9-storekit.spec.ts:38:1 › topup-success: purchase with appAccountToken, server verify, finish after verify, balance read back (1.3s)
+  ✓   39 tests/d9-storekit.spec.ts:46:1 › cancel and store errors: no verify, no balance change (2.0s)
+  ✓   40 tests/d9-storekit.spec.ts:53:1 › verify failure: transaction left unfinished, no diamonds shown (1.2s)
+  ✓   41 tests/d9-storekit.spec.ts:58:1 › unfinished transactions of this account are resubmitted on open (434ms)
+  ✓   42 tests/d9-storekit.spec.ts:63:1 › browser without StoreKit: no price, no charge (1.2s)
+  ✘   43 tests/d9.spec.ts:4:1 › D9: 11 wallet and Filter Pass states on real backend (53ms)
+  ✘   44 tests/f01-ui.spec.ts:2:36 › F01 simulated wallet: reply cancellation and funded return (6.2s)
+  ✘   45 tests/f01-ui.spec.ts:2:36 › F01 simulated wallet: pass cancellation and funded return (6.6s)
+  ✘   46 tests/f01.spec.ts:2:1 › F01 Pass: shortage, cancellation, automatic return, retry once and renewal (57ms)
+[WebServer] 6:05:35 AM [vite] http proxy error: /auth/code/send
+[WebServer] Error: connect ECONNREFUSED 127.0.0.1:3001
+[WebServer]     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2083:16)
+  ✘   47 tests/f06.spec.ts:3:1 › F06 wrong code, expired code and resend invalidates old code (124ms)
+  ✘   48 tests/f07.spec.ts:11:1 › F07 account switch isolation and revoked token (57ms)
+  ✘   49 tests/f07.spec.ts:34:1 › F07 sign-out clears this device immediately (#103) (56ms)
+  ✘   50 tests/home.spec.ts:2:1 › C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL (57ms)
+  ✘   51 tests/inbox.spec.ts:4:1 › C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore (57ms)
+  ✘   52 tests/inbox.spec.ts:20:39 › C5: empty and notification reminder (57ms)
+  ✘   53 tests/inbox.spec.ts:20:39 › C5: waiting and notification reminder (57ms)
+  ✘   54 tests/inbox.spec.ts:21:1 › C5: paid cancellation, server fee race, retry idempotency, atomic charge (57ms)
+  ✘   55 tests/inbox.spec.ts:27:1 › C5: pagination and API failure are recoverable (56ms)
+  ✘   56 tests/inbox.spec.ts:29:1 › C5: insufficient balance and modal keyboard focus (57ms)
+  ✘   57 tests/ko-help.spec.ts:3:1 › Korean help and FAQ translate and switch back to English (57ms)
+  ✘   58 tests/legal-copy.spec.ts:6:61 › 667 en: full copy, scroll and navigation (5.5s)
+  ✘   59 tests/legal-copy.spec.ts:6:61 › 667 ko: full copy, scroll and navigation (5.5s)
+  ✘   60 tests/legal-copy.spec.ts:6:61 › 812 en: full copy, scroll and navigation (5.6s)
+  ✘   61 tests/legal-copy.spec.ts:6:61 › 812 ko: full copy, scroll and navigation (5.5s)
+  ✘   62 tests/letters.spec.ts:3:1 › C4 module03: ten states, B3/B4/B7 and safe retries on isolated database (57ms)
+  ✘   63 tests/pass-confirmation.spec.ts:15:1 › F02: confirmation, every cancel path, complete filters, purchase and cumulative renewal (57ms)
+  ✘   64 tests/pass-confirmation.spec.ts:35:1 › F02: failure preserves intention; response lost after debit retries once with the same key (57ms)
+  ✘   65 tests/r05-shell.spec.ts:3:1 › R05: real home, inbox and profile navigation share geometry and computed styles (57ms)
+  -   66 tests/r05-shell.spec.ts:41:53 › R05: home unread badge (no existing rendering state; follow-up required)
+  -   67 tests/r05-shell.spec.ts:41:53 › R05: inbox unread badge (no existing rendering state; follow-up required)
+  -   68 tests/r05-shell.spec.ts:41:53 › R05: profile unread badge (no existing rendering state; follow-up required)
+667 en 01-response
+667 en 02-letter
+667 en 03-ready-motion
+667 en 03b-bird-letter
+667 en 04-appearance
+667 en 05-compose-filled
+  ✘   69 tests/r06-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (16.1s)
+667 ko 01-response
+667 ko 02-letter
+667 ko 03-ready-motion
+667 ko 03b-bird-letter
+667 ko 04-appearance
+667 ko 05-compose-filled
+  ✘   70 tests/r06-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (16.1s)
+812 en 01-response
+812 en 02-letter
+812 en 03-ready-motion
+812 en 03b-bird-letter
+812 en 04-appearance
+812 en 05-compose-filled
+  ✘   71 tests/r06-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (16.1s)
+812 ko 01-response
+812 ko 02-letter
+812 ko 03-ready-motion
+812 ko 03b-bird-letter
+812 ko 04-appearance
+812 ko 05-compose-filled
+  ✘   72 tests/r06-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (16.2s)
+  ✘   73 tests/r06-discover.spec.ts:8:64 › R06 home-ready: geometry, exact styles and capture (57ms)
+  ✘   74 tests/r06-discover.spec.ts:8:64 › R06 home-empty: geometry, exact styles and capture (56ms)
+  ✘   75 tests/r06-discover.spec.ts:8:64 › R06 home-response: geometry, exact styles and capture (58ms)
+  ✘   76 tests/r07-filter.spec.ts:8:117 › R07 filters-free (57ms)
+  ✘   77 tests/r07-filter.spec.ts:8:117 › R07 filters-active (57ms)
+  ✘   78 tests/r07-filter.spec.ts:8:117 › R07 filters-selected (57ms)
+  ✘   79 tests/r07-filter.spec.ts:8:117 › R07 bird-female (56ms)
+  ✘   80 tests/r07-filter.spec.ts:8:117 › R07 bird-male (57ms)
+  ✘   81 tests/r07-filter.spec.ts:8:117 › R07 bird-motion-off (57ms)
+  ✘   82 tests/r07-filter.spec.ts:70:45 › R07 Korean filters: no overflow and small-screen artwork (57ms)
+  ✘   83 tests/r07-filter.spec.ts:70:45 › R07 Korean appearance: no overflow and small-screen artwork (57ms)
+667 en letter-open
+667 en letter-typed
+667 en letter-safety
+667 en block-confirmation
+667 en block-failure
+667 en letter-report
+667 en report-failure
+667 en letter-waiting
+667 en letter-replied
+667 en compose-empty
+667 en compose-draft
+667 en compose-invalid
+667 en compose-text-scroll
+667 en compose-failure
+667 en draft-restored
+  ✘   84 tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (20.0s)
+667 ko letter-open
+667 ko letter-typed
+667 ko letter-safety
+667 ko block-confirmation
+667 ko block-failure
+667 ko letter-report
+667 ko report-failure
+667 ko letter-waiting
+667 ko letter-replied
+667 ko compose-empty
+667 ko compose-draft
+667 ko compose-invalid
+667 ko compose-text-scroll
+667 ko compose-failure
+667 ko draft-restored
+  ✘   85 tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (20.1s)
+812 en letter-open
+812 en letter-typed
+812 en letter-safety
+812 en block-confirmation
+812 en block-failure
+812 en letter-report
+812 en report-failure
+812 en letter-waiting
+812 en letter-replied
+812 en compose-empty
+812 en compose-draft
+812 en compose-invalid
+812 en compose-text-scroll
+812 en compose-failure
+812 en draft-restored
+  ✘   86 tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (20.0s)
+812 ko letter-open
+812 ko letter-typed
+812 ko letter-safety
+812 ko block-confirmation
+812 ko block-failure
+812 ko letter-report
+812 ko report-failure
+812 ko letter-waiting
+812 ko letter-replied
+812 ko compose-empty
+812 ko compose-draft
+812 ko compose-invalid
+812 ko compose-text-scroll
+812 ko compose-failure
+812 ko draft-restored
+  ✘   87 tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (20.1s)
+667 en inbox-pending
+  ✘   88 tests/r09-audit.spec.ts:6:61 › 667 en: inbox real-click walkthrough (API fixture) (6.2s)
+667 ko inbox-pending
+  ✘   89 tests/r09-audit.spec.ts:6:61 › 667 ko: inbox real-click walkthrough (API fixture) (6.2s)
+812 en inbox-pending
+  ✘   90 tests/r09-audit.spec.ts:6:61 › 812 en: inbox real-click walkthrough (API fixture) (6.2s)
+812 ko inbox-pending
+  ✘   91 tests/r09-audit.spec.ts:6:61 › 812 ko: inbox real-click walkthrough (API fixture) (6.1s)
+  ✘   92 tests/r09-inbox.spec.ts:33:1 › R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore (56ms)
+  ✘   93 tests/r09-inbox.spec.ts:49:39 › R09: empty and notification reminder (57ms)
+  ✘   94 tests/r09-inbox.spec.ts:49:39 › R09: waiting and notification reminder (57ms)
+  ✘   95 tests/r09-inbox.spec.ts:51:1 › R09 Korean labels and short viewport keep artwork size (57ms)
+  ✘   96 tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture (6.0s)
+  ✘   97 tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture (6.0s)
+  ✘   98 tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture (6.0s)
+  ✘   99 tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture (6.0s)
+  ✘  100 tests/r10-reply.spec.ts:31:1 › R10 six states: free collection → paid confirmation → cancel → shortage → topup → resume → paid; retry once (59ms)
+  ✘  101 tests/r10-reply.spec.ts:43:1 › R10 Korean payment, shortage and topup fit; short screen keeps diamond size (58ms)
+  ✓  102 tests/r12-audit.spec.ts:6:61 › 667 en R12 safe UI walkthrough with API fixtures (10.8s)

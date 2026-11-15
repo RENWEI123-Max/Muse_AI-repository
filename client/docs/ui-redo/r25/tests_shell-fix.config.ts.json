@@ -1,0 +1,415 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/shell-fix.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_shell-fix.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/shell-fix.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_shell-fix.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "shell-fix.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_shell-fix.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "shell-fix.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5315",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5315 --strictPort",
+      "url": "http://127.0.0.1:5315",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "shell-fix.spec.ts",
+      "file": "shell-fix.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "viewport 667",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:33.347Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-376892e56d9ae6352971",
+          "file": "shell-fix.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "viewport 760",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 140,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:33.563Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-1872de40ebed8922dd55",
+          "file": "shell-fix.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "viewport 812",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:33.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-74f3b8215e891f6cb9e3",
+          "file": "shell-fix.spec.ts",
+          "line": 2,
+          "column": 35
+        },
+        {
+          "title": "shared sheet, switch and press use prototype timing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:33.835Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-7ddcfb1f8e8895491b0e",
+          "file": "shell-fix.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "capture and scroll 667 en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 424,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:34.478Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scroll-measurements",
+                      "contentType": "application/json",
+                      "body": "eyJoZWlnaHQiOjY2NywibGFuZyI6ImVuIiwiYXBwZWFyYW5jZSI6eyJoZWlnaHQiOjU2OSwiY29udGVudCI6NjcyLCJ0b3AiOjEwMywiYmVmb3JlIjowfSwibWV0cmljcyI6eyJ2aWV3cG9ydCI6NjY3LCJkb2N1bWVudCI6NjY3LCJib2R5Ijo2Njd9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-06273e24991fd511227f",
+          "file": "shell-fix.spec.ts",
+          "line": 23,
+          "column": 61
+        },
+        {
+          "title": "capture and scroll 667 ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:34.907Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scroll-measurements",
+                      "contentType": "application/json",
+                      "body": "eyJoZWlnaHQiOjY2NywibGFuZyI6ImtvIiwiYXBwZWFyYW5jZSI6eyJoZWlnaHQiOjU2OSwiY29udGVudCI6NjcyLCJ0b3AiOjEwMywiYmVmb3JlIjowfSwibWV0cmljcyI6eyJ2aWV3cG9ydCI6NjY3LCJkb2N1bWVudCI6NjY3LCJib2R5Ijo2Njd9fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-343574af95cfec4b6438",
+          "file": "shell-fix.spec.ts",
+          "line": 23,
+          "column": 61
+        },
+        {
+          "title": "capture and scroll 812 en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 410,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:35.316Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scroll-measurements",
+                      "contentType": "application/json",
+                      "body": "eyJoZWlnaHQiOjgxMiwibGFuZyI6ImVuIiwiYXBwZWFyYW5jZSI6eyJoZWlnaHQiOjY3NiwiY29udGVudCI6Njc2LCJ0b3AiOjAsImJlZm9yZSI6MH0sIm1ldHJpY3MiOnsidmlld3BvcnQiOjgxMiwiZG9jdW1lbnQiOjgxMiwiYm9keSI6ODEyfX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-8db2efe4fa437f539614",
+          "file": "shell-fix.spec.ts",
+          "line": 23,
+          "column": 61
+        },
+        {
+          "title": "capture and scroll 812 ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 427,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:17:35.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "scroll-measurements",
+                      "contentType": "application/json",
+                      "body": "eyJoZWlnaHQiOjgxMiwibGFuZyI6ImtvIiwiYXBwZWFyYW5jZSI6eyJoZWlnaHQiOjY3NiwiY29udGVudCI6Njc2LCJ0b3AiOjAsImJlZm9yZSI6MH0sIm1ldHJpY3MiOnsidmlld3BvcnQiOjgxMiwiZG9jdW1lbnQiOjgxMiwiYm9keSI6ODEyfX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ccdd88f18c087e42fd0b-439b36b98c2ec3229e9a",
+          "file": "shell-fix.spec.ts",
+          "line": 23,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:17:32.796Z",
+    "duration": 3385.541,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

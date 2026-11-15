@@ -1,0 +1,436 @@
+{
+  "scope": "git tracked + nonignored untracked UTF-8 files; binary assets omitted; issue-number comments distinguished from actual colors",
+  "importantOccurrences": 130,
+  "importantLines": [
+    {
+      "file": "client/docs/fidelity-refactor/gallery.html",
+      "line": 1,
+      "count": 1
+    },
+    {
+      "file": "client/docs/fidelity-refactor/generate-gallery.mjs",
+      "line": 19,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R05-result.md",
+      "line": 90,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R05-review.md",
+      "line": 76,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R05-review.md",
+      "line": 218,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R06-audit-result.md",
+      "line": 30,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R06-hint-fix-result.md",
+      "line": 65,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R06-result.md",
+      "line": 117,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R07-result.md",
+      "line": 21,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R07-result.md",
+      "line": 77,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R08-audit-result.md",
+      "line": 36,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R08-result.md",
+      "line": 15,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R08-result.md",
+      "line": 34,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R08-result.md",
+      "line": 68,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R09-audit-result.md",
+      "line": 43,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R10-audit-result.md",
+      "line": 32,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R11-audit-result.md",
+      "line": 69,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R11-result.md",
+      "line": 45,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R11-result.md",
+      "line": 70,
+      "count": 2
+    },
+    {
+      "file": "client/docs/ui-redo/R13-audit-result.md",
+      "line": 16,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R16-audit-result.md",
+      "line": 32,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R16-result.md",
+      "line": 15,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R17-audit-result.md",
+      "line": 40,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R17-result.md",
+      "line": 15,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R20-fixes-result.md",
+      "line": 66,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R23-result.md",
+      "line": 37,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/R24-result.md",
+      "line": 34,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/legal-copy-result.md",
+      "line": 10,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r05/fix6.md",
+      "line": 17,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r10/architecture.log",
+      "line": 3,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r11-audit/prototype-excerpts.md",
+      "line": 1,
+      "count": 6
+    },
+    {
+      "file": "client/docs/ui-redo/r11-audit/prototype-excerpts.md",
+      "line": 5,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r11/baseline-chat.css.txt",
+      "line": 1,
+      "count": 4
+    },
+    {
+      "file": "client/docs/ui-redo/r11/baseline-chat.css.txt",
+      "line": 9,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r12/architecture.log",
+      "line": 7,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r12/audit.py",
+      "line": 6,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r12/baseline-chat.css.txt",
+      "line": 7,
+      "count": 2
+    },
+    {
+      "file": "client/docs/ui-redo/r12/baseline-chat.css.txt",
+      "line": 32,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r13-audit/prototype-excerpts.md",
+      "line": 89,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r14/audit.py",
+      "line": 6,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r15-audit/prototype-auth.css.txt",
+      "line": 1,
+      "count": 3
+    },
+    {
+      "file": "client/docs/ui-redo/r15-audit/prototype-auth.css.txt",
+      "line": 2,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r15-audit/verify-evidence.py",
+      "line": 9,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r15/audit.py",
+      "line": 16,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r16/audit.py",
+      "line": 7,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r17/architecture.log",
+      "line": 5,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r17/reverify-results/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md",
+      "line": 154,
+      "count": 9
+    },
+    {
+      "file": "client/docs/ui-redo/r18/baseline-r18-reverify-results/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md",
+      "line": 154,
+      "count": 9
+    },
+    {
+      "file": "client/docs/ui-redo/r18/r18-reverify-results/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md",
+      "line": 154,
+      "count": 9
+    },
+    {
+      "file": "client/docs/ui-redo/r19/architecture.log",
+      "line": 3,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r20-audit/check-source.py",
+      "line": 17,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r20-audit/prototype-excerpts.txt",
+      "line": 109,
+      "count": 3
+    },
+    {
+      "file": "client/docs/ui-redo/r20-fixes/check-evidence.py",
+      "line": 11,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r20/architecture.log",
+      "line": 3,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r20/check-architecture.sh",
+      "line": 3,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r21/prototype-excerpts.txt",
+      "line": 13,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r22/prototype-excerpts.txt",
+      "line": 91,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r22/prototype-excerpts.txt",
+      "line": 97,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r23/prototype-extract.txt",
+      "line": 13,
+      "count": 3
+    },
+    {
+      "file": "client/docs/ui-redo/r23/prototype-extract.txt",
+      "line": 14,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r23/prototype-extract.txt",
+      "line": 16,
+      "count": 6
+    },
+    {
+      "file": "client/docs/ui-redo/r23/verify-source.py",
+      "line": 8,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r24/prototype-extract.txt",
+      "line": 45,
+      "count": 2
+    },
+    {
+      "file": "client/docs/ui-redo/r24/prototype-extract.txt",
+      "line": 46,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r24/prototype-extract.txt",
+      "line": 47,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/r24/prototype-extract.txt",
+      "line": 48,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/shell-fix-result.md",
+      "line": 11,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/shell-fix-result.md",
+      "line": 35,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/shell-fix-result.md",
+      "line": 90,
+      "count": 1
+    },
+    {
+      "file": "client/docs/ui-redo/shell-fix/prototype-inventory.json",
+      "line": 70,
+      "count": 1
+    },
+    {
+      "file": "client/tests/d4-reverify.spec.ts",
+      "line": 39,
+      "count": 9
+    },
+    {
+      "file": "docs/ui-redo-plan.md",
+      "line": 9,
+      "count": 1
+    },
+    {
+      "file": "docs/ui-redo-plan.md",
+      "line": 40,
+      "count": 1
+    },
+    {
+      "file": "docs/ui-redo-plan.md",
+      "line": 244,
+      "count": 1
+    },
+    {
+      "file": "docs/ui-redo-plan.md",
+      "line": 316,
+      "count": 2
+    }
+  ],
+  "runtimeImportant": [],
+  "emptyFiles": [],
+  "hexLikeLiteralsOutsideTokens": [
+    {
+      "file": "client/src/App.vue",
+      "line": 13,
+      "text": "// F07: drafts/preferences/chat appearance are cleared on sign-out (#103) and when another account signs in; language and per-account App lock stay."
+    },
+    {
+      "file": "client/src/assets/avatar-placeholder.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\"><rect width=\"96\" height=\"96\" rx=\"24\" fill=\"#203328\"/><circle cx=\"48\" cy=\"35\" r=\"13\" fill=\"#7c9b85\"/><path d=\"M23 77c0-15 10-24 25-24s25 9 25 24\" fill=\"#7c9b85\"/></svg>"
+    },
+    {
+      "file": "client/src/assets/tab-icons/discover-active.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#080d0a;--tab-outline:#080d0a;\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 12 6.5 10.5M13 8.5 12.5 6\" stroke=\"var(--tab-accent,#76d9ff)\" fill=\"none\" stroke-width=\"2.2\"/><g transf"
+    },
+    {
+      "file": "client/src/assets/tab-icons/discover-inactive.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#849288;--tab-outline:#849288;--tab-yellow:#18251e;--tab-cream:#18251e;--tab-accent:#849288;--tab-shine:#18251e;\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 12 6.5 10.5M13 8.5 12"
+    },
+    {
+      "file": "client/src/assets/tab-icons/messages-active.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#080d0a;--tab-outline:#080d0a;\"><g transform=\"translate(3.38 2.64) scale(.89)\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.69663\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M24 6.5C14.2 6.5 7.2 13.4 7.2 23.2C7.2 26.7 8.6 29.8 8."
+    },
+    {
+      "file": "client/src/assets/tab-icons/messages-inactive.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#849288;--tab-outline:#849288;--tab-yellow:#18251e;--tab-cream:#18251e;--tab-accent:#849288;--tab-shine:#18251e;\"><g transform=\"translate(3.38 2.64) scale(.89)\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.69663\" stroke-linecap=\"round\" stroke"
+    },
+    {
+      "file": "client/src/assets/tab-icons/profile-active.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#080d0a;--tab-outline:#080d0a;\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 11 6.5 12.5M12 7.5 11.5 5\" fill=\"none\" stroke=\"var(--tab-accent,#76d9ff)\" stroke-width=\"2.2\"/><circle c"
+    },
+    {
+      "file": "client/src/assets/tab-icons/profile-inactive.svg",
+      "line": 1,
+      "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" style=\"--tab-edge:#849288;--tab-outline:#849288;--tab-yellow:#18251e;--tab-cream:#18251e;--tab-accent:#849288;--tab-shine:#18251e;\"><g stroke=\"var(--tab-edge,#080d0a)\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 11 6.5 12.5M12 7.5 11"
+    },
+    {
+      "file": "client/src/components/ChatFlow.vue",
+      "line": 23,
+      "text": "const bubbleFields=[['myBubble','My bubble','#aef879'],['myText','My text','#153011'],['theirBubble','Their bubble','#28362e'],['theirText','Their text','#e1e9dd']]"
+    },
+    {
+      "file": "client/src/components/ChatFlow.vue",
+      "line": 30,
+      "text": "const appearanceStyle=computed(()=>({'--my-bubble':appearance.value.myBubble||'#aef879','--my-text':appearance.value.myText||'#153011','--their-bubble':appearance.value.theirBubble||'#28362e','--their-text':appearance.value.theirText||'#e1e9dd',...(screen.value==='chat'&&appearance.value.wallpaperId?{backgroundImage:`linear-gradient(#07100b26,#0710"
+    }
+  ],
+  "cssHexOutsideTokens": []
+}

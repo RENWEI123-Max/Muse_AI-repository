@@ -31,7 +31,7 @@ app.get('/__d11/evidence/:id',async req=>({database:name,
 }))
 await mkdir('docs/d11',{recursive:true})
 await writeFile('docs/d11/database.json',JSON.stringify({database:name,migrations:(await readdir(migrations)).filter(f=>f.endsWith('.sql')).sort()},null,2))
-await app.listen({host:'127.0.0.1',port:3180})
+await app.listen({host:'127.0.0.1',port:3001})
 console.log('D11 isolated backend ready: '+name)
 async function stop(){await app.close();await db.end();await admin.end();process.exit(0)}
 process.on('SIGTERM',stop);process.on('SIGINT',stop)

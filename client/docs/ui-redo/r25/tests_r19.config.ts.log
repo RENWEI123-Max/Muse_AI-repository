@@ -1,0 +1,14 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/r19-cards.spec.ts:3:1 › six card states use one real registered session (54ms)
+
+
+  1) tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ─────────────────
+
+    Error: ENOENT: no such file or directory, open '/tmp/r19-account.json'
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r19.config.ts/r19-cards-six-card-states-use-one-real-registered-session/error-context.md
+
+  1 failed
+    tests/r19-cards.spec.ts:3:1 › six card states use one real registered session ──────────────────

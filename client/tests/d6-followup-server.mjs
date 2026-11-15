@@ -33,6 +33,6 @@ app.post('/__d6/setup',async req=>{
  }
  return {peers}
 })
-await app.listen({host:'127.0.0.1',port:Number(process.env.D6_PORT||3179)})
+await app.listen({host:'127.0.0.1',port:Number(process.env.D6_PORT||3001)})
 console.log('D6 followup isolated database: '+name)
 for(const signal of ['SIGTERM','SIGINT'])process.on(signal,async()=>{await app.close();await db.end();process.exit(0)})

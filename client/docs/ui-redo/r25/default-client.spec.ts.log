@@ -1,0 +1,7 @@
+
+Running 2 tests using 1 worker
+
+  ✓  1 tests/client.spec.ts:2:1 › welcome, language entry, preview and circular avatar (339ms)
+  ✓  2 tests/client.spec.ts:21:1 › all 343 manifest images load and decode without 404 (267ms)
+
+  2 passed (2.2s)

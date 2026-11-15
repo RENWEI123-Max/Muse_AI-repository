@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough (6.7s)
+  ✘  2 tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough (6.8s)
+  ✘  3 tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough (6.8s)
+  ✘  4 tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough (6.9s)
+
+
+  1) tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+
+
+      44 |  const press=async(name:string,loc:any)=>{await loc.scrollIntoViewIfNeeded();const b=await loc.boundingBox();await page.mouse.move(b.x+b.width/2,b.y+b.height/2);await page.mouse.down();checks[name]=await loc.evaluate((e:Element)=>getComputedStyle(e).transform);await page.mouse.move(b.x+b.width/2,b.y-5);await page.mouse.up();save()}
+      45 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r20-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#new-profile-moment')).toBeEnabled();await d5.locator('#profile-moments').click();await shot('moments-empty',true)
+    > 46 |  fail='list';await view.locator('#d5-back').click();await d5.locator('#profile-moments').click();await expect(view.getByRole('alert')).toContainText('Please try again.');await shot('list-failure');fail='';await view.getByRole('button',{name:'Retry',exact:true}).click();await expect(view.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                        ^
+      47 |  await view.locator('#new-moment').click();await expect(view.locator('#save-moment')).toBeDisabled();await view.locator('#moment-text').fill('   ');await expect(view.locator('#save-moment')).toBeDisabled();checks.whitespaceDisabled=true;await view.locator('#moment-text').fill('');await shot('moment-empty',true)
+      48 |  await view.locator('#moment-sticker').click();await shot('moment-stickers',true);await scroll('stickerScroll',panel.locator('.ui-sticker-grid'));await close()
+      49 |  await view.locator('#moment-audience').click();await shot('moment-visibility',true);for(const v of ['friends','only_me','everyone']){await panel.locator(`[data-visibility=${v}]`).click();await expect(panel).toHaveCount(0);await view.locator('#moment-audience').click();await expect(panel.locator(`[data-visibility=${v}]`)).toHaveAttribute('aria-pressed','true')}await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:46:136
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-en-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-en-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+
+
+      44 |  const press=async(name:string,loc:any)=>{await loc.scrollIntoViewIfNeeded();const b=await loc.boundingBox();await page.mouse.move(b.x+b.width/2,b.y+b.height/2);await page.mouse.down();checks[name]=await loc.evaluate((e:Element)=>getComputedStyle(e).transform);await page.mouse.move(b.x+b.width/2,b.y-5);await page.mouse.up();save()}
+      45 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r20-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#new-profile-moment')).toBeEnabled();await d5.locator('#profile-moments').click();await shot('moments-empty',true)
+    > 46 |  fail='list';await view.locator('#d5-back').click();await d5.locator('#profile-moments').click();await expect(view.getByRole('alert')).toContainText('Please try again.');await shot('list-failure');fail='';await view.getByRole('button',{name:'Retry',exact:true}).click();await expect(view.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                        ^
+      47 |  await view.locator('#new-moment').click();await expect(view.locator('#save-moment')).toBeDisabled();await view.locator('#moment-text').fill('   ');await expect(view.locator('#save-moment')).toBeDisabled();checks.whitespaceDisabled=true;await view.locator('#moment-text').fill('');await shot('moment-empty',true)
+      48 |  await view.locator('#moment-sticker').click();await shot('moment-stickers',true);await scroll('stickerScroll',panel.locator('.ui-sticker-grid'));await close()
+      49 |  await view.locator('#moment-audience').click();await shot('moment-visibility',true);for(const v of ['friends','only_me','everyone']){await panel.locator(`[data-visibility=${v}]`).click();await expect(panel).toHaveCount(0);await view.locator('#moment-audience').click();await expect(panel.locator(`[data-visibility=${v}]`)).toHaveAttribute('aria-pressed','true')}await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:46:136
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-ko-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-ko-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-667-ko-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+
+
+      44 |  const press=async(name:string,loc:any)=>{await loc.scrollIntoViewIfNeeded();const b=await loc.boundingBox();await page.mouse.move(b.x+b.width/2,b.y+b.height/2);await page.mouse.down();checks[name]=await loc.evaluate((e:Element)=>getComputedStyle(e).transform);await page.mouse.move(b.x+b.width/2,b.y-5);await page.mouse.up();save()}
+      45 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r20-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#new-profile-moment')).toBeEnabled();await d5.locator('#profile-moments').click();await shot('moments-empty',true)
+    > 46 |  fail='list';await view.locator('#d5-back').click();await d5.locator('#profile-moments').click();await expect(view.getByRole('alert')).toContainText('Please try again.');await shot('list-failure');fail='';await view.getByRole('button',{name:'Retry',exact:true}).click();await expect(view.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                        ^
+      47 |  await view.locator('#new-moment').click();await expect(view.locator('#save-moment')).toBeDisabled();await view.locator('#moment-text').fill('   ');await expect(view.locator('#save-moment')).toBeDisabled();checks.whitespaceDisabled=true;await view.locator('#moment-text').fill('');await shot('moment-empty',true)
+      48 |  await view.locator('#moment-sticker').click();await shot('moment-stickers',true);await scroll('stickerScroll',panel.locator('.ui-sticker-grid'));await close()
+      49 |  await view.locator('#moment-audience').click();await shot('moment-visibility',true);for(const v of ['friends','only_me','everyone']){await panel.locator(`[data-visibility=${v}]`).click();await expect(panel).toHaveCount(0);await view.locator('#moment-audience').click();await expect(panel.locator(`[data-visibility=${v}]`)).toHaveAttribute('aria-pressed','true')}await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:46:136
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-en-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-en-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-en-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ─────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+    Expected substring: "Please try again."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.profile-page').first().locator('.d5').locator('.d5-page').getByRole('alert')
+
+
+      44 |  const press=async(name:string,loc:any)=>{await loc.scrollIntoViewIfNeeded();const b=await loc.boundingBox();await page.mouse.move(b.x+b.width/2,b.y+b.height/2);await page.mouse.down();checks[name]=await loc.evaluate((e:Element)=>getComputedStyle(e).transform);await page.mouse.move(b.x+b.width/2,b.y-5);await page.mouse.up();save()}
+      45 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r20-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-profile').click();await expect(d5.locator('#new-profile-moment')).toBeEnabled();await d5.locator('#profile-moments').click();await shot('moments-empty',true)
+    > 46 |  fail='list';await view.locator('#d5-back').click();await d5.locator('#profile-moments').click();await expect(view.getByRole('alert')).toContainText('Please try again.');await shot('list-failure');fail='';await view.getByRole('button',{name:'Retry',exact:true}).click();await expect(view.getByRole('alert')).toHaveCount(0)
+         |                                                                                                                                        ^
+      47 |  await view.locator('#new-moment').click();await expect(view.locator('#save-moment')).toBeDisabled();await view.locator('#moment-text').fill('   ');await expect(view.locator('#save-moment')).toBeDisabled();checks.whitespaceDisabled=true;await view.locator('#moment-text').fill('');await shot('moment-empty',true)
+      48 |  await view.locator('#moment-sticker').click();await shot('moment-stickers',true);await scroll('stickerScroll',panel.locator('.ui-sticker-grid'));await close()
+      49 |  await view.locator('#moment-audience').click();await shot('moment-visibility',true);for(const v of ['friends','only_me','everyone']){await panel.locator(`[data-visibility=${v}]`).click();await expect(panel).toHaveCount(0);await view.locator('#moment-audience').click();await expect(panel.locator(`[data-visibility=${v}]`)).toHaveAttribute('aria-pressed','true')}await close()
+        at /Users/anna/Muse_AI-repository/client/tests/r20-audit.spec.ts:46:136
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-ko-R20-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r20-audit.config.ts/r20-audit-812-ko-R20-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r20-audit.spec.ts:4:61 › 667 en R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 667 ko R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 812 en R20 fixture walkthrough ──────────────────────────────────
+    tests/r20-audit.spec.ts:4:61 › 812 ko R20 fixture walkthrough ──────────────────────────────────

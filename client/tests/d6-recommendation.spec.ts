@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 test('recommendations use saved B4 filters and survive logout',async({page,request},testInfo)=>{
  test.setTimeout(120000);page.setDefaultTimeout(10000)
- const root='http://127.0.0.1:3179'
+ const root='http://127.0.0.1:3001'
  const seeded=await request.post(root+'/__c5/seed',{data:{mode:'read'}})
  expect(seeded.ok()).toBeTruthy()
  const user=await seeded.json()

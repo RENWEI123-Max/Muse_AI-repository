@@ -1,0 +1,179 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r17.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r17.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r17-profile.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r17.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r17-profile.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "r17-profile.spec.ts",
+      "file": "r17-profile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "R17 twelve real profile states in one login session",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 58,
+                  "error": {
+                    "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts:7:127",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts",
+                      "column": 127,
+                      "line": 7
+                    },
+                    "snippet": " \u001b[90m  5 |\u001b[39m  \u001b[36mconst\u001b[39m root\u001b[33m=\u001b[39m\u001b[32m'http://127.0.0.1:3001'\u001b[39m\n \u001b[90m  6 |\u001b[39m  \u001b[90m// Register in the dedicated DB, or reuse the task session; no login loop.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m  \u001b[36mconst\u001b[39m a\u001b[33m=\u001b[39mprocess\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mR17_SHARED_ACCOUNT\u001b[39m\u001b[33m?\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mR17_SHARED_ACCOUNT\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(root\u001b[33m+\u001b[39m\u001b[32m'/__c5/seed'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{mode\u001b[33m:\u001b[39m\u001b[32m'empty'\u001b[39m}}))\u001b[33m.\u001b[39mjson()\u001b[33m,\u001b[39mheaders\u001b[33m=\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`Bearer ${a.token}`\u001b[39m}\n \u001b[90m    |\u001b[39m                                                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m  expect((\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(root\u001b[33m+\u001b[39m\u001b[32m'/profiles/me'\u001b[39m\u001b[33m,\u001b[39m{headers}))\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\n \u001b[90m  9 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(token\u001b[33m=>\u001b[39mlocalStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'maugo-token'\u001b[39m\u001b[33m,\u001b[39mtoken)\u001b[33m,\u001b[39ma\u001b[33m.\u001b[39mtoken)\n \u001b[90m 10 |\u001b[39m  \u001b[36mconst\u001b[39m metrics\u001b[33m:\u001b[39many[]\u001b[33m=\u001b[39m[]"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts",
+                        "column": 127,
+                        "line": 7
+                      },
+                      "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n\n\n   5 |  const root='http://127.0.0.1:3001'\n   6 |  // Register in the dedicated DB, or reuse the task session; no login loop.\n>  7 |  const a=process.env.R17_SHARED_ACCOUNT?JSON.parse(await readFile(process.env.R17_SHARED_ACCOUNT,'utf8')):await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json(),headers={Authorization:`Bearer ${a.token}`}\n     |                                                                                                                               ^\n   8 |  expect((await request.get(root+'/profiles/me',{headers})).ok()).toBeTruthy()\n   9 |  await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token)\n  10 |  const metrics:any[]=[]\n    at /Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts:7:127"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:11:01.555Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r17.config.ts/r17-profile-R17-twelve-rea-645ab-states-in-one-login-session/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r17-profile.spec.ts",
+                    "column": 127,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9da1265dcd9157fa1db8-49f2f6dedfdb33a2f98f",
+          "file": "r17-profile.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:11:01.379Z",
+    "duration": 313.696,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

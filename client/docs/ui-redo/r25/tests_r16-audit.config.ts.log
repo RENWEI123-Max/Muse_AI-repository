@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough (7.2s)
+  ✘  2 tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough (7.4s)
+  ✘  3 tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough (7.3s)
+  ✘  4 tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough (7.4s)
+
+
+  1) tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.person-page').getByRole('alert')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.person-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.person-page').getByRole('alert')
+
+
+      52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')
+      53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')
+    > 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))
+         |                                                                                                            ^
+      55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)
+      56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)
+      57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-en-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-en-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-en-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.person-page').getByRole('alert')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.person-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.person-page').getByRole('alert')
+
+
+      52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')
+      53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')
+    > 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))
+         |                                                                                                            ^
+      55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)
+      56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)
+      57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-ko-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-ko-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-667-ko-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.person-page').getByRole('alert')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.person-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.person-page').getByRole('alert')
+
+
+      52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')
+      53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')
+    > 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))
+         |                                                                                                            ^
+      55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)
+      56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)
+      57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-en-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-en-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-en-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.person-page').getByRole('alert')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.person-page').getByRole('alert') with timeout 5000ms
+      - waiting for locator('.person-page').getByRole('alert')
+
+
+      52 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('✓ Following'));await snap('person-followed')
+      53 |  await person.locator('#public-follow').click();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('unfollowed')
+    > 54 |  followFailure=true;await person.locator('#public-follow').click();await expect(person.getByRole('alert')).toBeVisible();await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'));await snap('follow-failure');followFailure=false;await person.locator('#page-back').click();await page.locator('#view-public-profile').click();await expect(person.getByRole('alert')).toHaveCount(0);await expect(person.locator('#public-follow')).toHaveText(t('＋ Follow'))
+         |                                                                                                            ^
+      55 |  await person.locator('#public-avatar').click();await snap('person-photo');await person.locator('.person-close').click();await expect(person.getByRole('dialog')).toHaveCount(0)
+      56 |  await person.locator('.ui-person-card').first().click();await snap('card-photo');await person.locator('.person-veil').click({position:{x:5,y:5}});await expect(person.getByRole('dialog')).toHaveCount(0)
+      57 |  await person.locator('.person-cards').hover();await page.mouse.wheel(600,0);await page.waitForTimeout(150);checks.cards=await person.locator('.person-cards').evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,content:e.scrollWidth}));expect(checks.cards.left).toBeGreaterThan(0);await snap('cards-scrolled')
+        at /Users/anna/Muse_AI-repository/client/tests/r16-audit.spec.ts:54:108
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-ko-R16-API-fixture-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-ko-R16-API-fixture-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r16-audit.config.ts/r16-audit-812-ko-R16-API-fixture-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r16-audit.spec.ts:6:61 › 667 en R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 667 ko R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 812 en R16 API fixture walkthrough ──────────────────────────────
+    tests/r16-audit.spec.ts:6:61 › 812 ko R16 API fixture walkthrough ──────────────────────────────

@@ -1,0 +1,392 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r15-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r15-audit.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_r15-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "r15-audit.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_r15-audit.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "r15-audit.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5335",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5335 --strictPort",
+      "url": "http://127.0.0.1:5335",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "r15-audit.spec.ts",
+      "file": "r15-audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en auth click walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7309,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                      "column": 75,
+                      "line": 28
+                    },
+                    "snippet": " \u001b[90m 26 |\u001b[39m   \u001b[36mreturn\u001b[39m ok({items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mcities\u001b[33m:\u001b[39m[]})\n \u001b[90m 27 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m  \u001b[36mconst\u001b[39m flow\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow'\u001b[39m)\u001b[33m,\u001b[39mmode\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mexpect(flow)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-auth-mode'\u001b[39m\u001b[33m,\u001b[39ms)\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mconst\u001b[39m click\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(text\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(text)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m  \u001b[36mconst\u001b[39m snap\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(name\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m states\u001b[33m:\u001b[39m\u001b[33mRecord\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m,\u001b[39mstring\u001b[33m>=\u001b[39m{\u001b[32m'welcome'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-unchecked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-scrolled'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-checked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'consent-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'auth-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'verify-back-signup'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signup'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'password-back-signin'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signin'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'apple-cancel'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'signin-session'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'session'\u001b[39m}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                        "column": 75,
+                        "line": 28
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n\n  26 |   return ok({items:[],responses:[],cities:[]})\n  27 |  })\n> 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)\n     |                                                                           ^\n  29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()\n  30 |  const snap=async(name:string)=>{\n  31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:01:09.037Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-en-auth-click-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-en-auth-click-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                    "column": 75,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9d7f3cd52de6a3c23ee-2d34c855a0cb9417b29f",
+          "file": "r15-audit.spec.ts",
+          "line": 9,
+          "column": 61
+        },
+        {
+          "title": "667 ko auth click walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7434,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                      "column": 75,
+                      "line": 28
+                    },
+                    "snippet": " \u001b[90m 26 |\u001b[39m   \u001b[36mreturn\u001b[39m ok({items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mcities\u001b[33m:\u001b[39m[]})\n \u001b[90m 27 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m  \u001b[36mconst\u001b[39m flow\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow'\u001b[39m)\u001b[33m,\u001b[39mmode\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mexpect(flow)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-auth-mode'\u001b[39m\u001b[33m,\u001b[39ms)\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mconst\u001b[39m click\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(text\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(text)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m  \u001b[36mconst\u001b[39m snap\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(name\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m states\u001b[33m:\u001b[39m\u001b[33mRecord\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m,\u001b[39mstring\u001b[33m>=\u001b[39m{\u001b[32m'welcome'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-unchecked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-scrolled'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-checked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'consent-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'auth-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'verify-back-signup'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signup'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'password-back-signin'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signin'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'apple-cancel'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'signin-session'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'session'\u001b[39m}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                        "column": 75,
+                        "line": 28
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n\n  26 |   return ok({items:[],responses:[],cities:[]})\n  27 |  })\n> 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)\n     |                                                                           ^\n  29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()\n  30 |  const snap=async(name:string)=>{\n  31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:01:16.640Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-ko-auth-click-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-ko-auth-click-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                    "column": 75,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9d7f3cd52de6a3c23ee-59335d641ed919342386",
+          "file": "r15-audit.spec.ts",
+          "line": 9,
+          "column": 61
+        },
+        {
+          "title": "812 en auth click walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7304,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                      "column": 75,
+                      "line": 28
+                    },
+                    "snippet": " \u001b[90m 26 |\u001b[39m   \u001b[36mreturn\u001b[39m ok({items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mcities\u001b[33m:\u001b[39m[]})\n \u001b[90m 27 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m  \u001b[36mconst\u001b[39m flow\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow'\u001b[39m)\u001b[33m,\u001b[39mmode\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mexpect(flow)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-auth-mode'\u001b[39m\u001b[33m,\u001b[39ms)\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mconst\u001b[39m click\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(text\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(text)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m  \u001b[36mconst\u001b[39m snap\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(name\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m states\u001b[33m:\u001b[39m\u001b[33mRecord\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m,\u001b[39mstring\u001b[33m>=\u001b[39m{\u001b[32m'welcome'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-unchecked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-scrolled'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-checked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'consent-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'auth-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'verify-back-signup'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signup'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'password-back-signin'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signin'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'apple-cancel'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'signin-session'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'session'\u001b[39m}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                        "column": 75,
+                        "line": 28
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n\n  26 |   return ok({items:[],responses:[],cities:[]})\n  27 |  })\n> 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)\n     |                                                                           ^\n  29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()\n  30 |  const snap=async(name:string)=>{\n  31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:01:24.452Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-en-auth-click-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-en-auth-click-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                    "column": 75,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9d7f3cd52de6a3c23ee-5885a699222a5852bd2c",
+          "file": "r15-audit.spec.ts",
+          "line": 9,
+          "column": 61
+        },
+        {
+          "title": "812 ko auth click walkthrough",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7419,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                      "column": 75,
+                      "line": 28
+                    },
+                    "snippet": " \u001b[90m 26 |\u001b[39m   \u001b[36mreturn\u001b[39m ok({items\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mresponses\u001b[33m:\u001b[39m[]\u001b[33m,\u001b[39mcities\u001b[33m:\u001b[39m[]})\n \u001b[90m 27 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m  \u001b[36mconst\u001b[39m flow\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow'\u001b[39m)\u001b[33m,\u001b[39mmode\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(s\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mexpect(flow)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-auth-mode'\u001b[39m\u001b[33m,\u001b[39ms)\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mconst\u001b[39m click\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(text\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39mt(text)\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 30 |\u001b[39m  \u001b[36mconst\u001b[39m snap\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(name\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m states\u001b[33m:\u001b[39m\u001b[33mRecord\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m,\u001b[39mstring\u001b[33m>=\u001b[39m{\u001b[32m'welcome'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-unchecked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-scrolled'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'terms-checked'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'consent'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'consent-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'auth-privacy'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'privacy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'verify-back-signup'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signup'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'password-back-signin'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'signin'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'apple-cancel'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'welcome'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'signin-session'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'session'\u001b[39m}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                        "column": 75,
+                        "line": 28
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.auth-flow')\nExpected: \u001b[32m\"verify\"\u001b[39m\nReceived: \u001b[31m\"signup\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.auth-flow') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.auth-flow')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"auth-flow\" data-auth-mode=\"signup\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"signup\"\u001b[22m\n\n\n  26 |   return ok({items:[],responses:[],cities:[]})\n  27 |  })\n> 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)\n     |                                                                           ^\n  29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()\n  30 |  const snap=async(name:string)=>{\n  31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}\n    at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)\n    at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:01:32.044Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-ko-auth-click-walkthrough/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-ko-auth-click-walkthrough/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts",
+                    "column": 75,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9d7f3cd52de6a3c23ee-5e62fa7fc45e8b7b4d80",
+          "file": "r15-audit.spec.ts",
+          "line": 9,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:01:08.470Z",
+    "duration": 31217.074,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

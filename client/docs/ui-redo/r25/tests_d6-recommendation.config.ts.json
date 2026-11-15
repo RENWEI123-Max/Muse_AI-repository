@@ -1,0 +1,179 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-recommendation.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-recommendation.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_d6-recommendation.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d6-recommendation.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_d6-recommendation.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d6-recommendation.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5279",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d6-recommendation.spec.ts",
+      "file": "d6-recommendation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "recommendations use saved B4 filters and survive logout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10439,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#auth-form button.primary')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#auth-form button.primary')\u001b[22m\n\n    at login (/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:12:51)\n    at /Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:26:10",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts",
+                      "column": 51,
+                      "line": 12
+                    },
+                    "snippet": " \u001b[90m 10 |\u001b[39m  \u001b[36mconst\u001b[39m login\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(user\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(user\u001b[33m.\u001b[39mpassword)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form button.primary'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(r\u001b[33m=>\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(r\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mpathname\u001b[33m.\u001b[39mendsWith(\u001b[32m'/letters'\u001b[39m)\u001b[33m&&\u001b[39mr\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39mmethod()\u001b[33m===\u001b[39m\u001b[32m'GET'\u001b[39m)\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 15 |\u001b[39m   \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m result\u001b[33m;\u001b[39mexpect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mURL\u001b[39m(response\u001b[33m.\u001b[39murl())"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts",
+                        "column": 51,
+                        "line": 12
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#auth-form button.primary')\u001b[22m\n\n\n  10 |  const login=async()=>{\n  11 |   await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)\n> 12 |   await page.locator('#auth-form button.primary').click()\n     |                                                   ^\n  13 |   const result=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters')&&r.request().method()==='GET')\n  14 |   await page.getByRole('button',{name:'Meet your letters'}).click()\n  15 |   const response=await result;expect(response.ok()).toBeTruthy();return new URL(response.url())\n    at login (/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:12:51)\n    at /Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:26:10"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:45:24.465Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d6-recommendation.config.ts/d6-recommendation-recommen-28b53--filters-and-survive-logout/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts",
+                    "column": 51,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cc4a5c669eec5fdddae8-ed0079e06d70ec6d8772",
+          "file": "d6-recommendation.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:45:23.524Z",
+    "duration": 11482.885,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

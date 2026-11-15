@@ -1,0 +1,233 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/baseline-r18-reverify.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_baseline-r18-reverify.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/baseline-r18-reverify.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_baseline-r18-reverify.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d4-reverify.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_baseline-r18-reverify.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d4-reverify.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d4-reverify.spec.ts",
+      "file": "d4-reverify.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D4 real backend profile, stats and avatar persistence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 57,
+                  "error": {
+                    "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n",
+                    "stack": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts:6:125",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts",
+                      "column": 125,
+                      "line": 6
+                    },
+                    "snippet": " \u001b[90m 4 |\u001b[39m test(\u001b[32m'D4 real backend profile, stats and avatar persistence'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n \u001b[90m 5 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m  \u001b[36mconst\u001b[39m a\u001b[33m=\u001b[39mprocess\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mD4_SHARED_ACCOUNT\u001b[39m\u001b[33m?\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mD4_SHARED_ACCOUNT\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m:\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(root\u001b[33m+\u001b[39m\u001b[32m'/__c5/seed'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39m{mode\u001b[33m:\u001b[39m\u001b[32m'empty'\u001b[39m}}))\u001b[33m.\u001b[39mjson()\n \u001b[90m   |\u001b[39m                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m  \u001b[36mconst\u001b[39m headers\u001b[33m=\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`Bearer ${a.token}`\u001b[39m}\n \u001b[90m 8 |\u001b[39m  \u001b[36mconst\u001b[39m shot\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m(name\u001b[33m:\u001b[39mstring)\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({animations\u001b[33m:\u001b[39m\u001b[32m'disabled'\u001b[39m\u001b[33m,\u001b[39mpath\u001b[33m:\u001b[39m\u001b[32m`test-results/d4-round2/${name}.png`\u001b[39m})}\n \u001b[90m 9 |\u001b[39m  \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(name\u001b[33m=\u001b[39m\u001b[32m'Reader'\u001b[39m){\u001b[36mif\u001b[39m(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mD4_SHARED_ACCOUNT\u001b[39m){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(token\u001b[33m=>\u001b[39mlocalStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'maugo-token'\u001b[39m\u001b[33m,\u001b[39mtoken)\u001b[33m,\u001b[39ma\u001b[33m.\u001b[39mtoken)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)}\u001b[36melse\u001b[39m{\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/?auth=consent'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#terms-continue'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-email'\u001b[39m)\u001b[33m.\u001b[39mfill(a\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-password'\u001b[39m)\u001b[33m.\u001b[39mfill(a\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#auth-form button.primary'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Meet your letters'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m}\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(name)}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts",
+                        "column": 125,
+                        "line": 6
+                      },
+                      "message": "Error: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/__c5/seed\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.65.0 (arm64; macOS 26.7) node/26.13\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 16\u001b[22m\n\n\n  4 | test('D4 real backend profile, stats and avatar persistence',async({page,request})=>{\n  5 |  test.setTimeout(180000)\n> 6 |  const a=process.env.D4_SHARED_ACCOUNT?JSON.parse(await readFile(process.env.D4_SHARED_ACCOUNT,'utf8')):await(await request.post(root+'/__c5/seed',{data:{mode:'empty'}})).json()\n    |                                                                                                                             ^\n  7 |  const headers={Authorization:`Bearer ${a.token}`}\n  8 |  const shot=async(name:string)=>{await page.screenshot({animations:'disabled',path:`test-results/d4-round2/${name}.png`})}\n  9 |  async function login(name='Reader'){if(process.env.D4_SHARED_ACCOUNT){await page.addInitScript(token=>localStorage.setItem('maugo-token',token),a.token);await page.goto('/')}else{await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(a.email);await page.locator('#auth-password').fill(a.password);await page.locator('#auth-form button.primary').click();await page.getByRole('button',{name:'Meet your letters'}).click();}await page.locator('#open-profile').click();await expect(page.locator('#edit-profile')).toContainText(name)}\n    at /Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts:6:125"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:37:07.384Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_baseline-r18-reverify.config.ts/d4-reverify-D4-real-backen-36117-tats-and-avatar-persistence/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts",
+                    "column": 125,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6c2dbe889c962485056f-d8b077cfb5a64716ffba",
+          "file": "d4-reverify.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "offline prototype comparison evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Provide the offline MauGo.html path",
+                  "location": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts",
+                    "line": 33,
+                    "column": 7
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 33,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:37:07.674Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Provide the offline MauGo.html path",
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4-reverify.spec.ts",
+                        "line": 33,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "6c2dbe889c962485056f-a93e7b986b4328832121",
+          "file": "d4-reverify.spec.ts",
+          "line": 31,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:37:07.190Z",
+    "duration": 588.572,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

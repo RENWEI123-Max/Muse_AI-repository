@@ -1,0 +1,443 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d4.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d4.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/d4.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_d4.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "d4.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_d4.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "d4.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5173 --strictPort",
+      "cwd": "/Users/anna/Muse_AI-repository/client/",
+      "url": "http://127.0.0.1:5173"
+    }
+  },
+  "suites": [
+    {
+      "title": "d4.spec.ts",
+      "file": "d4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D4 editing, avatar gallery, remove, restore, crop, persistence and full slots",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5556,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-body')\nExpected pattern: \u001b[32m/d4-open/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d4-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"d4-body profile-view-profile\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-body')\nExpected pattern: \u001b[32m/d4-open/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d4-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"d4-body profile-view-profile\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:10:76",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 76,
+                      "line": 10
+                    },
+                    "snippet": " \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m person(page\u001b[33m:\u001b[39many){\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-chat=\"tea\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#view-public-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\n \u001b[90m  9 |\u001b[39m test(\u001b[32m'D4 editing, avatar gallery, remove, restore, crop, persistence and full slots'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-body'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/d4-open/\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No photos uploaded yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'17'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'between 18 and 100'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-age'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'26'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Book wanderer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Book wanderer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot=\"1\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-avatar-slot=\"1\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-pressed'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-remove-avatar=\"1\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Remove this photo?'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Cancel'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-remove-avatar=\"1\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-remove-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m5\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#removed-avatars'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-restore-avatar=\"0\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m  \u001b[36mconst\u001b[39m chooser\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'filechooser'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m (\u001b[36mawait\u001b[39m chooser)\u001b[33m.\u001b[39msetFiles(\u001b[32m'src/assets/05-avatars/portrait-5.png'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m before\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate((e\u001b[33m:\u001b[39m\u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mtoDataURL())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'2'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-zoom'\u001b[39m)\u001b[33m.\u001b[39mdispatchEvent(\u001b[32m'input'\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#avatar-canvas'\u001b[39m)\u001b[33m.\u001b[39mevaluate((e\u001b[33m:\u001b[39m\u001b[33mHTMLCanvasElement\u001b[39m)\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mtoDataURL()))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoEqual(before)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m3\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Book wanderer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m3\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'test-results/d4-gallery.png'\u001b[39m})\n \u001b[90m 12 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#likes'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Image cards'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Got it'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#following'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-connection=\"tea\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#followers'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No followers yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-visitors'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No visitors yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-letters'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-moment'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Lovely to meet you!'\u001b[39m)\n \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m k\u001b[33m=\u001b[39m\u001b[32m'maugo-profile-d4-test'\u001b[39m\u001b[33m,\u001b[39mp\u001b[33m=\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(localStorage\u001b[33m.\u001b[39mgetItem(k)\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39mp\u001b[33m.\u001b[39mslots\u001b[33m=\u001b[39mp\u001b[33m.\u001b[39mslots\u001b[33m.\u001b[39mmap((s\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mi\u001b[33m:\u001b[39mnumber)\u001b[33m=>\u001b[39ms\u001b[33m||\u001b[39m{\u001b[33m...\u001b[39mp\u001b[33m.\u001b[39mslots[\u001b[35m0\u001b[39m]\u001b[33m,\u001b[39mid\u001b[33m:\u001b[39m\u001b[32m'full-'\u001b[39m\u001b[33m+\u001b[39mi})\u001b[33m;\u001b[39mlocalStorage\u001b[33m.\u001b[39msetItem(k\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(p))})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.avatar-empty'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#upload-avatar'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 76,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-body')\nExpected pattern: \u001b[32m/d4-open/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d4-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"d4-body profile-view-profile\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n\n   8 | async function person(page:any){await page.locator('#open-inbox').click();await page.locator('[data-chat=\"tea\"]').click();await page.locator('#chat-details').click();await page.locator('#view-public-profile').click();await expect(page.locator('#public-avatar')).toBeVisible()}\n   9 | test('D4 editing, avatar gallery, remove, restore, crop, persistence and full slots',async({page})=>{\n> 10 |  await enter(page);await mine(page);await expect(page.locator('.d4-body')).toHaveCSS('animation-name',/d4-open/);await expect(page.getByText('No photos uploaded yet.')).toBeVisible();await page.locator('#edit-profile').click();await page.locator('#edit-age').fill('17');await page.locator('#save-profile').click();await expect(page.getByRole('alert')).toContainText('between 18 and 100');await page.locator('#edit-age').fill('26');await page.locator('#edit-name').fill('Book wanderer');await page.locator('#save-profile').click();await expect(page.locator('#edit-profile')).toContainText('Book wanderer');await page.locator('#edit-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(4);await page.locator('[data-avatar-slot=\"1\"]').click();await page.locator('#edit-avatar').click();await expect(page.locator('[data-avatar-slot=\"1\"]')).toHaveAttribute('aria-pressed','true');await page.locator('[data-remove-avatar=\"1\"]').click();await expect(page.getByText('Remove this photo?')).toBeVisible();await page.getByRole('button',{name:'Cancel',exact:true}).click();await expect(page.locator('.avatar-empty')).toHaveCount(4);await page.locator('[data-remove-avatar=\"1\"]').click();await page.locator('#confirm-remove-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(5);await page.locator('#removed-avatars').click();await page.locator('[data-restore-avatar=\"0\"]').click();await expect(page.locator('.avatar-empty')).toHaveCount(4)\n     |                                                                            ^\n  11 |  const chooser=page.waitForEvent('filechooser');await page.locator('#upload-avatar').click();await (await chooser).setFiles('src/assets/05-avatars/portrait-5.png');await expect(page.locator('#avatar-canvas')).toBeVisible();const before=await page.locator('#avatar-canvas').evaluate((e:HTMLCanvasElement)=>e.toDataURL());await page.locator('#avatar-zoom').fill('2');await page.locator('#avatar-zoom').dispatchEvent('input');expect(await page.locator('#avatar-canvas').evaluate((e:HTMLCanvasElement)=>e.toDataURL())).not.toEqual(before);await page.locator('#save-avatar').click();await page.locator('#edit-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(3);await page.getByRole('button',{name:'Close',exact:true}).click();await enter(page);await mine(page);await expect(page.locator('#edit-profile')).toContainText('Book wanderer');await page.locator('#edit-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(3);await page.screenshot({path:'test-results/d4-gallery.png'})\n  12 |  await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#likes').click();await expect(page.getByRole('dialog')).toContainText('Image cards');await page.getByRole('button',{name:'Got it'}).click();await page.locator('#following').click();await expect(page.locator('[data-connection=\"tea\"]')).toBeVisible();await page.locator('#page-back').click();await page.locator('#followers').click();await expect(page.getByText('No followers yet.')).toBeVisible();await page.locator('#page-back').click();await page.locator('#profile-visitors').click();await expect(page.getByText('No visitors yet.')).toBeVisible();await page.locator('#page-back').click();await page.locator('#profile-letters').click();await expect(page.locator('.d4-moment').first()).toContainText('Lovely to meet you!')\n  13 |  await page.evaluate(()=>{const k='maugo-profile-d4-test',p=JSON.parse(localStorage.getItem(k)!);p.slots=p.slots.map((s:any,i:number)=>s||{...p.slots[0],id:'full-'+i});localStorage.setItem(k,JSON.stringify(p))});await page.locator('#page-back').click();await page.locator('#page-back').click();await mine(page);await page.locator('#edit-avatar').click();await expect(page.locator('.avatar-empty')).toHaveCount(0);await expect(page.locator('#upload-avatar')).toBeDisabled()\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:10:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:39:54.003Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d4.config.ts/d4-D4-editing-avatar-galle-12552--persistence-and-full-slots/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 76,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-661dd8c7d2c7bf78f7bd",
+          "file": "d4.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "D4 public profile and chat gate open",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5741,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:131",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 131,
+                      "line": 16
+                    },
+                    "snippet": " \u001b[90m 14 |\u001b[39m })\n \u001b[90m 15 |\u001b[39m \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m status \u001b[36mof\u001b[39m [\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'waiting'\u001b[39m])test(\u001b[32m`D4 public profile and chat gate ${status}`\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mstatus)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-photo'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(status\u001b[33m===\u001b[39m\u001b[32m'open'\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m patch\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForRequest(r\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mmethod()\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m\u001b[33m&&\u001b[39mr\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations/tea'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m patch)\u001b[33m.\u001b[39mpostDataJSON())\u001b[33m.\u001b[39mtoEqual({following\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'＋ Follow'\u001b[39m)}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-more'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Report'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(status\u001b[33m===\u001b[39m\u001b[32m'waiting'\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m })\n \u001b[90m 18 |\u001b[39m test(\u001b[32m'D4 profile cannot bypass block'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Conversation blocked'\u001b[39m)})\n \u001b[90m 19 |\u001b[39m test(\u001b[32m'D4 public full content, photo previews, own image cards and outgoing visits'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 131,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n\n\n  14 | })\n  15 | for(const status of ['open','waiting'])test(`D4 public profile and chat gate ${status}`,async({page})=>{\n> 16 |  await enter(page,status);await person(page);await page.locator('#public-avatar').click();await expect(page.locator('.d4-photo')).toBeVisible();await page.getByRole('button',{name:'Close',exact:true}).click();if(status==='open'){await expect(page.locator('#public-follow')).toBeEnabled();const patch=page.waitForRequest(r=>r.method()==='PATCH'&&r.url().endsWith('/conversations/tea'));await page.locator('#public-follow').click();expect((await patch).postDataJSON()).toEqual({following:false});await expect(page.locator('#public-follow')).toHaveText('＋ Follow')}else await expect(page.locator('#public-follow')).toBeDisabled();await page.locator('#public-more').click();await expect(page.getByRole('dialog')).toContainText('Report');await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#public-chat').click();if(status==='waiting'){await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('.waiting-card')).toBeVisible()}else await expect(page.locator('#chat-form')).toBeVisible()\n     |                                                                                                                                   ^\n  17 | })\n  18 | test('D4 profile cannot bypass block',async({page})=>{await enter(page,'open',true);await person(page);await expect(page.locator('#public-follow')).toBeDisabled();await page.locator('#public-chat').click();await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('.waiting-card')).toContainText('Conversation blocked')})\n  19 | test('D4 public full content, photo previews, own image cards and outgoing visits',async({page})=>{\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:131"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:39:59.822Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d4.config.ts/d4-D4-public-profile-and-chat-gate-open/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 131,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-139706d707878b26bcb8",
+          "file": "d4.spec.ts",
+          "line": 15,
+          "column": 40
+        },
+        {
+          "title": "D4 public profile and chat gate waiting",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5727,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:131",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 131,
+                      "line": 16
+                    },
+                    "snippet": " \u001b[90m 14 |\u001b[39m })\n \u001b[90m 15 |\u001b[39m \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m status \u001b[36mof\u001b[39m [\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'waiting'\u001b[39m])test(\u001b[32m`D4 public profile and chat gate ${status}`\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mstatus)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-avatar'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-photo'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(status\u001b[33m===\u001b[39m\u001b[32m'open'\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m patch\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForRequest(r\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mmethod()\u001b[33m===\u001b[39m\u001b[32m'PATCH'\u001b[39m\u001b[33m&&\u001b[39mr\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mendsWith(\u001b[32m'/conversations/tea'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m patch)\u001b[33m.\u001b[39mpostDataJSON())\u001b[33m.\u001b[39mtoEqual({following\u001b[33m:\u001b[39m\u001b[36mfalse\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'＋ Follow'\u001b[39m)}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-more'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Report'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(status\u001b[33m===\u001b[39m\u001b[32m'waiting'\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m })\n \u001b[90m 18 |\u001b[39m test(\u001b[32m'D4 profile cannot bypass block'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Conversation blocked'\u001b[39m)})\n \u001b[90m 19 |\u001b[39m test(\u001b[32m'D4 public full content, photo previews, own image cards and outgoing visits'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 131,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d4-photo')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.d4-photo') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d4-photo')\u001b[22m\n\n\n  14 | })\n  15 | for(const status of ['open','waiting'])test(`D4 public profile and chat gate ${status}`,async({page})=>{\n> 16 |  await enter(page,status);await person(page);await page.locator('#public-avatar').click();await expect(page.locator('.d4-photo')).toBeVisible();await page.getByRole('button',{name:'Close',exact:true}).click();if(status==='open'){await expect(page.locator('#public-follow')).toBeEnabled();const patch=page.waitForRequest(r=>r.method()==='PATCH'&&r.url().endsWith('/conversations/tea'));await page.locator('#public-follow').click();expect((await patch).postDataJSON()).toEqual({following:false});await expect(page.locator('#public-follow')).toHaveText('＋ Follow')}else await expect(page.locator('#public-follow')).toBeDisabled();await page.locator('#public-more').click();await expect(page.getByRole('dialog')).toContainText('Report');await page.getByRole('button',{name:'Close',exact:true}).click();await page.locator('#public-chat').click();if(status==='waiting'){await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('.waiting-card')).toBeVisible()}else await expect(page.locator('#chat-form')).toBeVisible()\n     |                                                                                                                                   ^\n  17 | })\n  18 | test('D4 profile cannot bypass block',async({page})=>{await enter(page,'open',true);await person(page);await expect(page.locator('#public-follow')).toBeDisabled();await page.locator('#public-chat').click();await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('.waiting-card')).toContainText('Conversation blocked')})\n  19 | test('D4 public full content, photo previews, own image cards and outgoing visits',async({page})=>{\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:16:131"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:40:05.819Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d4.config.ts/d4-D4-public-profile-and-chat-gate-waiting/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 131,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-fb30e045db4968ef91a6",
+          "file": "d4.spec.ts",
+          "line": 15,
+          "column": 40
+        },
+        {
+          "title": "D4 profile cannot bypass block",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:40:11.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-34948e66e76d5d7b909e",
+          "file": "d4.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "D4 public full content, photo previews, own image cards and outgoing visits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5703,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-hero')\nExpected substring: \u001b[32m\"25 · Seoul\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-hero') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-hero')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"person-hero profile-hero\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-hero')\nExpected substring: \u001b[32m\"25 · Seoul\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-hero') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-hero')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"person-hero profile-hero\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:20:414",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                      "column": 414,
+                      "line": 20
+                    },
+                    "snippet": " \u001b[90m 18 |\u001b[39m test(\u001b[32m'D4 profile cannot bypass block'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-follow'\u001b[39m))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#public-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.waiting-card'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Conversation blocked'\u001b[39m)})\n \u001b[90m 19 |\u001b[39m test(\u001b[32m'D4 public full content, photo previews, own image cards and outgoing visits'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[35m/\\/api\\/conversations\\?/\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39m{items\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'tea'\u001b[39m\u001b[33m,\u001b[39mdisplayName\u001b[33m:\u001b[39m\u001b[32m'Tea friend'\u001b[39m\u001b[33m,\u001b[39mstatus\u001b[33m:\u001b[39m\u001b[32m'open'\u001b[39m\u001b[33m,\u001b[39mfollowing\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mpeerId\u001b[33m:\u001b[39m\u001b[32m'peer'\u001b[39m\u001b[33m,\u001b[39mage\u001b[33m:\u001b[39m\u001b[35m25\u001b[39m\u001b[33m,\u001b[39mcity\u001b[33m:\u001b[39m\u001b[32m'Seoul'\u001b[39m\u001b[33m,\u001b[39mcards\u001b[33m:\u001b[39m[\u001b[32m'/src/assets/05-avatars/portrait-3.png'\u001b[39m]\u001b[33m,\u001b[39mmoments\u001b[33m:\u001b[39m[{id\u001b[33m:\u001b[39m\u001b[32m'day'\u001b[39m\u001b[33m,\u001b[39mtext\u001b[33m:\u001b[39m\u001b[32m'A small moment worth keeping.'\u001b[39m\u001b[33m,\u001b[39msrc\u001b[33m:\u001b[39m\u001b[32m'/src/assets/05-avatars/portrait-4.png'\u001b[39m}]}]}}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.profile-hero'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'25 · Seoul'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-cards img'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-moment'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'A small moment worth keeping.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-cards button'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-photo'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m\u001b[32m'test-results/d4-person-photo.png'\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Close'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-visitors'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'I visited'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-row'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Tea friend'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#edit-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Image wanderer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m k\u001b[33m=\u001b[39m\u001b[32m'maugo-profile-d4-test'\u001b[39m\u001b[33m,\u001b[39mp\u001b[33m=\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(localStorage\u001b[33m.\u001b[39mgetItem(k)\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39mp\u001b[33m.\u001b[39mcards\u001b[33m=\u001b[39m[\u001b[32m'/src/assets/05-avatars/portrait-3.png'\u001b[39m]\u001b[33m;\u001b[39mlocalStorage\u001b[33m.\u001b[39msetItem(k\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(p))})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d4-cards img'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m1\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m })\n \u001b[90m 22 |\u001b[39m test(\u001b[32m'D4 following empty, my letters empty and no public moments'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m 23 |\u001b[39m  \u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m person(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No moments yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m enter(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[35m/\\/api\\/conversations\\?/\u001b[39m\u001b[33m,\u001b[39mroute\u001b[33m=>\u001b[39mroute\u001b[33m.\u001b[39mfulfill({json\u001b[33m:\u001b[39m{items\u001b[33m:\u001b[39m[]}}))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m mine(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#following'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No following yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#page-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-letters'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'No letters yet.'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                        "column": 414,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.profile-hero')\nExpected substring: \u001b[32m\"25 · Seoul\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.profile-hero') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.profile-hero')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-v-e838ed77=\"\" class=\"person-hero profile-hero\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n\n  18 | test('D4 profile cannot bypass block',async({page})=>{await enter(page,'open',true);await person(page);await expect(page.locator('#public-follow')).toBeDisabled();await page.locator('#public-chat').click();await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('.waiting-card')).toContainText('Conversation blocked')})\n  19 | test('D4 public full content, photo previews, own image cards and outgoing visits',async({page})=>{\n> 20 |  await enter(page);await page.route(/\\/api\\/conversations\\?/,route=>route.fulfill({json:{items:[{id:'tea',displayName:'Tea friend',status:'open',following:true,peerId:'peer',age:25,city:'Seoul',cards:['/src/assets/05-avatars/portrait-3.png'],moments:[{id:'day',text:'A small moment worth keeping.',src:'/src/assets/05-avatars/portrait-4.png'}]}]}}));await person(page);await expect(page.locator('.profile-hero')).toContainText('25 · Seoul');await expect(page.locator('.d4-cards img')).toHaveCount(1);await expect(page.locator('.d4-moment')).toContainText('A small moment worth keeping.');await page.locator('.d4-cards button').click();await expect(page.locator('.d4-photo')).toBeVisible();await page.screenshot({path:'test-results/d4-person-photo.png'});await page.getByRole('button',{name:'Close',exact:true}).click();await enter(page);await mine(page);await page.locator('#profile-visitors').click();await page.getByRole('button',{name:'I visited',exact:true}).click();await expect(page.locator('.d4-row')).toContainText('Tea friend');await page.locator('#page-back').click();await page.locator('#edit-profile').click();await page.locator('#edit-name').fill('Image wanderer');await page.locator('#save-profile').click();await page.evaluate(()=>{const k='maugo-profile-d4-test',p=JSON.parse(localStorage.getItem(k)!);p.cards=['/src/assets/05-avatars/portrait-3.png'];localStorage.setItem(k,JSON.stringify(p))});await page.locator('#page-back').click();await mine(page);await expect(page.locator('.d4-cards img')).toHaveCount(1)\n     |                                                                                                                                                                                                                                                                                                                                                                                                                              ^\n  21 | })\n  22 | test('D4 following empty, my letters empty and no public moments',async({page})=>{\n  23 |  await enter(page);await person(page);await expect(page.getByText('No moments yet.')).toBeVisible();await enter(page);await page.route(/\\/api\\/conversations\\?/,route=>route.fulfill({json:{items:[]}}));await mine(page);await page.locator('#following').click();await expect(page.getByText('No following yet.')).toBeVisible();await page.locator('#page-back').click();await page.locator('#profile-letters').click();await expect(page.getByText('No letters yet.')).toBeVisible()\n    at /Users/anna/Muse_AI-repository/client/tests/d4.spec.ts:20:414"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:40:12.583Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_d4.config.ts/d4-D4-public-full-content--269e4-e-cards-and-outgoing-visits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d4.spec.ts",
+                    "column": 414,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-19d1421dbf7f848e96d7",
+          "file": "d4.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "D4 following empty, my letters empty and no public moments",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:40:18.490Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "adbd60f11cdcbcf4539b-d26c2cbb816be929be6a",
+          "file": "d4.spec.ts",
+          "line": 22,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:39:53.433Z",
+    "duration": 26443.834000000003,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

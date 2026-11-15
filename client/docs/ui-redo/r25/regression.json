@@ -1,0 +1,2326 @@
+[
+  {
+    "suite": "default-auth.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "auth.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-auth.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 30.5,
+    "log": "default-auth.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:28:47.579Z",
+      "duration": 30293.023,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-c7-acceptance.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "c7-acceptance.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-c7-acceptance.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 3.9,
+    "log": "default-c7-acceptance.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:29:18.375Z",
+      "duration": 3621.526,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-chat-media.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "chat-media.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-chat-media.spec.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 4.7,
+    "log": "default-chat-media.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:29:22.279Z",
+      "duration": 4460.255,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-chat-voice.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "chat-voice.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-chat-voice.spec.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 70.8,
+    "log": "default-chat-voice.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:29:26.981Z",
+      "duration": 70624.09700000001,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-chat.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "chat.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-chat.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 160.8,
+    "log": "default-chat.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:30:37.850Z",
+      "duration": 160555.608,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-client.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "client.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-client.spec.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 2.4,
+    "log": "default-client.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:33:18.710Z",
+      "duration": 2168.955,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-d1.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d1.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d1.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 7.7,
+    "log": "default-d1.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:33:21.117Z",
+      "duration": 7422.147,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-d2.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d2.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d2.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 13.9,
+    "log": "default-d2.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:33:28.825Z",
+      "duration": 13664.951,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-d3.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d3.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d3.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 68.1,
+    "log": "default-d3.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:33:42.742Z",
+      "duration": 67891.169,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-f01.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "f01.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-f01.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 3.2,
+    "log": "default-f01.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:34:50.881Z",
+      "duration": 2915.612,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-home.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "home.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-home.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 18.9,
+    "log": "default-home.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:34:54.076Z",
+      "duration": 18665.736,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-inbox.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "inbox.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-inbox.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 58.9,
+    "log": "default-inbox.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:35:12.985Z",
+      "duration": 58670.265999999996,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-ko-help.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "ko-help.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-ko-help.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 31.8,
+    "log": "default-ko-help.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:36:11.953Z",
+      "duration": 31599.005,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-letters.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "letters.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-letters.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 6.9,
+    "log": "default-letters.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:36:43.828Z",
+      "duration": 6656.1720000000005,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "default-pass-confirmation.spec.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "pass-confirmation.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-pass-confirmation.spec.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 8.1,
+    "log": "default-pass-confirmation.spec.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:36:50.731Z",
+      "duration": 7880.463000000001,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_baseline-r18-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/baseline-r18-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_baseline-r18-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 8.3,
+    "log": "tests_baseline-r18-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:36:58.903Z",
+      "duration": 8014.555999999999,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_baseline-r18-reverify.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/baseline-r18-reverify.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_baseline-r18-reverify.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.8,
+    "log": "tests_baseline-r18-reverify.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:37:07.190Z",
+      "duration": 588.572,
+      "expected": 0,
+      "skipped": 1,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d11.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d11.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d11.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 148.3,
+    "log": "tests_d11.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:37:08.049Z",
+      "duration": 148052.215,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d4-reverify.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d4-reverify.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d4-reverify.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 16.9,
+    "log": "tests_d4-reverify.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:39:36.453Z",
+      "duration": 16694.553,
+      "expected": 0,
+      "skipped": 1,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d4.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d4.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d4.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 26.7,
+    "log": "tests_d4.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:39:53.433Z",
+      "duration": 26443.834000000003,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d5.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d5.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d5.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 181.9,
+    "log": "tests_d5.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:40:20.181Z",
+      "duration": 181633.941,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d6-followup.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-followup.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-followup.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 121.3,
+    "log": "tests_d6-followup.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:43:22.155Z",
+      "duration": 121056.252,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d6-recommendation.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-recommendation.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-recommendation.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 11.7,
+    "log": "tests_d6-recommendation.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:45:23.524Z",
+      "duration": 11482.885,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d6-round3.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-round3.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-round3.config.ts"
+    ],
+    "exit": -15,
+    "timeout": true,
+    "seconds": 480.0,
+    "log": "tests_d6-round3.config.ts.log",
+    "stats": {
+      "expected": 0,
+      "unexpected": 4,
+      "skipped": 1,
+      "partialFromListLog": true,
+      "uncollectedTotal": false
+    }
+  },
+  {
+    "suite": "tests_d7.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d7.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d7.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.3,
+    "log": "tests_d7.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:53:35.318Z",
+      "duration": 5.877999999999986,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [
+      {
+        "message": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+        "stack": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+      }
+    ]
+  },
+  {
+    "suite": "tests_d8.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d8.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d8.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.3,
+    "log": "tests_d8.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:53:35.618Z",
+      "duration": 5.643000000000001,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [
+      {
+        "message": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+        "stack": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+      }
+    ]
+  },
+  {
+    "suite": "tests_d9-storekit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d9-storekit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d9-storekit.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 8.3,
+    "log": "tests_d9-storekit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:53:35.874Z",
+      "duration": 8003.967,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d9.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d9.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d9.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 12.1,
+    "log": "tests_d9.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:53:44.178Z",
+      "duration": 11850.147,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_f01-ui.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/f01-ui.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_f01-ui.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 14.2,
+    "log": "tests_f01-ui.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:53:56.388Z",
+      "duration": 13956.907,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_f06.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/f06.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_f06.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.3,
+    "log": "tests_f06.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:54:10.636Z",
+      "duration": 5.680999999999983,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [
+      {
+        "message": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+        "stack": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+      }
+    ]
+  },
+  {
+    "suite": "tests_f07.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/f07.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_f07.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.3,
+    "log": "tests_f07.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:54:10.928Z",
+      "duration": 4.8770000000000095,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [
+      {
+        "message": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+        "stack": "Error: http://127.0.0.1:3001/health is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+      }
+    ]
+  },
+  {
+    "suite": "tests_legal-copy.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/legal-copy.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_legal-copy.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 23.7,
+    "log": "tests_legal-copy.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:54:11.187Z",
+      "duration": 23456.303,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r06-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r06-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r06-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 69.1,
+    "log": "tests_r06-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:54:34.973Z",
+      "duration": 68812.709,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r08-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r08-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r08-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 85.0,
+    "log": "tests_r08-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:55:44.365Z",
+      "duration": 84794.467,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r09-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r09-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r09-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 28.0,
+    "log": "tests_r09-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:57:09.917Z",
+      "duration": 27777.707,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r10-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r10-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r10-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 27.6,
+    "log": "tests_r10-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:57:37.986Z",
+      "duration": 27369.087,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r11-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r11-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r11-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 65.0,
+    "log": "tests_r11-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:58:05.675Z",
+      "duration": 64703.203,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r12-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r12-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r12-audit.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 46.1,
+    "log": "tests_r12-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:59:10.751Z",
+      "duration": 45841.61,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r13-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r13-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r13-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 35.7,
+    "log": "tests_r13-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T21:59:57.174Z",
+      "duration": 35396.421,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r14-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r14-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r14-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 35.6,
+    "log": "tests_r14-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:00:32.860Z",
+      "duration": 35367.771,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r15-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r15-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r15-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 31.4,
+    "log": "tests_r15-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:01:08.470Z",
+      "duration": 31217.074,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": [],
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build"
+  },
+  {
+    "suite": "tests_r15.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r15.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r15.config.ts"
+    ],
+    "exit": -15,
+    "timeout": true,
+    "seconds": 480.0,
+    "log": "tests_r15.config.ts.log",
+    "supersededReason": "Initial preview build omitted VITE_API_BASE_URL=/api; repeated with isolated test build",
+    "stats": {
+      "expected": 10,
+      "unexpected": 88,
+      "skipped": 112,
+      "partialFromListLog": true,
+      "uncollectedTotal": false
+    }
+  },
+  {
+    "suite": "tests_r16-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r16-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r16-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 31.6,
+    "log": "tests_r16-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:09:41.479Z",
+      "duration": 31420.514,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r16-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r16-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r16-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 8.3,
+    "log": "tests_r16-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:10:13.345Z",
+      "duration": 8061.377,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r16.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r16.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r16.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 2.1,
+    "log": "tests_r16.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:10:21.698Z",
+      "duration": 1779.59,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r17-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 28.3,
+    "log": "tests_r17-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:10:23.747Z",
+      "duration": 28117.122,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r17-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 8.3,
+    "log": "tests_r17-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:10:52.207Z",
+      "duration": 8039.393000000001,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r17-reverify.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17-reverify.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17-reverify.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.9,
+    "log": "tests_r17-reverify.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:00.499Z",
+      "duration": 590.75,
+      "expected": 0,
+      "skipped": 1,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r17.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r17.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r17.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r17.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:01.379Z",
+      "duration": 313.696,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r18-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 31.5,
+    "log": "tests_r18-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:01.924Z",
+      "duration": 31293.811999999998,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r18-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 8.3,
+    "log": "tests_r18-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:33.536Z",
+      "duration": 8041.236999999999,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r18-reverify.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18-reverify.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18-reverify.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.9,
+    "log": "tests_r18-reverify.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:41.893Z",
+      "duration": 587.265,
+      "expected": 0,
+      "skipped": 1,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r18.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r18.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r18.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r18.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:42.767Z",
+      "duration": 305.923,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r19-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r19-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r19-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 26.7,
+    "log": "tests_r19-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:11:43.324Z",
+      "duration": 26501.556,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r19-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r19-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r19-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r19-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:12:10.169Z",
+      "duration": 344.28499999999997,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r19.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r19.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r19.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r19.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:12:10.789Z",
+      "duration": 304.923,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r20-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r20-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r20-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 29.3,
+    "log": "tests_r20-audit.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:12:11.343Z",
+      "duration": 29030.109,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r20-fixes.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r20-fixes.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r20-fixes.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 289.4,
+    "log": "tests_r20-fixes.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:12:40.675Z",
+      "duration": 289180.499,
+      "expected": 24,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r20-regression.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r20-regression.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r20-regression.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r20-regression.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:17:31.598Z",
+      "duration": 324.759,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r20.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r20.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r20.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.6,
+    "log": "tests_r20.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:17:32.234Z",
+      "duration": 288.82500000000005,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_shell-fix.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/shell-fix.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_shell-fix.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 3.6,
+    "log": "tests_shell-fix.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:17:32.796Z",
+      "duration": 3385.541,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_ui-polish.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/ui-polish.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_ui-polish.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 27.4,
+    "log": "tests_ui-polish.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:17:36.546Z",
+      "duration": 27108.137,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_ui-redo.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/ui-redo.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_ui-redo.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 6.5,
+    "log": "tests_ui-redo.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:18:04.076Z",
+      "duration": 6222.728,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "playwright.r10.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.r10.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-playwright.r10.config.ts"
+    ],
+    "exit": -15,
+    "timeout": true,
+    "seconds": 480.0,
+    "log": "playwright.r10.config.ts.log",
+    "stats": {
+      "expected": 10,
+      "unexpected": 18,
+      "skipped": 182,
+      "partialFromListLog": true,
+      "uncollectedTotal": false
+    }
+  },
+  {
+    "suite": "playwright.r13.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.r13.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-playwright.r13.config.ts"
+    ],
+    "exit": -15,
+    "timeout": true,
+    "seconds": 480.0,
+    "log": "playwright.r13.config.ts.log",
+    "stats": {
+      "expected": 8,
+      "unexpected": 20,
+      "skipped": 182,
+      "partialFromListLog": true,
+      "uncollectedTotal": false
+    }
+  },
+  {
+    "suite": "docs_fidelity-refactor_existing-ui.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/fidelity-refactor/existing-ui.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-docs_fidelity-refactor_existing-ui.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 0.3,
+    "log": "docs_fidelity-refactor_existing-ui.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:34:10.880Z",
+      "duration": 8.204999999999984,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [
+      {
+        "message": "Error: http://127.0.0.1:5174 is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+        "stack": "Error: http://127.0.0.1:5174 is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+      }
+    ]
+  },
+  {
+    "suite": "docs_fidelity-refactor_fix-119.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/fidelity-refactor/fix-119.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-docs_fidelity-refactor_fix-119.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 61.0,
+    "log": "docs_fidelity-refactor_fix-119.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:34:11.170Z",
+      "duration": 60714.925,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "docs_fidelity-refactor_playwright.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/fidelity-refactor/playwright.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-docs_fidelity-refactor_playwright.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 120.4,
+    "log": "docs_fidelity-refactor_playwright.config.ts.log",
+    "stats": {
+      "startTime": "2026-11-14T22:35:12.153Z",
+      "duration": 120071.02500000001,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 5,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d7.config.ts-completion",
+    "completes": "tests_d7.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d7.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d7.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 122.0,
+    "log": "tests_d7.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:37:15.085Z",
+      "duration": 121813.55900000001,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d8.config.ts-completion",
+    "completes": "tests_d8.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d8.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d8.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 7.0,
+    "log": "tests_d8.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:39:17.181Z",
+      "duration": 6794.438999999999,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_f06.config.ts-completion",
+    "completes": "tests_f06.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/f06.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_f06.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 1.9,
+    "log": "tests_f06.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:39:24.239Z",
+      "duration": 1738.385,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_f07.config.ts-completion",
+    "completes": "tests_f07.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/f07.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_f07.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 10.2,
+    "log": "tests_f07.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:39:26.230Z",
+      "duration": 9954.983,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_d6-round3.config.ts-completion",
+    "completes": "tests_d6-round3.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/d6-round3.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_d6-round3.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 492.8,
+    "log": "tests_d6-round3.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:39:36.443Z",
+      "duration": 492554.77,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 5,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_legal-copy.config.ts-completion",
+    "completes": "tests_legal-copy.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/legal-copy.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_legal-copy.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 23.7,
+    "log": "tests_legal-copy.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:47:49.284Z",
+      "duration": 23481.84,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r06-audit.config.ts-completion",
+    "completes": "tests_r06-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r06-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r06-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 68.9,
+    "log": "tests_r06-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:48:13.116Z",
+      "duration": 68691.275,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r08-audit.config.ts-completion",
+    "completes": "tests_r08-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r08-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r08-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 85.0,
+    "log": "tests_r08-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:49:22.340Z",
+      "duration": 84828.683,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r09-audit.config.ts-completion",
+    "completes": "tests_r09-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r09-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r09-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 28.0,
+    "log": "tests_r09-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:50:47.919Z",
+      "duration": 27768.112,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r10-audit.config.ts-completion",
+    "completes": "tests_r10-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r10-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r10-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 27.7,
+    "log": "tests_r10-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:51:16.001Z",
+      "duration": 27455.096,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r11-audit.config.ts-completion",
+    "completes": "tests_r11-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r11-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r11-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 65.0,
+    "log": "tests_r11-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:51:43.745Z",
+      "duration": 64773.752,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r12-audit.config.ts-completion",
+    "completes": "tests_r12-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r12-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r12-audit.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 46.2,
+    "log": "tests_r12-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:52:48.865Z",
+      "duration": 45964.045,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r13-audit.config.ts-completion",
+    "completes": "tests_r13-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r13-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r13-audit.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 58.1,
+    "log": "tests_r13-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:53:35.446Z",
+      "duration": 57888.018,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r14-audit.config.ts-completion",
+    "completes": "tests_r14-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r14-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r14-audit.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 66.5,
+    "log": "tests_r14-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:54:34.101Z",
+      "duration": 66273.647,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r15-audit.config.ts-completion",
+    "completes": "tests_r15-audit.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r15-audit.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r15-audit.config.ts"
+    ],
+    "exit": 0,
+    "timeout": false,
+    "seconds": 21.8,
+    "log": "tests_r15-audit.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:55:40.990Z",
+      "duration": 21638.374,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "tests_r15.config.ts-completion",
+    "completes": "tests_r15.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/r15.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_r15.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 1116.4,
+    "log": "tests_r15.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T22:56:03.740Z",
+      "duration": 1116180.434,
+      "expected": 61,
+      "skipped": 4,
+      "unexpected": 145,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "playwright.r10.config.ts-completion",
+    "completes": "playwright.r10.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.r10.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-playwright.r10.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 2970.4,
+    "log": "playwright.r10.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-14T23:14:45.285Z",
+      "duration": 2970196.5130000003,
+      "expected": 90,
+      "skipped": 4,
+      "unexpected": 116,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "playwright.r13.config.ts-completion",
+    "completes": "playwright.r13.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.r13.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-playwright.r13.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 1115.9,
+    "log": "playwright.r13.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-15T00:04:20.899Z",
+      "duration": 1115660.052,
+      "expected": 61,
+      "skipped": 4,
+      "unexpected": 145,
+      "flaky": 0
+    },
+    "errors": []
+  },
+  {
+    "suite": "docs_fidelity-refactor_existing-ui.config.ts-completion",
+    "completes": "docs_fidelity-refactor_existing-ui.config.ts",
+    "command": [
+      "node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/fidelity-refactor/existing-ui.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-docs_fidelity-refactor_existing-ui.config.ts"
+    ],
+    "exit": 1,
+    "timeout": false,
+    "seconds": 40.3,
+    "log": "docs_fidelity-refactor_existing-ui.config.ts-completion.log",
+    "stats": {
+      "startTime": "2026-11-15T00:23:01.895Z",
+      "duration": 40063.619,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "errors": []
+  }
+]

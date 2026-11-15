@@ -1,0 +1,107 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access (3.0m)
+
+
+  1) tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access
+
+    Test timeout of 180000ms exceeded.
+
+    Error: locator.click: Test timeout of 180000ms exceeded.
+    Browser logs:
+
+    <launching> /Users/anna/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/l2/tympb61s507_rfbhdcps9tr40000gn/T/playwright_chromiumdev_profile-JGJzYf --remote-debugging-pipe --no-startup-window
+    <launched> pid=84178
+    [pid=84178][err] [1115/054021.729394:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=84178][err] [1115/054021.820398:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=84178][err] [1115/054021.830909:INFO:CONSOLE:733] "[vite] connecting...", source: http://127.0.0.1:5169/@vite/client (733)
+    [pid=84178][err] [1115/054021.851035:INFO:CONSOLE:827] "[vite] connected.", source: http://127.0.0.1:5169/@vite/client (827)
+    [pid=84178][err] [1115/054021.978968:INFO:CONSOLE:2306] "[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated.
+    [pid=84178][err]   at <ProfileFlow key=1 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" onClose=fn  ... >
+    [pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... >
+    [pid=84178][err]   at <Transition name="tab-page" >
+    [pid=84178][err]   at <HomeFlow key=0 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" user-id=""  ... >
+    [pid=84178][err]   at <App>", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)
+    [pid=84178][err] [1115/054021.998817:INFO:CONSOLE:2306] "[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated.
+    [pid=84178][err]   at <ProfileFlow key=1 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" onClose=fn  ... >
+    [pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... >
+    [pid=84178][err]   at <Transition name="tab-page" >
+    [pid=84178][err]   at <HomeFlow key=0 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" user-id=""  ... >
+    [pid=84178][err]   at <App>", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)
+    [pid=84178][err] [1115/054022.007289:INFO:CONSOLE:2306] "[Vue warn]: Component inside <Transition> renders non-element root node that cannot be animated.
+    [pid=84178][err]   at <ProfileFlow key=1 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" onClose=fn  ... >
+    [pid=84178][err]   at <BaseTransition appear=false persisted=false mode=undefined  ... >
+    [pid=84178][err]   at <Transition name="tab-page" >
+    [pid=84178][err]   at <HomeFlow key=0 token="6389005ce6962fb79e48c37b91c01fd622d7f2c48f88263396e16a6931b928e8" user-id=""  ... >
+    [pid=84178][err]   at <App>", source: http://127.0.0.1:5169/node_modules/.vite/deps/vue.js?v=5cb764f6 (2306)
+    [pid=84178] <gracefully close start>
+    Call log:
+      - waiting for locator('#profile-moments')
+        - locator resolved to <button id="profile-moments">My moments ›</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <button id="card-visibility" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <button id="card-type" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        84 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button id="card-type" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button id="card-visibility" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button id="card-type" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <button id="card-type" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <button id="card-type" class="ui-row ui-row--cards">…</button> from <div class="cards-overlay cards-card-options">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      25 |  expect((await request.get('http://127.0.0.1:3001'+mediaUrl,{headers:viewerHeaders})).status()).toBe(403)
+      26 |  await openCard();await page.locator('#card-remove').click();await snap('card-remove');await page.getByRole('button',{name:'Cancel',exact:true}).click()
+    > 27 |  await page.locator('#profile-moments').click();await expect(page.locator('.empty:not(.d5-item-leave-active)').last()).toBeVisible();await snap('moments-empty')
+         |                                         ^
+      28 |  await page.locator('#new-moment').click();await expect(page.locator('#save-moment')).toBeDisabled();await snap('moment-empty')
+      29 |  await page.locator('#moment-text').fill('A quiet afternoon, a little story worth sharing.');await snap('moment-draft')
+      30 |  await page.locator('#d5-back').click();await snap('moment-leave');await page.locator('#keep-moment-draft').click();await login(page,fixture.author);await page.locator('#profile-moments').click();await page.locator('#new-moment').click();await expect(page.locator('#moment-text')).toHaveValue('A quiet afternoon, a little story worth sharing.')
+        at /Users/anna/Muse_AI-repository/client/tests/d5.spec.ts:27:41
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d5.config.ts/d5-D5-real-B17-supported-s-71416-e-and-second-account-access/error-context.md
+
+  1 failed
+    tests/d5.spec.ts:6:1 › D5 real B17: supported states, limits, persistence and second-account access

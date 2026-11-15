@@ -1,0 +1,158 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r15-audit.spec.ts:9:61 › 667 en auth click walkthrough (7.3s)
+  ✘  2 tests/r15-audit.spec.ts:9:61 › 667 ko auth click walkthrough (7.4s)
+  ✘  3 tests/r15-audit.spec.ts:9:61 › 812 en auth click walkthrough (7.3s)
+  ✘  4 tests/r15-audit.spec.ts:9:61 › 812 ko auth click walkthrough (7.4s)
+
+
+  1) tests/r15-audit.spec.ts:9:61 › 667 en auth click walkthrough ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.auth-flow')
+    Expected: "verify"
+    Received: "signup"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.auth-flow') with timeout 5000ms
+      - waiting for locator('.auth-flow')
+        14 × locator resolved to <div class="auth-flow" data-auth-mode="signup">…</div>
+           - unexpected value "signup"
+
+
+      26 |   return ok({items:[],responses:[],cities:[]})
+      27 |  })
+    > 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+         |                                                                           ^
+      29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+      30 |  const snap=async(name:string)=>{
+      31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}
+        at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-en-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-en-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-en-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r15-audit.spec.ts:9:61 › 667 ko auth click walkthrough ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.auth-flow')
+    Expected: "verify"
+    Received: "signup"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.auth-flow') with timeout 5000ms
+      - waiting for locator('.auth-flow')
+        14 × locator resolved to <div class="auth-flow" data-auth-mode="signup">…</div>
+           - unexpected value "signup"
+
+
+      26 |   return ok({items:[],responses:[],cities:[]})
+      27 |  })
+    > 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+         |                                                                           ^
+      29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+      30 |  const snap=async(name:string)=>{
+      31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}
+        at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-ko-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-ko-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-667-ko-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r15-audit.spec.ts:9:61 › 812 en auth click walkthrough ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.auth-flow')
+    Expected: "verify"
+    Received: "signup"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.auth-flow') with timeout 5000ms
+      - waiting for locator('.auth-flow')
+        14 × locator resolved to <div class="auth-flow" data-auth-mode="signup">…</div>
+           - unexpected value "signup"
+
+
+      26 |   return ok({items:[],responses:[],cities:[]})
+      27 |  })
+    > 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+         |                                                                           ^
+      29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+      30 |  const snap=async(name:string)=>{
+      31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}
+        at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-en-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-en-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-en-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r15-audit.spec.ts:9:61 › 812 ko auth click walkthrough ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.auth-flow')
+    Expected: "verify"
+    Received: "signup"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.auth-flow') with timeout 5000ms
+      - waiting for locator('.auth-flow')
+        14 × locator resolved to <div class="auth-flow" data-auth-mode="signup">…</div>
+           - unexpected value "signup"
+
+
+      26 |   return ok({items:[],responses:[],cities:[]})
+      27 |  })
+    > 28 |  const flow=page.locator('.auth-flow'),mode=async(s:string)=>expect(flow).toHaveAttribute('data-auth-mode',s)
+         |                                                                           ^
+      29 |  const click=async(text:string)=>page.getByRole('button',{name:t(text),exact:true}).click()
+      30 |  const snap=async(name:string)=>{
+      31 |   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome','signin-session':'session'}
+        at mode (/Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:28:75)
+        at /Users/anna/Muse_AI-repository/client/tests/r15-audit.spec.ts:57:179
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-ko-auth-click-walkthrough/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-ko-auth-click-walkthrough/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r15-audit.config.ts/r15-audit-812-ko-auth-click-walkthrough/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r15-audit.spec.ts:9:61 › 667 en auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:9:61 › 667 ko auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:9:61 › 812 en auth click walkthrough ───────────────────────────────────
+    tests/r15-audit.spec.ts:9:61 › 812 ko auth click walkthrough ───────────────────────────────────

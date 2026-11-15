@@ -1,0 +1,27 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout (10.4s)
+
+
+  1) tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout ─
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#auth-form button.primary')
+
+
+      10 |  const login=async()=>{
+      11 |   await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+    > 12 |   await page.locator('#auth-form button.primary').click()
+         |                                                   ^
+      13 |   const result=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters')&&r.request().method()==='GET')
+      14 |   await page.getByRole('button',{name:'Meet your letters'}).click()
+      15 |   const response=await result;expect(response.ok()).toBeTruthy();return new URL(response.url())
+        at login (/Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:12:51)
+        at /Users/anna/Muse_AI-repository/client/tests/d6-recommendation.spec.ts:26:10
+
+    Error Context: ../../../../tmp/maugo-r25-tests_d6-recommendation.config.ts/d6-recommendation-recommen-28b53--filters-and-survive-logout/error-context.md
+
+  1 failed
+    tests/d6-recommendation.spec.ts:2:1 › recommendations use saved B4 filters and survive logout ──

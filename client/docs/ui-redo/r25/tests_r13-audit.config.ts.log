@@ -1,0 +1,118 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures (8.4s)
+  ✘  2 tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures (8.5s)
+  ✘  3 tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures (8.4s)
+  ✘  4 tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures (8.5s)
+
+
+  1) tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      41 |  const details=async()=>{await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details')}
+      42 |  const background=async()=>{await details();await page.locator('#chat-background').click();await expect(page.locator('.wallpaper-grid')).toBeVisible()}
+    > 43 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r13-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      44 |  await background();await snap('wallpapers','wallpapers');checks.wallpaperScroll=await scroll('.d2-body');expect(checks.wallpaperScroll.top).toBeGreaterThan(0);await snap('wallpapers-scrolled')
+      45 |  await page.locator('[data-wallpaper="aurora-sky"]').click();await snap('preview-cancel');expect((await appearance()).wallpaperId).toBeUndefined();await back();await expect(root).toHaveAttribute('data-state','wallpapers');await snap('preview-return');expect((await appearance()).wallpaperId).toBeUndefined()
+      46 |  await page.locator('[data-wallpaper="moon-road"]').click();await snap('wallpaper-preview','wallpaper-preview');checks.previewScroll=await scroll('.d2-body');await snap('preview-scrolled');await page.locator('#apply-wallpaper').click();await snap('wallpaper-applied','wallpaper-applied');expect((await appearance()).wallpaperId).toBe('moon-road');await expect(root).toHaveClass(/theme-wallpaper/)
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:43:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-en-R13-appea-044d9-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures ────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      41 |  const details=async()=>{await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details')}
+      42 |  const background=async()=>{await details();await page.locator('#chat-background').click();await expect(page.locator('.wallpaper-grid')).toBeVisible()}
+    > 43 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r13-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      44 |  await background();await snap('wallpapers','wallpapers');checks.wallpaperScroll=await scroll('.d2-body');expect(checks.wallpaperScroll.top).toBeGreaterThan(0);await snap('wallpapers-scrolled')
+      45 |  await page.locator('[data-wallpaper="aurora-sky"]').click();await snap('preview-cancel');expect((await appearance()).wallpaperId).toBeUndefined();await back();await expect(root).toHaveAttribute('data-state','wallpapers');await snap('preview-return');expect((await appearance()).wallpaperId).toBeUndefined()
+      46 |  await page.locator('[data-wallpaper="moon-road"]').click();await snap('wallpaper-preview','wallpaper-preview');checks.previewScroll=await scroll('.d2-body');await snap('preview-scrolled');await page.locator('#apply-wallpaper').click();await snap('wallpaper-applied','wallpaper-applied');expect((await appearance()).wallpaperId).toBe('moon-road');await expect(root).toHaveClass(/theme-wallpaper/)
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:43:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-667-ko-R13-appea-c6b29-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures ────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      41 |  const details=async()=>{await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details')}
+      42 |  const background=async()=>{await details();await page.locator('#chat-background').click();await expect(page.locator('.wallpaper-grid')).toBeVisible()}
+    > 43 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r13-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      44 |  await background();await snap('wallpapers','wallpapers');checks.wallpaperScroll=await scroll('.d2-body');expect(checks.wallpaperScroll.top).toBeGreaterThan(0);await snap('wallpapers-scrolled')
+      45 |  await page.locator('[data-wallpaper="aurora-sky"]').click();await snap('preview-cancel');expect((await appearance()).wallpaperId).toBeUndefined();await back();await expect(root).toHaveAttribute('data-state','wallpapers');await snap('preview-return');expect((await appearance()).wallpaperId).toBeUndefined()
+      46 |  await page.locator('[data-wallpaper="moon-road"]').click();await snap('wallpaper-preview','wallpaper-preview');checks.previewScroll=await scroll('.d2-body');await snap('preview-scrolled');await page.locator('#apply-wallpaper').click();await snap('wallpaper-applied','wallpaper-applied');expect((await appearance()).wallpaperId).toBe('moon-road');await expect(root).toHaveClass(/theme-wallpaper/)
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:43:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-en-R13-appea-7d82e-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures ────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.flow-content > .ui-button')
+
+
+      41 |  const details=async()=>{await page.locator('#chat-details').click();await expect(root).toHaveAttribute('data-state','chat-details')}
+      42 |  const background=async()=>{await details();await page.locator('#chat-background').click();await expect(page.locator('.wallpaper-grid')).toBeVisible()}
+    > 43 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r13-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await page.locator('[data-chat="open"]').click()
+         |                                                                                                                                                                                                                                                                                                                                                               ^
+      44 |  await background();await snap('wallpapers','wallpapers');checks.wallpaperScroll=await scroll('.d2-body');expect(checks.wallpaperScroll.top).toBeGreaterThan(0);await snap('wallpapers-scrolled')
+      45 |  await page.locator('[data-wallpaper="aurora-sky"]').click();await snap('preview-cancel');expect((await appearance()).wallpaperId).toBeUndefined();await back();await expect(root).toHaveAttribute('data-state','wallpapers');await snap('preview-return');expect((await appearance()).wallpaperId).toBeUndefined()
+      46 |  await page.locator('[data-wallpaper="moon-road"]').click();await snap('wallpaper-preview','wallpaper-preview');checks.previewScroll=await scroll('.d2-body');await snap('preview-scrolled');await page.locator('#apply-wallpaper').click();await snap('wallpaper-applied','wallpaper-applied');expect((await appearance()).wallpaperId).toBe('moon-road');await expect(root).toHaveClass(/theme-wallpaper/)
+        at /Users/anna/Muse_AI-repository/client/tests/r13-audit.spec.ts:43:351
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r13-audit.config.ts/r13-audit-812-ko-R13-appea-e07a3-lkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r13-audit.spec.ts:6:61 › 667 en R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 667 ko R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 812 en R13 appearance walkthrough with API fixtures ─────────────
+    tests/r13-audit.spec.ts:6:61 › 812 ko R13 appearance walkthrough with API fixtures ─────────────

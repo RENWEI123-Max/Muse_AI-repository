@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 test('real global visibility and account logout',async({page,request})=>{
  test.setTimeout(120000)
- const root='http://127.0.0.1:3179'
+ const root='http://127.0.0.1:3001'
  const seed=async()=>{const r=await request.post(root+'/__c5/seed',{data:{mode:'read'}});expect(r.ok()).toBeTruthy();return r.json()}
  const a=await seed(),b=await seed(),headers={Authorization:`Bearer ${a.token}`}
  const friend=await seed()

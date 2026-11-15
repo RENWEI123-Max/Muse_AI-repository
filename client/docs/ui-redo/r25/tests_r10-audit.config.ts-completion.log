@@ -1,0 +1,146 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture (6.3s)
+  ✘  2 tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture (6.4s)
+  ✘  3 tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture (6.4s)
+  ✘  4 tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture (6.4s)
+
+
+  1) tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      27 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});records.push({name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+      28 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r10-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await settled();await page.getByLabel(t('Dismiss notification reminder')).click()
+    > 29 |  await shot('reply-last-free');await page.locator('#collect-replies').hover();await page.mouse.down();const press=await page.locator('#collect-replies').evaluate(e=>getComputedStyle(e).transform);await page.mouse.move(4,100);await page.mouse.up();expect(press).toBe('matrix(0.99, 0, 0, 0.99, 0, 0)');await page.locator('#collect-replies').click();await expect(page.locator('#confirm-reply-payment')).toBeVisible();await shot('free-confirmation-difference');await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await settled();await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+      32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:29:401
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-en-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-en-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-en-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      27 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});records.push({name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+      28 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r10-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await settled();await page.getByLabel(t('Dismiss notification reminder')).click()
+    > 29 |  await shot('reply-last-free');await page.locator('#collect-replies').hover();await page.mouse.down();const press=await page.locator('#collect-replies').evaluate(e=>getComputedStyle(e).transform);await page.mouse.move(4,100);await page.mouse.up();expect(press).toBe('matrix(0.99, 0, 0, 0.99, 0, 0)');await page.locator('#collect-replies').click();await expect(page.locator('#confirm-reply-payment')).toBeVisible();await shot('free-confirmation-difference');await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await settled();await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+      32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:29:401
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-ko-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-ko-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-667-ko-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      27 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});records.push({name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+      28 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r10-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await settled();await page.getByLabel(t('Dismiss notification reminder')).click()
+    > 29 |  await shot('reply-last-free');await page.locator('#collect-replies').hover();await page.mouse.down();const press=await page.locator('#collect-replies').evaluate(e=>getComputedStyle(e).transform);await page.mouse.move(4,100);await page.mouse.up();expect(press).toBe('matrix(0.99, 0, 0, 0.99, 0, 0)');await page.locator('#collect-replies').click();await expect(page.locator('#confirm-reply-payment')).toBeVisible();await shot('free-confirmation-difference');await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await settled();await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+      32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:29:401
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-en-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-en-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-en-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#confirm-reply-payment')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#confirm-reply-payment') with timeout 5000ms
+      - waiting for locator('#confirm-reply-payment')
+
+
+      27 |  const shot=async(name:string)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);await page.screenshot({path:`${out}/${height}-${lang}-${name}.png`});records.push({name,document:await page.evaluate(()=>({height:document.documentElement.scrollHeight,y:scrollY,viewport:innerHeight})),copy:await root.locator('button,p,h2,h3,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})))})}
+      28 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('r10-audit@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .ui-button').click();await page.locator('#open-inbox').click();await settled();await page.getByLabel(t('Dismiss notification reminder')).click()
+    > 29 |  await shot('reply-last-free');await page.locator('#collect-replies').hover();await page.mouse.down();const press=await page.locator('#collect-replies').evaluate(e=>getComputedStyle(e).transform);await page.mouse.move(4,100);await page.mouse.up();expect(press).toBe('matrix(0.99, 0, 0, 0.99, 0, 0)');await page.locator('#collect-replies').click();await expect(page.locator('#confirm-reply-payment')).toBeVisible();await shot('free-confirmation-difference');await page.locator('#confirm-reply-payment').click();await settled();await expect(page.getByRole('dialog')).toHaveCount(0)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+      30 |  await page.locator('#collect-replies').click();await expect(root).toHaveAttribute('data-reply-state','reply-payment');const animation=await page.locator('.reply-dialog').evaluate(e=>({name:getComputedStyle(e).animationName,duration:getComputedStyle(e).animationDuration}));await shot('reply-payment');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('2');await shot('reply-cancelled')
+      31 |  await page.locator('#collect-replies').click();await page.getByLabel(t('Close dialog'),{exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);await page.locator('#collect-replies').click();await settled();await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0)
+      32 |  await page.locator('#collect-replies').click();fail=true;await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible();await shot('collect-failure');fail=false;await page.locator('#confirm-reply-payment').click();await settled();await expect(root).toHaveAttribute('data-reply-state','reply-paid');await shot('reply-paid');await expect(page.locator('#collect-replies>b')).toHaveText('1')
+        at /Users/anna/Muse_AI-repository/client/tests/r10-audit.spec.ts:29:401
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-ko-R10-click-walkthrough-API-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-ko-R10-click-walkthrough-API-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r10-audit.config.ts/r10-audit-812-ko-R10-click-walkthrough-API-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r10-audit.spec.ts:6:61 › 667 en: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 667 ko: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 812 en: R10 click walkthrough API fixture ───────────────────────
+    tests/r10-audit.spec.ts:6:61 › 812 ko: R10 click walkthrough API fixture ───────────────────────

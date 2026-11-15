@@ -1,0 +1,26 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/home.spec.ts:2:1 › C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL (17.6s)
+
+
+  1) tests/home.spec.ts:2:1 › C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Refresh', exact: true })
+
+
+      17 |  await page.getByLabel('Flight & hover').uncheck();await expect(page.locator('.home-flow')).toHaveClass(/motion-off/);await expect(page.locator('.flight-preview img')).toBeVisible();await expect(page.locator('.home-sheet')).toHaveCSS('transform','none');await page.screenshot({path:'test-results/c3-motion-off.png'});await page.getByRole('button',{name:'Done',exact:true}).click()
+      18 |  await page.getByRole('button',{name:'Refresh',exact:true}).click();await expect(page.locator('.home-flow')).not.toHaveClass(/refreshing/);await expect(page.locator('.home-veil')).toHaveCount(0);await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-ready');await page.screenshot({path:'test-results/c3-home.png'})
+    > 19 |  for(let i=0;i<7;i++){await page.getByRole('button',{name:'Refresh',exact:true}).click();await expect(page.locator('.home-flow')).not.toHaveClass(/refreshing/)}
+         |                                                                                  ^
+      20 |  await expect(page.locator('.home-flow')).toHaveAttribute('data-state','home-empty');await expect(page.locator('.scene-hint')).toContainText('No letters yet');expect(errors).toEqual([])
+      21 | })
+      22 |
+        at /Users/anna/Muse_AI-repository/client/tests/home.spec.ts:19:82
+
+    Error Context: ../../../../tmp/maugo-r25-default-home.spec.ts/home-C3-nine-states-real-B-8247e-irds-on-isolated-PostgreSQL/error-context.md
+
+  1 failed
+    tests/home.spec.ts:2:1 › C3: nine states, real B4/B6 flow and eighteen birds on isolated PostgreSQL

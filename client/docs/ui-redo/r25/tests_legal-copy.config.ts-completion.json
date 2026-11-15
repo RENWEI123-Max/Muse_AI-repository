@@ -1,0 +1,391 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/legal-copy.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-tests_legal-copy.config.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-tests_legal-copy.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "legal-copy.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-tests_legal-copy.config.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "legal-copy.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5316"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 5316 --strictPort",
+      "url": "http://127.0.0.1:5316",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "legal-copy.spec.ts",
+      "file": "legal-copy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "667 en: full copy, scroll and navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5510,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                      "column": 93,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  }\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m capture(\u001b[32m'auth'\u001b[39m\u001b[33m,\u001b[39mauth\u001b[33m,\u001b[39mauth)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.privacy-copy'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(lang\u001b[33m===\u001b[39m\u001b[32m'ko'\u001b[39m\u001b[33m?\u001b[39m\u001b[32m'정식 문안'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'pending Smith'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-privacy-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 40 |\u001b[39m  \u001b[90m// Guest preview opens the real settings UI; no backend or account fixture.\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.welcome-screen .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                        "column": 93,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n\n  36 |  }\n  37 |  await capture('auth',auth,auth)\n> 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()\n     |                                                                                             ^\n  39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()\n  40 |  // Guest preview opens the real settings UI; no backend or account fixture.\n  41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:47:49.851Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "auth metrics",
+                      "contentType": "application/json",
+                      "body": "eyJ0b3AiOjIxNzYsImhlaWdodCI6MzQ4LCJjb250ZW50IjoyNTI0LCJ3aWR0aCI6MzI1LCJzY3JvbGxXaWR0aCI6MzI1fQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-667-en-full-copy-scroll-and-navigation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                    "column": 93,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8e098014016cc5ecb64-daaeb020c479c0172b86",
+          "file": "legal-copy.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "667 ko: full copy, scroll and navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5506,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                      "column": 93,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  }\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m capture(\u001b[32m'auth'\u001b[39m\u001b[33m,\u001b[39mauth\u001b[33m,\u001b[39mauth)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.privacy-copy'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(lang\u001b[33m===\u001b[39m\u001b[32m'ko'\u001b[39m\u001b[33m?\u001b[39m\u001b[32m'정식 문안'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'pending Smith'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-privacy-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 40 |\u001b[39m  \u001b[90m// Guest preview opens the real settings UI; no backend or account fixture.\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.welcome-screen .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                        "column": 93,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n\n  36 |  }\n  37 |  await capture('auth',auth,auth)\n> 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()\n     |                                                                                             ^\n  39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()\n  40 |  // Guest preview opens the real settings UI; no backend or account fixture.\n  41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:47:55.621Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "auth metrics",
+                      "contentType": "application/json",
+                      "body": "eyJ0b3AiOjE3OTgsImhlaWdodCI6MzQ4LCJjb250ZW50IjoyMTQ2LCJ3aWR0aCI6MzI1LCJzY3JvbGxXaWR0aCI6MzI1fQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-667-ko-full-copy-scroll-and-navigation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                    "column": 93,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8e098014016cc5ecb64-a47531982e72ddcae953",
+          "file": "legal-copy.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 en: full copy, scroll and navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5503,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                      "column": 93,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  }\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m capture(\u001b[32m'auth'\u001b[39m\u001b[33m,\u001b[39mauth\u001b[33m,\u001b[39mauth)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.privacy-copy'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(lang\u001b[33m===\u001b[39m\u001b[32m'ko'\u001b[39m\u001b[33m?\u001b[39m\u001b[32m'정식 문안'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'pending Smith'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-privacy-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 40 |\u001b[39m  \u001b[90m// Guest preview opens the real settings UI; no backend or account fixture.\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.welcome-screen .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                        "column": 93,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n\n  36 |  }\n  37 |  await capture('auth',auth,auth)\n> 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()\n     |                                                                                             ^\n  39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()\n  40 |  // Guest preview opens the real settings UI; no backend or account fixture.\n  41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:48:01.388Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "auth metrics",
+                      "contentType": "application/json",
+                      "body": "eyJ0b3AiOjIxNzYsImhlaWdodCI6MzQ4LCJjb250ZW50IjoyNTI0LCJ3aWR0aCI6MzI1LCJzY3JvbGxXaWR0aCI6MzI1fQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-812-en-full-copy-scroll-and-navigation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                    "column": 93,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8e098014016cc5ecb64-5b3bf1cd87f991ca3f18",
+          "file": "legal-copy.spec.ts",
+          "line": 6,
+          "column": 61
+        },
+        {
+          "title": "812 ko: full copy, scroll and navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5521,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                      "column": 93,
+                      "line": 38
+                    },
+                    "snippet": " \u001b[90m 36 |\u001b[39m  }\n \u001b[90m 37 |\u001b[39m  \u001b[36mawait\u001b[39m capture(\u001b[32m'auth'\u001b[39m\u001b[33m,\u001b[39mauth\u001b[33m,\u001b[39mauth)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .back'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#accept-terms'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.privacy-copy'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(lang\u001b[33m===\u001b[39m\u001b[32m'ko'\u001b[39m\u001b[33m?\u001b[39m\u001b[32m'정식 문안'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'pending Smith'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-privacy-back'\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 40 |\u001b[39m  \u001b[90m// Guest preview opens the real settings UI; no backend or account fixture.\u001b[39m\n \u001b[90m 41 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.auth-flow .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.welcome-screen .auth-preview'\u001b[39m)\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                        "column": 93,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#accept-terms')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#accept-terms') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#accept-terms')\u001b[22m\n\n\n  36 |  }\n  37 |  await capture('auth',auth,auth)\n> 38 |  await page.locator('.auth-flow .back').click();await expect(page.locator('#accept-terms')).toBeVisible()\n     |                                                                                             ^\n  39 |  await page.locator('.auth-flow .auth-link').click();await expect(page.locator('.privacy-copy')).toContainText(lang==='ko'?'정식 문안':'pending Smith');await page.locator('.auth-privacy-back').click()\n  40 |  // Guest preview opens the real settings UI; no backend or account fixture.\n  41 |  await page.locator('.auth-flow .auth-preview').click();await page.locator('.welcome-screen .auth-preview').click()\n    at /Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts:38:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T22:48:07.153Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "auth metrics",
+                      "contentType": "application/json",
+                      "body": "eyJ0b3AiOjE3OTgsImhlaWdodCI6MzQ4LCJjb250ZW50IjoyMTQ2LCJ3aWR0aCI6MzI1LCJzY3JvbGxXaWR0aCI6MzI1fQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-tests_legal-copy.config.ts/legal-copy-812-ko-full-copy-scroll-and-navigation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/legal-copy.spec.ts",
+                    "column": 93,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8e098014016cc5ecb64-f72810685be59ead02b2",
+          "file": "legal-copy.spec.ts",
+          "line": 6,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T22:47:49.284Z",
+    "duration": 23481.84,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

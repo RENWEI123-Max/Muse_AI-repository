@@ -1,0 +1,118 @@
+
+Running 4 tests using 1 worker
+
+  ✘  1 tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures (16.0s)
+  ✘  2 tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures (16.1s)
+  ✘  3 tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures (16.0s)
+  ✘  4 tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures (16.1s)
+
+
+  1) tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.safety-dialog-cancel')
+
+
+      47 |  blocked=true
+      48 |  await page.locator('[data-chat="open"]').click();await snap('chat-blocked');await page.locator('#chat-details').click();await page.locator('#block-chat').click();await snap('unblock-confirm');await page.locator('.safety-dialog-cancel').click();await backChat();await backChat()
+    > 49 |  await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list');await page.locator('[data-unblock]').click();await snap('list-unblock-confirm');await page.locator('.safety-dialog-cancel').click();await snap('list-cancel-return');await page.locator('[data-unblock]').click();await page.locator('.safety-dialog-close').click();await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click()
+         |                                                                                                                                                                                                                                                 ^
+      50 |  manyBlocks=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await page.locator('.d3-blocked').hover();await page.mouse.wheel(0,1400);await page.waitForTimeout(250);checks.listScroll=await page.locator('.d3-blocked').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight,overscroll:getComputedStyle(e).overscrollBehaviorY}));expect(checks.listScroll.top).toBeGreaterThan(0);await snap('blocked-list-scrolled');await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click();manyBlocks=false;blockFailure=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list-failure');blockFailure=false
+      51 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))
+      52 |  expect(forbidden).toEqual([]);expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:49:241
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.safety-dialog-cancel')
+
+
+      47 |  blocked=true
+      48 |  await page.locator('[data-chat="open"]').click();await snap('chat-blocked');await page.locator('#chat-details').click();await page.locator('#block-chat').click();await snap('unblock-confirm');await page.locator('.safety-dialog-cancel').click();await backChat();await backChat()
+    > 49 |  await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list');await page.locator('[data-unblock]').click();await snap('list-unblock-confirm');await page.locator('.safety-dialog-cancel').click();await snap('list-cancel-return');await page.locator('[data-unblock]').click();await page.locator('.safety-dialog-close').click();await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click()
+         |                                                                                                                                                                                                                                                 ^
+      50 |  manyBlocks=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await page.locator('.d3-blocked').hover();await page.mouse.wheel(0,1400);await page.waitForTimeout(250);checks.listScroll=await page.locator('.d3-blocked').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight,overscroll:getComputedStyle(e).overscrollBehaviorY}));expect(checks.listScroll.top).toBeGreaterThan(0);await snap('blocked-list-scrolled');await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click();manyBlocks=false;blockFailure=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list-failure');blockFailure=false
+      51 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))
+      52 |  expect(forbidden).toEqual([]);expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:49:241
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-667-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.safety-dialog-cancel')
+
+
+      47 |  blocked=true
+      48 |  await page.locator('[data-chat="open"]').click();await snap('chat-blocked');await page.locator('#chat-details').click();await page.locator('#block-chat').click();await snap('unblock-confirm');await page.locator('.safety-dialog-cancel').click();await backChat();await backChat()
+    > 49 |  await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list');await page.locator('[data-unblock]').click();await snap('list-unblock-confirm');await page.locator('.safety-dialog-cancel').click();await snap('list-cancel-return');await page.locator('[data-unblock]').click();await page.locator('.safety-dialog-close').click();await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click()
+         |                                                                                                                                                                                                                                                 ^
+      50 |  manyBlocks=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await page.locator('.d3-blocked').hover();await page.mouse.wheel(0,1400);await page.waitForTimeout(250);checks.listScroll=await page.locator('.d3-blocked').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight,overscroll:getComputedStyle(e).overscrollBehaviorY}));expect(checks.listScroll.top).toBeGreaterThan(0);await snap('blocked-list-scrolled');await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click();manyBlocks=false;blockFailure=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list-failure');blockFailure=false
+      51 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))
+      52 |  expect(forbidden).toEqual([]);expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:49:241
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-en-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures ────────────────
+
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('.safety-dialog-cancel')
+
+
+      47 |  blocked=true
+      48 |  await page.locator('[data-chat="open"]').click();await snap('chat-blocked');await page.locator('#chat-details').click();await page.locator('#block-chat').click();await snap('unblock-confirm');await page.locator('.safety-dialog-cancel').click();await backChat();await backChat()
+    > 49 |  await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list');await page.locator('[data-unblock]').click();await snap('list-unblock-confirm');await page.locator('.safety-dialog-cancel').click();await snap('list-cancel-return');await page.locator('[data-unblock]').click();await page.locator('.safety-dialog-close').click();await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click()
+         |                                                                                                                                                                                                                                                 ^
+      50 |  manyBlocks=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await page.locator('.d3-blocked').hover();await page.mouse.wheel(0,1400);await page.waitForTimeout(250);checks.listScroll=await page.locator('.d3-blocked').evaluate(e=>({top:e.scrollTop,height:e.clientHeight,content:e.scrollHeight,overscroll:getComputedStyle(e).overscrollBehaviorY}));expect(checks.listScroll.top).toBeGreaterThan(0);await snap('blocked-list-scrolled');await page.locator('.d3-blocked').getByLabel(t('Back to messages')).click();manyBlocks=false;blockFailure=true;await page.locator('#inbox-menu').click();await page.locator('#blocked-people').click();await snap('blocked-list-failure');blockFailure=false
+      51 |  checks.clipped=records.flatMap(r=>r.copy.filter((c:any)=>c.clipped).map((c:any)=>({step:r.name,...c})))
+      52 |  expect(forbidden).toEqual([]);expect(errors).toEqual([])
+        at /Users/anna/Muse_AI-repository/client/tests/r14-audit.spec.ts:49:241
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r14-audit.config.ts/r14-audit-812-ko-R14-safety-walkthrough-with-API-fixtures/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r14-audit.spec.ts:6:61 › 667 en R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 667 ko R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 812 en R14 safety walkthrough with API fixtures ─────────────────
+    tests/r14-audit.spec.ts:6:61 › 812 ko R14 safety walkthrough with API fixtures ─────────────────

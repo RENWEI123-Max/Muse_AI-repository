@@ -1,0 +1,234 @@
+
+Running 4 tests using 1 worker
+
+667 en letter-open
+667 en letter-typed
+667 en letter-safety
+667 en block-confirmation
+667 en block-failure
+667 en letter-report
+667 en report-failure
+667 en letter-waiting
+667 en letter-replied
+667 en compose-empty
+667 en compose-draft
+667 en compose-invalid
+667 en compose-text-scroll
+667 en compose-failure
+667 en draft-restored
+  ✘  1 tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) (20.5s)
+667 ko letter-open
+667 ko letter-typed
+667 ko letter-safety
+667 ko block-confirmation
+667 ko block-failure
+667 ko letter-report
+667 ko report-failure
+667 ko letter-waiting
+667 ko letter-replied
+667 ko compose-empty
+667 ko compose-draft
+667 ko compose-invalid
+667 ko compose-text-scroll
+667 ko compose-failure
+667 ko draft-restored
+  ✘  2 tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) (20.6s)
+812 en letter-open
+812 en letter-typed
+812 en letter-safety
+812 en block-confirmation
+812 en block-failure
+812 en letter-report
+812 en report-failure
+812 en letter-waiting
+812 en letter-replied
+812 en compose-empty
+812 en compose-draft
+812 en compose-invalid
+812 en compose-text-scroll
+812 en compose-failure
+812 en draft-restored
+  ✘  3 tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) (20.5s)
+812 ko letter-open
+812 ko letter-typed
+812 ko letter-safety
+812 ko block-confirmation
+812 ko block-failure
+812 ko letter-report
+812 ko report-failure
+812 ko letter-waiting
+812 ko letter-replied
+812 ko compose-empty
+812 ko compose-draft
+812 ko compose-invalid
+812 ko compose-text-scroll
+812 ko compose-failure
+812 ko draft-restored
+  ✘  4 tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) (20.6s)
+
+
+  1) tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) ───────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.letters-panel')
+    Expected: "compose-sent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.letters-panel') with timeout 5000ms
+      - waiting for locator('.letters-panel')
+        7 × locator resolved to <section role="dialog" aria-busy="true" aria-modal="true" data-state="compose-draft" aria-label="Share a little story" class="letters-panel composer-panel is-sending">…</section>
+          - unexpected value "compose-draft"
+
+
+      33 |
+      34 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+    > 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){
+         |                                                    ^
+      36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)
+      37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()
+      38 |  }
+        at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-en-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ───────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.letters-panel')
+    Expected: "compose-sent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.letters-panel') with timeout 5000ms
+      - waiting for locator('.letters-panel')
+        7 × locator resolved to <section role="dialog" aria-busy="true" aria-modal="true" data-state="compose-draft" aria-label="작은 이야기를 나눠 보세요" class="letters-panel composer-panel is-sending">…</section>
+          - unexpected value "compose-draft"
+
+
+      33 |
+      34 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+    > 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){
+         |                                                    ^
+      36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)
+      37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()
+      38 |  }
+        at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-667-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) ───────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.letters-panel')
+    Expected: "compose-sent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.letters-panel') with timeout 5000ms
+      - waiting for locator('.letters-panel')
+        7 × locator resolved to <section role="dialog" aria-busy="true" aria-modal="true" data-state="compose-draft" aria-label="Share a little story" class="letters-panel composer-panel is-sending">…</section>
+          - unexpected value "compose-draft"
+
+
+      33 |
+      34 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+    > 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){
+         |                                                    ^
+      36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)
+      37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()
+      38 |  }
+        at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-en-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ───────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.letters-panel')
+    Expected: "compose-sent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.letters-panel') with timeout 5000ms
+      - waiting for locator('.letters-panel')
+        7 × locator resolved to <section role="dialog" aria-busy="true" aria-modal="true" data-state="compose-draft" aria-label="작은 이야기를 나눠 보세요" class="letters-panel composer-panel is-sending">…</section>
+          - unexpected value "compose-draft"
+
+
+      33 |
+      34 |  const panel=page.locator('.letters-panel'),records:any[]=[]
+    > 35 |  const state=async(s:string)=>{await expect(panel).toHaveAttribute('data-state',s);if(s==='letter-safety'||s==='letter-report'){
+         |                                                    ^
+      36 |   const sheet=page.locator('.letter-safety');await expect.poll(async()=>{const b=await sheet.boundingBox();return b?b.y+b.height:Infinity}).toBeLessThanOrEqual(height)
+      37 |   const copy=await sheet.locator('button,p,h2,small').evaluateAll(es=>es.filter(e=>e.getClientRects().length).map(e=>({text:e.textContent,clipped:e.scrollWidth>e.clientWidth+1})));expect(copy.every(e=>!e.clipped)).toBeTruthy()
+      38 |  }
+        at state (/Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:35:52)
+        at /Users/anna/Muse_AI-repository/client/tests/r08-audit.spec.ts:65:200
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../tmp/maugo-r25-tests_r08-audit.config.ts/r08-audit-812-ko-click-walkthrough-API-fixtures-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/r08-audit.spec.ts:6:61 › 667 en: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 667 ko: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 812 en: click walkthrough (API fixtures) ────────────────────────
+    tests/r08-audit.spec.ts:6:61 › 812 ko: click walkthrough (API fixtures) ────────────────────────

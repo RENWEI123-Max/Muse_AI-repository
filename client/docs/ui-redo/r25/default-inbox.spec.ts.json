@@ -1,0 +1,576 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "inbox.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-inbox.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-inbox.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-inbox.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "inbox.spec.ts",
+      "file": "inbox.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6104,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:6:180",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                      "column": 180,
+                      "line": 6
+                    },
+                    "snippet": " \u001b[90m 4 |\u001b[39m test(\u001b[32m'C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n \u001b[90m 5 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m90000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m errors\u001b[33m:\u001b[39mstring[]\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mpage\u001b[33m.\u001b[39mon(\u001b[32m'pageerror'\u001b[39m\u001b[33m,\u001b[39me\u001b[33m=>\u001b[39merrors\u001b[33m.\u001b[39mpush(e\u001b[33m.\u001b[39mmessage))\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mrequest\u001b[33m,\u001b[39m\u001b[32m'pending'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-pending'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m n\u001b[33m=\u001b[39m\u001b[35m3\u001b[39m\u001b[33m;\u001b[39mn\u001b[33m>\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mn\u001b[33m--\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[33mString\u001b[39m(n))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'0 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.inbox-flow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-busy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'false'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(n\u001b[33m===\u001b[39m\u001b[35m3\u001b[39m)\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-collected-one'\u001b[39m)}\n \u001b[90m   |\u001b[39m                                                                                                                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m  \u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-collected-all'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Unread'\u001b[39m\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m3\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m  \u001b[90m// Re-enter resets transient collection state, preserving server unread counts.\u001b[39m\n \u001b[90m 9 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-nav button'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-unread'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                        "column": 180,
+                        "line": 6
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n\n  4 | test('C5: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore',async({page,request})=>{\n  5 |  test.setTimeout(90000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));const u=await enter(page,request,'pending');await state(page,'inbox-pending');\n> 6 |  for(let n=3;n>0;n--){await expect(page.locator('#collect-replies>b')).toHaveText(String(n));await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');if(n===3)await state(page,'inbox-collected-one')}\n    |                                                                                                                                                                                    ^\n  7 |  await state(page,'inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect(page.getByLabel('Unread',{exact:true})).toHaveCount(3);\n  8 |  // Re-enter resets transient collection state, preserving server unread counts.\n  9 |  await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-unread');\n    at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:6:180"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:13.979Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-inbox.spec.ts/inbox-C5-pending-3-→-2-→-0-463f1-ons-search-hide-and-restore/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                    "column": 180,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-e3facc5b863ff4e3f82f",
+          "file": "inbox.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "C5: empty and notification reminder",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:20.341Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-7e6f982ef83a89be76d9",
+          "file": "inbox.spec.ts",
+          "line": 20,
+          "column": 39
+        },
+        {
+          "title": "C5: waiting and notification reminder",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:21.822Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-3ec83f6a7b5ca2a75ce4",
+          "file": "inbox.spec.ts",
+          "line": 20,
+          "column": 39
+        },
+        {
+          "title": "C5: paid cancellation, server fee race, retry idempotency, atomic charge",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5690,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:22:155",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                      "column": 155,
+                      "line": 22
+                    },
+                    "snippet": " \u001b[90m 20 |\u001b[39m \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m mode \u001b[36mof\u001b[39m [\u001b[32m'empty'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'waiting'\u001b[39m])test(\u001b[32m`C5: ${mode} and notification reminder`\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mrequest\u001b[33m,\u001b[39mmode)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m`inbox-${mode}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39msessionStorage\u001b[33m.\u001b[39mremoveItem(\u001b[32m'maugo-inbox-prompt'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-nav button'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-notifications-off'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.inbox-notification-prompt'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()})\n \u001b[90m 21 |\u001b[39m test(\u001b[32m'C5: paid cancellation, server fee race, retry idempotency, atomic charge'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m90000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mrequest\u001b[33m,\u001b[39m\u001b[32m'pending'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'0 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'http://127.0.0.1:3001/__c5/exhaust'\u001b[39m\u001b[33m,\u001b[39m{data\u001b[33m:\u001b[39mu})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'10 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#reply-payment-cancel'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'3'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m  \u001b[36mconst\u001b[39m wallet\u001b[33m=\u001b[39m\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m'http://127.0.0.1:3001/wallet'\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`Bearer ${u.token}`\u001b[39m}}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m100\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m  \u001b[36mlet\u001b[39m keys\u001b[33m:\u001b[39mstring[]\u001b[33m=\u001b[39m[]\u001b[33m,\u001b[39mcalls\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mroute(\u001b[32m'**/replies/*/collect'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m route\u001b[33m=>\u001b[39m{keys\u001b[33m.\u001b[39mpush(route\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39mheaders()[\u001b[32m'idempotency-key'\u001b[39m]\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39mcalls\u001b[33m++\u001b[39m\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(calls\u001b[33m===\u001b[39m\u001b[35m1\u001b[39m){\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mfetch()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mabort()}\u001b[36melse\u001b[39m \u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mcontinue()})\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'10 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39mexpect(keys\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39mexpect(keys[\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoBe(keys[\u001b[35m1\u001b[39m])\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m wallet())\u001b[33m.\u001b[39mdiamonds)\u001b[33m.\u001b[39mtoBe(\u001b[35m90\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m ledger\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m'http://127.0.0.1:3001/wallet/ledger'\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`Bearer ${u.token}`\u001b[39m}}))\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39mexpect(ledger\u001b[33m.\u001b[39mitems)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39mexpect(ledger\u001b[33m.\u001b[39mitems[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mamount)\u001b[33m.\u001b[39mtoBe(\u001b[33m-\u001b[39m\u001b[35m10\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'2'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                        "column": 155,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n\n  20 | for(const mode of ['empty','waiting'])test(`C5: ${mode} and notification reminder`,async({page,request})=>{await enter(page,request,mode);await state(page,`inbox-${mode}`);await page.evaluate(()=>sessionStorage.removeItem('maugo-inbox-prompt'));await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-notifications-off');await expect(page.locator('.inbox-notification-prompt')).toBeVisible()})\n  21 | test('C5: paid cancellation, server fee race, retry idempotency, atomic charge',async({page,request})=>{\n> 22 |  test.setTimeout(90000);const u=await enter(page,request,'pending');await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await request.post('http://127.0.0.1:3001/__c5/exhaust',{data:u});await page.locator('#confirm-reply-payment').click();await expect(page.locator('#confirm-reply-payment')).toContainText('10 diamonds');await page.locator('#reply-payment-cancel').click();await expect(page.locator('#collect-replies>b')).toHaveText('3');\n     |                                                                                                                                                           ^\n  23 |  const wallet=async()=>await(await request.get('http://127.0.0.1:3001/wallet',{headers:{Authorization:`Bearer ${u.token}`}})).json();expect((await wallet()).diamonds).toBe(100);\n  24 |  let keys:string[]=[],calls=0;await page.route('**/replies/*/collect',async route=>{keys.push(route.request().headers()['idempotency-key']!);calls++;if(calls===1){await route.fetch();await route.abort()}else await route.continue()});\n  25 |  await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('10 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('#confirm-reply-payment')).toBeEnabled();await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(keys.length).toBe(2);expect(keys[0]).toBe(keys[1]);expect((await wallet()).diamonds).toBe(90);const ledger=await(await request.get('http://127.0.0.1:3001/wallet/ledger',{headers:{Authorization:`Bearer ${u.token}`}})).json();expect(ledger.items).toHaveLength(1);expect(ledger.items[0].amount).toBe(-10);await expect(page.locator('#collect-replies>b')).toHaveText('2')\n    at /Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts:22:155"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:23.251Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-inbox.spec.ts/inbox-C5-paid-cancellation-80dde-y-idempotency-atomic-charge/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/inbox.spec.ts",
+                    "column": 155,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-f7c9df25df963075b663",
+          "file": "inbox.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "C5: pagination and API failure are recoverable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:29.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-e629c5392e58270573aa",
+          "file": "inbox.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "C5: insufficient balance and modal keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:31.017Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9086cbe786fc8171a5a-ef3c5a85c3a2c389ab5c",
+          "file": "inbox.spec.ts",
+          "line": 29,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "r09-inbox.spec.ts",
+      "file": "r09-inbox.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6138,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts:35:180",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts",
+                      "column": 180,
+                      "line": 35
+                    },
+                    "snippet": " \u001b[90m 33 |\u001b[39m test(\u001b[32m'R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n \u001b[90m 34 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m90000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m errors\u001b[33m:\u001b[39mstring[]\u001b[33m=\u001b[39m[]\u001b[33m;\u001b[39mpage\u001b[33m.\u001b[39mon(\u001b[32m'pageerror'\u001b[39m\u001b[33m,\u001b[39me\u001b[33m=>\u001b[39merrors\u001b[33m.\u001b[39mpush(e\u001b[33m.\u001b[39mmessage))\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mrequest\u001b[33m,\u001b[39m\u001b[32m'pending'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-pending'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m n\u001b[33m=\u001b[39m\u001b[35m3\u001b[39m\u001b[33m;\u001b[39mn\u001b[33m>\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mn\u001b[33m--\u001b[39m){\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies>b'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[33mString\u001b[39m(n))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'0 diamonds'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-reply-payment'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.inbox-flow'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-busy'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'false'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(n\u001b[33m===\u001b[39m\u001b[35m3\u001b[39m)\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-collected-one'\u001b[39m)}\n \u001b[90m    |\u001b[39m                                                                                                                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m  \u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-collected-all'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#collect-replies'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Unread'\u001b[39m\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m3\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m  \u001b[90m// Re-enter resets transient collection state, preserving server unread counts.\u001b[39m\n \u001b[90m 38 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-nav button'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#open-inbox'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m state(page\u001b[33m,\u001b[39m\u001b[32m'inbox-unread'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts",
+                        "column": 180,
+                        "line": 35
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"0 diamonds\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n\n  33 | test('R09: pending 3 → 2 → 0, history, unread → read, following, options, search, hide and restore',async({page,request})=>{\n  34 |  test.setTimeout(90000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));const u=await enter(page,request,'pending');await state(page,'inbox-pending');\n> 35 |  for(let n=3;n>0;n--){await expect(page.locator('#collect-replies>b')).toHaveText(String(n));await page.locator('#collect-replies').click();await expect(page.getByRole('dialog')).toContainText('0 diamonds');await page.locator('#confirm-reply-payment').click();await expect(page.getByRole('dialog')).toHaveCount(0);await expect(page.locator('.inbox-flow')).toHaveAttribute('aria-busy','false');if(n===3)await state(page,'inbox-collected-one')}\n     |                                                                                                                                                                                    ^\n  36 |  await state(page,'inbox-collected-all');await expect(page.locator('#collect-replies')).toHaveCount(0);await expect(page.getByLabel('Unread',{exact:true})).toHaveCount(3);\n  37 |  // Re-enter resets transient collection state, preserving server unread counts.\n  38 |  await page.locator('.main-nav button').first().click();await page.locator('#open-inbox').click();await state(page,'inbox-unread');\n    at /Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts:35:180"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:32.074Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-inbox.spec.ts/r09-inbox-R09-pending-3-→--35b09-ons-search-hide-and-restore/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts",
+                    "column": 180,
+                    "line": 35
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "25b31bfb4960c0f478d1-9757c27fe3753662f96f",
+          "file": "r09-inbox.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "R09: empty and notification reminder",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1558,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:38.417Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "25b31bfb4960c0f478d1-7e4967794153b49764af",
+          "file": "r09-inbox.spec.ts",
+          "line": 49,
+          "column": 39
+        },
+        {
+          "title": "R09: waiting and notification reminder",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:40.041Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "25b31bfb4960c0f478d1-2c6764a8eb6ba8f63ec2",
+          "file": "r09-inbox.spec.ts",
+          "line": 49,
+          "column": 39
+        },
+        {
+          "title": "R09 Korean labels and short viewport keep artwork size",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30021,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts",
+                        "column": 101,
+                        "line": 56
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.flow-content > .primary')\u001b[22m\n\n\n  54 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()\n  55 |  await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password)\n> 56 |  await page.locator('#auth-form .auth-main').click();await page.locator('.flow-content > .primary').click();await page.locator('#open-inbox').click()\n     |                                                                                                     ^\n  57 |  await expect(page.locator('.inbox-empty-image')).toBeVisible();await page.evaluate(()=>document.fonts.ready)\n  58 |  for(const selector of ['.inbox-tab','.inbox-empty-title','.inbox-empty-description','.inbox-notice-copy'])for(const el of await page.locator(selector).all()){\n  59 |   await expect(el).toHaveCSS('font-family',/GowunDodum/)\n    at /Users/anna/Muse_AI-repository/client/tests/r09-inbox.spec.ts:56:101"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:35:41.595Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-inbox.spec.ts/r09-inbox-R09-Korean-label-047d1--viewport-keep-artwork-size/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "25b31bfb4960c0f478d1-65f8a34549c8ea733c25",
+          "file": "r09-inbox.spec.ts",
+          "line": 51,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:35:12.985Z",
+    "duration": 58670.265999999996,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

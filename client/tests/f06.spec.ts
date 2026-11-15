@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-const api='http://127.0.0.1:3196'
+const api='http://127.0.0.1:3001'
 test('F06 wrong code, expired code and resend invalidates old code', async ({page,request})=>{
   const email=`f06-${Date.now()}-${Math.random().toString(36).slice(2)}@example.test`
   const mail=async()=>(await (await request.get(`${api}/__f06/mail?email=${encodeURIComponent(email)}`)).json()).code as string

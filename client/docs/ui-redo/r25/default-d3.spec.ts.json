@@ -1,0 +1,228 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.13.1/bin/node",
+      "/Users/anna/Muse_AI-repository/client/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.config.ts",
+      "d3.spec.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=/tmp/maugo-r25-default-d3.spec.ts"
+    ],
+    "configFile": "/Users/anna/Muse_AI-repository/client/playwright.config.ts",
+    "rootDir": "/Users/anna/Muse_AI-repository/client/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/maugo-r25-default-d3.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/tmp/maugo-r25-default-d3.spec.ts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "snapshotDir": "/Users/anna/Muse_AI-repository/client/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "d3.spec.ts",
+      "file": "d3.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D3 nine states: real report → block → list → unblock and send",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6551,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d3-report')\nExpected pattern: \u001b[32m/^d3-in/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d3-report') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d3-report')\u001b[22m\n\u001b[2m    14 × locator resolved to <form class=\"d3-report\">…</form>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d3-report')\nExpected pattern: \u001b[32m/^d3-in/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d3-report') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d3-report')\u001b[22m\n\u001b[2m    14 × locator resolved to <form class=\"d3-report\">…</form>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n    at /Users/anna/Muse_AI-repository/client/tests/d3.spec.ts:11:303",
+                    "location": {
+                      "file": "/Users/anna/Muse_AI-repository/client/tests/d3.spec.ts",
+                      "column": 303,
+                      "line": 11
+                    },
+                    "snippet": " \u001b[90m  9 |\u001b[39m test(\u001b[32m'D3 nine states: real report → block → list → unblock and send'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page\u001b[33m,\u001b[39mrequest})\u001b[33m=>\u001b[39m{\n \u001b[90m 10 |\u001b[39m  test\u001b[33m.\u001b[39msetTimeout(\u001b[35m90000\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m u\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m enter(page\u001b[33m,\u001b[39mrequest)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m headers\u001b[33m=\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m`Bearer ${u.token}`\u001b[39m}\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-details'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#report-person'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'safety-choice'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#safety-report'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'report-empty'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.d3-report'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'animation-name'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/^d3-in/\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-report'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCSS(\u001b[32m'background-color'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'rgb(181, 250, 112)'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#report-details'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Repeated unwanted messages after I asked to stop.'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'report-filled'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m  \u001b[36mconst\u001b[39m report\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(r\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mendsWith(\u001b[32m'/reports'\u001b[39m)\u001b[33m&&\u001b[39mr\u001b[33m.\u001b[39mrequest()\u001b[33m.\u001b[39mmethod()\u001b[33m===\u001b[39m\u001b[32m'POST'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-report'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m saved\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m report)\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39mexpect(saved\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[32m'pending'\u001b[39m)\u001b[33m;\u001b[39mexpect(saved\u001b[33m.\u001b[39mreportedUserId)\u001b[33m.\u001b[39mtoBe(u\u001b[33m.\u001b[39mpeer)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m`http://127.0.0.1:3001/reports/${saved.id}`\u001b[39m\u001b[33m,\u001b[39m{headers}))\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mreason)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Repeated unwanted'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'report-saved'\u001b[39m)\n \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#block-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'block-confirm'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Cancel'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m(\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m'http://127.0.0.1:3001/blocks'\u001b[39m\u001b[33m,\u001b[39m{headers}))\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mitems)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\n \u001b[90m 14 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#block-chat'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#confirm-block'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m capture(page\u001b[33m,\u001b[39m\u001b[32m'chat-blocked'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-form'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#chat-hold'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/anna/Muse_AI-repository/client/tests/d3.spec.ts",
+                        "column": 303,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.d3-report')\nExpected pattern: \u001b[32m/^d3-in/\u001b[39m\nReceived string:  \u001b[31m\"none\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('.d3-report') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.d3-report')\u001b[22m\n\u001b[2m    14 × locator resolved to <form class=\"d3-report\">…</form>\u001b[22m\n\u001b[2m       - unexpected value \"none\"\u001b[22m\n\n\n   9 | test('D3 nine states: real report → block → list → unblock and send',async({page,request})=>{\n  10 |  test.setTimeout(90000);const u=await enter(page,request);const headers={Authorization:`Bearer ${u.token}`}\n> 11 |  await expect(page.locator('#chat-form')).toBeVisible();await page.locator('#chat-details').click();await page.locator('#report-person').click();await capture(page,'safety-choice');await page.locator('#safety-report').click();await capture(page,'report-empty');await expect(page.locator('.d3-report')).toHaveCSS('animation-name',/^d3-in/);await expect(page.locator('#save-report')).toHaveCSS('background-color','rgb(181, 250, 112)');await page.locator('#report-details').fill('Repeated unwanted messages after I asked to stop.');await capture(page,'report-filled')\n     |                                                                                                                                                                                                                                                                                                               ^\n  12 |  const report=page.waitForResponse(r=>r.url().endsWith('/reports')&&r.request().method()==='POST');await page.locator('#save-report').click();const saved=await(await report).json();expect(saved.status).toBe('pending');expect(saved.reportedUserId).toBe(u.peer);expect((await(await request.get(`http://127.0.0.1:3001/reports/${saved.id}`,{headers})).json()).reason).toContain('Repeated unwanted');await capture(page,'report-saved')\n  13 |  await page.locator('#block-chat').click();await capture(page,'block-confirm');await page.getByRole('button',{name:'Cancel',exact:true}).click();expect((await(await request.get('http://127.0.0.1:3001/blocks',{headers})).json()).items).toHaveLength(0)\n  14 |  await page.locator('#block-chat').click();await page.locator('#confirm-block').click();await capture(page,'chat-blocked');await expect(page.locator('#chat-form')).toHaveCount(0);await expect(page.locator('#chat-hold')).toHaveCount(0)\n    at /Users/anna/Muse_AI-repository/client/tests/d3.spec.ts:11:303"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:33:43.709Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-d3.spec.ts/d3-D3-nine-states-real-rep-8f0bc-k-→-list-→-unblock-and-send/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/anna/Muse_AI-repository/client/tests/d3.spec.ts",
+                    "column": 303,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "676dd0bf1b363f3f1545-86d14e4a50fbda68e86d",
+          "file": "d3.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "D3 unblocking waiting conversation recalculates permissions; failed report remains editable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60025,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T21:33:50.516Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/maugo-r25-default-d3.spec.ts/d3-D3-unblocking-waiting-c-7bdee-led-report-remains-editable/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "676dd0bf1b363f3f1545-fe35cb1d89f88f6c1b36",
+          "file": "d3.spec.ts",
+          "line": 21,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T21:33:42.742Z",
+    "duration": 67891.169,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
