@@ -45,7 +45,7 @@ async function submit() {
  if(['signup','password'].includes(mode.value)&&password.value!==confirm.value){error.value='Passwords do not match.';return}
  if(mode.value==='password'){error.value='Password reset is not connected yet. Your password has not been changed.';return}
  if(!accepted.value){target.value=mode.value;go('consent');return}
- await request(async()=>{const signup=mode.value==='signup';const r=await post<{id:string;token:string}>('/auth/'+(signup?'signup':'login'),{email:email.value.trim(),password:password.value,...(signup?{confirmPassword:confirm.value}:{}),termsVersion:'1.0',privacyVersion:'1.0'});token.value=r.token;account.value=r.id;password.value='';confirm.value='';if(signup){recovery.value=false;go('verify');}else go('session')})
+ await request(async()=>{const signup=mode.value==='signup';const r=await post<{id:string;token:string}>('/auth/'+(signup?'signup':'login'),{email:email.value.trim(),password:password.value,...(signup?{confirmPassword:confirm.value}:{}),termsVersion:'1.0',privacyVersion:'1.0'});token.value=r.token;account.value=r.id;password.value='';confirm.value='';if(signup){recovery.value=false;go('verify');}else { (document.activeElement as HTMLElement | null)?.blur(); emit('authenticated',token.value,account.value) }})
  if(mode.value==='verify')await sendCode()
 }
 async function verify() {error.value='';if(!/^\d{6}$/.test(code.value)){error.value='Enter a 6-digit code.';return}if(!validEmail())return;await request(async()=>{const r=await post<{verified:boolean}>('/auth/code/verify',{email:email.value.trim(),code:code.value});if(r.verified){if(recovery.value)go('password');else if(token.value)emit('authenticated',token.value,account.value);else go('session')}})}

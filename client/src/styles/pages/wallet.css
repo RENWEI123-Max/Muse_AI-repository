@@ -95,3 +95,11 @@
 .app-shell .wallet-pass :is(.pass-plan,.primary,.text-button):not(:disabled):active,.app-shell .reply-pack:not(:disabled):active{transform:scale(.96)}
 .app-shell .wallet-pass header button:not(:disabled):active{scale:none;transform:scale(.94)}
 .app-shell .home-veil.pass-payment-veil:has(.wallet-pass){padding:24px}
+
+/* Keep the title centered and reserve a separate close target, independent
+   of the legacy home-sheet header cascade (Figma 375px canvas). */
+.app-shell .home-sheet.wallet-pass > header{display:flex;align-items:center;justify-content:center;padding:0 44px}
+.app-shell .home-sheet.wallet-pass > header h2{margin:0;text-align:center;min-width:0}
+.app-shell .home-sheet.wallet-pass > header button{left:auto;right:-8px;top:0;width:44px;height:44px}
+.app-shell .home-sheet.wallet-pass.pass-page > header{padding:0 64px}
+.app-shell .home-sheet.wallet-pass.pass-page > header button{left:16px;right:auto;top:10px}

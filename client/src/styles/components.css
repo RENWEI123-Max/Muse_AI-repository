@@ -112,10 +112,10 @@
 [lang=ko] .ui-chat-link--safety{font-family:var(--font-family-ko)}
 
 /* R15 opt-in authentication controls; other flows keep their variants. */
-.ui-button--auth{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--grad-primary-height-48);box-shadow:none}
+.ui-button--auth{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--grad-primary);box-shadow:none}
 .ui-button--auth-apple{width:327px;max-width:100%;border-radius:var(--radius-24);background:var(--auth-apple);color:var(--auth-apple-ink)}
 .ui-button--auth-apple svg{width:24px;height:24px}
-.ui-input--auth{display:block;margin-top:12px;font:var(--font-body);outline:none}
+.ui-input--auth{display:block;margin-top:12px;font:var(--font-body);font-size:16px;outline:none}
 .ui-input--auth:focus{border-color:var(--accent)}
 .ui-auth-checkbox{appearance:none;width:18px;height:18px;flex:none;margin:0;background:url('../assets/12-control-states/checkbox-unchecked.png') center/contain no-repeat;cursor:pointer}
 .ui-auth-checkbox:checked{background-image:url('../assets/12-control-states/checkbox-checked.png')}

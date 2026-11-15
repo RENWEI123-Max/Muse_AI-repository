@@ -20,7 +20,7 @@ const selected=ref(0),notice=ref(''),panel=ref<HTMLElement>(),buying=ref(false)
 const packs=ref<{id:string;diamonds:number;label:string;price?:string}[]>([])
 const currentBalance=ref(props.balance)
 const auth=()=>({Authorization:`Bearer ${props.token}`})
-async function loadWallet(){try{currentBalance.value=(await api<{diamonds:number}>('/wallet',{headers:auth()})).diamonds}catch(e){notice.value=(e as Error).message}}
+
 async function loadProducts(){try{
  const {products}=await api<{products:{id:string;diamonds:number;label:string}[]}>('/payments/apple/products')
  const prices=store?(await StoreKit.getProducts({ids:products.map(p=>p.id)})).products:[]
@@ -54,18 +54,21 @@ async function buy(){
 function leave(){if(confirmation.value){confirmation.value=false;return}if(paid)emit('funded');else emit('back')}
 watch(confirmation,async value=>{await nextTick();if(value)document.querySelector<HTMLElement>('.reply-purchase-overlay button')?.focus();else panel.value?.querySelectorAll<HTMLElement>('.reply-pack')[selected.value]?.focus()})
 const restore=document.activeElement as HTMLElement
+// The first server snapshot is the opening baseline; the parent may have a stale balance.
+let openingBalance:number|undefined
 let checking=false,closed=false,paid=false
 async function checkBalance(){
  if(checking)return
  checking=true
  try{const w=await api<{diamonds:number}>('/wallet',{headers:auth()})
  currentBalance.value=w.diamonds
- if(!closed&&!buying.value&&!paid&&w.diamonds>props.balance&&w.diamonds>=(props.required??0)){closed=true;emit('funded')}
+ if(openingBalance===undefined){openingBalance=w.diamonds;return}
+ if(!closed&&!buying.value&&!paid&&w.diamonds>openingBalance&&w.diamonds>=(props.required??0)){closed=true;emit('funded')}
  }catch{if(!closed)notice.value='Could not check balance. Return and try again.'}finally{checking=false}
 }
 const timer=setInterval(checkBalance,1500)
 function keyboard(e:KeyboardEvent){if(e.key==='Escape'){e.stopImmediatePropagation();leave()}if(e.key==='Tab'){const root=confirmation.value?document.querySelector('.reply-purchase-overlay'):panel.value;const a=Array.from(root?.querySelectorAll<HTMLButtonElement>('button')||[]).filter(e=>!e.disabled&&e.getClientRects().length);if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1)?.focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0]?.focus()}}}
-onMounted(async()=>{void loadWallet();void loadProducts().then(retryUnfinished).catch(()=>{});document.addEventListener('keydown',keyboard,true);await nextTick();panel.value?.querySelector('button')?.focus()})
+onMounted(async()=>{void checkBalance();void loadProducts().then(retryUnfinished).catch(()=>{});document.addEventListener('keydown',keyboard,true);await nextTick();panel.value?.querySelector('button')?.focus()})
 onUnmounted(()=>{closed=true;clearInterval(timer);document.removeEventListener('keydown',keyboard,true);restore?.focus()})
 </script>
 <style src="../styles/pages/wallet.css"></style>
