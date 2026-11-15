@@ -50,4 +50,5 @@ label.settings-row{min-height:60px}
 [lang=ko] .settings-flow :is(h1,h2,p,button,label,small),.system-font .settings-flow :is(h1,h2,p,button,label,small){font-family:var(--font-family-ko)}
 @media(prefers-reduced-motion:reduce){.settings-flow *{transition:none;animation:none}}
 
-.settings-cache{background:var(--grad-card-diagonal-h238)}
+.settings-cache{height:238px;background:var(--grad-card-diagonal-h238)}
+.system-font .settings-flow[data-page=general]>.ui-header h1{font-weight:var(--settings-general-title-weight,400)}

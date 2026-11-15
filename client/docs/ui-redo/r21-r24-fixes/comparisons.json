@@ -1,0 +1,18 @@
+[
+  {
+    "state": "general-font",
+    "differentPixels": 10325,
+    "totalPixels": 304500,
+    "differenceRatio": 0.0339080459770115,
+    "meanAbsoluteChannelDifference": 1.3984679802955664,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  },
+  {
+    "state": "cache-confirm",
+    "differentPixels": 192651,
+    "totalPixels": 304500,
+    "differenceRatio": 0.6326798029556651,
+    "meanAbsoluteChannelDifference": 6.949899835796388,
+    "method": "Exact RGBA inequality, no acceptance threshold; reference left, real preview capture right"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "fontToggle": {
+      "weight": "400",
+      "family": "GowunDodum, Fredoka, sans-serif"
+    },
+    "switchTransition": "background 0.2s"
+  },
+  {
+    "control": "#clear-cache",
+    "pressed": {
+      "transform": "matrix(0.960086, 0, 0, 0.960086, 0, 0)",
+      "scale": "none",
+      "transition": "transform 0.16s, background 0.2s, color 0.2s"
+    }
+  },
+  {
+    "state": "cache-confirm",
+    "animations": [
+      {
+        "target": "settings-row ui-row",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 159.6545081584252,
+          "easing": "ease",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        },
+        "frames": [
+          {
+            "offset": 0,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "scale(0.960086)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "none",
+            "computedOffset": 1
+          }
+        ]
+      },
+      {
+        "target": "settings-confirm settings-cache ui-dialog",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "none",
+          "iterationStart": 0,
+          "iterations": 1
+        },
+        "frames": [
+          {
+            "offset": 0,
+            "easing": "ease-out",
+            "composite": "auto",
+            "transform": "translateY(30px)",
+            "opacity": "0",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "ease-out",
+            "composite": "auto",
+            "transform": "none",
+            "opacity": "1",
+            "computedOffset": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "control": "#logout",
+    "pressed": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "1",
+      "transition": "transform 0.15s, background-color 0.15s"
+    }
+  },
+  {
+    "state": "signout-confirm",
+    "animations": [
+      {
+        "target": "outline",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 150,
+          "easing": "ease",
+          "endDelay": 0,
+          "fill": "backwards",
+          "iterationStart": 0,
+          "iterations": 1
+        },
+        "frames": [
+          {
+            "offset": 0,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "scale(0.96)",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "linear",
+            "composite": "auto",
+            "transform": "none",
+            "computedOffset": 1
+          }
+        ]
+      },
+      {
+        "target": "account-dialog ui-dialog",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "none",
+          "iterationStart": 0,
+          "iterations": 1
+        },
+        "frames": [
+          {
+            "offset": 0,
+            "easing": "ease-out",
+            "composite": "auto",
+            "transform": "translateY(30px)",
+            "opacity": "0",
+            "computedOffset": 0
+          },
+          {
+            "offset": 1,
+            "easing": "ease-out",
+            "composite": "auto",
+            "transform": "none",
+            "opacity": "1",
+            "computedOffset": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "control": ".account-dialog .keep",
+    "pressed": {
+      "transform": "matrix(0.96, 0, 0, 0.96, 0, 0)",
+      "scale": "1",
+      "transition": "transform 0.15s, background-color 0.15s"
+    }
+  },
+  {
+    "escapeAfterSignout": {
+      "profile": 1,
+      "settings": 1,
+      "accountDialog": 1
+    }
+  }
+]

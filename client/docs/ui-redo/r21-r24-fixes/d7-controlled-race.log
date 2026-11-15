@@ -1,0 +1,46 @@
+[WebServer] (node:18052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:18053) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:18079) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:18082) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+login navigation { pinExpected: false, previousSessionStillPresent: false }
+login navigation { pinExpected: false, previousSessionStillPresent: false }
+login navigation { pinExpected: true, previousSessionStillPresent: false }
+login navigation { pinExpected: false, previousSessionStillPresent: false }
+  ✓  1 docs/ui-redo/r21-r24-fixes/race-after.spec.ts:7:1 › race-after D7 thirteen states, real logout/deletion and account isolation (17.0s)
+login navigation { pinExpected: false, previousSessionStillPresent: false }
+login navigation { pinExpected: false, previousSessionStillPresent: false }
+login navigation { pinExpected: true, previousSessionStillPresent: true }
+  ✘  2 docs/ui-redo/r21-r24-fixes/race-before.spec.ts:7:1 › race-before D7 thirteen states, real logout/deletion and account isolation (30.0s)
+
+
+  1) docs/ui-redo/r21-r24-fixes/race-before.spec.ts:7:1 › race-before D7 thirteen states, real logout/deletion and account isolation
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#unlock-pin')
+
+
+      2 | async function login(page:Page,u:{email:string;password:string},pin?:string){
+      3 |  console.log('login navigation', {pinExpected:!!pin,previousSessionStillPresent:await page.evaluate(()=>!!localStorage.getItem('maugo-token')).catch(()=>false)});
+    > 4 |  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill(u.email);await page.locator('#auth-password').fill(u.password);const signed=page.waitForResponse(r=>r.url().endsWith('/auth/login')&&r.request().method()==='POST');await page.getByRole('button',{name:'Sign in',exact:true}).click();const session=await (await signed).json();await page.getByRole('button',{name:'Meet your letters'}).click();if(pin){await page.locator('#unlock-pin').fill(pin);await page.locator('#unlock-session').click()}await page.locator('#open-profile').click();await page.locator('#open-settings').click();await page.locator('#security-settings').click();await expect(page.locator('#account-signin')).toBeVisible();return session.token
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      5 | }
+      6 | async function shot(page:Page,id:string){await page.waitForTimeout(300);await page.screenshot({path:`docs/ui-redo/r21-r24-fixes/race-${id}.png`})}
+      7 | test('race-before D7 thirteen states, real logout/deletion and account isolation',async({page,request})=>{
+        at login (/Users/anna/Muse_AI-repository/client/docs/ui-redo/r21-r24-fixes/race-before.spec.ts:4:546)
+        at /Users/anna/Muse_AI-repository/client/docs/ui-redo/r21-r24-fixes/race-before.spec.ts:23:204
+
+    Error Context: test-results/race-before-race-before-D7-c69ee-etion-and-account-isolation/error-context.md
+
+  1 failed
+    docs/ui-redo/r21-r24-fixes/race-before.spec.ts:7:1 › race-before D7 thirteen states, real logout/deletion and account isolation
+  1 passed (48.6s)
