@@ -90,4 +90,4 @@ c7-acceptance.spec.ts、chat-media.spec.ts、chat-voice.spec.ts、chat.spec.ts�
 
 ## 提交记录
 
-分支 `codex/test-migration`，提交哈希：COMMIT_HASH_PLACEHOLDER。
+分支 `codex/test-migration`，提交哈希：ea02f5e209006ad84cd7c6bbaad0fd26e5e23f57。
