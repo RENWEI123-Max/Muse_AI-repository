@@ -36,7 +36,11 @@ export function registerPosts(app:FastifyInstance,
    if(row.size_bytes<=0 || row.size_bytes>=(row.kind==='video'?30:10)*1024*1024) fail(400,'Media size limit exceeded');
   }
  }
- const post=(r:any,attachments:any[])=>({id:r.id,userId:r.user_id,content:r.content,visibility:r.visibility,category:r.category,createdAt:r.created_at,attachments});
+ async function likeState(c:PoolClient,viewer:string,id:string,imageCard=false) {
+  const table=imageCard?'image_card_likes':'post_likes',column=imageCard?'image_card_id':'post_id';
+  return (await c.query(`SELECT count(*)::int AS "likesCount",COALESCE(bool_or(user_id=$1),false) AS liked FROM ${table} WHERE ${column}=$2`,[viewer,id])).rows[0];
+ }
+ const post=async(c:PoolClient,viewer:string,r:any,attachments:any[])=>({...await likeState(c,viewer,r.id),id:r.id,userId:r.user_id,content:r.content,visibility:r.visibility,category:r.category,createdAt:r.created_at,attachments});
  async function attachments(c:PoolClient,id:string) {
   return (await c.query(`SELECT m.id, '/media/uploads/'||m.id AS url,m.kind,m.mime_type AS "mimeType",m.size_bytes AS size
    FROM post_attachments a JOIN media_uploads m ON m.id=a.media_id WHERE a.post_id=$1 ORDER BY a.position`,[id])).rows;
@@ -50,7 +54,7 @@ export function registerPosts(app:FastifyInstance,
    await media(c,ids,u.id);
    const row=(await c.query('INSERT INTO user_posts(id,user_id,content,visibility,category) VALUES($1,$2,$3,$4,$5) RETURNING *',[randomUUID(),u.id,b.content,b.visibility??'everyone',b.category??'Life'])).rows[0];
    for(const [position,id] of ids.entries()) await c.query('INSERT INTO post_attachments(post_id,media_id,position) VALUES($1,$2,$3)',[row.id,id,position]);
-   return post(row,await attachments(c,row.id));
+   return post(c,u.id,row,await attachments(c,row.id));
   });return reply.code(201).send(result);
  });
  app.get<{Querystring:{limit?:number;offset?:number;userId?:string;category?:string}}>('/posts',{
@@ -58,7 +62,7 @@ export function registerPosts(app:FastifyInstance,
  },async request=>transaction(async c=>{
   const u=await authenticate(c,request.headers.authorization),q=request.query;
   const rows=(await c.query(`SELECT p.* FROM user_posts p WHERE ${contentVisible('p')} AND ($2::uuid IS NULL OR p.user_id=$2) AND ($5::text IS NULL OR p.category=$5) ORDER BY p.created_at DESC,p.id DESC LIMIT $3 OFFSET $4`,[u.id,q.userId??null,q.limit,q.offset,q.category==='All'?null:q.category??null])).rows;
-  const items=[];for(const row of rows) items.push(post(row,await attachments(c,row.id)));
+  const items=[];for(const row of rows) items.push(await post(c,u.id,row,await attachments(c,row.id)));
   return {items,limit:q.limit,offset:q.offset};
  }));
  app.get<{Params:{id:string}}>('/posts/:id',{schema:{params}},async request=>transaction(async c=>{
@@ -66,7 +70,7 @@ export function registerPosts(app:FastifyInstance,
   const row=(await c.query('SELECT * FROM user_posts WHERE id=$1',[request.params.id])).rows[0];
   if(!row) fail(404,'Post not found');
   if(!(await c.query(`SELECT 1 FROM user_posts p WHERE p.id=$2 AND ${contentVisible('p')}`,[u.id,row.id])).rowCount) fail(403,'Post is not visible');
-  return post(row,await attachments(c,row.id));
+  return post(c,u.id,row,await attachments(c,row.id));
  }));
  app.patch<{Params:{id:string};Body:{visibility?:string;category?:string}}>('/posts/:id',{
   schema:{params,body:{type:'object',additionalProperties:false,minProperties:1,properties:{visibility,category}}}
@@ -75,7 +79,7 @@ export function registerPosts(app:FastifyInstance,
   const row=(await c.query('SELECT user_id FROM user_posts WHERE id=$1',[request.params.id])).rows[0];
   if(!row) fail(404,'Post not found');if(row.user_id!==u.id) fail(403,'Only the author can update a post');
   const updated=(await c.query('UPDATE user_posts SET visibility=COALESCE($2,visibility),category=COALESCE($3,category) WHERE id=$1 RETURNING *',[request.params.id,b.visibility??null,b.category??null])).rows[0];
-  return post(updated,await attachments(c,updated.id));
+  return post(c,u.id,updated,await attachments(c,updated.id));
  }));
  app.delete<{Params:{id:string}}>('/posts/:id',{schema:{params}},async request=>transaction(async c=>{
   const u=await authenticate(c,request.headers.authorization);
@@ -83,10 +87,27 @@ export function registerPosts(app:FastifyInstance,
   if(!row) fail(404,'Post not found');if(row.user_id!==u.id) fail(403,'Only the author can delete a post');
   await c.query('DELETE FROM user_posts WHERE id=$1',[request.params.id]);return {deleted:true};
  }));
- const card=(r:any)=>({id:r.id,userId:r.user_id,mediaId:r.media_id,url:`/media/uploads/${r.media_id}`,type:r.type,isPrimary:r.is_primary,position:r.position,visibility:r.visibility,createdAt:r.created_at});
+ for(const imageCard of [false,true]) {
+  const table=imageCard?'image_cards':'user_posts',likes=imageCard?'image_card_likes':'post_likes';
+  const column=imageCard?'image_card_id':'post_id',key=imageCard?'imageCardId':'postId';
+  for(const method of ['PUT','DELETE'] as const) app.route<{Params:{id:string}}>({
+   method,url:`/${imageCard?'image-cards':'posts'}/:id/like`,schema:{params},
+   handler:async request=>transaction(async c=>{
+    const u=await authenticate(c,request.headers.authorization),id=request.params.id;
+    if(!(await c.query(`SELECT 1 FROM ${table} WHERE id=$1`,[id])).rowCount) fail(404,imageCard?'Image card not found':'Post not found');
+    if(!(await c.query(`SELECT 1 FROM ${table} p WHERE p.id=$2 AND ${imageCard?"p.visibility='everyone' AND ":''}${contentVisible('p')}`,[u.id,id])).rowCount) fail(403,'Content is not visible');
+    if(method==='PUT') await c.query(`INSERT INTO ${likes}(user_id,${column}) VALUES($1,$2) ON CONFLICT DO NOTHING`,[u.id,id]);
+    else await c.query(`DELETE FROM ${likes} WHERE user_id=$1 AND ${column}=$2`,[u.id,id]);
+    return {[key]:id,...await likeState(c,u.id,id,imageCard)};
+   })
+  });
+ }
+ const card=async(c:PoolClient,viewer:string,r:any)=>({...await likeState(c,viewer,r.id,true),id:r.id,userId:r.user_id,mediaId:r.media_id,url:`/media/uploads/${r.media_id}`,type:r.type,isPrimary:r.is_primary,position:r.position,visibility:r.visibility,createdAt:r.created_at});
  app.get('/users/me/image-cards',async request=>transaction(async c=>{
   const u=await authenticate(c,request.headers.authorization);
-  return {items:(await c.query('SELECT * FROM image_cards WHERE user_id=$1 ORDER BY position',[u.id])).rows.map(card)};
+  const items=[];
+  for(const row of (await c.query('SELECT * FROM image_cards WHERE user_id=$1 ORDER BY position',[u.id])).rows) items.push(await card(c,u.id,row));
+  return {items};
  }));
  app.post<{Body:{mediaId:string;type:string;visibility?:string}}>('/users/me/image-cards',{
   schema:{body:{type:'object',additionalProperties:false,required:['mediaId','type'],properties:{mediaId:uuid,type:cardType,visibility}}}
@@ -98,7 +119,7 @@ export function registerPosts(app:FastifyInstance,
    if(cards.length>=8) fail(409,'Image card slots are full');
    if(cards.some(r=>r.media_id===b.mediaId)) fail(409,'Image already associated');
    const position=Array.from({length:8},(_,i)=>i).find(i=>!cards.some(r=>r.position===i))!;
-   return card((await c.query('INSERT INTO image_cards(id,user_id,media_id,type,is_primary,position,visibility) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *',[randomUUID(),u.id,b.mediaId,b.type,cards.length===0,position,b.visibility??'everyone'])).rows[0]);
+   return card(c,u.id,(await c.query('INSERT INTO image_cards(id,user_id,media_id,type,is_primary,position,visibility) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *',[randomUUID(),u.id,b.mediaId,b.type,cards.length===0,position,b.visibility??'everyone'])).rows[0]);
   });return reply.code(201).send(result);
  });
  app.patch<{Params:{id:string};Body:{type?:string;isPrimary?:boolean;visibility?:string}}>('/users/me/image-cards/:id',{
@@ -107,7 +128,7 @@ export function registerPosts(app:FastifyInstance,
   const u=await authenticate(c,request.headers.authorization),b=request.body;
   if(!(await c.query('SELECT 1 FROM image_cards WHERE id=$1 AND user_id=$2',[request.params.id,u.id])).rowCount) fail(404,'Image card not found');
   if(b.isPrimary) await c.query('UPDATE image_cards SET is_primary=false WHERE user_id=$1 AND is_primary',[u.id]);
-  return card((await c.query('UPDATE image_cards SET type=COALESCE($3,type),visibility=COALESCE($4,visibility),is_primary=COALESCE($5,is_primary) WHERE id=$1 AND user_id=$2 RETURNING *',[request.params.id,u.id,b.type??null,b.visibility??null,b.isPrimary??null])).rows[0]);
+  return card(c,u.id,(await c.query('UPDATE image_cards SET type=COALESCE($3,type),visibility=COALESCE($4,visibility),is_primary=COALESCE($5,is_primary) WHERE id=$1 AND user_id=$2 RETURNING *',[request.params.id,u.id,b.type??null,b.visibility??null,b.isPrimary??null])).rows[0]);
  }));
  app.delete<{Params:{id:string}}>('/users/me/image-cards/:id',{schema:{params}},async request=>transaction(async c=>{
   const u=await authenticate(c,request.headers.authorization);

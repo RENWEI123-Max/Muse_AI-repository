@@ -52,6 +52,16 @@ test('B2 authentication routes with real PostgreSQL', async t => {
   assert.equal((await post('/auth/code/verify',{email:address,code})).statusCode,401);
   await pool.query("UPDATE auth_codes SET used_at=NULL,expires_at=NOW()-interval '1 second' WHERE email=$1",[address]);
   assert.equal((await post('/auth/code/verify',{email:address,code})).statusCode,410);
+  await t.test('resend invalidates the old code and accepts the new code',async()=>{
+    const email='resend@example.test',ip='192.0.20.1';
+    assert.equal((await post('/auth/code/send',{email},undefined,ip)).statusCode,200);
+    const oldCode=code;
+    await pool.query("UPDATE auth_codes SET sent_at=NOW()-interval '61 seconds' WHERE email=$1",[email]);
+    const resent=await post('/auth/code/send',{email},undefined,ip);
+    assert.equal(resent.statusCode,200,resent.body);const newCode=code;assert.notEqual(newCode,oldCode);
+    assert.equal((await post('/auth/code/verify',{email,code:oldCode},undefined,ip)).statusCode,401);
+    assert.equal((await post('/auth/code/verify',{email,code:newCode},undefined,ip)).statusCode,200);
+  });
   // Password recovery uses the existing mail sender, code store and limits.
   const reset=(payload:object)=>post('/auth/password/reset',payload,undefined,'192.0.10.1');
   const resetEmail=credentials.email.toLowerCase();

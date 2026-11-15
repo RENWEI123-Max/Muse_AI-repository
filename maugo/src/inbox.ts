@@ -51,13 +51,14 @@ export function registerInbox(app:FastifyInstance,transaction:(work:(c:PoolClien
   ON CONFLICT(user_id,conversation_id) DO UPDATE SET read_at=EXCLUDED.read_at`,[u.id,v.id]);
   return {items:items.slice(0,q.limit),hasMore:items.length>q.limit,unlocked:v.unlocked_at!=null};
  }));
- const properties={remark:{type:'string',maxLength:200},pinned:{type:'boolean'},muted:{type:'boolean'},hidden:{type:'boolean'},following:{type:'boolean'},background:{type:'string',maxLength:500},bubble:{type:'string',maxLength:500},clearHistory:{type:'boolean'}};
+ const properties={remark:{type:'string',maxLength:200},pinned:{type:'boolean'},muted:{type:'boolean'},hidden:{type:'boolean'},following:{type:'boolean'},background:{type:'string',maxLength:500},bubble:{type:'string',maxLength:500},clearHistory:{type:'boolean'},markUnread:{type:'boolean'}};
  app.patch<{Params:{id:string};Body:Record<string,any>}>('/conversations/:id',{schema:{params,body:{type:'object',additionalProperties:false,minProperties:1,properties}}},async req=>transaction(async c=>{
   const u=await authenticate(c,req.headers.authorization);await own(c,req.params.id,u.id);
   await c.query('INSERT INTO conversation_preferences(user_id,conversation_id) VALUES($1,$2) ON CONFLICT DO NOTHING',[u.id,req.params.id]);
   for(const key of ['remark','pinned','muted','hidden','following','background','bubble'])if(req.body[key]!==undefined)
    await c.query(`UPDATE conversation_preferences SET ${key}=$3 WHERE user_id=$1 AND conversation_id=$2`,[u.id,req.params.id,req.body[key]]);
   if(req.body.clearHistory)await c.query('UPDATE conversation_preferences SET cleared_at=clock_timestamp(),read_at=clock_timestamp() WHERE user_id=$1 AND conversation_id=$2',[u.id,req.params.id]);
+  if(req.body.markUnread)await c.query('UPDATE conversation_preferences SET read_at=NULL WHERE user_id=$1 AND conversation_id=$2',[u.id,req.params.id]);
   return (await rows(c,u.id)).find(v=>v.id===req.params.id);
  }));
 }

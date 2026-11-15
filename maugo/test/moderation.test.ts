@@ -34,6 +34,7 @@ test('B7 durable blocks, report ownership, moderation and B3 permissions',async 
  for(let i=0;i<2;i++) assert.equal((await call('PUT',`/blocks/${b.id}`,a)).statusCode,200);
  assert.equal((await pool.query('SELECT * FROM user_blocks')).rowCount,1);
  assert.equal((await call('GET','/blocks',a)).json().items[0].userId,b.id);
+ for(const [viewer,target] of [[a,b],[b,a]]) assert.equal((await call('GET',`/profiles/${target.id}`,viewer)).statusCode,403);
  for(const [u,v] of [[a,b],[b,a]]) {assert.equal((await open(u,v)).statusCode,403);assert.equal((await send(u)).statusCode,403);}
  assert.equal((await pool.query('SELECT * FROM messages')).rowCount,1);
  assert.equal((await pool.query('SELECT unlocked_at FROM conversations WHERE id=$1',[id])).rows[0].unlocked_at,null);

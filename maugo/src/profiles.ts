@@ -61,7 +61,9 @@ export function registerProfiles(app: FastifyInstance,
   const u = await authenticate(c,req.headers.authorization);
   await profileAccess(c,u.id,req.params.id);
   return {items:(await c.query(`SELECT i.id,i.user_id AS "userId",i.media_id AS "mediaId",'/media/uploads/'||i.media_id AS url,
-   i.type,i.is_primary AS "isPrimary",i.position,i.visibility,i.created_at AS "createdAt"
+   i.type,i.is_primary AS "isPrimary",i.position,i.visibility,i.created_at AS "createdAt",
+   (SELECT count(*)::int FROM image_card_likes l WHERE l.image_card_id=i.id) AS "likesCount",
+   EXISTS(SELECT 1 FROM image_card_likes l WHERE l.image_card_id=i.id AND l.user_id=$1) AS liked
    FROM image_cards i WHERE i.user_id=$2 AND i.visibility='everyone' AND ${contentVisible('i')} ORDER BY i.position`,[u.id,req.params.id])).rows};
  }));
  app.get<{Querystring:{limit:number;offset:number}}>('/profiles/me/followers', {schema:{querystring:{type:'object',additionalProperties:false,properties:{limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}}}}}, async req => transaction(async c => {

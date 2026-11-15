@@ -1,0 +1,179 @@
+> maugo-backend@0.1.0 test
+> tsx --test test/*.test.ts
+
+✔ health is independent of database (146.988167ms)
+✔ ready checks database (59.565625ms)
+✔ database failure returns 503 without exposing details (25.991041ms)
+✔ configuration validates database and port (0.304416ms)
+▶ B2 authentication routes with real PostgreSQL
+  ✔ resend invalidates the old code and accepts the new code (11.36125ms)
+✖ B2 authentication routes with real PostgreSQL (1211.417458ms)
+✔ B3 durable opening ledger and concurrent devices on real PostgreSQL (876.114084ms)
+▶ B10 registration → discovery → opening → reply → collection → chat
+  ✔ 00 全量数据库迁移连续执行两次，迁移记录不重复 (697.185375ms)
+  ✔ 01 注册与认证异常：真实邮件验证码、非法邮箱、密码不一致、错误及重复验证码 (218.484458ms)
+  ✔ 02 并发开场白仅创建一条账本，第二条 409，未解锁消息与媒体拒绝 (130.590292ms)
+  ✔ 03 B 发现 A 来信，详情、免费筛选和 Refresh (39.939667ms)
+  ✔ 04 B 有效回信仍锁定，A 首次免费收取原子解锁，双方可聊天 (39.02975ms)
+  ✔ 05 前十次免费，第十一次付费，并发及不同重试键只扣一次 (206.753459ms)
+  ✔ 06 上海自然日边界：前日 23:59:59 不计额度，当日 00:00 计入 (54.315083ms)
+  ✔ 07 Filter Pass 购买与到期撤销高级筛选 (37.704959ms)
+  ✔ 08 账本写入失败回滚收取、扣费及解锁，重试仅解锁一次 (94.374791ms)
+✔ B10 registration → discovery → opening → reply → collection → chat (1619.528334ms)
+✔ B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL (458.426917ms)
+{"method":"POST","url":"/conversations/e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852/opening","payload":{"content":"Hello, 안녕하세요. Nice to meet you!"},"status":201,"response":{"id":"b9d475ee-0321-4b49-8d2c-856792397d6d","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","openingMessageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","openerId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","peerId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","unlocked":false,"unlockedAt":null}}
+{"method":"POST","url":"/posts","payload":{"content":"You are an idiot"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/posts","payload":{"content":"씨발"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/posts","payload":{"content":"병신"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/posts","payload":{"content":"call +82 10-1234-5678"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"WeChat: friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"微信号 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"위챗 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"Telegram @friend"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"텔레그램 친구"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"https://example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"example.kr"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"example.xyz"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"mail me a@example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/posts","payload":{"content":"buy now with promo code"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/posts","payload":{"content":"할인 코드 구매 문의"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/posts","payload":{"content":"custom campaign"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/posts","payload":{"content":"ｆｕｃｋ"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/posts","payload":{"content":"f​uck"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"You are an idiot"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"씨발"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"병신"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"call +82 10-1234-5678"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"WeChat: friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"微信号 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"위챗 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"Telegram @friend"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"텔레그램 친구"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"https://example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"example.kr"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"example.xyz"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"mail me a@example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"buy now with promo code"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"할인 코드 구매 문의"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"custom campaign"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"ｆｕｃｋ"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/2c40e94b-7301-4f82-8bcb-0de60790e2f3/opening","payload":{"content":"f​uck"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"You are an idiot"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"씨발"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"병신"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"call +82 10-1234-5678"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"WeChat: friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"微信号 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"위챗 friend_123"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"Telegram @friend"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"텔레그램 친구"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"https://example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"example.kr"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"example.xyz"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"mail me a@example.com"},"status":422,"response":{"message":"Content rejected by server moderation","types":["contact"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"buy now with promo code"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"할인 코드 구매 문의"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"custom campaign"},"status":422,"response":{"message":"Content rejected by server moderation","types":["advertising"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"ｆｕｃｋ"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"f​uck"},"status":422,"response":{"message":"Content rejected by server moderation","types":["abuse"]}}
+{"method":"POST","url":"/posts","payload":{"content":"A beautiful afternoon in Seoul"},"status":201,"response":{"likesCount":0,"liked":false,"id":"2b62e263-16df-4812-b853-b1782efac22e","userId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","content":"A beautiful afternoon in Seoul","visibility":"everyone","category":"Life","createdAt":"2026-11-15T06:45:19.615Z","attachments":[]}}
+{"method":"POST","url":"/posts","payload":{"content":"오늘 산책이 즐거웠어요"},"status":201,"response":{"likesCount":0,"liked":false,"id":"a8ddd192-3c48-4fff-911a-40f517c69db0","userId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","content":"오늘 산책이 즐거웠어요","visibility":"everyone","category":"Life","createdAt":"2026-11-15T06:45:19.619Z","attachments":[]}}
+{"method":"POST","url":"/posts","payload":{"content":"The class is interesting"},"status":201,"response":{"likesCount":0,"liked":false,"id":"b3da76ec-efd4-4954-9e98-d6209b2a58e7","userId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","content":"The class is interesting","visibility":"everyone","category":"Life","createdAt":"2026-11-15T06:45:19.622Z","attachments":[]}}
+{"method":"POST","url":"/posts","payload":{"content":"Meet at 18:30"},"status":201,"response":{"likesCount":0,"liked":false,"id":"c4fab9ac-2b3e-409b-9113-172a73356a9a","userId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","content":"Meet at 18:30","visibility":"everyone","category":"Life","createdAt":"2026-11-15T06:45:19.625Z","attachments":[]}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"반가워요, have a lovely day"},"status":201,"response":{"id":"2e9d818b-d44d-4687-8b4e-1844b5dbe1a1","conversationId":"b9d475ee-0321-4b49-8d2c-856792397d6d","unlocked":false}}
+{"method":"GET","url":"/letters/64b43c1b-43cf-46eb-9662-9f492efba1e7","status":200,"response":{"openingMessageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","conversationId":"b9d475ee-0321-4b49-8d2c-856792397d6d","content":"Hello, 안녕하세요. Nice to meet you!","createdAt":"2026-11-15T06:45:19.455Z","sender":{"id":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","displayName":"Reader","deleted":false,"avatar":null,"city":null,"age":null,"gender":null},"replied":true,"unlocked":false,"unlockedAt":null,"state":"letter-waiting","canReply":false,"canChat":false}}
+{"method":"GET","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","status":200,"response":{"items":[{"id":"64b43c1b-43cf-46eb-9662-9f492efba1e7","kind":"opening","content":"Hello, 안녕하세요. Nice to meet you!","senderId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","mine":false,"mediaId":null,"createdAt":"2026-11-15T06:45:19.455Z"},{"id":"2e9d818b-d44d-4687-8b4e-1844b5dbe1a1","kind":"reply","content":"반가워요, have a lovely day","senderId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","mine":true,"mediaId":null,"createdAt":"2026-11-15T06:45:19.629Z"}],"hasMore":false,"unlocked":false}}
+{"method":"PATCH","url":"/profiles/me","payload":{"age":17},"status":400,"response":{"message":"Enter a name and an age between 18 and 100."}}
+{"method":"PATCH","url":"/profiles/me","payload":{"age":18},"status":200,"response":{"id":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","displayName":"Reader","age":18,"city":null,"bio":"","zodiac":null,"visibility":"everyone","avatar":null,"avatars":[],"following":false,"permissions":{"canOpen":false,"canChat":false,"canFollow":false,"conversationId":null},"recentlyRemoved":[]}}
+{"method":"POST","url":"/conversations/0ffc9807-6d8e-4724-a5cf-4367226e0f77/opening","payload":{"content":"Good evening"},"status":201,"response":{"id":"20bc57c6-1170-49d4-953d-1d1001d67a1e","messageId":"c40814a6-543a-45fd-80b3-79ac885bc75c","openingMessageId":"c40814a6-543a-45fd-80b3-79ac885bc75c","openerId":"ea3089e6-64c4-4152-b572-d738955b1aa7","peerId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","unlocked":false,"unlockedAt":null}}
+{"method":"POST","url":"/conversations/20bc57c6-1170-49d4-953d-1d1001d67a1e/messages","payload":{"content":"Good evening to you too"},"status":201,"response":{"id":"eb3394a4-7aaa-4e79-8768-67543580a8f7","conversationId":"20bc57c6-1170-49d4-953d-1d1001d67a1e","unlocked":false}}
+{"method":"GET","url":"/conversations/20bc57c6-1170-49d4-953d-1d1001d67a1e/replies/pending","status":200,"response":{"items":[{"id":"eb3394a4-7aaa-4e79-8768-67543580a8f7","createdAt":"2026-11-15T06:45:19.656Z"}],"hasMore":false,"freeRemaining":10,"used":0,"nextCost":0,"diamonds":0}}
+{"method":"POST","url":"/reports","payload":{"reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","category":"harassment","reason":"Manual review of opening"},"status":201,"response":{"id":"3aebb687-70a1-4c07-829b-879db59d434b","reporterId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","attachmentMediaId":null,"attachment":null,"category":"harassment","reason":"Manual review of opening","status":"pending","createdAt":"2026-11-15T06:45:19.666Z","action":null,"result":null,"handledBy":null,"handledAt":null}}
+{"method":"GET","url":"/admin/reports?status=pending","status":403,"response":{"message":"Moderator required"}}
+{"method":"GET","url":"/admin/reports?status=pending","status":200,"response":{"items":[{"id":"3aebb687-70a1-4c07-829b-879db59d434b","reporterId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","attachmentMediaId":null,"attachment":null,"category":"harassment","reason":"Manual review of opening","status":"pending","createdAt":"2026-11-15T06:45:19.666Z","action":null,"result":null,"handledBy":null,"handledAt":null}]}}
+{"method":"POST","url":"/admin/reports/3aebb687-70a1-4c07-829b-879db59d434b/resolve","payload":{"decision":"approve","action":"suspend","result":"Confirmed violation; account suspended"},"status":200,"response":{"id":"3aebb687-70a1-4c07-829b-879db59d434b","reporterId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","attachmentMediaId":null,"attachment":null,"category":"harassment","reason":"Manual review of opening","status":"processed","createdAt":"2026-11-15T06:45:19.666Z","action":"suspend","result":"Confirmed violation; account suspended","handledBy":"59693416-0355-4e70-9f35-8a45f7c196cd","handledAt":"2026-11-15T06:45:19.683Z"}}
+{"method":"GET","url":"/admin/reports?status=pending","status":200,"response":{"items":[]}}
+{"method":"GET","url":"/admin/reports?status=processed","status":200,"response":{"items":[{"id":"3aebb687-70a1-4c07-829b-879db59d434b","reporterId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","attachmentMediaId":null,"attachment":null,"category":"harassment","reason":"Manual review of opening","status":"processed","createdAt":"2026-11-15T06:45:19.666Z","action":"suspend","result":"Confirmed violation; account suspended","handledBy":"59693416-0355-4e70-9f35-8a45f7c196cd","handledAt":"2026-11-15T06:45:19.683Z"}]}}
+{"method":"GET","url":"/reports/3aebb687-70a1-4c07-829b-879db59d434b","status":200,"response":{"id":"3aebb687-70a1-4c07-829b-879db59d434b","reporterId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","reportedUserId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","messageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","attachmentMediaId":null,"attachment":null,"category":"harassment","reason":"Manual review of opening","status":"processed","createdAt":"2026-11-15T06:45:19.666Z","action":"suspend","result":"Confirmed violation; account suspended","handledBy":"59693416-0355-4e70-9f35-8a45f7c196cd","handledAt":"2026-11-15T06:45:19.683Z"}}
+{"method":"GET","url":"/letters/64b43c1b-43cf-46eb-9662-9f492efba1e7","status":404,"response":{"message":"Letter not found"}}
+{"method":"GET","url":"/letters","status":200,"response":{"state":"home-empty","filterState":"filters-free","locked":false,"batchId":"66876ede-78e3-4644-92e5-741a566b7d92","items":[],"hasMore":false,"nextOffset":null,"responses":[]}}
+{"method":"GET","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","status":200,"response":{"items":[{"id":"2e9d818b-d44d-4687-8b4e-1844b5dbe1a1","kind":"reply","content":"반가워요, have a lovely day","senderId":"e9e9c4bb-5c3a-4821-9cf2-965f4e5fa852","mine":true,"mediaId":null,"createdAt":"2026-11-15T06:45:19.629Z"}],"hasMore":false,"unlocked":false}}
+{"method":"GET","url":"/conversations","status":200,"response":{"items":[{"id":"b9d475ee-0321-4b49-8d2c-856792397d6d","displayName":"Reader","avatar":null,"peerId":"0ffc9807-6d8e-4724-a5cf-4367226e0f77","openingMessageId":"64b43c1b-43cf-46eb-9662-9f492efba1e7","remark":"","pinned":false,"muted":false,"hidden":false,"following":false,"background":"","bubble":"","unlocked":false,"status":"waiting","unreadCount":0,"lastMessage":"반가워요, have a lovely day","updatedAt":"2026-11-15T06:45:19.629Z"}],"hasMore":false}}
+{"method":"GET","url":"/posts","status":200,"response":{"items":[],"limit":20,"offset":0}}
+{"method":"GET","url":"/conversations/20bc57c6-1170-49d4-953d-1d1001d67a1e/replies/pending","status":200,"response":{"items":[],"hasMore":false,"freeRemaining":10,"used":0,"nextCost":0,"diamonds":0}}
+{"method":"POST","url":"/conversations/20bc57c6-1170-49d4-953d-1d1001d67a1e/replies/eb3394a4-7aaa-4e79-8768-67543580a8f7/collect","payload":{},"status":403,"response":{"message":"Account suspended"}}
+{"method":"POST","url":"/posts","payload":{"content":"Another normal day"},"status":403,"response":{"message":"Account suspended"}}
+{"method":"POST","url":"/conversations/b9d475ee-0321-4b49-8d2c-856792397d6d/messages","payload":{"content":"Hello again"},"status":403,"response":{"message":"Account suspended"}}
+{"database":"maugo","schema":"e3_c04ae2f177aa4c92b338763eee111cf8","auditCount":54,"reportStatus":"processed","accountSuspended":true}
+✔ E3 real PostgreSQL filtering, audit, report queue, suspension and 18+ declaration (592.796667ms)
+▶ B19 registered feedback submission, limits and administrator workflow
+  ✔ submission and B2 session authentication (67.47375ms)
+  ✔ required content and character boundaries (10.435667ms)
+  ✔ five per user per rolling hour including concurrent requests (27.719875ms)
+  ✔ administrator authorization, statuses, filtering and pagination (25.043333ms)
+✔ B19 registered feedback submission, limits and administrator workflow (396.50225ms)
+✔ B6 purchases, renewal, expiry, retry, cancellation and atomic ledger on PostgreSQL (442.575959ms)
+✔ B11 real database inbox, collection, visibility and permission boundaries (540.383709ms)
+▶ post and image card likes through authenticated APIs
+  ✔ posts: PUT, serialization, idempotency, two users and DELETE (116.013416ms)
+  ✔ image-cards: PUT, serialization, idempotency, two users and DELETE (134.910292ms)
+  ✔ authentication, missing content and visibility on both methods (99.412292ms)
+✔ post and image card likes through authenticated APIs (859.673667ms)
+✔ B8 persistent media, permissions, signatures, limits and sending (592.407917ms)
+✔ B7 durable blocks, report ownership, moderation and B3 permissions (483.8865ms)
+▶ B12 Apple verification, idempotent credit, refunds and atomic ledger
+  ✔ concurrent verify then refund (new, run 1) (46.146458ms)
+  ✔ concurrent refund then verify (credited, run 1) (42.415ms)
+  ✔ concurrent refund then verify (new, run 1) (36.570458ms)
+  ✔ concurrent verify then refund (new, run 2) (41.273ms)
+  ✔ concurrent refund then verify (credited, run 2) (66.071834ms)
+  ✔ concurrent refund then verify (new, run 2) (45.732125ms)
+  ✔ concurrent verify then refund (new, run 3) (40.997625ms)
+  ✔ concurrent refund then verify (credited, run 3) (35.263666ms)
+  ✔ concurrent refund then verify (new, run 3) (31.801ms)
+✔ B12 Apple verification, idempotent credit, refunds and atomic ledger (888.010583ms)
+▶ B16 posts, image card slots and server visibility including media downloads
+  ✔ validation: authentication, Unicode length, attachment count/type/size/purpose/ownership (115.151125ms)
+  ✔ publishing, pagination and private/friends/pending/block visibility (146.58175ms)
+  ✔ B17 migration backfills old posts, defaults Life and rejects invalid database category (6.729666ms)
+  ✔ B17 create/list/detail categories, All and author/category filtering (141.235917ms)
+  ✔ B17 author updates category/visibility and server immediately enforces visibility (72.537667ms)
+  ✔ image cards: ownership, type, primary, eight slots, concurrent full and deletion/refill (86.998708ms)
+  ✔ delete cascades attachments; retained media requires an independently visible reference (79.246625ms)
+✔ B16 posts, image card slots and server visibility including media downloads (945.649417ms)
+✔ B9 export allowlists, two-stage deletion, tombstones, media retries and new identity (1049.616166ms)
+✔ B20 live HTTP: public cards, categorized likes, followers and summary without visits (477.60975ms)
+✔ B15 live HTTP: empty stats, durable counts, visits and letter ownership (410.419917ms)
+✔ B18 migration, global profile visibility and B16 friendship (418.915ms)
+✔ B21 zodiac: migration replay, twelve signs, persistence, null/omission and invalid values (375.5745ms)
+✔ B14 profiles, validation, avatar slots, archives and permissions (420.717791ms)
+✔ B13 report evidence validation, moderator access and retention (307.671125ms)
+✔ PostgreSQL signup, opening, free and paid collection smoke (309.020208ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 57
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2553.36625
+
+✖ failing tests:
+
+test at test/auth.test.ts:10:1
+✖ B2 authentication routes with real PostgreSQL (1211.417458ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  401 !== 429
+
+      at TestContext.<anonymous> (/Users/anna/Muse_AI-repository/maugo/test/auth.test.ts:106:118)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 401,
+    expected: 429,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

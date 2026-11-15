@@ -23,9 +23,20 @@ test('B11 real database inbox, collection, visibility and permission boundaries'
  assert.equal((await call('GET','/conversations?limit=0')).statusCode,400);
  assert.equal((await call('GET','/conversations')).json().items.length,1);
  assert.equal((await call('GET','/conversations?tab=friends')).json().items.length,0);
- assert.equal((await call('PATCH',base,a,{remark:'Tea',pinned:true,muted:true,following:true,background:'sand',bubble:'blue'})).json().remark,'Tea');
+ const preferences=(await call('PATCH',base,a,{remark:'Tea',pinned:true,muted:true,following:true,background:'sand',bubble:'blue'})).json();
+ assert.equal(preferences.remark,'Tea');
+ for(const key of ['pinned','muted','following']) {
+  assert.equal(preferences[key],true);
+  assert.equal((await call('GET','/conversations')).json().items.find((r:any)=>r.id===v.id)[key],true);
+ }
  assert.equal((await call('GET','/conversations?tab=friends')).json().items.length,1);
  assert.equal((await call('GET','/conversations?tab=friends',b)).json().items.length,0);
+ const reset=(await call('PATCH',base,a,{pinned:false,muted:false,following:false})).json();
+ for(const key of ['pinned','muted','following']) {
+  assert.equal(reset[key],false);
+  assert.equal((await call('GET','/conversations')).json().items.find((r:any)=>r.id===v.id)[key],false);
+ }
+ assert.equal((await call('GET','/conversations?tab=friends')).json().items.length,0);
  assert.equal((await call('POST',base+'/messages',a,{content:'Wait'})).statusCode,403);
  for(const u of [a,b])assert.equal((await call('POST',base+'/media',u,{mediaId:randomUUID()})).statusCode,403);
  assert.equal((await call('GET',base+'/messages?search=absent')).json().items.length,0);
@@ -50,6 +61,14 @@ test('B11 real database inbox, collection, visibility and permission boundaries'
  assert.equal((await call('GET','/conversations')).json().items[0].unreadCount,1);
  assert.equal((await call('GET',base+'/messages?search=Secret&markRead=true')).json().items[0].id,m.id);
  assert.equal((await call('GET','/conversations')).json().items[0].unreadCount,0);
+ const unread=await call('PATCH',base,a,{markUnread:true});assert.equal(unread.statusCode,200,unread.body);
+ assert.equal(unread.json().unreadCount,1);
+ assert.equal((await db.query('SELECT read_at FROM conversation_preferences WHERE user_id=$1 AND conversation_id=$2',[a.id,v.id])).rows[0].read_at,null);
+ assert.equal((await call('GET','/conversations')).json().items[0].unreadCount,1);
+ await call('GET',base+'/messages?markRead=true');
+ assert.equal((await call('GET','/conversations')).json().items[0].unreadCount,0);
+ await call('PATCH',base,a,{markUnread:false});
+ assert.notEqual((await db.query('SELECT read_at FROM conversation_preferences WHERE user_id=$1 AND conversation_id=$2',[a.id,v.id])).rows[0].read_at,null);
  await call('PATCH',base,a,{clearHistory:true});assert.equal((await call('GET',base+'/messages')).json().items.length,0);
  assert.ok((await call('GET',base+'/messages',b)).json().items.length>0);
  assert.equal((await call('POST',base+'/messages',a,{content:'Unlocked remains'})).statusCode,201);
