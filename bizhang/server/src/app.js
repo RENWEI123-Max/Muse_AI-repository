@@ -189,6 +189,26 @@ export async function buildApp(pool, market) {
             user: userJSON(req.bzUser),
             server_time: new Date().toISOString(),
           };
+        if (path === "/me/settings") {
+          const b = req.body ?? {};
+          const keys = Object.keys(b);
+          if (
+            !keys.length ||
+            keys.some((k) => !["display_currency", "daily_summary_enabled"].includes(k)) ||
+            ("display_currency" in b && !["USD", "SGD"].includes(b.display_currency)) ||
+            ("daily_summary_enabled" in b && typeof b.daily_summary_enabled !== "boolean")
+          )
+            return error(reply, 422, "INVALID_SETTINGS", "设置项不正确");
+          const sets = [], vals = [];
+          if ("display_currency" in b) { vals.push(b.display_currency); sets.push(`display_currency=$${vals.length}`); }
+          if ("daily_summary_enabled" in b) { vals.push(b.daily_summary_enabled); sets.push(`daily_summary_enabled=$${vals.length}`); }
+          vals.push(req.bzUser.id);
+          const r = await pool.query(
+            `UPDATE users SET ${sets.join(",")},updated_at=now() WHERE id=$${vals.length} RETURNING *`,
+            vals,
+          );
+          return { user: userJSON(r.rows[0]), server_time: new Date().toISOString() };
+        }
         if (path === "/market/quotes" && market) return market.quotes();
         if (path === "/healthz")
           return { ok: true, server_time: new Date().toISOString() };
