@@ -140,4 +140,70 @@ test('N5 durable pending capsules over HTTP', async t => {
     await pool.query('UPDATE users SET is_suspended=true WHERE id=$1', [smith.id]);
     assert.equal((await call('GET', '/letters', smith)).status, 403);
   });
+  async function discoveryCounts(u: User) {
+    return (await pool.query(`SELECT
+      (SELECT count(*)::int FROM discovery_batches WHERE user_id=$1) AS batches,
+      (SELECT count(*)::int FROM discovery_seen WHERE user_id=$1) AS seen`, [u.id])).rows[0];
+  }
+  async function incoming(u: User, name: string) {
+    const sender = await user(name);
+    const opening = await call('POST', `/conversations/${u.id}/opening`, sender, { content: 'Unread opening' });
+    assert.equal(opening.status, 201);
+    return opening.data.openingMessageId;
+  }
+  await t.test('07 unscoped response refresh consumes three unseen openings into an undisplayed batch', async () => {
+    const recipient = await user('lost-recipient');
+    const ids = [];
+    for (let i = 0; i < 3; i++) ids.push(await incoming(recipient, `lost-sender-${i}`));
+    const before = await discoveryCounts(recipient);
+    // The old client kept only responses from this GET and discarded these items.
+    const discarded = await capsules(recipient);
+    assert.deepEqual(discarded.items.map((x: any) => x.openingMessageId).sort(), ids.sort());
+    assert.deepEqual(await discoveryCounts(recipient), { batches: before.batches + 1, seen: before.seen + 3 });
+    const seen = await pool.query('SELECT opening_message_id FROM discovery_seen WHERE user_id=$1 AND batch_id=$2', [recipient.id, discarded.batchId]);
+    assert.deepEqual(seen.rows.map(x => x.opening_message_id).sort(), ids);
+    const next = await capsules(recipient);
+    assert.notEqual(next.batchId, discarded.batchId);
+    assert.deepEqual(next.items, [], 'the next normal load cannot rediscover the discarded openings');
+    assert.deepEqual(await discoveryCounts(recipient), { batches: before.batches + 2, seen: before.seen + 3 });
+  });
+  const scopedUser = await user('scoped-recipient');
+  let scopedBatch: string;
+  let scopedResponses: { openingMessageId: string; conversationId: string }[];
+  let collectedConversation: string, collectedReply: string;
+  await t.test('08 batch-scoped refresh preserves items and responses without reserving new openings', async () => {
+    await incoming(scopedUser, 'scoped-initial');
+    scopedResponses = [];
+    for (let i = 0; i < 2; i++) {
+      const peer = await user(`scoped-peer-${i}`);
+      const opening = await call('POST', `/conversations/${peer.id}/opening`, scopedUser, { content: 'Hello peer' });
+      assert.equal(opening.status, 201);
+      const reply = await call('POST', `/conversations/${opening.data.id}/messages`, peer, { content: 'Pending response' });
+      assert.equal(reply.status, 201);
+      scopedResponses.push({ openingMessageId: opening.data.openingMessageId, conversationId: opening.data.id });
+      if (i === 0) { collectedConversation = opening.data.id; collectedReply = reply.data.id; }
+    }
+    scopedResponses.sort((a, b) => a.conversationId.localeCompare(b.conversationId));
+    const first = await capsules(scopedUser);
+    scopedBatch = first.batchId;
+    assert.equal(first.items.length, 1);
+    assert.deepEqual(first.responses, scopedResponses);
+    await incoming(scopedUser, 'scoped-new-unread');
+    const before = await discoveryCounts(scopedUser);
+    const refreshed = await capsules(scopedUser, `/letters?batchId=${scopedBatch}`);
+    assert.equal(refreshed.batchId, scopedBatch);
+    assert.deepEqual(refreshed.items, first.items);
+    assert.deepEqual(refreshed.responses, scopedResponses);
+    assert.deepEqual(await discoveryCounts(scopedUser), before);
+  });
+  await t.test('09 batch-scoped refresh removes collected response and retains the other', async () => {
+    const before = await discoveryCounts(scopedUser);
+    const collected = await call('POST', `/conversations/${collectedConversation}/replies/${collectedReply}/collect`, scopedUser, {}, 'n5-scoped');
+    assert.equal(collected.status, 200);
+    assert.equal(collected.data.state, 'collected');
+    const refreshed = await capsules(scopedUser, `/letters?batchId=${scopedBatch}`);
+    assert.deepEqual(refreshed.responses, scopedResponses.filter(x => x.conversationId !== collectedConversation));
+    assert.deepEqual(await discoveryCounts(scopedUser), before);
+  });
+
 });
