@@ -1,0 +1,40 @@
+
+> bizhang-server@0.1.0 test
+> node --test
+
+✔ scrypt uses unique salts and verifies without plaintext storage (91.046375ms)
+✔ every planned endpoint rejects missing and forged tokens before handlers (67.921708ms)
+✔ Binance cut: 120 seconds then stale (0.369833ms)
+✔ Kraken cut propagates to quoted assets and USDT (0.3095ms)
+✔ 2.1% divergence requires two valid passes (0.171583ms)
+✔ CoinGecko cut: fresh primary becomes unverified after 30 minutes (0.044917ms)
+✔ invalid pairing resets recovery; decimal multiplication exact (0.058416ms)
+✔ FX cut: expired SGD while USD stays ok (0.283458ms)
+✖ 121-second-old Binance tick is not inserted; 120-second boundary is accepted (0.427417ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 269.83775
+
+✖ failing tests:
+
+test at test/market.test.js:20:1
+✖ 121-second-old Binance tick is not inserted; 120-second boundary is accepted (0.427417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/anna/Muse_AI-repository/bizhang/server/test/market.test.js:25:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

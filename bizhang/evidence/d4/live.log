@@ -1,0 +1,81 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/anna/Muse_AI-repository/bizhang/ios/BiZhang.xcodeproj -scheme BiZhang -configuration Debug -destination "platform=iOS Simulator,id=3F5C0C26-5630-4912-A62D-CAAAF725068F" -derivedDataPath /private/tmp/bizhang-d4-build test "-only-testing:BiZhangTests/BiZhangTests/testD4Evidence"
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'BiZhangTests' in project 'BiZhang'
+        ➜ Explicit dependency on target 'BiZhang' in project 'BiZhang'
+    Target 'BiZhang' in project 'BiZhang' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: d6aef43edec87c1566b8397ea3023039
+Build description path: /tmp/bizhang-d4-build/Build/Intermediates.noindex/XCBuildData/d6aef43edec87c1566b8397ea3023039.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk /tmp/bizhang-d4-build/SDKStatCaches.noindex/iphonesimulator27.2-24B8118-cc78df9d8a9de6526dea716b1c70fd8e.sdkstatcache
+    cd /Users/anna/Muse_AI-repository/bizhang/ios/BiZhang.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk -o /tmp/bizhang-d4-build/SDKStatCaches.noindex/iphonesimulator27.2-24B8118-cc78df9d8a9de6526dea716b1c70fd8e.sdkstatcache
+
+ProcessInfoPlistFile /tmp/bizhang-d4-build/Build/Products/Debug-iphonesimulator/BiZhang.app/Info.plist /Users/anna/Muse_AI-repository/bizhang/ios/Config/Info-Debug.plist (in target 'BiZhang' from project 'BiZhang')
+    cd /Users/anna/Muse_AI-repository/bizhang/ios
+    builtin-infoPlistUtility /Users/anna/Muse_AI-repository/bizhang/ios/Config/Info-Debug.plist -producttype com.apple.product-type.application -genpkginfo /tmp/bizhang-d4-build/Build/Products/Debug-iphonesimulator/BiZhang.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /tmp/bizhang-d4-build/Build/Products/Debug-iphonesimulator/BiZhang.app/Info.plist
+
+ProcessInfoPlistFile /tmp/bizhang-d4-build/Build/Products/Debug-iphonesimulator/BiZhang.app/PlugIns/BiZhangTests.xctest/Info.plist /tmp/bizhang-d4-build/Build/Intermediates.noindex/BiZhang.build/Debug-iphonesimulator/BiZhangTests.build/empty-BiZhangTests.plist (in target 'BiZhangTests' from project 'BiZhang')
+    cd /Users/anna/Muse_AI-repository/bizhang/ios
+    builtin-infoPlistUtility /tmp/bizhang-d4-build/Build/Intermediates.noindex/BiZhang.build/Debug-iphonesimulator/BiZhangTests.build/empty-BiZhangTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /tmp/bizhang-d4-build/Build/Products/Debug-iphonesimulator/BiZhang.app/PlugIns/BiZhangTests.xctest/Info.plist
+
+PruneExplicitPrecompiledModules /tmp/bizhang-d4-build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/bizhang-d4-build/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/bizhang-d4-build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-11-16 19:50:19.479305+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+2026-11-16 19:50:19.479367+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+2026-11-16 19:50:19.479392+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+2026-11-16 19:50:19.479415+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+2026-11-16 19:50:19.479440+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+2026-11-16 19:50:19.558213+0800 BiZhang[68901:4310058] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+Test Suite 'Selected tests' started at 2026-11-16 19:50:19.869.
+Test Suite 'BiZhangTests.xctest' started at 2026-11-16 19:50:19.869.
+Test Suite 'BiZhangTests' started at 2026-11-16 19:50:19.869.
+Test Case '-[BiZhangTests testD4Evidence]' started.
+objc[68901]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.13NgCW/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10868c310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.13NgCW/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x108634398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-11-16 19:50:26.914037+0800 BiZhang[68901:4310058] [API] cannot add handler to 0 from 0 - dropping
+Test Case '-[BiZhangTests testD4Evidence]' passed (8.613 seconds).
+Test Suite 'BiZhangTests' passed at 2026-11-16 19:50:28.491.
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.621) seconds
+Test Suite 'BiZhangTests.xctest' passed at 2026-11-16 19:50:28.491.
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.622) seconds
+Test Suite 'Selected tests' passed at 2026-11-16 19:50:28.491.
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.622) seconds
+2026-11-16 19:50:28.797 xcodebuild[68865:4309795] [MT] IDETestOperationsObserverDebug: 13.262 elapsed -- Testing started completed.
+2026-11-16 19:50:28.797 xcodebuild[68865:4309795] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 19:50:28.797 xcodebuild[68865:4309795] [MT] IDETestOperationsObserverDebug: 13.262 sec, +13.262 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/bizhang-d4-build/Logs/Test/Test-BiZhang-2026.11.16_19-50-15-+0800.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

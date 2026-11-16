@@ -43,7 +43,7 @@ export class Market {
   }
   async tick(source, asset, price, ts, quote = 'USD') {
     decimal(price);
-    if (age(this.now(), ts, source === 'coingecko' ? 900 : 180)) return;
+    if (age(this.now(), ts, source === 'coingecko' ? 900 : source === 'binance' ? 120 : 180)) return;
     await this.pool.query('INSERT INTO price_ticks(source,asset,price,quote_ccy,source_ts,fetched_at) VALUES($1,$2,$3,$4,$5,$6)', [source, asset, price, quote, ts, new Date(this.now())]);
   }
   async collect(source) {
