@@ -1,0 +1,28 @@
+Test Case '-[BiZhangTests testKeychainAndCacheCleanup]' started.
+Test Case '-[BiZhangTests testKeychainAndCacheCleanup]' passed (0.008 seconds).
+Test Case '-[BiZhangTests testNetworkConfiguration]' started.
+Test Case '-[BiZhangTests testNetworkConfiguration]' passed (0.019 seconds).
+Test Case '-[BiZhangTests testProcessPersistence]' started.
+Test Case '-[BiZhangTests testProcessPersistence]' passed (0.001 seconds).
+Test Case '-[BiZhangTests testTunnelLoginRevocationAndUnauthorizedCleanup]' started.
+Test Case '-[BiZhangTests testTunnelLoginRevocationAndUnauthorizedCleanup]' passed (0.996 seconds).
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.024 (1.026) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.024 (1.026) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.024 (1.026) seconds
+** TEST SUCCEEDED **
+
+Phase persist (separate process)
+Test Case '-[BiZhangTests testProcessPersistence]' started.
+Test Case '-[BiZhangTests testProcessPersistence]' passed (0.736 seconds).
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.736 (0.737) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.736 (0.737) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.736 (0.738) seconds
+** TEST SUCCEEDED **
+
+Phase restore (separate process)
+Test Case '-[BiZhangTests testProcessPersistence]' started.
+Test Case '-[BiZhangTests testProcessPersistence]' passed (0.698 seconds).
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.698 (0.699) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.698 (0.700) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.698 (0.700) seconds
+** TEST SUCCEEDED **

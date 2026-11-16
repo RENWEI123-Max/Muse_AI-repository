@@ -1,0 +1,28 @@
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      511        127.0.0.1:3100      0.0.0.0:*    users:(("node",pid=2957577,fd=22))
+
+> bizhang-server@0.1.0 test
+> node --test
+
+TAP version 13
+# Subtest: scrypt uses unique salts and verifies without plaintext storage
+ok 1 - scrypt uses unique salts and verifies without plaintext storage
+  ---
+  duration_ms: 339.406065
+  type: 'test'
+  ...
+# Subtest: every planned endpoint rejects missing and forged tokens before handlers
+ok 2 - every planned endpoint rejects missing and forged tokens before handlers
+  ---
+  duration_ms: 273.085618
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 983.440075
