@@ -29,8 +29,8 @@ export function validate(row, primary, backup, now) {
     paused_since: failed ? row.paused_since || new Date(now) : passes >= 2 ? null : row.paused_since };
 }
 export class Market {
-  constructor(pool, { fetcher = fetch, now = Date.now, sleep = ms => new Promise(r => setTimeout(r, ms)) } = {}) {
-    Object.assign(this, { pool, fetcher, now, sleep }); this.stopped = false; this.jobs = [];
+  constructor(pool, { fetcher = fetch, now = Date.now, sleep = ms => new Promise(r => setTimeout(r, ms)), afterBinance = async () => {} } = {}) {
+    Object.assign(this, { pool, fetcher, now, sleep, afterBinance }); this.stopped = false; this.jobs = [];
   }
   async request(url, timeout, counted = false, retry = false) {
     if (counted) {
@@ -79,6 +79,7 @@ export class Market {
       }
     }
     await this.refresh();
+    if (source === 'binance') await this.afterBinance();
   }
   async refresh() {
     for (const a of this.assets) {

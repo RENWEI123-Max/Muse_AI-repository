@@ -1,3 +1,5 @@
+import { alerts, AlertError } from './alerts.js';
+import { binding } from './telegram.js';
 import { ledger, LedgerError } from "./ledger.js";
 import Fastify from "fastify";
 import { randomBytes } from "node:crypto";
@@ -160,6 +162,13 @@ export async function buildApp(pool, market) {
       method,
       url: "/api/v1" + path,
       handler: async (req, reply) => {
+        if (path.startsWith('/alerts') || path.startsWith('/telegram')) {
+          try { return await (path.startsWith('/alerts') ? alerts(pool,req) : binding(pool,req)); }
+          catch(e) {
+            if(e instanceof AlertError) return reply.code(e.status).send({error:{code:e.code,message:e.message,detail:e.detail}});
+            return reply.code(500).send({error:{code:'INTERNAL_ERROR',message:'服务暂时不可用',detail:{}}});
+          }
+        }
         if (["/transactions", "/transactions/:id", "/portfolio"].includes(path)) {
           try { return await ledger(pool, market, req); } catch(e) {
             if (e instanceof LedgerError) return reply.code(e.status).send({error:{code:e.code,message:e.message,detail:e.detail}});
