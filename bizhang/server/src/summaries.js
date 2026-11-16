@@ -20,7 +20,7 @@ export function message(s){
 }
 async function current(c,market,uid,date){const rows=(await c.query('SELECT * FROM transactions WHERE user_id=$1 AND deleted_at IS NULL ORDER BY asset,traded_at,id',[uid])).rows;const base=(await c.query("SELECT * FROM daily_summaries WHERE user_id=$1 AND status='sent' AND summary_date<$2 ORDER BY summary_date DESC LIMIT 1",[uid,date])).rows[0];return compose(rows,await market.quotes(),base,date);}
 export async function summary(pool,market,req,now=Date.now()){
- if(req.url.split('?')[0].endsWith('/latest'))return {summary:(await pool.query('SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 ORDER BY summary_date DESC LIMIT 1',[req.bzUser.id])).rows[0]??null};
+ if(req.url.split('?')[0].endsWith('/latest'))return {summary:(await pool.query('SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 ORDER BY daily_summaries.summary_date DESC LIMIT 1',[req.bzUser.id])).rows[0]??null};
  const c=await pool.connect();try{return {summary:await current(c,market,req.bzUser.id,local(now,req.bzUser.timezone).date)};}finally{c.release();}
 }
 export async function schedule(pool,market,now=Date.now()){
@@ -28,7 +28,7 @@ export async function schedule(pool,market,now=Date.now()){
  for(const u of users){const c=await pool.connect();try{
  await c.query('BEGIN');await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[u.id]);
  const l=local(now,u.timezone);
- const old=(await c.query("SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 AND status='deferred' ORDER BY summary_date LIMIT 1",[u.id])).rows[0];
+ const old=(await c.query("SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 AND status='deferred' ORDER BY daily_summaries.summary_date LIMIT 1",[u.id])).rows[0];
  const date=old?.summary_date??l.date;
  if(!old&&l.hour<21){await c.query('COMMIT');continue;}
  const end=old?.window_end??new Date(Date.parse(date+'T21:00:00Z')-l.offset);
