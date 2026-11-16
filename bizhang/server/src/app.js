@@ -1,3 +1,4 @@
+import { ledger, LedgerError } from "./ledger.js";
 import Fastify from "fastify";
 import { randomBytes } from "node:crypto";
 import { hashPassword, verifyPassword, tokenHash } from "./password.js";
@@ -159,6 +160,12 @@ export async function buildApp(pool, market) {
       method,
       url: "/api/v1" + path,
       handler: async (req, reply) => {
+        if (["/transactions", "/transactions/:id", "/portfolio"].includes(path)) {
+          try { return await ledger(pool, market, req); } catch(e) {
+            if (e instanceof LedgerError) return reply.code(e.status).send({error:{code:e.code,message:e.message,detail:e.detail}});
+            throw e;
+          }
+        }
         if (path === "/auth/logout") {
           await pool.query(
             "UPDATE sessions SET revoked_at=now() WHERE id=$1 AND user_id=$2",
