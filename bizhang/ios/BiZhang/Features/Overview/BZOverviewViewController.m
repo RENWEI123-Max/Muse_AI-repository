@@ -1,5 +1,6 @@
 #import "BZOverviewViewController.h"
 #import "BZAPIClient.h"
+#import "BZSettingsWriter.h"
 #import "BZCurrencySwitch.h"
 #import "BZTheme.h"
 #import "BZLedgerSupport.h"
@@ -7,6 +8,7 @@
 #import "BZMarketSnapshot.h"
 #import "BZCacheStore.h"
 #import "BZSessionManager.h"
+#import "BZAlertSupport.h"
 @interface BZOverviewViewController ()
 @property(nonatomic) NSTimer *timer;
 @property(nonatomic) BOOL loading;
@@ -18,6 +20,11 @@
 @property(nonatomic) NSUInteger generation;
 @property(nonatomic) BZMarketSnapshot *quotesSnapshot;
 @property(nonatomic) BOOL quotesOffline;
+@property(nonatomic) NSDictionary *alertsJSON;
+@property(nonatomic) NSDictionary *eventsJSON;
+@property(nonatomic) NSDictionary *summaryJSON;
+@property(nonatomic) NSString *serverCurrency;
+@property(nonatomic) BOOL currencySaving;
 @end
 @implementation BZOverviewViewController
 - (instancetype)init { return [super initWithStyle:UITableViewStyleInsetGrouped]; }
@@ -32,11 +39,13 @@
     if ([me[@"user"][@"display_currency"] isEqual:@"SGD"]) self.currencySwitch.selectedSegmentIndex = 1;
     BZCacheStore *store = [[BZCacheStore alloc] initWithUserID:uid]; self.quotesSnapshot = [[BZMarketSnapshot alloc] initWithJSON:store.marketEnvelope[@"json"] error:nil];
   }
-  self.quotesOffline = YES;
-  [self.currencySwitch addTarget:self.tableView action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+  self.quotesOffline = YES; self.serverCurrency = self.currencySwitch.currency;
+  [self.currencySwitch addTarget:self action:@selector(currencyChanged) forControlEvents:UIControlEventValueChanged];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.currencySwitch];
   NSDictionary *cache = [BZLedgerSupport cached:@"portfolio"]; if ([BZLedgerSupport validPortfolio:cache]) { self.portfolio = cache; self.offline = YES; }
   [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(refresh) name:@"BZLedgerDidChange" object:nil];
+  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(refresh) name:BZAlertsDidChange object:nil];
+  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(settingsChanged:) name:BZSettingsDidChange object:nil];
   self.refreshControl = [UIRefreshControl new]; [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
   [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(stop) name:UIApplicationDidEnterBackgroundNotification object:nil];
   [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(resume) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -49,8 +58,35 @@
   self.timer = [NSTimer scheduledTimerWithTimeInterval:60 repeats:YES block:^(NSTimer *t) { [weakSelf refresh]; }];
 }
 - (void)stop { [self.timer invalidate]; self.timer = nil; }
+- (void)settingsChanged:(NSNotification *)notification {
+  NSDictionary *user = notification.object;
+  if (![BZAlertSupport validUser:@{@"user":user ?: NSNull.null}]) return;
+  self.serverCurrency = user[@"display_currency"]; self.currencySwitch.selectedSegmentIndex = [self.serverCurrency isEqual:@"SGD"] ? 1 : 0; [self refresh];
+}
+- (void)currencyChanged {
+  if (self.currencySaving) return; NSString *currency = self.currencySwitch.currency; self.currencySwitch.selectedSegmentIndex = [self.serverCurrency isEqual:@"SGD"] ? 1 : 0; self.currencySaving = YES; self.currencySwitch.enabled = NO; self.generation++;
+  [BZSettingsWriter save:@{@"display_currency":currency} completion:^(NSDictionary *json, NSError *error) {
+    self.currencySaving = NO;
+    if (!error && [BZAlertSupport validUser:json]) { [BZSessionManager cacheUser:json[@"user"]]; [NSNotificationCenter.defaultCenter postNotificationName:BZSettingsDidChange object:json[@"user"]]; }
+    else {
+      UIAlertController *a = [UIAlertController alertControllerWithTitle:@"显示币种保存尚未确认" message:error ? [BZLedgerSupport errorText:error] : @"设置响应格式错误" preferredStyle:UIAlertControllerStyleAlert]; [a addAction:[UIAlertAction actionWithTitle:@"刷新" style:UIAlertActionStyleDefault handler:nil]]; [self presentViewController:a animated:YES completion:nil]; [self refresh];
+    }
+  }];
+}
 - (void)refresh {
   self.generation++; NSUInteger generation = self.generation; self.loading = YES; __weak typeof(self) weakSelf = self;
+  if (!self.currencySaving) [BZAPIClient.shared request:@"GET" path:@"/me" body:nil completion:^(NSDictionary *json, NSError *error) {
+    typeof(self) self = weakSelf; if (!self || generation != self.generation || self.currencySaving) return;
+    BOOL valid = !error && [BZAlertSupport validUser:json]; self.currencySwitch.enabled = valid;
+    if (valid) { self.serverCurrency = json[@"user"][@"display_currency"]; self.currencySwitch.selectedSegmentIndex = [self.serverCurrency isEqual:@"SGD"] ? 1 : 0; [BZSessionManager cacheUser:json[@"user"]]; [self.tableView reloadData]; }
+  }];
+  for (NSString *path in @[@"/alerts",@"/alerts/events?limit=100",@"/summary/daily/latest"]) [BZAPIClient.shared request:@"GET" path:path body:nil completion:^(NSDictionary *json, NSError *error) {
+    typeof(self) self = weakSelf; if (!self || generation != self.generation) return;
+    if ([path isEqual:@"/alerts"]) self.alertsJSON = !error && [BZAlertSupport validAlerts:json] ? json : nil;
+    else if ([path hasPrefix:@"/alerts/events"]) self.eventsJSON = !error && [BZAlertSupport validEvents:json] ? json : nil;
+    else self.summaryJSON = error ? nil : json;
+    [self.tableView reloadData];
+  }];
   [BZAPIClient.shared request:@"GET" path:@"/market/quotes" body:nil completion:^(NSDictionary *json, NSError *error) {
     typeof(self) self = weakSelf; if (!self || generation != self.generation) return;
     BZMarketSnapshot *snapshot = error ? nil : [[BZMarketSnapshot alloc] initWithJSON:json error:nil];
@@ -94,12 +130,13 @@
     cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingFormat:@"\n现价 %@ · %@",current,quoteState];
   } else {
     cell.textLabel.text = @[@"持仓总市值",@"我的持仓",@"今日提醒",@"每日汇总 · 21:00 SGT"][path.section];
-    cell.detailTextLabel.text = path.section == 1 ? (self.portfolio ? @"暂无持仓 · 在记账页记录买入或期初持仓" : @"暂无持仓数据，请下拉刷新") : path.section == 2 ? @"暂无提醒\n添加提醒后查看状态" : @"暂无汇总\n当日盈亏区间与 USD / SGD 持仓总览";
+    cell.detailTextLabel.text = path.section == 1 ? (self.portfolio ? @"暂无持仓 · 在记账页记录买入或期初持仓" : @"暂无持仓数据，请下拉刷新") : path.section == 2 ? [BZAlertSupport todayText:self.alertsJSON events:self.eventsJSON] : [BZAlertSupport summaryText:self.summaryJSON currency:self.currencySwitch.currency];
   }
   cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]; cell.textLabel.textColor = BZTheme.ink;
   cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]; cell.detailTextLabel.textColor = BZTheme.muted;
   cell.textLabel.numberOfLines = 0; cell.detailTextLabel.numberOfLines = 0; cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;
-  cell.backgroundColor = BZTheme.surface; cell.selectionStyle = UITableViewCellSelectionStyleNone; return cell;
+  cell.backgroundColor = BZTheme.surface; cell.selectionStyle = path.section == 2 ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone; if (path.section == 2) cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)path { [tableView deselectRowAtIndexPath:path animated:YES]; if (path.section == 2) self.tabBarController.selectedIndex = 3; }
 - (void)dealloc { [self stop]; [NSNotificationCenter.defaultCenter removeObserver:self]; }
 @end

@@ -1,0 +1,28 @@
+{
+  "server_time" : "2026-11-16T19:03:07.189Z",
+  "events" : [
+    {
+      "usd_sgd_rate" : "1.289065666666666700",
+      "user_id" : "32",
+      "price_ts" : "2026-11-16T19:02:28.013Z",
+      "generation" : "1",
+      "fx_ts" : "2026-11-16T19:02:00.040Z",
+      "delivery_status" : "failed",
+      "trigger_kind" : "on_create",
+      "price_usd" : "64929.734666200000000000",
+      "triggered_at" : "2026-11-16T19:02:58.173Z",
+      "last_error" : "TELEGRAM_NOT_BOUND",
+      "rule_id" : "5",
+      "id" : "4",
+      "asset" : "BTC",
+      "threshold_usd" : "1.000000000000000000",
+      "ref_rate" : "0.998990000000000000",
+      "attempts" : "0",
+      "ref_source" : "kraken",
+      "direction" : "above",
+      "price_sgd" : "83698.691703974882630991",
+      "ref_ts" : "2026-11-16T19:01:58.053Z",
+      "price_source" : "binance"
+    }
+  ]
+}

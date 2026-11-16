@@ -7,6 +7,8 @@
 #import "BZMarketViewController.h"
 #import "BZOverviewViewController.h"
 #import "BZLedgerViewController.h"
+#import "BZAlertsViewController.h"
+#import "BZSettingsViewController.h"
 @implementation BZAppDelegate
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)options {
@@ -20,34 +22,6 @@
                                      sessionRole:session.role];
   c.delegateClass = BZSceneDelegate.class;
   return c;
-}
-@end
-@interface BZPlaceholderViewController : UIViewController
-@end
-@implementation BZPlaceholderViewController
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  self.view.backgroundColor = BZTheme.background;
-  UILabel *label = [UILabel new];
-  label.text = @"功能正在建设中";
-  label.textColor = BZTheme.muted;
-  label.translatesAutoresizingMaskIntoConstraints = NO;
-  [self.view addSubview:label];
-  [NSLayoutConstraint activateConstraints:@[
-    [label.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-    [label.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor]
-  ]];
-  if ([self.title isEqualToString:@"设置"])
-    self.navigationItem.rightBarButtonItem =
-        [[UIBarButtonItem alloc] initWithTitle:@"退出登录"
-                                         style:UIBarButtonItemStylePlain
-                                        target:self
-                                        action:@selector(logout)];
-}
-- (void)logout {
-  self.navigationItem.rightBarButtonItem.enabled = NO;
-  [[BZAPIClient shared] logout:^{
-  }];
 }
 @end
 @implementation BZSceneDelegate
@@ -84,7 +58,7 @@
     @"gearshape"
   ];
   for (NSUInteger i = 0; i < titles.count; i++) {
-    UIViewController *vc = i == 0 ? [BZOverviewViewController new] : i == 1 ? [BZMarketViewController new] : i == 2 ? [BZLedgerViewController new] : [BZPlaceholderViewController new];
+    UIViewController *vc = i == 0 ? [BZOverviewViewController new] : i == 1 ? [BZMarketViewController new] : i == 2 ? [BZLedgerViewController new] : i == 3 ? [BZAlertsViewController new] : [BZSettingsViewController new];
     vc.title = titles[i];
     UINavigationController *nav =
         [[UINavigationController alloc] initWithRootViewController:vc];
