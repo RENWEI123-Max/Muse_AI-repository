@@ -94,7 +94,8 @@
           if (![json isKindOfClass:NSDictionary.class])
             json = nil;
           dispatch_async(dispatch_get_main_queue(), ^{
-            if (token && ![token isEqualToString:[BZKeychain token]]) {
+            NSString *currentToken = [BZKeychain token];
+            if ((token || currentToken) && ![token isEqualToString:currentToken]) {
               completion(nil, [NSError errorWithDomain:NSURLErrorDomain
                                                   code:NSURLErrorCancelled
                                               userInfo:nil]);

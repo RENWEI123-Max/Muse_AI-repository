@@ -1,0 +1,41 @@
+{
+  "alerts" : [
+    {
+      "id" : "5",
+      "state" : "disabled",
+      "disabled_reason" : "triggered",
+      "generation" : "1",
+      "version" : "2",
+      "created_at" : "2026-11-16T19:02:58.173Z",
+      "current_price_usd" : "64949.693669800000000000",
+      "asset" : "BTC",
+      "user_id" : "32",
+      "deleted_at" : null,
+      "alerts_paused" : false,
+      "threshold_usd" : "1.000000000000000000",
+      "updated_at" : "2026-11-16T19:02:58.173Z",
+      "price_status" : "ok",
+      "direction" : "above",
+      "last_triggered_at" : "2026-11-16T19:02:58.173Z"
+    },
+    {
+      "id" : "6",
+      "state" : "active",
+      "disabled_reason" : null,
+      "generation" : "2",
+      "version" : "3",
+      "created_at" : "2026-11-16T19:03:01.394Z",
+      "current_price_usd" : "64949.693669800000000000",
+      "asset" : "BTC",
+      "user_id" : "32",
+      "deleted_at" : null,
+      "alerts_paused" : false,
+      "threshold_usd" : "999999999999.000000000000000000",
+      "updated_at" : "2026-11-16T19:03:03.533Z",
+      "price_status" : "ok",
+      "direction" : "above",
+      "last_triggered_at" : null
+    }
+  ],
+  "server_time" : "2026-11-16T19:03:07.042Z"
+}

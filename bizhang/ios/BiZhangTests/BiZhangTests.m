@@ -382,6 +382,10 @@ static void (^BZD6Handler)(NSURLProtocol *);
   NSURLSession *original = BZAPIClient.shared.session; NSURLSessionConfiguration *config = NSURLSessionConfiguration.ephemeralSessionConfiguration; config.protocolClasses = @[BZD6Protocol.class]; NSURLSession *mock = [NSURLSession sessionWithConfiguration:config]; [BZAPIClient.shared setValue:mock forKey:@"session"];
   __block NSString *key; __block NSData *firstBody; __block NSInteger requests = 0;
   BZD6Handler = ^(NSURLProtocol *protocol) {
+    if (![protocol.request.URL.path hasSuffix:@"/transactions"]) {
+      [protocol.client URLProtocol:protocol didReceiveResponse:[[NSHTTPURLResponse alloc] initWithURL:protocol.request.URL statusCode:200 HTTPVersion:@"HTTP/1.1" headerFields:nil] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+      [protocol.client URLProtocol:protocol didLoadData:[NSJSONSerialization dataWithJSONObject:@{} options:0 error:nil]]; [protocol.client URLProtocolDidFinishLoading:protocol]; return;
+    }
     requests++; NSString *current = [protocol.request valueForHTTPHeaderField:@"Idempotency-Key"];
     if (requests == 1) { key = current; firstBody = protocol.request.HTTPBody; } else { XCTAssertEqualObjects(current,key); XCTAssertEqualObjects(protocol.request.HTTPBody,firstBody); }
     [protocol.client URLProtocol:protocol didFailWithError:[NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorTimedOut userInfo:nil]];
@@ -460,7 +464,13 @@ static void (^BZD6Handler)(NSURLProtocol *);
   UITableViewCell *cell = [overview tableView:overview.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]; XCTAssertTrue([cell.detailTextLabel.text containsString:@"已过期"]);
   NSURLSession *original = BZAPIClient.shared.session; NSURLSessionConfiguration *config = NSURLSessionConfiguration.ephemeralSessionConfiguration; config.protocolClasses = @[BZD6Protocol.class]; NSURLSession *mock = [NSURLSession sessionWithConfiguration:config]; [BZAPIClient.shared setValue:mock forKey:@"session"];
   NSMutableArray *pending = [NSMutableArray new];
-  BZD6Handler = ^(NSURLProtocol *protocol) { dispatch_async(dispatch_get_main_queue(),^{ [pending addObject:protocol]; }); };
+  BZD6Handler = ^(NSURLProtocol *protocol) {
+    if ([protocol.request.URL.path hasSuffix:@"/portfolio"] || [protocol.request.URL.path hasSuffix:@"/market/quotes"]) dispatch_async(dispatch_get_main_queue(),^{ [pending addObject:protocol]; });
+    else {
+      [protocol.client URLProtocol:protocol didReceiveResponse:[[NSHTTPURLResponse alloc] initWithURL:protocol.request.URL statusCode:200 HTTPVersion:@"HTTP/1.1" headerFields:nil] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+      [protocol.client URLProtocol:protocol didLoadData:[NSJSONSerialization dataWithJSONObject:@{} options:0 error:nil]]; [protocol.client URLProtocolDidFinishLoading:protocol];
+    }
+  };
   @try {
     [overview performSelector:@selector(refresh)]; [self d6Wait:^BOOL { return pending.count == 2; }];
     [overview performSelector:@selector(refresh)]; [self d6Wait:^BOOL { return pending.count == 4; }];
