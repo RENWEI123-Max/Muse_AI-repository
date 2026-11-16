@@ -206,4 +206,24 @@ test('N5 durable pending capsules over HTTP', async t => {
     assert.deepEqual(await discoveryCounts(scopedUser), before);
   });
 
+  await t.test('10 batch-scoped refresh after Filter Pass expiry returns locked without responses or new reservations', async () => {
+    await pool.query("UPDATE users SET filter_pass_expires_at=NOW()+interval '1 day' WHERE id=$1", [scopedUser.id]);
+    const first = await capsules(scopedUser, '/letters?city=Seoul');
+    assert.ok(first.batchId);
+    assert.equal(first.locked, false);
+    assert.deepEqual(first.responses, scopedResponses.filter(x => x.conversationId !== collectedConversation));
+    await pool.query("UPDATE users SET filter_pass_expires_at=NOW()-interval '1 second' WHERE id=$1", [scopedUser.id]);
+    const before = await discoveryCounts(scopedUser);
+    const locked = await capsules(scopedUser, `/letters?batchId=${first.batchId}`);
+    assert.equal(locked.state, 'filters-free');
+    assert.equal(locked.locked, true);
+    assert.equal(locked.code, 'FILTER_PASS_REQUIRED');
+    assert.equal(locked.batchId, null);
+    assert.deepEqual(locked.items, []);
+    assert.equal(locked.hasMore, false);
+    assert.equal(locked.nextOffset, null);
+    assert.equal(Object.hasOwn(locked, 'responses'), false);
+    assert.deepEqual(await discoveryCounts(scopedUser), before);
+  });
+
 });
