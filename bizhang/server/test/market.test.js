@@ -17,3 +17,12 @@ test('FX cut: expired SGD while USD stays ok', async()=>{
   pool.query=async sql=>({rows:sql.includes('JOIN')?[{...row,symbol:'BTC',usd_price:'100'},{...row,asset:'USDT',raw_source:'kraken',usd_price:'1'}]:[{rate:'1.3',source:'coinbase',fetched_at:new Date(now-7200001)}]});
   const snapshot=await market.quotes();assert.equal(snapshot.fx.stale,true);assert.equal(snapshot.quotes[0].status,'ok');assert.equal(snapshot.quotes[0].price_sgd,'130.000000000000000000');
 });
+test('121-second-old Binance tick is not inserted; 120-second boundary is accepted', async()=>{
+  const {Market}=await import('../src/market.js');
+  const writes=[];
+  const market=new Market({query:async (...args)=>{writes.push(args);return {rows:[]};}},{now:()=>now});
+  await market.tick('binance','BTC','100',new Date(now-121000),'USDT');
+  assert.equal(writes.length,0);
+  await market.tick('binance','BTC','100',new Date(now-120000),'USDT');
+  assert.equal(writes.length,1);
+});

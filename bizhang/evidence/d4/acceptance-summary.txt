@@ -1,0 +1,62 @@
+D4 acceptance evidence (iPhone 17, iOS Simulator 27.2)
+
+server-final:
+ℹ tests 9
+ℹ pass 9
+ℹ fail 0
+
+xctest:
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.949 (4.953) seconds
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.949 (4.954) seconds
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.949 (4.956) seconds
+** TEST SUCCEEDED **
+
+live:
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.621) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.622) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.613 (8.622) seconds
+** TEST SUCCEEDED **
+
+offline:
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.615 (8.629) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.615 (8.629) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.615 (8.630) seconds
+** TEST SUCCEEDED **
+
+stale:
+	 Executed 1 test, with 0 failures (0 unexpected) in 6.799 (6.808) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 6.799 (6.811) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 6.799 (6.812) seconds
+** TEST SUCCEEDED **
+
+recovered:
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.614 (8.625) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.614 (8.626) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 8.614 (8.626) seconds
+** TEST SUCCEEDED **
+
+fx-validation-red:
+/Users/anna/Muse_AI-repository/bizhang/ios/BiZhangTests/BiZhangTests.m:170: error: -[BiZhangTests testSnapshotAgeValidationAndProtectedCache] : (([[BZMarketSnapshot alloc] initWithJSON:bad error:nil]) == nil) failed: "<BZMarketSnapshot: 0x10a21a790>"
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.113 (0.120) seconds
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.113 (0.120) seconds
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.113 (0.121) seconds
+** TEST FAILED **
+
+Live server_time: 2026-11-16T11:50:20.503Z
+Order: BTC ETH SOL USDT USDC BNB XRP DOGE ADA LINK
+BTC USD=64438.070009600000000000 SGD=83067.438239725401556192 source=binance status=ok
+ETH USD=1807.013600000000000000 SGD=2329.430266827999819298 source=binance status=ok
+SOL USD=71.431360000000000000 SGD=92.082523332799992856 source=binance status=ok
+USDT USD=0.999040000000000000 SGD=1.287867459199999900 source=kraken status=ok
+USDC USD=0.999800000000000000 SGD=1.288847178999999900 source=kraken status=ok
+BNB USD=590.202860800000000000 SGD=760.833458871583940979 source=binance status=ok
+XRP USD=0.956081280000000000 SGD=1.232489158454399904 source=binance status=ok
+DOGE USD=0.058873427200000000 SGD=0.075894029370655994 source=binance status=ok
+ADA USD=0.152753216000000000 SGD=0.196914934511679984 source=binance status=ok
+LINK USD=9.166192000000000000 SGD=11.816183938159999083 source=binance status=ok
+
+Final suite:
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.765 (4.771) seconds
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.765 (4.772) seconds
+	 Executed 8 tests, with 1 test skipped and 0 failures (0 unexpected) in 4.765 (4.773) seconds
+** TEST SUCCEEDED **

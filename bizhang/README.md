@@ -38,3 +38,11 @@ Debug.xcconfig 注入 `http://127.0.0.1:13100/api/v1`；Info-Debug.plist 只允�
 `BiZhangTests` 包含 Keychain/缓存、NSURLSession/ATS、真实隧道登录/吊销测试。通过 `TEST_RUNNER_BZ_TEST_PASSWORD` 环境变量传入新建币账验收密码，禁止打印。两次独立 XCTest 运行设置 `TEST_RUNNER_BZ_TEST_PHASE=persist` / `restore`，仅执行 `testProcessPersistence`，可验证登录页提交、跨进程 Keychain 保持及退出清理。两阶段之间不卸载 App。完整集成测试需要隧道与已初始化 Smith；普通 `npm test` 不需要数据库。
 
 证据和结果见 [D2-report.md](D2-report.md)。不会调用 Telegram，不含第三方 iOS 依赖。
+
+### D4 行情与总览
+
+新增原生 `Features/Market`、`Features/Overview`，模型与格式化位于 `Models` / `Core/Format`，离线缓存位于 `Core/Cache`。行情使用后端 `usd_price`、`price_sgd`；不做换汇或成本/盈亏计算。行情可见时每 30 秒刷新、年龄每秒更新；总览可见时每 60 秒刷新现有 `/me` 边界，D5 接 `/portfolio`。进后台或离开页面停定时器。
+
+`python3 bizhang/ios/d4-acceptance.py` 会经 sg-claude 使用 password.js 生成随机临时用户，运行 iPhone 17 单测并保留临时登录用于截图。交互输入 `live` / `offline` / `stale` / `recovered` 执行截图断言；`done` 删除该用户及全部会话；`suite` 可运行最终全套。先按 D2 命令运行 13100 隧道，离线场景只断本次隧道。脚本不读取既有账号文件或任何运行凭据；不部署。故障注入需由操作者临时屏蔽 Binance，等至少 121 秒并恢复。截图与行情原始 JSON（不含 token）输出到 `bizhang/evidence/d4/`；完整 xcodebuild 日志在本机同目录。
+
+重启时缓存一律保守显示已过期，再异步刷新；不会依赖可被用户调整的系统时间认定缓存新鲜。抓取墙上时间只用于显示 HH:mm SGT。模拟器无法验证真机数据保护加密属性，写入仍使用 Complete 文件保护。
