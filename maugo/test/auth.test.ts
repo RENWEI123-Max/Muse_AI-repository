@@ -103,11 +103,34 @@ test('B2 authentication routes with real PostgreSQL', async t => {
   const failed=await post('/auth/code/send',{email:'failure@example.test'});assert.equal(failed.statusCode,503);assert.equal(failed.json().code,undefined);mailFailure=false;
   // Independent IP and email limits survive app recreation and cannot be bypassed by rotating the other dimension.
   for(let i=0;i<11;i++) {
-    const r=await post('/auth/login',{...credentials,email:`missing${i}@example.test`},undefined,'192.0.2.1');assert.equal(r.statusCode,i===10?429:401);
+    const r=await post('/auth/login',{...credentials,email:`missing${i}@example.test`},undefined,'192.0.2.1');assert.equal(r.statusCode,401);
   }
   for(let i=0;i<11;i++) {
-    const r=await post('/auth/login',{...credentials,email:'limited@example.test'},undefined,`192.0.3.${i}`);assert.equal(r.statusCode,i===10?429:401);
+    const r=await post('/auth/login',{...credentials,email:'limited@example.test'},undefined,`192.0.3.${i}`);assert.equal(r.statusCode,401);
   }
+  const recreated=buildApp(pool);t.after(()=>recreated.close());
+  for(const boundary of [
+    {dimension:'IP',key:'login:ip:192.0.2.1',email:'boundary-ip@example.test',ip:'192.0.2.1',otherEmail:'boundary-ip@example.test',otherIp:'192.0.6.1'},
+    {dimension:'email',key:'login:email:limited@example.test',email:'limited@example.test',ip:'192.0.7.1',otherEmail:'boundary-email@example.test',otherIp:'192.0.7.1'},
+  ]) await t.test(`login ${boundary.dimension} enforces 1000/hour across app recreation, isolates keys and resets expired windows`,async()=>{
+    const send=(email:string,ip:string)=>recreated.inject({method:'POST',url:'/auth/login',payload:{...credentials,email},remoteAddress:ip});
+    assert.equal((await pool.query('SELECT count FROM auth_limits WHERE key=$1',[boundary.key])).rows[0].count,11);
+    // Seed only the preceding attempts; the real route must count and enforce both boundary requests.
+    await pool.query('UPDATE auth_limits SET count=999 WHERE key=$1',[boundary.key]);
+    const allowed=await send(boundary.email,boundary.ip);assert.equal(allowed.statusCode,401,allowed.body);
+    const atLimit=(await pool.query('SELECT count,starts_at FROM auth_limits WHERE key=$1',[boundary.key])).rows[0];
+    assert.equal(atLimit.count,1000);
+    const denied=await send(boundary.email,boundary.ip);assert.equal(denied.statusCode,429,denied.body);
+    assert.ok(Number(denied.headers['retry-after'])>0);assert.ok(Number(denied.headers['retry-after'])<=3600);
+    assert.equal(denied.json().retryAfter,Number(denied.headers['retry-after']));
+    const overLimit=(await pool.query('SELECT count,starts_at FROM auth_limits WHERE key=$1',[boundary.key])).rows[0];
+    assert.equal(overLimit.count,1001);assert.deepEqual(overLimit.starts_at,atLimit.starts_at);
+    assert.equal((await send(boundary.otherEmail,boundary.otherIp)).statusCode,401);
+    await pool.query("UPDATE auth_limits SET starts_at=NOW()-interval '61 minutes' WHERE key=$1",[boundary.key]);
+    assert.equal((await send(boundary.email,boundary.ip)).statusCode,401);
+    const reset=(await pool.query('SELECT count,starts_at FROM auth_limits WHERE key=$1',[boundary.key])).rows[0];
+    assert.equal(reset.count,1);assert.ok(reset.starts_at>atLimit.starts_at);
+  });
   for(let i=0;i<6;i++) {
     const r=await post('/auth/code/send',{email:`send${i}@example.test`},undefined,'192.0.4.1');assert.equal(r.statusCode,i===5?429:200);
   }
