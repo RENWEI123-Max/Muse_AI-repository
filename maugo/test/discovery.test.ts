@@ -14,7 +14,7 @@ test('B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL'
   const pool=new pg.Pool({connectionString:process.env.DATABASE_URL,options:`-c search_path=${schema}`});
   const app=buildApp(pool);
   t.after(async()=>{await app.close();await pool.end();await admin.end();});
-  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','005_discovery.sql','008_moderation.sql','017_profile_visibility.sql'])
+  for(const name of ['002_domain.sql','003_auth.sql','004_conversation_ledger.sql','005_discovery.sql','005_discovery.sql','006_reply_wallet.sql','008_moderation.sql','017_profile_visibility.sql'])
     await pool.query(await readFile(new URL('../server/migrations/'+name,import.meta.url),'utf8'));
   async function user() {
     const id=randomUUID(),token=randomUUID();
@@ -58,7 +58,7 @@ test('B4 discovery, locked filters, durable refresh and B3 states on PostgreSQL'
   await pool.query("INSERT INTO messages(id,conversation_id,sender_id,kind,content) VALUES($1,$2,$3,'reply','Back')",[randomUUID(),details.conversationId,senderId]);
   assert.equal((await get(`/letters/${details.openingMessageId}`)).json().state,'letter-replied');
   assert.equal((await get(`/letters?batchId=${b}`)).json().state,'home-response');
-  assert.equal((await get(`/letters?batchId=${b}`)).json().state,'home-ready');
+  assert.equal((await get(`/letters?batchId=${b}`)).json().state,'home-response');
   const marked=(await get(`/letters?batchId=${b}`)).json().items.find((x:any)=>x.openingMessageId===details.openingMessageId);
   assert.equal(marked.replied,true);assert.equal(marked.unlocked,false);
   await pool.query('INSERT INTO user_blocks(blocker_id,blocked_id) VALUES($1,$2)',[reader.id,senderId]);

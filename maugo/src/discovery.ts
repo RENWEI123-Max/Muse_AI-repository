@@ -77,16 +77,18 @@ export function registerDiscovery(app: FastifyInstance,
       WHERE s.user_id=$1 AND s.batch_id=$2 AND v.peer_id=$1 AND ${visible} AND s.position >= $3
       ORDER BY s.position LIMIT $4`, [u.id,batchId,f.offset,f.limit+1]);
     const items = result.rows.slice(0,f.limit), hasMore = result.rows.length > f.limit;
-    const responses = await c.query(`SELECT DISTINCT v.opening_message_id,r.id FROM conversations v
-      JOIN users u ON u.id=v.opener_id JOIN messages r ON r.conversation_id=v.id AND r.sender_id=v.opener_id AND r.kind='reply'
-      WHERE v.peer_id=$1 AND ${visible} AND NOT EXISTS
-      (SELECT 1 FROM discovery_response_seen s WHERE s.user_id=$1 AND s.message_id=r.id)`, [u.id]);
-    for (const r of responses.rows) await c.query('INSERT INTO discovery_response_seen(user_id,message_id) VALUES($1,$2) ON CONFLICT DO NOTHING',[u.id,r.id]);
+    // Pending collections are durable business state; display/click history must not consume them.
+    const responses = await c.query(`SELECT DISTINCT v.id AS conversation_id,v.opening_message_id FROM conversations v
+      JOIN users u ON u.id=CASE WHEN v.opener_id=$1 THEN v.peer_id ELSE v.opener_id END
+      JOIN messages r ON r.conversation_id=v.id AND r.sender_id=u.id AND r.kind='reply'
+      WHERE (v.opener_id=$1 OR v.peer_id=$1) AND ${visible} AND NOT EXISTS
+      (SELECT 1 FROM reply_collections rc WHERE rc.user_id=$1 AND rc.reply_id=r.id)
+      ORDER BY v.id`, [u.id]);
     return { state: responses.rowCount ? 'home-response' : items.length ? 'home-ready' : 'home-empty',
       filterState: Object.values(filters).some(x => x !== null) ? 'filters-selected' : active(u) ? 'filters-active' : 'filters-free',
       locked: false, batchId, items: items.map(letter), hasMore,
       nextOffset: hasMore ? items[items.length-1].position+1 : null,
-      responses: responses.rows.map(r => ({ openingMessageId: r.opening_message_id })) };
+      responses: responses.rows.map(r => ({ openingMessageId: r.opening_message_id, conversationId: r.conversation_id })) };
   }
   app.get<{ Querystring: Filters }>('/letters', { schema: { querystring: schema } }, async request => transaction(async c =>
     list(c, await authenticate(c, request.headers.authorization), request.query, false)));
