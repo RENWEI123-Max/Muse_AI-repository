@@ -46,4 +46,4 @@
 
 ## Git 交付
 
-提交与推送结果待本轮最终命令记录补充；不合 main。
+实现提交 `393d973f5c86e354d72363b9c06bfa5dc276e137`；分支 `codex/bizhang-d4`，仅含 bizhang 文件，不合 main。最终推送结果见家目录 `~/crypto-d4-report.md`。
