@@ -1,0 +1,4 @@
+// D9 must supply the approved HTTPS endpoint; no guessed production domain.
+BZ_API_BASE_URL =
+INFOPLIST_FILE = Config/Info.plist
+GCC_TREAT_WARNINGS_AS_ERRORS = YES

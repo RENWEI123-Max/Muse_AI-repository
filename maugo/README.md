@@ -46,7 +46,7 @@ B1 提供上述三个业务接口；B 回复通过数据库测试夹具写入，
 
 新会话存于 auth_sessions，仅保存 SHA-256 摘要，有效期 30 天；注册、登录均签发独立会话。业务接口兼容 B1 旧令牌。`POST /auth/logout` 携带 Bearer token 撤销当前会话，重复撤销成功；缺少 Bearer 返回 401。
 
-`POST /auth/code/send` 接收 `{email}`，随机六位验证码（不使用 123456），仅保存摘要，10 分钟有效；成功返回 `{sent:true,retryAfter:60,expiresIn:600}`。重发等待返回 429、Retry-After 和 retryAfter 秒数。登录按 IP 与邮箱分别限制每小时 10 次，发码分别限制每小时 5 次请求（包含倒计时内重试和发送失败），验证每小时 30 次；数据库保存计数，跨进程共享。发码、验证码消费均通过数据库锁串行处理。
+`POST /auth/code/send` 接收 `{email}`，随机六位验证码（不使用 123456），仅保存摘要，10 分钟有效；成功返回 `{sent:true,retryAfter:60,expiresIn:600}`。重发等待返回 429、Retry-After 和 retryAfter 秒数。登录按 IP 与邮箱分别限制每小时 1000 次，发码分别限制每小时 5 次请求（包含倒计时内重试和发送失败），验证每小时 30 次；数据库保存计数，跨进程共享。发码、验证码消费均通过数据库锁串行处理。
 
 `POST /auth/code/verify` 接收 `{email,code}`；成功 `{verified:true}`，错误或已使用 401，过期 410，同一验证码错误尝试达到 5 次后 429。验证成功只表示邮箱校验通过，不签发会话或自动修改账号；验证码不能重复消费。
 
@@ -108,7 +108,7 @@ opening 接口在事务中获取排序用户对的 advisory lock 后查重，首
 | 模块 / 状态 | 接口约定 |
 | --- | --- |
 | 02 home-ready / home-empty | 有来信 / 无匹配或耗尽（默认每批三封） |
-| 02 home-response | 对方在已回应会话中再次回信；responses 给出 openingMessageId 供跳转。首页读取后记为已展示，下次进入不再提示 |
+| 02 home-response | 任一方向会话中有对方发出的未收取 reply；responses 按会话去重，提供 openingMessageId 与 conversationId，客户端进入已有会话/待收面板。连续 GET、刷新、重登及仅点开均保留，全部成功收取后消失；旧 discovery_response_seen 不影响胶囊。保留封禁、双向屏蔽和资料可见性校验。鸟卡 discovery_seen/batchId 仍沿用现有批次契约，不清空 seen |
 | 02 filters-free / filters-active / filters-selected | 筛选元数据和列表 filterState；未开通高级筛选返回锁定提示 |
 | 02 bird-female / bird-male / bird-motion-off | 信使外观与动画是客户端本地展示状态，不改变发现接口 |
 | 03 letter-open | 尚未回应，canReply=true |

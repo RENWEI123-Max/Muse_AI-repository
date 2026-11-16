@@ -1,0 +1,21 @@
+
+> bizhang-server@0.1.0 test
+> node --test
+
+✔ scrypt uses unique salts and verifies without plaintext storage (111.077ms)
+✔ every planned endpoint rejects missing and forged tokens before handlers (81.129667ms)
+✔ Binance cut: 120 seconds then stale (0.409458ms)
+✔ Kraken cut propagates to quoted assets and USDT (0.436292ms)
+✔ 2.1% divergence requires two valid passes (0.1965ms)
+✔ CoinGecko cut: fresh primary becomes unverified after 30 minutes (0.054291ms)
+✔ invalid pairing resets recovery; decimal multiplication exact (0.066375ms)
+✔ FX cut: expired SGD while USD stays ok (0.381375ms)
+✔ 121-second-old Binance tick is not inserted; 120-second boundary is accepted (0.11775ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 332.062792
