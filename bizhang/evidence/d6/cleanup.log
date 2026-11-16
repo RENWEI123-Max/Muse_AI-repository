@@ -1,0 +1,12 @@
+SET
+BEGIN
+DELETE 4
+DELETE 4
+DELETE 3
+DELETE 1
+COMMIT
+users=0
+transaction_requests_orphans=0
+transactions_orphans=0
+sessions_orphans=0
+

@@ -1,0 +1,38 @@
+{
+  "positions": [
+    {
+      "asset": "BTC",
+      "quantity": "1.500000000000000000",
+      "avg_cost_usd": "111.000000000000000000",
+      "remaining_cost_usd": "166.500000000000000000",
+      "realized_usd": "8.500000000000000000",
+      "market_value": {
+        "usd": "210.000000000000000000",
+        "sgd": "273.000000000000000000"
+      },
+      "unrealized": {
+        "usd": "43.500000000000000000",
+        "sgd": "56.550000000000000000"
+      },
+      "price_status": "ok"
+    }
+  ],
+  "total_value": {
+    "usd": "210",
+    "sgd": "273"
+  },
+  "total_unrealized": {
+    "usd": "43.5",
+    "sgd": "56.55"
+  },
+  "total_realized": {
+    "usd": "8.5",
+    "sgd": "11.05"
+  },
+  "fx": {
+    "rate": "1.30",
+    "stale": false
+  },
+  "data_complete": true,
+  "server_time": "2026-11-16T00:00:00Z"
+}

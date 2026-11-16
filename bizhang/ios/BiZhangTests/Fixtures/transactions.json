@@ -1,0 +1,53 @@
+{
+  "transactions": [
+    {
+      "id": "3",
+      "version": "1",
+      "asset": "BTC",
+      "side": "sell",
+      "quantity": "0.5",
+      "price_usd": "130",
+      "opening_cost_usd": null,
+      "fee_amount": "1",
+      "fee_currency": "USD",
+      "avg_cost_before_usd": "111",
+      "realized_usd": "8.5",
+      "qty_after": "1.5",
+      "traded_at": "2026-01-01T00:02:00Z",
+      "note": "D6 fixture"
+    },
+    {
+      "id": "2",
+      "version": "1",
+      "asset": "BTC",
+      "side": "buy",
+      "quantity": "1",
+      "price_usd": "120",
+      "opening_cost_usd": null,
+      "fee_amount": "1",
+      "fee_currency": "USD",
+      "avg_cost_before_usd": "101",
+      "realized_usd": "0",
+      "qty_after": "2",
+      "traded_at": "2026-01-01T00:01:00Z",
+      "note": "D6 fixture"
+    },
+    {
+      "id": "1",
+      "version": "1",
+      "asset": "BTC",
+      "side": "buy",
+      "quantity": "1",
+      "price_usd": "100",
+      "opening_cost_usd": null,
+      "fee_amount": "1",
+      "fee_currency": "USD",
+      "avg_cost_before_usd": "0",
+      "realized_usd": "0",
+      "qty_after": "1",
+      "traded_at": "2026-01-01T00:00:00Z",
+      "note": "D6 fixture"
+    }
+  ],
+  "server_time": "2026-11-16T00:00:00Z"
+}

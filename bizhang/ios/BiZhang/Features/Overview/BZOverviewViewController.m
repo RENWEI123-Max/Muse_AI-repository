@@ -2,16 +2,41 @@
 #import "BZAPIClient.h"
 #import "BZCurrencySwitch.h"
 #import "BZTheme.h"
+#import "BZLedgerSupport.h"
+#import "BZFormatter.h"
+#import "BZMarketSnapshot.h"
+#import "BZCacheStore.h"
+#import "BZSessionManager.h"
 @interface BZOverviewViewController ()
 @property(nonatomic) NSTimer *timer;
 @property(nonatomic) BOOL loading;
+@property(nonatomic) NSDictionary *portfolio;
+@property(nonatomic) BZCurrencySwitch *currencySwitch;
+@property(nonatomic) BOOL offline;
+@property(nonatomic) NSString *failure;
+@property(nonatomic) NSTimeInterval receivedAt;
+@property(nonatomic) NSUInteger generation;
+@property(nonatomic) BZMarketSnapshot *quotesSnapshot;
+@property(nonatomic) BOOL quotesOffline;
 @end
 @implementation BZOverviewViewController
 - (instancetype)init { return [super initWithStyle:UITableViewStyleInsetGrouped]; }
 - (void)viewDidLoad {
   [super viewDidLoad]; self.title = @"总览"; self.view.backgroundColor = BZTheme.background;
   self.tableView.rowHeight = UITableViewAutomaticDimension; self.tableView.estimatedRowHeight = 130;
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[BZCurrencySwitch new]];
+  self.currencySwitch = [BZCurrencySwitch new];
+  NSString *uid = BZCacheStore.cachedUserID;
+  if (uid) {
+    NSData *data = [NSData dataWithContentsOfURL:[[BZSessionManager.cacheRoot URLByAppendingPathComponent:uid] URLByAppendingPathComponent:@"me.json"]];
+    NSDictionary *me = data ? [NSJSONSerialization JSONObjectWithData:data options:0 error:nil] : nil;
+    if ([me[@"user"][@"display_currency"] isEqual:@"SGD"]) self.currencySwitch.selectedSegmentIndex = 1;
+    BZCacheStore *store = [[BZCacheStore alloc] initWithUserID:uid]; self.quotesSnapshot = [[BZMarketSnapshot alloc] initWithJSON:store.marketEnvelope[@"json"] error:nil];
+  }
+  self.quotesOffline = YES;
+  [self.currencySwitch addTarget:self.tableView action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.currencySwitch];
+  NSDictionary *cache = [BZLedgerSupport cached:@"portfolio"]; if ([BZLedgerSupport validPortfolio:cache]) { self.portfolio = cache; self.offline = YES; }
+  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(refresh) name:@"BZLedgerDidChange" object:nil];
   self.refreshControl = [UIRefreshControl new]; [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
   [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(stop) name:UIApplicationDidEnterBackgroundNotification object:nil];
   [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(resume) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -25,18 +50,52 @@
 }
 - (void)stop { [self.timer invalidate]; self.timer = nil; }
 - (void)refresh {
-  // D5 supplies /portfolio. Refresh only the existing own-backend session boundary today.
-  if (self.loading) return; self.loading = YES; __weak typeof(self) weakSelf = self;
-  [BZAPIClient.shared request:@"GET" path:@"/me" body:nil completion:^(NSDictionary *json, NSError *error) {
-    weakSelf.loading = NO; [weakSelf.refreshControl endRefreshing]; [weakSelf.tableView reloadData];
+  self.generation++; NSUInteger generation = self.generation; self.loading = YES; __weak typeof(self) weakSelf = self;
+  [BZAPIClient.shared request:@"GET" path:@"/market/quotes" body:nil completion:^(NSDictionary *json, NSError *error) {
+    typeof(self) self = weakSelf; if (!self || generation != self.generation) return;
+    BZMarketSnapshot *snapshot = error ? nil : [[BZMarketSnapshot alloc] initWithJSON:json error:nil];
+    self.quotesOffline = !snapshot; if (snapshot) self.quotesSnapshot = snapshot; [self.tableView reloadData];
+  }];
+  [BZAPIClient.shared request:@"GET" path:@"/portfolio" body:nil completion:^(NSDictionary *json, NSError *error) {
+    typeof(self) self = weakSelf; if (!self || generation != self.generation) return;
+    self.loading = NO; [self.refreshControl endRefreshing];
+    if (!error && [BZLedgerSupport validPortfolio:json]) { self.portfolio = json; self.offline = NO; self.failure = nil; self.receivedAt = NSProcessInfo.processInfo.systemUptime; [BZLedgerSupport cache:json name:@"portfolio"]; }
+    else { self.offline = YES; self.failure = error ? [BZLedgerSupport errorText:error] : @"持仓数据格式错误，请下拉重试"; }
+    [self.tableView reloadData];
   }];
 }
+- (NSDictionary *)quoteForAsset:(NSString *)asset { for (NSDictionary *q in self.quotesSnapshot.quotes) if ([q[@"symbol"] isEqual:asset]) return q; return nil; }
+- (BOOL)expired {
+  if (self.offline || !self.receivedAt || NSProcessInfo.processInfo.systemUptime - self.receivedAt > 120) return YES;
+  if ([self.portfolio[@"positions"] count] && (self.quotesOffline || !self.quotesSnapshot)) return YES;
+  for (NSDictionary *p in self.portfolio[@"positions"]) { NSDictionary *q = [self quoteForAsset:p[@"asset"]]; if (!q || ![[self.quotesSnapshot statusForQuote:q uptime:NSProcessInfo.processInfo.systemUptime] isEqual:@"ok"]) return YES; }
+  return NO;
+}
+- (NSString *)pair:(id)pair { return [pair isKindOfClass:NSDictionary.class] ? [BZLedgerSupport money:pair[[self.currencySwitch.currency isEqual:@"SGD"] ? @"sgd" : @"usd"] currency:self.currencySwitch.currency] : @"—"; }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView { return 4; }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return 1; }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return section == 1 ? MAX(1, [self.portfolio[@"positions"] count]) : 1; }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)path {
   UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-  cell.textLabel.text = @[@"持仓总市值",@"我的持仓",@"今日提醒",@"每日汇总 · 21:00 SGT"][path.section];
-  cell.detailTextLabel.text = @[@"—\n暂无持仓数据\n记录持仓后查看总市值与盈亏",@"暂无持仓\n持仓表：币种 · 数量 · 均价 · 现价 · 市值 · 盈亏",@"暂无提醒\n添加提醒后查看状态",@"暂无汇总\n当日盈亏区间与 USD / SGD 持仓总览"][path.section];
+  NSString *state = ![self.portfolio[@"data_complete"] boolValue] ? @"数据不完整 · 部分行情或汇率异常" : [self expired] ? @"已过期 · 基于缓存或过期价格" : @"持仓数据完整";
+  if (self.offline) state = [@"离线 / " stringByAppendingString:state];
+  BOOL complete = [self.portfolio[@"data_complete"] boolValue];
+  BOOL fxStale = [self.portfolio[@"fx"][@"stale"] boolValue];
+  if (path.section == 0) {
+    cell.textLabel.text = [NSString stringWithFormat:@"持仓总市值  %@",complete ? [self pair:self.portfolio[@"total_value"]] : @"—"];
+    cell.detailTextLabel.text = self.portfolio ? [NSString stringWithFormat:@"未实现 %@ · 累计已实现 %@\n%@%@\n更新 %@%@",complete ? [self pair:self.portfolio[@"total_unrealized"]] : @"—",[self pair:self.portfolio[@"total_realized"]],state,fxStale ? @" · 汇率过期" : @"",[BZLedgerSupport timestamp:self.portfolio[@"server_time"]],self.failure ? [@"\n" stringByAppendingString:self.failure] : @""] : self.failure ?: @"正在加载持仓…";
+  } else if (path.section == 1 && [self.portfolio[@"positions"] count]) {
+    NSDictionary *p = self.portfolio[@"positions"][path.row];
+    NSDictionary *quote = [self quoteForAsset:p[@"asset"]];
+    NSString *status = @{@"ok":@"正常",@"stale":@"已过期",@"paused_divergence":@"价差异常",@"unverified":@"未校验"}[p[@"price_status"]] ?: p[@"price_status"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@   %@",p[@"asset"],[BZLedgerSupport quantity:p[@"quantity"]]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"均价 %@ · 余成本 %@（USD）\n市值 %@ · 未实现 %@\n累计已实现 %@（USD）\n价格%@%@%@",[BZFormatter price:p[@"avg_cost_usd"] currency:@"USD"],[BZLedgerSupport money:p[@"remaining_cost_usd"] currency:@"USD"],[self pair:p[@"market_value"]],[self pair:p[@"unrealized"]],[BZLedgerSupport money:p[@"realized_usd"] currency:@"USD"],status,[self expired] || ![p[@"price_status"] isEqual:@"ok"] ? @" · 基于过期或异常价格" : @"",fxStale && [self.currencySwitch.currency isEqual:@"SGD"] ? @" · 汇率过期" : @""];
+    NSString *current = [BZFormatter price:quote[[self.currencySwitch.currency isEqual:@"SGD"] ? @"price_sgd" : @"usd_price"] currency:self.currencySwitch.currency];
+    NSString *quoteState = !quote ? @"待刷新" : self.quotesOffline ? @"已过期" : [self.quotesSnapshot statusForQuote:quote uptime:NSProcessInfo.processInfo.systemUptime];
+    cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingFormat:@"\n现价 %@ · %@",current,quoteState];
+  } else {
+    cell.textLabel.text = @[@"持仓总市值",@"我的持仓",@"今日提醒",@"每日汇总 · 21:00 SGT"][path.section];
+    cell.detailTextLabel.text = path.section == 1 ? (self.portfolio ? @"暂无持仓 · 在记账页记录买入或期初持仓" : @"暂无持仓数据，请下拉刷新") : path.section == 2 ? @"暂无提醒\n添加提醒后查看状态" : @"暂无汇总\n当日盈亏区间与 USD / SGD 持仓总览";
+  }
   cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]; cell.textLabel.textColor = BZTheme.ink;
   cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]; cell.detailTextLabel.textColor = BZTheme.muted;
   cell.textLabel.numberOfLines = 0; cell.detailTextLabel.numberOfLines = 0; cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;

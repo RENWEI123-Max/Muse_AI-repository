@@ -28,11 +28,16 @@
            path:(NSString *)path
            body:(NSDictionary *)body
      completion:(BZAPICompletion)completion {
-  [self request:method path:path body:body attempt:0 completion:completion];
+  [self request:method path:path body:body headers:@{} completion:completion];
+}
+- (void)request:(NSString *)method path:(NSString *)path body:(NSDictionary *)body
+        headers:(NSDictionary<NSString *,NSString *> *)headers completion:(BZAPICompletion)completion {
+  [self request:method path:path body:body headers:headers attempt:0 completion:completion];
 }
 - (void)request:(NSString *)method
            path:(NSString *)path
            body:(NSDictionary *)body
+        headers:(NSDictionary<NSString *,NSString *> *)headers
         attempt:(NSUInteger)attempt
      completion:(BZAPICompletion)completion {
   NSString *base =
@@ -57,6 +62,7 @@
         forHTTPHeaderField:@"Authorization"];
   if ([method isEqualToString:@"POST"])
     [r setValue:NSUUID.UUID.UUIDString forHTTPHeaderField:@"Idempotency-Key"];
+  [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) { [r setValue:value forHTTPHeaderField:key]; }];
   if (body)
     r.HTTPBody = [NSJSONSerialization dataWithJSONObject:body
                                                  options:0
@@ -74,6 +80,7 @@
                              [self request:method
                                        path:path
                                        body:body
+                                    headers:headers
                                     attempt:attempt + 1
                                  completion:completion];
                            });
@@ -104,6 +111,7 @@
               result = [NSError errorWithDomain:@"BZAPI"
                                            code:status
                                        userInfo:@{
+                                         @"api_error" : [json[@"error"] isKindOfClass:NSDictionary.class] ? json[@"error"] : @{},
                                          NSLocalizedDescriptionKey : [message
                                              isKindOfClass:NSString.class]
                                              ? message

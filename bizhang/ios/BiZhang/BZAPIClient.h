@@ -9,6 +9,8 @@ typedef void (^BZAPICompletion)(NSDictionary *_Nullable json,
            path:(NSString *)path
            body:(nullable NSDictionary *)body
      completion:(BZAPICompletion)completion;
+- (void)request:(NSString *)method path:(NSString *)path body:(nullable NSDictionary *)body
+        headers:(NSDictionary<NSString *, NSString *> *)headers completion:(BZAPICompletion)completion;
 - (void)logout:(void (^)(void))completion;
 @end
 NS_ASSUME_NONNULL_END

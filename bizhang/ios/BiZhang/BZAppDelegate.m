@@ -6,6 +6,7 @@
 #import "BZTheme.h"
 #import "BZMarketViewController.h"
 #import "BZOverviewViewController.h"
+#import "BZLedgerViewController.h"
 @implementation BZAppDelegate
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)options {
@@ -83,7 +84,7 @@
     @"gearshape"
   ];
   for (NSUInteger i = 0; i < titles.count; i++) {
-    UIViewController *vc = i == 0 ? [BZOverviewViewController new] : i == 1 ? [BZMarketViewController new] : [BZPlaceholderViewController new];
+    UIViewController *vc = i == 0 ? [BZOverviewViewController new] : i == 1 ? [BZMarketViewController new] : i == 2 ? [BZLedgerViewController new] : [BZPlaceholderViewController new];
     vc.title = titles[i];
     UINavigationController *nav =
         [[UINavigationController alloc] initWithRootViewController:vc];
