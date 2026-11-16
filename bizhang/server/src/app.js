@@ -1,3 +1,4 @@
+import { summary } from './summaries.js';
 import { alerts, AlertError } from './alerts.js';
 import { binding } from './telegram.js';
 import { ledger, LedgerError } from "./ledger.js";
@@ -28,7 +29,7 @@ export const protectedRoutes = [
   ["GET", "/healthz"],
 ];
 const error = (reply, status, code, message) =>
-  reply.code(status).send({ error: { code, message } });
+  reply.code(status).send({ error: { code, message, detail: {} } });
 const userJSON = (u) => ({
   id: u.id,
   username: u.username,
@@ -162,6 +163,7 @@ export async function buildApp(pool, market) {
       method,
       url: "/api/v1" + path,
       handler: async (req, reply) => {
+        if (path.startsWith('/summary/')) return summary(pool,market,req);
         if (path.startsWith('/alerts') || path.startsWith('/telegram')) {
           try { return await (path.startsWith('/alerts') ? alerts(pool,req) : binding(pool,req)); }
           catch(e) {

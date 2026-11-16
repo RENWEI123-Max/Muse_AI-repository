@@ -9,8 +9,8 @@ export function crosses(rule, quote) {
   if (quote?.status !== 'ok' || !quote.usd_price) return false;
   return rule.direction === 'above' ? decimal(quote.usd_price) >= decimal(rule.threshold_usd) : decimal(quote.usd_price) <= decimal(rule.threshold_usd);
 }
-const money = value => {
-  const n = /^0(\.0+)?$/.test(String(value)) ? 0n : decimal(value), unit = n >= 10n ** 18n ? 100n : 10000n;
+export const money = (value, fixed = false) => {
+  const n = /^0(\.0+)?$/.test(String(value)) ? 0n : decimal(value), unit = fixed || n >= 10n ** 18n ? 100n : 10000n;
   const rounded = (n * unit + 5n * 10n ** 17n) / (10n ** 18n);
   const digits = unit === 100n ? 2 : 4;
   return (rounded / unit).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' + (rounded % unit).toString().padStart(digits, '0');

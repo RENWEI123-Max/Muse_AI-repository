@@ -1,3 +1,4 @@
+import { schedule } from './summaries.js';
 import { evaluateAlerts } from './alerts.js';
 import { BotTransport, TelegramWorker, TelegramPoller } from './telegram.js';
 import { Market } from "./market.js";
@@ -20,9 +21,14 @@ await pool.query("SELECT 1");
 await app.listen({ host: "127.0.0.1", port });
 await market.start();
 if (process.env.BIZHANG_TELEGRAM_BOT_TOKEN) { void worker.run(); void poller.run(); }
+let summaryBusy=false;
+const summaryTick=async()=>{if(summaryBusy)return;summaryBusy=true;try{await schedule(pool,market);}catch{console.error('Daily summary scheduler failed');}finally{summaryBusy=false;}};
+const summaryTimer=setInterval(summaryTick,60000);
+void summaryTick();
 console.log(`BiZhang listening on 127.0.0.1:${port}`);
 for (const signal of ["SIGINT", "SIGTERM"])
   process.on(signal, async () => {
+    clearInterval(summaryTimer);
     market.stop();
     worker.stop();
     poller.stop();
