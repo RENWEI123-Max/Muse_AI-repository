@@ -19,6 +19,10 @@ try {
     );
     await c.query("INSERT INTO schema_migrations(version) VALUES('001')");
   }
+  if (!(await c.query("SELECT 1 FROM schema_migrations WHERE version='002'")).rowCount) {
+    await c.query(await readFile(new URL("../migrations/002_market.sql", import.meta.url), "utf8"));
+    await c.query("INSERT INTO schema_migrations(version) VALUES('002')");
+  }
   await c.query("COMMIT");
   console.log("Migration 001 ready");
 } catch (e) {

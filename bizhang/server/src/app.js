@@ -33,7 +33,7 @@ const userJSON = (u) => ({
   display_currency: u.display_currency,
   daily_summary_enabled: u.daily_summary_enabled,
 });
-export async function buildApp(pool) {
+export async function buildApp(pool, market) {
   const app = Fastify({ logger: false, trustProxy: false, bodyLimit: 16384 });
   const dummy = await hashPassword(randomBytes(32).toString("hex"));
   app.setErrorHandler((e, req, reply) =>
@@ -171,6 +171,7 @@ export async function buildApp(pool) {
             user: userJSON(req.bzUser),
             server_time: new Date().toISOString(),
           };
+        if (path === "/market/quotes" && market) return market.quotes();
         if (path === "/healthz")
           return { ok: true, server_time: new Date().toISOString() };
         return error(reply, 501, "NOT_IMPLEMENTED", "此功能将在后续开发日提供");
