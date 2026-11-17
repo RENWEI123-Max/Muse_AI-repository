@@ -26,7 +26,7 @@
   if ([@[@"localhost",@"127.0.0.1"] containsObject:base.host]) self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"验收样例" style:UIBarButtonItemStylePlain target:self action:@selector(confirmSample)];
 #endif
   self.refreshControl = [UIRefreshControl new]; [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
-  self.status = [UILabel new]; self.status.numberOfLines = 0; self.status.textAlignment = NSTextAlignmentCenter; self.status.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]; self.status.textColor = BZTheme.muted; self.status.frame = CGRectMake(0,0,320,80); self.tableView.tableHeaderView = self.status;
+  self.status = [UILabel new]; self.status.numberOfLines = 0; self.status.textAlignment = NSTextAlignmentCenter; self.status.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleFootnote maxPointSize:15]; self.status.textColor = BZTheme.muted; self.status.frame = CGRectMake(0,0,320,80); self.tableView.tableHeaderView = self.status;
   NSDictionary *cached = [BZLedgerSupport cached:@"ledger"]; if ([BZLedgerSupport validTransactions:cached]) { self.rows = cached[@"transactions"]; self.status.text = @"离线缓存 · 下拉刷新后可记账"; }
 }
 - (void)refresh { self.generation++; self.loading = NO; [self fetchMore:NO]; }
@@ -52,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return self.rows.count + (self.hasMore ? 1 : 0); }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)path {
   UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil]; cell.backgroundColor = BZTheme.surface;
-  cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]; cell.textLabel.textColor = BZTheme.ink; cell.textLabel.numberOfLines = 0; cell.detailTextLabel.numberOfLines = 0; cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]; cell.detailTextLabel.textColor = BZTheme.muted; cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;
+  cell.textLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleHeadline maxPointSize:22]; cell.textLabel.textColor = BZTheme.ink; cell.textLabel.numberOfLines = 0; cell.detailTextLabel.numberOfLines = 0; cell.detailTextLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleSubheadline maxPointSize:18]; cell.detailTextLabel.textColor = BZTheme.muted; cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;
   if (path.row == self.rows.count) { cell.textLabel.text = self.loading ? @"正在加载…" : @"加载更多"; return cell; }
   NSDictionary *t = self.rows[path.row]; BOOL opening = [t[@"side"] isEqual:@"opening"];
   NSString *side = @{@"buy":@"买入",@"sell":@"卖出",@"opening":@"期初"}[t[@"side"]];

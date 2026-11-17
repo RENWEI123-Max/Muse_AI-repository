@@ -9,9 +9,10 @@ test('R05: real home, inbox and profile navigation share geometry and computed s
  await page.evaluate(()=>document.fonts.ready)
  await expect(page.locator('.device')).toHaveCSS('width','375px')
  await expect(page.locator('.device')).toHaveCSS('height','812px')
- expect(await page.locator('.client-statusbar').evaluate(el=>Math.abs(parseFloat(getComputedStyle(el).height)-57.828125))).toBeLessThanOrEqual(0.01)
- const indicator=await page.locator('.device').evaluate(el=>{const s=getComputedStyle(el,'::after');return {width:s.width,height:s.height,bottom:s.bottom,background:s.backgroundColor}})
- expect(indicator).toEqual({width:'144px',height:'5px',bottom:'8px',background:'rgb(255, 255, 255)'})
+ await expect(page.locator('.app-shell .client-statusbar')).toHaveCount(0)
+ for(const selector of ['.device','.app-shell']){
+  expect(await page.locator(selector).evaluate(el=>getComputedStyle(el,'::after').content)).toBe('none')
+ }
  const samples:any[]=[]
  for(let active=0;active<3;active++){
   if(active===1)await page.locator('#open-inbox').click()
