@@ -1,4 +1,4 @@
-// D9 must supply the approved HTTPS endpoint; no guessed production domain.
-BZ_API_BASE_URL =
+// 域名 bizhang.app 待购买，API 主机 api.bizhang.app。
+BZ_API_BASE_URL = https:/$()/api.bizhang.app/api/v1
 INFOPLIST_FILE = Config/Info.plist
 GCC_TREAT_WARNINGS_AS_ERRORS = YES

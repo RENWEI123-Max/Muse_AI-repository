@@ -1,0 +1,25 @@
+Baseline: ba66ebc
+Archive: /tmp/bizhang-d9.xcarchive
+Release archive: SUCCEEDED; CODE_SIGNING_ALLOWED=NO
+BZ_API_BASE_URL = https://api.bizhang.app/api/v1
+BZ_API_BASE_URL: PASS
+Release has no NSAppTransportSecurity: PASS
+ITSAppUsesNonExemptEncryption false: PASS
+Assets.car exists: PASS
+Assets.car contains AppIcon: PASS
+Version 0.1.0 (1): PASS
+PNG 1024x1024 RGB without alpha: PASS
+AppIcon asset names: ['AppIcon']
+Debug iPhone 17 build: BUILD SUCCEEDED (iOS 27.2, 3F5C0C26-5630-4912-A62D-CAAAF725068F)
+Full unit tests: TEST SUCCEEDED; 37 tests discovered, 31 passed, 6 skipped, 0 failures.
+Skipped under original conditions:
+- testTunnelLoginRevocationAndUnauthorizedCleanup: Live auth requires temporary test credentials
+- testD4LiveMarket: Live market requires temporary test credentials
+- testD6LiveLedgerAndPortfolio: D6 dedicated temporary account phase only
+- testD8LiveTemporaryAccountUIAndServerPersistence: Dedicated d8_ loopback DEBUG phase only
+- testD4Evidence: Evidence phase only
+- testTypeCapEvidence: Type cap screenshot phase only
+Initial unsigned simulator test attempt: 6 assertion failures in 2 Keychain-dependent tests. Re-running with the existing ad hoc signing configuration passed all enabled tests; no test or application logic changed.
+Debug.xcconfig and Info-Debug.plist: unchanged from ba66ebc.
+Logs: /tmp/bizhang-d9-archive.log, /tmp/bizhang-d9-tests-signed.log, /tmp/bizhang-d9-debug-build.log
+Test results: /tmp/bizhang-d9-tests-signed.xcresult
