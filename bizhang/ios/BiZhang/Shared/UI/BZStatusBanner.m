@@ -1,7 +1,7 @@
 #import "BZStatusBanner.h"
 #import "BZTheme.h"
 @implementation BZStatusBanner
-- (instancetype)init { if ((self = [super init])) { self.numberOfLines = 0; self.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]; self.adjustsFontForContentSizeCategory = YES; self.layer.cornerRadius = 12; self.clipsToBounds = YES; self.accessibilityIdentifier = @"market-status"; } return self; }
+- (instancetype)init { if ((self = [super init])) { self.numberOfLines = 0; self.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleFootnote maxPointSize:15]; self.adjustsFontForContentSizeCategory = YES; self.layer.cornerRadius = 12; self.clipsToBounds = YES; self.accessibilityIdentifier = @"market-status"; } return self; }
 - (void)showState:(NSString *)state detail:(NSString *)detail {
   self.text = [NSString stringWithFormat:@"  %@\n  %@  ",state,detail];
   BOOL normal = [state isEqual:@"行情正常"];

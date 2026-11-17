@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 @interface BZTheme : NSObject
++ (UIFont *)cappedFontForTextStyle:(UIFontTextStyle)style maxPointSize:(CGFloat)maximum;
 + (UIColor *)background;
 + (UIColor *)surface;
 + (UIColor *)ink;

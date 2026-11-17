@@ -132,9 +132,14 @@
     cell.textLabel.text = @[@"持仓总市值",@"我的持仓",@"今日提醒",@"每日汇总 · 21:00 SGT"][path.section];
     cell.detailTextLabel.text = path.section == 1 ? (self.portfolio ? @"暂无持仓 · 在记账页记录买入或期初持仓" : @"暂无持仓数据，请下拉刷新") : path.section == 2 ? [BZAlertSupport todayText:self.alertsJSON events:self.eventsJSON] : [BZAlertSupport summaryText:self.summaryJSON currency:self.currencySwitch.currency];
   }
-  cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]; cell.textLabel.textColor = BZTheme.ink;
-  cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]; cell.detailTextLabel.textColor = BZTheme.muted;
+  cell.textLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleHeadline maxPointSize:22]; cell.textLabel.textColor = BZTheme.ink;
+  cell.detailTextLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleSubheadline maxPointSize:18]; cell.detailTextLabel.textColor = BZTheme.muted;
   cell.textLabel.numberOfLines = 0; cell.detailTextLabel.numberOfLines = 0; cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;
+  if (path.section == 0) {
+    cell.textLabel.numberOfLines = 1;
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    cell.textLabel.minimumScaleFactor = 0.6;
+  }
   cell.backgroundColor = BZTheme.surface; cell.selectionStyle = path.section == 2 ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone; if (path.section == 2) cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)path { [tableView deselectRowAtIndexPath:path animated:YES]; if (path.section == 2) self.tabBarController.selectedIndex = 3; }
