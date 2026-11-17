@@ -1,3 +1,4 @@
+import { begin, release, exclusive } from './transactions.js';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { tokenHash } from './password.js';
 export const RETRY_MS = [2000,8000,30000,120000,600000];
@@ -24,7 +25,7 @@ export class BotTransport {
 export async function binding(pool, req) {
   const uid=req.bzUser.id,c=await pool.connect();
   try {
-    await c.query('BEGIN');
+    await begin(c);
     await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[uid]);
     let result;
     if(req.method==='GET') {
@@ -42,18 +43,19 @@ export async function binding(pool, req) {
       result={token,bot_configured:configured,bind_url:configured?`https://t.me/${bot}?start=${token}`:token,expires_at:r.bind_token_expires_at};
     }
     await c.query('COMMIT');return {...result,server_time:new Date().toISOString()};
-  }catch(e){await c.query('ROLLBACK');throw e;}finally{c.release();}
+  }catch(e){throw e;}finally{await release(c);}
 }
 export class TelegramWorker {
   constructor(pool,transport,{now=Date.now,sleep:wait=sleep}={}) { Object.assign(this,{pool,transport,now,sleep:wait});this.stopped=false; }
   async recover() {
     await this.pool.query("UPDATE telegram_outbox SET status='pending',next_attempt_at=now(),lease_id=NULL,sending_at=NULL WHERE id IN (SELECT id FROM telegram_outbox WHERE status='sending' AND sending_at<now()-interval '60 seconds' FOR UPDATE SKIP LOCKED)");
   }
-  async runOnce() {
+  async runOnce() { return exclusive(this.pool, 'telegram-worker', () => this.deliverOnce()); }
+  async deliverOnce() {
     await this.recover();
     const c=await this.pool.connect();let chat,locked=false;
     try {
-      await c.query('BEGIN');
+      await begin(c);
       const r=(await c.query("SELECT * FROM telegram_outbox WHERE status='pending' AND next_attempt_at<=$1 ORDER BY next_attempt_at,id FOR UPDATE SKIP LOCKED LIMIT 1",[new Date(this.now())])).rows[0];
       if(!r){await c.query('COMMIT');return false;}
       chat=String(r.chat_id);
@@ -67,7 +69,7 @@ export class TelegramWorker {
       const lease=randomUUID();
       await c.query("UPDATE telegram_outbox SET status='sending',sending_at=now(),lease_id=$2 WHERE id=$1",[r.id,lease]);
       await c.query('COMMIT');
-      await c.query('BEGIN');
+      await begin(c);
       // Lock binding through delivery: after unbind commits no send can start for this chat.
       const allowed=(await c.query("SELECT 1 FROM telegram_bindings WHERE user_id=$1 AND chat_id=$2 AND status='bound' FOR SHARE",[r.user_id,r.chat_id])).rowCount;
       if(!allowed){await c.query("UPDATE telegram_outbox SET status='failed',last_error='TELEGRAM_UNBOUND',lease_id=NULL WHERE id=$1 AND lease_id=$2",[r.id,lease]);await c.query('COMMIT');return true;}
@@ -86,9 +88,8 @@ export class TelegramWorker {
         await c.query("UPDATE telegram_outbox SET status=$3,attempts=$4,next_attempt_at=$5,last_error=$6,lease_id=NULL WHERE id=$1 AND lease_id=$2",[r.id,lease,attempts>=r.max_attempts?'failed':'pending',attempts,new Date(next),e.status===429?'TELEGRAM_RATE_LIMITED':['TELEGRAM_NOT_CONFIGURED','TELEGRAM_REQUEST_FAILED'].includes(e.safeCode)?e.safeCode:'TELEGRAM_SEND_FAILED']);
       }
       await c.query('COMMIT');return true;
-    }catch(e){await c.query('ROLLBACK');throw e;}finally{
-      if(locked) await c.query('SELECT pg_advisory_unlock(hashtextextended($1,17))',['bizhang-telegram:'+chat]);
-      c.release();
+    }catch(e){throw e;}finally{
+      await release(c, locked ? () => c.query('SELECT pg_advisory_unlock(hashtextextended($1,17))',['bizhang-telegram:'+chat]) : undefined);
     }
   }
   async run() {while(!this.stopped){try{await this.runOnce();}catch{/* never log transport errors */}await this.sleep(250);}}
@@ -108,7 +109,8 @@ export async function processUpdate(c,update) {
 }
 export class TelegramPoller {
   constructor(pool,transport,{sleep:wait=sleep}={}){Object.assign(this,{pool,transport,sleep:wait});this.stopped=false;}
-  async pollOnce(){
+  async pollOnce(){ return exclusive(this.pool, 'telegram-poller', () => this.fetchOnce()); }
+  async fetchOnce(){
     const c=await this.pool.connect();let locked=false;
     try{
       locked=(await c.query('SELECT pg_try_advisory_lock(727074707) AS locked')).rows[0].locked;
@@ -117,12 +119,12 @@ export class TelegramPoller {
       const updates=await this.transport.getUpdates(Number(offset));
       for(const update of updates){
         if(!Number.isSafeInteger(update.update_id)||BigInt(update.update_id)<BigInt(offset))continue;
-        await c.query('BEGIN');
+        await begin(c);
         await processUpdate(c,update);
         await c.query('UPDATE telegram_poll_state SET next_offset=GREATEST(next_offset,$1) WHERE id=1',[String(update.update_id+1)]);
         await c.query('COMMIT');
       }
-    }catch(e){await c.query('ROLLBACK');throw e;}finally{if(locked)await c.query('SELECT pg_advisory_unlock(727074707)');c.release();}
+    }catch(e){throw e;}finally{await release(c, locked ? () => c.query('SELECT pg_advisory_unlock(727074707)') : undefined);}
   }
   async run(){let failures=0;while(!this.stopped){try{await this.pollOnce();failures=0;await this.sleep(100);}catch{await this.sleep([5000,10000,30000,60000][Math.min(failures++,3)]);}}}
   stop(){this.stopped=true;}

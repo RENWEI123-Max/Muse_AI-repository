@@ -1,8 +1,9 @@
+import { begin, release } from '../src/transactions.js';
 import { readFile } from "node:fs/promises";
 import { pool } from "../src/db.js";
 const c = await pool.connect();
 try {
-  await c.query("BEGIN");
+  await begin(c);
   await c.query("SELECT pg_advisory_xact_lock(2720261116)");
   await c.query(
     "CREATE TABLE IF NOT EXISTS schema_migrations(version text PRIMARY KEY, applied_at timestamptz NOT NULL DEFAULT now())",
@@ -42,9 +43,8 @@ try {
   await c.query("COMMIT");
   console.log("Migration 001 ready");
 } catch (e) {
-  await c.query("ROLLBACK");
   throw e;
 } finally {
-  c.release();
+  await release(c);
   await pool.end();
 }

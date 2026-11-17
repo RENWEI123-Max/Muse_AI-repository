@@ -22,7 +22,7 @@ await app.listen({ host: "127.0.0.1", port });
 await market.start();
 if (process.env.BIZHANG_TELEGRAM_BOT_TOKEN) { void worker.run(); void poller.run(); }
 let summaryBusy=false;
-const summaryTick=async()=>{if(summaryBusy)return;summaryBusy=true;try{await schedule(pool,market);}catch{console.error('Daily summary scheduler failed');}finally{summaryBusy=false;}};
+const summaryTick=async()=>{if(summaryBusy){console.warn('BiZhang summary tick overlap skipped');return;}summaryBusy=true;try{await schedule(pool,market);}catch{console.error('Daily summary scheduler failed');}finally{summaryBusy=false;}};
 const summaryTimer=setInterval(summaryTick,60000);
 void summaryTick();
 console.log(`BiZhang listening on 127.0.0.1:${port}`);
