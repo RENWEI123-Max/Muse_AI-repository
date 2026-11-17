@@ -1,5 +1,11 @@
 #import "BZTheme.h"
 @implementation BZTheme
++ (UIFont *)cappedFontForTextStyle:(UIFontTextStyle)style maxPointSize:(CGFloat)maximum {
+  // Always scale the standard Large font, never an already scaled preferred font.
+  UITraitCollection *standard = [UITraitCollection traitCollectionWithPreferredContentSizeCategory:UIContentSizeCategoryLarge];
+  UIFont *base = [UIFont preferredFontForTextStyle:style compatibleWithTraitCollection:standard];
+  return [[UIFontMetrics metricsForTextStyle:style] scaledFontForFont:base maximumPointSize:maximum];
+}
 + (UIColor *)light:(unsigned)light dark:(unsigned)dark {
   return [UIColor colorWithDynamicProvider:^UIColor *(UITraitCollection *t) {
     unsigned h =

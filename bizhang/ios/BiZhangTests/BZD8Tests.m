@@ -10,6 +10,9 @@
 #import "BZAlertEditor.h"
 #import "BZSettingsViewController.h"
 #import "BZOverviewViewController.h"
+#import "BZMarketViewController.h"
+#import "BZLedgerViewController.h"
+#import "BZTheme.h"
 @interface BZAlertEditor (D8Tests)
 - (void)save;
 - (NSDictionary *)formBody;
@@ -61,6 +64,59 @@ static void BZD8Respond(NSURLProtocol *p, NSInteger code, NSDictionary *json) {
 }
 - (NSDictionary *)rule { return @{@"id":@"1",@"version":@"2",@"asset":@"BTC",@"direction":@"above",@"threshold_usd":@"100",@"current_price_usd":@"101",@"state":@"disabled",@"disabled_reason":@"triggered",@"price_status":@"ok",@"alerts_paused":@NO,@"last_triggered_at":@"2026-11-16T17:00:00Z"}; }
 - (NSDictionary *)event { return @{@"id":@"9",@"rule_id":@"1",@"asset":@"BTC",@"direction":@"above",@"threshold_usd":@"100",@"price_usd":@"101",@"triggered_at":@"2026-11-16T17:00:00Z",@"trigger_kind":@"on_create",@"delivery_status":@"failed",@"last_error":@"TELEGRAM_NOT_BOUND"}; }
+- (void)testTypeCapPreservesDefaultFontsAndCapsAccessibilitySizes {
+  NSArray *styles = @[UIFontTextStyleHeadline, UIFontTextStyleBody, UIFontTextStyleSubheadline, UIFontTextStyleFootnote, UIFontTextStyleCaption1];
+  NSArray *caps = @[@22, @20, @18, @15, @15];
+  for (NSString *category in @[UIContentSizeCategoryLarge, UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge]) {
+    [[UITraitCollection traitCollectionWithPreferredContentSizeCategory:category] performAsCurrentTraitCollection:^{
+      for (NSUInteger i = 0; i < styles.count; i++) {
+        UIFont *font = [BZTheme cappedFontForTextStyle:styles[i] maxPointSize:[caps[i] doubleValue]];
+        XCTAssertLessThanOrEqual(font.pointSize, [caps[i] doubleValue]);
+        UIFont *standard = [UIFont preferredFontForTextStyle:styles[i] compatibleWithTraitCollection:[UITraitCollection traitCollectionWithPreferredContentSizeCategory:UIContentSizeCategoryLarge]];
+        XCTAssertGreaterThanOrEqual(font.pointSize, standard.pointSize);
+        if ([category isEqual:UIContentSizeCategoryLarge]) XCTAssertEqualObjects(font.fontDescriptor, standard.fontDescriptor);
+      }
+    }];
+  }
+  BZOverviewViewController *vc = [BZOverviewViewController new]; [vc loadViewIfNeeded];
+  UITableViewCell *cell = [vc tableView:vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+  XCTAssertEqual(cell.textLabel.numberOfLines, 1);
+  XCTAssertTrue(cell.textLabel.adjustsFontSizeToFitWidth);
+  XCTAssertEqualWithAccuracy(cell.textLabel.minimumScaleFactor, 0.6, 0.001);
+}
+- (void)testTypeCapEvidence {
+  if (!NSProcessInfo.processInfo.environment[@"BZ_TYPECAP_EVIDENCE"]) { XCTSkip(@"Type cap screenshot phase only"); return; }
+  [UIView setAnimationsEnabled:NO];
+  [self mock:^(NSURLProtocol *p) { BZD8Respond(p, 503, @{}); }];
+  self.window = ((UIWindowScene *)UIApplication.sharedApplication.connectedScenes.anyObject).windows.firstObject;
+  self.originalRoot = self.window.rootViewController;
+  UITabBarController *tabs = [UITabBarController new];
+  NSMutableArray *controllers = [NSMutableArray new];
+  NSArray *titles = @[@"总览", @"行情", @"记账", @"提醒", @"设置"];
+  NSArray *icons = @[@"square.grid.2x2", @"chart.line.uptrend.xyaxis", @"book", @"bell", @"gearshape"];
+  NSArray *classes = @[BZOverviewViewController.class, BZMarketViewController.class, BZLedgerViewController.class, BZAlertsViewController.class, BZSettingsViewController.class];
+  for (NSUInteger i = 0; i < classes.count; i++) {
+    UIViewController *vc = [classes[i] new]; vc.title = titles[i];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i] image:[UIImage systemImageNamed:icons[i]] tag:i];
+    [controllers addObject:nav];
+  }
+  tabs.viewControllers = controllers; self.window.rootViewController = tabs; [self.window makeKeyAndVisible];
+  for (NSUInteger i = 0; i < controllers.count; i++) {
+    tabs.selectedIndex = i;
+    UITableViewController *vc = (id)((UINavigationController *)controllers[i]).topViewController; [vc loadViewIfNeeded];
+    if (i == 0) {
+      [vc setValue:@{@"data_complete":@YES, @"positions":@[], @"total_value":@{@"usd":@"0",@"sgd":@"0"}, @"total_unrealized":@{@"usd":@"0",@"sgd":@"0"}, @"total_realized":@{@"usd":@"0",@"sgd":@"0"}, @"server_time":@"2026-11-17T00:00:00Z", @"fx":@{@"stale":@NO}} forKey:@"portfolio"];
+      [vc setValue:@NO forKey:@"offline"]; [vc setValue:@(NSProcessInfo.processInfo.systemUptime) forKey:@"receivedAt"];
+    }
+    [vc.tableView reloadData]; [self.window layoutIfNeeded];
+    UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithBounds:self.window.bounds];
+    UIImage *image = [renderer imageWithActions:^(UIGraphicsImageRendererContext *c) { [self.window drawViewHierarchyInRect:self.window.bounds afterScreenUpdates:YES]; }];
+    NSURL *dir = [NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+    [UIImagePNGRepresentation(image) writeToURL:[dir URLByAppendingPathComponent:[NSString stringWithFormat:@"typecap-%lu.png", (unsigned long)i]] atomically:YES];
+  }
+  [UIView setAnimationsEnabled:YES];
+}
 - (void)testStrictAlertsAndEventsRejectMalformedPricesBooleansAndEnums {
   NSMutableDictionary *r = [self.rule mutableCopy]; NSDictionary *(^wrap)(id) = ^NSDictionary *(id row) { return @{@"alerts":@[row],@"server_time":@"2026-11-17T00:00:00Z"}; };
   XCTAssertTrue(([BZAlertSupport validAlerts:wrap(r)]));

@@ -1,0 +1,19 @@
+XCTest
+	 Executed 19 tests, with 0 failures (0 unexpected) in 17.673 (17.680) seconds
+/Users/anna/Muse_AI-repository/bizhang/ios/BiZhangTests/BiZhangTests.m:252: -[BiZhangTests testD4Evidence] : Test skipped - Evidence phase only
+/Users/anna/Muse_AI-repository/bizhang/ios/BiZhangTests/BiZhangTests.m:205: -[BiZhangTests testD4LiveMarket] : Test skipped - Live market requires temporary test credentials
+/Users/anna/Muse_AI-repository/bizhang/ios/BiZhangTests/BiZhangTests.m:400: -[BiZhangTests testD6LiveLedgerAndPortfolio] : Test skipped - D6 dedicated temporary account phase only
+/Users/anna/Muse_AI-repository/bizhang/ios/BiZhangTests/BiZhangTests.m:61: -[BiZhangTests testTunnelLoginRevocationAndUnauthorizedCleanup] : Test skipped - Live auth requires temporary test credentials
+	 Executed 17 tests, with 4 tests skipped and 0 failures (0 unexpected) in 5.312 (5.318) seconds
+	 Executed 36 tests, with 4 tests skipped and 0 failures (0 unexpected) in 22.985 (22.998) seconds
+	 Executed 36 tests, with 4 tests skipped and 0 failures (0 unexpected) in 22.985 (22.999) seconds
+** TEST SUCCEEDED **
+
+Release
+** BUILD SUCCEEDED **
+
+Accessibility screenshot
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.727 (0.728) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.727 (0.728) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.727 (0.729) seconds
+** TEST SUCCEEDED **

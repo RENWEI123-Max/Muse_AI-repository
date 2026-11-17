@@ -97,12 +97,12 @@
   NSString *status = [self status:q];
   NSDictionary *labels = @{@"ok":@"正常 · ok",@"stale":@"已过期 · stale",@"paused_divergence":@"价差异常 · paused_divergence",@"unverified":@"未验证 · unverified"};
   cell.textLabel.text = [NSString stringWithFormat:@"%@  %@    %@",q[@"symbol"],q[@"name"],price];
-  cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]; cell.textLabel.textColor = BZTheme.ink; cell.textLabel.numberOfLines = 0;
+  cell.textLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleHeadline maxPointSize:22]; cell.textLabel.textColor = BZTheme.ink; cell.textLabel.numberOfLines = 0;
   NSString *source = [q[@"raw_source"] isEqual:@"binance"] ? @"Binance" : @"Kraken";
   NSString *ref = [q[@"raw_source"] isEqual:@"binance"] ? [NSString stringWithFormat:@"\nUSDT/USD · Kraken · %@",[BZFormatter time:[BZMarketSnapshot date:q[@"ref_ts"]]]] : @"";
   BOOL fxStale = [currency isEqual:@"SGD"] && [self.snapshot.JSON[@"fx"][@"stale"] boolValue];
   cell.detailTextLabel.text = [NSString stringWithFormat:@"24h %@   %@%@\n%@ · %@%@",[BZFormatter percent:q[@"change_24h_pct"]],labels[status],fxStale ? @" · 汇率过期" : @"",source,[BZFormatter time:[BZMarketSnapshot date:q[@"raw_source_ts"]]],ref];
-  cell.detailTextLabel.numberOfLines = 0; cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]; cell.detailTextLabel.textColor = [status isEqual:@"ok"] ? BZTheme.muted : BZTheme.amber;
+  cell.detailTextLabel.numberOfLines = 0; cell.detailTextLabel.font = [BZTheme cappedFontForTextStyle:UIFontTextStyleCaption1 maxPointSize:15]; cell.detailTextLabel.textColor = [status isEqual:@"ok"] ? BZTheme.muted : BZTheme.amber;
   cell.textLabel.adjustsFontForContentSizeCategory = YES; cell.detailTextLabel.adjustsFontForContentSizeCategory = YES;
   cell.backgroundColor = BZTheme.surface; cell.selectionStyle = UITableViewCellSelectionStyleNone;
   NSArray *colors = @[@0xe8862e,@0x627eea,@0x7a5af8,@0x26a17b,@0x2775ca,@0xc99400,@0x4b5563,@0xb8a038,@0x2f5fd0,@0x2a5ada];
