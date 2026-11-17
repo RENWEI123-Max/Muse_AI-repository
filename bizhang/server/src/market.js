@@ -1,3 +1,4 @@
+import { exclusive } from './transactions.js';
 // Fixed point arithmetic: never convert a monetary input through Number.
 const SCALE = 10n ** 18n;
 export function decimal(value) {
@@ -46,7 +47,8 @@ export class Market {
     if (age(this.now(), ts, source === 'coingecko' ? 900 : source === 'binance' ? 120 : 180)) return;
     await this.pool.query('INSERT INTO price_ticks(source,asset,price,quote_ccy,source_ts,fetched_at) VALUES($1,$2,$3,$4,$5,$6)', [source, asset, price, quote, ts, new Date(this.now())]);
   }
-  async collect(source) {
+  async collect(source) { return exclusive(this.pool, 'market-' + source, () => this.collectOnce(source)); }
+  async collectOnce(source) {
     const now = new Date(this.now());
     if (source === 'binance') {
       const symbols = this.assets.filter(a => a.binance_symbol).map(a => a.binance_symbol);
@@ -81,7 +83,8 @@ export class Market {
     await this.refresh();
     if (source === 'binance') await this.afterBinance();
   }
-  async refresh() {
+  async refresh() { return exclusive(this.pool, 'market-refresh', () => this.refreshOnce()); }
+  async refreshOnce() {
     for (const a of this.assets) {
       const raw = (await this.pool.query(`SELECT * FROM price_ticks WHERE asset=$1 AND source=$2 AND quote_ccy=$3 ORDER BY source_ts DESC,id DESC LIMIT 1`, [a.symbol, a.binance_symbol ? 'binance' : 'kraken', a.binance_symbol ? 'USDT' : 'USD'])).rows[0];
       if (!raw) continue;
@@ -95,7 +98,8 @@ export class Market {
     const reference = rows.find(r => r.asset === 'USDT');
     for (const row of rows) { const s = status(row, reference, this.now()); await this.pool.query('UPDATE price_cache SET status=$2,reason=$2 WHERE asset=$1', [row.asset,s]); }
   }
-  async fx() {
+  async fx() { return exclusive(this.pool, 'market-fx', () => this.fxOnce()); }
+  async fxOnce() {
     let data, source = 'coinbase', ts = new Date(this.now()), rate;
     for (const delay of [0,60000,300000]) {
       if (delay) await this.sleep(delay);
@@ -106,10 +110,10 @@ export class Market {
     decimal(rate);
     await this.pool.query('INSERT INTO reference_rates(pair,rate,source,source_ts,fetched_at) VALUES($1,$2,$3,$4,$5)', ['USD/SGD',rate,source,source==='coinbase'?null:ts,new Date(this.now())]);
   }
-  async quotes() {
-    const rows = (await this.pool.query('SELECT a.*,p.* FROM assets a JOIN price_cache p ON p.asset=a.symbol ORDER BY a.display_order')).rows;
+  async quotes(client = this.pool) {
+    const rows = (await client.query('SELECT a.*,p.* FROM assets a JOIN price_cache p ON p.asset=a.symbol ORDER BY a.display_order')).rows;
     const ref = rows.find(r=>r.asset==='USDT');
-    const fx = (await this.pool.query("SELECT rate::text,source,source_ts,fetched_at FROM reference_rates WHERE pair='USD/SGD' ORDER BY fetched_at DESC LIMIT 1")).rows[0];
+    const fx = (await client.query("SELECT rate::text,source,source_ts,fetched_at FROM reference_rates WHERE pair='USD/SGD' ORDER BY fetched_at DESC LIMIT 1")).rows[0];
     return { server_time: new Date(this.now()).toISOString(), fx: {...fx, stale: age(this.now(),fx?.source_ts || fx?.fetched_at,7200)}, quotes: rows.map(r=>({...r, consecutive_pass:String(r.consecutive_pass), display_order:String(r.display_order), status:status(r,ref,this.now()), alerts_paused:status(r,ref,this.now())!=='ok', price_sgd:r.usd_price && fx ? multiply(r.usd_price,fx.rate):null})) };
   }
   async start() {

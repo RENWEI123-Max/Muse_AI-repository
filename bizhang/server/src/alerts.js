@@ -1,3 +1,4 @@
+import { begin, release, exclusive } from './transactions.js';
 import { decimal, multiply, status } from './market.js';
 
 export class AlertError extends Error {
@@ -43,19 +44,22 @@ async function trigger(c, r, s, kind) {
   return true;
 }
 export async function evaluateAlerts(pool) {
+  return exclusive(pool, 'alerts', () => evaluateOnce(pool));
+}
+async function evaluateOnce(pool) {
   const c = await pool.connect();
   try {
-    await c.query('BEGIN');
+    await begin(c);
     const rules = (await c.query("SELECT * FROM alert_rules WHERE state='active' AND deleted_at IS NULL ORDER BY id FOR UPDATE SKIP LOCKED")).rows;
     const s = await snapshot(c);
     for (const r of rules) await trigger(c,r,s, r.generation > 1 ? 'on_restart' : 'reached');
     await c.query('COMMIT');
-  } catch(e) { await c.query('ROLLBACK'); throw e; } finally { c.release(); }
+  } catch(e) { throw e; } finally { await release(c); }
 }
 export async function alerts(pool, req) {
   const uid = req.bzUser.id, c = await pool.connect();
   try {
-    await c.query('BEGIN');
+    await begin(c);
     await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[uid]);
     let result;
     if (req.method === 'GET' && req.url.split('?')[0].endsWith('/events')) {
@@ -97,7 +101,7 @@ export async function alerts(pool, req) {
       }
     }
     await c.query('COMMIT'); return {...result,server_time:result.server_time??new Date().toISOString()};
-  } catch(e) { await c.query('ROLLBACK'); throw e; } finally { c.release(); }
+  } catch(e) { throw e; } finally { await release(c); }
 }
 function validateRule(b) {
   if (!b || typeof b.asset!=='string' || !['above','below'].includes(b.direction) || typeof b.threshold_usd!=='string' || !/^(0|[1-9]\d{0,19})(\.\d{1,18})?$/.test(b.threshold_usd)) invalid('INVALID_ALERT');

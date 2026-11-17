@@ -1,3 +1,4 @@
+import { begin, release } from './transactions.js';
 import { summary } from './summaries.js';
 import { alerts, AlertError } from './alerts.js';
 import { binding } from './telegram.js';
@@ -69,7 +70,7 @@ export async function buildApp(pool, market) {
     const c = await pool.connect();
     let result;
     try {
-      await c.query("BEGIN");
+      await begin(c);
       const ip = (
         await c.query(
           `INSERT INTO auth_ip_limits(ip,window_start,attempts) VALUES($1,now(),1) ON CONFLICT(ip) DO UPDATE SET window_start=CASE WHEN auth_ip_limits.window_start<=now()-interval '1 minute' THEN now() ELSE auth_ip_limits.window_start END, attempts=CASE WHEN auth_ip_limits.window_start<=now()-interval '1 minute' THEN 1 ELSE auth_ip_limits.attempts+1 END RETURNING attempts,ceil(extract(epoch FROM window_start+interval '1 minute'-now()))::integer AS retry`,
@@ -142,10 +143,9 @@ export async function buildApp(pool, market) {
       }
       await c.query("COMMIT");
     } catch (e) {
-      await c.query("ROLLBACK");
       throw e;
     } finally {
-      c.release();
+      await release(c);
     }
     if (result.retry) reply.header("Retry-After", String(result.retry));
     return (

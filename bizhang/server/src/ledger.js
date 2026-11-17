@@ -1,3 +1,4 @@
+import { begin, release } from './transactions.js';
 // Exact decimal arithmetic: scale 18, with HALF_EVEN only at division.
 const S=10n**18n;
 const n=x=>{const [a,b='']=String(x).split('.');return BigInt(a)*S+BigInt((b+'0'.repeat(18)).slice(0,18))*(a.startsWith('-')?-1n:1n)};
@@ -32,9 +33,9 @@ export function portfolio(rows,snapshot){
 }
 export async function ledger(pool,market,req){
  const uid=req.bzUser.id,c=await pool.connect();
- try {await c.query('BEGIN');await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[uid]);
+ try {await begin(c);await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[uid]);
  const all=(await c.query('SELECT * FROM transactions WHERE user_id=$1 AND deleted_at IS NULL ORDER BY asset,traded_at,id FOR UPDATE',[uid])).rows;
- if(req.method==='GET'){let result;if(req.url.split('?')[0].endsWith('/portfolio'))result=portfolio(all,await market.quotes());else {const q=req.query;if(q.before_id&&!/^\d+$/.test(q.before_id)||q.limit&&!/^\d+$/.test(q.limit))throw new LedgerError(422,'INVALID_PAGINATION');const rows=[...new Set(all.map(t=>t.asset))].flatMap(a=>replay(all.filter(t=>t.asset===a)).rows).filter(t=>(!q.asset||t.asset===q.asset)&&(!q.before_id||BigInt(t.id)<BigInt(q.before_id))).sort((a,b)=>BigInt(a.id)>BigInt(b.id)?-1:1);result={transactions:rows.slice(0,Math.min(100,Math.max(1,Number(q.limit??50)))),server_time:new Date().toISOString()};}await c.query('COMMIT');return result;}
+ if(req.method==='GET'){let result;if(req.url.split('?')[0].endsWith('/portfolio'))result=portfolio(all,await market.quotes(c));else {const q=req.query;if(q.before_id&&!/^\d+$/.test(q.before_id)||q.limit&&!/^\d+$/.test(q.limit))throw new LedgerError(422,'INVALID_PAGINATION');const rows=[...new Set(all.map(t=>t.asset))].flatMap(a=>replay(all.filter(t=>t.asset===a)).rows).filter(t=>(!q.asset||t.asset===q.asset)&&(!q.before_id||BigInt(t.id)<BigInt(q.before_id))).sort((a,b)=>BigInt(a.id)>BigInt(b.id)?-1:1);result={transactions:rows.slice(0,Math.min(100,Math.max(1,Number(q.limit??50)))),server_time:new Date().toISOString()};}await c.query('COMMIT');return result;}
  let result;
  if(req.method==='POST'){
  const key=req.headers['idempotency-key'];if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(key??''))throw new LedgerError(422,'INVALID_IDEMPOTENCY_KEY');
@@ -43,5 +44,5 @@ export async function ledger(pool,market,req){
  const keys=Object.keys(b);result=(await c.query(`INSERT INTO transactions(id,user_id,idempotency_key,${keys.join(',')}) VALUES($1,$2,$3,${keys.map((_,i)=>'$'+(i+4)).join(',')}) RETURNING *`,[id,uid,key,...Object.values(b)])).rows[0];result={transaction:{...result,id:String(result.id),version:String(result.version)},server_time:new Date().toISOString()};await c.query('INSERT INTO transaction_requests VALUES($1,$2,$3)',[uid,key,result]);
  }else {const old=all.find(t=>String(t.id)===req.params.id);if(!old)throw new LedgerError(404,'NOT_FOUND');if(req.headers['if-match']!==String(old.version))throw new LedgerError(412,'VERSION_CONFLICT');const b=req.method==='PUT'?validate(req.body):null;const next=all.filter(t=>t!==old);if(b)next.push({...old,...b});for(const a of new Set([old.asset,b?.asset].filter(Boolean)))replay(next.filter(t=>t.asset===a));if(b){const keys=Object.keys(b);result=(await c.query(`UPDATE transactions SET ${keys.map((k,i)=>`${k}=$${i+3}`).join(',')},version=version+1,updated_at=now() WHERE user_id=$1 AND id=$2 RETURNING *`,[uid,old.id,...Object.values(b)])).rows[0];result={transaction:{...result,version:String(result.version)}};}else {await c.query('UPDATE transactions SET deleted_at=now(),updated_at=now(),version=version+1 WHERE user_id=$1 AND id=$2',[uid,old.id]);result={ok:true};}}
  await c.query('COMMIT');return result;
- }catch(e){await c.query('ROLLBACK');throw e;}finally{c.release();}
+ }catch(e){throw e;}finally{await release(c);}
 }
