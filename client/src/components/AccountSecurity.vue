@@ -56,6 +56,11 @@ const accountText=(value:unknown)=>locale.value==='ko'?(accountKo[String(value)]
 const props=defineProps<{token:string;active:boolean}>()
 const emit=defineEmits<{close:[];signedout:[];locking:[value:boolean]}>()
 const view=ref('security'),sheet=ref(''),error=ref(''),busy=ref(false),pin=ref(''),typed=ref(''),understood=ref(false),password=ref(''),challenge=ref('')
+function filterPin(event: Event) {
+ const input = event.target as HTMLInputElement
+ pin.value = input.value.replace(/\D/g, '')
+ if (input.value !== pin.value) input.value = pin.value
+}
 const profile=ref<{id:string;email:string}>(),lock=ref<{salt:string;hash:string}|null>(null),locked=ref(false)
 const headers=()=>({Authorization:`Bearer ${props.token}`})
 watch(locked,value=>emit('locking',value),{flush:'sync'})
@@ -91,7 +96,7 @@ onUnmounted(()=>document.removeEventListener('visibilitychange',visibility))
 <p v-if="error&&!sheet&&!locked" role="alert">{{accountText(error)}}</p>
 </div></Transition>
 <Transition name="account-dialog"><div v-if="sheet||locked" class="account-veil" :class="{bottom:sheet==='pin'&&!locked}" @click.self="!locked&&!busy&&back()"><section class="account-dialog ui-dialog" :class="{'ui-sheet':sheet==='pin'&&!locked}" role="dialog" aria-modal="true" :aria-label="locked?'Welcome back':sheet==='pin'?'App lock':sheet==='logout'?'Sign out?':'Delete this account?'">
-<template v-if="locked||sheet==='pin'"><span v-if="!locked" class="ui-sheet__grabber" aria-hidden="true"></span><h2>{{accountText(locked?'Welcome back':'App lock')}}</h2><p>{{accountText(locked?'Enter your PIN to unlock MauGo.':lock?'Enter your current PIN to turn off app lock.':'Create a 4-digit PIN to lock this device session.')}}</p><form @submit.prevent="locked?unlock():savePin()"><input class="ui-input" :id="locked?'unlock-pin':'lock-pin'" v-model="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-label="4-digit PIN" :aria-invalid="!!error"><button :id="locked?'unlock-session':'save-lock'" class="ui-button primary" :disabled="busy||!profile">{{accountText(locked?'Unlock':lock?'Turn off':'Set PIN')}}</button></form><p>{{accountText('Device session only. This is not account authentication.')}}</p></template>
+<template v-if="locked||sheet==='pin'"><span v-if="!locked" class="ui-sheet__grabber" aria-hidden="true"></span><h2>{{accountText(locked?'Welcome back':'App lock')}}</h2><p>{{accountText(locked?'Enter your PIN to unlock MauGo.':lock?'Enter your current PIN to turn off app lock.':'Create a 4-digit PIN to lock this device session.')}}</p><form @submit.prevent="locked?unlock():savePin()"><input class="ui-input" :id="locked?'unlock-pin':'lock-pin'" :value="pin" @input="filterPin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-label="4-digit PIN" :aria-invalid="!!error"><button :id="locked?'unlock-session':'save-lock'" class="ui-button primary" :disabled="busy||!profile">{{accountText(locked?'Unlock':lock?'Turn off':'Set PIN')}}</button></form><p>{{accountText('Device session only. This is not account authentication.')}}</p></template>
 <template v-else-if="sheet==='logout'"><h2>{{accountText('Sign out?')}}</h2><p>{{accountText('Signing out clears this account’s local drafts, preferences and chat appearance. Your language and App lock are kept.')}}</p><button id="confirm-logout" class="ui-button primary" :disabled="busy" @click="logout">{{accountText('Sign out')}}</button></template>
 <template v-else><h2>{{accountText('Delete this account?')}}</h2><p>{{accountText('Your current profile and its content will be permanently removed. This cannot be undone.')}}</p><label class="field">{{accountText('Confirm your password')}}<input class="ui-input" id="deletion-password" v-model="password" type="password" autocomplete="current-password"></label><button id="confirm-account-deletion" class="ui-button primary danger" :disabled="busy||!password" @click="deleteAccount">{{accountText('Delete account')}}</button></template>
 <p v-if="error" class="account-error" role="alert">{{accountText(error)}}</p><button v-if="!locked" class="keep" :disabled="busy" @click="back">{{accountText('Cancel')}}</button>
