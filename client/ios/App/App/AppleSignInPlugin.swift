@@ -32,7 +32,7 @@ public class AppleSignInPlugin: CAPPlugin, CAPBridgedPlugin, ASAuthorizationCont
         }
     }
 
-    public func authorizationController(_ controller: ASAuthorizationController,
+    public func authorizationController(controller: ASAuthorizationController,
                                         didCompleteWithAuthorization authorization: ASAuthorization) {
         guard let pending, pending.controller === controller else { return }
         self.pending = nil
@@ -50,7 +50,7 @@ public class AppleSignInPlugin: CAPPlugin, CAPBridgedPlugin, ASAuthorizationCont
         pending.call.resolve(result)
     }
 
-    public func authorizationController(_ controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    public func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         guard let pending, pending.controller === controller else { return }
         self.pending = nil
 
