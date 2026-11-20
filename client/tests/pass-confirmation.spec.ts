@@ -9,7 +9,7 @@ async function enter(page:Page,request:APIRequestContext){
  await page.getByRole('button',{name:'Filters',exact:true}).click()
  return {user,wallet,status,headers}
 }
-async function choose(page:Page,index=0){await page.locator('.pass-badge').first().click();await page.locator('.pass-plan').nth(index).click();await expect(page.getByRole('dialog',{name:'Confirm Filter Pass',exact:true})).toBeVisible()}
+async function choose(page:Page,index=0){await page.locator('.pass-badge').first().click();await page.locator('.pass-plan').nth(index).click();await page.locator('#pass-page-buy').click();await expect(page.getByRole('dialog',{name:'Confirm Filter Pass',exact:true})).toBeVisible()}
 async function selected(page:Page){await expect(page.getByRole('button',{name:'Filter Woman',exact:true})).toHaveAttribute('aria-pressed','true');await expect(page.getByLabel('Minimum age')).toHaveValue('23');await expect(page.getByLabel('Maximum age')).toHaveValue('40');await expect(page.getByLabel('City',{exact:true})).toHaveValue('Seoul')}
 
 test('F02: confirmation, every cancel path, complete filters, purchase and cumulative renewal',async({page,request})=>{

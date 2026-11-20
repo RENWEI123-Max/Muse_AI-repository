@@ -31,3 +31,39 @@ test('B19 feedback is sent, visible to moderation, and rate limit preserves inpu
  await expect(page.locator('#save-feedback')).toBeEnabled();await expect(page.locator('.settings-flow .ui-toast')).not.toContainText('Feedback sent.')
  await page.screenshot({path:'docs/d6-round3/feedback-failure.png'})
 })
+
+test('Feedback history renders only when there are entries and refreshes after submission',async({page,request})=>{
+ const seed=await request.post('http://127.0.0.1:3001/__c5/seed',{data:{mode:'empty'}})
+ expect(seed.ok()).toBeTruthy()
+ const user=await seed.json()
+ const entry={id:'feedback-ref-1',type:'Suggestion',content:'A history entry from the server',status:'resolved',createdAt:'2026-02-01T15:04:05.000Z'}
+ let items:typeof entry[]=[]
+ await page.route('**/feedback/mine',route=>route.fulfill({json:{items,total:items.length}}))
+ await page.route('**/feedback',route=>{
+  items=[entry]
+  return route.fulfill({status:201,json:{id:entry.id,status:'new'}})
+ })
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click()
+ await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
+ await page.getByRole('button',{name:'Sign in',exact:true}).click()
+ await page.locator('#open-profile').click();await page.locator('#open-settings').click()
+ const loaded=page.waitForResponse(r=>r.url().endsWith('/feedback/mine'))
+ await page.locator('#feedback-settings').click()
+ expect((await loaded).request().headers().authorization).toMatch(/^Bearer /)
+ const history=page.locator('.feedback-history')
+ await expect(history).toHaveCount(0)
+ await page.locator('#feedback-text').fill(entry.content)
+ await page.locator('#save-feedback').click()
+ await expect(page.locator('.settings-flow .ui-toast')).toContainText(entry.id)
+ await expect(history.locator('li')).toHaveCount(1)
+ await expect(history).toContainText(entry.content)
+ await expect(history).toContainText(entry.id)
+ await expect(history).toContainText('Resolved')
+ const timestamp=await page.evaluate(value=>new Date(value).toLocaleString('en-US'),entry.createdAt)
+ await expect(history.locator('time')).toHaveText(timestamp)
+ await page.locator('#settings-back').click()
+ const reopened=page.waitForResponse(r=>r.url().endsWith('/feedback/mine'))
+ await page.locator('#feedback-settings').click()
+ await reopened
+ await expect(history.locator('li')).toHaveCount(1)
+})

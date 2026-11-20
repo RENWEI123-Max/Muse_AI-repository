@@ -8,6 +8,7 @@ import {tr,locale} from '../lib/i18n'
 // Presentation dictionary only; account state and operations below are unchanged.
 const accountKo:Record<string,string>={
   "Account": "계정",
+  "Preview account": "계정 미리보기",
   "Account & security": "계정 및 보안",
   "App lock": "앱 잠금",
   "Identity verification": "본인 인증",
@@ -15,7 +16,6 @@ const accountKo:Record<string,string>={
   "Email": "이메일",
   "On": "켜짐",
   "Off": "꺼짐",
-  "Lock now": "지금 잠그기",
   "Export my data": "내 데이터 내보내기",
   "Sign out": "로그아웃",
   "Your account is connected securely. App lock protects this device session and is not account authentication.": "계정이 안전하게 연결되어 있어요. 앱 잠금은 이 기기의 세션을 보호하며 계정 인증이 아니에요.",
@@ -89,8 +89,8 @@ onUnmounted(()=>document.removeEventListener('visibilitychange',visibility))
 <header class="ui-header"><button class="ui-header__back" aria-label="Back" :disabled="locked" @click="back"><img :src="asset('08-interface-icons/icon-chevron-left-light-22')" alt=""></button><h1>{{accountText(locked?'App lock':title)}}</h1><span></span></header>
 <Transition name="account-page" mode="out-in"><div :key="view" class="account-body" :inert="locked||!!sheet">
 <template v-if="view==='security'">
-<div class="account-group ui-card"><button class="ui-row" id="account-signin" @click="view='account'">{{accountText('Account')}}<small>{{accountText('Email')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" id="app-lock" :disabled="!profile" @click="openSheet('pin')">{{accountText('App lock')}}<small>{{accountText(lock?'On':'Off')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" v-if="lock" id="lock-now" @click="locked=true;pin='';toast=''">{{accountText('Lock now')}}<small><b aria-hidden="true">›</b></small></button><button class="ui-row" id="identity-verification" @click="view='verification'">{{accountText('Identity verification')}}<small><b aria-hidden="true">›</b></small></button><button class="ui-row" id="export-data" :disabled="busy" @click="exportData">{{accountText('Export my data')}}<small><b aria-hidden="true">›</b></small></button><button id="delete-local" class="ui-row destructive" @click="view='delete'">{{accountText('Delete account')}}<small><b aria-hidden="true">›</b></small></button></div>
-<p>{{accountText('Your account is connected securely. App lock protects this device session and is not account authentication.')}}</p><button id="logout" class="outline" @click="openSheet('logout')">{{accountText('Sign out')}}</button>
+<div class="account-group ui-card"><button class="ui-row" id="account-signin" @click="view='account'">{{accountText('Preview account')}}<small>{{accountText('Email')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" id="app-lock" :disabled="!profile" @click="openSheet('pin')">{{accountText('App lock')}}<small>{{accountText(lock?'On':'Off')}} <b aria-hidden="true">›</b></small></button><button class="ui-row" id="identity-verification" @click="view='verification'">{{accountText('Identity verification')}}<small><b aria-hidden="true">›</b></small></button><button class="ui-row" id="export-data" :disabled="busy" @click="exportData">{{accountText('Export my data')}}<small><b aria-hidden="true">›</b></small></button><button id="delete-local" class="ui-row destructive" @click="view='delete'">{{accountText('Delete account')}}<small><b aria-hidden="true">›</b></small></button></div>
+<p>{{accountText('Your account is connected securely. App lock protects this device session and is not account authentication.')}}</p>
 </template>
 <template v-else-if="view==='account'"><div class="account-group ui-card"><div class="ui-row">{{accountText('Email address')}}<small id="account-email">{{profile?.email}}</small></div><div class="ui-row">{{accountText('Sign-in method')}}<small>{{accountText('Email')}}</small></div><div class="ui-row">{{accountText('Account type')}}<small>{{accountText('MauGo account')}}</small></div></div><button class="outline" @click="openSheet('logout')">{{accountText('Switch account')}}</button><button class="outline" @click="openSheet('logout')">{{accountText('Sign out')}}</button><button class="danger-link" @click="view='delete'">{{accountText('Delete account')}}</button></template>
 <template v-else-if="view==='verification'"><img class="verification-bird" :src="asset('02-bird-static/male-1')" alt=""><h2>{{accountText('A face behind a little bird.')}}</h2><p>{{accountText('Identity verification is not connected. No photo or biometric data is collected here.')}}</p><div class="account-group ui-card"><div class="ui-row">{{accountText('Verification service')}}<small>{{accountText('Not connected')}}</small></div></div><button class="outline" @click="view='security'">{{accountText('Back to security')}}</button></template>
