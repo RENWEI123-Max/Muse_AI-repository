@@ -61,11 +61,11 @@ test('D6 local settings persistence, states and cache confirmation preserve real
  const stored=await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}}))
  let mutations=0;page.on('request',r=>{if(['POST','PATCH','DELETE'].includes(r.method())&&r.url().includes('/api/'))mutations++})
  await page.locator('#clear-cache').click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('.settings-veil')).toHaveCSS('opacity','1');await shot(page,'cache-confirm');await page.locator('#cancel-clear-cache').click();await expect(page.getByRole('dialog')).toHaveCount(0);expect(await page.evaluate(()=>caches.has('maugo-temp-d6'))).toBe(true)
- await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-body [role="status"]:not(#recommendations-status)')).toContainText('Temporary cache cleared');expect(await page.evaluate(()=>caches.has('maugo-temp-d6'))).toBe(false);expect(await page.evaluate(async()=>await (await caches.open('maugo-profile-d6')).match('/d6-kept').then(r=>r?.text()))).toBe('keep');expect(await page.evaluate(()=>caches.has('other-app-cache'))).toBe(true)
+ await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-flow .ui-toast')).toContainText('Temporary cache cleared');expect(await page.evaluate(()=>caches.has('maugo-temp-d6'))).toBe(false);expect(await page.evaluate(async()=>await (await caches.open('maugo-profile-d6')).match('/d6-kept').then(r=>r?.text()))).toBe('keep');expect(await page.evaluate(()=>caches.has('other-app-cache'))).toBe(true)
  expect(mutations).toBe(0);expect(await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}}))).toEqual(stored)
  const after=await (await request.get(root+'/users/me/export',{headers})).json()
  for(const key of ['profile','wallet','collections','conversations','messages','filterPassPurchases'])expect(after[key]).toEqual(beforeCache[key])
- await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-body [role="status"]:not(#recommendations-status)')).toContainText('No temporary cache')
+ await page.locator('#clear-cache').click();await page.locator('#confirm-clear-cache').click();await expect(page.locator('.settings-flow .ui-toast')).toContainText('No temporary cache')
  await signIn(page,user);await expect(page.locator('.settings-flow')).toBeVisible();expect(errors).toEqual([])
 
 })

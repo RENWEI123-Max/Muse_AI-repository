@@ -64,6 +64,7 @@ const ko: Record<keyof typeof en, string> = {
   create: '계정 만들기', explore: '미리보기 둘러보기',
   firstHello: '첫 인사는 한 번만 보내요. 답장이 오면 대화를 이어갈 수 있어요.'
 }
+export function englishText(key: keyof typeof en): string { return en[key] }
 export function t(key: keyof typeof en): string { return locale.value === 'ko' ? ko[key] ?? en[key] : en[key] }
 
 // Business copy reuses the Korean wording supplied in the offline handover.

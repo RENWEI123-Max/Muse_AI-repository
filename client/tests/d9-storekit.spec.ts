@@ -28,7 +28,7 @@ async function setup(page:Page,mode?:Mode){
  await page.locator('#open-wallet').click()
  return log
 }
-const status=(page:Page)=>page.locator('.reply-topup [role=status]')
+const status=(page:Page)=>page.locator('.ui-toast')
 test('topup-confirm: catalog from server, localized StoreKit prices, no hard-coded USD',async({page})=>{
  const log=await setup(page,{purchase:'cancelled',verify:200})
  await expect(page.locator('.reply-pack-price')).toHaveText(['₩100','₩550','₩1200','₩2600'])
@@ -46,7 +46,7 @@ test('topup-success: purchase with appAccountToken, server verify, finish after 
 test('cancel and store errors: no verify, no balance change',async({page})=>{
  const mode={purchase:'cancelled',verify:200},log=await setup(page,mode)
  await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toHaveText('Purchase cancelled. No charge has been made.')
- mode.purchase='pending';await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toContainText('pending approval')
+ mode.purchase='pending';await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(page.locator('.reply-topup [role=status]')).toContainText('pending approval')
  mode.purchase='error';await page.locator('#confirm-pack').click();await page.locator('#confirm-native-pack').click();await expect(status(page)).toHaveText('Purchase failed: Cannot connect to iTunes Store. No charge has been made.')
  expect(log.verify).toEqual([]);await expect(page.locator('.reply-balance strong')).toHaveText('0 diamonds')
 })
