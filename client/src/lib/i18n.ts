@@ -725,7 +725,7 @@ const businessKo: Record<string,string> = {
   "Incorrect verification code. Please try again.": "인증 코드가 올바르지 않아요. 다시 입력하세요.",
   "Verification code expired. Please request a new code.": "인증 코드가 만료됐어요. 새 코드를 요청하세요.",
   "Cannot connect to the server. Please try again later.": "서버에 연결할 수 없어요. 나중에 다시 시도하세요.",
-  "Password reset is not connected yet. Your password has not been changed.": "비밀번호 재설정은 아직 연결되지 않았어요. 비밀번호는 변경되지 않았어요.",
+  "Password updated. Sign in with your new password.": "비밀번호가 변경됐어요. 새 비밀번호로 로그인하세요.",
   "Apple sign-in did not complete. No session was issued.": "Apple 로그인이 완료되지 않았어요. 세션이 발급되지 않았어요.",
   "Apple sign-in requires native authorization and server configuration. The full flow is not connected yet.": "Apple 로그인에는 기기 인증과 서버 설정이 필요해요. 전체 흐름은 아직 연결되지 않았어요."
 }
