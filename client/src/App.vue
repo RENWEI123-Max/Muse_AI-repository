@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import { asset, assets, assetCategories } from './lib/assets'
+import { defineAsyncComponent, ref, watchEffect } from 'vue'
+import { asset } from './lib/assets'
 import {tr,  locale, t } from './lib/i18n'
 import AuthFlow from './components/AuthFlow.vue'
 import AccountSecurity from './components/AccountSecurity.vue'
@@ -14,18 +14,14 @@ const appLocked = ref(false)
 function clearDevice(){sessionStorage.clear();for(const key of Object.keys(localStorage))if(key!=='maugo-language'&&!key.startsWith('maugo-lock-'))localStorage.removeItem(key);document.documentElement.classList.remove('system-font')}
 function signedIn(token:string,account:string){if(localStorage.getItem('maugo-account')!==account){clearDevice();localStorage.setItem('maugo-account',account)}localStorage.setItem('maugo-token',token);sessionToken.value=token;sessionUser.value=account;page.value='home'}
 function signedOut(){clearDevice();localStorage.removeItem('maugo-token');sessionToken.value='';sessionUser.value='';securityOpen.value=false;appLocked.value=false;page.value='welcome'}
-const audit = new URLSearchParams(location.search).has('assets')
+const AssetAudit = import.meta.env.DEV && new URLSearchParams(location.search).has('assets')
+  ? defineAsyncComponent(() => import('./components/AssetAudit.vue'))
+  : null
 document.documentElement.classList.toggle('system-font', JSON.parse(localStorage.getItem('maugo-settings') || '{}').systemFont === true)
 watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
 <template>
-  <main v-if="audit" class="asset-audit">
-    <h1>{{tr("343 MauGo assets")}}</h1>
-    <section v-for="category in assetCategories" :key="category">
-      <h2>{{ category }}</h2>
-      <img v-for="entry in assets.filter(a => a.category === category)" :key="entry.id" :src="entry.url" :alt="tr(entry.name)" width="64" height="64">
-    </section>
-  </main>
+  <AssetAudit v-if="AssetAudit" />
   <main v-else class="device app-shell" :lang="locale" :aria-label="tr('MauGo')">
     <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" :user-id="sessionUser" @signin="page='email'" @security="securityOpen=true" /></div>
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />

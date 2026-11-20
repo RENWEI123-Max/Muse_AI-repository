@@ -1,3 +1,4 @@
+import { begin, release, exclusive } from './transactions.js';
 import { portfolio } from './ledger.js';
 import { money } from './alerts.js';
 const S=10n**18n;
@@ -18,15 +19,18 @@ export function message(s){
  const stale=s.fx_stale?`（汇率过期，最后更新 ${time(s.fx_ts)}）`:'';
  return `📊 每日汇总（${s.summary_date}）\n${s.day_pnl_usd===null?'当日盈亏：首日，无对比':`当日盈亏 ${signed(s.day_pnl_usd,'$')}（约 ${s.day_pnl_sgd===null?'SGD 不可用':signed(s.day_pnl_sgd,'S$')}${stale}）`}\n持仓总市值 $${cash(s.total_value_usd)} · 未实现 $${cash(s.unrealized_usd)} · 累计已实现 $${cash(s.realized_cum_usd)}\n${s.payload.positions.map(p=>`${p.asset} ${p.quantity.replace(/\.?0+$/,'')} · 现价 $${cash(p.price_usd)} · 市值 $${cash(p.market_value_usd)}`).join('\n')}\n汇率 ${s.usd_sgd_rate??'不可用'}（${time(s.fx_ts)} SGT）${s.day_pnl_usd===null?stale:''}`;
 }
-async function current(c,market,uid,date){const rows=(await c.query('SELECT * FROM transactions WHERE user_id=$1 AND deleted_at IS NULL ORDER BY asset,traded_at,id',[uid])).rows;const base=(await c.query("SELECT * FROM daily_summaries WHERE user_id=$1 AND status='sent' AND summary_date<$2 ORDER BY summary_date DESC LIMIT 1",[uid,date])).rows[0];return compose(rows,await market.quotes(),base,date);}
+async function current(c,market,uid,date){const rows=(await c.query('SELECT * FROM transactions WHERE user_id=$1 AND deleted_at IS NULL ORDER BY asset,traded_at,id',[uid])).rows;const base=(await c.query("SELECT * FROM daily_summaries WHERE user_id=$1 AND status='sent' AND summary_date<$2 ORDER BY summary_date DESC LIMIT 1",[uid,date])).rows[0];return compose(rows,await market.quotes(c),base,date);}
 export async function summary(pool,market,req,now=Date.now()){
  if(req.url.split('?')[0].endsWith('/latest'))return {summary:(await pool.query('SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 ORDER BY daily_summaries.summary_date DESC LIMIT 1',[req.bzUser.id])).rows[0]??null};
- const c=await pool.connect();try{return {summary:await current(c,market,req.bzUser.id,local(now,req.bzUser.timezone).date)};}finally{c.release();}
+ const c=await pool.connect();try{return {summary:await current(c,market,req.bzUser.id,local(now,req.bzUser.timezone).date)};}finally{await release(c);}
 }
 export async function schedule(pool,market,now=Date.now()){
+ return exclusive(pool, 'summary', () => scheduleOnce(pool,market,now));
+}
+async function scheduleOnce(pool,market,now){
  const users=(await pool.query('SELECT id,timezone FROM users WHERE daily_summary_enabled=true')).rows;
  for(const u of users){const c=await pool.connect();try{
- await c.query('BEGIN');await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[u.id]);
+ await begin(c);await c.query('SELECT pg_advisory_xact_lock($1::bigint)',[u.id]);
  const l=local(now,u.timezone);
  const old=(await c.query("SELECT *,summary_date::text FROM daily_summaries WHERE user_id=$1 AND status='deferred' ORDER BY daily_summaries.summary_date LIMIT 1",[u.id])).rows[0];
  const date=old?.summary_date??l.date;
@@ -42,5 +46,5 @@ export async function schedule(pool,market,now=Date.now()){
  else {text=message(s);s.payload.text=text;s.payload.day_pnl_sgd=s.day_pnl_sgd;kind='daily_summary';const keys=['total_value_usd','unrealized_usd','realized_cum_usd','day_pnl_usd','usd_sgd_rate','fx_ts','fx_stale','payload'];await c.query(`UPDATE daily_summaries SET status='sent',${keys.map((k,i)=>k+'=$'+(i+2)).join(',')} WHERE id=$1`,[r.id,...keys.map(k=>s[k])]);}
  const binding=(await c.query("SELECT chat_id FROM telegram_bindings WHERE user_id=$1 AND status='bound'",[u.id])).rows[0];
  await c.query('INSERT INTO telegram_outbox(user_id,chat_id,kind,ref_id,dedupe_key,text,status,next_attempt_at,last_error) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9) ON CONFLICT(dedupe_key) DO NOTHING',[u.id,binding?.chat_id,kind,r.id,`summary:${u.id}:${date}`,text,binding?'pending':'failed',new Date(now),binding?null:'TELEGRAM_NOT_BOUND']);await c.query('COMMIT');
- }catch(e){await c.query('ROLLBACK');throw e;}finally{c.release();}}
+ }catch(e){throw e;}finally{await release(c);}}
 }

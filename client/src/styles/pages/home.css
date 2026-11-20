@@ -22,6 +22,7 @@
 .home-flow .letter-bird:nth-child(2){left:142.6px;top:182.6px;width:118.8px;height:118.8px}
 .home-flow .letter-bird:nth-child(3){left:231.48px;top:296.48px;width:95.04px;height:95.04px}
 .home-flow .home-flight-sprite{display:block;width:100%;height:100%;background-size:600% 100%;background-repeat:no-repeat;background-position:0 0;animation:sprite-loop .65s steps(6) infinite}
+.home-flow .letter-bird-avatar{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 .home-flow .bird-label{display:none}
 .home-flow .magic-hat{position:absolute;left:99px;top:435px;width:178px;height:143px;padding:0;border:0;background:none;pointer-events:auto}
 .home-flow .home-hat-image{display:block;width:100%;height:100%;object-fit:contain;filter:none}

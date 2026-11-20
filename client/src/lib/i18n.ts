@@ -209,7 +209,7 @@ const businessKo: Record<string,string> = {
   "How does Filter Pass work?": "필터 패스는 어떻게 이용하나요?",
   "Use diamonds to unlock age and city filters for 1, 7 or 30 days. Extra days extend the expiry. There is no automatic renewal.": "다이아몬드로 1일, 7일 또는 30일 동안 나이와 도시 필터를 이용할 수 있어요. 기간을 추가하면 만료일이 연장되며 자동 갱신은 없어요.",
   "Where are my messages saved?": "메시지는 어디에 저장되나요?",
-  "Messages are saved by the MauGo server. Feedback on this page is saved only on this device and is not sent to a support service.": "메시지는 MauGo 서버에 저장돼요. 이 페이지의 피드백은 이 기기에만 저장되며 고객 지원 서비스로 전송되지 않아요.",
+  "Messages are saved by the MauGo server. Feedback you submit here is saved on the MauGo server.": "메시지는 MauGo 서버에 저장돼요. 이 페이지에서 보낸 피드백은 MauGo 서버에 저장돼요.",
   "How do I delete my data?": "내 데이터는 어떻게 삭제하나요?",
   "Open Settings → Account & security → Delete account.": "설정 → 계정 및 보안 → 계정 삭제를 여세요.",
 
