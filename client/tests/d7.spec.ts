@@ -12,7 +12,7 @@ test('D7 thirteen states, real logout/deletion and account isolation',async({pag
  const snapshot=async(u:any)=>(await request.get('http://127.0.0.1:3001/users/me/export',{headers:headers(u)})).json()
  const aBefore=await snapshot(a);let bBefore=await snapshot(b)
  const sessionA=await login(page,a)
- await expect(page.locator('.account-security .account-group button')).toHaveText([/^Preview account/,/^App lock/,/^Identity verification/,/^Export my data/,/^Delete account/])
+ await expect(page.locator('.account-security .account-group button')).toHaveText([/^Preview account/,/^Password recovery/,/^App lock/,/^Identity verification/,/^Export my data/,/^Delete account/])
  await shot(page,'security');await page.locator('#account-signin').click();await expect(page.locator('#account-email')).toHaveText(a.email.toLowerCase());await shot(page,'account-info');await page.locator('.account-security header button').click()
  await page.locator('#identity-verification').click();await expect(page.locator('.account-body')).toContainText('Not connected');await shot(page,'verification');await page.getByRole('button',{name:'Back to security'}).click()
  await page.locator('#app-lock').click();await shot(page,'pin-create');await page.locator('#lock-pin').fill('12');await page.locator('#save-lock').click();await expect(page.locator('.account-security .ui-toast')).toHaveText('Enter a 4-digit PIN.');await shot(page,'pin-invalid');await page.locator('#lock-pin').fill('1234');await page.locator('#save-lock').click();await expect(page.locator('#app-lock')).toContainText('On')
@@ -43,4 +43,84 @@ test('D7 full migration schema serves profile and letters without 500',async({re
   console.log('D7 migrated schema',path,response.status())
   expect(response.status(),path+' '+await response.text()).toBe(200)
  }
+})
+
+test('D7 password recovery submits the email code with the new password',async({page,request},testInfo)=>{
+ const backend='http://127.0.0.1:3001'
+ const email=`d7-recovery-${Date.now()}@example.test`,password='OldPassword2026!',newPassword='NewPassword2026!'
+ const consent={termsVersion:'1.0',privacyVersion:'1.0'}
+ const signup=await request.post(backend+'/auth/signup',{data:{email,password,...consent}})
+ expect(signup.status()).toBe(201)
+ const {id}=await signup.json()
+ const priorToken=await login(page,{email,password})
+ const steps: Record<string,number>={}
+ const authCalls:string[]=[]
+ page.on('request',req=>{
+  const path=new URL(req.url()).pathname
+  if(path.startsWith('/api/auth/'))authCalls.push(path)
+ })
+ const row=page.getByRole('button',{name:'Password recovery',exact:true})
+ await expect(row).toBeEnabled()
+ await page.screenshot({path:testInfo.outputPath('security-password-recovery.png')})
+ expect(await page.locator('.account-group > button').evaluateAll(rows=>rows.slice(0,3).map(row=>row.id)))
+  .toEqual(['account-signin','account-recovery','app-lock'])
+
+ const sent=page.waitForResponse(r=>r.url().endsWith('/auth/code/send'))
+ await row.click()
+ const sendResponse=await sent
+ steps.send=sendResponse.status()
+ expect(steps.send).toBe(200)
+ expect(sendResponse.request().postDataJSON()).toEqual({email})
+ await expect(page.getByRole('heading',{name:'Password recovery'})).toBeVisible()
+ await expect(page.locator('.account-body')).toContainText(email)
+ const mail=await request.get(backend+'/__d7/recovery-mail',{params:{email}})
+ expect(mail.status()).toBe(200)
+ const {code}=await mail.json()
+ expect(code).toMatch(/^\d{6}$/)
+ const codeField=page.getByLabel('6-digit code')
+ const submit=page.getByRole('button',{name:'Update password'})
+ await page.getByLabel('New password',{exact:true}).fill(newPassword)
+ await page.getByLabel('Confirm password',{exact:true}).fill(newPassword)
+
+ await codeField.fill(code==='000000'?'111111':'000000')
+ let reset=page.waitForResponse(r=>r.url().endsWith('/auth/password/reset'))
+ await submit.click()
+ steps.wrongCode=(await reset).status()
+ expect(steps.wrongCode).toBe(401)
+ await expect(page.getByText('Incorrect verification code. Please try again.')).toBeVisible()
+
+ await codeField.fill(code)
+ reset=page.waitForResponse(r=>r.url().endsWith('/auth/password/reset'))
+ await submit.click()
+ const resetResponse=await reset
+ steps.correctCode=resetResponse.status()
+ expect(steps.correctCode).toBe(200)
+ expect(resetResponse.request().postDataJSON()).toEqual({email,code,newPassword})
+ expect(await resetResponse.json()).toEqual({reset:true})
+ expect(authCalls).toEqual(['/api/auth/code/send','/api/auth/password/reset','/api/auth/password/reset'])
+ await expect(page.getByRole('heading',{name:'Welcome to MauGo'})).toBeVisible()
+ await expect.poll(()=>page.evaluate(()=>localStorage.getItem('maugo-token'))).toBeNull()
+ expect((await request.get(backend+'/users/me/export',{headers:{Authorization:`Bearer ${priorToken}`}})).status()).toBe(401)
+
+ await page.getByRole('button',{name:'Continue with email'}).click()
+ await page.locator('#accept-terms').check()
+ await page.locator('#terms-continue').click()
+ await page.locator('#auth-email').fill(email)
+ const signIn=page.getByRole('button',{name:'Sign in',exact:true})
+ const loginResponse=()=>page.waitForResponse(r=>r.url().endsWith('/auth/login'))
+ await page.locator('#auth-password').fill(password)
+ let signed=loginResponse()
+ await signIn.click()
+ steps.oldPassword=(await signed).status()
+ expect(steps.oldPassword).toBe(401)
+ await expect(page.getByText('Invalid email or password')).toBeVisible()
+ await page.locator('#auth-password').fill(newPassword)
+ signed=loginResponse()
+ await signIn.click()
+ const newSession=await signed
+ steps.newPassword=newSession.status()
+ expect(steps.newPassword).toBe(200)
+ expect((await newSession.json()).id).toBe(id)
+ await expect(page.locator('.home-flow')).toBeVisible()
+ console.log('Password recovery HTTP results',JSON.stringify(steps))
 })
