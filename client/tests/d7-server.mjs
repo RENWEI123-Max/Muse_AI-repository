@@ -16,7 +16,16 @@ const db=new pg.Pool({connectionString:url.toString()})
 const migrations=new URL('../../maugo/server/migrations/',import.meta.url)
 for(const file of (await readdir(migrations)).filter(f=>f.endsWith('.sql')).sort())await db.query(await readFile(new URL(file,migrations),'utf8'))
 process.env.MEDIA_DIRECTORY="/tmp/"+database+"-media"
-const app=buildApp(db)
+// Capture generated codes in the isolated test mailbox.
+const recoveryMailbox=new Map()
+const app=buildApp(db,false,{sendMail:async(email,code)=>{recoveryMailbox.set(email,code)}})
+app.get('/__d7/recovery-mail',async(req,reply)=>{
+ const email=req.query.email
+ const code=recoveryMailbox.get(email)
+ if(!code)return reply.code(404).send()
+ recoveryMailbox.delete(email)
+ return {code}
+})
 await registerInboxContract(app,db)
 await app.listen({host:'127.0.0.1',port:3001})
 console.log('D7 isolated test backend ready: '+database)
