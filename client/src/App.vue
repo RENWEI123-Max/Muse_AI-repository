@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineAsyncComponent, ref, watchEffect } from 'vue'
 import { asset } from './lib/assets'
+import { OPERATOR_NAME } from './lib/support-content'
 import {tr,  locale, t } from './lib/i18n'
 import AuthFlow from './components/AuthFlow.vue'
 import AccountSecurity from './components/AccountSecurity.vue'
@@ -22,12 +23,12 @@ watchEffect(() => { document.documentElement.lang = locale.value })
 </script>
 <template>
   <AssetAudit v-if="AssetAudit" />
-  <main v-else class="device app-shell" :lang="locale" :aria-label="tr('MauGo')">
+  <main v-else class="device app-shell" :lang="locale" :aria-label="OPERATOR_NAME">
     <div v-if="page === 'home' || page === 'preview'" :inert="appLocked||securityOpen" style="display:contents"><HomeFlow v-if="page === 'home' || page === 'preview'" :token="sessionToken" :user-id="sessionUser" @signin="page='email'" @security="securityOpen=true" /></div>
     <AccountSecurity v-if="sessionToken" :token="sessionToken" :active="securityOpen" @close="securityOpen=false" @signedout="signedOut" @locking="appLocked=$event" />
     <div v-if="page !== 'home' && page !== 'preview'" class="screen auth-screen" :class="{'welcome-screen': page === 'welcome'}" :style="{ backgroundImage: `url(${asset('01-brand-scenes/auth-background')})` }">
       <header class="auth-top">
-        <img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="tr('MauGo')" class="wordmark">
+        <img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="OPERATOR_NAME" class="wordmark">
         <button class="ui-auth-text language" :aria-label="tr('Switch language')" @click="locale = locale === 'en' ? 'ko' : 'en'">{{ tr(locale === 'en' ? '한국어' : 'EN') }}</button>
       </header>
       <PageTransition>

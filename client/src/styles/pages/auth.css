@@ -51,7 +51,6 @@
 .auth-flow .auth-options{display:grid;gap:12px;margin-bottom:0}
 .auth-flow[data-auth-mode=apple] .auth-main{margin-top:40px}
 .auth-flow .privacy-copy{margin:66px 0 40px;color:var(--auth-copy);font:var(--font-body-sm-21)}
-.auth-flow .auth-privacy-back{position:absolute;left:24px;top:353px}
 .auth-screen:lang(ko),.auth-flow:lang(ko),.auth-screen:lang(ko) h1,.auth-screen:lang(ko) p,.auth-flow:lang(ko) label{font-family:var(--font-family-ko)}
 @media(max-height:740px){
  .welcome-screen .auth-actions{top:323px}

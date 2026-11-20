@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import UiToast from './UiToast.vue'
 import {computed, nextTick, onMounted, ref, watch} from 'vue'
-import {supportEmail,legalText,termsVersion,termsSections,faqs,guides} from '../lib/support-content'
+import {OPERATOR_NAME,supportContact,legalText,legalVersion,faqs,guides} from '../lib/support-content'
 import {locale,t,tr,englishText} from '../lib/i18n'
 import {asset} from '../lib/assets'
 import {api,post,ApiError} from '../lib/api'
@@ -35,7 +35,7 @@ const categories=['incoming','replies','system'] as const
 const generalItems=['haptics','recommendations','systemFont'] as const
 const pages=[['security','08-interface-icons/icon-lock-lime-22'],['privacySettings','08-interface-icons/icon-shield-lime-22'],['notifications','08-interface-icons/icon-bell-lime-22'],['general','08-interface-icons/icon-settings-light-24'],['language','08-interface-icons/icon-globe-lime-22'],['feedback','08-interface-icons/icon-feedback-lime-22'],['help','08-interface-icons/icon-help-lime-22'],['about','08-interface-icons/icon-info-lime-22']] as const
 
-const supportTitles={help:'Help & support',feedback:'Feedback',about:'About MauGo',faq:'Help centre',guidelines:'Community guidelines',safety:'Safety guide',privacy:'Privacy information',terms:'Terms of Use & EULA',system:'System messages',interactions:'Interactions'}
+const supportTitles={help:'Help & support',feedback:'Feedback',about:'about',faq:'Help centre',guidelines:'Community guidelines',safety:'Safety guide',privacy:'Privacy information',terms:'Terms of Use & EULA',system:'System messages',interactions:'Interactions'}
 const supportParent=ref<typeof view.value>('settings')
 function supportPage(page:typeof view.value){supportParent.value=view.value;openPage(page)}
 const feedbackText=ref(''),feedbackEmail=ref(''),feedbackType=ref('Suggestion')
@@ -70,7 +70,7 @@ async function saveFeedback(){
   feedbackRevision.value++
  }catch(e){toast.value=e instanceof ApiError&&e.status===429?'Feedback limit reached. Try again in an hour.':'Feedback could not be sent. Please try again.'}finally{busy.value=false}
 }
-const title=computed(()=>view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
+const title=computed(()=>view.value==='about'?t('about'):view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
 function back(){if(busy.value)return;if(globalSelected.value){globalSelected.value=false;return}if(selected.value){selected.value=undefined;return}if(confirm.value)confirm.value=false;else if(props.initial&&view.value===props.initial)emit('close');else if(view.value==='settings')emit('close');else{view.value=['faq','guidelines','safety','privacy','terms','system','interactions'].includes(view.value)?supportParent.value:'settings';toast.value=''}}
 async function cleared(){busy.value=true;toast.value='';try{const keys='caches' in window?await caches.keys():[];const temporary=keys.filter(k=>k.startsWith('maugo-temp-'));await Promise.all(temporary.map(k=>caches.delete(k)));confirm.value=false;toast.value=englishText(temporary.length?'cacheDeleted':'cacheCleared')}catch{toast.value=englishText('cacheFailed')}finally{busy.value=false}}
 </script>
@@ -85,8 +85,8 @@ async function cleared(){busy.value=true;toast.value='';try{const keys='caches' 
 <template v-else-if="view==='privacySettings'"><button v-if="globalProfile" id="global-profile-visibility" class="settings-row ui-row" :disabled="busy" @click="globalSelected=true;choice=globalProfile.visibility;toast=''"><span>{{tr('Profile visibility')}}</span><small>{{t(globalProfile.visibility)}}</small><b>›</b></button><p>{{t('visibilityScope')}}</p><p v-if="busy" role="status">{{t('loading')}}</p><p v-else-if="!cards.length">{{t('noCards')}}</p><div class="settings-group ui-card"><button v-for="card in cards" :key="card.id" :id="card===cards[0]?'profile-visibility':undefined" class="settings-row ui-row" :disabled="busy" @click="selected=card;choice=card.visibility;toast='' "><span>{{t('imageCard')}} {{card.position+1}}</span><small>{{t(card.visibility)}}</small><b>›</b></button></div></template>
 <template v-else-if="view==='help'">
 <section class="support-services"><h2>{{tr('Self service')}}</h2><div class="support-grid"><button id="help-centre" @click="supportPage('faq')"><img :src="asset('08-interface-icons/icon-help-lime-22')" alt=""><span>{{tr('Help centre')}}</span></button><button id="community-guidelines" @click="supportPage('guidelines')"><img :src="asset('08-interface-icons/icon-shield-lime-22')" alt=""><span>{{tr('Guidelines')}}</span></button><button id="safety-guide" @click="supportPage('safety')"><img :src="asset('08-interface-icons/icon-lock-lime-22')" alt=""><span>{{tr('Safety guide')}}</span></button><button id="help-delete" @click="emit('security')"><img :src="asset('08-interface-icons/icon-info-lime-22')" alt=""><span>{{tr('Delete account')}}</span></button></div></section>
-<div class="support-message"><img :src="asset('02-bird-static/female-4')" alt=""><div><strong>{{tr('Hello, from MauGo.')}}</strong><p>{{tr('Find quick answers in Help centre, or leave your suggestions in Feedback.')}}</p><p>{{tr('Send feedback directly to the MauGo team.')}}</p><button v-for="[question] in faqs.slice(0,4)" :key="question" @click="supportPage('faq')">{{tr(question)}}</button></div></div>
-<div class="support-bottom"><button id="support-feedback" @click="supportPage('feedback')">{{t('feedback')}}</button><button id="help-privacy" @click="supportPage('privacy')">{{tr('Privacy information')}}</button></div><p>{{tr('Support email')}}: {{supportEmail}} · {{tr('Pending Smith')}}</p>
+<div class="support-message"><img :src="asset('02-bird-static/female-4')" alt=""><div><strong>{{t('supportGreeting')}}</strong><p>{{tr('Find quick answers in Help centre, or leave your suggestions in Feedback.')}}</p><p>{{t('supportFeedback')}}</p><button v-for="[question] in faqs.slice(0,4)" :key="question" @click="supportPage('faq')">{{tr(question)}}</button></div></div>
+<div class="support-bottom"><button id="support-feedback" @click="supportPage('feedback')">{{t('feedback')}}</button><button id="help-privacy" @click="supportPage('privacy')">{{tr('Privacy information')}}</button></div><p>{{supportContact[locale]}}</p>
 </template>
 <template v-else-if="view==='faq'"><div class="faq-list"><details v-for="[question,answer] in faqs" :key="question"><summary>{{tr(question)}}</summary><p>{{tr(answer)}}</p></details></div></template>
 <template v-else-if="view==='feedback'">
@@ -100,9 +100,15 @@ async function cleared(){busy.value=true;toast.value='';try{const keys='caches' 
  </li>
 </ul>
 </template>
-<template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row ui-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>{{tr('Support email')}}: {{supportEmail}} · {{tr('Pending Smith')}}</p></template>
+<template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" :alt="OPERATOR_NAME"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row ui-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>{{supportContact[locale]}}</p></template>
 <template v-else-if="view==='guidelines'||view==='safety'"><article class="support-policy"><section v-for="[heading,copy] in guides[view]" :key="heading"><h2>{{tr(heading)}}</h2><p>{{tr(copy)}}</p></section></article></template>
-<template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><template v-if="view==='privacy'"><h2>{{tr('Privacy information')}}</h2><p>{{legalText.privacy[locale]}}</p></template><template v-else><p>{{tr(termsVersion)}}</p><section v-for="section in termsSections" :key="section.title"><h2>{{tr(section.title)}}</h2><p>{{tr(section.body)}}</p></section></template></article></template>
+<template v-else-if="view==='privacy'||view==='terms'">
+<article class="support-policy">
+ <h2 v-if="view==='privacy'">{{tr('Privacy information')}}</h2>
+ <p>{{legalVersion[locale]}}</p>
+ <section v-for="section in legalText[view][locale]" :key="section.title"><h2>{{section.title}}</h2><p>{{section.body}}</p></section>
+</article>
+</template>
 <template v-else-if="view==='system'||view==='interactions'"><div class="support-empty"><img :src="asset('01-brand-scenes/envelope')" alt=""><h2>{{t(view==='system'?'systemEmptyTitle':'interactionsEmptyTitle')}}</h2><p>{{t('aboutEmptyBody')}}</p></div></template>
 <template v-else><div class="settings-group ui-card"><label v-for="item in generalItems" :key="item" class="settings-row ui-row"><span>{{t(item)}}</span><input :id="item" :disabled="item==='haptics'&&!hapticsAvailable" :checked="item==='haptics' ? hapticsAvailable&&preferences.haptics : preferences[item]" @change="preferences[item]=($event.target as HTMLInputElement).checked" class="ui-switch" type="checkbox" role="switch"></label><button id="clear-cache" class="settings-row ui-row" @click="confirm=true;toast=''"><span>{{t('clearCache')}}</span><b aria-hidden="true"><img :src="asset('08-interface-icons/icon-chevron-right-muted-16')" alt=""></b></button></div><p>{{t('hapticsNote')}}</p><p id="recommendations-status" role="status">{{t(preferences.recommendations?'recommendationsOn':'recommendationsOff')}}</p><p v-if="!hapticsAvailable">{{t('hapticsUnavailable')}}</p><p>{{t('cacheNote')}}</p></template>
 </div></Transition>
