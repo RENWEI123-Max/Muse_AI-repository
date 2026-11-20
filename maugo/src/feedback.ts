@@ -3,6 +3,7 @@ import type { PoolClient } from 'pg';
 import { randomUUID } from 'node:crypto';
 const fail = (statusCode:number,message:string):never => { throw Object.assign(new Error(message),{statusCode}); };
 const status = {type:'string',enum:['new','in_progress','resolved']};
+const pagination = {limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}};
 const view = `id,user_id AS "userId",content,type,contact,status,created_at AS "createdAt",updated_at AS "updatedAt"`;
 export function registerFeedback(app:FastifyInstance,
   tx:(work:(c:PoolClient)=>Promise<unknown>)=>Promise<unknown>,
@@ -18,8 +19,14 @@ export function registerFeedback(app:FastifyInstance,
     });
     return reply.code(201).send(result);
   });
+  app.get<{Querystring:{limit:number;offset:number}}>('/feedback/mine',{schema:{querystring:{type:'object',additionalProperties:false,properties:pagination}}},async req=>tx(async c=>{
+    const u=await auth(c,req.headers.authorization);
+    const total=(await c.query('SELECT count(*)::int AS total FROM feedback WHERE user_id=$1',[u.id])).rows[0].total;
+    const items=(await c.query(`SELECT ${view} FROM feedback WHERE user_id=$1 ORDER BY created_at DESC,id DESC LIMIT $2 OFFSET $3`,[u.id,req.query.limit,req.query.offset])).rows;
+    return {items,total};
+  }));
   app.get<{Querystring:{status?:string;limit:number;offset:number}}>('/admin/feedback',{schema:{querystring:{type:'object',additionalProperties:false,properties:{
-    status,limit:{type:'integer',minimum:1,maximum:100,default:20},offset:{type:'integer',minimum:0,default:0}
+    status,...pagination
   }}}},async req=>tx(async c=>{
     const u=await auth(c,req.headers.authorization); if(!u.is_moderator) fail(403,'Moderator required');
     const filter=req.query.status??null;

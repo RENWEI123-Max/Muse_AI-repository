@@ -6,7 +6,7 @@ async function login(page:Page,u:{email:string;password:string}){
 }
 async function openChat(page:Page){await page.locator('#open-inbox').click();await expect(page.locator('[data-chat]')).toHaveCount(1);await page.locator('[data-chat]').click();await expect(page.locator('#chat-input')).toBeVisible()}
 async function toSettings(page:Page){await page.getByLabel('Back to messages').click();await page.getByRole('button',{name:'Home',exact:true}).click();await page.locator('#open-profile').click();await page.locator('#open-settings').click()}
-async function signOut(page:Page){await page.locator('#security-settings').click();await page.locator('#logout').click();await page.locator('#confirm-logout').click();await expect(page.locator('.auth-content h1')).toBeVisible()}
+async function signOut(page:Page){await page.locator('#security-settings').click();await page.locator('#account-signin').click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.locator('#confirm-logout').click();await expect(page.locator('.auth-content h1')).toBeVisible()}
 const stored=(page:Page)=>page.evaluate(()=>JSON.stringify({...localStorage})+JSON.stringify({...sessionStorage}))
 test('F07 account switch isolation and revoked token',async({page,request})=>{
  test.setTimeout(120000)

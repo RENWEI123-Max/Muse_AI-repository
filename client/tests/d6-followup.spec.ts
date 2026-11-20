@@ -32,6 +32,6 @@ test('real global visibility and account logout',async({page,request})=>{
  await page.locator('#settings-back').click();await page.screenshot({path:'docs/d6-round3/settings.png'})
  await page.locator('#security-settings').click();await page.locator('#account-signin').click();await expect(page.locator('#account-email')).toHaveText(a.email.toLowerCase());await page.screenshot({path:'docs/d6-round3/account.png'})
  await page.locator('.account-security header button').click();await expect(page.locator('#export-data')).toBeVisible();await page.screenshot({path:'docs/d6-round3/security.png'})
- await page.locator('#logout').click();await page.locator('#confirm-logout').click();await expect(page.locator('.auth-content h1')).toBeVisible()
+ await page.locator('#account-signin').click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.locator('#confirm-logout').click();await expect(page.locator('.auth-content h1')).toBeVisible()
  expect((await request.get(root+'/profiles/me',{headers:{Authorization:`Bearer ${session.token}`}})).status()).toBe(401)
 })

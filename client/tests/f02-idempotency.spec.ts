@@ -29,6 +29,7 @@ async function enter(page: Page, request: APIRequestContext) {
 async function choose(page: Page, index = 0) {
  await page.locator('.pass-badge').first().click()
  await page.locator('.pass-plan').nth(index).click()
+ await page.locator('#pass-page-buy').click()
  await expect(page.getByRole('dialog', { name: 'Confirm Filter Pass', exact: true })).toBeVisible()
 }
 
