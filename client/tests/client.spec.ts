@@ -65,3 +65,82 @@ test('letter avatars fall back to default art when loading fails', async ({ page
   await page.getByRole('button', { name: 'Open letter from Sender a' }).dispatchEvent('click')
   await expect(page.locator('.letter-avatar')).toHaveAttribute('src', /female-1/)
 })
+
+test('discovery keeps a displayed letter avatar alive across token refresh', async ({ page }) => {
+  const avatar = '/media/uploads/00000000-0000-4000-8000-000000000001'
+  const letter = {
+    openingMessageId: 'letter', conversationId: 'conversation', content: 'Hello',
+    state: 'unread', canReply: true, canChat: false,
+    sender: { id: 'sender', displayName: 'Sender', avatar }
+  }
+  const authorizations: (string | undefined)[] = []
+  await page.addInitScript(() => {
+    localStorage.setItem('maugo-token', 'original-token')
+    localStorage.setItem('maugo-account', 'reader')
+    // Isolate token refresh from WebKit's separate initial error on a source-less img.
+    let photoLoaded = false
+    document.addEventListener('load', event => {
+      const img = event.target
+      if (img instanceof HTMLImageElement && img.matches('.letter-bird-avatar[src^="blob:"]')) photoLoaded = true
+    }, true)
+    document.addEventListener('error', event => {
+      const img = event.target
+      if (!photoLoaded && img instanceof HTMLImageElement && img.matches('.letter-bird-avatar:not([src])')) {
+        event.stopImmediatePropagation()
+      }
+    }, true)
+  })
+  await page.route(url => url.pathname.startsWith('/api/') || url.port === '3000', route => {
+    const path = new URL(route.request().url()).pathname.replace(/^\/api/, '')
+    if (path === avatar) {
+      authorizations.push(route.request().headers().authorization)
+      return route.fulfill({ path: 'src/assets/05-avatars/portrait-2.png' })
+    }
+    if (path === '/letters') return route.fulfill({ json: { items: [letter], responses: [] } })
+    if (path === '/wallet') return route.fulfill({ json: { diamonds: 0, freeRemaining: 10, paidCost: 10 } })
+    return route.fulfill({ json: { items: [], active: false, plans: [], cities: [] } })
+  })
+  await page.goto('/')
+  const bird = page.getByRole('button', { name: 'Open letter from Sender' })
+  const photo = bird.locator('img.letter-bird-avatar')
+  const loaded = () => photo.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)
+  await expect.poll(loaded).toBe(true)
+  const originalUrl = await photo.getAttribute('src')
+  expect(originalUrl).toMatch(/^blob:/)
+
+  const revokedDuringRefresh = await bird.evaluate(async (button, url) => {
+    const revoke = URL.revokeObjectURL
+    const revoked: string[] = []
+    URL.revokeObjectURL = value => { revoked.push(value); revoke.call(URL, value) }
+    try {
+      // Simulate a new session token without remounting HomeFlow or replacing its letters.
+      type VNode = {
+        children?: VNode[]
+        component?: { props: { userId?: string; token?: string }; subTree: VNode }
+      }
+      const root = document.querySelector('#app') as Element & { _vnode: VNode }
+      function findHome(node: VNode): NonNullable<VNode['component']> | undefined {
+        const component = node.component
+        if (component?.props.userId === 'reader' && component.props.token === 'original-token') return component
+        if (component) return findHome(component.subTree)
+        for (const child of Array.isArray(node.children) ? node.children : []) {
+          const match = findHome(child)
+          if (match) return match
+        }
+      }
+      const home = findHome(root._vnode)
+      if (!home || button.querySelector('img')?.getAttribute('src') !== url) throw Error('Expected a mounted letter photo')
+      home.props.token = 'refreshed-token'
+      await new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
+      return revoked
+    } finally {
+      URL.revokeObjectURL = revoke
+    }
+  }, originalUrl)
+
+  expect(revokedDuringRefresh).toEqual([])
+  await expect(photo).toHaveAttribute('src', originalUrl!)
+  await expect.poll(loaded).toBe(true)
+  await expect(bird.locator('.home-flight-sprite')).toHaveCount(0)
+  expect(authorizations).toEqual(['Bearer original-token'])
+})
