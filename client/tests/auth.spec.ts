@@ -3,11 +3,16 @@ import { readFileSync } from 'node:fs'
 const states = JSON.parse(readFileSync(new URL('./module01.json',import.meta.url),'utf8'))
 test('19 prototype states', async ({page}) => {
   test.setTimeout(90000)
+  await page.addInitScript(() => Object.assign(window,{CapacitorCustomPlatform:{name:'ios'}}))
   await page.route('**/api/auth/code/send', route => route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({sent:true,retryAfter:60})}))
   const failures: string[]=[]
   for(const state of states) {
     const mode=state.task.replace('auth:','')
     await page.goto(mode==='welcome'?'/':`/?auth=${mode==='policy'?'privacy':mode}`)
+    if(mode==='apple'){
+      await page.locator('#accept-terms').check()
+      await page.locator('#terms-continue').click()
+    }
     if(['verify','recovery'].includes(mode)) await page.goto(`/?auth=${mode}&email=reader@example.com`)
     for(const action of state.actions) {
       const [kind,selector,value]=action
@@ -55,12 +60,57 @@ test('real database signup, SMTP failure, wrong code, logout and login', async (
   await page.getByRole('button',{name:'Sign out',exact:true}).click()
   await expect(page.getByRole('heading',{name:'Welcome to MauGo'})).toBeVisible()
 })
-test('empty validation and honest Apple error',async({page})=>{
+test('empty email validation and Apple entry hidden on the web',async({page})=>{
  await page.goto('/?auth=signin')
  await page.locator('#auth-form').evaluate((form:HTMLFormElement)=>form.requestSubmit())
  await expect(page.locator('.auth-flow .ui-toast')).toHaveText('Enter a valid email address.')
- await page.goto('/?auth=apple')
- await page.locator('.auth-flow').getByRole('button',{name:'Continue with Apple'}).click()
- await expect(page.locator('.auth-flow .ui-toast')).toContainText('identityToken required')
- await expect(page.getByText('You are signed in.')).toHaveCount(0)
+ for(const url of ['/','/?auth=apple']){
+  await page.goto(url)
+  await expect(page.getByRole('button',{name:'Continue with email'})).toBeVisible()
+  await expect(page.getByRole('button',{name:'Continue with Apple'})).toHaveCount(0)
+ }
 })
+
+for(const outcome of ['success','cancelled','native error','server error'] as const){
+ test(`native Apple sign-in: ${outcome}`,async({page})=>{
+  await page.addInitScript(result => {
+   Object.assign(window,{
+    CapacitorCustomPlatform:{name:'ios'},
+    Capacitor:{
+     PluginHeaders:[{name:'AppleSignIn',methods:[{name:'authorize',rtype:'promise'}]}],
+     nativePromise: async () => {
+      if(result==='cancelled') throw Object.assign(new Error('Cancelled'),{code:'APPLE_SIGN_IN_CANCELLED'})
+      if(result==='native error') throw new Error('Native authorization unavailable')
+      return {identityToken:'fixture-identity-token',givenName:'Little',familyName:'Bird',email:'unused@example.test'}
+     }
+    }
+   })
+  },outcome)
+  const appleRequests: unknown[]=[]
+  await page.route('**/api/**', route=>{
+   if(!route.request().url().endsWith('/auth/apple'))return route.fulfill({json:{items:[],cities:[],responses:[]}})
+   appleRequests.push(route.request().postDataJSON())
+   if(outcome==='server error')return route.fulfill({status:401,json:{message:'Invalid Apple identityToken'}})
+   return route.fulfill({json:{id:'apple-account',token:'apple-session'}})
+  })
+
+  await page.goto('/')
+  await page.getByRole('button',{name:'Continue with Apple'}).click()
+  await expect(page.locator('#terms-continue')).toBeDisabled()
+  await page.locator('#accept-terms').check()
+  await page.locator('#terms-continue').click()
+  await expect(page.getByText('Use your Apple ID to sign in to MauGo.')).toBeVisible()
+  await page.getByRole('button',{name:'Continue with Apple'}).click()
+  if(outcome==='success'){
+   await expect(page.locator('.home-flow')).toBeVisible()
+   expect(await page.evaluate(()=>[localStorage.getItem('maugo-account'),localStorage.getItem('maugo-token')])).toEqual(['apple-account','apple-session'])
+  }else if(outcome==='cancelled'){
+   await expect(page.locator('.welcome-screen')).toBeVisible()
+   await expect(page.locator('.ui-toast')).toHaveCount(0)
+  }else{
+   await expect(page.locator('.auth-flow .ui-toast')).toHaveText(outcome==='native error'?'Native authorization unavailable':'Invalid Apple identityToken')
+  }
+  expect(appleRequests).toEqual(outcome==='success'||outcome==='server error'?
+   [{identityToken:'fixture-identity-token',givenName:'Little',familyName:'Bird',privacyVersion:'1.0',termsVersion:'1.0'}]:[])
+ })
+}

@@ -2,14 +2,18 @@ import { randomBytes, randomInt, randomUUID, createHash, scryptSync, timingSafeE
 import type { FastifyInstance } from 'fastify';
 import type { Pool, PoolClient } from 'pg';
 import nodemailer from 'nodemailer';
-import { createRemoteJWKSet, jwtVerify } from 'jose';
+import { createRemoteJWKSet, jwtVerify, type JWTVerifyGetKey, type JWTPayload } from 'jose';
 export const digest = (s: string) => createHash('sha256').update(s).digest('hex');
 const email = { type: 'string', maxLength: 254, pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' };
 const version = { type: 'string', minLength: 1, maxLength: 64, pattern: '\\S' };
 const consent = { privacyVersion: version, termsVersion: version };
 const password = { type: 'string', minLength: 8, maxLength: 128 };
-export type AuthOptions = { sendMail?: (email: string, code: string) => Promise<void> };
-const keys = createRemoteJWKSet(new URL('https://appleid.apple.com/auth/keys'));
+export type AuthOptions = {
+  sendMail?: (email: string, code: string) => Promise<void>;
+  appleClientId?: string;
+  appleJwks?: JWTVerifyGetKey;
+};
+const appleRemoteJwks = createRemoteJWKSet(new URL('https://appleid.apple.com/auth/keys'));
 export function registerAuth(app: FastifyInstance, db: Pool, options: AuthOptions = {}) {
   const fail = (statusCode: number, message: string): never => { throw Object.assign(new Error(message), { statusCode }); };
   async function tx<T>(work: (c: PoolClient) => Promise<T>) { const c = await db.connect(); try { await c.query('BEGIN'); const r = await work(c); await c.query('COMMIT'); return r; } catch(e) { await c.query('ROLLBACK'); throw e; } finally { c.release(); } }
@@ -124,13 +128,51 @@ export function registerAuth(app: FastifyInstance, db: Pool, options: AuthOption
     if(!req.headers.authorization?.startsWith('Bearer ')) fail(401,'Bearer token required');
     await tx(async c=>{ const token=digest(req.headers.authorization!.slice(7)); await c.query('DELETE FROM auth_sessions WHERE token_hash=$1',[token]); await c.query('UPDATE users SET token_hash=$2 WHERE token_hash=$1',[token,digest(randomBytes(32).toString('hex'))]); }); return {revoked:true};
   });
-  app.post<{Body:{identityToken?:string;cancelled?:boolean}}>('/auth/apple',{schema:body({identityToken:{type:'string',minLength:1,maxLength:16384},cancelled:{type:'boolean'}},[])},async(req,reply)=>{
-    if(req.body.cancelled) return reply.code(200).send({cancelled:true});
-    if(!req.body.identityToken) fail(400,'identityToken required');
-    if(!/^[\w-]+\.[\w-]+\.[\w-]+$/.test(req.body.identityToken!)) fail(401,'Invalid Apple identityToken');
-    if(!process.env.APPLE_CLIENT_ID) fail(503,'Apple configuration missing: APPLE_CLIENT_ID; account login integration pending');
-    try { await jwtVerify(req.body.identityToken!,keys,{issuer:'https://appleid.apple.com',audience:process.env.APPLE_CLIENT_ID,algorithms:['RS256'],requiredClaims:['sub','exp','iat']}); }
-    catch { fail(401,'Invalid Apple identityToken'); }
-    return reply.code(503).send({message:'Apple identity verified; account binding and server nonce integration pending. No session issued.'});
+  const appleClientId = options.appleClientId ?? process.env.APPLE_CLIENT_ID;
+  const appleJwks = options.appleJwks ?? appleRemoteJwks;
+  const appleName = {type:'string',maxLength:128};
+  app.post<{Body:{identityToken:string;givenName?:string;familyName?:string;privacyVersion:string;termsVersion:string}}>('/auth/apple',{
+    schema: body({identityToken:{type:'string',minLength:1,maxLength:16384},givenName:appleName,familyName:appleName,...consent},
+      ['identityToken','privacyVersion','termsVersion'])
+  }, async req => {
+    if (!appleClientId) fail(503,'Apple configuration missing: APPLE_CLIENT_ID');
+    const b = req.body;
+    let payload: JWTPayload;
+    try {
+      ({payload} = await jwtVerify(b.identityToken,appleJwks,{
+        issuer:'https://appleid.apple.com',audience:appleClientId,algorithms:['RS256'],requiredClaims:['sub','exp','iat']
+      }));
+    } catch {
+      return fail(401,'Invalid Apple identityToken');
+    }
+    const sub = payload.sub;
+    if (!sub) return fail(401,'Invalid Apple identityToken');
+    const address = typeof payload.email === 'string' ? payload.email : '';
+    const name = [b.givenName?.trim(), b.familyName?.trim()].filter(Boolean).join(' ') || null;
+    return tx(async c => {
+      // This lock also serializes first sign-ins, when there is no user row to lock yet.
+      await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',['apple:sub:'+sub]);
+      let user = (await c.query('SELECT id,apple_sub,deleted_at FROM users WHERE apple_sub=$1 FOR UPDATE',[sub])).rows[0];
+      if (!user) {
+        if (!address) fail(401,'Apple identityToken has no email for account linking');
+        await c.query('SELECT pg_advisory_xact_lock(hashtextextended($1,0))',['apple:email:'+address.toLowerCase()]);
+        const findByEmail = () => c.query(`SELECT id,apple_sub,deleted_at FROM users
+          WHERE lower(email)=lower($1) ORDER BY (email=$1) DESC, email LIMIT 1 FOR UPDATE`,[address]);
+        user = (await findByEmail()).rows[0];
+        if (!user) {
+          const passwordHash = randomBytes(16).toString('hex')+':'+randomBytes(64).toString('hex');
+          const created = await c.query(`INSERT INTO users(id,email,password_hash,token_hash,privacy_version,terms_version,consented_at,apple_sub,display_name)
+            VALUES($1,$2,$3,$4,$5,$6,NOW(),$7,COALESCE($8,'Reader')) ON CONFLICT(email) DO NOTHING RETURNING id`,
+            [randomUUID(),address,passwordHash,digest(randomBytes(32).toString('hex')),b.privacyVersion,b.termsVersion,sub,name]);
+          if (created.rows[0]) return session(c,created.rows[0].id);
+          user = (await findByEmail()).rows[0];
+        }
+        if (!user || user.deleted_at || (user.apple_sub && user.apple_sub !== sub)) fail(401,'Invalid Apple account');
+        await c.query('UPDATE users SET apple_sub=$2 WHERE id=$1',[user.id,sub]);
+      }
+      if (user.deleted_at) fail(401,'Invalid Apple account');
+      if (name) await c.query("UPDATE users SET display_name=$2 WHERE id=$1 AND NULLIF(BTRIM(display_name),'') IS NULL",[user.id,name]);
+      return session(c,user.id);
+    });
   });
 }

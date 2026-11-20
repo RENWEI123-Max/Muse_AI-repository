@@ -1,10 +1,11 @@
 import Capacitor
 import StoreKit
 
-// Registers the app-local StoreKit plugin (no third-party IAP dependency).
+// Registers app-local plugins when the Capacitor bridge loads.
 class MainViewController: CAPBridgeViewController {
     override func capacitorDidLoad() {
         bridge?.registerPluginInstance(StoreKitPlugin())
+        bridge?.registerPluginInstance(AppleSignInPlugin())
     }
 }
 

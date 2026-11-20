@@ -6,6 +6,7 @@ const dir='docs/ui-redo/r15'
 const targets=JSON.parse(readFileSync('docs/ui-redo/r15/assertion-targets.json','utf8'))
 test('R15 safe auth states, geometry and styles',async({page})=>{
  test.setTimeout(90000);mkdirSync(dir,{recursive:true})
+ await page.addInitScript(() => Object.assign(window,{CapacitorCustomPlatform:{name:'ios'}}))
  const baseline=process.env.R15_BASELINE==='1', results:any[]=[]
  let prohibited=0
  await page.route('**/api/auth/**',r=>{if(r.request().url().endsWith('/auth/code/verify'))return r.continue();prohibited++;return r.abort()})
@@ -13,6 +14,10 @@ test('R15 safe auth states, geometry and styles',async({page})=>{
   if(state.id==='verify-resend')continue
   const mode=state.task.replace('auth:','').replace('policy','privacy')
   await page.goto(mode==='welcome'?'/':`/?auth=${mode}${['verify','recovery'].includes(mode)?'&email=reader@example.com':''}`)
+  if(mode==='apple'){
+   await page.locator('#accept-terms').check()
+   await page.locator('#terms-continue').click()
+  }
   await page.locator('.auth-top').waitFor();await page.evaluate(()=>document.fonts.ready)
   for(const [kind,selector,value] of state.actions){
    const field=page.locator(selector)
@@ -35,7 +40,7 @@ test('R15 safe auth states, geometry and styles',async({page})=>{
   await page.screenshot({path:`${dir}/${baseline?'baseline-':''}${state.id}.png`})
   if(!baseline&&state.id==='signup-mismatch'){await page.locator('.auth-flow .ui-toast').scrollIntoViewIfNeeded();await page.screenshot({path:`${dir}/signup-mismatch-scrolled.png`})}
   if(!baseline){
-   for(const [selector,actual] of Object.entries(elements) as any){const target=targets[state.id][selector];if(target)for(const k of ['x','y','width','height'])expect(Math.abs(actual.box[k]-target.box[k]),`${state.id} ${selector} ${k}`).toBeLessThanOrEqual(1)}
+   for(const [selector,actual] of Object.entries(elements) as any){const target=targets[state.id][selector];if(target)for(const k of selector.startsWith('#apple-')?['x','width','height']:['x','y','width','height'])expect(Math.abs(actual.box[k]-target.box[k]),`${state.id} ${selector} ${k}`).toBeLessThanOrEqual(1)}
    const heading=elements['.flow-content h1']||elements['.auth-content h1'];expect(heading.style.color).toBe('rgb(228, 239, 217)');expect(heading.style.fontWeight).toBe('500');expect(heading.style.lineHeight).toBe('32px');expect(heading.style.letterSpacing).toBe('-0.3px')
    const mark=elements['.wordmark'].box;expect(mark.x).toBeCloseTo(140.5,0);expect(Math.abs(mark.y-(state.id==='welcome'?67.73:67.23))).toBeLessThanOrEqual(1);expect(mark.width).toBeCloseTo(94,0);expect(mark.height).toBeCloseTo(24.54,0)
    expect(elements['.flow-content h1']?.style.fontSize||elements['.auth-content h1']?.style.fontSize).toBe(state.id==='welcome'?'26px':'24px')
@@ -61,6 +66,7 @@ test('R15 seed demo login keeps existing navigation',async({page})=>{
 
 test('R15 verification and recovery cancel paths stay local',async({page})=>{
  let calls=0;await page.route('**/api/auth/**',r=>{calls++;return r.abort()})
- for(const mode of ['verify','recovery','password','forgot','apple']){await page.goto(`/?auth=${mode}&email=reader@example.com`);await page.locator('.back').click();await expect(page.getByRole('heading',{name:'Welcome to MauGo',exact:true})).toBeVisible()}
+ for(const mode of ['verify','recovery','password','forgot']){await page.goto(`/?auth=${mode}&email=reader@example.com`);await page.locator('.back').click();await expect(page.getByRole('heading',{name:'Welcome to MauGo',exact:true})).toBeVisible()}
+ await page.goto('/?auth=apple');await expect(page.locator('.welcome-screen')).toBeVisible();await expect(page.locator('.apple-button')).toHaveCount(0)
  await page.goto('/?auth=privacy');await page.locator('.auth-privacy-back').click();await expect(page.getByRole('heading',{name:'Before you continue',exact:true})).toBeVisible();expect(calls).toBe(0)
 })

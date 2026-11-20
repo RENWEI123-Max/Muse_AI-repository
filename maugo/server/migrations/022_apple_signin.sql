@@ -1,0 +1,2 @@
+ALTER TABLE users ADD COLUMN IF NOT EXISTS apple_sub TEXT;
+CREATE UNIQUE INDEX IF NOT EXISTS users_apple_sub_unique ON users(apple_sub);

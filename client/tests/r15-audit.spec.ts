@@ -9,7 +9,10 @@ for(const [key,value] of Object.entries(enKeys))if(koKeys[key])ko[value]=koKeys[
 for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${lang} auth click walkthrough`,async({page})=>{
  test.setTimeout(120000);page.setDefaultTimeout(8000)
  const t=(s:string)=>lang==='ko'?(ko[s]||s):s
- await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang)
+ await page.setViewportSize({width:375,height});await page.addInitScript(lang=>{
+  localStorage.setItem('maugo-language',lang)
+  Object.assign(window,{CapacitorCustomPlatform:{name:'ios'}})
+ },lang)
  const checks:any={},calls:any[]=[],records:any[]=[],errors:string[]=[],forbidden:string[]=[];let loginFail=true,verifyFail=true
  page.on('pageerror',e=>errors.push(e.message))
  await page.route('**/api/**',async route=>{

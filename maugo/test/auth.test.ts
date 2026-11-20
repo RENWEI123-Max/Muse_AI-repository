@@ -138,11 +138,6 @@ test('B2 authentication routes with real PostgreSQL', async t => {
     await pool.query("UPDATE auth_codes SET sent_at=NOW()-interval '61 seconds' WHERE email='hour@example.test'");
     const r=await post('/auth/code/send',{email:'hour@example.test'},undefined,`192.0.5.${i}`);assert.equal(r.statusCode,i===5?429:200);
   }
-  assert.equal((await post('/auth/apple',{cancelled:true})).statusCode,200);
-  assert.equal((await post('/auth/apple',{})).statusCode,400);
-  assert.equal((await post('/auth/apple',{identityToken:'invalid'})).statusCode,401);
-  const original=process.env.APPLE_CLIENT_ID; delete process.env.APPLE_CLIENT_ID;
-  try {assert.equal((await post('/auth/apple',{identityToken:'e30.e30.fake'})).statusCode,503);} finally {if(original!==undefined) process.env.APPLE_CLIENT_ID=original;}
   const unconfigured=buildApp(pool);t.after(()=>unconfigured.close());
   const saved=process.env.SMTP_HOST; delete process.env.SMTP_HOST;
   try {const r=await unconfigured.inject({method:'POST',url:'/auth/code/send',payload:{email:'smtp@example.test'},remoteAddress:'192.0.9.1'});assert.equal(r.statusCode,503);assert.equal(r.json().code,undefined);} finally {if(saved!==undefined)process.env.SMTP_HOST=saved;}
