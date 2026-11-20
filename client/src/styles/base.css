@@ -3,7 +3,8 @@
 @font-face{font-family:GowunDodum;src:url('../assets/fonts/GowunDodum.ttf') format('truetype');font-weight:400;font-display:swap}
 *{box-sizing:border-box}
 html,body,#app{height:100%;overflow:hidden;overscroll-behavior:none}
-body{margin:0;min-width:280px}
+body{margin:0;min-width:280px;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+input,textarea,[contenteditable]:not([contenteditable="false" i]){-webkit-touch-callout:default;-webkit-user-select:text;user-select:text}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer;touch-action:manipulation}
 img{max-width:100%;user-select:none}

@@ -59,7 +59,7 @@ export const faqs = [
   ['How many replies can I collect?', 'Collect 10 replies free each day. Further replies cost 10 diamonds each and need your confirmation.'],
   ['Are all birds free?', 'Yes. All nine bird styles and both bird types are free to choose.'],
   ['How does Filter Pass work?', 'Use diamonds to unlock age and city filters for 1, 7 or 30 days. Extra days extend the expiry. There is no automatic renewal.'],
-  ['Where are my messages saved?', 'Messages are saved by the MauGo server. Feedback on this page is saved only on this device and is not sent to a support service.'],
+  ['Where are my messages saved?', 'Messages are saved by the MauGo server. Feedback you submit here is saved on the MauGo server.'],
   ['How do I delete my data?', 'Open Settings → Account & security → Delete account.']
 ]
 export const guides = {
