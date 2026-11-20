@@ -10,7 +10,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  test.setTimeout(120000);page.setDefaultTimeout(8000)
  const t=(s:string)=>lang==='ko'?(ko[s]||s):s
  await page.setViewportSize({width:375,height});await page.addInitScript(lang=>localStorage.setItem('maugo-language',lang),lang)
- const checks:any={},calls:any[]=[],records:any[]=[],errors:string[]=[],forbidden:string[]=[];let loginFail=true,verifyFail=true
+ const checks:any={},calls:any[]=[],records:any[]=[],errors:string[]=[],forbidden:string[]=[];let loginFail=true,recoverySend=false
  page.on('pageerror',e=>errors.push(e.message))
  await page.route('**/api/**',async route=>{
   const req=route.request(),p=new URL(req.url()).pathname.replace('/api','');calls.push({path:p,method:req.method()})
@@ -18,9 +18,8 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
   if(p==='/auth/apple'||p==='/auth/logout'||/reset|password/.test(p)){forbidden.push(p);return route.abort()}
   if(p==='/auth/login')return loginFail?route.fulfill({status:401,json:{message:'Invalid email or password.'}}):ok({id:'r15-fixture-reader',token:'r15-fixture-token'})
   if(p==='/auth/signup')return ok({id:'r15-fixture-reader',token:'r15-fixture-token'})
-  // No success receipt, countdown or real email: only transport into verify UI.
-  if(p==='/auth/code/send')return ok({sent:false,retryAfter:0})
-  if(p==='/auth/code/verify')return verifyFail?route.fulfill({status:401,json:{message:'Incorrect verification code. Please try again.'}}):ok({verified:true})
+  if(p==='/auth/code/send')return ok({sent:recoverySend,retryAfter:recoverySend?60:0})
+  if(p==='/auth/code/verify')return route.fulfill({status:401,json:{message:'Incorrect verification code. Please try again.'}})
   if(p==='/wallet')return ok({diamonds:100,freeRemaining:1,cost:0,paidCost:10})
   if(p==='/filter-pass')return ok({active:false,plans:[]})
   return ok({items:[],responses:[],cities:[]})
@@ -30,7 +29,7 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  const snap=async(name:string)=>{
   const states:Record<string,string>={'welcome':'welcome','terms-unchecked':'consent','terms-scrolled':'consent','terms-checked':'consent','consent-privacy':'privacy','auth-privacy':'privacy','verify-back-signup':'signup','password-back-signin':'signin','apple-cancel':'welcome'}
   const expected=states[name]||name.split('-')[0]!
-  const titles:Record<string,string>={consent:'Before you continue',privacy:'Privacy information',signup:'Create your account',signin:'Welcome back',forgot:'Forgot your password?',password:'Choose a new password',new:'Choose a new password',verify:'Verify your email',recovery:'Password recovery',apple:'Apple sign-in',welcome:'Welcome to MauGo'}
+  const titles:Record<string,string>={consent:'Before you continue',privacy:'Privacy information',signup:'Create your account',signin:'Welcome back',forgot:'Forgot your password?',password:'Choose a new password',new:'Choose a new password',verify:'Verify your email',recovery:'Choose a new password',apple:'Apple sign-in',welcome:'Welcome to MauGo'}
   const home=name==='signin-home',screen=page.locator(home?'.home-flow':'.auth-screen')
   if(home)await expect(screen).toBeVisible()
   else await expect(page.locator('.auth-screen h1')).toHaveText(t(titles[expected]!))
@@ -58,7 +57,10 @@ for(const height of [667,812])for(const lang of ['en','ko'])test(`${height} ${la
  await click('Privacy information');await snap('auth-privacy');await page.locator('.auth-privacy-back').click();await mode('signup')
  await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-confirm').fill('SamplePass2026');await page.locator('#auth-form .auth-main').click();await mode('verify');await snap('verify-empty');await page.locator('#auth-code').fill('000000');await page.locator('#code-form .auth-main').click();await expect(page.locator('.auth-flow .ui-toast')).toContainText(t('Incorrect verification code. Please try again.'));await page.locator('.auth-flow .ui-toast').scrollIntoViewIfNeeded();await snap('verify-error');await back();await mode('signup');await snap('verify-back-signup')
  await click('Sign in');await click('Forgot password?');await mode('forgot');await page.locator('#auth-email').fill('');await snap('forgot-empty');await page.locator('#auth-form .auth-main').click();await expect(page.locator('.auth-flow .ui-toast')).toContainText(t('Enter a valid email address.'));await snap('forgot-validation')
- await page.locator('#auth-email').fill('reader@example.com');await page.locator('#auth-form .auth-main').click();await mode('verify');await snap('recovery-code');await back();await mode('forgot');await page.locator('#auth-form .auth-main').click();await mode('verify');verifyFail=false;await page.locator('#auth-code').fill('123456');await page.locator('#code-form .auth-main').click();await mode('password');await snap('new-password');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-confirm').fill('Different2026');await page.locator('#auth-form .auth-main').click();await expect(page.locator('.auth-flow .ui-toast')).toContainText(t('Passwords do not match.'));await page.locator('.auth-flow .ui-toast').scrollIntoViewIfNeeded();await snap('new-password-error');await back();await mode('signin');await snap('password-back-signin');await back();await expect(page.locator('.welcome-screen')).toBeVisible()
+ recoverySend=true
+ await page.locator('#auth-email').fill('reader@example.com');await page.locator('#auth-form .auth-main').click();await mode('password');await snap('recovery-code')
+ await click('Use a different email');await mode('forgot');await page.locator('#auth-form .auth-main').click();await mode('password')
+ await snap('new-password');await page.locator('#auth-code').fill('123456');await page.locator('#auth-password').fill('SamplePass2026');await page.locator('#auth-confirm').fill('Different2026');await page.locator('#auth-form .auth-main').click();await expect(page.locator('.auth-flow .ui-toast')).toContainText(t('Passwords do not match.'));await page.locator('.auth-flow .ui-toast').scrollIntoViewIfNeeded();await snap('new-password-error');await back();await mode('signin');await snap('password-back-signin');await back();await expect(page.locator('.welcome-screen')).toBeVisible()
  await enter('Continue with Apple');await mode('apple');await snap('apple-private');await page.locator('#apple-share').click();await expect(page.locator('#apple-share')).toHaveAttribute('aria-pressed','true');await snap('apple-share');await click('Cancel');await expect(page.locator('.welcome-screen')).toBeVisible();await snap('apple-cancel')
  await click('Privacy Policy');await page.locator('.auth-privacy-back').click();await expect(page.locator('.welcome-screen')).toBeVisible();await click('Terms of Service');await back();await expect(page.locator('.welcome-screen')).toBeVisible()
  await click('Create an account');await click('Not now');await expect(page.locator('.welcome-screen')).toBeVisible()

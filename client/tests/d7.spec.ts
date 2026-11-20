@@ -124,3 +124,98 @@ test('D7 password recovery submits the email code with the new password',async({
  await expect(page.locator('.home-flow')).toBeVisible()
  console.log('Password recovery HTTP results',JSON.stringify(steps))
 })
+
+for(const lang of ['en','ko'] as const)test(`D7 signed-out password recovery (${lang})`,async({page,request},testInfo)=>{
+ const backend='http://127.0.0.1:3001'
+ const email=`d7-forgot-${lang}-${Date.now()}@example.test`
+ const password='OldPassword2026!',newPassword='NewPassword2026!'
+ const signup=await request.post(backend+'/auth/signup',{data:{email,password,termsVersion:'1.0',privacyVersion:'1.0'}})
+ expect(signup.status()).toBe(201)
+ const {id}=await signup.json()
+ await page.addInitScript(language=>localStorage.setItem('maugo-language',language),lang)
+ await page.goto('/?auth=consent')
+ await page.locator('#accept-terms').check()
+ await page.locator('#terms-continue').click()
+ const flow=page.locator('.auth-flow')
+ const form=page.locator('#auth-form')
+ const submit=form.locator('.auth-main')
+ const toast=flow.getByRole('status')
+ await expect(flow).toHaveAttribute('data-auth-mode','signin')
+ expect(await page.evaluate(()=>localStorage.getItem('maugo-token'))).toBeNull()
+
+ const authCalls:string[]=[]
+ page.on('request',req=>{
+  const path=new URL(req.url()).pathname.replace(/^\/api\//,'/')
+  if(path.startsWith('/auth/'))authCalls.push(`${req.method()} ${path}`)
+ })
+ const response=(path:string)=>page.waitForResponse(r=>r.request().method()==='POST'&&r.url().endsWith(path))
+ const steps: Record<string,number>={}
+ await form.locator('.auth-link').click()
+ await expect(flow).toHaveAttribute('data-auth-mode','forgot')
+ await form.locator('#auth-email').fill(email)
+ const sent=response('/auth/code/send')
+ await submit.click()
+ const sendResponse=await sent
+ steps.send=sendResponse.status()
+ expect(steps.send).toBe(200)
+ expect(sendResponse.request().postDataJSON()).toEqual({email})
+ await expect(flow).toHaveAttribute('data-auth-mode','password')
+ await expect(flow.locator('.auth-address')).toHaveText(email)
+ await expect(flow.locator('#resend-email')).toBeDisabled()
+
+ const mail=await request.get(backend+'/__d7/recovery-mail',{params:{email}})
+ steps.mail=mail.status()
+ expect(steps.mail).toBe(200)
+ const {code}=await mail.json()
+ expect(code).toMatch(/^\d{6}$/)
+ const wrongCode=code==='000000'?'111111':'000000'
+ const codeField=form.locator('#auth-code')
+ await codeField.fill(wrongCode)
+ await form.locator('#auth-password').fill(newPassword)
+ await form.locator('#auth-confirm').fill(newPassword)
+ let reset=response('/auth/password/reset')
+ await submit.click()
+ const rejected=await reset
+ steps.wrongCode=rejected.status()
+ expect(steps.wrongCode).toBe(401)
+ expect(rejected.request().postDataJSON()).toEqual({email,code:wrongCode,newPassword})
+ await expect(toast).toHaveText(lang==='ko'?'인증 코드가 올바르지 않아요. 다시 입력하세요.':'Incorrect verification code. Please try again.')
+ await expect(flow).toHaveAttribute('data-auth-mode','password')
+ await expect(codeField).toHaveValue(wrongCode)
+ await page.screenshot({path:testInfo.outputPath('wrong-code.png')})
+
+ // Correct only the code and use the very same email delivery.
+ await codeField.fill(code)
+ reset=response('/auth/password/reset')
+ await submit.click()
+ const updated=await reset
+ steps.correctCode=updated.status()
+ expect(steps.correctCode).toBe(200)
+ expect(updated.request().postDataJSON()).toEqual({email,code,newPassword})
+ expect(await updated.json()).toEqual({reset:true})
+ const recoveryCalls=['POST /auth/code/send','POST /auth/password/reset','POST /auth/password/reset']
+ expect(authCalls).toEqual(recoveryCalls)
+ await expect(flow).toHaveAttribute('data-auth-mode','signin')
+ await expect(toast).toHaveText(lang==='ko'?'비밀번호가 변경됐어요. 새 비밀번호로 로그인하세요.':'Password updated. Sign in with your new password.')
+ await expect(form.locator('#auth-email')).toHaveValue(email)
+ await expect(form.locator('#auth-password')).toHaveValue('')
+ await page.screenshot({path:testInfo.outputPath('reset-success.png')})
+
+ await form.locator('#auth-password').fill(password)
+ let signed=response('/auth/login')
+ await submit.click()
+ steps.oldPassword=(await signed).status()
+ expect(steps.oldPassword).toBe(401)
+ await expect(toast).toBeVisible()
+ await expect(flow).toHaveAttribute('data-auth-mode','signin')
+ await form.locator('#auth-password').fill(newPassword)
+ signed=response('/auth/login')
+ await submit.click()
+ const newSession=await signed
+ steps.newPassword=newSession.status()
+ expect(steps.newPassword).toBe(200)
+ expect((await newSession.json()).id).toBe(id)
+ await expect(page.locator('.home-flow')).toBeVisible()
+ expect(authCalls).toEqual([...recoveryCalls,'POST /auth/login','POST /auth/login'])
+ console.log('Signed-out password recovery',JSON.stringify({lang,steps,authCalls,originalAccount:true}))
+})
