@@ -34,7 +34,7 @@ async function choose(page: Page, index = 0) {
 
 async function expectFailure(page: Page) {
  await page.locator('#confirm-pass-payment').click()
- await expect(page.locator('.pass-confirmation [role=alert]')).toBeVisible()
+ await expect(page.locator('.ui-toast')).toBeVisible()
  await expect(page.locator('#confirm-pass-payment')).toBeEnabled()
 }
 

@@ -24,16 +24,16 @@ test('R15 safe auth states, geometry and styles',async({page})=>{
     await field.evaluate((f:HTMLFormElement)=>f.requestSubmit())
    }
   }
-  if(state.id==='verify-error'&&!baseline)await expect(page.locator('#auth-error')).toHaveText('Incorrect verification code. Please try again.')
+  if(state.id==='verify-error'&&!baseline)await expect(page.locator('.auth-flow .ui-toast')).toHaveText('Incorrect verification code. Please try again.')
   await page.waitForTimeout(300)
   const elements:any={}
-  for(const selector of ['.wordmark','.flow-content h1','.auth-content h1','.field-label input','.terms-scroll','#accept-terms','#terms-continue','#apple-hide','#apple-share','.auth-error']){
+  for(const selector of ['.wordmark','.flow-content h1','.auth-content h1','.field-label input','.terms-scroll','#accept-terms','#terms-continue','#apple-hide','#apple-share',baseline?'.auth-error':'.ui-toast']){
    const loc=page.locator(selector).first();if(!await loc.count())continue
    elements[selector]={box:await loc.boundingBox(),style:await loc.evaluate(el=>{const s=getComputedStyle(el);return Object.fromEntries(['color','backgroundColor','backgroundImage','borderRadius','fontFamily','fontSize','fontWeight','lineHeight','letterSpacing','boxShadow'].map(k=>[k,s[k as any]]))})}
   }
   results.push({state:state.id,elements})
   await page.screenshot({path:`${dir}/${baseline?'baseline-':''}${state.id}.png`})
-  if(!baseline&&state.id==='signup-mismatch'){await page.locator('#auth-error').scrollIntoViewIfNeeded();await page.screenshot({path:`${dir}/signup-mismatch-scrolled.png`})}
+  if(!baseline&&state.id==='signup-mismatch'){await page.locator('.auth-flow .ui-toast').scrollIntoViewIfNeeded();await page.screenshot({path:`${dir}/signup-mismatch-scrolled.png`})}
   if(!baseline){
    for(const [selector,actual] of Object.entries(elements) as any){const target=targets[state.id][selector];if(target)for(const k of ['x','y','width','height'])expect(Math.abs(actual.box[k]-target.box[k]),`${state.id} ${selector} ${k}`).toBeLessThanOrEqual(1)}
    const heading=elements['.flow-content h1']||elements['.auth-content h1'];expect(heading.style.color).toBe('rgb(228, 239, 217)');expect(heading.style.fontWeight).toBe('500');expect(heading.style.lineHeight).toBe('32px');expect(heading.style.letterSpacing).toBe('-0.3px')
