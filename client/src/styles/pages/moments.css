@@ -15,6 +15,7 @@
 .d5-page .counter{position:absolute;right:26px;top:229px;font:var(--font-micro);color:var(--text-note)}
 .d5-page .counter.invalid{color:var(--cards-danger)}
 .d5-page .tools{display:flex;gap:16px;height:80px;margin-top:20px;align-items:flex-start}
+.d5-page .tools .counter{position:static;margin-top:10px}
 .d5-page .tools button{height:36px;padding:8px 12px;border-radius:var(--radius-16);background:var(--moments-tool);font:var(--font-caption)}
 .d5-page .row{display:flex;align-items:center;justify-content:space-between;width:100%;height:56px;padding:0;border-bottom:1px solid var(--hairline);font:var(--font-body-sm)}
 .d5-page .row small{color:var(--cards-muted);font:var(--font-caption)}

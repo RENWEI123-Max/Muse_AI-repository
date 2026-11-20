@@ -12,11 +12,11 @@ test('F06 wrong code, expired code and resend invalidates old code', async ({pag
   const first=await mail()
 
   await enter(first==='000000'?'111111':'000000')
-  await expect(page.locator('#auth-error')).toHaveText('Incorrect verification code. Please try again.')
+  await expect(page.locator('.auth-flow .ui-toast')).toHaveText('Incorrect verification code. Please try again.')
 
   await request.post(`${api}/__f06/expire`,{data:{email}})
   await enter(first)
-  await expect(page.locator('#auth-error')).toHaveText('Verification code expired. Please request a new code.')
+  await expect(page.locator('.auth-flow .ui-toast')).toHaveText('Verification code expired. Please request a new code.')
 
   await expect(page.locator('#resend-email')).toBeDisabled()
   await request.post(`${api}/__f06/cooldown`,{data:{email}})
@@ -28,8 +28,8 @@ test('F06 wrong code, expired code and resend invalidates old code', async ({pag
   await expect(page.locator('#resend-email')).toBeDisabled()
 
   await enter(first)
-  await expect(page.locator('#auth-error')).toHaveText('Incorrect verification code. Please try again.')
+  await expect(page.locator('.auth-flow .ui-toast')).toHaveText('Incorrect verification code. Please try again.')
   await enter(second)
   await expect(page.getByText('Choose a new password')).toBeVisible()
-  await expect(page.locator('#auth-error')).toHaveCount(0)
+  await expect(page.locator('.auth-flow .ui-toast')).toHaveCount(0)
 })
