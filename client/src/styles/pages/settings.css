@@ -11,6 +11,8 @@
 .settings-row>span{flex:1;min-width:0;overflow-wrap:anywhere}
 .settings-row>img{width:22px;height:22px;object-fit:contain;margin:0}
 .settings-row small{color:var(--text-time);font:var(--font-caption)}
+.settings-row--with-note{padding-block:12px}
+.settings-row .settings-row-note{display:block;margin-top:4px;color:var(--text-note);font:var(--font-micro-17)}
 .settings-main .settings-row small{font:var(--font-micro)}
 .settings-row>b{display:grid;place-items:center;flex:none;color:var(--text-chevron);font:var(--font-symbol-chevron)}
 .settings-row>b img{width:16px;height:16px}
@@ -25,7 +27,9 @@
 label.settings-row{min-height:60px}
 .settings-row input{flex:none;cursor:pointer}
 .settings-row input:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.settings-row:has(input:disabled){opacity:.5}
+.settings-row:not(.settings-row--with-note):has(input:disabled),
+.settings-row--with-note:has(input:disabled) #haptics-label,
+.settings-row--with-note input:disabled{opacity:.5}
 .category-disabled{opacity:.4}
 .settings-veil{position:absolute;inset:0;background:var(--scrim-dialog);backdrop-filter:blur(var(--blur-backdrop));display:flex;align-items:center;justify-content:center;padding:24px;z-index:1}
 .settings-confirm{width:327px;max-height:calc(100% - 48px);overflow:auto;padding:36px 24px 16px;border:1px solid var(--dialog-border);border-radius:var(--radius-28);background:var(--grad-card-diagonal-h391-5);box-shadow:var(--shadow-dialog);text-align:center}
