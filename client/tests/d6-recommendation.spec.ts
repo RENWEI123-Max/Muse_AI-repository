@@ -10,7 +10,7 @@ test('recommendations use saved B4 filters and survive logout',async({page,reque
  const login=async()=>{
   await page.locator('#auth-email').fill(user.email);await page.locator('#auth-password').fill(user.password)
   const result=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters')&&r.request().method()==='GET')
-  await page.locator('#auth-form button.primary').click()
+  await page.getByRole('button',{name:'Sign in',exact:true}).click()
   await expect(page.locator('.home-flow')).toBeVisible()
   const response=await result;expect(response.ok()).toBeTruthy();return new URL(response.url())
  }
