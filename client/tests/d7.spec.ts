@@ -12,7 +12,7 @@ test('D7 thirteen states, real logout/deletion and account isolation',async({pag
  const snapshot=async(u:any)=>(await request.get('http://127.0.0.1:3001/users/me/export',{headers:headers(u)})).json()
  const aBefore=await snapshot(a);let bBefore=await snapshot(b)
  const sessionA=await login(page,a)
- await expect(page.locator('.account-security .account-group button')).toHaveText([/^Preview account/,/^Password recovery/,/^App lock/,/^Identity verification/,/^Export my data/,/^Delete account/])
+ await expect(page.locator('.account-security .account-group button')).toHaveText([/^Preview account/,/^Password recovery/,/^App lock/,/^Identity verification/,/^Export selected data/,/^Delete account/])
  await shot(page,'security');await page.locator('#account-signin').click();await expect(page.locator('#account-email')).toHaveText(a.email.toLowerCase());await shot(page,'account-info');await page.locator('.account-security header button').click()
  await page.locator('#identity-verification').click();await expect(page.locator('.account-body')).toContainText('Not connected');await shot(page,'verification');await page.getByRole('button',{name:'Back to security'}).click()
  await page.locator('#app-lock').click();await shot(page,'pin-create');await page.locator('#lock-pin').fill('12');await page.locator('#save-lock').click();await expect(page.locator('.account-security .ui-toast')).toHaveText('Enter a 4-digit PIN.');await shot(page,'pin-invalid');await page.locator('#lock-pin').fill('1234');await page.locator('#save-lock').click();await expect(page.locator('#app-lock')).toContainText('On')
