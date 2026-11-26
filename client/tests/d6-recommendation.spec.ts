@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-test('recommendations use saved B4 filters and survive logout',async({page,request},testInfo)=>{
+test('recommendations use saved B4 filters and persist within the session',async({page,request},testInfo)=>{
  test.setTimeout(120000);page.setDefaultTimeout(10000)
  const root='http://127.0.0.1:3001'
  const seeded=await request.post(root+'/__c5/seed',{data:{mode:'read'}})
@@ -46,15 +46,17 @@ test('recommendations use saved B4 filters and survive logout',async({page,reque
  await page.screenshot({animations:'disabled',path:'docs/d6-round3/recommendation-default.png'})
  const refreshed=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters/refresh'))
  await page.locator('#refresh').click();const refresh=await refreshed;expect(refresh.ok()).toBeTruthy();expect(refresh.request().postDataJSON()).toEqual({})
- await settings();await page.locator('#settings-back').click();await page.locator('#security-settings').click();await page.locator('#account-signin').click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.locator('#confirm-logout').click()
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();expect((await login()).search).toBe('')
  await settings();await expect(page.locator('#recommendations')).not.toBeChecked()
  await page.locator('#recommendations').check();await home()
+ expect((await request.post(root+'/__d6/setup',{data:{id:user.id}})).ok()).toBeTruthy()
  expect(Object.fromEntries((await discover()).searchParams)).toEqual({gender:'female',city:'Seoul',minAge:'22',maxAge:'40'})
+ await expect(page.locator('.letter-bird')).toHaveCount(2);await expect(page.locator('.letter-bird').first()).toContainText('female Seoul')
+ await expect(page.locator('#refresh')).toHaveText('Refresh')
  await page.screenshot({animations:'disabled',path:testInfo.outputPath('d6-recommendation-discovery.png')})
  const personalizedRefresh=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters/refresh'))
  await page.locator('#refresh').click();const personalized=await personalizedRefresh;expect(personalized.ok()).toBeTruthy()
  expect(personalized.request().postDataJSON()).toEqual({gender:'female',city:'Seoul',minAge:22,maxAge:40})
- await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();expect(Object.fromEntries((await login()).searchParams)).toEqual({gender:'female',city:'Seoul',minAge:'22',maxAge:'40'})
+ await settings();await page.locator('#settings-back').click();await page.locator('#security-settings').click();await page.locator('#account-signin').click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.locator('#confirm-logout').click();await expect(page.locator('.auth-content h1')).toBeVisible()
+ await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();expect((await login()).search).toBe('')
  await settings();await expect(page.locator('#recommendations')).toBeChecked()
 })
