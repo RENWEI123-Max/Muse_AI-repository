@@ -8,7 +8,7 @@ import {api,post,ApiError} from '../lib/api'
 const props=defineProps<{token:string;privacy?:boolean;initial?:'notifications'|'system'|'interactions'|'help'}>()
 const emit=defineEmits<{close:[];security:[]}>()
 const view=ref<'settings'|'language'|'notifications'|'privacySettings'|'general'|'security'|'feedback'|'help'|'about'|'faq'|'guidelines'|'safety'|'privacy'|'terms'|'system'|'interactions'>(props.initial||'settings')
-const toastKeys=['visibilitySaved','loadFailed','saveFailed','cacheDeleted','cacheCleared','cacheFailed'] as const
+const toastKeys=['visibilitySaved','loadFailed','saveFailed','cacheDeleted','cacheCleared','cacheFailed','feedbackHistoryFailed'] as const
 const feedbackReference='Feedback sent. Reference:'
 function translateToast(message:string){
  const key=toastKeys.find(key=>englishText(key)===message)
@@ -39,6 +39,24 @@ const supportTitles={help:'Help & support',feedback:'Feedback',about:'About MauG
 const supportParent=ref<typeof view.value>('settings')
 function supportPage(page:typeof view.value){supportParent.value=view.value;openPage(page)}
 const feedbackText=ref(''),feedbackEmail=ref(''),feedbackType=ref('Suggestion')
+type FeedbackEntry={id:string;content:string;status:'new'|'in_progress'|'resolved';createdAt:string}
+const feedbackHistory=ref<FeedbackEntry[]>([]),feedbackRevision=ref(0)
+const feedbackStatus={new:'feedbackStatusNew',in_progress:'feedbackStatusInProgress',resolved:'feedbackStatusResolved'} as const
+function feedbackDate(createdAt:string){
+ return new Date(createdAt).toLocaleString(locale.value==='ko'?'ko-KR':'en-US')
+}
+watch([view,()=>props.token,feedbackRevision],async([page,token],previous,onCleanup)=>{
+ if(token!==previous[1])feedbackHistory.value=[]
+ if(page!=='feedback')return
+ let current=true
+ onCleanup(()=>{current=false})
+ try{
+  const history=await api<{items:FeedbackEntry[]}>('/feedback/mine',{headers:{Authorization:`Bearer ${token}`}})
+  if(current)feedbackHistory.value=history.items
+ }catch{
+  if(current&&!toast.value)toast.value=englishText('feedbackHistoryFailed')
+ }
+})
 async function saveFeedback(){
  if(busy.value||!feedbackText.value.trim())return
  busy.value=true
@@ -49,6 +67,7 @@ async function saveFeedback(){
   const result=await post<{id:string;status:string}>('/feedback',{content:feedbackText.value.trim(),type:feedbackType.value,contact:feedbackEmail.value.trim()},props.token)
   feedbackText.value='';feedbackEmail.value=''
   toast.value=`Feedback sent. Reference: ${result.id} · ${result.status}`
+  feedbackRevision.value++
  }catch(e){toast.value=e instanceof ApiError&&e.status===429?'Feedback limit reached. Try again in an hour.':'Feedback could not be sent. Please try again.'}finally{busy.value=false}
 }
 const title=computed(()=>view.value in supportTitles?tr(supportTitles[view.value as keyof typeof supportTitles]):t(view.value as Parameters<typeof t>[0]))
@@ -73,11 +92,18 @@ async function cleared(){busy.value=true;toast.value='';try{const keys='caches' 
 <template v-else-if="view==='feedback'">
 <div class="feedback-types"><button v-for="kind in ['Suggestion','Bug','Experience','Other']" :key="kind" :aria-pressed="feedbackType===kind" @click="feedbackType=kind">{{tr(kind)}}</button></div><p>{{tr('Help make this little space better.')}}</p>
 <form novalidate :aria-busy="busy" @submit.prevent="saveFeedback"><label class="support-field">{{tr('Your feedback')}}<textarea id="feedback-text" v-model="feedbackText" maxlength="2000" :disabled="busy" :placeholder="tr('What would you like us to improve?')"></textarea></label><label class="support-field">{{tr('Contact email (optional)')}}<input id="feedback-email" v-model="feedbackEmail" type="email" maxlength="200" :disabled="busy" :aria-invalid="toast==='Enter a valid email address.'"></label><button id="save-feedback" class="primary" :disabled="busy||!feedbackText.trim()">{{tr(busy?'Sending feedback…':'Send feedback')}}</button></form>
+<ul v-if="feedbackHistory.length" class="feedback-history" :aria-label="t('feedback')">
+ <li v-for="entry in feedbackHistory" :key="entry.id">
+  <time :datetime="entry.createdAt">{{feedbackDate(entry.createdAt)}}</time>
+  <p>{{entry.content}}</p>
+  <small>{{t('feedbackReference')}} {{entry.id}} · {{t(feedbackStatus[entry.status])}}</small>
+ </li>
+</ul>
 </template>
 <template v-else-if="view==='about'"><div class="about-logo"><img :src="asset('01-brand-scenes/maugo-wordmark')" alt="MauGo"><p>{{tr('A little bird. A little story.')}}</p><small>Version 0.1.0</small></div><button v-for="page in ['guidelines','terms','privacy','help','system','interactions'] as const" :key="page" :id="`about-${page}`" class="settings-row ui-row" @click="supportPage(page)"><span>{{tr(supportTitles[page])}}</span><b>›</b></button><p>{{tr('Support email')}}: {{supportEmail}} · {{tr('Pending Smith')}}</p></template>
 <template v-else-if="view==='guidelines'||view==='safety'"><article class="support-policy"><section v-for="[heading,copy] in guides[view]" :key="heading"><h2>{{tr(heading)}}</h2><p>{{tr(copy)}}</p></section></article></template>
 <template v-else-if="view==='privacy'||view==='terms'"><article class="support-policy"><template v-if="view==='privacy'"><h2>{{tr('Privacy information')}}</h2><p>{{legalText.privacy[locale]}}</p></template><template v-else><p>{{tr(termsVersion)}}</p><section v-for="section in termsSections" :key="section.title"><h2>{{tr(section.title)}}</h2><p>{{tr(section.body)}}</p></section></template></article></template>
-<template v-else-if="view==='system'||view==='interactions'"><div class="support-empty"><img :src="asset('01-brand-scenes/envelope')" alt=""><h2>{{tr(view==='system'?'You are all caught up.':'Nothing here yet.')}}</h2><p>{{tr(view==='system'?'No system message feed is connected.':'No interaction feed is connected.')}}</p></div></template>
+<template v-else-if="view==='system'||view==='interactions'"><div class="support-empty"><img :src="asset('01-brand-scenes/envelope')" alt=""><h2>{{t(view==='system'?'systemEmptyTitle':'interactionsEmptyTitle')}}</h2><p>{{t('aboutEmptyBody')}}</p></div></template>
 <template v-else><div class="settings-group ui-card"><label v-for="item in generalItems" :key="item" class="settings-row ui-row"><span>{{t(item)}}</span><input :id="item" :disabled="item==='haptics'&&!hapticsAvailable" :checked="item==='haptics' ? hapticsAvailable&&preferences.haptics : preferences[item]" @change="preferences[item]=($event.target as HTMLInputElement).checked" class="ui-switch" type="checkbox" role="switch"></label><button id="clear-cache" class="settings-row ui-row" @click="confirm=true;toast=''"><span>{{t('clearCache')}}</span><b aria-hidden="true"><img :src="asset('08-interface-icons/icon-chevron-right-muted-16')" alt=""></b></button></div><p>{{t('hapticsNote')}}</p><p id="recommendations-status" role="status">{{t(preferences.recommendations?'recommendationsOn':'recommendationsOff')}}</p><p v-if="!hapticsAvailable">{{t('hapticsUnavailable')}}</p><p>{{t('cacheNote')}}</p></template>
 </div></Transition>
 <Transition name="settings-dialog"><div v-if="selected||globalSelected" class="settings-veil" @click.self="!busy&&(selected=undefined,globalSelected=false)"><section role="dialog" aria-modal="true" :aria-label="globalSelected?tr('Profile visibility'):t('profileVisibility')" class="settings-confirm settings-visibility"><h2>{{globalSelected?tr('Profile visibility'):t('profileVisibility')}}</h2><button v-for="scope in scopes" :key="scope" :data-visibility="scope" :aria-pressed="choice===scope" :disabled="busy" @click="choice=scope">{{t(scope)}} {{choice===scope?'✓':''}}</button><p>{{t('friendsNote')}}</p><button id="save-visibility" class="primary" :disabled="busy" @click="globalSelected?saveGlobalVisibility():saveVisibility()">{{t('save')}}</button><button :disabled="busy" @click="selected=undefined;globalSelected=false">{{t('cancel')}}</button></section></div></Transition>

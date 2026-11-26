@@ -60,6 +60,10 @@
 .plan-days small{display:block;font:var(--wallet-font-day-unit);margin-top:3px}
 .plan-price{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:14px;font:var(--wallet-font-price)}
 .plan-price img{width:20px;height:18px;object-fit:contain}
+.filter-pass-sheet .pass-plans{flex-direction:column}
+.filter-pass-sheet .pass-plan{flex:none;display:flex;align-items:center;justify-content:space-between;width:100%;height:auto;min-height:68px;padding:14px 16px}
+.filter-pass-sheet .plan-days{display:flex;align-items:baseline;gap:4px}
+.filter-pass-sheet .plan-price{margin-top:0}
 .app-shell .wallet-pass .pass-validity{margin:16px 0 24px;font:var(--wallet-font-note)}
 .app-shell .wallet-pass .pass-page-balance{display:flex;justify-content:space-between;gap:12px;margin-bottom:32px;font:var(--wallet-font-balance)}
 .pass-page-balance strong{font:var(--wallet-font-balance);color:var(--text-profile-wallet)}

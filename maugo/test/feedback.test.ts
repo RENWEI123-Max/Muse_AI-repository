@@ -85,4 +85,29 @@ test('B19 registered feedback submission, limits and administrator workflow',asy
     assert.equal((await call('PATCH','/admin/feedback/'+randomUUID(),mod,{status:'resolved'})).statusCode,404);
     for(const query of ['status=invalid','limit=0','limit=101','offset=-1']) assert.equal((await call('GET','/admin/feedback?'+query,mod)).statusCode,400);
   });
+  await t.test('submission history requires authentication and contains only the caller’s feedback',async()=>{
+    const path='/feedback/mine';
+    assert.equal((await call('GET',path)).statusCode,401);
+    assert.equal((await call('GET',path,{...a,token:'invalid'})).statusCode,401);
+    const first=await call('GET',path,{...a,token:'feedback-session'});
+    const second=await call('GET',path,b);
+    assert.equal(first.statusCode,200);
+    assert.equal(second.statusCode,200);
+    assert.equal((await call('GET',path+'?userId='+a.id,b)).statusCode,400);
+    for(const [result,owner,total] of [[first,a,6],[second,b,3]] as const) {
+      const expected=(await pool.query('SELECT id FROM feedback WHERE user_id=$1 ORDER BY created_at DESC,id DESC',[owner.id])).rows;
+      assert.equal(result.json().total,total);
+      assert.deepEqual(result.json().items.map(({id}:{id:string})=>({id})),expected);
+    }
+    assert.ok(first.json().items.some((item:{content:string;type:string;status:string;createdAt:string})=>
+      item.content==='Found a bug'&&item.type==='bug'&&item.status==='new'&&Number.isFinite(Date.parse(item.createdAt))));
+    assert.deepEqual((await call('GET',path,mod)).json(),{items:[],total:0});
+  });
+  await t.test('submission history uses the list pagination conventions',async()=>{
+    const path='/feedback/mine';
+    const {items,total}=(await call('GET',path,a)).json();
+    assert.deepEqual((await call('GET',path+'?limit=2&offset=1',a)).json(),{items:items.slice(1,3),total});
+    assert.deepEqual((await call('GET',path+'?offset=100',a)).json(),{items:[],total});
+    for(const query of ['limit=0','limit=101','offset=-1']) assert.equal((await call('GET',path+'?'+query,a)).statusCode,400);
+  });
 });

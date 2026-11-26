@@ -46,7 +46,7 @@ test('recommendations use saved B4 filters and survive logout',async({page,reque
  await page.screenshot({animations:'disabled',path:'docs/d6-round3/recommendation-default.png'})
  const refreshed=page.waitForResponse(r=>new URL(r.url()).pathname.endsWith('/letters/refresh'))
  await page.locator('#refresh').click();const refresh=await refreshed;expect(refresh.ok()).toBeTruthy();expect(refresh.request().postDataJSON()).toEqual({})
- await settings();await page.locator('#settings-back').click();await page.locator('#security-settings').click();await page.locator('#logout').click();await page.locator('#confirm-logout').click()
+ await settings();await page.locator('#settings-back').click();await page.locator('#security-settings').click();await page.locator('#account-signin').click();await page.getByRole('button',{name:'Sign out',exact:true}).click();await page.locator('#confirm-logout').click()
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();expect((await login()).search).toBe('')
  await settings();await expect(page.locator('#recommendations')).not.toBeChecked()
  await page.locator('#recommendations').check();await home()

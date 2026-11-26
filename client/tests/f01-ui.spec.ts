@@ -19,7 +19,7 @@ for(const flow of ['reply','pass'])test(`F01 simulated wallet: ${flow} cancellat
  })
  await page.goto('/?auth=consent');await page.locator('#accept-terms').check();await page.locator('#terms-continue').click();await page.locator('#auth-email').fill('test@example.com');await page.locator('#auth-password').fill('SamplePass2026');await page.getByRole('button',{name:'Sign in',exact:true}).click();await expect(page.locator('.home-flow')).toBeVisible()
  if(flow==='reply'){await page.locator('#open-inbox').click();await page.locator('#collect-replies').click()}
- else{await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click();await page.locator('.pass-plan').click()}
+ else{await page.getByRole('button',{name:'Filters',exact:true}).click();await page.getByRole('button',{name:'Filter Woman',exact:true}).click();await page.getByRole('button',{name:'Unlock Filter Pass',exact:true}).click();await page.locator('.pass-plan').click();await page.locator('#pass-page-buy').click()}
  const confirm=page.locator(flow==='reply'?'#confirm-reply-payment':'#confirm-pass-payment'),topup=page.locator(flow==='reply'?'#reply-topup':'#pass-topup')
  await expect(confirm).toBeDisabled();await expect(topup).toBeVisible();await page.screenshot({path:`docs/c7-evidence/f01-${flow}-shortage.png`})
  await topup.click();await page.locator('#confirm-pack').click();await expect(page.getByRole('status')).toContainText('No charge');expect(charges).toBe(0)
