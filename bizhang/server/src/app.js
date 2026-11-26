@@ -40,6 +40,12 @@ const userJSON = (u) => ({
 });
 export async function buildApp(pool, market) {
   const app = Fastify({ logger: false, trustProxy: false, bodyLimit: 16384 });
+  // Tolerate clients that send Content-Type: application/json with an empty
+  // body (e.g. DELETE with no payload): treat it as {} instead of a 400.
+  app.addContentTypeParser("application/json", { parseAs: "string" }, (req, body, done) => {
+    if (body === "" || body == null) return done(null, {});
+    try { done(null, JSON.parse(body)); } catch (e) { e.statusCode = 400; done(e); }
+  });
   const dummy = await hashPassword(randomBytes(32).toString("hex"));
   app.setErrorHandler((e, req, reply) =>
     error(
